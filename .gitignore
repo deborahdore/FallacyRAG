@@ -138,6 +138,7 @@ dmypy.json
 
 # JetBrains
 .idea/
+*.idea
 
 # Data & Models
 *.h5
