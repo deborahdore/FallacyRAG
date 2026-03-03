@@ -39,7 +39,7 @@ def clean_text(content):
     return content.strip()
 
 
-if __name__ == '__main__':
+def extract_US():
     topics = extract_topics()
     entities_response = GET("https://data.census.gov/api/search?g=010XX00US&services=entities")['response']
     for state in tqdm(entities_response['profiles'], desc='Processing US states'):
@@ -103,3 +103,54 @@ if __name__ == '__main__':
 
         with open(f"knowledge_base/geography/{geography['title']}.json", "w") as f:
             json.dump(geography, f, indent=5)
+
+
+def extract_NER_entites():
+    gpe_entities = json.load(open("note/topic_results.json"))['GPE']
+    for entity in gpe_entities:
+
+        # ======================== WIKIPEDIA ========================
+        #  Retrieve sections
+        try:
+            sections = GET("https://en.wikipedia.org/w/api.php",
+                           params={
+                               "action": "parse",
+                               "page": entity,
+                               "prop": "sections",
+                               "format": "json",
+                               "formatversion": "2",
+                           }
+                           )["parse"]["sections"]
+        except:
+            continue
+
+        geography = {
+            'title': entity
+        }
+        #  Retrieve paragraphs
+        for section in sections:
+            response = GET("https://en.wikipedia.org/w/api.php",
+                           params={
+                               "action": "parse",
+                               "page": entity,
+                               "prop": "text",
+                               "section": section['index'],
+                               "format": "json",
+                               "formatversion": "2",
+                           }
+                           )["parse"]["text"]
+            soup = BeautifulSoup(response, "html.parser")
+            for par in soup.select("sup.reference"):
+                par.decompose()
+            paragraphs = " ".join([p.get_text(" ", strip=True) for p in soup.find_all("p") if p.get_text(strip=True)])
+            geography.update({
+                f"wiki_{section['anchor']}": clean_text(paragraphs)
+            })
+
+        with open(f"knowledge_base/geography/{geography['title']}.json", "w") as f:
+            json.dump(geography, f, indent=5)
+
+
+if __name__ == '__main__':
+    # extract_US()
+    extract_NER_entites()
