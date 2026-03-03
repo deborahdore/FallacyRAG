@@ -106,7 +106,7 @@ def extract_US():
 
 
 def extract_NER_entites():
-    gpe_entities = json.load(open("note/topic_results.json"))['GPE']
+    gpe_entities = json.load(open("note/topic_results.json"))['PLACES']
     for entity in gpe_entities:
 
         # ======================== WIKIPEDIA ========================
@@ -125,10 +125,12 @@ def extract_NER_entites():
             continue
 
         geography = {
-            'title': entity
+            'title': entity,
+            'source': 'Wikipedia',
         }
         #  Retrieve paragraphs
         for section in sections:
+            if section in {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}: continue
             response = GET("https://en.wikipedia.org/w/api.php",
                            params={
                                "action": "parse",
@@ -152,5 +154,5 @@ def extract_NER_entites():
 
 
 if __name__ == '__main__':
-    # extract_US()
+    extract_US()
     extract_NER_entites()
