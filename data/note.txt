@@ -3,3 +3,5 @@ https://www.fdlp.gov/requirements-guidance-2/collections-and-databases/basic-col
 https://data.census.gov/webpages
 https://www.govinfo.gov/app/collection/USCODE
 https://www.govinfo.gov/app/collection/GOVMAN
+https://bioguide.congress.gov/search
+https://voteview.com/data
