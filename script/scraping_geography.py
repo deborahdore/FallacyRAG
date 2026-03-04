@@ -9,15 +9,19 @@ from tqdm import tqdm
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
 
-def GET(url, params=None):
-    HEADERS = {"User-Agent": "my-wikipedia-script/0.1 (you@example.com)"}
-    r = requests.get(url, params=params, headers=HEADERS)
-    r.raise_for_status()
-    return r.json()
+def get_from_url(url, params=None):
+    try:
+        HEADERS = {"User-Agent": "my-wikipedia-script/0.1 (you@example.com)"}
+        r = requests.get(url, params=params, headers=HEADERS)
+        r.raise_for_status()
+        return r.json()
+    except Exception as e:
+        return None
 
 
-def extract_topics():
-    search_response = GET("https://data.census.gov/api/profile/metadata?g=010XX00US&includeHighlights=false")
+def extract_topics(geo_id: str):
+    search_response = get_from_url(f"https://data.census.gov/api/profile/metadata?g={geo_id}&includeHighlights=false")
+    if search_response == None: return None
     topics = []
     for section in search_response['sections']:
         topics.append(section['title'])
@@ -40,16 +44,17 @@ def clean_text(content):
 
 
 def extract_US():
-    topics = extract_topics()
-    entities_response = GET("https://data.census.gov/api/search?g=010XX00US&services=entities")['response']
+    entities_response = get_from_url("https://data.census.gov/api/search?g=010XX00US&services=entities")['response']
+    assert entities_response != None
     for state in tqdm(entities_response['profiles'], desc='Processing US states'):
 
         page = state['title']
 
         # ======================== CENSUS ========================
-        geography = {}
         geo_id = state['facets']['geography'][0]
-        description_response = GET(F"https://data.census.gov/api/profile/metadata?g={geo_id}&includeHighlights=false")
+        description_response = get_from_url(
+            F"https://data.census.gov/api/profile/metadata?g={geo_id}&includeHighlights=false")
+        if description_response == None: continue
         geography = {
             'title': page,
             'level': state['level'],
@@ -58,8 +63,12 @@ def extract_US():
             'description': clean_text(description_response['header']['description'])
         }
 
+        topics = extract_topics(geo_id)
+        if topics == None: continue
+
         for topic in topics:
-            response = GET(f"https://data.census.gov/api/profile/content/topic?g={geo_id}&infoSection={topic}")
+            response = get_from_url(f"https://data.census.gov/api/profile/content/topic?g={geo_id}&infoSection={topic}")
+            if response == None: continue
             if response['vizData'] != {} and len(response['vizData']['stats']) > 0:
                 geography.update({
                     topic: {
@@ -72,27 +81,29 @@ def extract_US():
 
         # ======================== WIKIPEDIA ========================
         #  Retrieve sections
-        sections = GET("https://en.wikipedia.org/w/api.php",
-                       params={
-                           "action": "parse",
-                           "page": page,
-                           "prop": "sections",
-                           "format": "json",
-                           "formatversion": "2",
-                       }
-                       )["parse"]["sections"]
+        sections = get_from_url("https://en.wikipedia.org/w/api.php",
+                                params={
+                                    "action": "parse",
+                                    "page": page,
+                                    "prop": "sections",
+                                    "format": "json",
+                                    "formatversion": "2",
+                                }
+                                )["parse"]["sections"]
+        if sections == None: continue
         #  Retrieve paragraphs
         for section in sections:
-            response = GET("https://en.wikipedia.org/w/api.php",
-                           params={
-                               "action": "parse",
-                               "page": page,
-                               "prop": "text",
-                               "section": section['index'],
-                               "format": "json",
-                               "formatversion": "2",
-                           }
-                           )["parse"]["text"]
+            response = get_from_url("https://en.wikipedia.org/w/api.php",
+                                    params={
+                                        "action": "parse",
+                                        "page": page,
+                                        "prop": "text",
+                                        "section": section['index'],
+                                        "format": "json",
+                                        "formatversion": "2",
+                                    }
+                                    )["parse"]["text"]
+            if response == None: continue
             soup = BeautifulSoup(response, "html.parser")
             for par in soup.select("sup.reference"):
                 par.decompose()
@@ -112,15 +123,15 @@ def extract_NER_entites():
         # ======================== WIKIPEDIA ========================
         #  Retrieve sections
         try:
-            sections = GET("https://en.wikipedia.org/w/api.php",
-                           params={
-                               "action": "parse",
-                               "page": entity,
-                               "prop": "sections",
-                               "format": "json",
-                               "formatversion": "2",
-                           }
-                           )["parse"]["sections"]
+            sections = get_from_url("https://en.wikipedia.org/w/api.php",
+                                    params={
+                                        "action": "parse",
+                                        "page": entity,
+                                        "prop": "sections",
+                                        "format": "json",
+                                        "formatversion": "2",
+                                    }
+                                    )["parse"]["sections"]
         except:
             continue
 
@@ -131,16 +142,16 @@ def extract_NER_entites():
         #  Retrieve paragraphs
         for section in sections:
             if section in {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}: continue
-            response = GET("https://en.wikipedia.org/w/api.php",
-                           params={
-                               "action": "parse",
-                               "page": entity,
-                               "prop": "text",
-                               "section": section['index'],
-                               "format": "json",
-                               "formatversion": "2",
-                           }
-                           )["parse"]["text"]
+            response = get_from_url("https://en.wikipedia.org/w/api.php",
+                                    params={
+                                        "action": "parse",
+                                        "page": entity,
+                                        "prop": "text",
+                                        "section": section['index'],
+                                        "format": "json",
+                                        "formatversion": "2",
+                                    }
+                                    )["parse"]["text"]
             soup = BeautifulSoup(response, "html.parser")
             for par in soup.select("sup.reference"):
                 par.decompose()
@@ -149,7 +160,8 @@ def extract_NER_entites():
                 f"wiki_{section['anchor']}": clean_text(paragraphs)
             })
 
-        with open(f"knowledge_base/geography/{geography['title']}.json", "w") as f:
+        filename = re.sub(r"\s+", "_", geography["title"])
+        with open(filename, "w") as f:
             json.dump(geography, f, indent=5)
 
 
