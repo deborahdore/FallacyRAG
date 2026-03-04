@@ -1,4 +1,5 @@
 import json
+import os
 import re
 
 import requests
@@ -16,6 +17,7 @@ def get_from_url(url, params=None):
         r.raise_for_status()
         return r.json()
     except Exception as e:
+        print("Error for url: {}".format(url))
         return None
 
 
@@ -27,7 +29,7 @@ def extract_topics(geo_id: str):
         topics.append(section['title'])
         topics.extend(sub['topic'] for sub in section['subsections'] if sub['type'] == "topic")
     topics = set(topics)
-    topics.remove("Explore Your State")
+    if "Explore Your State" in topics: topics.remove("Explore Your State")
     return topics
 
 
@@ -43,7 +45,7 @@ def clean_text(content):
     return content.strip()
 
 
-def extract_US():
+def extract_US(path: str):
     entities_response = get_from_url("https://data.census.gov/api/search?g=010XX00US&services=entities")['response']
     assert entities_response != None
     for state in tqdm(entities_response['profiles'], desc='Processing US states'):
@@ -112,11 +114,12 @@ def extract_US():
                 f"wiki_{section['anchor']}": clean_text(paragraphs)
             })
 
-        with open(f"knowledge_base/geography/{geography['title']}.json", "w") as f:
+        filename = os.path.join(path, re.sub(r"\s+", "_", geography["title"]) + ".json")
+        with open(filename, "w") as f:
             json.dump(geography, f, indent=5)
 
 
-def extract_NER_entites():
+def extract_NER_entites(path: str):
     gpe_entities = json.load(open("note/topic_results.json"))['PLACES']
     for entity in gpe_entities:
 
@@ -160,11 +163,13 @@ def extract_NER_entites():
                 f"wiki_{section['anchor']}": clean_text(paragraphs)
             })
 
-        filename = re.sub(r"\s+", "_", geography["title"])
+        filename = os.path.join(path, re.sub(r"\s+", "_", geography["title"]) + ".json")
         with open(filename, "w") as f:
             json.dump(geography, f, indent=5)
 
 
 if __name__ == '__main__':
-    extract_US()
-    extract_NER_entites()
+    path = "knowledge_base/geography/"
+    os.makedirs(path, exist_ok=True)
+    extract_US(path)
+    extract_NER_entites(path)
