@@ -16,7 +16,7 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 from script.utils import safe_filename, fetch_wikipedia_sections
 
 BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
-NER_SOURCE = "./notebook/topic_results.json"
+NER_SOURCE = "./notebooks/topic_results.json"
 BROWSER_TIMEOUT_MS = 30_000  # 30 s per page navigation
 
 logging.basicConfig(

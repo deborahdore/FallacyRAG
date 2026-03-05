@@ -106,7 +106,7 @@ def extract_US(path: Path) -> None:
             log.exception("Unexpected error processing %s: %s", state.get("title"), e)
 
 
-def extract_NER_entities(path: Path, source_file: str = "./notebook/topic_results.json") -> None:
+def extract_NER_entities(path: Path, source_file: str = "./notebooks/topic_results.json") -> None:
     """Fetch Wikipedia data for named entities listed in a JSON file."""
     try:
         gpe_entities: list[str] = json.loads(Path(source_file).read_text())["PLACES"]
@@ -128,5 +128,5 @@ if __name__ == "__main__":
     output_path = Path("knowledge_base/geography/")
     output_path.mkdir(parents=True, exist_ok=True)
 
-    extract_US(output_path)
+    # extract_US(output_path)
     extract_NER_entities(output_path)
