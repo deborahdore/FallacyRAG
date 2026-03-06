@@ -1,0 +1,80 @@
+{
+    "name": "Thomas Kuchel",
+    "birthDate": "1910",
+    "deathDate": "1994",
+    "bio": "A Senator from California; born in Anaheim, Orange County, Calif., August 15, 1910; attended the public schools; graduated from the University of Southern California in 1932 and from the law school of the same university in 1935; admitted to the bar the same year and began practice in Anaheim, Calif.; member, State assembly 1936-1939; member, State senate 1940-1945, and while serving as State senator volunteered and was called to active duty in the United States Naval Reserve as a lieutenant (junior grade), serving until 1945; State controller 1946-1953; appointed on January 2, 1953, and subsequently elected on November 2, 1954, as a Republican to the United States Senate to fill the vacancy caused by the resignation of Richard M. Nixon; reelected in 1956 and again in 1962 and served from January 2, 1953, to January 3, 1969; unsuccessful candidate for renomination in 1968; Republican whip 1959-1969; resumed the practice of law in Washington, D.C. and California, until his retirement in 1981; resided in Beverly Hills, Calif., until his death on November 21, 1994.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

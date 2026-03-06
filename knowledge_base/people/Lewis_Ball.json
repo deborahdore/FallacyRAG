@@ -1,0 +1,56 @@
+{
+    "name": "Lewis Ball",
+    "birthDate": "1861-09-21",
+    "deathDate": "1933-10-18",
+    "bio": "A Representative and a Senator from Delaware; born near Stanton, New Castle County, Del., September 21, 1861; attended the common schools and Rugby Academy at Wilmington; graduated from Delaware College, Newark, Del., in 1882 and from the medical department of the University of Pennsylvania, Philadelphia, Pa., in 1885; commenced the practice of medicine at Brandywine Springs, Del., in 1887; State treasurer of Delaware 1899-1901; elected as a Republican to the Fifty-seventh Congress and served from March 4, 1901, to March 3, 1903, when he resigned to become Senator; unsuccessful candidate for reelection in 1902 to the Fifty-eighth Congress; elected to the United States Senate on March 2, 1903, to fill the vacancy in the term commencing March 4, 1899, caused by the failure of the legislature to elect, and served from March 3, 1903, to March 3, 1905; resumed the practice of medicine at Brandywine Springs, Del.; again elected to the United States Senate and served from March 4, 1919, to March 3, 1925; unsuccessful candidate for renomination in 1924; chairman, Committee on Enrolled Bills (Sixty-sixth Congress), Committee on the District of Columbia (Sixty-seventh and Sixty-eighth Congresses); appointed a member of the rent commission of Washington, D.C., in 1925; resumed the practice of medicine; died in Faulkland, Del., October 18, 1933; interment in St. James Cemetery, Stanton, Del.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        }
+    ]
+}

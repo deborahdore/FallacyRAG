@@ -1,0 +1,128 @@
+{
+    "name": "Ileana Ros-Lehtinen",
+    "birthDate": "1952",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born Ileana Ros in Havana, Cuba, July 15, 1952; A.A., Miami-Dade Community College, Miami, Fla., 1972; B.A., Florida International University, Miami, Fla., 1975; M.S., Florida International University, Miami, Fla., 1987; Ed.D., University of Miami, Coral Gables, Fla., 2004; founder, Eastern Academy; member of the Florida state house of representatives, 1982-1986; member of the Florida state senate, 1986-1989; elected as a Republican to the One Hundred First Congress, by special election, to fill the vacancy caused by the death of United States Representative Claude D. Pepper, and reelected to the fourteen succeeding Congresses (August 29, 1989-January 3, 2019); chair, Committee on Foreign Affairs (One Hundred Twelfth Congress); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

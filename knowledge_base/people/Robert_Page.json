@@ -1,0 +1,64 @@
+{
+    "name": "Robert Page",
+    "birthDate": "1859-10-26",
+    "deathDate": "1933-10-03",
+    "bio": "A Representative from North Carolina; born in Cary, Wake County, N.C., October 26, 1859; attended the Cary High School and Bingham Military School, Mebane, N.C.; moved to Aberdeen, Moore County, N.C., in 1880 and engaged in the lumber business near Aberdeen until 1900; mayor of Aberdeen 1890-1898; treasurer of the Aberdeen &amp; Asheboro Railroad Co. 1894-1902; moved to Biscoe, Montgomery County, N.C., in 1897; member of the State house of representatives in 1901 and 1902; elected as a Democrat to the Fifty-eighth and to the six succeeding Congresses (March 4, 1903-March 3, 1917); was not a candidate for renomination in 1916; returned to Aberdeen in 1920; engaged in banking, and was president of the Page Trust Co.; died in Aberdeen, N.C., October 3, 1933; interment in Old Bethesda Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

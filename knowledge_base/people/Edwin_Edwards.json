@@ -1,0 +1,40 @@
+{
+    "name": "Edwin Edwards",
+    "birthDate": "1927-08-07",
+    "deathDate": "2021-07-12",
+    "bio": "a Representative from Louisiana; born in Marksville, Avoyelles Parish, La., August 7, 1927; attended the public schools; LL.B., Louisiana State University, Shreveport, La., 1949; J.D., Louisiana State University, Shreveport, La., 1969; United States Naval Air Corps, 1945-1946; lawyer, private practice; member of the Crowley, La., city council, 1954-1962; member of the Louisiana state senate, 1964-1965; elected as a Democrat to the Eighty-ninth Congress, by special election, to fill the vacancy caused by the death of United States Representative T. Ashton Thompson; reelected to the three succeeding Congresses (October 2, 1965-May 9, 1972); Governor of Louisiana, 1972-1980, 1984-1988, 1992-1996; was an unsuccessful candidate for election to the One Hundred Fourteenth Congress in 2014; died on July 12, 2021, in Gonzales, La.; remains were cremated.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "name": "Frank Wolf",
+    "birthDate": "1939",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Philadelphia, Philadelphia County, Pa., January 30, 1939; attended the University of Mississippi, Oxford, Miss., 1957-1958; B.A., Pennsylvania State University, State College, Pa., 1961; LL.B., Georgetown University Law School, Washington, D.C., 1965; United States Army Reserve, 1962-1967; lawyer, private practice; staff, United States Representative Edward G. Biester, Jr., of Pennsylvania, 1968-1971; staff, United States Secretary of the Interior Rogers C.B. Morton, 1971-1974; deputy assistant secretary, United States Department of the Interior, 1974-1975; unsuccessful candidate for nomination to the United States House of Representative in 1976; unsuccessful candidate for election to the United States House of Representative in 1978; elected as a Republican to the Ninety-seventh and to the sixteen succeeding Congresses (January 3, 1981-January 3, 2015); was not a candidate for reelection to the One Hundred Fourteenth Congress in 2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

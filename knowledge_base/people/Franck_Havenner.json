@@ -1,0 +1,56 @@
+{
+    "name": "Franck Havenner",
+    "birthDate": "1882-09-20",
+    "deathDate": "1967-07-24",
+    "bio": "A Representative from California; born in Sherwood, Baltimore County, Md., September 20, 1882; attended the public schools, Columbian College (now George Washington University), Washington, D.C., and Stanford University, California; newspaper writer in San Francisco, Calif., 1907-1917; member of the board of supervisors, San Francisco, 1926-1936; elected as a Progressive to the Seventy-fifth Congress and as a Democrat to the Seventy-sixth Congress (January 3, 1937-January 3, 1941); unsuccessful candidate for reelection in 1940 to the Seventy-seventh Congress; member of California Railroad Commission 1941-1944; elected as a Democrat to the Seventh-ninth and to the three succeeding Congresses (January 3, 1945-January 3, 1953); unsuccessful candidate for reelection in 1952 to the Eighty-third Congress; director of Union Labor Party, AFL; died in San Francisco, Calif., July 24, 1967; interment at Cypress Lawn Memorial Park, Colma, San Mateo County, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Progressive",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Progressive",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

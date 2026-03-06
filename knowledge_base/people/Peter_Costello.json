@@ -1,0 +1,32 @@
+{
+    "name": "Peter Costello",
+    "birthDate": "1854-06-27",
+    "deathDate": "1935-10-23",
+    "bio": "A Representative from Pennsylvania; born in Boston, Mass., June 27, 1854; attended the public schools of Boston; moved to Philadelphia, Pa., in 1877; engaged in various manufacturing industries, also general construction work and real estate development; member of the common council of Philadelphia 1895-1903; director of the department of public works of Philadelphia 1903-1905; again a member of the common council 1908-1915; elected as a Republican to the Sixty-fourth, Sixty-fifth, and Sixty-sixth Congresses (March 4, 1915-March 3, 1921); was not a candidate for renomination in 1920; continued in the real-estate and investment brokerage business in Philadelphia, Pa., until his death there October 23, 1935; interment in West Laurel Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

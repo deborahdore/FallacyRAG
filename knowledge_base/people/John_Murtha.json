@@ -1,0 +1,160 @@
+{
+    "name": "John Murtha",
+    "birthDate": "1932-06-17",
+    "deathDate": "2010-02-08",
+    "bio": "A Representative from Pennsylvania; born in New Martinsville, Wetzel County, W.Va., June 17, 1932; graduated from Ramsey High School, Mount Pleasant, Pa., 1950; attended Kiskiminetas Spring School, 1951; B.A., University of Pittsburgh, Pittsburgh, Pa., 1962; attended Indiana University of Pennsylvania, Indiana, Pa., 1963; United States Marine Corps, 1952-1955, and 1966-1967; United States Marine Corps Reserves, 1955-1966, and 1967-1990; member of the Pennsylvania state house of representatives, 1969-1974; elected as a Democrat to the Ninety-third Congress by special election, to fill the vacancy caused by the death of United States Representative John P. Saylor, reelected to the eighteen succeeding Congresses (February 5, 1974-February 8, 2010); died on February 8, 2010, in Arlington, Va.; interment at Grandview Cemetery, Southmont, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

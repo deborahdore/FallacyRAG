@@ -1,0 +1,55 @@
+{
+    "name": "Bonnie Watson Coleman",
+    "birthDate": "1945-02-06",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey; born in Camden, Camden County, N.J., February 6, 1945; graduated from Ewing High School, Ewing, N.J., 1963; B.A., Thomas Edison State College, Trenton, N.J., 1985; member of the New Jersey state assembly, 1998-2014, majority leader, 2006-2009; chair, New Jersey Democratic state committee, 2002-2006; elected as a Democrat to the One Hundred Fourteenth and to the five succeeding Congresses (January 3, 2015-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

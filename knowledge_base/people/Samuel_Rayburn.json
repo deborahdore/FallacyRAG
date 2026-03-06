@@ -1,0 +1,304 @@
+{
+    "name": "Samuel Rayburn",
+    "birthDate": "1882-01-06",
+    "deathDate": "1961-11-16",
+    "bio": "a Representative from Texas; born near Kingston, Roane County, Tenn., January 6, 1882; moved to Fannin County, Tex., in 1887 with his parents who settled near Windom; attended the rural schools; graduated from the East Texas Normal College, Commerce, Tex., in 1903; studied law at the University of Texas at Austin; was admitted to the bar in 1908 and commenced practice in Bonham, Fannin County, Tex.; member of the Texas state house of representatives, 1907-1913, and served as speaker during the last two years; elected as a Democrat to the Sixty-third and to the twenty-four succeeding Congresses and served until his death (March 4, 1913-November 16, 1961); chair, Committee on Interstate and Foreign Commerce (Seventy-second through Seventy-fourth Congresses); majority leader (Seventy-fifth and Seventy-sixth Congresses), minority leader (Eightieth and Eighty-third Congresses); Speaker of the House (Seventy-sixth through Seventy-ninth Congresses, Eighty-first through Eighty-second Congresses, and Eighty-fourth through Eighty-seventh Congresses); died in Bonham, Tex., November 16, 1961; interment in Willow Wild Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Minority Leader",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03"
+        },
+        {
+            "role": "Minority Leader",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03"
+        }
+    ]
+}

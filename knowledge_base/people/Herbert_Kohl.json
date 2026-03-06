@@ -1,0 +1,104 @@
+{
+    "name": "Herbert Kohl",
+    "birthDate": "1935-02-07",
+    "deathDate": "2023-12-27",
+    "bio": "A Senator from Wisconsin; born in Milwaukee, Milwaukee County, Wis., February 7, 1935; attended Milwaukee public schools; graduated from the University of Wisconsin, Madison 1956; received M.B.A. degree from Harvard School of Business Administration 1958; United States Army Reserves 1958-1964; businessman, president of Kohl Corporation and owner of Milwaukee Bucks basketball team; Wisconsin State Democratic Party chairman 1975-1977; elected as a Democrat to the United States Senate in 1988; reelected in 1994, 2000, and again in 2006, and served from January 3, 1989, to January 3, 2013; chair, Special Committee on Aging (One Hundred Tenth to One Hundred Twelfth Congresses); was not a candidate for reelection to the Senate in 2012; was a resident of Milwaukee, Wis., until his death on December 27, 2023.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

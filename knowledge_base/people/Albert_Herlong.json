@@ -1,0 +1,88 @@
+{
+    "name": "Albert Herlong",
+    "birthDate": "1909",
+    "deathDate": "1995",
+    "bio": "A Representative from Florida; born in Manistee, Monroe County, Ala., February 14, 1909; moved with his parents to Marion County, Fla., in 1912; attended the public schools of Sumter and Lake Counties and Leesburg High School; was graduated from the University of Florida at Gainesville in 1930; was admitted to the bar in 1930 and commenced the practice of law in Leesburg, Lake County, Fla.; elected county judge of Lake County, Fla., and served from 1937 to 1949; city attorney of Leesburg from 1946 to 1948; held Reserve commission as captain in the United States Army and was called to active duty in the Judge Advocate General's Department in August 1941; was discharged in 1942 due to physical disability; served two enlistments in the Florida State Guard; president of the Florida State Baseball League in 1947 and 1948; elected as a Democrat to the Eighty-first and to the nine succeeding Congresses (January 3, 1949-January 3, 1969); was not a candidate for reelection in 1968 to the Ninety-first Congress; resumed the practice of law; member of the Securities and Exchange Commission 1969-1973; died December 27, 1995.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

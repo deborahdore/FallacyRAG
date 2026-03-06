@@ -1,0 +1,64 @@
+{
+    "name": "Beverly Byron",
+    "birthDate": "1932-07-27",
+    "deathDate": "2025-02-09",
+    "bio": "a Representative from Maryland; born Beverly Barton Butcher in Baltimore, Md., July 27, 1932; graduated from National Cathedral School for Girls, Washington, D.C., 1950; attended Hood College, Frederick, Md., 1961-1962; treasurer, Maryland Young Democrats, 1962 and 1965; elected as a Democrat to the Ninety-sixth and to the six succeeding Congresses (January 3, 1979-January 3, 1993); unsuccessful candidate for renomination to the One Hundred Third Congress in 1992; appointed to the Base Closure and Realignment Commission, 1993; died on February 9, 2025, in Frederick, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

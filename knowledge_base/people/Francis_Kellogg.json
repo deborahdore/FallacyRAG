@@ -1,0 +1,40 @@
+{
+    "name": "Francis Kellogg",
+    "birthDate": "1810-05-30",
+    "deathDate": "1879-01-13",
+    "bio": "A Representative from Michigan and from Alabama; born in Worthington, Mass., May 30, 1810; attended the common schools; moved to Columbus, Ohio, in 1833; thence to Grand Rapids, Mich., in 1855 and engaged in the lumber business at Kelloggville, Kent County; member of the State house of representatives in 1857 and 1858; elected from Michigan as a Republican to the Thirty-sixth, Thirty-seventh, and Thirty-eighth Congresses (March 4, 1859-March 3, 1865); during the Civil War organized the Second, Third, and Sixth Regiments by authority of the War Department and was appointed colonel of the Third Regiment; appointed by President Johnson collector of internal revenue for the southern district of Alabama April 30, 1866, and served until July 1868, residing in Mobile, Ala.; upon the readmission of Alabama to representation was elected as a Republican to the Fortieth Congress and served from July 22, 1868, to March 3, 1869; moved to New York City and later to Alliance, Stark County, Ohio, where he died January 13, 1879; interment in Fulton Street Cemetery, Grand Rapids, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

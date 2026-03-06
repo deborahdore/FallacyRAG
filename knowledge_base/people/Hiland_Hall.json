@@ -1,0 +1,56 @@
+{
+    "name": "Hiland Hall",
+    "birthDate": "1795-07-20",
+    "deathDate": "1885-12-18",
+    "bio": "a Representative from Vermont; born in Bennington, Vt., July 20, 1795; attended the common schools; studied law; admitted to the bar in 1819 and commenced practice in Bennington; member of the State house of representatives in 1827; clerk of Benton County in 1828 and 1829; State's attorney 1828-1831; elected as an Anti-Jacksonian candidate to the Twenty-second Congress to fill the vacancy caused by the death of Jonathan Hunt; reelected as an Anti-Jacksonian candidate to the Twenty-third and Twenty-fourth Congresses and elected as a Whig to the Twenty-fifth through Twenty-seventh Congresses and served from January 1, 1833, to March 3, 1843; chairman, Committee on Revolutionary Claims (Twenty-seventh Congress); was not a candidate for renomination in 1842; State bank commissioner 1843-1846; judge of the State supreme court 1846-1850; Second Comptroller of the Treasury from November 27, 1850, to September 10, 1851; United States land commissioner for California 1851-1854; returned to Vermont; Governor of Vermont 1858-1860; member of the peace convention of 1861 held in Washington, D.C., in an effort to devise means to prevent the impending war; died in Springfield, Mass., December 18, 1885; interment in Bennington Center Cemetery, Bennington, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VERMONT"
+        }
+    ]
+}

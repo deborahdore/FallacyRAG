@@ -1,0 +1,16 @@
+{
+    "name": "James MacHir",
+    "birthDate": null,
+    "deathDate": "1827-06-25",
+    "bio": "A Representative from Virginia; born in Virginia, birth date unknown; member of the State house of delegates, 1793-1796; elected as a Federalist to the Fifth Congress (March 4, 1797-March 3, 1799); again a member of the State house of delegates, 1811-1813 and 1818-1821; died June 25, 1827.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

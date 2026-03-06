@@ -1,0 +1,32 @@
+{
+    "name": "Mark Kennedy",
+    "birthDate": "1957-04-11",
+    "deathDate": null,
+    "bio": "A Representative from Minnesota; born in Benson, Swift County, Minn., April 11, 1957; graduated from Pequot Lakes High School, Pequot Lakes, Minn., 1975; B.S., St. John's University, Collegeville, Minn., 1979; M.B.A., University of Michigan, Ann Arbor, Mich., 1983; elected as a Republican to the One Hundred Seventh and to the two succeeding Congresses (January 3, 2001-January 3, 2007); not a candidate for reelection, but was an unsuccessful candidate to the United States Senate in 2006.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        }
+    ]
+}

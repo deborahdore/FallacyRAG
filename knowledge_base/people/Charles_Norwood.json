@@ -1,0 +1,64 @@
+{
+    "name": "Charles Norwood",
+    "birthDate": "1941-07-27",
+    "deathDate": "2007-02-13",
+    "bio": "A Representative from Georgia; born in Valdosta, Lowndes County, Ga., July 27, 1941; graduated from Baylor Military High School, Chattanooga, Tenn., 1959; B.A., Georgia Southern University, Statesboro, Ga., 1964; D.D.S., Georgetown University Dental School, Washington, D.C, 1967; United States Army, 1967-1969; dentist; business owner; elected as a Republican to the One Hundred Fourth and to the six succeeding Congresses, served until his death on February 13, 2007 (January 3, 1995-February 13, 2007); interment at Westover Memorial Park, Augusta, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

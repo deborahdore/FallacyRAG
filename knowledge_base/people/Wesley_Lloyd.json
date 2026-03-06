@@ -1,0 +1,24 @@
+{
+    "name": "Wesley Lloyd",
+    "birthDate": "1883-07-24",
+    "deathDate": "1936-01-10",
+    "bio": "A Representative from Washington; born at Arvonia, Osage County, Kans., on July 24, 1883, attended the public schools, Baker University, Baldwin, Kans., and Washburn College, Topeka, Kans.; engaged in newspaper work in Kansas City and Topeka; graduated from the Kansas City Law School in 1906; was admitted to the bar the same year; moved to Tacoma, Wash., in 1906, and engaged in newspaper work until 1908 when he commenced the practice of law in Tacoma; served as a corporal in the Washington National Guard 1918-1920; was elected as a Democrat to the Seventy-third and Seventy-fourth Congresses and served from March 4, 1933, until his death in Washington, D.C., January 10, 1936; interment in Tacoma Cemetery, Tacoma, Wash.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

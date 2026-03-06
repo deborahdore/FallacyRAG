@@ -1,0 +1,72 @@
+{
+    "name": "Ronald Marlenee",
+    "birthDate": "1935",
+    "deathDate": "2020",
+    "bio": "A Representative from Montana; born in Scobey, Daniels County, Mont., August 8, 1935; educated in the public schools of Daniels County; attended: Montana State University, Bozeman; University of Montana, Missoula; and Reisch School of Auctioneering, Mason City, Iowa; farmer and rancher; committeeman, Second Congressional District of Montana, 1975-1976; elected as a Republican to the Ninety-fifth and to the seven succeeding Congresses (January 3, 1977-January 3, 1993); unsuccessful candidate for reelection in 1992 to the One Hundred Third Congress; died on April 26, 2020, in Bozeman, Mont.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        }
+    ]
+}

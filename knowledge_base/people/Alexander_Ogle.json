@@ -1,0 +1,16 @@
+{
+    "name": "Alexander Ogle",
+    "birthDate": "1766-08-10",
+    "deathDate": "1832-10-14",
+    "bio": "A Representative from Pennsylvania; born in Frederick, Frederick County, Md., August 10, 1766; completed preparatory studies; moved to Somerset, Pa., in 1795; member of the Pennsylvania state house of representatives in 1803, 1804, 1807, 1808, and 1811; served as major general in the State militia; prothonotary, recorder of deeds, and clerk of courts 1812-1817; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); was not a candidate for renomination in 1818; again a member of the Pennsylvania state house of representatives 1819-1823; served in the Pennsylvania state senate in 1827 and 1828; died in Somerset, Pa., October 14, 1832; interment in Union Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

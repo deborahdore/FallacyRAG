@@ -1,0 +1,47 @@
+{
+    "name": "John Bergman",
+    "birthDate": "1947-02-02",
+    "deathDate": null,
+    "bio": "a Representative from Michigan; born in Shakopee, Scott County, Minn., February 2, 1947; B.A., Gustavus Adolphus College, St. Peter, Minn., 1969; M.B.A., University of West Florida, Pensacola, Fla., 1975; United States Marine Corps, 1969-2009; lieutenant general; commercial pilot; business owner; elected as a Republican to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

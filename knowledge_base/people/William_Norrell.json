@@ -1,0 +1,104 @@
+{
+    "name": "William Norrell",
+    "birthDate": "1896-08-29",
+    "deathDate": "1961-02-15",
+    "bio": "A Representative from Arkansas; born in Milo, Ashley County, Ark., August 29, 1896; attended the public schools, the Arkansas Agricultural and Mechanical College of Monticello, the College of the Ozarks, Clarksville, Ark., and the University of Arkansas Law School at Little Rock; during the First World War served in the Quartermaster Corps of the United States Army; was admitted to the bar in 1920 and commenced practice in Monticello, Ark.; member of the State senate 1930-1938, serving as president for four years; elected as a Democrat to the Seventy-sixth and to the eleven succeeding Congresses and served from January 3, 1939, until his death in Washington, D.C., February 15, 1961; interment in Oakland Cemetery, Monticello, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

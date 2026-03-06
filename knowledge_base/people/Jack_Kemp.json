@@ -1,0 +1,80 @@
+{
+    "name": "Jack Kemp",
+    "birthDate": "1935-07-13",
+    "deathDate": "2009-05-02",
+    "bio": "a Representative from New York; born in Los Angeles, Los Angeles County, Calif., July 13, 1935; B.A., Occidental College, Los Angeles, Calif., 1957; United States Army Reserve, 1958-1962 (active duty, 1958); professional football player, 1957-1970; special assistant to the Governor of California, 1967; staff, Republican National Committee, 1969; elected as a Republican to the Ninety-second and to the eight succeeding Congresses (January 3, 1971-January 3, 1989); was not a candidate for renomination to the One Hundred First Congress in 1988; unsuccessful candidate for the Republican nomination for President of the United States in 1988; United States Secretary of Housing and Urban Development, 1989-1993; unsuccessful candidate for Vice President of the United States in 1996; died on May 2, 2009, in Bethesda, Md.; awarded posthumously the Presidential Medal of Freedom by President Barack Obama, 2009.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

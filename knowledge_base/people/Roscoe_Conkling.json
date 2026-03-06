@@ -1,0 +1,96 @@
+{
+    "name": "Roscoe Conkling",
+    "birthDate": "1829-10-30",
+    "deathDate": "1888-04-18",
+    "bio": "A Representative and a Senator from New York; born in Albany, N.Y., October 30, 1829; moved with his parents to Auburn, N.Y., in 1839; completed an academic course; studied law; admitted to the bar in 1850 and commenced practice in Utica, N.Y.; district attorney for Oneida County in 1850; mayor of Utica 1858; elected as a Republican to the Thirty-sixth and Thirty-seventh Congresses (March 4, 1859-March 3, 1863); chairman, Committee on District of Columbia (Thirty-seventh Congress); unsuccessful candidate in 1862 for reelection; elected to the Thirty-ninth and Fortieth Congresses and served from March 4, 1865, until he resigned to become Senator, effective March 4, 1867; elected in 1867 as a Republican to the United States Senate; reelected in 1873 and again in 1879 and served from March 4, 1867, until May 16, 1881, when he resigned as a protest against the federal appointments made in New York State; was an unsuccessful candidate for reelection to the United States Senate to fill the vacancy caused by his own resignation; chairman, Committee on Revision of the Laws of the United States (Fortieth through Forty-third Congresses), Committee on Commerce (Forty-fourth, Forty-fifth, and Forty-seventh Congresses), Committee on Engrossed Bills (Forty-sixth and Forty-seventh Congresses); resumed the practice of law in New York City; nominated and confirmed as an Associate Justice of the Supreme Court of the United States in March 1882 but declined to serve; died in New York City, on April 18, 1888; interment in Forest Hill Cemetery, Utica, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

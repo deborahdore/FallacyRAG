@@ -1,0 +1,64 @@
+{
+    "name": "William Green",
+    "birthDate": "1938-06-24",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Pa., June 24, 1938; attended St. Joseph's Prep School; B.A., St. Joseph's College, 1960; attended Villanova Law School; elected chairman of the Philadelphia County Executive Committee; elected as a Democrat, by special election, April 28, 1964, to the Eighty-eighth Congress to fill the vacancy caused by the death of his father, William Joseph Green, Jr.; reelected to the six succeeding Congresses and served from April 28, 1964, until January 3, 1977; was not a candidate in 1976 for reelection to the Ninety-fifth Congress but was an unsuccessful candidate for election to the United States Senate; elected Mayor of Philadelphia in 1979 and served from January 7, 1980, to January 2, 1984; was not a candidate for reelection in 1983; resumed the practice of law; is a resident of Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

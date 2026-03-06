@@ -1,0 +1,32 @@
+{
+    "name": "Charlie Crist",
+    "birthDate": "1956",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Altoona, Blair County, Pa., July 24, 1956; graduated from St. Petersburg High School, St. Petersburg, Fla., 1974; attended Wake Forest University, Winston-Salem, N.C.; B.A., Florida State University, Tallahassee, Fla., 1978; J.D., Cumberland School of Law, Birmingham, Ala., 1981; lawyer, private practice; unsuccessful candidate for election to the Florida state senate in 1986; staff, United States Senator Connie Mack of Florida, 1989; member of the Florida state senate, 1993-1999; Florida deputy secretary of business and professional regulation, 1999-2001; Florida state education commissioner, 2001-2003; Florida state attorney general, 2003-2007; Governor of Florida, 2007-2011; unsuccessful candidate for election to the United States Senate in 2010; unsuccessful candidate for election for Governor of Florida in 2014; elected as a Democrat to the One Hundred Fifteenth and to the two succeeding Congresses until his resignation on August 31, 2022 (January 3, 2017-August 31, 2022); unsuccessful candidate for Governor of Florida in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Dan Bishop",
+    "birthDate": "1964-07-01",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born on July 1, 1964; B.S., University of North Carolina, Chapel Hill, N.C., 1986; J.D., University of North Carolina, Chapel Hill, N.C., 1990; lawyer, private practice; Mecklenburg County, N.C., commissioner, 2004-2008; member of the North Carolina state house of representatives, 2015-2017; member of the North Carolina state senate, 2017-2019; elected as a Republican to the One Hundred Sixteenth Congress, by special election as directed by the North Carolina state board of elections, and reelected to the two succeeding Congresses (September 10, 2019-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024, but was an unsuccessful candidate for election for attorney general of North Carolina; deputy director, Office of Management and Budget, 2025; United States attorney for the Middle District of North Carolina, 2025-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

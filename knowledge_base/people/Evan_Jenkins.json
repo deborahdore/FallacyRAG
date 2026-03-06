@@ -1,0 +1,24 @@
+{
+    "name": "Evan Jenkins",
+    "birthDate": "1960-09-12",
+    "deathDate": null,
+    "bio": "A Representative from West Virginia; born in Huntington, Cabell County, W.Va., September 12, 1960; B.S., University of Florida, Gainesville, Fla., 1983; J.D., Cumberland School of Law, Samford University, Birmingham, Ala., 1987; lawyer, private practice; businessman; instructor, Marshall University, Huntington, W.Va.; member of the West Virginia state house of delegates, 1994-1998; member of the West Virginia state senate, 2002-2014; elected as a Republican to the One Hundred Fourteenth and to the succeeding Congress until his resignation on September 30, 2018 (January 3, 2015-September 30, 2018); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018, but was an unsuccessful candidate for nomination to the United States Senate; judge, W.Va., court of appeals, 2018-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

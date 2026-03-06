@@ -1,0 +1,64 @@
+{
+    "name": "Elijah Forrester",
+    "birthDate": "1896",
+    "deathDate": "1970",
+    "bio": "A Representative from Georgia; born on a farm near Leesburg, Lee County, Ga., August 16, 1896; attended the Leesburg public schools; studied law and passed the State bar examination in 1917; during the First World War served as a private in the United States Army; commenced the practice of law in 1919 in Leesburg, Ga.; solicitor, City Court, Leesburg, Ga., 1920-1933; mayor of Leesburg 1922-1931; county attorney of Lee County 1928-1937; solicitor general, southwestern judicial circuit, 1937-1950; delegate to Democratic National Conventions in 1948 and 1952; elected as a Democrat to the Eighty-second and to the six succeeding Congresses (January 3, 1951-January 3, 1965); was not a candidate for renomination in 1964 to the Eighty-ninth Congress; returned to Leesburg and resumed the practice of law; died in Albany, Ga., March 19, 1970; interment in Leesburg Cemetery, Leesburg, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

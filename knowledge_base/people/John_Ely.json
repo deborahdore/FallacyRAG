@@ -1,0 +1,16 @@
+{
+    "name": "John Ely",
+    "birthDate": "1774-10-08",
+    "deathDate": "1849-08-20",
+    "bio": "A Representative from New York; born in Saybrook, Conn., October 8, 1774; completed preparatory studies; studied medicine, and practiced in Coxsackie, N.Y.; member of the State assembly in 1806 and 1812; one of the organizers of the New York State and Greene County Medical Societies in 1807 and also of the Albany Female Academy; elected as a Democrat to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); resumed the practice of medicine; died in Coxsackie, N.Y., August 20, 1849; interment in Old Coxsackie Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

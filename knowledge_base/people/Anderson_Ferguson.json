@@ -1,0 +1,40 @@
+{
+    "name": "Anderson Ferguson",
+    "birthDate": "1966-11-15",
+    "deathDate": null,
+    "bio": "A Representative from Georgia; born in Lansdale, Houston County, Ala., November 15, 1966; graduated from Springwood School, Lanett, Ala., 1985; attended University of Georgia, Athens, Ga., 1988; D.M.D., Medical College of Georgia, Augusta, Ga., 1992; dentist; member of the West Point, Ga., board of aldermen, 1997-1999; Mayor of West Point, Ga., 2008-2016; elected as a Republican to the One Hundred Fifteenth and to the three succeeding Congresses (January 3, 2017-Janaury 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

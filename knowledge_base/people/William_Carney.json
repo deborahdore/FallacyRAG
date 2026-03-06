@@ -1,0 +1,40 @@
+{
+    "name": "William Carney",
+    "birthDate": "1942",
+    "deathDate": "2017",
+    "bio": "A Representative from New York; born in Brooklyn, Kings County, N.Y., July 1, 1942; received preliminary education at St. Catherine of Genoa, Brooklyn, N.Y.; graduated from Delahanty High School, Queens, N.Y., 1960; attended Florida State University, Tallahassee, Fla., 1960-1961; United States Army Medical Corps, 1961-1964; sales representative for heavy equipment firm, 1972-1976; member, Suffolk County, N.Y., legislature, 1976-1979; elected as a Republican to the Ninety-sixth and to the three succeeding Congresses (January 3, 1979-January 3, 1987); was not a candidate for reelection in 1986; private advocate; died on May 23, 2017, in Washington, D.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

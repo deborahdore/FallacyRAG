@@ -1,0 +1,32 @@
+{
+    "name": "William Englebright",
+    "birthDate": "1855-11-23",
+    "deathDate": "1915-02-10",
+    "bio": "A Representative from California; born in New Bedford, Mass., November 23, 1855; moved with his parents to Vallejo, Calif.; attended private and public schools; entered the service of the United States at the navy yard, Mare Island, as joiner's apprentice and completed his studies in engineering; established himself in Nevada City, Calif., as a mining engineer; member of the Nevada City Board of Education; elected as a Republican to the Fifty-ninth Congress to fill the vacancy caused by the resignation of James N. Gillett; reelected to the Sixtieth and Sixty-first Congresses and served from November 6, 1906, to March 3, 1911; unsuccessful candidate for reelection in 1910 to the Sixty-second Congress; resumed his occupation as a mining engineer; died in Oakland, Calif., February 10, 1915; interment in Pine Grove Cemetery, Nevada City, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Joel Abbot",
+    "birthDate": "1776-03-17",
+    "deathDate": "1826-11-19",
+    "bio": "a Representative from Georgia; born in Ridgefield, Conn., March 17, 1776; physician; member of the Washington, Ga., city council; member of the Georgia state house of representatives, 1799, 1802-1804, 1808, and 1811; elected as a Democratic Republican to the Fifteenth and reelected to the two succeeding Congresses and elected as a Crawford Republican to the Eighteenth (March 4, 1817-March 3, 1825); died on November 19, 1826, in Lexington, Ga.; interment in Rest Haven Cemetery, Washington, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

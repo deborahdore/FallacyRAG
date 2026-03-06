@@ -1,0 +1,24 @@
+{
+    "name": "Cullen Sawtelle",
+    "birthDate": "1805-09-25",
+    "deathDate": "1887-11-10",
+    "bio": "A Representative from Maine; born in Norridgewock, Maine, September 25, 1805; received his early education under private tutors and was graduated from Bowdoin College, Brunswick, Maine, in 1825; studied law; was admitted to the bar in 1828 and practiced in Norridgewock until 1841; register of probate 1830-1838; member of the State senate 1842-1844; elected as a Democrat to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); chairman, Committee on Revisal and Unfinished Business (Twenty-ninth Congress); elected to the Thirty-first Congress (March 4, 1849-March 3, 1851); chairman, Committee on Revolutionary Claims (Thirty-first Congress); attorney and credit manager for several mercantile firms in New York City 1852-1882; died in Englewood, Bergen County, N.J., November 10, 1887; interment in Brookside Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        }
+    ]
+}

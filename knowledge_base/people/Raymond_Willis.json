@@ -1,0 +1,32 @@
+{
+    "name": "Raymond Willis",
+    "birthDate": "1875",
+    "deathDate": "1956",
+    "bio": "A Senator from Indiana; born in Waterloo, De Kalb County, Ind., August 11, 1875; attended the public schools and graduated from Wabash College, Crawfordsville, Ind., in 1896; learned the printer's trade in Waterloo, Ind.; moved to Angola, Ind., and engaged in the newspaper publishing business in 1898; postmaster of Angola 1910-1914; during the First World War served as chairman of Steuben County Council of Defense 1917-1918; member, State house of representatives 1919-1921; unsuccessful candidate for election to the United States Senate in 1938; elected as a Republican to the United States Senate in 1940, and served from January 3, 1941, to January 3, 1947; was not a candidate for renomination in 1946; resumed the publishing business as president of the Steuben Printing Co.; trustee of Tri-State College at Angola; died in Angola, Ind., March 21, 1956; interment in Circle Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

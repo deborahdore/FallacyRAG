@@ -1,0 +1,96 @@
+{
+    "name": "Leonidas Dyer",
+    "birthDate": "1871-06-11",
+    "deathDate": "1957-12-15",
+    "bio": "A Representative from Missouri; born near Warrenton, Warren County, Mo., June 11, 1871; attended the common schools, Central Wesleyan College, Warrenton, Mo., and Washington University, St. Louis, Mo.; studied law; was admitted to the bar in 1893 and commenced practice in St. Louis, Mo.; served in the Spanish-American War; was a member of the staff of Governor Hadley of Missouri, with the rank of colonel; commander in chief of the Spanish War Veterans in 1915 and 1916; elected as a Republican to the Sixty-second Congress (March 4, 1911-March 3, 1913); presented credentials as a Member-elect to the Sixty-third Congress and served from March 4, 1913, to June 19, 1914, when he was succeeded by Michael J. Gill, who contested his election; elected to the Sixty-fourth and to the eight succeeding Congresses (March 4, 1915-March 3, 1933); unsuccessful candidate for reelection in 1932 to the Seventy-third Congress and for election in 1934 to the Seventy-fourth Congress and in 1936 to the Seventy-fifth Congress; resumed the practice of law; died in St. Louis, Mo., December 15, 1957; interment in Oak Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

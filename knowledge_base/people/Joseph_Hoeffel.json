@@ -1,0 +1,32 @@
+{
+    "name": "Joseph Hoeffel",
+    "birthDate": "1950",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Philadelphia, Philadelphia County, Pa., September 3, 1950; graduated from William Penn Charter School, Philadelphia, Pa.; B.A., Boston University, Boston, Mass., 1972; J.D., Temple University, Philadelphia, Pa., 1986; United States Army Reserve, 1970-1976; member of the Pennsylvania state house of representatives, 1977-1984; Montgomery County, Pa., commissioner, 1992-1998; elected as a Democrat to the One Hundred Sixth and to the two succeeding Congresses (January 3, 1999-January 3, 2005); was not a candidate for reelection in 2004, but was an unsuccessful candidate for election to the United States Senate; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

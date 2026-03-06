@@ -1,0 +1,56 @@
+{
+    "name": "Bob McEwen",
+    "birthDate": "1950",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Hillsboro, Highland County, Ohio, January 12, 1950; attended the public schools; B.B.A., University of Miami, Coral Gables, Fla., 1972; business executive; served in the Ohio house of representatives 1974-1980; delegate, Republican National Conventions, 1974-1978; elected as a Republican to the Ninety-seventh and to the five succeeding Congresses (January 3, 1981-January 3, 1993); unsuccessful candidate for reelection to the One Hundred Third Congress; is a resident of Hillsboro, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

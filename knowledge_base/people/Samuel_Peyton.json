@@ -1,0 +1,32 @@
+{
+    "name": "Samuel Peyton",
+    "birthDate": "1804-01-08",
+    "deathDate": "1870-01-04",
+    "bio": "A Representative from Kentucky; born in Bullitt County, Ky., January 8, 1804; completed preparatory studies; was graduated from the medical department of Transylvania University, Lexington, Ky., in 1827 and began practice in Hartford, Ohio County, Ky.; member of the State house of representatives in 1835; elected as a Democrat to the Thirtieth Congress (March 4, 1847-March 3, 1849); unsuccessful candidate for reelection in 1848 to the Thirty-first Congress; elected to the Thirty-fifth and Thirty-sixth Congresses (March 4, 1857-March 3, 1861); unsuccessful candidate for renomination in 1860; resumed the practice of medicine; died in Hartford, Ky., January 4, 1870; interment in Oakwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

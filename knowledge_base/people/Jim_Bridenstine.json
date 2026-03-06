@@ -1,0 +1,32 @@
+{
+    "name": "Jim Bridenstine",
+    "birthDate": "1975-06-15",
+    "deathDate": null,
+    "bio": "A Representative from Oklahoma; born in Ann Arbor, Washtenaw County, Mich., June 15, 1975; graduated from Jenks High School, Tulsa, Okla., 1993; B.A., Rice University, Houston, Texas, 1998; M.B.A., Cornell University, Ithaca, N.Y., 2009; United States Navy, 1998-2007; United States Navy Reserve, 2010-present; defense consultant; elected as a Republican to the One Hundred Thirteenth and to the two succeeding Congresses until his resignation on April 23, 2018 (January 3, 2013-April 23, 2018); NASA Administrator, 2018-2021.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

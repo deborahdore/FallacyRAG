@@ -1,0 +1,88 @@
+{
+    "name": "Jeremiah Morrow",
+    "birthDate": "1771-10-06",
+    "deathDate": "1852-03-22",
+    "bio": "A Representative and a Senator from Ohio; born near Gettysburg, Pa., October 6, 1771; attended the public schools; moved to that part of the Northwest Territory which is now the State of Ohio in 1795; surveyor; engaged in agricultural pursuits; member, Territorial house of representatives 1801-1802; member, State senate 1803; upon the admission of Ohio as a State into the Union was elected as a Democratic Republican to the Eighth and to the four succeeding Congresses and served from October 17, 1803, to March 3, 1813; did not seek renomination in 1812, having become a candidate for Senator; chairman, Committee on Public Lands (Tenth through Twelfth Congresses); elected as a Democratic Republican to the United States Senate and served from March 4, 1813, to March 3, 1819; was not a candidate for reelection; chairman, Committee on Public Lands (Fourteenth and Fifteenth Congresses); State canal commissioner 1822; Governor of Ohio 1822-1826; member, State senate 1827-1828; member, State house of representatives 1829, 1835; elected as a Whig to the Twenty-sixth Congress to fill the vacancy caused by the resignation of Thomas Corwin and on the same day was elected to the Twenty-seventh Congress and served from October 13, 1840, to March 3, 1843; declined to be a candidate for renomination in 1842; chairman, Committee on Public Lands (Twenty-sixth and Twenty-seventh Congresses); resumed agricultural pursuits; died near Lebanon, Warren County, Ohio, March 22, 1852; interment in Union Cemetery, on the Montgomery Pike, near his home, in Warren County, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        }
+    ]
+}

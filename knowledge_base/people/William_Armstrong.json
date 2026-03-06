@@ -1,0 +1,80 @@
+{
+    "name": "William Armstrong",
+    "birthDate": "1937",
+    "deathDate": "2016",
+    "bio": "A Representative and a Senator from Colorado; born in Fremont, Dodge County, Nebr., March 16, 1937; attended the public schools, Tulane University 1954-1955, and the University of Minnesota 1956; served in the United States Army National Guard 1957-1963; president of a radio station in Aurora, Colo.; banker; State representative 1963-1964; State senator 1965-1972; State senate majority leader 1969-1972; elected in 1972 as a Republican to the Ninety-third Congress; reelected to the Ninety-fourth and Ninety-fifth Congresses (January 3, 1973-January 3, 1979); was not a candidate in 1978 for reelection to the House of Representatives, but was elected to the United States Senate; reelected in 1984, and served from January 3, 1979, to January 3, 1991; not a candidate for reelection in 1990; chairman, Republican Policy Committee (Ninety-ninth through One Hundred First Congresses); was a resident of Littleton, Colo., until his death on July 5, 2016; interment in Fairmount Cemetery, Denver, Colo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

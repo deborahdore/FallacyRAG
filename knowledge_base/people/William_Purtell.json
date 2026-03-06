@@ -1,0 +1,40 @@
+{
+    "name": "William Purtell",
+    "birthDate": "1897",
+    "deathDate": "1978",
+    "bio": "A Senator from Connecticut; born in Hartford, Conn., May 6, 1897; attended the public and parochial schools; during the First World War enlisted in the United States Army in 1918 and was discharged as a corporal in 1919; engaged as a salesman 1919-1929; organizer, president, treasurer, and general manager of the Holo-Krome Screw Corp.; also was director and officer of many other business enterprises; unsuccessful candidate for the Republican nomination for governor in 1950; appointed on August 29, 1952, as a Republican to the United States Senate to fill the vacancy caused by the death of Brien McMahon and served from August 29, 1952, to November 4, 1952, when a successor was duly elected; was not a candidate for election to the vacancy; elected to the United State Senate November 4, 1952, for a full six-year term and served from January 3, 1953, to January 3, 1959; unsuccessful candidate for reelection in 1958; resumed manufacturing interests; resided in West Hartford, Conn., where he died May 31, 1978; interment in Fairview Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

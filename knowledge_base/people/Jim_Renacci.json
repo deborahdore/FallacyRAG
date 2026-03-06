@@ -1,0 +1,40 @@
+{
+    "name": "Jim Renacci",
+    "birthDate": "1958",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Monongahela, Washington County, Pa., December 3, 1958; graduated from Ringgold High School, Monongahela, Pa., 1976; B.S., Indiana University of Pennsylvania, Indiana, Pa., 1980; business owner; member of the Wadsworth, Ohio, board of zoning appeals, 1994-1995; Wadsworth, Ohio, city council president, 1999-2003; mayor of Wadsworth, Ohio, 2004-2008; elected as a Republican to the One Hundred Twelfth and to the three succeeding Congresses (January 3, 2011-January 3, 2019); was not a candidate for reelection to the House of Representatives in 2018, but was an unsuccessful candidate for election to the United States Senate; unsuccessful candidate for nomination for Governor of Ohio in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

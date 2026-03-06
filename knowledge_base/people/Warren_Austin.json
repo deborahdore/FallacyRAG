@@ -1,0 +1,72 @@
+{
+    "name": "Warren Austin",
+    "birthDate": "1877",
+    "deathDate": "1962",
+    "bio": "A Senator from Vermont; born in Highgate Center, Franklin County, Vt., November 12, 1877; attended the public schools; graduated from Brigham Academy, Bakersfield, Vt., in 1895 and from the University of Vermont, at Burlington, in 1899; studied law; admitted to the bar in 1902 and commenced practice at St. Albans, Vt.; served as State's attorney of Franklin County, Vt. 1904-1906; United States commissioner 1907-1915; chairman of the Republican State Convention in 1908; mayor of St. Albans 1909; delegate to the Congress of the Mint 1912; trustee of the University of Vermont 1914-1941; special counsel for Vermont in the boundary-line dispute between Vermont and New Hampshire 1925-1937; member of the United States Court for China 1917; elected as a Republican to the United States Senate on March 31, 1931, to fill the vacancy caused by the death of Frank L. Greene; reelected in 1934 and 1940 and served from April 1, 1931, until his resignation on August 2, 1946, to become United States representative on the Security Council of the United Nations, serving until his retirement January 25, 1953; was a resident of Burlington, Vt., until his death on December 25, 1962; interment in Lake View Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        }
+    ]
+}

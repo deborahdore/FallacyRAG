@@ -1,0 +1,136 @@
+{
+    "name": "Dennis Chavez",
+    "birthDate": "1888-04-08",
+    "deathDate": "1962-11-18",
+    "bio": "A Representative and a Senator from New Mexico; born in Los Chavez, Valencia County, N.Mex., April 8, 1888; attended the public schools; worked as a grocer's clerk as a boy and later in the engineering department of the city of Albuquerque; travelled to Washington in 1917 with Senator Andrieus A. Jones and served as clerk in the office of the Secretary of the United States Senate 1917-1920; graduated from the law department of Georgetown University, Washington, D.C., in 1920; admitted to the bar in 1920 and commenced practice in Albuquerque, N.Mex.; member, State house of representatives 1923-1924; elected as a Democrat to the Seventy-second and Seventy-third Congresses (March 4, 1931-January 3, 1935); chairman, Committee on Irrigation and Reclamation (Seventy-third Congress); did not seek renomination in 1934, but was an unsuccessful candidate for United States Senator; appointed as a Democrat on May 11, 1935, and elected on November 3, 1936, to the United States Senate to fill the vacancy caused by the death of Bronson M. Cutting; reelected in 1940, 1946, 1952, and again in 1958, and served from May 11, 1935, until his death in Washington, D.C., November 18, 1962; chairman, Committee on Post Office and Post Roads (Seventy-ninth Congress), Committee on Public Works (Eighty-first, Eighty-second, and Eighty-fourth through Eighty-seventh Congresses); interment in Mount Calvary Cemetery, Albuquerque, N.Mex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Nathaniel Tallmadge",
+    "birthDate": "1795",
+    "deathDate": "1864",
+    "bio": "A Senator from New York; born in Chatham, Columbia County, N.Y., February 8, 1795; graduated from Union College, Schenectady, N.Y., in 1815; studied law; admitted to the bar in 1818 and commenced practice in Poughkeepsie, N.Y.; member, State assembly 1828; member, State senate 1830-1833; elected as a Jacksonian to the United States Senate in 1833; reelected as a Democrat in 1839, and served from March 4, 1833, to June 17, 1844, when he resigned, having been appointed by President John Tyler to be Governor of Wisconsin Territory, with residence in Fond du Lac; served as Governor of Wisconsin Territory until his removal from office in May 1845; devoted himself to writing religious tracts; died in Battle Creek, Mich., November 2, 1864; interment in Rienzi Cemetery, Fond du Lac, Wis.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

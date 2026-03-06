@@ -1,0 +1,32 @@
+{
+    "name": "Alexander McKim",
+    "birthDate": "1748-01-10",
+    "deathDate": "1832-01-18",
+    "bio": "a Representative from Maryland; born in Brandywine, Del., January 10, 1748; pursued an academic course; moved to Baltimore, Md.; member of the Maryland house of delegates, 1778; served in the Revolutionary War, member of the Baltimore Independent Cadets and of the First Baltimore Cavalry; fought under General Lafayette in the Virginia campaign of 1781; member of the Maryland state senate, 1806-1810; elected as a Democratic Republican to the Eleventh and to the two succeeding Congresses (March 4, 1809-March 3, 1815); engaged in mercantile pursuits; justice of court of quarter sessions; presiding judge of the Baltimore County Orphans' Court until his death; died on January 18, 1832, in Baltimore, Md.; interment in Greenmount Cemetery, Baltimore, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        }
+    ]
+}

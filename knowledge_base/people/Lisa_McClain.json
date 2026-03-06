@@ -1,0 +1,31 @@
+{
+    "name": "Lisa McClain",
+    "birthDate": "1966-04-07",
+    "deathDate": null,
+    "bio": "a Representative from Michigan; born in Stockbridge, Ingham County, Mich., April 7, 1966; graduated from Stockbridge High School, Stockbridge, Mich., 1984; attended Lansing Community College, Lansing, Mich.; B.B.A., Northwood University, Midland, Mich., 1997; business executive; financial consultant; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present); chair, House Republican Conference (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

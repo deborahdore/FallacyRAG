@@ -1,0 +1,168 @@
+{
+    "name": "Charles Roberts",
+    "birthDate": "1936",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Kansas; born in Topeka, Kans., April 20, 1936; attended the public schools; graduated from Holton High School 1954; B.A., Kansas State University, Manhattan 1958; served in the U.S. Marine Corps as a captain 1958-1962; newspaper publisher, Litchfield Park, Ariz. 1962-1967; administrative assistant, United States Senator Frank Carlson 1967-1968; administrative assistant, United States Congressman Keith Sebelius 1968-1980; elected as a Republican to the Ninety-seventh and to the seven succeeding Congresses (January 3, 1981-January 2, 1997); chair, Committee on Agriculture (One Hundred Fourth Congress); not a candidate for reelection to the House of Representatives in 1996, but was elected as a Republican to the United States Senate in 1996; reelected in 2002, 2008, and again in 2014, and served from January 3, 1997, to January 3, 2021; chair, Select Committee on Ethics (One Hundred Sixth and One Hundred Seventh Congresses [November 9, 1999-January 3, 2001; January 20, 2001-June 6, 2001]), Select Committee on Intelligence (One Hundred Eighth and One Hundred Ninth Congresses), Committee on Agriculture, Nutrition, and Forestry (One Hundred Fourteenth through One Hundred Sixteenth Congresses); was not a candidate for reelection to the Senate in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

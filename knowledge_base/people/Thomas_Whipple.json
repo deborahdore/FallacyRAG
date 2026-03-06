@@ -1,0 +1,40 @@
+{
+    "name": "Thomas Whipple",
+    "birthDate": "1787",
+    "deathDate": "1835-01-23",
+    "bio": "a Representative from New Hampshire; born in Lebanon, Grafton County, N.H., in 1787; completed preparatory studies; moved to Warren, N.H., in 1811; studied medicine in Haverhill and Hanover, N.H., and was graduated from Dartmouth College, Hanover, N.H., in 1814; commenced practice in Wentworth, N.H.; member of the State house of representatives 1818-1820; elected as a Democratic Republican to the Seventeenth Congress; elected as an Adams-Clay Republican to the Eighteenth Congress; elected as an Adams candidate to the Nineteenth and to the succeeding Congress (March 4, 1821-March 3, 1829); resumed the practice of medicine; died in Wentworth, Grafton County, N.H., January 23, 1835; interment in Wentworth Village Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

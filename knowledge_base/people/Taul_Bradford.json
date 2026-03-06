@@ -1,0 +1,16 @@
+{
+    "name": "Taul Bradford",
+    "birthDate": "1835",
+    "deathDate": "1883",
+    "bio": "A Representative from Alabama; born in Talladega, Talladega County, Ala., January 20, 1835; attended the local school; was graduated from the University of Alabama at Tuscaloosa in 1854; studied law; was admitted to the bar in 1855 and commenced practice in Talladega, Ala.; served in the Confederate Army as major of the Tenth Regiment, Alabama Infantry, and subsequently became lieutenant colonel of the Thirtieth Regiment, Alabama Infantry; member of the State house of representatives in 1871 and 1872; elected as a Democrat to the Forty-fourth Congress (March 4, 1875-March 3, 1877); was not a candidate for renomination in 1876; continued the practice of law in Talladega, Ala., until his death on October 28, 1883; interment in Oak Hill Cemetery, Talladega, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

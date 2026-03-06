@@ -1,0 +1,72 @@
+{
+    "name": "William Lambertson",
+    "birthDate": "1880-03-23",
+    "deathDate": "1957-10-26",
+    "bio": "A Representative from Kansas; born in Fairview, Brown County, Kans., March 23, 1880; attended the public schools, Ottawa (Kans.) University, and the law school of the University of Chicago, Chicago, Ill.; engaged in agricultural pursuits; member of the State house of representatives 1909-1911 and 1919-1921, serving as speaker pro tempore in 1911 and as speaker in 1919; served in the State senate 1913-1915; chairman of Kansas State Efficiency and Economy Commission in 1917; member of Kansas State Board of Administration 1923-1925; unsuccessful candidate for nomination for Governor in 1922 and for Congress in 1924 and 1926; elected as a Republican to the Seventy-first and to the seven succeeding Congresses (March 4, 1929-January 3, 1945); unsuccessful candidate for renomination in 1944; returned to his farm near Fairview, Kans.; was defeated for the Republican nomination to Congress in 1946; mayor of Fairview from April 1949 until he resigned in December 1952; chairman, Board of County Commissioners of Brown County, Kans., 1953-1956; died in Fairview, Kans., October 26, 1957; interment in Sabetha Cemetery, Sabetha, Kans.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

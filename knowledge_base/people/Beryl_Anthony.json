@@ -1,0 +1,64 @@
+{
+    "name": "Beryl Anthony",
+    "birthDate": "1938-02-21",
+    "deathDate": "2025-01-11",
+    "bio": "a Representative from Arkansas; born in El Dorado, Union County, Ark., February 21, 1938; attended the Union County public schools; graduated, El Dorado High School, 1956; B.S., B.A., University of Arkansas, Fayetteville, Ark., 1961; J.D., University of Arkansas, Fayetteville, Ark., 1963; admitted to the Arkansas bar in 1963 and commenced practice in El Dorado; assistant attorney general, 1964-1965; deputy prosecuting attorney, Union County, Ark., 1966-1970; prosecuting attorney, 13th Judicial District, 1971-1976; legal counsel, Anthony Forest Products Co., 1977; private practice of law, 1977; delegate to Arkansas state Democratic conventions, 1964-1978; elected as a Democrat to the Ninety-sixth and to the six succeeding Congresses (January 3, 1979-January 3, 1993); unsuccessful candidate for renomination in 1992 to the One Hundred Third Congress; died on January 11, 2025, in Palm City, Fla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

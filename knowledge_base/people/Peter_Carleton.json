@@ -1,0 +1,16 @@
+{
+    "name": "Peter Carleton",
+    "birthDate": "1755-09-19",
+    "deathDate": "1828-04-29",
+    "bio": "a Representative from New Hampshire; born in Haverhill, Mass., September 19, 1755; attended the public schools; engaged in agricultural pursuits; served in the Revolutionary War in a Massachusetts regiment; moved to Landaff, Grafton County, N.H., about 1789; member of the New Hampshire state constitutional convention in 1790; member of the New Hampshire state house of representatives in 1803 and 1804; served in the New Hampshire state senate in 1806 and 1807; elected as a Democratic Republican to the Tenth Congress (March 4, 1807-March 3, 1809); died in Landaff, N.H., on April 29, 1828; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

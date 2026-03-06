@@ -1,0 +1,48 @@
+{
+    "name": "Louis Bafalis",
+    "birthDate": "1929-09-28",
+    "deathDate": "2023-03-10",
+    "bio": "A Representative from Florida; born in Boston, Suffolk County, Mass., September 28, 1929; graduated from Manchester Central High School, Manchester, N.H, 1948.; A.B., St. Anselm's College, Manchester, N.H., 1952; United States Army, 1953-1956; investment banker; member of the Florida state house of representatives, 1964; member of the Florida state senate, 1966-1970; unsuccessful candidate for nomination for Governor of Florida, 1970; elected as a Republican to the Ninety-third Congress and to the four succeeding Congresses (January 3, 1973-January 3, 1983); was not a candidate for reelection to the Ninety-eighth Congress in 1982, but was an unsuccessful nominee for Governor of Florida; governmental affairs consultant; died on March 10, 2023, in Fairfax Station, Va., interment at Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

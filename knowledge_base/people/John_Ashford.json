@@ -1,0 +1,16 @@
+{
+    "name": "John Ashford",
+    "birthDate": "1949-11-10",
+    "deathDate": "2022-04-19",
+    "bio": "A Representative from Nebraska; born in Omaha, Douglas County, Nebr., November 10, 1949; graduated from Westside High School, Omaha, Nebr., 1967; B.A., Colgate University, Hamilton, N.Y., 1971; J.D., Creighton University, Omaha, Nebr., 1974; staff, United States Senator Roman Hruska of Nebraska; lawyer, private practice; business executive; attorney, Federal Highway Administration, 1974-1975; hearing examiner, Nebr. department of education, 1983-1984; judge, Nebr. court of industrial relations, 1984-1986; member of the Nebraska state legislature, 1987-1994; chief executive officer, Omaha, Nebr., housing authority, 1998-2003; member of the Nebraska state legislature, 2006-2014; elected as a Democrat to the One Hundred Fourteenth Congress (January 3, 2015-January 3, 2017); unsuccessful candidate for reelection to the One Hundred Fifteenth Congress in 2016; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; died on April 19, 2022; interment at Forest Lawn Cemetery, Omaha, Nebr.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

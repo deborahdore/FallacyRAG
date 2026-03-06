@@ -1,0 +1,56 @@
+{
+    "name": "Thomas Ridge",
+    "birthDate": "1945",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Munhall, Allegheny County, Pa., August 26, 1945; attended St. Andrew's School, Erie, Pa.; graduated from Cathedral Prep School, Erie, Pa., 1963; B.A., Harvard University, Cambridge, Mass., 1967; J.D., Dickinson School of Law, Carlisle, Pa., 1972; United States Army, 1968-1970; lawyer, private practice; assistant district attorney, Erie County, Pa., 1972-1982; delegate, Republican National Convention, 1984; elected as a Republican to the Ninety-eighth and to the five succeeding Congresses (January 3, 1983-January 3, 1995); Governor of Pennsylvania, 1995-2001; Director, Office of Homeland Security, 2001-2003; Secretary of Homeland Security in the Cabinet of President George W. Bush, 2003-2005.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

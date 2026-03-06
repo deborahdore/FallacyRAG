@@ -1,0 +1,72 @@
+{
+    "name": "Donald O'Toole",
+    "birthDate": "1902-08-01",
+    "deathDate": "1964-09-12",
+    "bio": "A Representative from New York; born in Brooklyn, N.Y., August 1, 1902; attended the public and parochial schools; was graduated from St. James Academy, Brooklyn, N.Y., in 1916 and from the law department of Fordham University, New York City, in 1925; postgraduate student at Columbia University and New York University, New York City; was admitted to the bar in 1927 and commenced practice in New York City; member of the board of aldermen 1934-1936; elected as a Democrat to the Seventy-fifth and to the seven succeeding Congresses (January 3, 1937-January 3, 1953); unsuccessful candidate for reelection in 1952 to the Eighty-third Congress and for election in 1954 to the Eighty-fourth Congress; resumed the practice of law; executive director of New York State Department of Commerce and Industry 1955-1957, and commissioner of the department from August 1, 1958, to April 29, 1959; was a resident of Brooklyn, N.Y.; died in Ocala, Fla., September 12, 1964; interment in Holy Cross Cemetery, Brooklyn, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

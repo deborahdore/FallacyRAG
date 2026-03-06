@@ -1,0 +1,72 @@
+{
+    "name": "Stephen Mallory",
+    "birthDate": "1848-11-02",
+    "deathDate": "1907-12-23",
+    "bio": "A Representative and a Senator from Florida; born in Columbia, Richland County, S.C., November 2, 1848; during the Civil War entered the Confederate Army in the fall of 1864; appointed midshipman in the Confederate Navy in the spring of 1865 and served until the end of the war; graduated from Georgetown College, Washington, D.C., in 1869, where he then served as instructor in Latin and Greek until 1871; studied law; admitted to the bar in Louisiana in 1872 and commenced practice in New Orleans; moved to Pensacola, Fla., in 1874 and continued the practice of law; member, State house of representatives 1876; member, State senate 1880, and reelected in 1884; elected as a Democrat to the Fifty-second and Fifty-third Congresses (March 4, 1891-March 3, 1895); was not a candidate for renomination in 1894; elected as a Democrat to the United States Senate in 1897, subsequently appointed and then elected to the Senate in 1903, and served from May 15, 1897, until his death in Pensacola, Fla., December 23, 1907; chairman, Committee on Corporations Organized in the District of Columbia (Sixteenth Congress); interment in St. Michael's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Walter Powell",
+    "birthDate": "1931-04-25",
+    "deathDate": "2020-01-17",
+    "bio": "<p>A Representative from Ohio; born in Hamilton, Butler County, Ohio, April 25, 1931; attended Hamilton public schools; A.B., Heidelberg College, Tiffin, Ohio, 1953; M.Ed., Miami (Ohio) University, 1961; educator in Butler County, Ohio, for twenty-four years; clerk, city of Fairfield, Ohio, 1956-1957; member, Fairfield City Council, 1958; member, Ohio house of representatives, 1961-1967; member, Ohio State senate, 1967-1971; elected as a Republican to the Ninety-second and to the Ninety-third Congresses (January 3, 1971-January 3, 1975); was not a candidate for reelection to the Ninety-fourth Congress in 1974; school administrator; University of Cincinnati Law School, Cincinnati, Ohio; lawyer, private practice; died on January 17, 2020, in Cincinnati, Ohio. </p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

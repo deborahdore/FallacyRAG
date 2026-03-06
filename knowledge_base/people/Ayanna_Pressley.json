@@ -1,0 +1,39 @@
+{
+    "name": "Ayanna Pressley",
+    "birthDate": "1974-02-03",
+    "deathDate": null,
+    "bio": "A Representative from Massachusetts; born in Chicago, Cook County, Ill., February 3, 1974; graduated from Francis W. Parker School, Chicago, Ill., 1992; attended Boston University, Boston, Mass., 1992-1994; staff, United States Representative Joseph P. Kennedy II of Massachusetts, 1996; staff, United States Senator John Kerry of Massachusetts, 1996-2009; member of the Boston, Mass., city council, 2010-2019; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

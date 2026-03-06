@@ -1,0 +1,16 @@
+{
+    "name": "Edward Rumsey",
+    "birthDate": "1796-11-05",
+    "deathDate": "1868-04-06",
+    "bio": "A Representative from Kentucky; born in Botetourt County, Va., November 5, 1796; moved when a child with his parents to Christian County, Ky.; completed preparatory studies in Hopkinsville; moved to Greenville, Ky.; studied law; was admitted to the bar and commenced practice in Greenville; held several local offices; member of the State house of representatives in 1822; elected as a Whig to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); again resumed the practice of his profession; died in Greenville, Muhlenberg County, Ky., on April 6, 1868; interment in the Old Caney Station Cemetery, near Greenville, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

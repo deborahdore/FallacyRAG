@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Woodruff",
+    "birthDate": "1804-05-03",
+    "deathDate": "1855-03-28",
+    "bio": "A Representative from New York; born in New Jersey, May 3, 1804; elected as an American to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); employed as a cabinetmaker and later engaged in the furniture business in New York City; died in New York City, March 28, 1855; interment in the First Presbyterian Church Cemetery, Newark, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "American",
+            "represents": "NEW YORK"
+        }
+    ]
+}

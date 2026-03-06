@@ -1,0 +1,32 @@
+{
+    "name": "John Camp",
+    "birthDate": "1908",
+    "deathDate": "1987",
+    "bio": "A Representative from Oklahoma; born in Enid, Garfield County, Okla., May 11, 1908; attended elementary and high schools in Blackwell, Douglas, and Waukomis, Okla.; attended Phillips University, Enid, Okla.; engaged in the business of banking; president, Waukomis State Bank; member, State of Oklahoma Legislature, 1942-1962; chairman, Oklahoma State Board of Public Affairs, 1967-1968; served as Republican Party precinct chairman, Garfield County Young Republican chairman, and Oklahoma committee member; elected as a Republican to the Ninety-first and to the two succeeding Congresses (January 3, 1969-January 3, 1975); unsuccessful candidate for reelection in 1974 to the Ninety-fourth Congress; was a resident of Waukomis, Okla., until his death in Enid, Okla., on September 27, 1987; interment in Waukomis Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

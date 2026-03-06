@@ -1,0 +1,32 @@
+{
+    "name": "Beto O'Rourke",
+    "birthDate": "1972-09-26",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in El Paso, El Paso County, Tex., September 26, 1972; attended El Paso High School, El Paso, Tex.; graduated from Woodberry Forest School, Woodberry Forest, Va., 1991; B.A., Columbia University, New York, N.Y., 1995; business owner; member of the El Paso, Tex., city council, 2005-2011; elected as a Democrat to the One Hundred Thirteenth and to the two succeeding Congresses (January 3, 2013-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018, but was an unsuccessful candidate for election to the United States Senate; unsuccessful candidate for election for Governor of Texas in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

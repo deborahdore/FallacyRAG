@@ -1,0 +1,40 @@
+{
+    "name": "James Blanchard",
+    "birthDate": "1942",
+    "deathDate": null,
+    "bio": "A Representative from Michigan; born in Detroit, Wayne County, Mich., August 8, 1942; attended the public schools of Ferndale, Mich.; B.A., Michigan State University, East Lansing, 1964; M.B.A., Michigan State University, 1965; J.D., University of Minnesota Law School, Minneapolis, 1968; admitted to the Michigan bar in 1968 and commenced practice in Lansing; legal advisor to Michigan Secretary of State, 1968-1969; Assistant Attorney General of Michigan, 1969-1974; administrative assistant to the attorney general, 1970-1971; assistant deputy attorney general, 1971-1972; elected as a Democrat to the Ninety-fourth and to the three succeeding Congresses (January 3, 1975-January 3, 1983); was not a candidate for reelection in 1982 but was elected Governor of Michigan; reelected in 1986 and served from 1983-1991; unsuccessful candidate for reelection as governor in 1990; appointed by President Clinton as Ambassador to Canada on May 27, 1993 and served until 1996; lawyer, private practice; is a resident of Beverly Hills, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

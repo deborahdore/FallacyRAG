@@ -1,0 +1,56 @@
+{
+    "name": "Vito Fossella",
+    "birthDate": "1965-03-09",
+    "deathDate": null,
+    "bio": "A Representative from New York; born in Staten Island, Richmond County, N.Y., March 9, 1965; graduated from Monsignor Farrell High School, Staten Island, N.Y., 1983; B.S., Wharton School of the University of Pennsylvania, Philadelphia, Pa., 1987; J.D., Fordham University Law School, New York, N.Y., 1994; lawyer, private practice; New York, N.Y., city council member; elected as a Republican to the One Hundred Fifth Congress, by special election to fill the vacancy caused by the resignation of United States Representative Susan Molinari, reelected to the five succeeding Congresses (November 4, 1997-January 3, 2009); was not a candidate for reelection to the One Hundred Eleventh Congress in 2008; Staten Island, N.Y. borough president, 2022-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

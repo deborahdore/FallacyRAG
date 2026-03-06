@@ -1,0 +1,40 @@
+{
+    "name": "Fisher Ames",
+    "birthDate": "1758-04-09",
+    "deathDate": "1808-07-04",
+    "bio": "A Representative from Massachusetts; born in Dedham, Mass., April 9, 1758; attended the town school of his native city and also received private instruction; was graduated from Harvard College in 1774; served in the Revolutionary War; while teaching school, studied law; was admitted to the bar and commenced practice in Dedham in 1781; served in the Massachusetts state house of representatives in 1788; member of the Massachusetts convention called for the ratification of the U.S. Constitution in 1788; elected as a Pro-Administration candidate to the First through Third Congresses and as a Federalist to the Fourth Congress (March 4, 1789-March 3, 1797); chairman, Committee on Elections (First Congress); was not a candidate for renomination in 1796; resumed the practice of law in Dedham; member of the Governor's council 1798-1800; chosen president of Harvard University in 1804, but declined to accept because of failing health; died in Dedham, Mass., July 4, 1808; interment in Old First Parish Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "name": "Gerald Kleczka",
+    "birthDate": "1943",
+    "deathDate": "2017",
+    "bio": "A Representative from Wisconsin; born in Milwaukee, Milwaukee County, Wis., November 26, 1943; graduated from Don Bosco High School, Milwaukee, Wis., 1961; attended University of Wisconsin, Milwaukee, Wis., 1961-1962, 1967, 1970; Wisconsin Air National Guard, 1963-1969; accountant; member of the Wisconsin state assembly, 1969-1974; member of the Wisconsin state senate, 1975-1984; delegate, Wisconsin state Democratic conventions, 1966-1984; delegate, Democratic National Convention, 1980 and 1984; elected as a Democrat to fill the vacancy caused by the death of United States Representative Clement J. Zablocki, reelected to the ten succeeding Congresses (April 3, 1984-January 3, 2005); not a candidate for reelection to the One Hundred Ninth Congress in 2004; died on October 8, 2017, in Madison, Wis.; interment at Holy Trinity Cemetery, Milwaukee, Wis.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

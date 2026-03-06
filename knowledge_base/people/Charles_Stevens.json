@@ -1,0 +1,16 @@
+{
+    "name": "Charles Stevens",
+    "birthDate": "1816-08-09",
+    "deathDate": "1892-04-07",
+    "bio": "a Representative from Massachusetts; born in North Andover (then a part of Andover), Essex County, Mass., August 9, 1816; attended Franklin Academy at North Andover; manufacturer of flannels and broadcloths at Ware, Hampshire County, Mass., in 1841; member of the State house of representatives in 1853; delegate to the Republican National Conventions in 1860 and 1868; served as a member of the Governor's council 1867-1870; unsuccessful for election in 1874 to the Forty-fourth Congress; was subsequently elected as a Republican to the Forty-third Congress to fill the vacancy caused by the death of Alvah Crocker and served from January 27 to March 3, 1875; resumed the manufacturing business; died in New York City April 7, 1892; interment in Aspen Grove Cemetery, Ware, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

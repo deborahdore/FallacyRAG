@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Stilwell",
+    "birthDate": "1830-08-29",
+    "deathDate": "1874-01-14",
+    "bio": "A Representative from Indiana; born in Stilwell, Ohio, August 29, 1830; received a thorough English education; attended Oxford and College Hill Colleges; studied law; was admitted to the bar in 1852 and began practice in Anderson, Ind.; member of the State house of representatives in 1856; served in the Union Army during the Civil War; elected as a Republican to the Thirty-ninth Congress (March 4, 1865-March 3, 1867); was not a candidate for renomination in 1866; Minister Resident to Venezuela in 1867 and 1868; served as president of the First National Bank of Anderson, Ind., until his death; died in Anderson as the result of a gunshot wound January 14, 1874; interment in Maplewood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

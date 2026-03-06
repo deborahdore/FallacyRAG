@@ -1,0 +1,64 @@
+{
+    "name": "Joseph Babcock",
+    "birthDate": "1850-03-06",
+    "deathDate": "1909-04-27",
+    "bio": "A Representative from Wisconsin; born in Swanton, Franklin County, Vt., March 6, 1850; moved to Linn County, Iowa, with his parents, who settled near Mount Vernon in 1855; attended the common schools of Mount Vernon and Cedar Falls; moved to Necedah, Juneau County, Wis., in 1872 and engaged in the lumber business; member of the Wisconsin State assembly 1889-1893; chairman of the Republican National Congressional Committee in 1894 and 1902; delegate at large to the Republican National Convention at Chicago in 1904; elected as a Republican to the Fifty-third and to the six succeeding Congresses (March 4, 1893-March 3, 1907); chairman, Committee on District of Columbia (Fifty-fourth through Fifty-ninth Congresses); declined to be a candidate for renomination in 1906; retired and resided in Washington, D.C., until his death there on April 27, 1909; remains were cremated and the ashes deposited in the monument on the family plot in Rock Creek Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

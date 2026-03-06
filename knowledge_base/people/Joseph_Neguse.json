@@ -1,0 +1,39 @@
+{
+    "name": "Joseph Neguse",
+    "birthDate": "1984-05-13",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Bakersfield, Kern County, Calif., May 13, 1984; graduated from Thunder Ridge High School, Highlands Ranch, Colo., 2002; B.A., University of Colorado, Boulder, Colo., 2005; J.D., University of Colorado, Boulder, Colo., 2009; nonprofit executive; member of the board of regents of the University of Colorado, Boulder, Colo., 2009-2015; executive director, Colorado department of regulatory agencies, 2015-2017; lawyer; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present); one of the managers appointed by the House of Representatives in 2021 to conduct the impeachment proceedings of Donald J. Trump, President of the United States; assistant Democratic leader (One Hundred Eighteenth and One Hundred Nineteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        }
+    ]
+}

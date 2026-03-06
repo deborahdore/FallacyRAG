@@ -1,0 +1,24 @@
+{
+    "name": "Ralph Beermann",
+    "birthDate": "1912",
+    "deathDate": "1977",
+    "bio": "A Representative from Nebraska; born near Dakota City, Dakota County, Nebr., August 13, 1912; attended public schools, South Sioux City, Nebr.; Morningside College, Sioux City, Iowa, and Army specialist schools; during the Second World War served in the United States Army for three years in African-European Theaters in the Six Hundred and First Ordnance Battalion, Three Hundred and First Ordnance Regiment; engaged in partnership with six brothers (Beermann Bros.) in farming, cattle feeding, and alfalfa dehydrating in Dakota County, Nebr.; chairman of Dakota County Republican Central Committee for ten years; organized Dakota County Young Republicans; elected as a Republican to the Eighty-seventh and to the Eighty-eighth Congresses (January 3, 1961-January 3, 1965); unsuccessful candidate in 1964 for reelection to the Eighty-ninth Congress; resumed business pursuits; died in an airplane crash at Sioux City Municipal Airport, Iowa, February 17, 1977; interment in Dakota City Cemetery, Dakota City, Nebr.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Alexander Evans",
+    "birthDate": "1818-09-13",
+    "deathDate": "1888-12-05",
+    "bio": "A Representative from Maryland; born in Elkton, Cecil County, Md., September 13, 1818; attended the public schools; was a civil engineer's assistant; attended the local academy at Elkton; studied law; was admitted to the bar in 1845 and commenced practice in his native city; elected as a Whig to the Thirtieth, Thirty-first, and Thirty-second Congresses (March 4, 1847-March 3, 1853); engaged in the practice of his profession until his death in Elkton, Md., December 5, 1888; interment in Elkton Presbyterian Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        }
+    ]
+}

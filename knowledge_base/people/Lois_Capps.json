@@ -1,0 +1,88 @@
+{
+    "name": "Lois Capps",
+    "birthDate": "1938-01-10",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Ladysmith, Rusk County, Wis., January 10, 1938; graduated from Flathead County High School, Kalispell, Mont., 1955; B.S., Pacific Lutheran University, Tacoma, Wash., 1959; M.A., Yale University, New Haven, Conn., 1964; M.A., University of California, Santa Barbara, Calif., 1990; nursing instructor; nurse administrator, Yale Hospital, New Haven, Conn.; director, Teenage Pregnancy and Parenting Project and the Parent and Child Enrichment Center, Santa Barbara County, Calif.; instructor, Santa Barbara City College, Santa Barbara, Calif.; elected as a Democrat to the One Hundred Fifth Congress, by special election, to fill the vacancy caused by the death of her husband, United States Representative Walter Capps, and reelected to the nine succeeding Congresses (March 10, 1998-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "William Thomasson",
+    "birthDate": "1797-10-08",
+    "deathDate": "1882-12-29",
+    "bio": "A Representative from Kentucky; born in New Castle, Henry County, Ky., October 8, 1797; completed preparatory studies; served in Captain Duncan's company in the War of 1812; studied law; was admitted to the bar and commenced practice in Corydon, Ind., before he was twenty-one years of age; member of the State house of representatives 1818-1820; prosecuting attorney of Corydon in 1818; moved to Louisville, Ky., in 1841; elected as a Whig to the Twenty-eighth and Twenty-ninth Congresses (March 4, 1843-March 3, 1847); declined to be a candidate for renomination; moved to Chicago, Ill., and resumed the practice of law; during the Civil War served in the Union Army in the Seventy-first Regiment, New York Volunteer Infantry; died near La Grange, Oldham County, Ky., December 29, 1882; interment in Cave Hill Cemetery, Louisville, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

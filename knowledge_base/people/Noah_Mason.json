@@ -1,0 +1,112 @@
+{
+    "name": "Noah Mason",
+    "birthDate": "1882-07-19",
+    "deathDate": "1965-03-29",
+    "bio": "A Representative from Illinois; born in Glamorganshire, Wales, July 19, 1882; immigrated to the United States in 1888 with his parents, who settled in La Salle, Ill.; attended the public schools and Dixon (Ill.) College; was graduated from the Illinois State Normal University at Normal; teacher and principal of schools at Oglesby, Ill., 1902-1905 and was superintendent of schools 1908-1936; city commissioner of Oglesby 1918-1926; member of the Illinois State Normal School Board 1926-1930; served in the State senate 1930-1936; elected as a Republican to the Seventy-fifth and to the twelve succeeding Congresses (January 3, 1937-January 3, 1963); was not a candidate for renomination in 1962 for the Eighty-eighth Congress; retired and lived in Plainfield, Ill.; died in Joliet, Ill., March 29, 1965; interment in Plainfield Cemetery, Plainfield, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

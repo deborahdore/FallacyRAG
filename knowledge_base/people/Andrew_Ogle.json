@@ -1,0 +1,16 @@
+{
+    "name": "Andrew Ogle",
+    "birthDate": "1822-03-25",
+    "deathDate": "1852-10-14",
+    "bio": "A Representative from Pennsylvania; born in Somerset, Somerset County, Pa., March 25, 1822; completed preparatory studies; attended Jefferson College, Canonsburg, Pa.; studied law; was admitted to the bar in 1843 and commenced practice in Somerset, Pa.; prothonotary of Somerset County in 1845; elected as a Whig to the Thirty-first Congress (March 4, 1849-March 3, 1851); unsuccessful candidate for reelection in 1850 to the Thirty-second Congress; appointed United States Chargé d'Affaires to Denmark January 22, 1852, but did not assume his duties at that post; died in Somerset, Pa., October 14, 1852; interment in Union Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

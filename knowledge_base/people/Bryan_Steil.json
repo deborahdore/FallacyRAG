@@ -1,0 +1,39 @@
+{
+    "name": "Bryan Steil",
+    "birthDate": "1981-03-03",
+    "deathDate": null,
+    "bio": "a Representative from Wisconsin; born in Janesville, Rock County, Wis., March 3, 1981; graduated from Joseph A. Craig High School, Janesville, Wis., 1999; B.S. Georgetown University, Washington, D.C., 2003; J.D., University of Wisconsin, Madison, Wis., 2007; staff, United States Representative Paul D. Ryan of Wisconsin, 2003-2004; lawyer; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present); chair, Committee on House Administration (One Hundred Eighteenth and One Hundred Nineteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

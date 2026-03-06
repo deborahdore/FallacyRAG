@@ -1,0 +1,32 @@
+{
+    "name": "Liz Cheney",
+    "birthDate": "1966-07-28",
+    "deathDate": null,
+    "bio": "a Representative from Wyoming; born in Madison, Dane County, Wis., July 28, 1966; graduated from McLean High School, McLean, Va., 1984; B.A., Colorado College, Colorado Springs, Colo., 1988; J.D., University of Chicago Law School, Chicago, Ill., 1996; staff, United States Agency for International Development, 1989-1992; staff, United States Department of State, 1992; lawyer, private practice; lawyer, International Finance Corporation, 1999-2002; Deputy Assistant Secretary of State for Near Eastern Affairs, United States Department of State, 2002-2004; campaign staff, presidential campaign of George W. Bush, 2004; Principal Deputy Assistant Secretary of State for Near Eastern Affairs, United States Department of State, 2005-2009; nonprofit executive; television commentator; elected as a Republican to the One Hundred Fifteenth and to the two succeeding Congresses (January 3, 2017-January 3, 2023); chair, House Republican Conference (One Hundred Sixteenth and One Hundred Seventeenth Congresses); unsuccessful candidate for renomination to the One Hundred Eighteenth Congress in 2022; <span class=\"ui-provider gr b c d e f g h i j k l m n o p q r s t u v w x y z ab ac ae af ag ah ai aj ak\" dir=\"ltr\">faculty, University of Virginia, Charlottesville, Va., 2023-present.</span>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        }
+    ]
+}

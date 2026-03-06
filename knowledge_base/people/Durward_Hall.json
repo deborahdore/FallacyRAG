@@ -1,0 +1,56 @@
+{
+    "name": "Durward Hall",
+    "birthDate": "1910",
+    "deathDate": "2001",
+    "bio": "A Representative from Missouri; born in Cassville, Barry County, Mo., September 14, 1910; graduated from Greenwood High School at Southwest Missouri State University, Springfield, Mo., 1926; A.B., Drury College, Springfield, Mo., 1930; M.D., Rush Medical College, Chicago, Ill., 1934; physician; United States Army, Office of the Surgeon General; United States Army Reserve, 1955; delegate, Republican National Convention, 1964; elected as a Republican to the Eighty-seventh and to the five succeeding Congresses (January 3, 1961-January 3, 1973); was not a candidate for reelection to the Ninety-third Congress in 1972; co-founder and member of board of trustees, Uniformed Services, University of Health Sciences, Bethesda, Md., 1973-1981; faculty, Eckerd College, St. Petersburg, Fla.; died on March 15, 2001, in Albany, Ore.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "David Clendenin",
+    "birthDate": "1779",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; moved from Harford County, Md., to near Struthers in the Mahoning Valley, Ohio, about 1806; was a pioneer in the iron and steel industry; lived in Trumbull County, Ohio; served as first lieutenant of Capt. James Hazlep's company of artillery attached to a regiment of the Ohio Militia in the War of 1812; also as lieutenant paymaster in the Second Regiment, Ohio Militia, from August 26, 1812-January 19, 1813; assistant district paymaster in the United States Army, April 19, 1814-December 19, 1814; elected as a Democratic Republican to the Thirteenth Congress to fill the vacancy caused by the resignation of United States Representative Reasin Beall; reelected to the Fourteenth Congress (October 11, 1814-March 3, 1817); death date unknown.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Jose Correa",
+    "birthDate": "1958-01-24",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Los Angeles, Los Angeles County, Calif., January 24, 1958; B.A., California State University, Fullerton, Calif., 1980; J.D., University of California, Los Angeles, Calif., 1985; M.B.A., University of California, Los Angeles, Calif., 1985; investment banker; real estate broker; unsuccessful candidate for nomination to the California state assembly in 1996; member of the California state assembly, 1998-2004; member of the Orange County, Calif., board of supervisors, 2005-2006; member of the California state senate, 2006-2014; unsuccessful candidate for election to the Orange County, Calif., board of supervisors in 2015; member of the California high speed rail authority, 2015-2016; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,112 @@
+{
+    "name": "Grace Napolitano",
+    "birthDate": "1936-12-04",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Brownsville, Cameron County, Tex., December 4, 1936; graduated from Brownsville High School, Brownsville, Tex., 1954; attended Cerritos College, Norwalk, Calif.; attended Texas Southmost College, Brownsville, Tex.; member of the Norwalk, Calif., city council, 1986; Mayor of Norwalk, Calif., 1989-1990; member of the California state assembly, 1992-1998; elected as a Democrat to the One Hundred Sixth and to the twelve succeeding Congresses (January 3, 1999-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

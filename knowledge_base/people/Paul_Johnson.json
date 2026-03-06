@@ -1,0 +1,24 @@
+{
+    "name": "Paul Johnson",
+    "birthDate": "1880-03-23",
+    "deathDate": "1943-12-26",
+    "bio": "A Representative from Mississippi; born in Hillsboro, Scott County, Miss., March 23, 1880; attended the public schools, Harpersville College, and Millsaps College; studied law; was admitted to the bar in 1903 and commenced practice in Hattiesburg, Forrest County, Miss.; judge of the city court in 1907 and 1908; circuit judge of the twelfth judicial district 1910-1919; elected as a Democrat to the Sixty-sixth and Sixty-seventh Congresses (March 4, 1919-March 3, 1923); declined to be a candidate for renomination in 1922; resumed the practice of his profession and also engaged in agricultural pursuits; served as Governor from 1939 until his death at Hattiesburg, Miss., December 26, 1943; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

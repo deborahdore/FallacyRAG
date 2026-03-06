@@ -1,0 +1,40 @@
+{
+    "name": "John Lumpkin",
+    "birthDate": "1812-06-13",
+    "deathDate": "1860-07-10",
+    "bio": "A Representative from Georgia; born in Lexington, Oglethorpe County, Ga., June 13, 1812; attended rural schools and Franklin College (now the University of Georgia) at Athens and Yale College in 1831 and 1832; appointed private secretary to his uncle, Wilson Lumpkin, Governor of Georgia; studied law; was admitted to the bar in 1834 and commenced practice in Rome, Ga.; member of the State house of representatives in 1835; solicitor general of the Cherokee circuit in 1838; unsuccessful candidate for election in 1840 to the Twenty-seventh Congress; elected as a Democrat to the Twenty-eighth, Twenty-ninth, and Thirtieth Congresses (March 4, 1843-March 3, 1849); judge of the superior court, Rome circuit, 1850-1853; elected to the Thirty-fourth Congress (March 4, 1855-March 3, 1857); was not a candidate for renomination in 1856 to the Thirty-fifth Congress; resumed the practice of law in Rome, Ga.; was an unsuccessful candidate for Governor of Georgia in 1857; served as a delegate to the Democratic National Convention at Charleston, S.C., in 1860; died in Rome, Ga., July 10, 1860; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

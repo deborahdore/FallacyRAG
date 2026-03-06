@@ -1,0 +1,16 @@
+{
+    "name": "Elaine Edwards",
+    "birthDate": "1929",
+    "deathDate": "2018",
+    "bio": "a Senator from Louisiana; born Elaine Lucille Schwartzenburg in Marksville, Avoyelles Parish, La., March 8, 1929; attended public schools; appointed on August 1, 1972, to the United States Senate by her husband, Governor Edwin W. Edwards, as a Democrat to fill the vacancy caused by the death of Allen J. Ellender, and served from August 1, 1972, until her resignation November 13, 1972; was a resident of Baton Rouge, La., until her death on May 14, 2018; interment in Resthaven Gardens of Memory and Mausoleum, Baton Rouge, La.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Charles McMillen",
+    "birthDate": "1952",
+    "deathDate": null,
+    "bio": "A Representative from Maryland; born in Elmira, Chemung County, N.Y., May 26, 1952; graduated from Mansfield High School, Mansfield, Pa., 1970; B.S., University of Maryland, College Park, Md., 1974; B.A., Oxford University, Oxford, England; M.A., Oxford University (Rhodes Scholar), Oxford, England, 1978; professional basketball player; founded an electronic equipment company and served as chairman of the board of an investment firm; elected as a Democrat to the One Hundredth and to the two succeeding Congresses (January 3, 1987-January 3, 1993); unsuccessful candidate for reelection to the One Hundred Third Congress in 1992; co-chair the President's Commission on Physical Fitness, 1993-1998; is a resident of Crofton, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

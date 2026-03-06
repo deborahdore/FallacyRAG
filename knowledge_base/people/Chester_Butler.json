@@ -1,0 +1,24 @@
+{
+    "name": "Chester Butler",
+    "birthDate": "1798-03-21",
+    "deathDate": "1850-10-05",
+    "bio": "A Representative from Pennsylvania; born in Wilkes-Barre, Luzerne County, Pa., March 21, 1798; attended Wilkes-Barre Academy and was graduated from Princeton College in 1817; trustee of Wilkes-Barre Academy 1818-1838 and served as secretary; studied law at Litchfield Law School; was admitted to the bar in 1820 and commenced practice in Wilkes-Barre; register and recorder of Luzerne County 1821-1824; member of the State house of representatives in 1832, 1838, 1839, and again in 1843; elected as a Whig to the Thirtieth and Thirty-first Congresses and served from March 4, 1847, until his death in Philadelphia, Pa., October 5, 1850; interment in Hollenbeck Cemetery, Wilkes-Barre, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

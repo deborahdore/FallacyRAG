@@ -1,0 +1,39 @@
+{
+    "name": "Jesús García",
+    "birthDate": "1956-04-12",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Durango, Mexico, April 12, 1956; graduated from St. Rita High School, Chicago, Ill., 1974; B.A., University of Illinois, Chicago, Ill., 1999; M.A., University of Illinois, Chicago, Ill., 2002; member of the Cook County, Ill., Democratic party, 1984-2000; member of the Chicago, Ill., city council, 1986-1992; member of the Illinois state senate, 1993-1999; member of the Cook County, Ill., board of commissioners, 2010-2018; unsuccessful candidate for election as Chicago, Ill., Mayor in 2015 and 2023; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

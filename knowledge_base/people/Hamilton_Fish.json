@@ -1,0 +1,112 @@
+{
+    "name": "Hamilton Fish",
+    "birthDate": "1926-06-03",
+    "deathDate": "1996-07-23",
+    "bio": "a Representative from New York; born in Washington, D.C., June 3, 1926; graduate of Kent School, Kent, Conn.; Harvard College, A.B., 1949; LL.B., New York University School of Law, 1957; attended John F. Kennedy School of Public Administration; admitted to New York bar; United States Naval Reserve, 1944-1946; served in Ireland as vice counsel, United States Foreign Service, 1951-1953; attorney for the New York assembly judiciary committee, Albany, N.Y., 1961; delegate, Republican National Convention, 1984; elected as a Republican to the Ninety-first and to the twelve succeeding Congresses (January 3, 1969-January 3, 1995); one of the managers appointed by the House of Representatives in 1986 to conduct the impeachment proceedings against Harry E. Claiborne, judge of the United States District Court for Nevada; one of the managers appointed by the House of Representatives in 1988 to conduct the impeachment proceedings against Alcee Lamar Hastings, judge of the United States District Court for the Southern District of Florida; not a candidate for reelection to the One Hundred Fourth Congress; died on July 23, 1996, in Washington, D.C.; interment in the cemetery of St. Philip's Church-in-the-Highlands, Garrison, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

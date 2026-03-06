@@ -1,0 +1,15 @@
+{
+    "name": "Ryan Mackenzie",
+    "birthDate": "1982-08-02",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Allentown, Lehigh County, Pa., August 2, 1982; graduated from Parkland High School, Allentown, Pa., 2000; B.S., New York University, New York, N.Y., 2004; M.B.A., Harvard University, Cambridge, Mass., 2010; staff, campaign of United States Senator Pat Toomey of Pennsylvania, 2004; staff, United States Department of Labor, 2007; policy director, Pennsylvania department of labor and industry; member of the Pennsylvania state house of representatives, 2012-2024; delegate, Republican National Convention, 2016; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

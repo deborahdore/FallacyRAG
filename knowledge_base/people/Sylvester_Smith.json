@@ -1,0 +1,40 @@
+{
+    "name": "Sylvester Smith",
+    "birthDate": "1858-08-26",
+    "deathDate": "1913-01-26",
+    "bio": "a Representative from California; born near Mount Pleasant, Henry County, Iowa, August 26, 1858; attended the district schools and Howe's Academy at Mount Pleasant; taught school in Winfield, Iowa; moved to California in 1879 and engaged in agricultural pursuits; taught school in Colusa and Kern Counties in 1883; studied law; was admitted to the bar in 1885 and commenced practice in Bakersfield, Calif.; edited the Kern County Echo; resumed the practice of law; member of the California state senate 1894-1902; unsuccessful candidate for nomination to the Fifty-eighth Congress in 1902; elected as a Republican to the Fifty-ninth and to the three succeeding Congresses and served from March 4, 1905, until his death in Los Angeles, Calif., January 26, 1913; interment in Union Cemetery, Bakersfield, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

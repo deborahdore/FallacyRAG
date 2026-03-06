@@ -1,0 +1,88 @@
+{
+    "name": "George Graham",
+    "birthDate": "1850-09-13",
+    "deathDate": "1931-07-04",
+    "bio": "A Representative from Pennsylvania; born in Philadelphia, Pa., September 13, 1850; attended the public schools, and was privately tutored; was graduated from the law department of the University of Pennsylvania at Philadelphia in 1870; was admitted to the bar in 1871 and commenced practice in Philadelphia; member of the select council of Philadelphia 1877-1880; unsuccessful candidate for district attorney of Philadelphia County in 1877; district attorney of Philadelphia County 1880-1899; declined to be a candidate for further election and resumed the practice of law in Philadelphia and New York City; professor of criminal law and procedure in the University of Pennsylvania 1887-1898; delegate to the Republican National Conventions in 1892 and 1924; elected as a Republican to the Sixty-third and to the nine succeeding Congresses and served from March 4, 1913, until his death at his summer home in Islip, N.Y., July 4, 1931; chairman, Committee on the Judiciary (Sixty-eighth through Seventy-first Congresses); interment in Woodlawn Cemetery, New York City.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

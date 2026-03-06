@@ -1,0 +1,16 @@
+{
+    "name": "Jacob Houck",
+    "birthDate": "1801-01-14",
+    "deathDate": "1857-10-02",
+    "bio": "A Representative from New York; born in Schoharie, N.Y., January 14, 1801; attended the common schools; was graduated from Union College, Schenectady, N.Y., in 1822; studied law; was admitted to the bar and practiced in Schoharie; district attorney of Schoharie County 1831-1836; elected as a Democrat to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); resumed the practice of law; died in Schoharie, N.Y., October 2, 1857; interment in Lutheran Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

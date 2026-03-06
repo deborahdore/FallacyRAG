@@ -1,0 +1,16 @@
+{
+    "name": "Solomon Hillen",
+    "birthDate": "1810-07-10",
+    "deathDate": "1873-06-26",
+    "bio": "A Representative from Maryland; born on the family estate, Hillen Road, near Baltimore, Md., July 10, 1810; was graduated from Georgetown College; studied law; was admitted to the bar and commenced practice in Baltimore; member of the State house of representatives 1834-1838; elected as a Democrat to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); resumed the practice of law; mayor of Baltimore 1842-1845; died in New York City on June 26, 1873; interment in Greenmount Cemetery, Baltimore, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

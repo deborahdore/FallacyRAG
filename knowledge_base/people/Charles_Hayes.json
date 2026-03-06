@@ -1,0 +1,48 @@
+{
+    "name": "Charles Hayes",
+    "birthDate": "1918",
+    "deathDate": "1997",
+    "bio": "A Representative from Illinois; born in Cairo, Alexander County, Ill., February 17, 1918; graduated from Sumner High School, Cairo, Ill., 1935; trade unionist, 1938-1983, and served as vice president, United Food and Commercial Workers Union; elected as a Democrat to the Ninety-eighth Congress, by special election, August 23, 1983, to fill the vacancy caused by the resignation of Harold Washington; reelected to the Ninety-ninth and to the three succeeding Congresses and served from August 23, 1983, to January 3, 1993; unsuccessful candidate for renomination in 1992 to the One Hundred Third Congress; was a resident of Chicago, Ill., until his death on April 8, 1997.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

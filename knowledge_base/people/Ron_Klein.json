@@ -1,0 +1,24 @@
+{
+    "name": "Ron Klein",
+    "birthDate": "1957-07-10",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Cleveland, Cuyahoga County, Ohio, July 10, 1957; graduated from Cleveland Heights High School, Cleveland, Ohio, 1975; B.A., Ohio State University, Columbus, Ohio, 1979; J.D., Case Western Reserve University, Cleveland, Ohio, 1982; lawyer, private practice; professional advocate; member of the Florida house of representatives, 1992-1996; member of the Florida senate, 1996-2006; elected as a Democrat to the One Hundred Tenth Congress and to the succeeding Congress (January 3, 2007-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Daniel Cruger",
+    "birthDate": "1780-12-22",
+    "deathDate": "1843-07-12",
+    "bio": "A Representative from New York; born in Sunbury, Pa., December 22, 1780; attended the public schools; learned the printer's trade; published the Owego Democrat at Owego, N.Y.; studied law; was admitted to the bar in 1805, and commenced practice in Bath, N.Y.; served as major in the War of 1812; member of the State assembly 1814-1816 and again in 1826 and served as speaker in 1816; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); district attorney of the seventh district of New York 1815-1818, and of Steuben County 1818-1821; resumed the practice of law; moved to Wheeling, Va. (now West Virginia); died in Wheeling July 12, 1843; interment in the Stone Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

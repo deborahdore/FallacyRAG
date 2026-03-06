@@ -1,0 +1,56 @@
+{
+    "name": "Frank Hereford",
+    "birthDate": "1825",
+    "deathDate": "1891",
+    "bio": "A Representative and a Senator from West Virginia; born near Warrenton, Fauquier County, Va., July 4, 1825; completed preparatory studies and graduated from McKendree College, Lebanon, Ill., in 1845; studied law; admitted to the bar and practiced; moved to California in 1849; district attorney of Sacramento County 1855-1857; moved to West Virginia; elected as a Democrat to the Forty-second, Forty-third, and Forty-fourth Congresses and served from March 4, 1871, until January 31, 1877, when he resigned; chairman, Committee on Commerce (Forty-fourth Congress); elected as a Democrat to the United States Senate on January 26, 1877, to fill the vacancy caused by the death of Allen Taylor Caperton and served from January 31, 1877, to March 3, 1881; chairman, Committee on Mines and Mining (Forty-sixth Congress); resumed the practice of law; died in Union, Monroe County, W.Va., December 21, 1891; interment in Green Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

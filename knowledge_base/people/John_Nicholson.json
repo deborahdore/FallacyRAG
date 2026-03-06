@@ -1,0 +1,24 @@
+{
+    "name": "John Nicholson",
+    "birthDate": "1827-11-17",
+    "deathDate": "1906-11-04",
+    "bio": "A Representative from Delaware; born in Laurel, Sussex County, Del., November 17, 1827; completed preparatory studies and was graduated from Dickinson College, Carlisle, Pa., in 1847; superintendent of free schools for Kent County in 1851; studied law in Dover, Del.; was admitted to the bar in 1850 and commenced practice in Dover; brigadier general of militia in Kent County in 1861; elected as a Democrat to the Thirty-ninth and Fortieth Congresses (March 4, 1865-March 3, 1869); was not a candidate for renomination in 1868; resumed the practice of his profession; died in Dover, Kent County, Del., November 4, 1906; interment in the Presbyterian Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        }
+    ]
+}

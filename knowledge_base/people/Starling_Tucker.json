@@ -1,0 +1,64 @@
+{
+    "name": "Starling Tucker",
+    "birthDate": "1770",
+    "deathDate": "1834-01-03",
+    "bio": "a Representative from South Carolina; born in Halifax County, N.C., in 1770; moved to Mountain Shoals (now Enoree), S.C.; received a limited education; held several local offices; member of the South Carolina state house of representatives; elected as a Democratic Republican to the Fifteenth and to the two succeeding Congresses; reelected as a Jackson Republican to the Eighteenth Congress; and reelected as a Jacksonian candidate to the Nineteenth and to the two succeeding Congresses (March 4, 1817-March 3, 1831); died in Mountain Shoals (now Enoree), S.C., January 3, 1834; interment in the private burial ground on the family estate west of Enoree, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

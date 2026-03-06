@@ -1,0 +1,24 @@
+{
+    "name": "Lazarus Shoemaker",
+    "birthDate": "1819",
+    "deathDate": "1893",
+    "bio": "A Representative from Pennsylvania; born in Kingston, Luzerne County, Pa., November 5, 1819; attended Nazareth Hall, Nazareth, Pa., and Kenyon College, Gambier, Ohio; was graduated from Yale College in 1840; studied law; was admitted to the bar in 1842 and commenced practice in Wilkes-Barre, Pa.; member of the State senate 1866-1870; elected as a Republican to the Forty-second and Forty-third Congresses (March 4, 1871-March 3, 1875); chairman, Committee on Revolutionary Pensions (Forty-third Congress); was not a candidate for renomination in 1874; resumed the practice of his profession; also engaged in banking; died in Wilkes-Barre, Pa., September 9, 1893; interment in Forty Fort Cemetery, Forty Fort, Luzerne County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

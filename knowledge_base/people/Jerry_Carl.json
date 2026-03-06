@@ -1,0 +1,24 @@
+{
+    "name": "Jerry Carl",
+    "birthDate": "1958-06-17",
+    "deathDate": null,
+    "bio": "a Representative from Alabama; born in Mobile, Mobile County, Ala., June 17, 1958; graduated from Sylacauga High School, Sylacauga, Ala., 1977; attended Lake City Community College, Lake City, Fla.; business owner; entrepreneur; sales representative; commissioner, Mobile County, Ala., 2012-2020, president, 2015-2016, 2019-2020; elected as a Republican to the One Hundred Seventeenth and to the succeeding Congress (January 3, 2021-January 3, 2025); unsuccessful candidate for nomination to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

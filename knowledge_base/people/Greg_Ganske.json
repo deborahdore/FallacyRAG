@@ -1,0 +1,40 @@
+{
+    "name": "Greg Ganske",
+    "birthDate": "1949",
+    "deathDate": null,
+    "bio": "A Representative from Iowa; born in New Hampton, Chickasaw County, Iowa, March 31, 1949; B.A., University of Iowa, Iowa City, Iowa, 1972; M.D., University of Iowa Medical School, Iowa City, Iowa, 1976; general surgery training, University of Colorado Medical Center, Denver, Colo., and Oregon Health Science Center, Portland, Oreg., 1976-1982; plastic surgery training, Harvard Medical School, Cambridge, Mass., 1982-1984; surgeon; United States Army Reserve, 1986-2001; farm manager; elected as a Republican to the One Hundred Fourth and to the three succeeding Congresses (January 3, 1995-January 3, 2003); not a candidate for reelection to the One Hundred Eighth Congress in 2002, but was an unsuccessful candidate for election to the United States Senate; is a resident of Des Moines, Iowa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

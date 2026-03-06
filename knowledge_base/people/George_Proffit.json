@@ -1,0 +1,24 @@
+{
+    "name": "George Proffit",
+    "birthDate": "1807-09-04",
+    "deathDate": "1847-09-07",
+    "bio": "A Representative from Indiana; born in New Orleans, La., September 4, 1807; completed preparatory studies; moved to Petersburg, Pike County, Ind., in 1828; engaged in mercantile pursuits in Petersburg and Portersville, Ind.; studied law; was admitted to the bar and commenced practice in Petersburg, Ind.; member of the State house of representatives in 1831, 1832, and 1836-1838; elected as a Whig to the Twenty-sixth and Twenty-seventh Congresses (March 4, 1839-March 3, 1843); was not a candidate for renomination in 1842; appointed by President Tyler as Envoy Extraordinary and Minister Plenipotentiary to Brazil and served from June 7, 1843, to August 10, 1844, when he returned home, the Senate having refused to confirm his appointment; died in Louisville, Ky., September 7, 1847; interment in Walnut Hills Cemetery, Petersburg, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "INDIANA"
+        }
+    ]
+}

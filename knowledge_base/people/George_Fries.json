@@ -1,0 +1,24 @@
+{
+    "name": "George Fries",
+    "birthDate": "1799",
+    "deathDate": "1866-11-13",
+    "bio": "A Representative from Ohio; born in Pennsylvania in 1799; attended the common schools; studied medicine and commenced practice in Hanoverton, Ohio, in 1833; elected as a Democrat to the Twenty-ninth and Thirtieth Congresses (March 4, 1845-March 3, 1849); declined to be a candidate for renomination in 1848; moved to Cincinnati, Ohio, and resumed the practice of medicine; treasurer of Hamilton County 1860-1862; died in Cincinnati, Ohio, on November 13, 1866; interment in the Catholic Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

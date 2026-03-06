@@ -1,0 +1,32 @@
+{
+    "name": "George Gilmer",
+    "birthDate": "1790-04-11",
+    "deathDate": "1859-11-16",
+    "bio": "a Representative from Georgia; born near Lexington, Wilkes (now Oglethorpe) County, Ga., April 11, 1790; attended a classical school and an academy at Abbeville, S.C.; taught a private school while studying law; served as first lieutenant in the Forty-third Regiment, United States Infantry, from 1813 to 1815 in the campaign against the Creek Indians and built a fort on the Chattahoochie River near the present city of Atlanta; resumed the study of law and began practice in Lexington in 1818; member of the Georgia state house of representatives in 1818, 1819, and 1824; elected to as a Democratic Republican to the Seventeenth Congress (March 4, 1821-March 3, 1823); resumed the practice of law; trustee of the University of Georgia at Athens, 1826-1857; elected as a Jacksonian candidate to the Twentieth Congress, by special election, to fill the vacancy caused by the resignation of Edward F. Tatnall (October 1, 1827-March 3, 1829); reelected as a Jacksonian candidate to the Twenty-first Congress, but failing to signify his acceptance, the Governor announced a vacancy and ordered a new election; Governor of Georgia 1829-1831; elected as a Jacksonian candidate to the Twenty-third Congress (March 4, 1833-March 3, 1835); chairman, Committee on Indian Affairs (Twenty-third Congress); presidential elector in 1836 and voted for White and Tyler; again Governor of Georgia 1837-1839; presidential elector on the Whig ticket in 1840; author and historian; died in Lexington, Ga., November 16, 1859; interment in Presbyterian Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        }
+    ]
+}

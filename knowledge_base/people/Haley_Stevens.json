@@ -1,0 +1,39 @@
+{
+    "name": "Haley Stevens",
+    "birthDate": "1983-06-24",
+    "deathDate": null,
+    "bio": "a Representative from Michigan; born in Rochester Hills, Oakland County, Mich., June 24, 1983; graduated from Seaholm Maple High School, Birmingham, Mich., 2001; B.A., American University, Washington, D.C., 2005; M.A., American University, Washington, D.C., 2007; presidential campaign aide, United States Senator Hillary Clinton of New York, 2007-2008; presidential campaign aide, United States Senator Barack Obama of Illinois, 2008; chief of staff, U.S. Auto Rescue Task Force, 2009-2011; business executive; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

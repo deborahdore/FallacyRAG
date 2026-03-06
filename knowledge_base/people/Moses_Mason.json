@@ -1,0 +1,24 @@
+{
+    "name": "Moses Mason",
+    "birthDate": "1789-06-02",
+    "deathDate": "1866-06-25",
+    "bio": "a Representative from Maine; born in Dublin, Cheshire County, N.H., June 2, 1789; moved with his parents to Bethel, Oxford County, Maine, in 1799; attended the common schools; studied medicine; and commenced practice in Bethel in 1813; appointed first postmaster of Bethel April 1, 1815, serving until December 27, 1833; justice of the peace 1821-1866; county commissioner 1831-1834; elected as a Jacksonian candidate to the Twenty-third and Twenty-fourth Congresses (March 4, 1833-March 3, 1837); executive councilor 1843-1845; trustee of the State insane hospital in 1844; selectman of Bethel for fourteen years; president of Gould's Academy 1854-1856; died in Bethel, Maine, June 25, 1866; interment in Woodlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MAINE"
+        }
+    ]
+}

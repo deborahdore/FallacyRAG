@@ -1,0 +1,32 @@
+{
+    "name": "Daniel Verplanck",
+    "birthDate": "1762-03-19",
+    "deathDate": "1834-03-29",
+    "bio": "A Representative from New York; born in New York City March 19, 1762; was educated under private tutors; was graduated from Columbia College (now Columbia University), New York City, in 1788; studied law; was admitted to the bar and commenced practice in New York City in 1789; also engaged in banking; elected as a Democratic Republican to the Eighth Congress to fill the vacancy caused by the death of Isaac Bloom; reelected to the Ninth and Tenth Congresses and served from October 17, 1803, to March 3, 1809; was not a candidate for renomination in 1808; resumed the practice of law; judge of the court of common pleas of Dutchess County 1828-1830; died at his home, \"Mount Gulian,'' near Fishkill, Dutchess County, N.Y., March 29, 1834; interment in Trinity Church Cemetery, Fishkill, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

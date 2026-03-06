@@ -1,0 +1,16 @@
+{
+    "name": "Frederick Niedringhaus",
+    "birthDate": "1837-10-21",
+    "deathDate": "1922-11-25",
+    "bio": "A Representative from Missouri; born in Luebbecke, Westphalia, North Germany, on October 21, 1837; attended the common schools; learned the glazing, painting, and tinning trades; immigrated to the United States in November 1855 and settled in St. Louis, Mo.; began the stamping of tinware in 1862; invented what is called ``granite ironware'' in 1874 and established an extensive business; became interested in various other business enterprises in St. Louis; elected as a Republican to the Fifty-first Congress (March 4, 1889-March 3, 1891); was not a candidate for renomination in 1890; resumed his former business pursuits; died in St. Louis, Mo., November 25, 1922; interment in Bellefontaine Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

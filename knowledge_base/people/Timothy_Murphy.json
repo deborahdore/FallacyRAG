@@ -1,0 +1,72 @@
+{
+    "name": "Timothy Murphy",
+    "birthDate": "1952-09-11",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Cleveland, Cuyahoga County, Ohio, on September 11, 1952; graduated from Walsh Jesuit High School, Cuyahoga Falls, Ohio; B.S., Wheeling Jesuit University, Wheeling, W.Va., 1974; M.S., Cleveland State University, Cleveland, Ohio, 1976; Ph.D., University of Pittsburgh, Pittsburgh, Pa., 1979; assistant professor of pediatrics, University of Pittsburgh School of Medicine, Pittsburgh, Pa.; associate professor (adjuct), University of Pittsburgh School of Public Health, Pittsburgh, Pa.; psychologist; member of the Pennsylvania state senate, 1996-2002; United States Navy Reserve Medical Service Corps, 2009-2017; elected as a Republican to the One Hundred Eighth and to the seven succeeding Congresses until his resignation on October 21, 2017 (January 3, 2003-October 21, 2017).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

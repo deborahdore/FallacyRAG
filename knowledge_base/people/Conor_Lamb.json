@@ -1,0 +1,32 @@
+{
+    "name": "Conor Lamb",
+    "birthDate": "1984-06-27",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Washington, D.C., June 27, 1984; graduated from Central Catholic High School, Pittsburgh, Pa., 2002; graduated from University of Pennsylvania, Philadelphia, Pa., 2006; J.D., University of Pennsylvania, Philadelphia, Pa., 2009; United States Marine Corps, 2009-2013; United States Marine Corps Reserve; assistant United States attorney for the Western District of Pennsylvania, 2014-2017; elected as a Democrat to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Timothy Murphy, and reelected to the two succeeding Congresses (March 13, 2018-January 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022, but was an unsuccessful candidate for nomination to the United States Senate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

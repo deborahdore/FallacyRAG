@@ -1,0 +1,40 @@
+{
+    "name": "Bertram Podell",
+    "birthDate": "1925",
+    "deathDate": "2005",
+    "bio": "A Representative from New York; born in Brooklyn, N.Y., December 27, 1925; attended Yeshiva of Flatbush and Abraham Lincoln High School, St. John's University and Brooklyn Law School; admitted to the bar in 1950 and commenced practice in New York City; served in the United States Navy, 1944-1946; member of the State assembly, 1954-1968; elected as a Democrat to the Ninetieth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Abraham J. Multer, and reelected to the three succeeding Congresses (February 20, 1968-January 3, 1975); unsuccessful candidate for renomination to the Ninety-fourth Congress in 1974; resumed the practice of law in New York City; died on August 17, 2005, in New York, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

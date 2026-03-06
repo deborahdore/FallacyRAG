@@ -1,0 +1,24 @@
+{
+    "name": "George Denison",
+    "birthDate": "1790-02-22",
+    "deathDate": "1831-08-20",
+    "bio": "a Representative from Pennsylvania; born in Kingston, Luzerne County, Pa., February 22, 1790; engaged in mercantile pursuits; attended the Wilkes-Barre Academy; clerk of the Wilkes-Barre borough council 1811-1814, and member of the council for many years, serving as president in 1823 and 1824; recorder and registrar of Luzerne County 1812-1815; studied law; was admitted to the bar in 1813 and commenced practice in Luzerne County; member of the Pennsylvania state house of representatives in 1815 and 1816; elected as a Democratic Republican to the Sixteenth and Seventeenth Congresses (March 4, 1819-March 3, 1823); chairman, Committee on Expenditures in the Post Office Department (Seventeenth Congress); was not a candidate for renomination; resumed the practice of law; deputy attorney general for Luzerne County in 1824; again elected to the Pennsylvania state house of representatives in 1827, and served until his death; burgess of Wilkes-Barre Borough in 1829 and 1830; died in Wilkes-Barre, Pa., August 20, 1831; interment in Hollenback Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

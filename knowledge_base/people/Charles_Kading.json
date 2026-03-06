@@ -1,0 +1,32 @@
+{
+    "name": "Charles Kading",
+    "birthDate": "1874-01-14",
+    "deathDate": "1956-06-19",
+    "bio": "A Representative from Wisconsin; born in Lowell, Dodge County, Wis., January 14, 1874; attended the country schools, Lowell graded school, Horicon High School, and the University of Wisconsin at Madison; was graduated from the law department of Valparaiso University, Valparaiso, Ind., in 1900; was admitted to the bar the same year and commenced practice in Watertown, Wis.; also interested in agricultural pursuits; city attorney of Watertown 1905-1912; district attorney for Dodge County, Wis., 1906-1912; mayor of Watertown 1914-1916; elected as a Republican to the Seventieth, Seventy-first, and Seventy-second Congresses (March 4, 1927-March 3, 1933); unsuccessful candidate for renomination in 1932; resumed the practice of law; died in Watertown, Wis., June 19, 1956; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

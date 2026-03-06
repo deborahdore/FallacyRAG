@@ -1,0 +1,32 @@
+{
+    "name": "Rick Renzi",
+    "birthDate": "1958-06-11",
+    "deathDate": null,
+    "bio": "a Representative from Arizona; born in Fort Monmouth, Monmouth County, N.J., June 11, 1958; graduated from Buena High School, Sierra Vista, Ariz., 1976; B.S., Northern Arizona University, Flagstaff, Ariz., 1980; J.D., Catholic University, Washington, D.C., 2002; businessman; elected as a Republican to the One Hundred Eighth Congress and to the two succeeding Congresses (January 3, 2003-January 3, 2009); was not a candidate for reelection to the One Hundred Eleventh Congress in 2008; convicted on June 11, 2013, of conspiracy, money laundering, fraud, racketeering, and false statements; full pardon granted by President Donald J. Trump on January 19, 2021.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        }
+    ]
+}

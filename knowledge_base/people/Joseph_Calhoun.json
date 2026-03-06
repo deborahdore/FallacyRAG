@@ -1,0 +1,24 @@
+{
+    "name": "Joseph Calhoun",
+    "birthDate": "1750-10-22",
+    "deathDate": "1817-04-14",
+    "bio": "a Representative from South Carolina; born in Staunton, Augusta County, Va., October 22, 1750; moved with his father to South Carolina in 1756 and settled in Granville District, on Little River, near the present town of Abbeville; received a limited education; served in the Revolutionary War; engaged in agricultural pursuits; served as a member of the South Carolina house of representatives in 1804 and 1805; colonel of State militia; elected as a Democratic Republican to the Tenth Congress to fill the vacancy caused by the death of Levi Casey, and reelected to the Eleventh Congress (June 2, 1807 - March 3, 1811); declined to be a candidate for reelection in 1810 to the Twelfth Congress; resumed agricultural pursuits and engaged in milling; died in Calhoun Mills, Abbeville District (now Mount Carmel, McCormick County), April 14, 1817; interment in the family burying ground near his home.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

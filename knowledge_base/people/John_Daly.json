@@ -1,0 +1,32 @@
+{
+    "name": "John Daly",
+    "birthDate": "1872-02-13",
+    "deathDate": "1939-03-12",
+    "bio": "A Representative from Pennsylvania; born in Philadelphia, Pa., February 13, 1872; attended the public schools; was graduated from La Salle College, Philadelphia, Pa., in 1890 and from the University of Pennsylvania at Philadelphia in 1896; studied law; was admitted to the bar in 1896 and commenced practice in Philadelphia, Pa.; assistant city solicitor 1914-1922; member of the faculty of La Salle College 1923-1930; elected as a Democrat to the Seventy-fourth, Seventy-fifth, and Seventy-sixth Congresses and served from January 3, 1935, until his death in Philadelphia, Pa., March 12, 1939; interment in St. Denis Cemetery, South Ardmore, Montgomery County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

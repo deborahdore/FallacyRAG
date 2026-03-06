@@ -1,0 +1,24 @@
+{
+    "name": "Caleb Tompkins",
+    "birthDate": "1759-12-22",
+    "deathDate": "1846-01-01",
+    "bio": "a Representative from New York; born near Scarsdale, Westchester County, N.Y., December 22, 1759; member of the New York state assembly 1804-1806; judge of the court of common pleas and county court of Westchester County 1807-1811 and 1820-1824; elected as a Democratic Republican to the Fifteenth and Sixteenth Congresses (March 4, 1817-March 3, 1821); died in Scarsdale, Westchester County, N.Y., January 1, 1846; interment in the First Presbyterian Church Cemetery, White Plains, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

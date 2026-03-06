@@ -1,0 +1,24 @@
+{
+    "name": "Robert Hammond",
+    "birthDate": "1791-04-28",
+    "deathDate": "1847-06-02",
+    "bio": "A Representative from Pennsylvania; born in Milton, Northumberland County, Pa., April 28, 1791; attended the academies at Milton; engaged in mercantile pursuits; member of the State militia, with the rank of brigadier general; enlisted in the United States Army as a lieutenant in 1817; resigned and returned to Milton, Pa.; was register and recorder of Northumberland County; postmaster of Milton 1833-1837; elected as a Democrat to the Twenty-fifth and Twenty-sixth Congresses (March 4, 1837-March 3, 1841); reentered the Army and was commissioned paymaster during the Mexican War; was wounded and ordered home on sick leave; died at sea before reaching port on June 2, 1847; interment in Milton Cemetery, Milton, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

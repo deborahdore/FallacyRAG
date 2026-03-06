@@ -1,0 +1,16 @@
+{
+    "name": "Brandon Williams",
+    "birthDate": "1967-05-22",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Dallas, Dallas County, Tex., May 22, 1967; graduated from Highland Park High School, University Park, Tex.; B.A., Pepperdine University, Malibu, Calif., 1990; M.B.A., Wharton School of the University of Pennsylvania, Philadelphia, Pa., 1998; United States Navy, 1991-1996; investment banker; business executive; business owner; elected as a Republican to the One Hundred Eighteenth Congress (January 3, 2023-January 3, 2025); unsuccessful candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

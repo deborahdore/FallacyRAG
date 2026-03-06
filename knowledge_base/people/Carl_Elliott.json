@@ -1,0 +1,72 @@
+{
+    "name": "Carl Elliott",
+    "birthDate": "1913-12-20",
+    "deathDate": "1999-01-09",
+    "bio": "a Representative from Alabama; born in Vina, Franklin County, Ala., December 20, 1913; attended the public schools of Franklin County; was graduated from the University of Alabama at Tuscaloosa in 1933 and from its law school in 1936; was admitted to the bar the same year and commenced the practice of law in Russellville, Ala.; in December 1936 moved to Jasper, Ala., and continued the practice of law; served as judge of Recorders Court, Jasper, Ala., in 1942 and 1946; city attorney at various times for Dora, Parrish, Cordova, Carbon Hill, and Oakman, Ala.; served with the Seventy-ninth Division, Three Hundred and Thirteenth Infantry, United States Army, 1942-1944; member of Alabama State Democratic Executive Committee 1942-1950; elected as a Democrat to the Eighty-first and to the seven succeeding Congresses (January 3, 1949-January 3, 1965); chairman, Select Committee on Government Research (Eighty-eighth Congress); unsuccessful candidate for renomination in 1964 to the Eighty-ninth Congress; admitted as member of the bar of the District of Columbia in 1965; unsuccessful candidate for the Democratic nomination for Governor of Alabama in 1966; served on President's Library Commission 1967-1968; chairman, Public Evaluation Committee, Office of State Technical Services, United States Department of Commerce, 1967-1968; member, Commerce Technical Advisory Board, United States Department of Commerce, 1968-1970; resumed the practice of law until his retirement in 1986; owned and operated an editing and publishing business; died on January 9, 1999, in Jasper, Ala.; interment in Oak Hill Cemetery, Jasper, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

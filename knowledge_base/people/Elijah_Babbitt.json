@@ -1,0 +1,24 @@
+{
+    "name": "Elijah Babbitt",
+    "birthDate": "1795-07-29",
+    "deathDate": "1887-01-09",
+    "bio": "A Representative from Pennsylvania; born in Providence, R.I., July 29, 1795; moved with his parents to New York state in 1805; received an academic education; moved to Milton, Northumberland County, Pa., in 1816; studied law; was admitted to the bar in March 1824 and commenced practice in Milton; moved to Erie, Pa., in 1826 and continued the practice of law; served as attorney for the borough and subsequently for the city of Erie; prosecuting attorney for Erie County in 1833; deputy attorney general for the state in 1834 and 1835; member of the state house of representatives in 1836 and 1837; served in the state senate 1843-1846; elected as a Republican to the Thirty-sixth and Thirty-seventh Congresses (March 4, 1859-March 3, 1863); chair, Committee on Revisal and Unfinished Business (Thirty-seventh Congress); was not a candidate for reelection in 1862 to the Thirty-eighth Congress; resumed the practice of his profession; died in Erie, Pa., January 9, 1887; interment in Erie Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

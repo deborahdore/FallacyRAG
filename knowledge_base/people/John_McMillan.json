@@ -1,0 +1,48 @@
+{
+    "name": "John McMillan",
+    "birthDate": "1932-05-09",
+    "deathDate": "2024-04-19",
+    "bio": "A Representative from North Carolina; born in Charlotte, N.C., May 9, 1932; graduated from Woodberry Forest School, Orange, Va., 1950; B.A., University of North Carolina, Chapel Hill, N.C., 1954; M.B.A., University of Virginia, Charlottesville, Va., 1958; United States Army, special agent, intelligence, 1954-1956; president, Harris-Teeter Super Markets, 1977-1983; chairman, Charlotte-Mecklenburg Broadcasting Authority, 1978-1983; Mecklenburg County board of commissioners, 1972-1974; board member and chairman, Mecklenburg board of social services, 1974-1977; elected as a Republican to the Ninety-ninth and to the four succeeding Congresses (January 3, 1985-January 3, 1995); not a candidate for reelection to the One Hundred Fourth Congress in 1994; faculty, The Citadel, Charleston, S.C., 2003-2006; died on April 19, 2024, in Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

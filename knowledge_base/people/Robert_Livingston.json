@@ -1,0 +1,104 @@
+{
+    "name": "Robert Livingston",
+    "birthDate": "1943-04-30",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Colorado Springs, El Paso County, Colo., April 30, 1943; graduated from St. Martin's High School, New Orleans, 1960; B.A., Tulane University, New Orleans, La., 1967; J.D., Tulane University Law School, New Orleans, La., 1968; admitted to the Louisiana bar in 1968 and commenced practice in New Orleans; served in the United States Navy, 1961-1963; United States Naval Reserve, 1963-1967 (inactive); graduate, Loyola Institute of Politics, Chicago, Ill., 1973; assistant United States attorney, deputy chief, criminal division, 1970-1973; chief special prosecutor and chief, armed robbery division, Orleans Parish district attorney's office, 1974-1975; chief prosecutor, organized crime unit, Louisiana attorney general's office, 1975-1976; delegate to seven Republican National Conventions between 1976 and 2000; elected as a Republican to the Ninety-fifth Congress by special election, to fill the vacancy caused by the resignation of United States Representative Richard A. Tonry, and reelected to the eleven succeeding Congresses until his resignation on March 1, 1999 (August 27, 1977-March 1, 1999); chairman, Committee on Appropriations (One Hundred Fourth and One Hundred Fifth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

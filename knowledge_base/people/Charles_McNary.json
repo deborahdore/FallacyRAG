@@ -1,0 +1,128 @@
+{
+    "name": "Charles McNary",
+    "birthDate": "1874",
+    "deathDate": "1944",
+    "bio": "A Senator from Oregon; born on a farm near Salem, Marion County, Oreg., June 12, 1874; attended the public schools and Leland Stanford Junior University, California; studied law; admitted to the bar in 1898 and commenced practice in Salem, Oreg.; deputy district attorney of the third judicial district 1904-1911; dean of the law department of Willamette University, Salem, Oreg., 1908-1913; associate justice of the State supreme court 1913-1915; appointed on May 29, 1917, as a Republican to the United States Senate to fill the vacancy in the term ending March 3, 1919, caused by the death of Harry Lane, and served from May 29, 1917, until November 5, 1918, when Frederick W. Mulkey was elected to fill this vacancy; again appointed to the United States Senate on December 12, 1918, to become effective December 18, 1918, to fill the vacancy in the same term caused by the resignation of Frederick W. Mulkey, having been previously elected for the term beginning March 4, 1919; reelected in 1924, 1930, 1936 and 1942 and served from December 18, 1918, until his death; minority leader 1933-1944; chairman, Committee on Irrigation and Reclamation of Arid Lands (Sixty-sixth through Sixty-ninth Congresses), Committee on Agriculture and Forestry (Sixty-ninth through Seventy-second Congresses), Republican Conference (1933-45); unsuccessful candidate for Vice President of the United States on the Republican ticket in 1940; died in Fort Lauderdale, Fla., February 25, 1944; interment in Belcrest Memorial Cemetery, Salem, Oreg.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        }
+    ]
+}

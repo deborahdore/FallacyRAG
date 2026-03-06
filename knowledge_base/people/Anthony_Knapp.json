@@ -1,0 +1,24 @@
+{
+    "name": "Anthony Knapp",
+    "birthDate": "1828-06-14",
+    "deathDate": "1881-05-24",
+    "bio": "A Representative from Illinois; born in Middletown, Orange County, N.Y., June 14, 1828; moved with his parents to Illinois in 1839 and settled in Jerseyville; completed preparatory studies; studied law; was admitted to the bar and commenced practice in Jerseyville; member of the State senate 1859-1861; elected as a Democrat to the Thirty-seventh Congress to fill the vacancy caused by the resignation of John A. McClernand; reelected to the Thirty-eighth Congress and served from December 12, 1861, to March 3, 1865; was not a candidate for renomination in 1864; moved to Chicago in 1865 and to Springfield, Ill., in 1867 and continued the practice of law; died in Springfield, Ill., May 24, 1881; interment in Springfield Cemetery; reinterment in Oak Ridge Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

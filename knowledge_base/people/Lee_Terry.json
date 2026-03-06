@@ -1,0 +1,72 @@
+{
+    "name": "Lee Terry",
+    "birthDate": "1962",
+    "deathDate": null,
+    "bio": "A Representative from Nebraska; born in Omaha, Douglas County, Nebr., January 29, 1962; graduated from Omaha Northwest High School, Omaha, Nebr., 1980; B.A., University of Nebraska, Lincoln, Nebr., 1984; J.D., Creighton Law School, Omaha, Nebr., 1987; member of the Omaha, Nebr., city council, 1991-1998; elected as a Republican to the One Hundred Sixth and to the seven succeeding Congresses (January 3, 1999-January 3, 2015); was an unsuccessful candidate for reelection to the One Hundred Fourteenth Congress in 2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

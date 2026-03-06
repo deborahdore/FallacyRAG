@@ -1,0 +1,96 @@
+{
+    "name": "Henry Flood",
+    "birthDate": "1865-09-02",
+    "deathDate": "1921-12-08",
+    "bio": "A Representative from Virginia; born in \"Eldon,\" Appomattox County, Va., September 2, 1865; attended the public schools of Appomattox and Richmond, Washington and Lee University, Lexington, Va., and the University of Virginia at Charlottesville; studied law; was admitted to the bar in 1886 and commenced practice in Appomattox, Va.; member of the Virginia state house of delegates, 1887-1891; member of the Virginia state senate, 1891-1903; elected prosecuting attorney for Appomattox County, 1891, 1895, and 1899; unsuccessful candidate for election to the Fifty-fifth Congress; elected as a Democrat to the Fifty-seventh and to the ten succeeding Congresses and served until his death (March 4, 1901-December 8, 1921); chair, Committee on Foreign Affairs (Sixty-second through Sixty-fifth Congresses), Committee on Territories (Sixty-second Congress); author of the resolutions declaring a state of war to exist between the United States and the Imperial German Government and with the Imperial Austro-Hungarian Government; died on December 8, 1921, in Washington, D.C.; interment in a mausoleum on the courthouse green at Appomattox, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

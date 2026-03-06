@@ -1,0 +1,24 @@
+{
+    "name": "Daniel Morris",
+    "birthDate": "1812-01-04",
+    "deathDate": "1889-04-22",
+    "bio": "A Representative from New York; born in Fayette, Seneca County, N.Y., January 4, 1812; attended the public schools and the Canandaigua Academy in Ontario County, N.Y.; studied law; was admitted to the bar in 1845 and commenced practice in Penn Yan, Yates County, N.Y.; district attorney of Yates County, N.Y., 1847-1850; member of the State assembly in 1859; elected as a Republican to the Thirty-eighth and Thirty-ninth Congresses (March 4, 1863-March 3, 1867); was not a candidate for reelection in 1866; resumed the practice of law; died in Penn Yan, N.Y., April 22, 1889; interment in Lake View Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Jesse Cleveland",
+    "birthDate": "1804-10-25",
+    "deathDate": "1841-06-22",
+    "bio": "a Representative from Georgia; born in Greenville, S.C., October 25, 1804; attended the local schools; moved to Georgia; member of the State senate 1831-1834; elected as a Jacksonian candidate to the Twenty-fourth Congress to fill the vacancy caused by the resignation of William Schley; reelected as a Democrat to the Twenty-fifth Congress and served from October 5, 1835, to March 3, 1839; moved to Charleston, S.C., in 1839 and engaged in the mercantile business; served as a director of the Bank of South Carolina until his death; died in Charleston, S.C., on June 22, 1841; interment in St. Michael's Church Burial Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Christopher Lee",
+    "birthDate": "1964-04-01",
+    "deathDate": null,
+    "bio": "A Representative from New York; born in Kenmore, Erie County, N.Y., April 1, 1964; B.A., University of Rochester, Rochester, N.Y., 1987; M.B.A., Chapman University, Orange, Calif., 1997; businessman; elected as a Republican to the One Hundred Eleventh and to the succeeding Congress until his resignation on February 9, 2011 (January 3, 2009-February 9, 2011).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

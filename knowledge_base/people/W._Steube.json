@@ -1,0 +1,39 @@
+{
+    "name": "W. Steube",
+    "birthDate": "1978-05-19",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Bradenton, Manatee County, Fla., May 19, 1978; graduated from Southeast High School, Bradenton, Fla., 1996; B.S., University of Florida, Gainesville, Fla., 2000; J.D., University of Florida, Gainesville, Fla., 2003; United States Army, 2004-2008, Operation Iraqi Freedom, 2006-2007; member of the Florida state house of representatives, 2010-2016; member of the Florida state senate, 2016-2018; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

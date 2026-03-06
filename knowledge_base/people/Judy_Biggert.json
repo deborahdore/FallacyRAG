@@ -1,0 +1,64 @@
+{
+    "name": "Judy Biggert",
+    "birthDate": "1937-08-15",
+    "deathDate": null,
+    "bio": "A Representative from Illinois; born in Chicago, Cook County, Ill., August 15, 1937; graduated from New Trier High School, Winnetka, Ill., 1955; B.A., Stanford University, Stanford, Calif., 1959; J.D., Northwestern University School of Law, Evanston, Ill., 1963; clerk to Judge Luther M. Swygert, U.S. Court of Appeals, 7th Circuit, 1963-1964; president, board of education, Hinsdale Township High School district 86, Hinsdale Township, Ill., 1983-1986; member, Illinois state house of representatives, 1993-1998; elected as a Republican to the One Hundred Sixth and to the six succeeding Congresses (January 3, 1999-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

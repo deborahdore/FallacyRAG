@@ -1,0 +1,40 @@
+{
+    "name": "Bradley Byrne",
+    "birthDate": "1955-02-16",
+    "deathDate": null,
+    "bio": "a Representative from Alabama; born in Mobile, Mobile County, Ala., February 16, 1955; graduated from University Military School, Mobile, Ala., 1973; B.A., Duke University, Durham, N.C., 1977; J.D., University of Alabama School of Law, Tuscaloosa, Ala., 1980; lawyer, private practice; member of the Alabama state board of education, 1994-2002; member of the Alabama state senate, 2002-2007; chancellor of the Alabama department of postsecondary education, 2007-2009; unsuccessful candidate for nomination for Governor of Alabama in 2010; elected as a Republican, by special election, to the One Hundred Thirteenth Congress to fill the vacancy caused by the resignation of United States Representative Josiah Robins (Jo) Bonner, Jr., and to the three succeeding Congresses (December 17, 2013-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020, but was an unsuccessful candidate for nomination to the United States Senate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

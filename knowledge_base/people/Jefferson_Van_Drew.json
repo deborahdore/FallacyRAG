@@ -1,0 +1,39 @@
+{
+    "name": "Jefferson Van Drew",
+    "birthDate": "1953-02-23",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey; born in New York City, New York County, N.Y., February 23, 1953; attended Eastside High School, Paterson, N.J., and graduated from St. Mary's High School, Perth Amboy, N.J., 1971; B.S., Rutgers University, New Brunswick, N.J.; D.D.S., Fairleigh Dickinson University, Teaneck, N.J., 1979; dentist; Mayor of Dennis Township, N.J., 1994-1995, 1997-2003; member of the board of chosen freeholders, Cape May County, N.J., 1994-1997; member of the New Jersey state general assembly, 2001-2007; member of the New Jersey state senate, 2008-2019; elected as a Democrat to the One Hundred Sixteenth Congress; changed party affiliation from a Democrat to a Republican on January 7, 2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

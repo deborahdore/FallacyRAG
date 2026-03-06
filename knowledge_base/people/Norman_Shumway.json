@@ -1,0 +1,56 @@
+{
+    "name": "Norman Shumway",
+    "birthDate": "1934-07-28",
+    "deathDate": "2022-11-01",
+    "bio": "a Representative from California; born in Phoenix, Maricopa County, Ariz., July 28, 1934; educated in the Stockton public schools; graduated from Stockton High School, 1952; A.A., Stockton (Calif.) College, 1954; B.S., University of Utah, Salt Lake City, 1960; J.D., Hastings College of Law, University of California, San Francisco, 1963; admitted to the California bar in 1964 and commenced practice in Downey, Calif.; appointed to the San Joaquin County Board of Supervisors by Governor Reagan, 1974; elected in 1974, and reelected in 1976; elected as a Republican to the Ninety-sixth and to the five succeeding Congresses (January 3, 1979-January 3, 1991); was not a candidate for renomination in 1990 to the One Hundred Second Congress; member, California Public Utilities Commission, 1991-1995; died on November 1, 2022, in Bountiful, Utah.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

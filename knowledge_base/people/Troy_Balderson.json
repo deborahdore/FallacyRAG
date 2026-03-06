@@ -1,0 +1,47 @@
+{
+    "name": "Troy Balderson",
+    "birthDate": "1962-01-16",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Zanesville, Muskingum County, Ohio, January 16, 1962; graduated from Zanesville High School, Zanesville, Ohio, 1980; attended Muskingum College, Muskingum, Ohio, 1980-1982; attended Ohio State University, Columbus, Ohio, 1982-1983; farmer; automobile dealer; member of the Ohio state house of representatives, 2009-2011; member of the Ohio state senate, 2011-2018; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Patrick Tiberi, and reelected to the four succeeding Congresses (August 7, 2018-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

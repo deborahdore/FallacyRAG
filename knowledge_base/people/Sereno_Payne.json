@@ -1,0 +1,163 @@
+{
+    "name": "Sereno Payne",
+    "birthDate": "1843-06-26",
+    "deathDate": "1914-12-10",
+    "bio": "A Representative from New York; born in Hamilton, Madison County, N.Y., June 26, 1843; attended the Auburn (N.Y.) Academy and was graduated from the University of Rochester, N.Y., in 1864; studied law; was admitted to the bar in 1866 and practiced in Auburn, N.Y.; city clerk of Auburn in 1867 and 1868; supervisor in 1871 and 1872; district attorney of Cayuga County 1873-1879; president of the board of education of Auburn 1879-1882; appointed a member of the American-British Joint High Commission in January 1899; elected as a Republican to the Forty-eighth and Forty-ninth Congresses (March 4, 1883-March 3, 1887); elected as a Republican to the Fifty-first Congress to fill the vacancy caused by the death of Representative Newton W. Nutting and reelected to the twelve succeeding Congresses (December 2, 1889-December 10, 1914); chairman, Committee on Merchant Marine and Fisheries (Fifty-fourth and Fifty-fifth Congresses), Committee on Ways and Means (Fifty-fifth through Sixty-first Congresses); majority leader (Fifty-sixth through Sixty-first Congresses); had been reelected to the Sixty-fourth Congress; died on December 10, 1914, in Washington, D.C.; interment in Fort Hill Cemetery, Auburn, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

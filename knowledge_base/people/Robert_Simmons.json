@@ -1,0 +1,32 @@
+{
+    "name": "Robert Simmons",
+    "birthDate": "1943",
+    "deathDate": null,
+    "bio": "A Representative from Connecticut; born in New York, N.Y., February 11, 1943; graduated from Haverford College, Haverford, Pa., 1965; M.P.A., Harvard University, Cambridge, Mass., 1979; United States Army, 1965-1968; United States Army Reserves, 1969-2000; professor; operations officer, Central Intelligence Agency, 1969-1979; staff for United States Senator John Chafee of Rhode Island, 1979-1981; staff, Select Committee on Intelligence, 1981-1985; member of the Connecticut general assembly, 1990-2000; elected as a Republican to the One Hundred Seventh and to the two succeeding Congresses (January 3, 2001-January 3, 2007); unsuccessful candidate for reelection to the One Hundred Tenth Congress in 2006.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

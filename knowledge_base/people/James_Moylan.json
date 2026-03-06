@@ -1,0 +1,23 @@
+{
+    "name": "James Moylan",
+    "birthDate": "1962-07-18",
+    "deathDate": null,
+    "bio": "a Delegate from Guam; born on July 18, 1962; graduated from John F. Kennedy High School, Tumon, Guam, 1981; B.S., University of Guam, Mangilao, Guam; United States Army; parole officer; business owner; member of the Guam territorial senate, 2019-2023; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GU"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GU"
+        }
+    ]
+}

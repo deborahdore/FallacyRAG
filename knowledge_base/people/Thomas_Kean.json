@@ -1,0 +1,23 @@
+{
+    "name": "Thomas Kean",
+    "birthDate": "1968-09-05",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey; born in Livingston, Essex County, N.J., September 5, 1968; graduated from the Pingry School, Martinsville, N.J., 1986; A.B., Dartmouth College, Hanover, N.H., 1990; M.A.L.D., Tufts University, Medford, Mass., 1997; staff, United States Environmental Protection Agency, 1991-1993; staff, United States Representative Robert Douglas Franks of New Jersey, 1993-1995; instructor, Tufts University, Medford, Mass.; consultant; member of the New Jersey state general assembly, 2001-2003; member of the New Jersey state senate, 2003-2022, minority whip, 2004-2007, minority leader; 2008-2022; unsuccessful candidate for nomination to the One Hundred Seventh Congress in 2000; unsuccessful candidate for election to the United States Senate in 2006; elected as a Republican to the One Hundred Eighteenth Congress and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Robert Menendez",
+    "birthDate": "1985-07-12",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey; born in Englewood, Bergen County, N.J., July 12, 1985; graduated from the Hudson School, Hoboken, N.J., 2003; B.A., University of North Carolina at Chapel Hill, Chapel Hill, N.C., 2008; J.D., Rutgers Law School, Newark, N.J., 2011; lawyer, private practice; member of the Port Authority of New York and New Jersey board of commissioners, 2021-2022; elected as a Democrat to the One Hundred Eighteenth Congress and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

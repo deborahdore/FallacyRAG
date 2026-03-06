@@ -1,0 +1,24 @@
+{
+    "name": "David Richardson",
+    "birthDate": "1833",
+    "deathDate": "1904",
+    "bio": "A Representative from New York; born in Macedon, Wayne County, N.Y., May 28, 1833; attended the common school and the local academy at Macedon; was graduated from Yale College in 1856; studied law in Rochester, N.Y.; was admitted to the bar in 1859, and practiced; entered the Union Army in 1861, and served over three years; moved to Angelica, N.Y., in 1866; elected as a Republican to the Forty-sixth and Forty-seventh Congresses (March 4, 1879-March 3, 1883); was not a candidate for reelection in 1882; resumed the practice of law in Angelica, N.Y., where he died on June 21, 1904; interment in Angelica Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

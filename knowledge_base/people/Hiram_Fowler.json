@@ -1,0 +1,24 @@
+{
+    "name": "Hiram Fowler",
+    "birthDate": "1851-02-07",
+    "deathDate": "1926-01-05",
+    "bio": "A Representative from Illinois; born near Eddyville, Pope County, Ill., February 7, 1851; attended the public schools of his native city, and was graduated from the Illinois Normal University at Normal in 1880; studied law at the University of Michigan at Ann Arbor and was graduated in 1884; was admitted to the bar in 1884 and commenced the practice of his profession in Elizabethtown, Ill.; State's attorney of Hardin County 1888-1892; served in the State house of representatives 1893-1895; member of the State senate 1900-1904; elected as a Democrat to the Sixty-second and Sixty-third Congresses (March 4, 1911-March 3, 1915); unsuccessful candidate for reelection in 1914; resumed the practice of law in Elizabethtown, Ill.; moved to Harrisburg, Ill., in 1915 and continued practice until his death on January 5, 1926; interment in Sunset Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "William Prince",
+    "birthDate": "1772",
+    "deathDate": "1824-09-08",
+    "bio": "a Representative from Indiana; born in Ireland in 1772; immigrated to the United States and settled in Indiana; studied law; served in the Indiana state senate in 1816; delegate to the Indiana state constitutional convention in 1816; served as captain in the Battle of Tippecanoe; member of the Indiana state house of representatives in 1821 and 1822; elected as a Democratic Republican to the Eighteenth Congress and served from March 4, 1823, until his death near Princeton, Gibson County, Ind., September 8, 1824; interment in the Old Cemetery, near Princeton, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

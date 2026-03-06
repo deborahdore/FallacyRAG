@@ -1,0 +1,80 @@
+{
+    "name": "Robert Brown",
+    "birthDate": "1744-12-25",
+    "deathDate": "1823-02-26",
+    "bio": "A Representative from Pennsylvania; born in Weaversville, East Allen Township, Northampton County, Pa., December 25, 1744; attended the common schools and was apprenticed to the blacksmith trade; served in the Revolutionary War; at the beginning of the Revolutionary War was commissioned first lieutenant in the Pennsylvania \"Flying Camp\" on September 10, 1776; captured at the surrender of Fort Washington November 16, 1776; worked at the blacksmith trade while a prisoner; later put aboard the prison ship <i>Judith</i> and subsequently imprisoned in the old city hall, New York City; paroled on board ship December 10, 1777; member of the Pennsylvania state senate 1783-1787; elected as a Democratic Republican to the Fifth Congress to fill the vacancy caused by the resignation of Samuel Sitgreaves; reelected to the Sixth and to the seven succeeding Congresses and served from December 4, 1798, to March 3, 1815; was not a candidate for renomination in 1814; retired from public life and lived on his farm; died near Weaversville, Northampton County, Pa., February 26, 1823; interment in East Allen Presbyterian Churchyard.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

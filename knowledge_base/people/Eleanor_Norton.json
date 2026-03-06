@@ -1,0 +1,151 @@
+{
+    "name": "Eleanor Norton",
+    "birthDate": "1937-06-13",
+    "deathDate": null,
+    "bio": "a Delegate from the District of Columbia; born in Washington, D.C., June 13, 1937; graduated from Dunbar High School, Washington, D.C.; B.A., Antioch College, Yellow Springs, Ohio, 1960; M.A., Yale University, New Haven, Conn., 1963; LL.B., Yale University Law School, New Haven, Conn., 1964; lawyer, private practice; law clerk to Federal District Court Judge A. Leon Higginbotham, 3rd Circuit, 1964-1965; assistant legal director, American Civil Liberties Union, 1965-1970; adjunct assistant professor, New York University Law School, 1970-1971; staff, New York, N.Y. Mayor John Lindsay, 1971-1974; chair, New York City commission on human rights, 1970-1977; chair, United States Equal Employment Opportunity Commission, 1977-1981; senior fellow, Urban Institute, 1981-1982; professor, Georgetown University Law Center, 1982-1990; elected as a Democrat to the One Hundred Second and to the seventeen succeeding Congresses (January 3, 1991-present).",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON, D.C."
+        }
+    ]
+}

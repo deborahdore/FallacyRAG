@@ -1,0 +1,16 @@
+{
+    "name": "John Searing",
+    "birthDate": "1805-05-14",
+    "deathDate": "1876-05-06",
+    "bio": "A Representative from New York; born in North Hempstead, N.Y., May 14, 1805; completed preparatory studies; sheriff of Queens County, N.Y., 1843-1846; member of the State assembly in 1854; elected as a Democrat to the Thirty-fifth Congress (March 4, 1857-March 3, 1859); chairman, Committee on Accounts (Thirty-fifth Congress); declined to be a candidate for renomination in 1858; died in Mineola, Nassau County, N.Y., May 6, 1876; interment in Greenfield Cemetery, Hempstead, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

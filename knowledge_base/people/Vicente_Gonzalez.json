@@ -1,0 +1,47 @@
+{
+    "name": "Vicente Gonzalez",
+    "birthDate": "1967-09-04",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Corpus Christi, Nueces County, Tex., September 4, 1967; earned G.E.D., 1985; B.A., Embry-Riddle Aeronautical University, Naval Air Station, Corpus Christi, Tex., 1992; J.D., Texas Wesleyan School of Law, Fort Worth, Tex., 1996; lawyer, private practice; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

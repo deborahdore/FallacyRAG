@@ -1,0 +1,56 @@
+{
+    "name": "Edward Lloyd",
+    "birthDate": "1779-07-22",
+    "deathDate": "1834-06-02",
+    "bio": "A Representative and a Senator from Maryland; born at \"Wye House,\" Talbot County, Md., July 22, 1779; educated by private tutors; member, State house of delegates 1800-1805; elected to the Ninth Congress to fill the vacancy caused by the resignation of Joseph H. Nicholson; reelected to the Tenth Congress and served from December 3, 1806, to March 3, 1809; Governor of Maryland 1809-1811; commissioned lieutenant colonel of the Ninth Regiment of Maryland Militia; member, State senate 1811-1815; elected as a Democratic Republican (later Crawford Republican, then Jacksonian) to the United States Senate in 1819; reelected in 1825 and served from March 4, 1819, until his resignation on January 14, 1826; chairman, Committee on the District of Columbia (Eighteenth and Nineteenth Congresses); member and president, State senate 1826-1831; died in Annapolis, Md., June 2, 1834; interment in the family burying ground at \"Wye House\" plantation, near Easton, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        }
+    ]
+}

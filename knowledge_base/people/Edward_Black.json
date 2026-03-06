@@ -1,0 +1,32 @@
+{
+    "name": "Edward Black",
+    "birthDate": "1806-10-30",
+    "deathDate": "1846-09-01",
+    "bio": "A Representative from Georgia; born in Beaufort, S.C., October 30, 1806; attended the common schools and was graduated from Richmond Academy, Augusta, Ga.; studied law; was admitted to the bar in 1827 and commenced practice in Augusta, Ga.; member of the State house of representatives 1829-1831; moved to Screven County, Ga., in 1832; elected as a Whig to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); unsuccessful Democratic candidate for reelection in 1840 to the Twenty-seventh Congress; subsequently elected as a Democrat to the Twenty-seventh Congress to fill in part the vacancies caused by the resignations of Julius C. Alford, William C. Dawson, and Eugenius A. Nisbet; reelected to the Twenty-eighth Congress and served from January 3, 1842, to March 3, 1845; unsuccessful candidate for reelection in 1844 to the Twenty-ninth Congress; resumed the practice of law; died in Millettville, Barnwell District, S.C., September 1, 1846; interment in the family burying ground near Millettville, Allendale County, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

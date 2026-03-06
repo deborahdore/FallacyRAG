@@ -1,0 +1,48 @@
+{
+    "name": "Isaac Toucey",
+    "birthDate": "1792-11-15",
+    "deathDate": "1869-07-30",
+    "bio": "a Representative and a Senator from Connecticut; born in Newtown, Fairfield County, Conn., November 15, 1792; pursued classical studies; studied law; admitted to the bar in 1818 and began practice in Hartford, Conn.; prosecuting attorney of Hartford County 1822-1835; elected as a Jacksonian candidate to the Twenty-fourth Congress and as a Democrat Twenty-fifth Congress (March 4, 1835-March 3, 1839); unsuccessful candidate for reelection in 1838 to the Twenty-sixth Congress; prosecuting attorney of Hartford County 1842-1844; unsuccessful Democratic candidate for Governor of Connecticut in 1845, but was elected to that office by the legislature in 1846; defeated for Governor in 1847; appointed Attorney General of the United States in the Cabinet of President James K. Polk 1848-1849; member, State senate 1850; member, State house of representatives 1852; elected as a Democrat to the United States Senate for the term commencing March 4, 1851, and served from May 12, 1852, to March 3, 1857; declined to be a candidate for reelection; appointed Secretary of the Navy in the Cabinet of President James Buchanan 1857-1861; resumed the practice of his profession; died in Hartford, Hartford County, Conn., July 30, 1869; interment in Cedar Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

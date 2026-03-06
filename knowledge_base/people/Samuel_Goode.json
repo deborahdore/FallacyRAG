@@ -1,0 +1,16 @@
+{
+    "name": "Samuel Goode",
+    "birthDate": "1756-03-21",
+    "deathDate": "1822-11-14",
+    "bio": "a Representative from Virginia; born in \"Whitby,\" Chesterfield County, Va., March 21, 1756; completed preparatory studies; studied law; admitted to the bar and practiced; served in the Revolutionary War as a lieutenant in the Chesterfield Troop of Horse and later as a colonel of militia; member, Virginia state house of delegates, 1778-1785; elected as a Democratic Republican to the Sixth Congress (March 4, 1799-March 3, 1801); died in Invermay, Mecklenburg County, Va., November 14, 1822; interment on his estate near Invermay, Mecklenburg County, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

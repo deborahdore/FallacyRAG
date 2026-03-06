@@ -1,0 +1,16 @@
+{
+    "name": "Kaialiʻi Kahele",
+    "birthDate": "1974-03-28",
+    "deathDate": null,
+    "bio": "a Representative from Hawaii; born in Honolulu, Honolulu County, Hawaii, March 28, 1974; graduated from Hilo High School, Hilo, Hawaii, 1992; attended Hawaii Community College, Hilo, Hawaii; attended University of Hawaii, Hilo, Hawaii; B.S., University of Hawaii, Manoa, Hawaii, 1998; attended Air Command and Staff College, Montgomery, Ala.; Hawaii Air National Guard, 1999-present; commercial pilot; adjunct faculty member, University of Hawaii, Hilo, Hawaii; nonprofit executive; member of the Hawaii state senate, 2016-2020, majority whip, 2017-2018, majority floor leader, 2018-2020; elected as a Democrat to the One Hundred Seventeenth Congress (January 3, 2021-January 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022, but was an unsuccessful candidate for nomination for Governor of Hawaii.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        }
+    ]
+}

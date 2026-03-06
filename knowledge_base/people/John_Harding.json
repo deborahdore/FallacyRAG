@@ -1,0 +1,16 @@
+{
+    "name": "John Harding",
+    "birthDate": "1877-06-27",
+    "deathDate": "1959-07-26",
+    "bio": "A Representative from Ohio; born in Excello, Butler County, Ohio, June 27, 1877; attended the Amanda public schools and Pennsylvania Military Academy at Chester; was graduated from the University of Michigan at Ann Arbor in 1900; engaged in business in Middletown, Ohio, and in industrial enterprises; member of the State senate in 1902; elected as a Republican to the Sixtieth Congress (March 4, 1907-March 3, 1909); delegate to the Republican State convention in 1910; engaged in the paper business in Chicago, Ill., until he moved to New York City, where he was associated with the Pure Oil Co., 1921-1926; engaged in industrial enterprises until retirement in 1949; died in New Haven, Conn., July 26, 1959; interment in Woodside Cemetery, Middletown, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

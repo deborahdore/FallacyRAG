@@ -1,0 +1,40 @@
+{
+    "name": "Robert Bergland",
+    "birthDate": "1928-07-22",
+    "deathDate": "2018-12-09",
+    "bio": "a Representative from Minnesota; born in Roseau, Roseau County, Minn., July 22, 1928; attended the Roseau public schools; University of Minnesota School of Agriculture, St. Paul, Minn., 1948; farmer; chairman, Minnesota Agriculture Stabilization and Conservation Service, March 1961-January 1963; midwest director, U.S. Department of Agriculture, January 1963-May 1968; unsuccessful candidate for election to the Ninety-first Congress in 1968; elected as a Democrat to the Ninety-second and to the three succeeding Congresses, until his resignation on January 22, 1977, (January 3, 1971-January 22, 1977); Secretary of Agriculture, 1977-1981; president, Farmland World Trade, March 1981-September 1982; vice president and general manager, National Rural Electric Cooperatives Association, Washington, D.C., 1982-1993; died on December 9, 2018 in Roseau, Minn.; interment at Hope Cemetery, Roseau, Minn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        }
+    ]
+}

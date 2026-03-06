@@ -1,0 +1,32 @@
+{
+    "name": "Rod Blagojevich",
+    "birthDate": "1956-12-10",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Chicago, Cook County, Ill., December 10, 1956; attended Foreman High School, Chicago, Ill.; B.A., Northwestern University, Evanston, Ill., 1979; J.D., Pepperdine University, Malibu, Calif., 1983; lawyer, private practice; Assistant State's Attorney, Cook County, Ill., 1986-1988; member of the Illinois state house of representatives, 1993-1996; elected as a Democrat to the One Hundred Fifth and to the two succeeding Congresses (January 3, 1997-January 3, 2003); not a candidate for reelection to the One Hundred Eighth Congress in 2002.; Governor of Illinois, 2003-2009; impeached on January 9, 2009, by the Illinois house of representatives and subsequently removed from office by the decision of the Illinois state senate on January 29, 2009; convicted on August 17, 2010, of making false statements to United States Federal Bureau of Investigation and convicted on December 7, 2011, of wire fraud, conspiracy, attempted extortion, corrupt solicitation of funds, and conspiracy to defraud United States government; sentences for both convictions commuted by President Donald J. Trump on February 18, 2020; full pardon by President Donald J. Trump on February 10, 2025.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "John Carney",
+    "birthDate": "1956-05-20",
+    "deathDate": null,
+    "bio": "a Representative from Delaware; born in Wilmington, New Castle County, Del., May 20, 1956; graduated from St. Mark's High School, Wilmington, Del., 1974; A.B., Dartmouth College, Hanover, N.H., 1978; M.P.A., University of Delaware, Newark, Del., 1987; athletic coach; staff, United States Senator Joseph Biden, Jr., of Delaware, 1986-1989; New Castle County, Del., chief administrative officer, 1989-1994; staff, Governor Thomas Carper of Delaware, 1994-1997; finance secretary of Delaware, 1997-2000; lieutenant governor of Delaware, 2001-2009; elected as a Democrat to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016; Governor of Delaware, 2017-2025; Mayor of Wilmington, Del., 2025-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        }
+    ]
+}

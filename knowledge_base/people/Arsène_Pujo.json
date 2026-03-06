@@ -1,0 +1,48 @@
+{
+    "name": "Arsène Pujo",
+    "birthDate": "1861-12-16",
+    "deathDate": "1939-12-31",
+    "bio": "A Representative from Louisiana; born near Lake Charles, Calcasieu Parish, La., December 16, 1861; attended public and private schools; studied law; was admitted to the bar in 1886 and commenced practice in Lake Charles, La.; delegate to the State constitutional convention in 1898; elected as a Democrat to the Fifty-eighth and to the four succeeding Congresses (March 4, 1903-March 3, 1913); chairman, Committee on Banking and Currency (Sixty-second Congress); was not a candidate for renomination in 1912; resumed the practice of law in Lake Charles, La.; died in New Orleans, La., December 31, 1939, while on a visit for medical treatment; interment in Orange Grove Cemetery, Lake Charles, La.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

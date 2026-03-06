@@ -1,0 +1,111 @@
+{
+    "name": "Lisa Murkowski",
+    "birthDate": "1957-05-22",
+    "deathDate": null,
+    "bio": "(Daughter of Frank Hughes Murkowski), a Senator from Alaska; born in Ketchikan, Alaska, on May 22, 1957; attended public schools in Fairbanks, AK; attended Willamette University in Salem, Oregon, 1975-1977; B.A. in Economics, Georgetown University 1980; J.D., Willamette College of Law 1985; attorney; member, Alaska Bar Association; Anchorage District Court attorney 1987-1989; private practice 1989-1996; Mayor's Task Force on the Homeless 1990-1991; Anchorage Equal Rights Commission 1997-1998; Alaska State house of representatives 1999-2002; appointed to the U.S. Senate on December 20, 2002, to fill the vacancy caused by the resignation of her father, Frank H. Murkowski; elected to the U.S. Senate in 2004; unsuccessful candidate for renomination in 2010, but subsequently elected as a write-in candidate in the November 2, 2010, general election, for the term ending January 3, 2017; reelected in 2016, and again in 2022 for the term ending January 3, 2029; vice-chair, Republican Conference (2009-2010); chair, Committee on Energy and Natural Resources (One Hundred Fourteenth through One Hundred Sixteenth Congresses), Committee on Indian Affairs (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        }
+    ]
+}

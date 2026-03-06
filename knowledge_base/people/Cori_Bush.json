@@ -1,0 +1,24 @@
+{
+    "name": "Cori Bush",
+    "birthDate": "1976-07-21",
+    "deathDate": null,
+    "bio": "a Representative from Missouri; born in St. Louis, Mo., July 21, 1976; graduated from Cardinal Ritter College Prep High School, St. Louis, Mo., 1994; attended Harris-Stowe State University, St. Louis, Mo., 1995-1996; RN Diploma, Lutheran School of Nursing, St. Louis, Mo., 2008; teacher; nurse; pastor; community organizer; unsuccessful candidate for nomination to the United States Senate in 2016; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; elected as a Democrat to the One Hundred Seventeenth and to the succeeding Congress (January 3, 2021-January 3, 2025); unsuccessful candidate for renomination to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        }
+    ]
+}

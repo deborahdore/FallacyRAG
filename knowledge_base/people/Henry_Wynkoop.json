@@ -1,0 +1,30 @@
+{
+    "name": "Henry Wynkoop",
+    "birthDate": "1737-03-02",
+    "deathDate": "1816-03-25",
+    "bio": "a Delegate and a Representative from Pennsylvania; born in Northampton Township, Bucks County, Pa., March 2, 1737; completed English and classical studies; member of the Pennsylvania assembly in 1760 and 1761; associate justice of Bucks County Courts, 1764-1777 and president judge, 1777-1789; member of the committee of observation in 1774; delegate to the provincial conferences of July 15, 1774, and June 18, 1775; served in the Revolutionary War as major of Bucks County Associated Battalions; member of the general committee of safety in 1776 and 1777; Delegate to the Second Continental Congress, 1779-1781; Delegate to the Confederation Congress, 1781-1782; justice of the high court of errors and appeals from 1783 to 1789; elected to the First Congress (March 4, 1789-March 3, 1791); appointed associate justice of Bucks County, Pa., and served until his death in that county on March 25, 1816; interment in the graveyard of the Low Dutch Reformed Church, Richboro, Pa.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 2nd Continental Congress",
+            "startDate": "1775-05-10",
+            "endDate": "1781-03-01",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

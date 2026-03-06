@@ -1,0 +1,96 @@
+{
+    "name": "William Nichols",
+    "birthDate": "1918-10-16",
+    "deathDate": "1988-12-13",
+    "bio": "a Representative from Alabama; born on a small farm in Monroe County, near Becker, Miss., October 16, 1918; graduated from Sylacauga High School, Sylacauga, Ala., in 1935; B.S., Auburn University, 1939, and a master's degree in 1941; entered military service in 1942, served five years in European Theater, participated in the Normandy invasion, wounded in battle of Hurtgen Forest, Germany, November 30, 1944; retired in 1947 with rank of captain; awarded Bronze Star and Purple Heart; vice president, Parker Fertilizer Company, and, president, Parker Gin Company, Sylacauga, Ala., 1947-1966; member, Alabama house of representatives, 1959; elected to Alabama senate in 1963; elected as a Democrat to the Ninetieth and to the ten succeeding Congresses and served from January 3, 1967, until his death in Washington, D.C., on December 13, 1988; had been reelected to the One Hundred First Congress; interment in Marble City Cemetery, Sylacauga, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

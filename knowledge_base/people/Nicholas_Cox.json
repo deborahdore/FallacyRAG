@@ -1,0 +1,48 @@
+{
+    "name": "Nicholas Cox",
+    "birthDate": "1837-01-06",
+    "deathDate": "1912-05-02",
+    "bio": "A Representative from Tennessee; born in Bedford County, Tenn., January 6, 1837; went to Seguin, Tex., in early childhood; attended the common schools; served on the Mexican frontier; was graduated from Lebanon (Tenn.) Law School in 1858; was admitted to the bar the same year and commenced practice at Linden, Tenn.; was a colonel in the Tenth Tennessee Cavalry of the Confederate Army during the Civil War, serving principally with General Forrest; settled in Franklin, Williamson County, Tenn., in 1866; engaged in agricultural pursuits; presidential elector on the Democratic ticket of Breckinridge and Lane in 1860; elected as a Democrat to the Fifty-second and to the four succeeding Congresses (March 4, 1891-March 3, 1901); declined to be a candidate for renomination in 1900; resumed the practice of law and engaged in banking in Franklin, Tenn., where he died May 2, 1912; interment in Mount Hope Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

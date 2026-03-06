@@ -1,0 +1,64 @@
+{
+    "name": "Ernest Acheson",
+    "birthDate": "1855-09-19",
+    "deathDate": "1917-05-16",
+    "bio": "A Representative from Pennsylvania; born in Washington, Washington County, Pa., September 19, 1855; attended the public schools; was graduated from Washington and Jefferson College, Washington, Pa., in 1875; studied law; was admitted to the bar in 1877 and practiced until 1879; purchased the Washington Weekly Observer, of which he was editor; delegate to the Republican National Conventions in 1884 and 1896; established a daily edition of the Observer in 1889; elected president of the Pennsylvania Editorial Association in January 1893 and in June of the same year was chosen recording secretary of the National Editorial Association; trustee of Washington and Jefferson College 1894-1917; elected as a Republican to the Fifty-fourth and to the six succeeding Congresses (March 4, 1895-March 3, 1909); unsuccessful candidate for renomination in 1908; resumed editorial work until his retirement in 1912; died in Washington, Pa., May 16, 1917; interment in Washington Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

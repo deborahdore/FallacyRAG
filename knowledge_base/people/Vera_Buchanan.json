@@ -1,0 +1,32 @@
+{
+    "name": "Vera Buchanan",
+    "birthDate": "1902-07-20",
+    "deathDate": "1955-11-26",
+    "bio": "a Representative from Pennsylvania; born in Wilson (later a part of Clairton), Allegheny County, Pa., July 20, 1902; moved to Duquesne, Pa., and attended the public and parochial schools; elected as a Democrat to the Eighty-second Congress to fill the vacancy caused by the death of her husband, Frank Buchanan; reelected to the Eighty-third and Eighty-fourth Congresses and served from July 24, 1951, until her death in McKeesport, Pa., November 26, 1955; interment in Mount Vernon Cemetery, in Elizabeth Township (near McKeesport), Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

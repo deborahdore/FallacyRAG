@@ -1,0 +1,96 @@
+{
+    "name": "Frank Murkowski",
+    "birthDate": "1933",
+    "deathDate": null,
+    "bio": "(Father of Lisa Murkowski), a Senator from Alaska; born in Seattle, King County, Wash., March 28, 1933; attended the public schools of Ketchikan, Alaska; attended University of Santa Clara, Calif., 1951-1953; graduated, Seattle University, Seattle, Wash., 1955; served in the United States Coast Guard 1955-1956; banker; Alaska Commissioner of Economic Development 1966-1970; president, Alaska Chamber of Commerce 1977; elected as a Republican to the United States Senate in 1980 and reelected in 1986, 1992 and 1998 for the term ending January 3, 2005, and served from January 3, 1981, to December 2, 2002, when he resigned, having been elected Governor of Alaska; chairman, Committee on Veterans' Affairs (Ninety-ninth Congress), Committee on Energy and Natural Resources (One Hundred Fourth through One Hundred Sixth Congresses; One Hundred Seventh Congress [January 20, 2001-June 6, 2001]); became governor of Alaska in 2002.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALASKA"
+        }
+    ]
+}

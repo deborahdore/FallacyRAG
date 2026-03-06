@@ -1,0 +1,112 @@
+{
+    "name": "Charles Vanik",
+    "birthDate": "1913",
+    "deathDate": "2007",
+    "bio": "A Representative from Ohio; born in Cleveland, Cuyahoga County, Ohio, April 7, 1913; attended the public schools; graduated from Adelbert College of Western Reserve University, Cleveland, Ohio, 1933; graduated from Western Reserve University Law School in 1936; admitted to the bar in 1936; lawyer, private practice; member of Cleveland City Council in 1938 and 1939; member of the Cleveland state senate, 1940-1942; member of the Cleveland Board of Education in 1941 and 1942; United States Naval Reserve as an ensign in 1942 and served with amphibious forces of the Atlantic and Pacific Fleets; released from active duty as a lieutenant in December 1945; appointed a member of the Cleveland Library Board in January 1946; elected judge of Cleveland Municipal Court in 1947 and reelected in 1949 for a six-year term, but resigned in March 1954 to campaign for Congress; served as referee with Ohio Industrial Commission; legal adviser to the Ohio highway director; elected as a Democrat to the Eighty-fourth and to the twelve succeeding Congresses (January 3, 1955-January 3, 1981); not a candidate for reelection to the Ninety-seventh Congress in 1980; resumed the practice of law in Washington, D.C.; died on August 30, 2007, in Jupiter, Fla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

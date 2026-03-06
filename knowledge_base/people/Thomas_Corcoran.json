@@ -1,0 +1,40 @@
+{
+    "name": "Thomas Corcoran",
+    "birthDate": "1939-05-23",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Ottawa, LaSalle County, Ill., May 23, 1939; graduated from Marquette High School, Ottawa, Ill., 1957; B.A., University of Notre Dame, South Bend, Ind., 1961; graduate work at University of Illinois, 1962; University of Chicago, 1963; Northwestern University, 1967; United States Army, 1963-1965; director, State of Illinois Office, Washington, D.C., 1969-1972; staff for Illinois state senate president, 1973-1974; vice president, Chicago-North Western Transportation Co., 1974-1976; elected as a Republican to the Ninety-fifth and to the three succeeding Congresses and served until his resignation on November 28, 1984 (January 3, 1977-November 28, 1984); was not a candidate for reelection in 1984 to the Ninety-ninth Congress but was an unsuccessful candidate for nomination to the United States Senate; appointed to U.S. Synthetic Fuels Corporation, 1984.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

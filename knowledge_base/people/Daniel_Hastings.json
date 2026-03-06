@@ -1,0 +1,48 @@
+{
+    "name": "Daniel Hastings",
+    "birthDate": "1874",
+    "deathDate": "1966",
+    "bio": "A Senator from Delaware; born near Princess Anne, Somerset County, Md., March 5, 1874; was educated under private tutorship; moved to Wilmington, Del., in 1894; attended the law department of Columbian (now George Washington) University, Washington, D.C.; admitted to the bar in 1902 and commenced practice in Wilmington, Del.; served as deputy attorney general of Delaware 1904-1909; appointed secretary of State of Delaware, January 1909 to June 1909, when he resigned, having been appointed an associate justice of the State supreme court, in which capacity he served until his resignation in January 1911; special counsel for the State legislature in 1911; city solicitor of Wilmington 1911-1917; judge of the municipal court of Wilmington 1920-1929; member of the Republican National Committee; appointed as a Republican on December 10, 1928, and elected on November 4, 1930, to the United States Senate to fill the vacancy in the term ending March 3, 1931, caused by the resignation of T. Coleman du Pont; on the same day was also elected for the term commencing March 4, 1931, and served from December 10, 1928, to January 3, 1937; unsuccessful candidate for reelection in 1936; resumed the practice of law in Wilmington, Del., where he died May 9, 1966; interment in Lower Brandywine Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "DELAWARE"
+        }
+    ]
+}

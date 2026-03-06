@@ -1,0 +1,24 @@
+{
+    "name": "William Hunter",
+    "birthDate": "1808-12-10",
+    "deathDate": "1874-03-30",
+    "bio": "A Representative from Ohio; born in Alexandria, Va., December 10, 1808; received a common-school training; studied law; was admitted to the bar and commenced practice in Woodsfield, Ohio; elected as a Whig to the Thirty-first and Thirty-second Congresses (March 4, 1849-March 3, 1853); was not a candidate for renomination in 1852; died in Woodsfield Ohio, on March 30, 1874; interment in Woodsfield Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        }
+    ]
+}

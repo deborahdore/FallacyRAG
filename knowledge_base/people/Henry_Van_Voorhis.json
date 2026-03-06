@@ -1,0 +1,56 @@
+{
+    "name": "Henry Van Voorhis",
+    "birthDate": "1852-05-11",
+    "deathDate": "1927-12-12",
+    "bio": "A Representative from Ohio; born in Nashport, Muskingum County, Ohio, May 11, 1852; attended the public schools and Denison University, Granville, Ohio; studied law and was admitted to the bar in 1874; was graduated from the Cincinnati Law School in 1875 and commenced practice in Zanesville, Ohio, the same year; delegate to the Republican National Conventions in 1884 and 1916; president of the Citizens' National Bank of Zanesville 1885-1893; elected as a Republican to the Fifty-third and to the five succeeding Congresses (March 4, 1893-March 3, 1905); declined to be a candidate for renomination in 1904; again became president of the Citizens' National Bank of Zanesville, Ohio, in 1905; member of the board of trustees of Marietta (Ohio) College; died in Zanesville, Ohio, December 12, 1927; interment in Greenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

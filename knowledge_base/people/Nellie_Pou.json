@@ -1,0 +1,15 @@
+{
+    "name": "Nellie Pou",
+    "birthDate": "1956-05-20",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey, born in Paterson, Passaic County, N.J., May 20, 1956; attended Kean College of New Jersey (now Kean University), Union, N.J.; attended Rutgers University, New Brunswick, N.J.; attended University of Virginia, Charlottesville, Va.; staff, city of Paterson, N.J., 1975-1997; member of the New Jersey general assembly, 1997-2011, assistant minority leader, 2000-2001, deputy speaker, 2002-2005; member of the New Jersey state senate, 2012-2025, majority caucus chair, 2022-2025; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

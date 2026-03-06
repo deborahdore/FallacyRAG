@@ -1,0 +1,56 @@
+{
+    "name": "Thomas Busby",
+    "birthDate": "1884-07-26",
+    "deathDate": "1964-10-18",
+    "bio": "A Representative from Mississippi; born near Short, Tishomingo County, Miss., July 26, 1884; attended the common schools of his native city, Oakland College, Yale, Miss., and Iuka Normal College at Iuka, Miss., taught in the public schools of Tishomingo, Alcorn, and Chickasaw Counties, Miss., 1903-1908; was graduated from the George Robertson Christian College, Henderson, Tenn., in 1905 and from the law department of the University of Mississippi at Oxford in 1909; was admitted to the bar in 1909 and commenced practice of law at Houston, Miss.; prosecuting attorney of Chickasaw County 1912-1920; elected as a Democrat to the Sixty-eighth and to the five succeeding Congresses (March 4, 1923-January 3, 1935); unsuccessful candidate for renomination in 1934; resumed the practice of law in Houston, Miss., until his death there on October 18, 1964; interment in Houston Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

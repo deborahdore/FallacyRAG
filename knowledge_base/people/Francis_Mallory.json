@@ -1,0 +1,32 @@
+{
+    "name": "Francis Mallory",
+    "birthDate": "1807-12-12",
+    "deathDate": "1860-03-26",
+    "bio": "A Representative from Virginia; born at ``Poplars,'' near Hampton, Elizabeth City County, Va., on December 12, 1807; attended the common schools and Hampton Academy; appointed midshipman in the United States Navy in 1822 and resigned in 1828; studied law but abandoned it for the study of medicine; was graduated from the medical department of the University of Pennsylvania at Philadelphia in 1831 and practiced in Norfolk, Va.; abandoned the practice of medicine and devoted himself to agricultural pursuits in Elizabeth City County, Va.; elected as a Whig to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); unsuccessful candidate for reelection in 1838 to the Twenty-sixth Congress; subsequently elected to the Twenty-sixth Congress to fill the vacancy caused by the resignation of Joel Holleman; reelected to the Twenty-seventh Congress and served from December 28, 1840, to March 3, 1843; was not a candidate for renomination in 1842; resumed agricultural pursuits; delegate to the Southern Commercial Convention at Richmond, Va., in 1838; appointed by President Fillmore as Navy agent at Norfolk on November 1, 1850, and served in this capacity until 1853, when he resigned; member of the State house of delegates 1853-1855, 1857, and 1858; member of the Common Council of Norfolk for several years; president of the Norfolk &amp; Petersburg Railroad Co. 1853-1859; died in Norfolk, Va., March 26, 1860; interment in Elmwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

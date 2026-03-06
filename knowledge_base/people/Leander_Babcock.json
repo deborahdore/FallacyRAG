@@ -1,0 +1,16 @@
+{
+    "name": "Leander Babcock",
+    "birthDate": "1811-03-01",
+    "deathDate": "1864-08-18",
+    "bio": "A Representative from New York; born in Paris, Oneida County, N.Y., March 1, 1811; was graduated from Union College, Schenectady, N.Y., in 1830; studied law; was admitted to the bar in 1834; moved to Oswego, N.Y., and commenced the practice of law; district attorney for Oswego County 1841-1843; mayor of Oswego in 1850 and 1851; elected as a Democrat to the Thirty-second Congress (March 4, 1851-March 3, 1853); president of the board of education in 1853 and 1855; died in Richfield Springs, N.Y., August 18, 1864; interment in Riverside Cemetery, Oswego, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Lawyer",
+    "birthDate": "1785-10-14",
+    "deathDate": "1868-05-21",
+    "bio": "A Representative from New York; born in Schoharie, N.Y., October 14, 1785; studied law; was admitted to the bar and practiced in Schoharie County; member of the State house of representatives in 1816; brigadier general of State militia; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); district attorney of Schoharie County 1822-1831; again a member of the State house of representatives in 1846; died in Lawyersville, Schoharie County, N.Y., May 21, 1868.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

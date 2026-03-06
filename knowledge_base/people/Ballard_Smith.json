@@ -1,0 +1,32 @@
+{
+    "name": "Ballard Smith",
+    "birthDate": null,
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Hanover County, Va., birth date unknown; served as lieutenant in the Army during the Revolutionary War; member of the Virginia state house of delegates, 1810-1813; elected as a Democratic Republican to the Fourteenth and to the two succeeding Congresses (March 4, 1815-March 3, 1821); again a member of the Virginia state house of delegates, 1824-1826, 1836, and 1837; death date unknown.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

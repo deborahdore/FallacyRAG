@@ -1,0 +1,24 @@
+{
+    "name": "Bellamy Storer",
+    "birthDate": "1847-08-28",
+    "deathDate": "1922-11-12",
+    "bio": "A Representative from Ohio; born in Cincinnati, Ohio, August 28, 1847; attended the common schools of that city and Dixwell's private Latin school, Boston, Mass.; was graduated from Harvard University in 1867 and from the law school of Cincinnati College in 1869; was admitted to the bar in 1869 and commenced practice in Cincinnati; assistant United States attorney for the southern district of Ohio in 1869 and 1870; elected as a Republican to the Fifty-second and Fifty-third Congresses (March 4, 1891-March 3, 1895); was not a candidate for renomination in 1894; resumed the practice of law; Assistant Secretary of State in 1897; Envoy Extraordinary and Minister Plenipotentiary to Belgium from May 4, 1897, to April 11, 1899, to Spain from April 12, 1899, to September 26, 1902, and to Austria-Hungary from September 26, 1902, to March 1906; resumed the practice of law; died in Paris, France, November 12, 1922; interment in Le Cimetière Neuf, Marvejols, France.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

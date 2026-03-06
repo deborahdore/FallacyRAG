@@ -1,0 +1,16 @@
+{
+    "name": "George Wagoner",
+    "birthDate": "1863-09-03",
+    "deathDate": "1946-04-27",
+    "bio": "A Representative from Missouri; born in Cincinnati, Ohio, September 3, 1863; attended the public schools and Beaumont Hospital Medical College, St. Louis, Mo.; president of the Wagoner Undertaking Co. and secretary and treasurer of the H.H. Wagoner Realty Co., St. Louis, Mo.; successfully contested as a Republican the election of James J. Butler in a special election to the Fifty-seventh Congress (February 26, 1903-March 3, 1903); was not a candidate for election to the Fifty-eighth Congress in 1902; resumed business activities; died in St. Louis, Mo., April 27, 1946; interment in Bellefontaine Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

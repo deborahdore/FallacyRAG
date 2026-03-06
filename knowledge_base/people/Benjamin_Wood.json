@@ -1,0 +1,32 @@
+{
+    "name": "Benjamin Wood",
+    "birthDate": "1820-10-13",
+    "deathDate": "1900-02-21",
+    "bio": "A Representative from New York; born in Shelbyville, Shelby County, Ky., October 13, 1820; moved to New York City with his parents; attended the public schools; entered the shipping business; purchased the Daily News in 1860 and was its editor and publisher until his death; chairman of Democratic Editors in 1860; elected as a Democrat to the Thirty-seventh and Thirty-eighth Congresses (March 4, 1861-March 3, 1865); member of the State senate in 1866 and 1867; elected to the Forty-seventh Congress (March 4, 1881-March 3, 1883); died in New York City February 21, 1900; interment in Calvary Cemetery, Long Island City, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

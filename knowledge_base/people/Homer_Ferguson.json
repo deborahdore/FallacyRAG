@@ -1,0 +1,56 @@
+{
+    "name": "Homer Ferguson",
+    "birthDate": "1889",
+    "deathDate": "1982",
+    "bio": "A Senator from Michigan; born in Harrison City, Westmoreland County, Pa., February 25, 1889; attended the public schools and the University of Pittsburgh, Pittsburgh, Pa.; graduated from the University of Michigan at Ann Arbor in 1913; admitted to the bar the same year and commenced practice in Detroit, Mich.; circuit judge of the circuit court for Wayne County, Mich., 1929-1942; professor of law at Detroit (Mich.) College of Law 1929-1939; elected as a Republican to the United States Senate in 1942; reelected in 1948 and served from January 3, 1943, to January 3, 1955; unsuccessful candidate for reelection in 1954; chairman, Republican Policy Committee (Eighty-third Congress); Ambassador to the Philippines 1955-1956; judge of the United States Court of Military Appeals at Washington, D.C., 1956-1971; served as senior judge on the United States Court of Military Appeals 1971-1976; resident of Grosse Point, Mich., until his death on December 17, 1982; interment in Woodlawn Cemetery, Detroit, Mich.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

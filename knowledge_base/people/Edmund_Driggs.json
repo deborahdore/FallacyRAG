@@ -1,0 +1,24 @@
+{
+    "name": "Edmund Driggs",
+    "birthDate": "1865-05-02",
+    "deathDate": "1946-09-27",
+    "bio": "A Representative from New York; born in Brooklyn, N.Y., May 2, 1865; attended the public schools and Adelphi Academy in Brooklyn; became engaged in the casualty-insurance business; elected as a Democrat to the Fifty-fifth Congress to fill the vacancy caused by the resignation of Francis H. Wilson; reelected to the Fifty-sixth Congress and served from December 6, 1897, to March 3, 1901; unsuccessful candidate for reelection in 1900 to the Fifty-seventh Congress; resumed the casualty-insurance business and also engaged in safety engineering; died in Brooklyn, N.Y., September 27, 1946; interment in Cypress Hills Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

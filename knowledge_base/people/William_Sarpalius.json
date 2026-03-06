@@ -1,0 +1,32 @@
+{
+    "name": "William Sarpalius",
+    "birthDate": "1948",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in Los Angeles, January 10, 1948; grew up in Houston, Tex. and on Cal Farley's Boys Ranch near Amarillo, Tex.; president, Texas Future Farmers of America Association, 1967-1968; A.D., Clarendon College, 1970; B.A., Texas Tech University, 1972; staff assistant and teacher, Cal Farley's Boys Ranch, 1972-1978; agribusinessman; M.A., West Texas State University, 1978; Texas State senator, 1981-1989; elected as a Democrat to the One Hundred First and to the two succeeding Congresses (January 3, 1989-January 3, 1995); unsuccessful candidate for reelection to the One Hundred Fourth Congress.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

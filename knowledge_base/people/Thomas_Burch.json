@@ -1,0 +1,80 @@
+{
+    "name": "Thomas Burch",
+    "birthDate": "1869-07-03",
+    "deathDate": "1951-03-20",
+    "bio": "A Representative and a Senator from Virginia; born on a farm near Dyer's Store, in Henry County, Va., July 3, 1869; attended the public schools; engaged in agricultural pursuits and in the tobacco manufacturing business; moved to Martinsville, Va., in 1886 and engaged in the banking business; also interested in the insurance and real estate businesses; member of the State board of agriculture 1910-1913; mayor of Martinsville, Va. 1912-1914; United States marshal for the western district of Virginia 1914-1921; member of the commission in 1927 to simplify and reorganize the State government; served with the State transportation and public utility advisory commission in 1929; member of the State board of education in 1930 and 1931; elected as a Democrat to the Seventy-second Congress and to the seven succeeding Congresses and served from March 4, 1931, to May 31, 1946, when he resigned; chairman, Committee on Post Office and Post Roads (Seventy-eighth and Seventy-ninth Congresses); appointed on May 31, 1946, to the United States Senate to fill the vacancy caused by the death of Carter Glass and served from May 31, 1946, until November 5, 1946, when a duly elected successor qualified; was not a candidate for election to the vacancy in 1946; chairman of Governor's Commission on Reorganization of the State Government in 1947; resumed his business pursuits; died in Martinsville, Va., March 20, 1951; interment in Oakwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

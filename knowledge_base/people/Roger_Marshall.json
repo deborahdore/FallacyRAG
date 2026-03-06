@@ -1,0 +1,47 @@
+{
+    "name": "Roger Marshall",
+    "birthDate": "1960-08-09",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Kansas; born in El Dorado, Butler County, Kans., August 9, 1960; graduated from El Dorado High School, El Dorado, Kans., 1978; A.S., Butler Community College, El Dorado, Kans., 1980; B.S., Kansas State University, Manhattan, Kan; M.D. University of Kansas School of Medicine, Kansas City, Kans, 1987; United States Army Reserves, 1984-1991; physician; elected as a Republican to the One Hundred Fifteenth and to the succeeding Congresses (January 3, 2017-January 3, 2021); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2020 for the term ending January 3, 2027.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

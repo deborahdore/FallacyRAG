@@ -1,0 +1,16 @@
+{
+    "name": "Simon Schermerhorn",
+    "birthDate": "1827-09-25",
+    "deathDate": "1901-07-21",
+    "bio": "A Representative from New York; born in Rotterdam, Schenectady County, N.Y., September 25, 1827; attended the common schools; engaged in agricultural pursuits; supervisor of the town of Rotterdam in 1856; served two terms as school commissioner; member of the State assembly in 1862 and 1865; a director and trustee in local banks; elected as a Democrat to the Fifty-third Congress (March 4, 1893-March 3, 1895); was not a candidate for renomination in 1894; retired to his farm in Rotterdam, N.Y., and died there July 21, 1901; interment in Viewland Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

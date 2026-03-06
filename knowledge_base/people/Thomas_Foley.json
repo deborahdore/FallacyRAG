@@ -1,0 +1,179 @@
+{
+    "name": "Thomas Foley",
+    "birthDate": "1929-03-06",
+    "deathDate": "2013-10-18",
+    "bio": "a Representative from Washington; born in Spokane, Wash., March 6, 1929; graduated from Gonzaga High School, Spokane, Wash., 1946; A.B., University of Washington, Seattle, Wash., 1951; J.D., University of Washington Law School, 1957; lawyer, private practice; appointed deputy prosecuting attorney, Spokane County, Wash., 1958; professor, Gonzaga University Law School, Spokane, Wash., 1958-1959; appointed assistant attorney general, State of Washington, 1960; assistant chief clerk and special counsel of the Committee on Interior and Insular Affairs of the United States Senate, 1961-1963; elected as a Democrat to the Eighty-ninth and to the fourteen succeeding Congresses (January 3, 1965-January 3, 1995); unsuccessful candidate for reelection to the One Hundred Fourth Congress; chair, Committee on Agriculture (Ninety-fourth through Ninety-sixth Congresses); majority whip (Ninety-seventh through Ninety-ninth Congresses); majority leader (One Hundredth and One Hundred First Congresses); Speaker of the House (One Hundred First through One Hundred Third Congresses); awarded the title Knight Commander of the British Empire by Queen Elizabeth II in 1995; United States Ambassador to Japan, 1997-2001; died on October 18, 2013, in Washington, D.C.; interment at Congressional Cemetery, Washington, D.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat"
+        },
+        {
+            "role": "Democratic Whip",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03"
+        },
+        {
+            "role": "Democratic Whip",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03"
+        },
+        {
+            "role": "Democratic Whip",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03"
+        }
+    ]
+}

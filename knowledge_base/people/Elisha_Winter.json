@@ -1,0 +1,16 @@
+{
+    "name": "Elisha Winter",
+    "birthDate": "1781-07-15",
+    "deathDate": "1849-06-30",
+    "bio": "A Representative from New York; born in New York City, July 15, 1781; moved about 1806 to that portion of the township of Peru, Clinton County, which was later included in the township of Ausable, and engaged in mining ore; was elected as a Federalist to the Thirteenth Congress (March 4, 1813-March 3, 1815); unsuccessful candidate for reelection in 1814 to the Fourteenth Congress; moved to a farm near Lexington, Ky., and engaged as a planter; was also instrumental in building the first railroad in that locality, and subsequently became president of the Lexington &amp; Ohio Railroad; died in Lexington, Fayette County, Ky., June 30, 1849; interment in Lexington Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        }
+    ]
+}

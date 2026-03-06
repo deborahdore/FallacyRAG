@@ -1,0 +1,16 @@
+{
+    "name": "Oliver Wiley",
+    "birthDate": "1851-01-30",
+    "deathDate": "1917-10-18",
+    "bio": "a Representative from Alabama; born in Troy, Pike County, Ala., January 30, 1851; attended the common schools; member of the town council for five years; chairman of the Democratic executive committee of Pike County 1884-1886; member of the Democratic State executive committee in 1888; was president of the Alabama Midland Railway during its construction, from 1887 to 1892; president of the board of directors of the State normal college at Troy, Ala.; director of the Farmers &amp; Merchants' National Bank at Troy; vice president and general manager of the Standard Chemical &amp; Oil Co. at Troy; elected as a Democrat to the Sixtieth Congress to fill the vacancy caused by the death of his brother, Ariosto Appling Wiley, and served from November 3, 1908, to March 3, 1909; died in Troy, Ala., October 18, 1917; interment in Oakwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

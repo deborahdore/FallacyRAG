@@ -1,0 +1,32 @@
+{
+    "name": "James Heidinger",
+    "birthDate": "1882-07-17",
+    "deathDate": "1945-03-22",
+    "bio": "A Representative from Illinois; born on a farm near Mount Erie, Wayne County, Ill., July 17, 1882; attended the rural schools, Northern Illinois Normal School, De Kalb, Ill., and Valparaiso (Ind.) University; taught in the rural schools of Wayne County, Ill.; was graduated from Northern Illinois College of Law, Dixon, Ill., in 1908; was admitted to the bar the same year and commenced practice in Fairfield, Ill.; county judge of Wayne County, Ill., 1914-1926; assistant attorney general of Illinois 1927-1933; delegate to the Republican National Convention in 1928; unsuccessful candidate for election to the Seventy-second and Seventy-fourth Congresses; elected as a Republican to the Seventy-seventh, Seventy-eighth, and Seventy-ninth Congresses and served from January 3, 1941, until his death in Phoenix, Ariz., on March 22, 1945; interment in Maple Hill Cemetery, Fairfield, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

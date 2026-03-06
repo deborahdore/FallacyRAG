@@ -1,0 +1,48 @@
+{
+    "name": "James Olin",
+    "birthDate": "1920",
+    "deathDate": "2006",
+    "bio": "A Representative from Virginia; born in Chicago, Ill., February 28, 1920; graduated from Deep Springs College, Deep Springs, Calif., 1941; received B.E.E. degree, Cornell University, Ithaca, N.Y., 1943; United States Army Signal Corps, World War II, 1943-1946; elected supervisor Town of Rotherdam, N.Y., and country board of supervisors, Schenectady County, N.Y., 1953; employed for 35 years by General Electric Co., until retirement January 1982, after serving as corporate vice president and general manager, industrial electronics division; elected as a Democrat to the Ninety-eighth and to the four succeeding Congresses (January 3, 1983-January 3, 1993); was not a candidate for renomination to the One Hundred Third Congress in 1992; died on July 29, 2006, in Charlottesville, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

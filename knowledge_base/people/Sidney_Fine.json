@@ -1,0 +1,32 @@
+{
+    "name": "Sidney Fine",
+    "birthDate": "1903-09-14",
+    "deathDate": "1982-04-23",
+    "bio": "a Representative from New York; born in New York City, September 14, 1903; attended public schools; graduated from College of the City of New York in 1923 and from the law school of Columbia University in 1926; admitted to the bar in 1926 and commenced practice in New York City; member of the New York state assembly in 1945 and 1946 and the New York state senate 1947-1950; elected as a Democrat to the Eighty-second, Eighty-third, and Eighty-fourth Congresses and served from January 3, 1951, until his resignation January 2, 1956; New York State Supreme Court, 1956-1975; resided in New York City until his death there on April 23, 1982; interment at Old Montefiore Cemetery, Queens, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

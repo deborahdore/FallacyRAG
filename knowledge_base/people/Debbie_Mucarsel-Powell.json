@@ -1,0 +1,16 @@
+{
+    "name": "Debbie Mucarsel-Powell",
+    "birthDate": "1971-01-18",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Guayaquil, Ecuador, January 18, 1971; graduated from Pomona Catholic High School, Pomona, Calif., 1988; B.S., Pitzer College, Claremont, Calif., 1992; M.A., Claremont Graduate University, Claremont, Calif., 1996; consultant; faculty, Florida International University, Miami, Fla., 2003-2011; elected as a Democrat to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for reelection to the One Hundred Seventeenth Congress in 2020; unsuccessful candidate for the United States Senate in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "John Kendall",
+    "birthDate": "1834-06-26",
+    "deathDate": "1892-03-07",
+    "bio": "A Representative from Kentucky; born in Morgan County, Ky., June 26, 1834; attended the common schools and Owingsville Academy; studied law; was admitted to the bar in 1854 and commenced practice in West Liberty, Ky.; prosecuting attorney of Morgan County 1854-1858; during the Civil War served as first lieutenant and adjutant of the Tenth Kentucky Confederate Cavalry; member of the State house of representatives 1867-1871; Commonwealth attorney for the thirteenth judicial district 1872-1878; elected as a Democrat to the Fifty-second Congress and served from March 4, 1891, until his death in Washington, D.C., on March 7, 1892; interment in Barber Cemetery, West Liberty, Morgan County, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

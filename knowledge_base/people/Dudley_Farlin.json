@@ -1,0 +1,16 @@
+{
+    "name": "Dudley Farlin",
+    "birthDate": "1777-09-02",
+    "deathDate": "1837-09-26",
+    "bio": "a Representative from New York; born in Norwich, New London County, Conn., September 2, 1777; moved to Dutchess County, N.Y., in early youth, and later to Warren County; engaged in the lumber and grain business; supervisor of the town of Warrensburg 1818-1820, 1827, and 1828; sheriff of Warren County in 1821, 1822, and again in 1828; member of the State assembly in 1824; elected as a Jacksonian candidate to the Twenty-fourth Congress (March 4, 1835-March 3, 1837); resumed his former business pursuits; died in Warrensburg, Warren County, N.Y., on September 26, 1837; interment in Warrensburg Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

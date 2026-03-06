@@ -1,0 +1,56 @@
+{
+    "name": "John Tucker",
+    "birthDate": "1823-12-24",
+    "deathDate": "1897-02-13",
+    "bio": "a Representative from Virginia; born in Winchester, Frederick County, Va., on December 24, 1823; attended a private school and Richmond Academy, and was graduated from the University of Virginia at Charlottesville in 1844; was admitted to the bar in 1845 and commenced practice in Winchester, Va.; attorney general of Virginia 1857-1865; professor of equity and public law at Washington and Lee University, Lexington, Va., in 1870; elected as a Democrat to the Forty-fourth and to the five succeeding Congresses (March 4, 1875-March 3, 1887); chairman, Committee on Ways and Means (Forty-sixth Congress), Committee on the Judiciary (Forty-eighth and Forty-ninth Congresses); declined to be a candidate for renomination in 1886; elected professor of constitutional law at Washington and Lee University in 1888, and served until his death; president of the American Bar Association in 1894; died in Lexington, Va., February 13, 1897; interment in Mount Hebron Cemetery, Winchester, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

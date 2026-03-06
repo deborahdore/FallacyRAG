@@ -1,0 +1,56 @@
+{
+    "name": "Brad Wenstrup",
+    "birthDate": "1958-06-17",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Cincinnati, Hamilton County, Ohio, June 17, 1958; graduated from St. Xavier High School, Finneytown, Ohio, 1976; B.A., University of Cincinnati, Cincinnati, Ohio, 1980; B.S. and D.P.M., William M. Scholl College of Podiatric Medicine, Rosalind Franklin University of Medicine and Science, Chicago, Ill., 1985; United States Army Reserve, 1998-2022; served in Operation Iraqi Freedom, 2005-2006; physician; unsuccessful candidate for mayor of Cincinnati, Ohio, in 2009; elected as a Republican to the One Hundred Thirteenth and to the five succeeding Congresses (January 3, 2013-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

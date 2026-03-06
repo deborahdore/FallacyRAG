@@ -1,0 +1,40 @@
+{
+    "name": "Daniel Jenifer",
+    "birthDate": "1791-04-15",
+    "deathDate": "1855-12-18",
+    "bio": "a Representative from Maryland; born in Charles County, Md., April 15, 1791; completed preparatory studies; studied law; served in the State house of delegates; elected as an Anti-Jacksonian candidate to the Twenty-second Congress (March 4, 1831-March 3, 1833); unsuccessful candidate for reelection in 1832 to the Twenty-third Congress; elected as a Whig to the Twenty-fourth Congress and the two succeeding Congresses (March 4, 1835-March 3, 1841); appointed Minister to Austria on August 27, 1841, and served until July 7, 1845; register of wills for Charles County 1846-1851; died in Mulberry Grove, near Port Tobacco, Md., December 18, 1855; interment on a farm, \"Charleston,\" in the southern part of Charles County, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        }
+    ]
+}

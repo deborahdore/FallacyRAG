@@ -1,0 +1,39 @@
+{
+    "name": "John Rose",
+    "birthDate": "1965-02-23",
+    "deathDate": null,
+    "bio": "a Representative from Tennessee; born in Cookeville, Putnam County, Tenn., February 23, 1965; graduated from Cookeville High School, Cookeville, Tenn., 1983; B.S., Tennessee Tech University, Cookeville, Tenn., 1988; M.S., Purdue University, West Lafayette, Ind., 1990; J.D., Vanderbilt University, Nashville, Tenn., 1993; business executive; farmer; Tennessee commissioner of agriculture, 2002-2003; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

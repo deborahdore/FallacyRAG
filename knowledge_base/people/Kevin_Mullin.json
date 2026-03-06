@@ -1,0 +1,23 @@
+{
+    "name": "Kevin Mullin",
+    "birthDate": "1970-06-15",
+    "deathDate": null,
+    "bio": "a Representative from California; born in San Mateo County, Calif., June 15, 1970; graduated from Junipero Serra High School, San Mateo, Calif., 1988; B.A., University of San Francisco, San Francisco, Calif., 1992; M.P.A., San Francisco State University, San Francisco, Calif., 1998; entrepreneur; staff, California state senator Karen Lorraine Jacqueline (Jackie) Speier, 1998-2001; member of the South San Francisco, Calif., city council, 2007-2012; Mayor of South San Francisco, Calif., 2010-2011; commissioner, Calif. Metropolitan Transportation Commission, 2011-2012; member of the California state assembly, 2012-2022, speaker pro tempore, 2014-2022; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "William Foulkrod",
+    "birthDate": "1846-11-22",
+    "deathDate": "1910-11-13",
+    "bio": "A Representative from Pennsylvania; born in Frankford, Philadelphia, Pa., November 22, 1846; attended public and private schools in Philadelphia; engaged in the wholesale dry-goods business and the manufacture of hosiery; president of the Philadelphia Trades League; interested in plans for the improvement of the Delaware River and Channel; elected as a Republican to the Sixtieth and Sixty-first Congresses and served from March 4, 1907, until his death; unsuccessful candidate for reelection in 1910; died in Frankford, Philadelphia, Pa., November 13, 1910; interment in Cedar Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

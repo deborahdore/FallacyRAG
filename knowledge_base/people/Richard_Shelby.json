@@ -1,0 +1,184 @@
+{
+    "name": "Richard Shelby",
+    "birthDate": "1934",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Alabama; born in Birmingham, Ala., May 6, 1934; attended the public schools; graduated, University of Alabama 1957; graduated, University of Alabama School of Law 1963; admitted to the Alabama bar in 1961 and commenced practice in Tuscaloosa; city prosecutor, Tuscaloosa 1963-1971; United States Commissioner, Northern District of Alabama 1966-1970; member, Alabama State senate 1970-1978; elected as a Democrat to the Ninety-sixth Congress in 1978; reelected to the three succeeding Congresses and served from January 3, 1979, to January 3, 1987; was not a candidate for reelection to the House of Representatives in 1986, but was elected to the United States Senate; reelected in 1992, 1998, 2004, 2010, and again in 2016, and served from January 3, 1987, to January 3, 2023; changed from the Democratic to the Republican Party in 1994; chair, Select Committee on Intelligence (One Hundred Fifth and One Hundred Sixth Congresses, One Hundred Seventh Congress [January 20, 2001-June 6, 2001]), Committee on Banking, Housing and Urban Affairs (One Hundred Eighth and One Hundred Ninth Congresses, One Hundred Fourteenth Congress), Committee on Rules and Administration (One Hundred Fifteenth Congress [January 20, 2017-April 10, 2018]), Committee on Appropriations (One Hundred Fifteenth [April 10, 2018-January 3, 2019] and One Hundred Sixteenth Congresses); was not a candidate for reelection to the Senate in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

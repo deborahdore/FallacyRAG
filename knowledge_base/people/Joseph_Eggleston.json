@@ -1,0 +1,24 @@
+{
+    "name": "Joseph Eggleston",
+    "birthDate": "1754-11-24",
+    "deathDate": "1811-02-13",
+    "bio": "a Representative from Virginia; born in Middlesex County, Va., November 24, 1754; when four years old was taken to his father's plantation \"Egglestetton,\" near Amelia Court House, Va.; studied under private teachers; graduated from the College of William and Mary, Williamsburg, Va., in 1776; served in the Revolutionary War; captain and major in Lee's Lighthorse Cavalry in the Continental Army; member of the Virginia state house of delegates, 1785-1788 and 1791-1799; elected a member of the Virginia Privy Council on November 7, 1787; elected as a Democratic Republican to the Fifth Congress to fill the vacancy caused by the resignation of William B. Giles; reelected to the succeeding Congress (December 3, 1798-March 3, 1801); was not a candidate for renomination in 1800; engaged in agricultural pursuits; justice of the peace from 1801 until his death in Amelia County, Va., February 13, 1811; interment in the Old Grubhill Church Cemetery, near Amelia Court House, Amelia County, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

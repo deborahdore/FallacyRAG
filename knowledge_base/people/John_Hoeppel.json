@@ -1,0 +1,24 @@
+{
+    "name": "John Hoeppel",
+    "birthDate": "1881-02-10",
+    "deathDate": "1976-09-21",
+    "bio": "a Representative from California; born near Tell City, Perry County, Ind., February 10, 1881; attended the grammar school in Evansville, Ind.; enlisted in the United States Army on July 27, 1898, and served successively as private, corporal, and sergeant until 1921, with service in France during the First World War; moved to Arcadia, Los Angeles County, Calif., in 1919; postmaster at Arcadia, Calif., 1923-1931; in 1928 became editor of National Defense magazine; elected as a Democrat to the Seventy-third and to the Seventy-fourth Congresses (March 4, 1933-January 3, 1937); chairman, Committee on War Claims (Seventy-fourth Congress); unsuccessful candidate for renomination in 1936 to the Seventy-fifth Congress; convicted on December 12, 1935, of conspiracy; sentenced to federal prison; paroled on April 3, 1937; resumed his editorial interests; unsuccessful Prohibition candidate for election in 1946 to the Eightieth Congress; resided in Arcadia, Calif., where he died September 21, 1976; interment in Resurrection Cemetery, San Gabriel, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

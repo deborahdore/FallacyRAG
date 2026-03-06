@@ -1,0 +1,64 @@
+{
+    "name": "Robert Eckhardt",
+    "birthDate": "1913-07-16",
+    "deathDate": "2001-11-13",
+    "bio": "a Representative from Texas; born in Austin, Travis County, Tex., July 16, 1913; B.A., University of Texas, 1935; LL.B., University of Texas, 1939; United States Army, 1942-1944; Southwestern Director of Office of Coordinator of Inter-American Affairs, 1944-1945; member of the Texas state house of representatives, 1958-1966; elected as a Democrat to the Ninetieth and to the six succeeding Congresses (January 3, 1967-January 3, 1981); unsuccessful candidate for reelection to the Ninety-seventh Congress in 1980; died on November 13, 2001, in Austin, Tex.; interment at Austin Memorial Cemetery, Austin, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

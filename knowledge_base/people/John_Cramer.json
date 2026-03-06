@@ -1,0 +1,24 @@
+{
+    "name": "John Cramer",
+    "birthDate": "1779-05-17",
+    "deathDate": "1870-06-01",
+    "bio": "a Representative from New York; born in Waterford, N.Y., May 17, 1779; attended the rural schools and graduated from Union College, Schenectady, N.Y., in 1801; studied law; admitted to the bar and commenced practice in Waterford, N.Y.; presidential elector on the ticket of Jefferson and Clinton in 1804; appointed a master in chancery in 1805; member of the State assembly in 1806 and 1811; served in the State senate 1823-1825; delegate to the State constitutional convention in 1821; elected as a Jacksonian candidate to the Twenty-third and Twenty-fourth Congresses (March 4, 1833-March 3, 1837); again a member of the State assembly in 1842; died in Waterford, Saratoga County, N.Y., June 1, 1870; interment in Waterford Rural Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "James MacKay",
+    "birthDate": "1919",
+    "deathDate": "2004",
+    "bio": "A Representative from Georgia; born in Fairfield, Jefferson County, Ala., June 25, 1919; educated in the public schools; A.B., Emory University, Atlanta, Ga., 1940; attended Duke University, 1940-1941; LL.B., Emory University School of Law, Atlanta, Ga., 1947; lawyer, private practice; United States Coast Guard Reserve, 1941-1945; awarded the Bronze Star Medal; trustee, Emory University; member of the Georgia state legislature, 1951-1952, 1955-1964; elected as a Democrat to the Eighty-ninth Congress (January 3, 1965-January 3, 1967); unsuccessful candidate for reelection to the Ninetieth Congress in 1966; died on July 2, 2004, in Chattanooga, Tenn.; remains were cremated.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Lori Trahan",
+    "birthDate": "1973-10-27",
+    "deathDate": null,
+    "bio": "A Representative from Massachusetts; born in Lowell, Middlesex County, Mass., October 27, 1973; graduated from Lowell High School, Lowell, Mass., 1991; B.S., Georgetown University, Washington, D.C., 1995; attended Harvard University, Cambridge, Mass., 2013; businesswoman; staff, United States Representative Marty Meehan of Massachusetts, 1995-2005; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

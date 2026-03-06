@@ -1,0 +1,24 @@
+{
+    "name": "David Walker",
+    "birthDate": null,
+    "deathDate": "1820-03-01",
+    "bio": "a Representative from Kentucky; born in Brunswick County, Va., birth date unknown; attended public and private schools; served in the Revolutionary War as a private under General Lafayette; was at the surrender of Cornwallis at Yorktown; moved to Logan County, Ky.; clerk of county and circuit courts; member of the Kentucky state house of representatives, 1793-1796; served as major on the staff of Governor Shelby of Kentucky in the Battle of the Thames during the War of 1812; elected as a Democratic Republican to the Fifteenth and to the succeeding Congress (March 4, 1817-March 1, 1820); died on March 1, 1820, in Washington, D.C.; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

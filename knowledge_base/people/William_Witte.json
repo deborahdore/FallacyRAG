@@ -1,0 +1,16 @@
+{
+    "name": "William Witte",
+    "birthDate": "1817-10-04",
+    "deathDate": "1876-11-24",
+    "bio": "A Representative from Pennsylvania; born in Columbia, Morris County, N.J., October 4, 1817; moved to Springtown, Bucks County, Pa., and attended the common schools; moved to Philadelphia in 1840; engaged in mercantile pursuits and the real estate business; elected as a Democrat to the Thirty-third Congress (March 4, 1853-March 3, 1855); engaged in newspaper work and resumed real estate interests; died in Philadelphia, Pa., November 24, 1876; interment in Durham Cemetery, Durham, Bucks County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

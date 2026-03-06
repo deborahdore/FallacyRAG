@@ -1,0 +1,16 @@
+{
+    "name": "John Thurman",
+    "birthDate": "1814-10-06",
+    "deathDate": "1854-07-24",
+    "bio": "A Representative from New York; born in New York City October 6, 1814; was graduated from Columbia College in 1835; moved to Warren County, near Chestertown, N.Y., and engaged in agricultural pursuits; held several local offices; elected as a Whig to the Thirty-first Congress (March 4, 1849-March 3, 1851); declined to be a candidate for renomination in 1850; devoted his attention to the management of his estate; died at Friends Lake, Chester Township, Warren County, N.Y., July 24, 1854; interment in the family cemetery; reinterment in Oakwood Cemetery, Troy, Rensselaer County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "John Phillips",
+    "birthDate": "1887-09-11",
+    "deathDate": "1983-12-19",
+    "bio": "a Representative from California; born in Wilkes-Barre, Luzerne County, Pa., September 11, 1887; moved to St. Davids, Pa., in 1891; attended the public schools; was graduated from Haverford (Pa.) College in 1910; during the First World War served in the Adjutant General's Office and in Ordnance 1917-1919; moved to California in 1924; business analyst and rancher; member of the city council of Banning, Calif., 1930-1932; served in the State assembly 1932-1936; member of the State senate 1936-1942; member of the United States delegation to the Eleventh World's Dairy Congress in Berlin in 1937; elected as a Republican to the Seventy-eighth and to the six succeeding Congresses (January 3, 1943-January 3, 1957); was not a candidate for renomination in 1956; delegate to Republican National Conventions in 1944, 1948, 1952, 1956, and 1960; member of the American Battle Monuments Commission 1952-1961; engaged as a public relations counselor; was a resident of Hemet, Calif., until his death in Palm Springs, Calif., December 19, 1983; interment in Desert Memorial Park, Cathedral City, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

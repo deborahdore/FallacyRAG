@@ -1,0 +1,96 @@
+{
+    "name": "James Trimble",
+    "birthDate": "1894",
+    "deathDate": "1972",
+    "bio": "A Representative from Arkansas; born in Osage, Carroll County, Ark., February 3, 1894; attended the public schools; was graduated from the University of Arkansas at Fayetteville in 1917; was admitted to the bar in 1925 and commenced practice in Berryville, Carroll County, Ark.; during the First World War served in the United States Army as a private and was assigned to the Adjutant General's Office, Little Rock, Ark.; county official of Carroll County, Ark., 1920-1928; prosecuting attorney of the fourth judicial circuit of Arkansas 1930-1938; judge of the fourth judicial circuit of Arkansas 1938-1944; elected as a Democrat to the Seventy-ninth and to the ten succeeding Congresses (January 3, 1945-January 3, 1967); chairman, Special Committee on Chamber Improvements (Eighty-first and Eighty-second Congresses); unsuccessful candidate for reelection in 1966 to the Ninetieth Congress; resided in Berryville, Ark.; died in Eureka Springs, Ark., March 10, 1972; interment in Berryville Memorial Park, Berryville, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

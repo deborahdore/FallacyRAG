@@ -1,0 +1,64 @@
+{
+    "name": "Walter Smith",
+    "birthDate": "1862-07-10",
+    "deathDate": "1922-01-27",
+    "bio": "A Representative from Iowa; born in Council Bluffs, Pottawattamie County, Iowa, July 10, 1862; attended the common schools; studied law; was admitted to the bar in 1882 and commenced practice in Council Bluffs, Iowa; judge of the fifteenth judicial district of Iowa 1890-1900; elected as a Republican to the Fifty-sixth Congress to fill the vacancy caused by the resignation of Smith McPherson and on the same day was elected to the Fifty-seventh Congress; reelected to the Fifty-eighth and to the four succeeding Congresses and served from December 3, 1900, to March 15, 1911, when he resigned to accept an appointment on the bench; appointed by President Taft to be United States circuit judge for the eighth judicial circuit and served from March 16, 1911, until his death in Council Bluffs, Iowa, on January 27, 1922; interment in Fairview Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

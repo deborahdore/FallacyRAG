@@ -1,0 +1,48 @@
+{
+    "name": "Laurence Keitt",
+    "birthDate": "1824-10-04",
+    "deathDate": "1864-06-04",
+    "bio": "A Representative from South Carolina; born in Orangeburg District, S.C., October 4, 1824; pursued classical studies and was graduated from South Carolina College (now the University of South Carolina) at Columbia in 1843; studied law; was admitted to the bar in 1845 and commenced practice in Orangeburg; member of the state house of representatives, 1848-1853; elected as a Democrat to the Thirty-third and to the succeeding Congress (March 4, 1853-July 16, 1856); censured by the U.S. House of Representatives on July 15, 1856, for his role in the assault made upon Senator Charles Sumner of Massachusetts on May 22, 1856; resigned on July 16, 1856; elected in a special election to the Thirty-fourth Congress to fill the vacancy caused by his own resignation, and reelected to the two succeeding Congresses (August 6, 1856-December 1860); chairman, Committee on Public Buildings and Grounds (Thirty-fifth Congress); delegate to the secession convention of South Carolina; member of the provisional congress of the Confederacy in Montgomery, Ala., in February 1861 and in Richmond, Va., in July 1861; raised the Twentieth South Carolina Regiment of Volunteers and was commissioned its colonel on January 11, 1862; subsequently promoted to the rank of brigadier general; wounded in the Battle of Cold Harbor, near Richmond, Va., and died as a result of his wounds the following day, June 4, 1864; interment in the family cemetery, near St. Matthews, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

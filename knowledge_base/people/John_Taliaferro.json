@@ -1,0 +1,88 @@
+{
+    "name": "John Taliaferro",
+    "birthDate": "1768",
+    "deathDate": "1852-08-12",
+    "bio": "a Representative from Virginia; born on the estate, \"Hays,\" near Fredericksburg, King George County, Va., in 1768; attended the common schools; studied law; was admitted to the bar and commenced practice in Fredericksburg, Va.; elected as a Democratic Republican to the Seventh Congress (March 4, 1801-March 3, 1803); as a Democratic Republican, successfully contested the election of John P. Hungerford to the Twelfth Congress and served from November 29, 1811, to March 3, 1813; unsuccessfully contested the election of John P. Hungerford to the Thirteenth Congress; elected as a Crawford Republican to the Eighteenth Congress, by special election, to fill the vacancy caused by the death of William L. Ball; reelected as an Adams candidate to the Nineteenth and to the succeeding Congress; and reelected as an Anti-Jacksonian candidate to the Twenty-first Congress (March 24, 1824-March 3, 1831); elected as an Anti-Jacksonian candidate to the Twenty-fourth; reelected as a Whig to the Twenty-fifth and to the two succeeding Congresses (March 4, 1835-March 3, 1843); chairman, Committee on Revolutionary Pensions (Twenty-sixth and Twenty-seventh Congresses); librarian of the United States Treasury Department from 1850 until his death at his residence, \"Hagley,\" near Fredericksburg, King George County, Va., August 12, 1852; interment on his farm, \"Hagley.\"",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

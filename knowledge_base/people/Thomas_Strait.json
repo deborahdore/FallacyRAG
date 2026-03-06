@@ -1,0 +1,32 @@
+{
+    "name": "Thomas Strait",
+    "birthDate": "1846-12-25",
+    "deathDate": "1924-04-18",
+    "bio": "A Representative from South Carolina; born in Chester District, S.C., December 25, 1846; attended the common schools of Mayesville, S.C., and Cooper Institute, Mississippi; during the Civil War entered the Confederate Army in 1862 and served throughout the war, first in Company A, Sixth Regiment of Infantry, and later as sergeant in Company H, Twenty-fourth Regiment, Gist's brigade; engaged in agricultural pursuits; taught school in Ebenezer, York County, S.C., in 1880; was graduated from South Carolina Medical College at Charleston in 1885 and practiced medicine; member of the State senate 1890-1893; elected as a Democrat to the Fifty-third, Fifty-fourth, and Fifty-fifth Congresses (March 4, 1893-March 3, 1899); unsuccessful candidate for renomination in 1898 to the Fifty-sixth Congress; resumed the practice of his profession in Lancaster, S.C., and died there on April 18, 1924; interment in Westside Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

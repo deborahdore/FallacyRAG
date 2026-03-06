@@ -1,0 +1,80 @@
+{
+    "name": "Thomas Clayton",
+    "birthDate": "1777-07",
+    "deathDate": "1854-08-21",
+    "bio": "A Representative and a Senator from Delaware; born in Masseys Cross Roads, Md., July 1777; received a classical education at Newark Academy; studied law; was admitted to the bar in 1799 and commenced practice in New Castle; clerk of the State house of representatives in 1800, and a member of that body 1802-1806, 1810, 1812, 1813; Secretary of State of Delaware 1808-1810; member, State senate 1808; State attorney general 1810-1815; elected as a Federalist to the Fourteenth Congress (March 4, 1815-March 3, 1817); member, State senate 1821; elected as an Adams-Clay Federalist (later Adams) to the United States Senate to fill the vacancy caused by the resignation of Caesar A. Rodney and served from January 15, 1824, to March 3, 1827; chief justice of the court of common pleas of Delaware in 1828; chief justice of the superior court of the State in 1832; elected as an Anti-Jacksonian (later Whig) to the United States Senate to fill the vacancy caused by the resignation of John M. Clayton; reelected in 1841 and served from January 9, 1837, to March 3, 1847; chairman, Committee on Printing (Twenty-seventh Congress), Committee on Revolutionary Claims (Twenty-ninth Congress); moved to New Castle and retired from public life; died in New Castle, New Castle County, Del., August 21, 1854; interment in Presbyterian Church Cemetery, Dover, Kent County, Del.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "DELAWARE"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Michael Stone",
+    "birthDate": "1747",
+    "deathDate": "1812",
+    "bio": "a Representative from Maryland; born at \"Equality,\" near Port Tobacco, Charles County, Md., in 1747; completed preparatory studies; member of the Maryland House of Delegates, 1781-1783; member of the Maryland state ratification convention in 1788; elected as an Anti-Administration candidate to the First Congress (March 4, 1789-March 3, 1791); appointed judge of the first judicial district of Maryland in 1791; died in Charles County, Md., in 1812; interment on his estate, \"Equality,\" near Port Tobacco, Charles County, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "MARYLAND"
+        }
+    ]
+}

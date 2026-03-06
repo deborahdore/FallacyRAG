@@ -1,0 +1,72 @@
+{
+    "name": "Matthew Clay",
+    "birthDate": "1754-03-25",
+    "deathDate": "1815-05-27",
+    "bio": "a Representative from Virginia; born in Halifax County, near Danville, Va., March 25, 1754; served in the Revolutionary War and entered the Ninth Virginia Regiment October 1, 1776, transferred to the First Virginia Regiment in 1778 and to the Fifth Virginia Regiment in 1781, being successively promoted to first lieutenant, captain, and quartermaster; mustered out 1783; member of the Virginia state house of delegates, 1790-1794; elected as a Democratic Republican to the Fifth and to the seven succeeding Congresses (March 4, 1797-March 3, 1813); chairman, Committee on Militia (Tenth Congress); unsuccessful candidate for reelection in 1813 to the Thirteenth Congress; elected as a Democratic Republican to the Fourteenth Congress but died before the convening of Congress; died at Halifax Court House, Va., May 27, 1815; interment in the old family burying ground in Pittsylvania County, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

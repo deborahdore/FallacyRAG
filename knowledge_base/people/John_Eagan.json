@@ -1,0 +1,48 @@
+{
+    "name": "John Eagan",
+    "birthDate": "1872-01-22",
+    "deathDate": "1956-06-13",
+    "bio": "A Representative from New Jersey; born in Hoboken, N.J., January 22, 1872; was graduated from public, parochial, and private schools; in 1894 founded and was president of the Eagan Schools of Business in Hoboken, Union Hill, and Hackensack, N.J., and Brooklyn, N.Y.; first vice president of the Merchants &amp; Manufacturers' Trust Co.; collector of taxes of Union, N.J., 1896-1899; elected as a Democrat to the Sixty-third and to the three succeeding Congresses (March 4, 1913-March 3, 1921); delegate to the Democratic National Convention at San Francisco in 1920; unsuccessful candidate for reelection in 1920 to the Sixty-seventh Congress; again elected to the Sixty-eighth Congress (March 4, 1923-March 3, 1925); unsuccessful candidate for renomination in 1924; resumed his former business pursuits; member and president of the Board of Education, Weehawken, N.J., 1932-1940; appointed collector of taxes and custodian of school moneys of Weehawken in 1940; collector of taxes 1941-1955; resided in Weehawken, N.J., until his death in Paramus, N.J., June 13, 1956; interment in Rosendale Cemetery, Tillson, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

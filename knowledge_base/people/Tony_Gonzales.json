@@ -1,0 +1,31 @@
+{
+    "name": "Tony Gonzales",
+    "birthDate": "1980-10-10",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born on October 10, 1980; attended Thomas Edison High School, San Antonio, Tex.; A.A., Chaminade University, Honolulu, Hawaii; B.S., Excelsior College, Albany, N.Y.; attended Georgetown University, Washington, D.C.; M.A., American Public University, Charles Town, W.Va.; attending University of Southern Mississippi, Hattiesburg, Miss.; United States Navy, 1999-2019; faculty, Pensacola State College, Pensacola, Fla.; faculty, University of Maryland, College Park, Md.; community representative, Head Start policy council, San Antonio, Tex., 2018-2019; legislative fellow, Office of Legislative Affairs, United States Navy, 2016-2017; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

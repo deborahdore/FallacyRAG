@@ -1,0 +1,31 @@
+{
+    "name": "Mike Flood",
+    "birthDate": "1975-02-23",
+    "deathDate": null,
+    "bio": "a Representative from Nebraska; born in Omaha, Douglas County, Nebr., February 23, 1975; graduated from Norfolk Catholic High School, Norfolk, Nebr., 1993; B.A., University of Notre Dame, Notre Dame, Ind., 1997; J.D., University of Nebraska College of Law, Lincoln, Nebr., 2001; business owner; attorney; member of the Nebraska state legislature, 2005-2013, 2021-2022, speaker of the Nebraska state legislature, 2007-2013; elected as a Republican to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Jeff Fortenberry, and reelected to the two succeeding Congresses (June 28, 2022-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

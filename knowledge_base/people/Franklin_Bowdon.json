@@ -1,0 +1,32 @@
+{
+    "name": "Franklin Bowdon",
+    "birthDate": "1817-02-17",
+    "deathDate": "1857-06-08",
+    "bio": "A Representative from Alabama; born in Chester District, S.C., February 17, 1817; attended the common schools and was graduated from the University of Alabama at Tuscaloosa in 1836; studied law; was admitted to the bar and commenced practice in Talladega, Ala.; member of the State house of representatives in 1844 and 1845; elected as a Democrat to the Twenty-ninth Congress to fill the vacancy caused by the death of Felix G. McConnell; reelected to the Thirtieth and Thirty-first Congresses and served from December 7, 1846, to March 3, 1851; chairman, Committee on Public Buildings and Grounds (Thirty-first Congress); was not a candidate for renomination in 1850; moved to Henderson, Rusk County, Tex., in 1852, where he resumed the practice of his profession; died in Henderson, Tex., June 8, 1857; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Willard Curtin",
+    "birthDate": "1905",
+    "deathDate": "1996",
+    "bio": "A Representative from Pennsylvania; born in Trenton, Mercer County, N.J., November 28, 1905; moved to Morrisville, Bucks County, Pa., with his parents in 1911; attended the public schools; graduated from Penn State University in 1929 and from the University of Pennsylvania Law School in 1932; was admitted to the bar in 1932 and commenced practice in Morrisville, Pa.; first assistant district attorney of Bucks County 1938-1949; district attorney 1949-1953; county committeeman to the Pennsylvania State Republican committee 1954-1956; elected as a Republican to the Eighty-fifth and to the four succeeding Congresses (January 3, 1957-January 3, 1967); was not a candidate for reelection in 1966 to the Ninetieth Congress; was a resident of Ft. Myers, Fla., until his death on February 4, 1996.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

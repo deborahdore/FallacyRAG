@@ -1,0 +1,80 @@
+{
+    "name": "John Kendrick",
+    "birthDate": "1857",
+    "deathDate": "1933",
+    "bio": "A Senator from Wyoming; born near Jacksonville, Cherokee County, Tex., September 6, 1857; attended the public schools; moved to Wyoming in 1879 and settled on a ranch near Sheridan, where he engaged in the raising of cattle and sheep; member, State senate 1910-1914; unsuccessful candidate for election to the United States Senate in 1913; Governor of Wyoming 1915-1917, when he resigned, having been elected Senator; elected as a Democrat to the United States Senate in 1916; reelected in 1922 and 1928 and served from March 4, 1917, until his death at Sheridan, Wyo., November 3, 1933; chairman, Committee on Canadian Relations (Sixty-fifth Congress), Committee on Public Lands and Surveys (Seventy-third Congress); interment in Mount Hope Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WYOMING"
+        }
+    ]
+}

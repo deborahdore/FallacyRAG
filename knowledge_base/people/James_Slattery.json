@@ -1,0 +1,56 @@
+{
+    "name": "James Slattery",
+    "birthDate": "1948",
+    "deathDate": null,
+    "bio": "A Representative from Kansas; born in Good Intent, Atchison County, Kans., August 4, 1948; attended public schools in Atchison, Kans.; attended the Netherlands School of International Business and Economics, 1969; B.S., Washburn University, Topeka, Kans., 1970; J.D., Washburn University Law School, Topeka, 1974; Kansas Army National Guard; realtor; admitted to the Kansas bar, 1975 and commenced practice in Topeka; elected to the Kansas house of representatives, 1972-1978; elected as a Democrat to the Ninety-eighth and to the five succeeding Congresses (January 3, 1983-January 3, 1995); was not a candidate for reelection in 1994, but was an unsuccessful candidate for election for Governor of Kansas.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        }
+    ]
+}

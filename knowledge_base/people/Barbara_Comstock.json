@@ -1,0 +1,24 @@
+{
+    "name": "Barbara Comstock",
+    "birthDate": "1959-06-30",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Springfield, Hampden County, Mass., June 30, 1959; graduated from Westchester High School, Houston, Tex., 1977; B.A., Middlebury College, Middlebury, Vt., 1981; J.D., Georgetown University, Washington, D.C., 1986; staff, United States Senator Edward Kennedy of Massachusetts; lawyer, private practice; staff, United States Representative Frank Wolf of Virginia, 1991-1995; staff, United States House of Representatives Committee on Oversight and Government Reform, 1995-1999; campaign aide; staff, United States Justice Department, 2002-2003; consultant; member of the Virginia state house of delegates, 2009-2014; elected as a Republican to the One Hundred Fourteenth and to the succeeding Congress (January 3, 2015-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

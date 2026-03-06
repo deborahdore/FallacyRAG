@@ -1,0 +1,16 @@
+{
+    "name": "Rufus Palen",
+    "birthDate": "1807-02-25",
+    "deathDate": "1844-04-26",
+    "bio": "A Representative from New York; born in Palenville, Greene County, N.Y., February 25, 1807; moved with his parents to Fallsburg, where he received a limited schooling; engaged in the manufacture of leather; held several local offices; elected as a Whig to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); died in New York City April 26, 1844; interment in the Old Cemetery, Palenville, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

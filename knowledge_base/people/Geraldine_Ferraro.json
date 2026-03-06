@@ -1,0 +1,32 @@
+{
+    "name": "Geraldine Ferraro",
+    "birthDate": "1935",
+    "deathDate": "2011",
+    "bio": "A Representative from New York; born in Newburgh, Orange County, N.Y., August 26, 1935; graduated from Marymount School, Tarrytown, N.Y., 1952; B.A., Marymount College, New York, N.Y., 1956; J.D., Fordham University School of Law, New York, N.Y., 1960; lawyer, private practice; assistant district attorney, Queens County, N.Y., 1974-1978; elected as a Democrat to the Ninety-sixth and to the two succeeding Congresses (January 3, 1979-January 3, 1985); was not a candidate for reelection to the Ninety-ninth Congress in 1984, but was the unsuccessful Democratic candidate for Vice President of the United States; fellow of the Institute of Politics, John F. Kennedy School of Government, Harvard University, Cambridge, Mass., 1988-1992; president, International Institute for Women's Political Leadership; unsuccessful candidate for nomination to the United States Senate in 1992 and 1998; permanent member, United Nations Commission on Human Rights, 1993-1996; died on March 26, 2011, in Boston, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Hugh Glasgow",
+    "birthDate": "1769-09-08",
+    "deathDate": "1818-01-31",
+    "bio": "A Representative from Pennsylvania; born in Nottingham, Chester County, Pa., September 8, 1769; attended the public schools; engaged in agricultural pursuits; studied law; was admitted to the bar and practiced; judge of York County from July 1, 1800, to March 29, 1813; elected as a Democratic Republican to the Thirteenth and Fourteenth Congresses (March 4, 1813-March 3, 1817); died at Peach Bottom, York County, Pa., January 31, 1818; interment in Slate Ridge Burying Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

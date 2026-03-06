@@ -1,0 +1,71 @@
+{
+    "name": "Todd Young",
+    "birthDate": "1972",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Indiana; born in Lancaster, Lancaster County, Pa., August 24, 1972; graduated from Carmel High School, Carmel, Ind., 1990; B.S., United States Naval Academy, Annapolis, Md., 1995; M.B.A., University of Chicago, Chicago, Ill., 2000; M.A., University of London, London, England, 2001; J.D., Robert H. McKinney School of Law, Indiana University, Indianapolis, Ind., 2006; United States Navy, 1990-1991; United States Marine Corps, 1995-2000; staff, United States Senator Richard Lugar of Indiana, 2001-2003; Orange County, Ind., assistant deputy prosecutor, 2007-2010; consultant; lawyer, private practice; elected as a Republican to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2016; reelected in 2022 for the term ending January 3, 2029; chair, National Republican Senatorial Committee (2019-2020).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Hannibal Godwin",
+    "birthDate": "1873-11-03",
+    "deathDate": "1929-06-09",
+    "bio": "A Representative from North Carolina; born on a farm near Dunn, Harrett County, N.C., November 3, 1873; attended the common schools and Trinity College (now Duke University), Durham, N.C.; studied law at the University of North Carolina at Chapel Hill; was admitted to the bar in 1896 and commenced practice in Dunn, N.C.; elected mayor of Dunn in 1897; member of the State senate in 1903; member of the Democratic State executive committee 1904-1906; elected as a Democrat to the Sixtieth and to the six succeeding Congresses (March 4, 1907-March 3, 1921); chairman, Committee on Reform in the Civil Service (Sixty-second through Sixty-fifth Congresses); unsuccessful candidate for renomination in 1920; engaged in the practice of his profession until his death in Dunn, N.C., June 9, 1929; interment in Greenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

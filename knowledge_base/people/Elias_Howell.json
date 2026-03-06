@@ -1,0 +1,16 @@
+{
+    "name": "Elias Howell",
+    "birthDate": "1792",
+    "deathDate": "1844",
+    "bio": "a Representative from Ohio; born in New Jersey in 1792; attended the public schools; moved to Newark, Ohio, in 1819; member of the State senate 1830-1832; elected as a Whig to the Twenty-fourth Congress (March 4, 1835-March 3, 1837); was not a candidate for renomination; died near Newark, Ohio, in May 1844.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        }
+    ]
+}

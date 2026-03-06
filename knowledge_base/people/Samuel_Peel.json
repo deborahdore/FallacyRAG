@@ -1,0 +1,48 @@
+{
+    "name": "Samuel Peel",
+    "birthDate": "1831-09-13",
+    "deathDate": "1924-12-18",
+    "bio": "A Representative from Arkansas; born near Batesville, Independence County, Ark., September 13, 1831; attended the common schools; clerk of the circuit court of Carroll County, Ark., 1858-1860; entered the Confederate service in 1861 as a private; elected major of the Third Regiment, Arkansas Infantry, and later colonel of the Fourth Regiment, Arkansas Infantry; studied law; was admitted to the bar and commenced the practice of his profession in Carrollton, Ark., in 1865; moved to Bentonville, Benton County, in 1867 and continued the practice of law; prosecuting attorney of the fourth judicial circuit of Arkansas 1873-1876; elected as a Democrat to the Forty-eighth and to the four succeeding Congresses (March 4, 1883-March 3, 1893); chairman, Committee on Indian Affairs (Fiftieth and Fifty-second Congresses); unsuccessful candidate for renomination in 1892; resumed the practice of law in Bentonville, Ark., and before the Court of Claims at Washington, D.C., until 1915; died in Bentonville, Ark., December 18, 1924; interment in Bentonville Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

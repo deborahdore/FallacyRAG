@@ -1,0 +1,32 @@
+{
+    "name": "Richard Zimmer",
+    "birthDate": "1944-08-16",
+    "deathDate": "2025-12-31",
+    "bio": "a Representative from New Jersey; born in Newark, N.J., August 16, 1944; graduated from Glen Ridge High School, Glen Ridge, N.J., 1962; B.A., Yale University, 1966; L.L.B., Yale Law School, 1969; practiced law in New York City, 1969-1975, and in New Brunswick, N.J., 1975-1990; chair, New Jersey Common Cause, 1974-1977; member, New Jersey state assembly, 1982-1987; New Jersey state senator, 1987-1991; elected as a Republican to the One Hundred Second and to the two succeeding Congresses (January 3, 1991-January 3, 1997); was not a candidate in 1996 for reelection to the United States House of Representatives, but was an unsuccessful candidate for election to the United States Senate; unsuccessful candidate for the United States Senate in 2008; died on December 31, 2025, in Flemington, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

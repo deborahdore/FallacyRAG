@@ -1,0 +1,23 @@
+{
+    "name": "Gilbert Cisneros",
+    "birthDate": "1971-02-12",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Torrance, Los Angeles County, Calif., February 12, 1971; graduated from Torrance High School, Torrance, Calif.; B.A., George Washington University, Washington, D.C., 1994; M.B.A., Regis University, Denver, Colo., 2002; M.A., Brown University, Providence, R.I., 2015; United States Navy, 1989-1990, 1994-2004; corporate manager; non-profit executive; elected as a Democrat to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for reelection to the One Hundred Seventeenth Congress in 2020; Under Secretary of Defense for Personnel and Readiness, United States Department of Defense, 2021-2023; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

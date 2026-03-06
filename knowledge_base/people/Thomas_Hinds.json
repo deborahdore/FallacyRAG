@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Hinds",
+    "birthDate": "1780-01-09",
+    "deathDate": "1840-03-03",
+    "bio": "a Representative from Mississippi; born in Berkeley County, Va., January 9, 1780; moved to Greenville, Miss.; served in the War of 1812 as major of Cavalry; distinguished himself at the Battle of New Orleans and was brevetted brigadier general for gallantry; unsuccessful candidate for Governor in 1820; elected as a Jacksonian candidate to the Twentieth Congress, by special election, to fill the vacancy caused by the resignation of William Haile, and reelected to the the succeeding Congress (October 21, 1828-March 3, 1831); died in Greenville, Miss., August 23, 1840.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

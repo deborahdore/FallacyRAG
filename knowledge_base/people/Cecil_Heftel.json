@@ -1,0 +1,48 @@
+{
+    "name": "Cecil Heftel",
+    "birthDate": "1924-09-30",
+    "deathDate": "2010-02-04",
+    "bio": "a Representative from Hawaii; born in Chicago, Cook County, Ill., September 30, 1924; attended the public schools of Chicago, Ill.; B.S. Arizona State University, Tempe, 1951; graduate work at University of Utah and New York University; businessman; president, Heftel Broadcasting, Honolulu, Hawaii; served in United States Army, 1943-1946; delegate, Hawaii State Democratic convention, 1972; delegate to Democratic National Convention, 1972; elected as a Democrat to the Ninety-fifth and to the four succeeding Congresses and served from January 3, 1977, until his resignation July 11, 1986; was an unsuccessful candidate for the Democratic nomination for governor of Hawaii; member of the Hawaii state board of education, 2005-2008; died on February 4, 2010, in Honolulu, Hawaii; interment at Valley of the Temples Memorial Park, Kaneohe, Hawaii.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        }
+    ]
+}

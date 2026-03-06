@@ -1,0 +1,64 @@
+{
+    "name": "Francis Maloney",
+    "birthDate": "1894-03-31",
+    "deathDate": "1945-01-16",
+    "bio": "A Representative and a Senator from Connecticut; born in Meriden, New Haven County, Conn., March 31, 1894; attended the public and parochial schools of Meriden; newspaper reporter 1914-1921; during the First World War served in the United States Navy as a seaman first class 1917-1918; engaged in the real estate and insurance business; mayor of Meriden, Conn., 1929-1933; elected as a Democrat to the Seventy-third Congress (March 4, 1933-January 3, 1935); did not seek renomination, having become a candidate for Senator; elected to the United States Senate in 1934; reelected in 1940 and served from January 3, 1935, until his death in Meriden, Conn., on January 16, 1945; chairman, Committee on Public Buildings and Grounds (Seventy-seventh through Seventy-ninth Congresses); interment in Sacred Heart Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

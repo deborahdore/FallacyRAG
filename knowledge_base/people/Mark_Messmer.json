@@ -1,0 +1,15 @@
+{
+    "name": "Mark Messmer",
+    "birthDate": "1962-09",
+    "deathDate": null,
+    "bio": "a Representative from Indiana; born September 1962; graduated from Jasper High School, Jasper, Ind., 1981; B.S., Purdue University, West Lafayette, Ind., 1985; engineer; business owner; member of the Indiana state house of representatives, 2008-2014; member of the Indiana state senate, 2014-2024; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

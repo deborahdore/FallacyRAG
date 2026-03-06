@@ -1,0 +1,31 @@
+{
+    "name": "Nancy Mace",
+    "birthDate": "1977-12-04",
+    "deathDate": null,
+    "bio": "a Representative from South Carolina; born in Fayetteville, Cumberland County, N.C., December 4, 1977; attended Stratford High School, Goose Creek, S.C.; graduated high school, 1995; attended Trident Technical College, Charleston, S.C.; B.A., The Citadel, The Military College of South Carolina, Charleston, S.C., 1999; M.S., University of Georgia, Athens, Ga., 2004; author; public relations consultant; real estate broker; unsuccessful candidate for nomination for United States Senate for the One Hundred Fourteenth Congress in 2014; presidential campaign aide; member of the South Carolina state house of representatives, 2018-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

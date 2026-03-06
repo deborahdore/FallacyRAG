@@ -1,0 +1,48 @@
+{
+    "name": "Samuel Crafts",
+    "birthDate": "1768-10-06",
+    "deathDate": "1853-11-19",
+    "bio": "a Representative and a Senator from Vermont; born in Woodstock, Conn., October 6, 1768; graduated from Harvard College in 1790; moved in 1791 to Vermont with his father, who founded the town of Craftsbury; town clerk 1799-1829; delegate to the Vermont constitutional convention 1793; member, State house of representatives 1796, 1800-1803, 1805, and clerk of the house 1798-1799; register of probate 1796-1815; assistant judge of the Orleans County Court 1800-1810, 1825-1828; made an extensive botanical reconnaissance of the Mississippi Valley in 1802; member, State council 1809-1813; chief judge of the Orleans County Court 1810-1816; elected as a Democratic Republican to the Fifteenth and to the two succeeding Congresses; elected as an Adams-Clay Republican to the Eighteenth Congress (March 4, 1817-March 3, 1825); again served as State councilor in 1825 and 1826; Governor of Vermont 1828-1831; member of the Vermont constitutional convention of 1829 and served as president; clerk of Orleans County 1836-1839; appointed and subsequently elected to the United States Senate to fill the vacancy caused by the resignation of Samuel Prentiss and served from April 23, 1842, until March 3, 1843; retired to his farm in Craftsbury, Orleans County, Vt., where he died November 19, 1853; interment in North Craftsbury Cemetery, North Craftsbury, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VERMONT"
+        }
+    ]
+}

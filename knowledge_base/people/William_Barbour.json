@@ -1,0 +1,64 @@
+{
+    "name": "William Barbour",
+    "birthDate": "1888",
+    "deathDate": "1943",
+    "bio": "A Senator from New Jersey; born in Monmouth Beach, Monmouth County, N.J., July 31, 1888; attended the public schools and graduated from the Browning School, New York City, N.Y., in 1906; also attended Princeton University; amateur heavyweight boxing champion of the United States and Canada in 1910 and 1911; member of the New York National Guard for ten years, serving on the Mexican border in 1916, attained the rank of captain; member of the Rumson (N.J.) Borough Council in 1922; served as mayor of Rumson, N.J. 1923-1928; moved to Locust, Monmouth County, N.J., in 1930; engaged in the thread manufacturing business and other industrial enterprises; appointed on December 1, 1931, and subsequently elected on November 8, 1932, as a Republican to the United States Senate to fill the vacancy caused by the death of Dwight W. Morrow and served from December 1, 1931, to January 3, 1937; unsuccessful candidate for reelection in 1936; resumed his former pursuits; member of the New Jersey Unemployment Compensation Commission in 1937; again elected on November 8, 1938, to the United States Senate to fill the vacancy caused by the resignation of A. Harry Moore; reelected in 1940, and served from November 9, 1938, until his death in Washington, D.C., on November 22, 1943; interment in Cedar Lawn Cemetery, Paterson, N.J.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

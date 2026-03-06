@@ -1,0 +1,184 @@
+{
+    "name": "Justin Morrill",
+    "birthDate": "1810-04-14",
+    "deathDate": "1898-12-28",
+    "bio": "A Representative and a Senator from Vermont; born in Strafford, Orange County, Vt., April 14, 1810; attended the common schools and Thetford and Randolph Academies; a merchant's clerk in Strafford 1825-1828 and in Portland, Maine, 1828-1831; merchant in Strafford 1831-1848; engaged in agriculture and horticulture 1848-1855; elected as an Opposition candidate to the Thirty-fourth Congress and as a Republican to the five succeeding Congresses (March 4, 1855-March 3, 1867), when he became Senator; author of the Tariff Act of 1861 and of the land-grant bill, which bears his name; chairman, Committee on Ways and Means (Thirty-ninth Congress); elected as a Union Republican to the United States Senate in 1866; reelected as a Republican in 1872, 1878, 1884, 1890 and 1896 and served from March 4, 1867, until his death; chairman, Committee on Public Buildings and Grounds (Forty-first through Forty-fourth Congresses), Committee on Finance (Forty-fifth, Forty-seventh through Fifty-second, Fifty-fourth and Fifty-fifth Congresses); regent of the Smithsonian Institution 1883-1898; trustee of the University of Vermont 1865-1898; died in Washington, D.C., December 28, 1898; interment in the City Cemetery, Strafford, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        }
+    ]
+}

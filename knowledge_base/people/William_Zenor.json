@@ -1,0 +1,48 @@
+{
+    "name": "William Zenor",
+    "birthDate": "1846-04-30",
+    "deathDate": "1916-06-02",
+    "bio": "A Representative from Indiana; born near Corydon, Harrison County, Ind., April 30, 1846; attended the common schools and the seminary of James G. May; studied law in New Albany, Ind.; was admitted to the bar in 1870 and commenced practice in Corydon; moved to Leavenworth, Crawford County, Ind., in 1871 and continued the practice of law; prosecuting attorney of Crawford and Harrison Counties 1879-1885; judge of the third judicial circuit 1885-1897; elected as a Democrat to the Fifty-fifth and to the four succeeding Congresses (March 4, 1897-March 3, 1907); resumed the practice of law in Corydon, Ind.; moved to New Albany, Ind., in 1910 and continued the practice of law until his death there June 2, 1916; interment in Cedar Hill Cemetery, Corydon, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

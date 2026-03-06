@@ -1,0 +1,31 @@
+{
+    "name": "Nicole Malliotakis",
+    "birthDate": "1980-11-11",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Manhattan, New York County, N.Y., November 11, 1980; graduated from New Dorp High School, Staten Island, N.Y., 1998; B.A., Seton Hall University, South Orange, N.J., 2001; M.B.A., Wagner University, Staten Island, N.Y., 2010; staff, New York Governor George Pataki, 2004-2006; public relations professional; member of the New York state assembly, 2011-2020; presidential campaign aide, United States Senator Marco Rubio of Florida, 2015-2016; unsuccessful candidate for election as Mayor of New York, N.Y., in 2017; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

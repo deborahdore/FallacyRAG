@@ -1,0 +1,32 @@
+{
+    "name": "Charles Moses",
+    "birthDate": "1856-05-02",
+    "deathDate": "1910-10-10",
+    "bio": "A Representative from Georgia; born near Turin, Coweta County, Ga., May 2, 1856; attended the country schools and was graduated from Mercer University, Macon, Ga., in 1876; engaged in teaching and agricultural pursuits; for several years principal of the Newnan Academy for Boys; after 1886 devoted his time exclusively to agricultural interests; member of the Farmers' Alliance; elected as a Democrat to the Fifty-second, Fifty-third, and Fifty-fourth Congresses (March 4, 1891-March 3, 1897); chairman, Committee on Pensions (Fifty-third Congress); unsuccessful candidate for renomination in 1896; resumed agricultural pursuits in Turin, Ga.; delegate to several Democratic State and National conventions; returned to his farm near Turin, Ga., and resumed agricultural pursuits; member of the State house of representatives 1900-1904; retired and moved to Atlanta, Ga., where he died October 10, 1910; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

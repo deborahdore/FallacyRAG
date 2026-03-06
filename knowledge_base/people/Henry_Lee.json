@@ -1,0 +1,23 @@
+{
+    "name": "Henry Lee",
+    "birthDate": "1756-01-29",
+    "deathDate": "1818-05-30",
+    "bio": "a Delegate and a Representative from Virginia; born at \"Leesylvania,\" in Prince William County, Va., January 29, 1756; pursued classical studies and graduated from Princeton College in 1773; served in the Revolutionary War; commissioned captain of a company of Virginia Dragoons June 18, 1776, that became attached to and part of the First Continental Dragoons, March 31, 1777; lieutenant colonel, November 6, 1780, and served until the close of the war; commissioned major general, United States Army, July 19, 1798; honorably discharged June 15, 1800; became universally known as \"Light Horse Harry\"; Delegate to the Confederation Congress, 1786-1788; advocated the adoption of the U.S. Constitution in the Virginia convention of 1788; Governor of Virginia, 1791-1794; commanded the United States forces in the Whiskey Rebellion in 1794; elected as a Federalist to the Sixth Congress (March 4, 1799-March 3, 1801); at the request of Congress pronounced the eulogy upon President Washington before both branches of Congress; died on Cumberland Island, Ga., March 25, 1818; interment at Dungeness, Ga.; reinterment in the crypt, Lee Memorial Chapel, Washington-Lee University, at Lexington, Va., May 30, 1913.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

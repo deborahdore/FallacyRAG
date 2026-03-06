@@ -1,0 +1,48 @@
+{
+    "name": "A. Chandler",
+    "birthDate": "1959-09-12",
+    "deathDate": null,
+    "bio": "a Representative from Kentucky; born in Versailles, Woodford County, Ky., September 12, 1959; graduated from Woodford County High School, Versailles, Ky., 1977; B.A., University of Kentucky, Lexington, Ky.; J.D., University of Kentucky, Lexington, Ky.; lawyer, private practice; elected Kentucky state auditor, 1991-1995; elected attorney general for the State of Kentucky, 1995-2003; unsuccessful candidate for Governor of Kentucky in 2003; elected as a Democrat to the One Hundred Eighth Congress in a special election to fill the vacancy caused by the resignation of United States Representative Ernie Fletcher and reelected to five succeeding Congresses (February 17, 2004-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

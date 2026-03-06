@@ -1,0 +1,16 @@
+{
+    "name": "James Owen",
+    "birthDate": "1784-12-07",
+    "deathDate": "1865-09-04",
+    "bio": "a Representative from North Carolina; born near Wilmington, Bladen County, N.C., on December 7, 1784; educated at Bingham's Academy, Pittsboro, N.C.; engaged in agricultural pursuits; member of the North Carolina state house of commons 1808-1811; served as president of the Wilmington &amp; Raleigh Railroad Co.; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); died in Wilmington, N.C., September 4, 1865; interment in Oakdale Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

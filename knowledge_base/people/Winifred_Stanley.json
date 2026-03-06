@@ -1,0 +1,16 @@
+{
+    "name": "Winifred Stanley",
+    "birthDate": "1909",
+    "deathDate": "1996",
+    "bio": "A Representative from New York; born in New York, N.Y., August 14, 1909; attended public schools in New York, N.Y. and Buffalo, N.Y.; B.A., University of Buffalo, Buffalo, N.Y., 1930; LL.B.,University of Buffalo, Buffalo, N.Y., 1933; J.D., University of Buffalo, Buffalo, N.Y., 1933; lawyer, private practice; assistant district attorney of Erie County, N.Y., 1938-1942; elected as a Republican to the Seventy-eighth Congress (January 3, 1943-January 3, 1945); was not a candidate for renomination to the Seventy-ninth Congress in 1944; appointed counsel to the New York State Employees' Retirement System, 1945-1955; assistant attorney general, New York State Law Department, Albany, N.Y., 1955-1979; died on February 29, 1996, in Kenmore, N.Y.; interment in Mount Olivet Cemetery, Tonawanda, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

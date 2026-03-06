@@ -1,0 +1,31 @@
+{
+    "name": "Melanie Stansbury",
+    "birthDate": "1979-01-31",
+    "deathDate": null,
+    "bio": "a Representative from New Mexico; born in Farmington, San Juan County, N. Mex., January 31, 1979; graduated from Cibola High School, Albuquerque, N. Mex., 1997; B.A., Saint Mary's College of California, Moraga, Calif., 2002; M.S., Cornell University, Ithaca, N.Y., 2007; consultant; staff, New Mexico Museum of Natural History and Science, Santa Fe, N. Mex., 2002-2004; staff, Office of Management and Budget, 2011-2015; staff, Senate Committee on Energy and Natural Resources, 2015-2017; member of the New Mexico state house of representatives, 2019-2021; elected as a Democrat to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Debra Haaland of New Mexico, and reelected to the two succeeding Congresses (June 1, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        }
+    ]
+}

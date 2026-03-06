@@ -1,0 +1,136 @@
+{
+    "name": "Roy Blunt",
+    "birthDate": "1950-01-10",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Missouri; born in Niangua, Webster County, Mo., January 10, 1950; graduated Southwest Baptist University, Bolivar, Mo., B.A., 1970; graduated Missouri State University, Springfield, Mo., M.A., 1972; high school history teacher; clerk and chief election officer, Greene County, Mo. 1973-1984; Missouri state secretary of state 1984-1993; president, Southwest Baptist University, Bolivar, Mo. 1993-1996; elected as a Republican to the One Hundred Fifth and to the six succeeding Congresses (January 3, 1997-January 3, 2011); majority whip (One Hundred Eighth and One Hundred Ninth Congresses); majority leader (One Hundred Ninth Congress); minority whip (One Hundred Tenth Congress); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2010; reelected in 2016, and served from January 3, 2011, to January 3, 2023; vice-chair, Republican Conference (2012-2018); chair, Republican Policy Committee (2019-2023); chair, Committee on Rules and Administration (One Hundred Fourteenth Congress, One Hundred Fifteenth Congress [January 3, 2017-January 20, 2017; April 10, 2018-January 3, 2019], and One Hundred Sixteenth Congress); was not a candidate for reelection to the Senate in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Republican Whip",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03"
+        },
+        {
+            "role": "Republican Whip",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03"
+        },
+        {
+            "role": "Republican Whip",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03"
+        }
+    ]
+}

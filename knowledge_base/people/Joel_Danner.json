@@ -1,0 +1,16 @@
+{
+    "name": "Joel Danner",
+    "birthDate": "1804",
+    "deathDate": "1885-07-29",
+    "bio": "A Representative from Pennsylvania; born in Liberty, Md., in 1804; engaged in the hardware business and carriage building at Gettysburg, Pa.; justice of the peace; elected as a Democrat to the Thirty-first Congress to fill the vacancy caused by the death of Henry Nes and served from December 2, 1850, to March 3, 1851; resumed his former business pursuits in Gettysburg, Pa., where he died July 29, 1885; interment in Evergreen Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Josiah Hasbrouck",
+    "birthDate": "1755-03-05",
+    "deathDate": "1821-03-19",
+    "bio": "A Representative from New York; born in New Paltz, Ulster County, N.Y., March 5, 1755; completed preparatory studies; conducted a general merchandising business; served in the Revolutionary Way, second lieutenant in the Third Regiment of Ulster County Militia in 1780; supervisor of New Paltz, 1784-1786, 1793, 1794, and 1799-1805; member of the New York state assembly, 1796, 1797, 1802, and 1806; elected as a Democratic Republican to the Eighth Congress to fill the vacancy caused by the resignation of John Cantine&nbsp; (April 28, 1803-March 3, 1805); engaged in agricultural pursuits; elected to the Fifteenth Congress (March 4, 1817-March 3, 1819); chair, Committee on Expenditures in the Department of State (Fifteenth Congress); died on March 19, 1821, near Plattekill, Ulster County, N.Y.; interment in the family burial ground; reinterment in New Paltz Rural Cemetery, New Paltz, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

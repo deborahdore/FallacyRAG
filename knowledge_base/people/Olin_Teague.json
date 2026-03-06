@@ -1,0 +1,144 @@
+{
+    "name": "Olin Teague",
+    "birthDate": "1910-04-06",
+    "deathDate": "1981-01-23",
+    "bio": "a Representative from Texas; born in Woodward, Woodward County, Okla., April 6, 1910; attended elementary and high school in Mena, Ark.; B.A., Texas Agricultural and Mechanical College at College Station, 1932; employed in the post office at College Station, Tex., 1932-1940; member of the Arkansas National Guard, 1927-1930; Officers' Reserve Corps, 1936-1940; commissioned as a first lieutenant, United States Army (October 5, 1940-November 4, 1946); commanded the First Battalion, Three Hundred and Fourteenth Infantry, Seventy-ninth Division; participated in the Normandy invasion, awarded the Purple Heart, Silver Star, Silver Star First Oak Leaf Cluster, Purple Heart First Oak Leaf Cluster, Purple Heart Second Oak Leaf Cluster, Silver Star Second Oak Leaf Cluster, Bronze Star Medal, Commendation Ribbon with Medal Pendant, Bronze Star Medal Oak Leaf Cluster, and the Combat Infantryman Badge; also awarded the European-African-Middle Eastern Campaign Medal with three bronze service stars, American Defense Service Medal, Distinguished Unit Emblem, American Campaign Medal, Armed Forces Reserve Medal, Croix de Guerre with Palm and French Fourragere; was discharged as a colonel at Walter Reed General Hospital November 4, 1946; elected as a Democrat to the Seventy-ninth Congress, by special election, August 24, 1946, to fill the vacancy caused by the resignation of Luther A. Johnson; reelected to the sixteen succeeding Congresses until his resignation December 31, 1978 (August 24, 1946-December 31, 1978); chairman, Select Committee on Education, Training, and Loan Programs of World War II Veterans (Eighty-first and Eighty-second Congresses), Committee on Veterans' Affairs (Eighty-fourth through Ninety-second Congresses), Committee on Science and Astronautics (Ninety-third Congress), Committee on Science and Technology (Ninety-fourth and Ninety-fifth Congresses); was not a candidate for reelection in 1978 to the Ninety-sixth Congress; resided in Washington, D.C., until his death in Bethesda, Md., January 23, 1981; interment at Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

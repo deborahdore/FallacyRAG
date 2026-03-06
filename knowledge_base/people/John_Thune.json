@@ -1,0 +1,119 @@
+{
+    "name": "John Thune",
+    "birthDate": "1961",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from South Dakota; born in Pierre, Hughes County, S. Dak., January 7, 1961; graduated from Jones County High School, S. Dak., 1979; B.S., Biola University, La Mirada, Calif., 1983; M.B.A., University of South Dakota, Vermillion, S. Dak., 1984; executive director, South Dakota state municipal league; board of directors, National League of Cities; staff, United States Senator James Abdnor of South Dakota 1985-1986; South Dakota state Republican party executive director 1989-1991; director, South Dakota state railroad division 1991-1993; director, South Dakota state municipal league 1993-1996; elected as a Republican to the One Hundred Fifth and to the two succeeding Congresses (January 3, 1997-January 3, 2003); was not a candidate for reelection to the One Hundred Eighth Congress in 2002, but was an unsuccessful candidate for the United States Senate; elected as a Republican to the U.S. Senate in 2004; reelected in 2010, 2016, and again in 2022 for the term ending January 3, 2029; vice-chair, Republican Conference (2009); chair, Republican Policy Committee (2009-2012); chair, Republican Conference (2012-2018); Republican party whip (2019-2025); majority leader (2025-); chair, Committee on Commerce, Science, and Transportation (One Hundred Fourteenth and One Hundred Fifteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        }
+    ]
+}

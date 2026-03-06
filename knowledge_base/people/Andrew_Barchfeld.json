@@ -1,0 +1,56 @@
+{
+    "name": "Andrew Barchfeld",
+    "birthDate": "1863-05-18",
+    "deathDate": "1922-01-28",
+    "bio": "A Representative from Pennsylvania; born in Pittsburgh, Pa., May 18, 1863; attended Pittsburgh Central High School, Pittsburgh, Pa; graduated from Jefferson Medical College, Philadelphia, Pa., 1884; physician; hospital executive; member of the common council of Pittsburgh, Pa., 1886-1887; member, Republican State committee; unsuccessful candidate for election to the Fifty-eighth Congress in 1902; elected as a Republican to the Fifty-ninth and to the five succeeding Congresses (March 4, 1905-March 3, 1917); unsuccessful candidate for reelection to the Sixty-fifth Congress in 1916; delegate to the peace congress at Brussels in 1905; member of the commission to the Philippine Islands, 1910; member of the Panama Canal Commission, 1912; died on January 28, 1922, in the Knickerbocker Theater disaster in Washington, D.C.; interment in South Side Cemetery, Pittsburgh, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Edward Curley",
+    "birthDate": "1873-05-23",
+    "deathDate": "1940-01-06",
+    "bio": "A Representative from New York; born in Easton, Northampton County, Pa., May 23, 1873; moved to New York City with his parents in 1874; attended the public schools and the College of the City of New York; engaged in the building industry 1892-1900, and in the builders' and contractors' machinery and equipment business 1900-1916; member of the New York City board of aldermen from January 1, 1916, until November 5, 1935, when he resigned, having been elected to Congress; elected as a Democrat to the Seventy-fourth Congress to fill the vacancy caused by the death of Anthony J. Griffin; reelected to the Seventy-fifth and Seventy-sixth Congresses and served from November 5, 1935, until his death in New York City on January 6, 1940; interment in Kensico Cemetery, Valhalla, Westchester County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

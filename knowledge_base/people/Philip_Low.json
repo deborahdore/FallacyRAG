@@ -1,0 +1,24 @@
+{
+    "name": "Philip Low",
+    "birthDate": "1836-05-06",
+    "deathDate": "1912-08-23",
+    "bio": "A Representative from New York; born in Chelsea, Suffolk County, Mass., May 6, 1836; attended the public schools and was graduated from high school; during the Civil War volunteered and was appointed acting ensign in the United States Navy and served in the North Atlantic Squadron during 1862 and 1863; resigned and engaged in commercial pursuits in Boston, Mass., until 1865, when he moved to New York City; identified with the shipping and maritime interests; elected as a Republican to the Fifty-fourth and Fify-fifth Congresses (March 4, 1895-March 3, 1899); unsuccessful candidate for reelection in 1898 to the Fifty-sixth Congress; continued his activities in maritime pursuits in New York City until his death there on August 23, 1912; interment in Woodlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

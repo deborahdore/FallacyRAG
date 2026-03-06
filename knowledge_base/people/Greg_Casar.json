@@ -1,0 +1,23 @@
+{
+    "name": "Greg Casar",
+    "birthDate": "1989-05-04",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Houston, Harris County, Tex., May 4, 1989; graduated from Strake Jesuit College Preparatory, Houston, Tex., 2007; B.A., University of Virginia, Charlottesville, Va., 2011; nonprofit policy director; member of the Austin, Tex., city council, 2015-2022; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

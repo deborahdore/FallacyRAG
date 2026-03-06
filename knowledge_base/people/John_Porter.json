@@ -1,0 +1,96 @@
+{
+    "name": "John Porter",
+    "birthDate": "1935-06-01",
+    "deathDate": "2022-06-03",
+    "bio": "A Representative from Illinois; born in Evanston, Cook County, Ill., June 1, 1935; attended the public schools and graduated from Evanston Township High School, 1953; attended Massachusetts Institute of Technology, Cambridge, Mass., 1953-1954; B.S. and B.A., Northwestern University, Evanston, Ill., 1957; J.D., University of Michigan Law School, Ann Arbor, Mich., 1961; served in United States Army Reserves, 1958-1964; was admitted to the Illinois bar in 1961; honor law graduate attorney, United States Department of Justice, Washington, D.C., 1961-1963; private practice, Evanston, Ill., 1963-1979; delegate to the Republican National Convention, 1996; member, Illinois general assembly, 1973-1979; unsuccessful candidate for election to the Ninety-sixth Congress in 1978; elected as a Republican to the Ninety-sixth Congress by special election, to fill the vacancy caused by the resignation of United States Representative Abner J. Mikva, and reelected to the ten succeeding Congresses (January 22, 1980-January 3, 2001); was not a candidate for reelection to the One Hundred Seventh Congress in 2000; died on June 3, 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

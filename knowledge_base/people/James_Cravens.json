@@ -1,0 +1,24 @@
+{
+    "name": "James Cravens",
+    "birthDate": "1818-11-04",
+    "deathDate": "1893-06-20",
+    "bio": "A Representative from Indiana; born in Rockingham County, Va., November 4, 1818; moved with his father to Indiana in 1820 and settled near Hardinsburg, Madison Township, Washington County; attended the public schools; engaged in agricultural pursuits and stock raising; served in the war with Mexico as major of the Second Indiana Volunteers in 1846 and 1847; member of the State house of representatives in 1848 and 1849; served in the State senate 1850-1853; commissioned brigadier general of militia in 1854; elected as a Democrat to the Thirty-seventh and Thirty-eighth Congresses (March 4, 1861-March 3, 1865); was not a candidate for renomination in 1864; delegate to the Union National Convention of Conservatives at Philadelphia in 1866 and to the Democratic National Convention in 1868; resumed agricultural pursuits; died in Hardinsburg, Washington County, Ind., June 20, 1893; interment in the Hardin Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

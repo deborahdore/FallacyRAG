@@ -1,0 +1,15 @@
+{
+    "name": "Jeff Hurd",
+    "birthDate": "1979-08-15",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Grand Junction, Mesa County, Colo., August 15, 1979; graduated from Grand Junction High School, Grand Junction, Colo., 1997; B.A., University of Notre Dame, Notre Dame, Ind., 2001; J.D., University of Denver, Denver Colo., 2008; L.L.M., Columbia University, New York, N.Y., 2010; lawyer; law clerk, United States Court of Appeals, Tenth Circuit; chair, Board of Directors of the Grand Junction Area Chamber of Commerce, Grand Junction, Colo.; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

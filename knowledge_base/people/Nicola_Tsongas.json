@@ -1,0 +1,56 @@
+{
+    "name": "Nicola Tsongas",
+    "birthDate": "1946-04-26",
+    "deathDate": null,
+    "bio": "(Wife of Paul Tsongas), a Representative from Massachusetts; born in Chico, Butte County, Calif., April 26, 1946; graduated from Narimasu American High School, Tokyo, Japan, 1964; attended Michigan State University, East Lansing, Mich.; B.A., Smith College, Northampton, Mass. 1968; J.D., Boston University, Boston, Mass., 1988; social worker; lawyer, private practice; dean of external affairs, Middlesex Community College, Lowell, Mass., 1997-2007; elected as a Democrat to the One Hundred Tenth Congress, by special election, to fill the vacancy caused by the resignation of Representative Martin Meehan, and reelected to the five succeeding Congresses (October 16, 2007-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

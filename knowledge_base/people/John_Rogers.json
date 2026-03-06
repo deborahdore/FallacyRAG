@@ -1,0 +1,64 @@
+{
+    "name": "John Rogers",
+    "birthDate": "1881-08-18",
+    "deathDate": "1925-03-28",
+    "bio": "A Representative from Massachusetts; born in Lowell, Middlesex County, Mass., August 18, 1881; attended the public schools, and was graduated from Harvard University in 1904 and from the law department of that university in 1907; was admitted to the bar the same year and commenced practice in Lowell in 1908; member of the Lowell city government in 1911; school commissioner in 1912; elected as a Republican to the Sixty-third and to the six succeeding Congresses and served from March 4, 1913, until his death; during the First World War enlisted on September 12, 1918, as a private with the Twenty-ninth Training Battery, Tenth Training Battalion, Field Artillery, Fourth Central Officers' Training School, and served until honorably discharged on November 29, 1918; died in Washington, D.C., March 28, 1925; interment in Lowell Cemetery, Lowell, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

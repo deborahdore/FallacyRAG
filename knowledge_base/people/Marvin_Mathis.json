@@ -1,0 +1,48 @@
+{
+    "name": "Marvin Mathis",
+    "birthDate": "1940",
+    "deathDate": "2017",
+    "bio": "A Representative from Georgia; born in Nashville, Berrien County, Ga., November 30, 1940; attended the Nashville public schools; attended South Georgia College in Douglas, Ga.; news director, WALB-TV, Albany, Ga., 1964-1970; elected as a Democrat to the Ninety-second and to the four succeeding Congresses (January 3, 1971-January 3, 1981); unsuccessful candidate for nomination to the United States Senate in 1980; private advocate; died on April 17, 2017, in Tifton, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

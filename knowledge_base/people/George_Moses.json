@@ -1,0 +1,72 @@
+{
+    "name": "George Moses",
+    "birthDate": "1869",
+    "deathDate": "1944",
+    "bio": "A Senator from New Hampshire; born in Lubec, Washington County, Maine, February 9, 1869; attended the public schools of Eastport, Maine, and Franklin, N.H.; graduated from Phillips Exeter Academy, Exeter, N.H., in 1887 and from Dartmouth College, Hanover, N.H., in 1890; private secretary to the Governor 1889-1891; reporter, news editor, and chief editor on the Concord Evening Monitor 1892-1918; member and secretary of the New Hampshire Forestry Commission 1893-1907; United States Minister to Greece and Montenegro 1909-1912; elected as a Republican to the United States Senate on November 5, 1918, to fill the vacancy caused by the death of Jacob H. Gallinger; reelected in 1920, and again in 1926, and served from November 6, 1918, to March 3, 1933; served as President pro tempore of the Senate during the Sixty-ninth through the Seventy-second Congresses; chairman, Committee on Printing (Sixty-sixth through Sixty-eighth Congresses), Committee on Post Office and Post Roads (Sixty-ninth and Seventieth Congresses), Committee on Rules (Seventy-first and Seventy-second Congresses); unsuccessful candidate for reelection in 1932 and for the Republican nomination for United States Senator in 1936; engaged in literary work in Concord, N.H., and Washington, D.C.; died in Concord, N.H., December 20, 1944; interment in Franklin Cemetery, Franklin, N.H.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

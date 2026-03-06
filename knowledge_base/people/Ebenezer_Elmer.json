@@ -1,0 +1,32 @@
+{
+    "name": "Ebenezer Elmer",
+    "birthDate": "1752-08-23",
+    "deathDate": "1843-10-18",
+    "bio": "a Representative from New Jersey; born in Cedarville, Cumberland County, N.J., August 23, 1752; pursued an academic course; studied medicine and practiced in Cedarville; served in the Revolutionary War as ensign, lieutenant, surgeon's mate, and regimental surgeon; practiced medicine in Bridgeton, N.J., 1783-1789; member of the New Jersey state general assembly 1789-1795, serving as speaker in 1791 and 1795; elected as a Democratic Republican to the Seventh, Eighth, and Ninth Congresses (March 4, 1801-March 3, 1807); was not a candidate for renomination in 1806; member of the New Jersey state council in 1807, and was chosen vice president of that body; collector of customs of Bridgeton from 1808 until 1817, when he resigned; reappointed in 1822 and served until 1832, when he again resigned; served in the War of 1812; adjutant general of the New Jersey Militia and brigadier general of the Cumberland brigade; vice president of Burlington College 1808-1817 and 1822-1832; retired from public life; died in Bridgeton, N.J., on October 18, 1843; interment in the Presbyterian Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Peter Van Gaasbeck",
+    "birthDate": "1754-09-27",
+    "deathDate": "1797",
+    "bio": "A Representative from New York; born in Ulster County, N.Y., September 27, 1754; attended the grammar schools; became a man of prominence in the county and state; engaged in mercantile pursuits in Kingston, N.Y.; served in the Revolutionary War, captain and major in the Ulster County, N.Y., Militia; elected as a Pro-Administration candidate to the Third Congress (March 4, 1793-March 3, 1795); died in 1797, Kingston, N.Y.; interment in First Reformed Dutch Churchyard, Kingston, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW YORK"
+        }
+    ]
+}

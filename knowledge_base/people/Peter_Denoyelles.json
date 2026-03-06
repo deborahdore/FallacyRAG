@@ -1,0 +1,16 @@
+{
+    "name": "Peter Denoyelles",
+    "birthDate": "1766",
+    "deathDate": "1829-05-06",
+    "bio": "A Representative from New York; born in Haverstraw, Rockland County, N.Y., in 1766; completed preparatory studies; engaged in the manufacture of brick; member of the State assembly in 1802 and 1803; held several local offices; elected as a Democratic Republican to the Thirteenth Congress (March 4, 1813-March 3, 1815); resumed his former manufacturing pursuits; died in Haverstraw, Rockland County, N.Y., May 6, 1829; interment in Mount Repose Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

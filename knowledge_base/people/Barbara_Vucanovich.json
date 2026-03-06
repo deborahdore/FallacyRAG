@@ -1,0 +1,64 @@
+{
+    "name": "Barbara Vucanovich",
+    "birthDate": "1921-06-22",
+    "deathDate": "2013-06-10",
+    "bio": "a Representative from Nevada; born Barbara Farrell in Camp Dix, New Jersey, June 22, 1921; attended Miss Quinn's School, Albany, N.Y.; graduated from Albany Academy for Girls, Albany, N.Y., 1938; attended, Manhattan College of Sacred Heart, New York, N.Y., 1938-1939; businesswoman; staff, United States Senator Paul Laxalt of Nevada, 1974-1982; delegate, Republican National Convention, 1976 and 1980; elected as a Republican to the Ninety-eighth and to the six succeeding Congresses (January 3, 1983-January 3, 1997); not a candidate for reelection to the One Hundred Fifth Congress in 1996; member of the White House Commission to Select White House Fellows, 2002; died on June 10, 2013, in Reno, Nev.; interment at Masonic Memorial Gardens, Reno, Nev.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Frederick Magrady",
+    "birthDate": "1863-11-24",
+    "deathDate": "1954-08-27",
+    "bio": "A Representative from Pennsylvania; born near Pottsville, Schuylkill County, Pa., November 24, 1863; attended the public schools in Mount Carmel Township and was graduated from the State Normal School (now Bloomsburg State Teachers' College) at Bloomsburg, Pa., in 1890; taught school thirteen years in Mount Carmel Borough; engaged in the coal business for a short time at Gauley, W.Va.; was graduated from Dickinson School of Law, Carlisle, Pa., in 1909; was admitted to the bar the same year and commenced practice in Mount Carmel, Pa.; director and solicitor of the First National Bank of Mount Carmel; president and solicitor of the Shamokin-Mount Carmel Transit Co., and of the Ashland &amp; Shamokin Auto Bus Co., Inc.; director of the Mount Carmel Water Co.; elected as a Republican to the Sixty-ninth and to the three succeeding Congresses (March 4, 1925-March 3, 1933); unsuccessful candidate for renomination in 1932; resumed the practice of law; died in Danville, Pa., August 27, 1954; interment in Mount Carmel Cemetery, Mount Carmel, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

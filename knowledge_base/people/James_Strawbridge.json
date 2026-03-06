@@ -1,0 +1,16 @@
+{
+    "name": "James Strawbridge",
+    "birthDate": "1824",
+    "deathDate": "1890",
+    "bio": "A Representative from Pennsylvania; born in Liberty Township, Montour County, Pa., April 7, 1824; attended the common schools; was graduated from Princeton College in 1844 and from the medical department of the University of Pennsylvania at Philadelphia in 1847; engaged in the practice of medicine at Danville, Pa.; during the Civil War entered the Army as a brigade surgeon of Volunteers and served throughout the war; resumed the practice of medicine at Danville; elected as a Republican to the Forty-third Congress (March 4, 1873-March 3, 1875); again engaged in the practice of his profession; died in Danville, Pa., July 19, 1890; interment in Fairview Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

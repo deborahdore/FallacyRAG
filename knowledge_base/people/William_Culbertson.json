@@ -1,0 +1,16 @@
+{
+    "name": "William Culbertson",
+    "birthDate": "1825-11-25",
+    "deathDate": "1906-05-24",
+    "bio": "A Representative from Pennsylvania; born in Edinboro, Erie County, Pa., November 25, 1825; attended the common schools of his native town; engaged in lumbering on the Allegheny River in Jefferson County, Pa.; also operated a mill and a factory at Covington, Ky.; moved to Girard, Pa., in 1863; purchased extensive tracts of timberland in Michigan, Wisconsin, and other States; later became interested in agricultural pursuits in Minnesota and in his native county; president of the Citizens' National Bank of Corry, Pa.; elected as a Republican to the Fifty-first Congress (March 4, 1889-March 3, 1891); unsuccessful candidate for renomination in 1890; resumed his former business activities; died in Girard, Erie County, Pa., on May 24, 1906; interment in Girard Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

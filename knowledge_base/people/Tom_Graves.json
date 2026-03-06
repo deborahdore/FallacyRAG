@@ -1,0 +1,56 @@
+{
+    "name": "Tom Graves",
+    "birthDate": "1970-02-03",
+    "deathDate": null,
+    "bio": "A Representative from Georgia; born in St. Petersburg, Pinellas County, Fla., February 3, 1970; graduated from Cass High School, Cartersville, Ga., 1988; B.B.A., University of Georgia, Athens, Ga., 1993; business owner; member of the Georgia state house of representatives, 2003-2010; elected as a Republican to the One Hundred Eleventh Congress, by special election, to fill the vacancy caused by the resignation of United States Representative John Nathan Deal, and to the five succeeding Congresses until his resignation on October 4, 2020 (June 8, 2010-October 4, 2020).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

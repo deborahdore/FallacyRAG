@@ -1,0 +1,32 @@
+{
+    "name": "George Owen",
+    "birthDate": "1796-10-20",
+    "deathDate": "1837-08-18",
+    "bio": "A Representative from Alabama; born in Brunswick County, Va., on October 20, 1796; moved with his parents to Tennessee; attended the common schools and was graduated from the University of Nashville Tennessee; studied law; was admitted to the bar in 1816 and commenced practice in Claiborne, Ala.; unsuccessful candidate for election in 1821 to the Seventeenth Congress; member of the State house of representatives 1819-1821 and served as speaker in 1821; elected as a Jackson Republican to the Eighteenth Congress, and reelected as a Jacksonian candidate to the Nineteenth, and Twentieth Congresses (March 4, 1823-March 3, 1829); appointed collector of the port of Mobile by President Jackson and served from April 20, 1828, to July 20, 1836; elected mayor of Mobile in 1836 and held the position until his death, which occurred on his plantation near Mobile, Ala., August 18, 1837; interment in the Old Church Street Cemetery, Mobile, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "ALABAMA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Bob Beauprez",
+    "birthDate": "1948",
+    "deathDate": null,
+    "bio": "A Representative from Colorado; born in Lafayette, Boulder County, Colo., September 22, 1948; B.S., University of Colorado, 1970; farmer; business owner; chair, Republican State Central Committee of Colorado, 1999-2002; elected as a Republican to the One Hundred Eighth and to the succeeding Congress (January 3, 2003-January 3, 2007); was not a candidate for reelection to the One Hundred Tenth Congress in 2006, but was an unsuccessful candidate for Governor of Colorado; unsuccessful candidate for Governor of Colorado in 2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

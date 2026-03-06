@@ -1,0 +1,32 @@
+{
+    "name": "John Ross",
+    "birthDate": "1770-02-24",
+    "deathDate": "1834-01-31",
+    "bio": "A Representative from Pennsylvania; born in Solebury, Bucks County, Pa., February 24, 1770; studied law in West Chester, Pa.; was admitted to the bar in 1792 and engaged in practice in Easton, Pa.; member of the State house of representatives in 1800; clerk of the orphans' court and recorder 1800-1803; county register 1800-1809; burgess of Easton in 1804; elected as a Democratic Republican to the Eleventh Congress (March 4, 1809-March 3, 1811); elected to the Fourteenth and Fifteenth Congresses and served from March 4, 1815, to February 24, 1818, when he resigned to become president judge of the seventh judicial district of the State; was transferred to the State supreme bench in 1830 and served until his death in Easton, Northampton County, Pa., January 31, 1834; interment in a private cemetery on the family estate, \"Ross Common,\" Ross Township, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

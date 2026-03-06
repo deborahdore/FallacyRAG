@@ -1,0 +1,48 @@
+{
+    "name": "Lyle Boren",
+    "birthDate": "1909-05-11",
+    "deathDate": "1992-07-02",
+    "bio": "a Representative from Oklahoma; born near Waxahachie, Ellis County, Tex., May 11, 1909; moved to Lawton, Okla., in 1917; attended the public schools; graduated from the East Central College, Ada, Okla., in 1930, and from Oklahoma Agricultural and Mechanical College, Stillwater, Okla.; teacher in the schools at Wolf, Okla., 1930-1935; served as a deputy procurement officer of the United States Treasury Department; engaged in agricultural pursuits and also interested in the mercantile business; author; lieutenant commander in the United States Naval Reserve; elected as a Democrat to the Seventy-fifth and to the four succeeding Congresses (January 3, 1937-January 3, 1947); unsuccessful candidate for renomination in 1946; resumed former mercantile business and agricultural pursuits; president of a petroleum corporation; representative of the Association of Western Railroads, 1954-1970; assistant to the Oklahoma state insurance commissioner; died on July 2, 1992, in Oklahoma City, Okla.; interment at Maple Grove Cemetery, Seminole, Okla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

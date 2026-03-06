@@ -1,0 +1,39 @@
+{
+    "name": "Kim Schrier",
+    "birthDate": "1968-08-23",
+    "deathDate": null,
+    "bio": "a Representative from Washington; born in Los Angeles, Los Angeles County, Calif., August 23, 1968; graduated from Palisades High School, Pacific Palisades, Calif., 1986; B.A., University of California, Berkeley, Calif., 1991; M.D., University of California, Davis, Calif., 1997; pediatric residency, Lucile Packard Children's Hospital at Stanford University, Palo Alto, Calif., 2000; pediatrician; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

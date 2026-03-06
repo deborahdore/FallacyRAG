@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Lee",
+    "birthDate": "1780-11-28",
+    "deathDate": "1855-11-02",
+    "bio": "a Representative from New Jersey; born in Philadelphia, Pa., November 28, 1780; resided in Chester Valley, Pa., during his earlier years and attended the common schools; moved to Leesburg, Cumberland County, N.J., about 1798 and to Port Elizabeth in 1805; became a merchant, shipbuilder, and landowner; judge of the court of common pleas 1813-1815; member of the State general assembly in 1814 and 1815; postmaster of Port Elizabeth 1818-1833 and 1846-1849; elected as a Jacksonian candidate to the Twenty-third and Twenty-fourth Congresses (March 4, 1833-March 3, 1837); chairman, Committee on Accounts (Twenty-fourth Congress); founder of Port Elizabeth Library and Academy; died in Port Elizabeth, N.J., on November 2, 1855; interment in the Methodist Episcopal Churchyard.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

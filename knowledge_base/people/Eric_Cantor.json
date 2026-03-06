@@ -1,0 +1,82 @@
+{
+    "name": "Eric Cantor",
+    "birthDate": "1963-06-06",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Richmond, Henrico County, Va., June 6, 1963; B.A., George Washington University, Washington, D.C., 1985; J.D., College of William and Mary, Williamsburg, Va., 1988; M.S., Columbia University, New York, N.Y., 1989; lawyer; small businessman; member of the Virginia state house of delegates, 1992-2001; elected as a Republican to the One Hundred Seventh and to the six succeeding Congresses until his resignation on August 18, 2014 (January 3, 2001-August 18, 2014); unsuccessful candidate for renomination to the One Hundred Fourteenth Congress in 2014; minority whip (One Hundred Eleventh Congress); majority leader (One Hundred Twelfth and One Hundred Thirteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Republican Whip",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03"
+        },
+        {
+            "role": "Majority Leader",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03"
+        }
+    ]
+}

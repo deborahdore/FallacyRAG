@@ -1,0 +1,31 @@
+{
+    "name": "Nikema Williams",
+    "birthDate": "1978-07-30",
+    "deathDate": null,
+    "bio": "a Representative from Georgia; born in Columbus, Muscogee County, Ga., July 30, 1978; graduated from Talladega High School, Talladega, Ala., 1996; B.A., Talladega College, Talladega, Ala., 2000; nonprofit executive; professional advocate; vice-chair, Democratic Party of Georgia, 2011-2013; acting chair, Democratic Party of Georgia, 2013; Delegate, Democratic National Convention, 2008, 2012, 2016, and 2020; member of the Georgia state senate, 2017-2021; chair, Democratic Party of Georgia, 2019-2025; elected as a Democrat to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

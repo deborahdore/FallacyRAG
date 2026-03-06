@@ -1,0 +1,64 @@
+{
+    "name": "Brian Bilbray",
+    "birthDate": "1951-01-28",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Coronado, Calif., January 28, 1951; graduated from Mar Vista High School, Imperial Beach, Calif.; attended South Western College; tax consultant; city council; Imperial Beach, Calif., 1976-1978; mayor, Imperial Beach, Calif., 1978-1985; San Diego County Board of Supervisors, 1985-1995; elected as a Republican to the One Hundred Fourth and to the two succeeding Congresses (January 3, 1995-January 3, 2001); unsuccessful candidate for reelection to the One Hundred Seventh Congress; elected as a Republican to the One Hundred Ninth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Randall (Duke) Cunningham and reelected to the three succeeding Congresses (June 6, 2006-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

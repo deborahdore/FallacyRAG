@@ -1,0 +1,15 @@
+{
+    "name": "April McClain Delaney",
+    "birthDate": "1964-05-28",
+    "deathDate": null,
+    "bio": "a Representative from Maryland; born in Buhl, Twin Falls County, Idaho, May 28, 1964; graduated from Buhl High School, Buhl, Idaho, 1982; B.A., Northwestern University, Evanston, Ill., 1986; J.D., Georgetown University Law Center, Washington, D.C., 1989; lawyer, private practice; non-profit executive; deputy assistant secretary for communications and information, United States Department of Commerce, 2022-2023; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

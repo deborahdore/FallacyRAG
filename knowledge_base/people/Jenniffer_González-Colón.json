@@ -1,0 +1,40 @@
+{
+    "name": "Jenniffer González-Colón",
+    "birthDate": "1976-08-05",
+    "deathDate": null,
+    "bio": "a Resident Commissioner from Puerto Rico; born in San Juan, P.R., August 5, 1976; B.A., University of Puerto Rico, Rio Piedras, P.R., 2001; J.D., Inter American University of Puerto Rico, San Juan, P.R., 2010; L.L.M., Inter American University of Puerto Rico, San Juan, P.R., 2014; chair, Puerto Rico Republican Party, 2015-present; co-chair, Puerto Rico Republican Party, 2004-2015; vice-president, New Progressive Party, 2008-present; member of the Puerto Rico house of representatives, 2002-2016; speaker, 2009-2012; minority leader, 2013-2016; elected as a New Progressive to the One Hundred Fifteenth Congress to a four-year term in 2016 and reelected to the succeeding four-year term in 2020 and served until her resignation on January 1, 2025 (January 3, 2017-January 1, 2025); caucused with the Republican Party; was not a candidate for reelection to the One Hundred Nineteenth Congress to a four-year term in 2024, but was elected Governor of Puerto Rico; Governor of Puerto Rico, 2025-present.",
+    "jobs": [
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        }
+    ]
+}

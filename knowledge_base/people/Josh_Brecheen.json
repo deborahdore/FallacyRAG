@@ -1,0 +1,23 @@
+{
+    "name": "Josh Brecheen",
+    "birthDate": "1979-06-19",
+    "deathDate": null,
+    "bio": "a Representative from Oklahoma; born in Ada, Pontotoc County, Okla., June 19, 1979; an enrolled member of the Choctaw Nation; graduated from Coalgate High School, Coalgate, Okla., 1997; attended Southeastern Oklahoma State University, Durant, Okla.; B.S., Oklahoma State University, Stillwater, Okla., 2002; rancher; small business owner; staff, United States Senator Thomas Allen Coburn of Oklahoma, 2005-2010; member of the Oklahoma state senate, 2010-2018; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

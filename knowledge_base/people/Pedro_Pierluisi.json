@@ -1,0 +1,40 @@
+{
+    "name": "Pedro Pierluisi",
+    "birthDate": "1959-04-26",
+    "deathDate": null,
+    "bio": "a Resident Commissioner from Puerto Rico; born in San Juan, P.R., April 26, 1959; B.A., Tulane University, New Orleans, La., 1981; J.D., George Washington University, Washington, D.C., 1984; lawyer, private practice; staff, Resident Commissioner Baltasar Corrada del Rio of Puerto Rico; Puerto Rico secretary of justice, 1993-1996; elected as a New Progressive to the One Hundred Eleventh Congress to a four-year term in 2008 and reelected to the succeeding four-year term in 2012 (January 3, 2009-January 3, 2017); caucused with the Democratic Party; was not a candidate for reelection to the One Hundred Fifteenth Congress, but was an unsuccessful candidate for nomination for Governor of Puerto Rico in 2016; Governor of Puerto Rico, 2021-2025.",
+    "jobs": [
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        }
+    ]
+}

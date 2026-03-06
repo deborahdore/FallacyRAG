@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Rice",
+    "birthDate": "1768-03-30",
+    "deathDate": "1854-08-25",
+    "bio": "A Representative from Massachusetts; born in Pownalborough (now Wiscasset), Maine (then a part of Massachusetts), March 30, 1768; was graduated from Harvard University in 1791; studied law; was admitted to the bar in Suffolk County, Mass., in 1794 and commenced practice in Winslow, Maine, the following year; appointed in 1807 by the supreme judicial court of Maine one of the examiners of counselors and attorneys for Kennebec County; member of the State house of representatives in 1814; elected as a Federalist to the Fourteenth and Fifteenth Congresses (March 4, 1815-March 3, 1819); unsuccessful candidate for reelection in 1818 to the Sixteenth Congress; resumed the practice of law; died in Winslow, Kennebec County, Maine, August 25, 1854; interment in Pine Grove Cemetery, Waterville, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "George Washington",
+    "birthDate": "1789-08-20",
+    "deathDate": "1854-07-17",
+    "bio": "a Representative from Maryland; born on \"Haywood Farms,\" near Oak Grove, Westmoreland County, Va., August 20, 1789; attended Harvard University; studied law, but devoted himself to agricultural pursuits on his plantation in Maryland; resided for the most part at Dumbarton Heights, in Georgetown, D.C.; elected as an Adams candidate to the Twentieth Congress; reelected as an Anti-Jacksonian candidate to the Twenty-first and to the succeeding Congress (March 4, 1827-March 3, 1833); chairman, Committee on District of Columbia (Twenty-second Congress); was not a candidate for renomination in 1832; elected as a Whig to the Twenty-fourth Congress (March 4, 1835-March 3, 1837); was not a candidate for renomination in 1836; president of the Chesapeake &amp; Ohio Canal Co.; was appointed by President Tyler in 1844 as a commissioner to adjust and settle the claims arising under the treaty of 1835 with the Cherokee Nation; died in Georgetown, D.C., July 17, 1854; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MARYLAND"
+        }
+    ]
+}

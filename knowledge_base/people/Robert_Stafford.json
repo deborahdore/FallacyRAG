@@ -1,0 +1,128 @@
+{
+    "name": "Robert Stafford",
+    "birthDate": "1913",
+    "deathDate": "2006",
+    "bio": "A Representative and a Senator from Vermont; born in Rutland, Vt., August 8, 1913; educated in the public schools of Rutland; graduated, Middlebury College 1935; attended the University of Michigan Law School; graduated, Boston University Law School 1938; Rutland County prosecuting attorney 1938-1942; during the Second World War served on active duty in the United States Navy as a lieutenant commander 1942-1946, and during the Korean conflict 1951-1953; captain in the United States Navy Reserve; Rutland County State's attorney 1947-1951; deputy State attorney general 1953-1955; State attorney general 1955-1957; lieutenant governor 1957-1959; Governor of Vermont 1959-1961; elected as a Republican to the Eighty-seventh Congress in 1960; reelected to the five succeeding Congresses and served from January 3, 1961, until his resignation from the House of Representatives, September 16, 1971, to accept appointment the same day to the United States Senate to fill the vacancy caused by the death of Winston L. Prouty; elected by special election January 7, 1972, to complete the unexpired term ending January 3, 1977; reelected in 1976 and again in 1982 and served from September 16, 1971, to January 3, 1989; not a candidate for reelection in 1988; chairman, Committee on Environment and Public Works (Ninety-seventh through Ninety-ninth Congresses); died on December 23, 2006, in Rutland, Vt.; interment in Evergreen Cemetery, Rutland, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        }
+    ]
+}

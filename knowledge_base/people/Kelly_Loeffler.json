@@ -1,0 +1,24 @@
+{
+    "name": "Kelly Loeffler",
+    "birthDate": "1970-11-27",
+    "deathDate": null,
+    "bio": "a Senator from Georgia; born in Bloomington, Ill., November 27, 1970; graduated Olympia High School, Stanford, Ill., 1988; B.S., University of Illinois at Urbana-Champaign, 1992; M.B.A., DePaul University, Chicago, Ill., 1999; finance firm chief executive officer; owner of Atlanta Dream professional women&rsquo;s basketball team; appointed as a Republican to the United States Senate to fill the vacancy caused by the resignation of Johnny Isakson, and served from January 6, 2020, to January 20, 2021, when an elected successor for the remainder of the term took office; unsuccessful candidate for election to remainder of the term ending January 3, 2023; administrator of the Small Business Administration (2025-present).",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

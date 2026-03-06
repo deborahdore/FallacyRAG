@@ -1,0 +1,40 @@
+{
+    "name": "Susan Brooks",
+    "birthDate": "1960",
+    "deathDate": null,
+    "bio": "a Representative from Indiana; born in Auburn, Dekalb County, Ind., August 25, 1960; graduated from Homestead High School, Fort Wayne, Ind., 1978; B.A., Miami University, Oxford, Ohio, 1982; J.D., Indiana University, Indianapolis, Ind., 1985; lawyer, private practice; deputy mayor of Indianapolis, Ind., 1998-1999; United States attorney for the Southern District of Indiana, 2001-2007; senior vice president and general counsel, Ivy Tech Community College, Indianapolis, Ind.; elected as a Republican to the One Hundred Thirteenth and to the three succeeding Congresses (January 3, 2013- January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020; chair, Committee on Ethics (One Hundred Fifteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Winnifred Huck",
+    "birthDate": "1882-09-14",
+    "deathDate": "1936-08-24",
+    "bio": "A Representative from Illinois; born in Chicago, Cook County, Ill., September 14, 1882; attended public schools in Chicago, Ill. and Washington, D.C.; elected as a Republican to the Sixty-seventh Congress by special election to fill the vacancy caused by the death of her father, United States Representative William E. Mason (November 7, 1922-March 3, 1923); unsuccessful candidate for renomination to the Sixty-eighth Congress in 1922; unsuccessful candidate for nomination for a special election to fill the vacancy caused by the death of United States Representative James Mann, February 27, 1923; died on August 24, 1936, in Chicago, Ill; interment in Oakwood Cemetery, Waukegan, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

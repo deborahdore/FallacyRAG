@@ -1,0 +1,71 @@
+{
+    "name": "Ron Johnson",
+    "birthDate": "1955",
+    "deathDate": null,
+    "bio": "A Senator from Wisconsin; born on April 8, 1955, in Mankato, Minn.; graduated University of Minnesota, B.S., 1977; studied business administration, University of Minnesota, 1977-1979; plastics manufacturer; accountant; elected as a Republican to the United States Senate in 2010; reelected in 2016, and again in 2022 for the term ending January 3, 2029; chair, Committee on Homeland Security and Governmental Affairs (One Hundred Fourteenth through One Hundred Sixteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

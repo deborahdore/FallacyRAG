@@ -1,0 +1,24 @@
+{
+    "name": "Patrick Swindall",
+    "birthDate": "1950",
+    "deathDate": "2018",
+    "bio": "A Representative from Georgia; born in Gadsden, Ala., October 18, 1950; attended public schools; B.A., University of Georgia, 1972; J.D., University of Georgia School of Law, 1975; practiced law in Atlanta, Ga., 1975-1984; elected as a Republican to the Ninety-ninth and One Hundredth Congresses (January 3, 1985-January 3, 1989); unsuccessful candidate for reelection in 1988 to the One Hundred First Congress; died on July 11, 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

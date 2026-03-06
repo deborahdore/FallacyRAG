@@ -1,0 +1,48 @@
+{
+    "name": "Arnold Olsen",
+    "birthDate": "1916-12-17",
+    "deathDate": "1990-10-11",
+    "bio": "a Representative from Montana; born in Butte, Silver Bow County, Mont., December 17, 1916; attended Butte public schools, the Montana School of Mines, 1934-1936, and graduated from the Montana State University Law School, Missoula, Mont., 1940; United States Navy, 1942-1946; lawyer, private practice; attorney general of Montana, 1948-1956; elected as a Democrat to the Eighty-seventh and to the four succeeding Congresses (January 3, 1961-January 3, 1971); unsuccessful candidate for reelection to the Ninety-second Congress in 1970; unsuccessful candidate for election to the Ninety-third Congress in 1972; unsuccessful candidate for nomination to the Ninety-fourth Congress in 1974; appointed judge of the second judicial district of Montana, 1975-1990; died on October 11, 1990, in Helena, Mont.; interment at Mount Moriah Cemetery, Butte, Mont.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        }
+    ]
+}

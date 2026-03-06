@@ -1,0 +1,32 @@
+{
+    "name": "John Edwards",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "A Senator from North Carolina; born in Seneca, South Carolina on June 10, 1953; attended public schools in Robbins, North Carolina; B.A. North Carolina State University 1974; J.D., University of North Carolina, Chapel Hill 1977; textile mill worker; attorney and law partner; elected as a Democrat to the U.S. Senate in 1998 and served from January 3, 1999, to January 3, 2005; was not a candidate for reelection to the Senate, but was an unsuccessful candidate for the Democratic nomination for president in 2004; was an unsuccessful candidate for Vice President on the Democratic ticket with John F. Kerry in 2004.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

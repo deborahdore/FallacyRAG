@@ -1,0 +1,56 @@
+{
+    "name": "Samuel Prentiss",
+    "birthDate": "1782",
+    "deathDate": "1857",
+    "bio": "(Brother of John Holmes Prentiss), a Senator from Vermont; born in Stonington, Conn., March 31, 1782; moved to Northfield, Mass., in 1786; completed preparatory studies and was instructed in the classics by a private tutor; studied law in Northfield and in Brattleboro, Vt.; admitted to the bar in 1802 and practiced in Montpelier, Vt. 1803-1822; member, State house of representatives 1824-1825; associate justice of the supreme court of Vermont; elected chief justice of the State supreme court in 1829; elected in 1831 as an Anti-Jacksonian to the United States Senate; reelected as a Whig in 1837 and served from March 4, 1831, to April 11, 1842, when he resigned to accept a judicial assignment; chairman, Committee on Patents and the Patent Office (Twenty-seventh Congress); originator and successful advocate of the law to suppress dueling in the District of Columbia; judge of the United States District Court of Vermont from 1842 until his death in Montpelier, Vt., January 15, 1857; interment in Green Mount Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "David Jennings",
+    "birthDate": "1787",
+    "deathDate": "1834",
+    "bio": "A Representative from Ohio; born in Readington Township, Hunterdon County, N.J., in 1787; attended the public schools; moved to St. Clairsville, Ohio, in 1812; studied law; was admitted to the bar in 1813 and commenced practice in St. Clairsville; prosecuting attorney of Belmont County 1815-1825; held several local offices; member of the State senate 1819-1824; elected as an Adams candidate to the Nineteenth Congress and served from March 4, 1825, until his resignation, May 25, 1826; died in Baltimore, Md., in 1834.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "OHIO"
+        }
+    ]
+}

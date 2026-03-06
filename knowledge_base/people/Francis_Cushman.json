@@ -1,0 +1,56 @@
+{
+    "name": "Francis Cushman",
+    "birthDate": "1867-05-08",
+    "deathDate": "1909-07-06",
+    "bio": "A Representative from Washington; born in Brighton, Washington County, Iowa, May 8, 1867; attended the public schools in Brighton and Pleasant Plain Academy in Pleasant Plain, Jefferson County, Iowa; moved to Albany County, Wyo., in 1885; employed as a ranch hand and as a teacher; studied law; was admitted to the bar in 1889 and commenced practice in Bassett, Rock County, Nebr.; moved to Tacoma, Wash., in 1891 and continued the practice of law; member of Troop B, First Cavalry, Washington National Guard, 1896-1903; elected as a Republican to the Fifty-sixth and to the five succeeding Congresses and served from March 4, 1899, until his death in New York City July 6, 1909; the remains were cremated and the ashes interred in Tacoma Cemetery, Tacoma, Wash.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

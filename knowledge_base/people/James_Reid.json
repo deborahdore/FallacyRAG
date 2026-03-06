@@ -1,0 +1,24 @@
+{
+    "name": "James Reid",
+    "birthDate": "1849-06-11",
+    "deathDate": "1902-01-01",
+    "bio": "a Representative from North Carolina; born in Wentworth, Rockingham County, N.C., June 11, 1849; pursued an academic course; graduated from Emory and Henry College, Emory, Va., in 1869 and subsequently taught in the same college; studied law; admitted to the bar in 1873 and commenced practice in Wentworth, N.C.; treasurer of Rockingham County 1874-1884; elected as a Democrat to the Forty-eighth Congress to fill the vacancy caused by the resignation of Alfred M. Scales; reelected to the Forty-ninth Congress and served from January 15, 1885, to December 31, 1886, when he resigned; moved to Lewiston, Idaho, in 1887 and engaged in the practice of law; member of the State constitutional convention in 1889 and vice president of that body; president of the board of trustees of the Lewiston State Normal College from 1893 until his death; delegate to the Democratic National Convention in 1896 and 1900; died in Lewiston, Nez Perce County, Idaho, January 1, 1902; interment in the Masonic Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

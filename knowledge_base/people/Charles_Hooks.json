@@ -1,0 +1,40 @@
+{
+    "name": "Charles Hooks",
+    "birthDate": "1768-02-20",
+    "deathDate": "1843-10-18",
+    "bio": "a Representative from North Carolina; born in Bertie County, N.C., February 20, 1768; when he was two years old his parents moved to Duplin County and settled on a plantation near Kenansville; became a planter; member of the North Carolina state house of commons 1801-1805; served in the North Carolina state senate in 1810 and 1811; elected as a Democratic Republican to the Fourteenth Congress to fill the vacancy caused by the resignation of William R. King and served from December 2, 1816, to March 3, 1817; elected as a Democratic Republican to the Sixteenth and Seventeenth Congresses, and reelected as a Crawford Republican to the Eighteenth Congress (March 4, 1819-March 3, 1825); moved to Alabama in 1826, settled near Montgomery, and again engaged in planting; died near Montgomery, Ala., October 18, 1843; interment in the Molton family cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

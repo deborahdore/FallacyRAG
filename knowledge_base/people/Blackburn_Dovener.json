@@ -1,0 +1,56 @@
+{
+    "name": "Blackburn Dovener",
+    "birthDate": "1842-04-20",
+    "deathDate": "1914-05-09",
+    "bio": "A Representative from West Virginia; born in Tays Valley, Cabell County, Va. (now West Virginia), April 20, 1842; attended the common schools; taught school 1858-1861; at the age of nineteen raised a company and served as captain of Company A, Fifteenth Regiment, West Virginia Volunteer Infantry; became captain of an Ohio River steamboat in 1867; studied law; was admitted to the bar in 1873 and commenced practice in Wheeling, W.Va.; member of the State house of delegates in 1883 and 1884; unsuccessful Republican candidate for election to the Fifty-second Congress; elected as a Republican to the Fifty-fourth and to the five succeeding Congresses (March 4, 1895-March 3, 1907); unsuccessful candidate for renomination; resumed the practice of law in Wheeling; lived in retirement at Glen Echo, Md., until his death on May 9, 1914; interment in Arlington National Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Joseph Hendricks",
+    "birthDate": "1903-09-24",
+    "deathDate": "1974-10-20",
+    "bio": "A Representative from Florida; born at Lake Butler, Union County, Fla., September 24, 1903; attended the rural schools and Montverde (Fla.) School; John B. Stetson University, De Land, Fla., A.B., 1930 and from its law department, LL.B., 1934; was admitted to the bar in 1934 and commenced practice in De Land, Fla.; attorney for the legal tax survey of the State in 1934; elected as a Democrat to the Seventy-fifth and to the five succeeding Congresses (January 3, 1937-January 3, 1949); was not a candidate for renomination in 1948 to the Eighty-first Congress; was president of Hendricks Homes, Inc.; chairman of Planning Board, Plant City, Fla.; member, County Planning Commission, Hillsborough County, Fla.; resided in Plant City, Fla., until his death in Lakeland, Fla., October 20, 1974; interment in Lakeland Memorial Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

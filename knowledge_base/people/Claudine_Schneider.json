@@ -1,0 +1,48 @@
+{
+    "name": "Claudine Schneider",
+    "birthDate": "1947",
+    "deathDate": null,
+    "bio": "A Representative from Rhode Island; born Claudine Cmarada in Clairton, Pa., March 25, 1947; attended parochial schools; studied at the University of Barcelona, Spain, and Rosemont College (Pa.); B.A., Windham College (Vt.), 1969; attended University of Rhode Island School of Community Planning; founder, Rhode Island Committee on Energy, 1973; executive director, Conservation Law Foundation, 1974; federal coordinator, Rhode Island Coastal Zone Management Program, 1978; producer and host of public affairs television program, Providence, R.I., 1978-1979; elected as a Republican to the Ninety-seventh and to the four succeeding Congresses (January 3, 1981-January 3, 1991); was not a candidate for reelection in 1990 to the One Hundred Second Congress but was an unsuccessful nominee for the United States Senate; member of the faculty, John F. Kennedy School of Government, Harvard University; is a resident of Narragansett, R.I.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

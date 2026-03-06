@@ -1,0 +1,16 @@
+{
+    "name": "George Mumford",
+    "birthDate": null,
+    "deathDate": "1818-12-31",
+    "bio": "a Representative from North Carolina; born in Rowan County, N.C., birth date unknown; attended the common schools; member of the North Carolina state house of commons, 1810 and 1811; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-December 31, 1818); died on December 31, 1818, in Washington, D.C.; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

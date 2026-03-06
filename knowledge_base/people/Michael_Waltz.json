@@ -1,0 +1,39 @@
+{
+    "name": "Michael Waltz",
+    "birthDate": "1974-01-31",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Boynton Beach, Palm Beach County, Fla., January 31, 1974; graduated from Stanton High School, Jacksonville, Fla., 1992; B.A., Virginia Military Institute, Lexington, Va., 1996;&nbsp; United States Army, 1996-2000, Afghanistan War Veteran; United States Army Reserves, 2000-2023; staff, Office of the Secretary of Defense; staff, Office of the Vice President Richard B. Cheney; business owner; television commentator; author; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses until his resignation on January 20, 2025 (January 3, 2019-January 20, 2025); White House National Security Advisor, 2025; United States Representative to the United Nations, with the rank of Ambassador, 2025-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

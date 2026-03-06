@@ -1,0 +1,40 @@
+{
+    "name": "Debbie Lesko",
+    "birthDate": "1958-11-14",
+    "deathDate": null,
+    "bio": "a Representative from Arizona; born in Sheboygan, Sheboygan County, Wis., November 14, 1958; graduated from Kohler High School, Kohler, Wis., 1977; B.B.A., University of Wisconsin, Madison, Wis., 1981; business owner; member of the Arizona state house of representatives, 2008-2014; majority whip, 2011-2012; member of the Arizona state senate, 2015-2018, president pro tempore, 2017-2018; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Trent Franks, and reelected to the three succeeding Congresses (April 24, 2018-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024, but was elected to the Maricopa County, Ariz., board of supervisors; member of the Maricopa County, Ariz., board of supervisors, 2025-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Chauncey Forward",
+    "birthDate": "1793-02-04",
+    "deathDate": "1839-10-19",
+    "bio": "a Representative from Pennsylvania; born in Old Granby, Conn., February 4, 1793; moved with his father to Ohio in 1800, and a short time afterward to Greensburg, Pa.; pursued classical studies; studied law; was admitted to the bar in Pittsburgh, Pa., in 1817 and began practice in Somerset, Pa.; member of the Pennsylvania state house of representatives, 1820-1822; elected as a Jacksonian to the Nineteenth Congress, by special election, to fill the vacancy caused by the resignation of Alexander Thomson, and reelected to the two succeeding Congresses (December 4, 1826-March 3, 1831); appointed prothonotary and recorder of Somerset County in 1831; died in Somerset, Somerset County, Pa., October 19, 1839; interment in Aukeny Square Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

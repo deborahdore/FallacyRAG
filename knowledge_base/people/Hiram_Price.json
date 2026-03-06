@@ -1,0 +1,48 @@
+{
+    "name": "Hiram Price",
+    "birthDate": "1814-01-10",
+    "deathDate": "1901-05-30",
+    "bio": "A Representative from Iowa; born in Washington County, Pa., January 10, 1814; attended the common schools; was engaged in agricultural pursuits on his father's farm for several years; employed as a bookkeeper for a large commission house near Pittsburgh, Pa., and equipped himself for mercantile life; moved to Davenport, Iowa, in 1844 and engaged in the mercantile business; served as collector, treasurer, and recorder of Scott County, Iowa; was president of the State Bank of Iowa 1859-1866 and became president of the First National Bank of Davenport in 1873; during the early days of the Civil War was appointed by Governor Kirkwood as paymaster general of the Iowa troops, to whom he advanced large sums of money; elected as a Republican to the Thirty-eighth, Thirty-ninth, and Fortieth Congresses (March 4, 1863-March 3, 1869); chairman, Committee on Revolutionary Claims (Thirty-eighth Congress), Committee on Pacific Railroads (Thirty-ninth and Fortieth Congresses); declined to be a candidate for renomination in 1868; president of the Davenport &amp; St. Paul Railroad Co.; elected to the Forty-fifth and Forty-sixth Congresses in 1880 (March 4, 1877-March 3, 1881); declined to accept a renomination in 1880; appointed chief clerk for the Indian Office on April 13, 1881; appointed United States Commissioner of Indian Affairs during the administration of President Garfield and served from May 6, 1881, to March 27, 1885; lived in Washington, D.C., until his death in that city on May 30, 1901; interment in Oakdale Cemetery, Davenport, Iowa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

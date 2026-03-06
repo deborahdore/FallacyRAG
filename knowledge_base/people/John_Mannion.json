@@ -1,0 +1,15 @@
+{
+    "name": "John Mannion",
+    "birthDate": "1968-07-08",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Syracuse, Onondaga County, N.Y., July 8, 1968; graduated from Bishop Ludden Junior-Senior High School, Syracuse, N.Y., 1986; B.A., Binghamton University, Binghamton, N.Y.; M.S., State University of New York at Oswego, Oswego, N.Y.; teacher; member of the New York state senate; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

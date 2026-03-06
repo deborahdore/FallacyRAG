@@ -1,0 +1,16 @@
+{
+    "name": "Oscar Moore",
+    "birthDate": "1817-01-27",
+    "deathDate": "1885-06-24",
+    "bio": "A Representative from Ohio; born in Lagrange, Jefferson County, Ohio, January 27, 1817; attended the public schools and Wellsburg Academy, and was graduated from Washington (now Washington and Jefferson) College, Washington, Pa., in 1836; studied law; was admitted to the bar in 1838 and commenced practice in Portsmouth, Ohio, in 1839; member of the state house of representatives in 1850 and 1851; member of the state senate in 1852 and 1853; elected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1855-March 3, 1857); unsuccessful candidate for reelection in 1856 to the Thirty-fifth Congress; served as lieutenant colonel and later as colonel of the Thirty-third Regiment, Ohio Volunteer Infantry, during the Civil War; resumed the practice of his profession in Portsmouth, Ohio; died at Waverly, Ohio, June 24, 1885; interment in Greenlawn Cemetery, Portsmouth, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "OHIO"
+        }
+    ]
+}

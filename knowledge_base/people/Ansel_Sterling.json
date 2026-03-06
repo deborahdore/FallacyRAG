@@ -1,0 +1,24 @@
+{
+    "name": "Ansel Sterling",
+    "birthDate": "1782-02-03",
+    "deathDate": "1853-11-06",
+    "bio": "a Representative from Connecticut; born in Lyme, New London County, Conn., February 3, 1782; attended the common schools; studied law; admitted to the bar in 1805 and commenced practice in Salisbury, Conn.; moved to Sharon, Litchfield County, in 1808 and continued the practice of his profession; member of the Connecticut state house of representatives in 1815, 1818-1821, 1825, 1826, 1829, and 1835-1837, and served as clerk of the house in the sessions of 1815 and 1818-1820; elected as a Democratic Republican to the Seventeenth Congress and reelected as an Adams-Clay Republican candidate to the Eighteenth Congress (March 4, 1821-March 3, 1825); resumed legal practice; chief justice of the court of common pleas of Litchfield County 1838-1840; died in Sharon, Conn., November 6, 1853; interment in Sharon Burying Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

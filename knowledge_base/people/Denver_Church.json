@@ -1,0 +1,40 @@
+{
+    "name": "Denver Church",
+    "birthDate": "1862-12-11",
+    "deathDate": "1952-02-21",
+    "bio": "A Representative from California; born in Folsom City, Sacramento County, Calif., December 11, 1862; attended the common schools; was graduated from Healdsburg (Calif.) College in 1885; studied law; was admitted to the bar in 1893 and commenced practice in Fresno, Fresno County, Calif.; district attorney of Fresno County 1907-1913; delegate to the Democratic National Convention in 1916; elected as a Democrat to the Sixty-third, Sixty-fourth, and Sixty-fifth Congresses (March 4, 1913-March 3, 1919); was not a candidate for renomination in 1918; resumed the practice of law in Fresno, Calif.; superior judge of Fresno County 1924-1930; elected to the Seventy-third Congress (March 4, 1933-January 3, 1935); was not a candidate for renomination in 1934; resumed the practice of law; died in Fresno, Calif., February 21, 1952; interment in Belmont Memorial Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

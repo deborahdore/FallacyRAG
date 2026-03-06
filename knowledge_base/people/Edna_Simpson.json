@@ -1,0 +1,16 @@
+{
+    "name": "Edna Simpson",
+    "birthDate": "1891-10-26",
+    "deathDate": "1984-05-15",
+    "bio": "a Representative from Illinois; born in Carrollton, Greene County, Ill., October 26, 1891; elected as a Republican to the Eighty-sixth Congress (January 3, 1959-January 3, 1961); did not seek renomination in 1960; died on May 15, 1984, in Carrollton, Ill.; interment at Carrollton City Cemetery, Carrollton, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

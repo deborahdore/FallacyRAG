@@ -1,0 +1,32 @@
+{
+    "name": "Humphrey Leavitt",
+    "birthDate": "1796-06-18",
+    "deathDate": "1873-03-15",
+    "bio": "A Representative from Ohio; born in Suffield, Conn., June 18, 1796; moved to the Northwest Territory in 1800 with his parents, who settled in what became Trumbull County, Ohio; completed preparatory studies; attended an academy in western Pennsylvania; taught school; clerked in a store; studied law; was admitted to the bar in 1816 and commenced practice in Cadiz, Ohio; moved to Steubenville in 1819; prosecuting attorney of Jefferson County 1823-1829; member of the State house of representatives in 1825 and 1826; served in the State senate in 1827 and 1828; clerk of the common pleas and supreme court of Jefferson County in 1828; elected as a Jacksonian candidate to the Twenty-first Congress to fill the vacancy caused by the resignation of John M. Goodenow; reelected as a Jacksonian candidate to the Twenty-second and Twenty-third Congresses and served from December 6, 1830, until July 10, 1834, when he resigned to accept a judicial position; appointed by President Jackson to be United States judge of the district court for the district of Ohio on June 30, 1834, and served until March 31, 1871, when he resigned; moved to Cincinnati, Ohio, in 1855, when the State was divided into two Federal districts; returned to Springfield in 1871; engaged in literary pursuits; was a member of the World's Convention on Prison Reform in London in 1872; died in Springfield, Ohio, March 15, 1873; interment in Spring Grove Cemetery, Cincinnati, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "OHIO"
+        }
+    ]
+}

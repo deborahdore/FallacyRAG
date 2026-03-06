@@ -1,0 +1,32 @@
+{
+    "name": "Joseph Pearson",
+    "birthDate": "1776",
+    "deathDate": "1834-10-27",
+    "bio": "A Representative from North Carolina; born in Rowan County, N.C., in 1776; completed preparatory studies; studied law; was admitted to the bar and commenced practice in Salisbury, N.C.; member of the State house of commons; elected as a Federalist to the Eleventh, Twelfth, and Thirteenth Congresses (March 4, 1809-March 3, 1815); while in Congress fought a duel with John George Jackson, of Virginia, and on the second fire wounded his opponent in the hip; died in Salisbury, N.C., October 27, 1834.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

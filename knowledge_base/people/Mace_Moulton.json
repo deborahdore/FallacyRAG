@@ -1,0 +1,16 @@
+{
+    "name": "Mace Moulton",
+    "birthDate": "1796-05-02",
+    "deathDate": "1867-05-05",
+    "bio": "A Representative from New Hampshire; born in Concord, N.H., May 2, 1796; attended the public schools; sheriff of Hillsborough County in 1845; elected as a Democrat to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); State councilor in 1848 and 1849; engaged in banking; died in Manchester, Hillsborough County, N.H., May 5, 1867; interment in Valley Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

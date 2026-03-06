@@ -1,0 +1,48 @@
+{
+    "name": "Donna Edwards",
+    "birthDate": "1958-06-28",
+    "deathDate": null,
+    "bio": "a Representative from Maryland; born in Yanceyville, Caswell County, N.C., June 28, 1958; graduated from Thomas Stone High School, Waldorf, Md.; B.A., Wake Forest University, Winston-Salem, N.C., 1980; J.D., Franklin Pierce Law Center, Concord, N. H., 1989; lawyer, private practice; clerk, District of Columbia Superior Court Judge; executive director, National Network to End Domestic Violence; executive director, Center for a New Democracy; executive director, The Arca Foundation; elected as a Democrat to the One Hundred Tenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Albert Russell Wynn, and reelected to the four succeeding Congresses (June 17, 2008-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016, but was an unsuccessful candidate for nomination to the United States Senate; unsuccessful candidate for nomination to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

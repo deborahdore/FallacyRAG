@@ -1,0 +1,76 @@
+{
+    "name": "William Gray",
+    "birthDate": "1941-08-20",
+    "deathDate": "2013-07-01",
+    "bio": "a Representative from Pennsylvania; born in Baton Rouge, East Baton Rouge Parish, La., August 20, 1941; attended the public schools; graduated from Simon Gratz High School, Philadelphia, Pa., 1959; B.A., Franklin and Marshall College, Lancaster, Pa., 1963; M.Div., Drew Theological Seminary, Madison, N.J., 1966; Th.M., Princeton Theological Seminary, New Jersey, 1970; minister; taught at St. Peter's College, Jersey City, N.J., 1970-1974, Jersey City State College, 1968-1969, Rutgers University, 1971, and Montclair (N.J.) State College, 1970-1972; elected as a Democrat to the Ninety-sixth and to the six succeeding Congresses, and served until his resignation September 11, 1991 (January 3, 1979-September 11, 1991); chairman, Committee on the Budget (Ninety-ninth and One Hundredth Congresses); majority whip (One Hundred First and One Hundred Second Congresses); president, United Negro College Fund; special adviser to the President and secretary of state for Haitian affairs, 1994; died on July 1, 2013, in London, England.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Democratic Whip",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03"
+        },
+        {
+            "role": "Democratic Whip",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03"
+        }
+    ]
+}

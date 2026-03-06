@@ -1,0 +1,16 @@
+{
+    "name": "Samuel Breck",
+    "birthDate": "1771-07-17",
+    "deathDate": "1862-08-31",
+    "bio": "A Representative from Pennsylvania; born in Boston, Mass., July 17, 1771; attended the Royal Military School of Loreze, France; moved to Pennsylvania and settled in Philadelphia in 1792, where he engaged in business as a merchant; served as corporal during the Whisky Rebellion; member of the State house of representatives 1817-1820; served in the State senate 1832-1834; elected as an Adams-Clay Federalist to the Eighteenth Congress (March 4, 1823-March 3, 1825); withdrew from active business pursuits and lived in retirement until his death in Philadelphia, Pa., August 31, 1862; interment in St. Peter's Churchyard.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Federalist",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

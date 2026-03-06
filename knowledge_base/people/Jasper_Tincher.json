@@ -1,0 +1,40 @@
+{
+    "name": "Jasper Tincher",
+    "birthDate": "1878-11-02",
+    "deathDate": "1951-11-06",
+    "bio": "A Representative from Kansas; born near Browning, Sullivan County, Mo., November 2, 1878; moved with his parents to Medicine Lodge, Barber County, Kans., in 1892; attended the common and high schools; taught school in Hardtner, Kans., from 1896 until February 1899; worked and studied in a law office and was admitted to the bar in May 1899; commenced the practice of law in Medicine Lodge, Kans.; also interested in farming and stock raising; elected as a Republican to the Sixty-sixth and to the three succeeding Congresses (March 4, 1919-March 3, 1927); was not a candidate for renomination in 1926; moved to Hutchinson, Kans., in 1926 and practiced law until his death there on November 6, 1951; interment in Memorial Park Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

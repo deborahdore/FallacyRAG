@@ -1,0 +1,16 @@
+{
+    "name": "Ross Spano",
+    "birthDate": "1966",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Tampa, Hillsborough County, Fla., July 16, 1966; graduated from Brandon High School, Brandon, Fla., 1984; B.A., University of South Florida, Tampa, Fla., 1994; J.D., Florida State University, Tallahassee, Fla., 1998; lawyer, private practice; member of the Florida state house of representatives, 2012-2018; elected as a Republican to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for renomination to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

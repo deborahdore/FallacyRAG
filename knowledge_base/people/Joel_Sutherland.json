@@ -1,0 +1,48 @@
+{
+    "name": "Joel Sutherland",
+    "birthDate": "1792-02-26",
+    "deathDate": "1861-11-15",
+    "bio": "a Representative from Pennsylvania; born in Gloucester County, N.J., February 26, 1792; attended the common schools, and graduated from the University of Pennsylvania at Philadelphia in 1812; served in the War of 1812 as assistant surgeon to the \"Junior Artillerists of Philadelphia,\" transferred to the line, and was appointed in 1814 lieutenant colonel of rifles in the state militia; member of the Pennsylvania state house of representatives, 1813-1816; founder of Jefferson Medical College at Philadelphia; served in the Pennsylvania state senate in 1816 and 1817; abandoned medicine for the practice of law; elected as a Jacksonian candidate to the Twentieth and to the two succeeding Congresses (March 4, 1827-March 3, 1833); elected as a Jacksonian candidate to the Twenty-third Congress, but accepted an appointment to serve as an associate judge of the court of common pleas in Philadelphia, Pa., in February 1833; seat declared vacant by the Governor of Pennsylvania; elected as a Jacksonian to the Twenty-third Congress, by special election, to fill his own vacancy on October 8, 1833 and reelected to the succeeding Congress (October 8, 1833-March 3, 1837); chairman, Committee on Commerce (Twenty-third and Twenty-fourth Congresses); unsuccessful Whig candidate for reelection to the Twenty-fifth Congress in 1836; unsuccessful candidate for election to the Twenty-sixth Congress in 1838; died on November 15, 1861, in Philadelphia, Pa.; interment in the Old Pine Street Presbyterian Church Cemetery, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

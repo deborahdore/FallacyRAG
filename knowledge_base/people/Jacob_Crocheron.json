@@ -1,0 +1,16 @@
+{
+    "name": "Jacob Crocheron",
+    "birthDate": "1774-08-23",
+    "deathDate": "1849-12-27",
+    "bio": "a Representative from New York; born on Staten Island, Richmond County, N.Y., August 23, 1774; engaged in agricultural pursuits; sheriff of Richmond County in 1802, 1811, and again in 1821; elected as a Jacksonian candidate to the Twenty-first Congress (March 4, 1829-March 3, 1831); died in Richmond County, Staten Island, on December 27, 1849; interment in St. Andrew's Churchyard, Staten Island, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Ted Strickland",
+    "birthDate": "1941",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Lucasville, Scioto County, Ohio, August 4, 1941; B.A., Asbury College, Wilmore, Ky., 1963; M.A., University of Kentucky, Lexington, Ky., 1966; M.A., Asbury Theological Seminary, Wilmore, Ky., 1967; Ph..D., University of Kentucky, Lexington, Ky., 1980; professor, Shawnee State College, Portsmouth, Ohio; unsuccessful candidate for election to the Ninety-fourth Congress in 1976, to the Ninety-fifth Congress in 1978, and to the Ninety-sixth Congress in 1980; elected as a Democrat to the One Hundred Third Congress (January 3, 1993-January 3, 1995); unsuccessful candidate for reelection to the One Hundred Fourth Congress; elected as a Democrat to the One Hundred Fifth and to the five succeeding Congresses (January 3, 1997-January 3, 2007); was not a candidate for reelection to the United States House of Representatives in 2006; Governor of Ohio, 2007-2011; unsuccessful candidate for election to the United States Senate in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

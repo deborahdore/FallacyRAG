@@ -1,0 +1,48 @@
+{
+    "name": "Robert Young",
+    "birthDate": "1923-11-27",
+    "deathDate": "2007-10-17",
+    "bio": "a Representative from Missouri; born in St. Louis, St. Louis County, Mo., November 27, 1923; attended the primary schools of Vinita Park, Mo.; graduated from Normandy High School, St. Louis, 1941; pipefitter; served in the United States Army, 1943-1945, participated in the Normandy invasion; member, Missouri state house of representatives, 1957-1961, senate, 1963-1976; delegate, Missouri State Democratic conventions, 1952-1976; delegate to nine Democratic National Conventions from 1960 to 1992; elected as a Democrat to the Ninety-fifth and to the four succeeding Congresses (January 3, 1977-January 3, 1987); was an unsuccessful candidate for reelection in 1986; died on October 17, 2007, in St. Ann, St. Louis County, Mo.; interment at Memorial Park Cemetery, Jennings, Mo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        }
+    ]
+}

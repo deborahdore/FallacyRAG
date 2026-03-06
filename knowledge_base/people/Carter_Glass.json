@@ -1,0 +1,192 @@
+{
+    "name": "Carter Glass",
+    "birthDate": "1858-01-04",
+    "deathDate": "1946-05-28",
+    "bio": "A Representative and a Senator from Virginia; born in Lynchburg, Campbell County, Va., January 4, 1858; attended private and public schools; newspaper reporter, editor and owner; member, State senate 1899-1903, when he resigned; delegate to the State constitutional convention in 1901; elected as a Democrat to the Fifty-seventh Congress to fill the vacancy caused by the death of Peter J. Otey; reelected to the Fifty-eighth and to the eight succeeding Congresses and served from November 4, 1902, until December 16, 1918, when he resigned to accept a cabinet position; chairman, Committee on Banking and Currency (Sixty-third through Sixty-fifth Congresses); member of the Democratic National Committee 1916-1928; appointed Secretary of the Treasury by President Woodrow Wilson and served from 1918 to 1920 when he resigned, having been appointed a Senator; appointed as a Democrat to the United States Senate on November 18, 1919, and subsequently elected on November 3, 1920, to fill the vacancy caused by the death of Thomas S. Martin in the term ending March 3, 1925, but did not qualify until February 2, 1920, preferring to retain his Cabinet portfolio; reelected in 1924, 1930, 1936, and again in 1942, and served from February 2, 1920, until his death on May 28, 1946; served as President pro tempore during the Seventy-seventh and Seventy-eighth Congresses; chairman, Committee on Expenditures in the Interior Department (Sixty-sixth Congress), Committee on Appropriations (Seventy-third through Seventy-ninth Congresses); declined an appointment as Secretary of the Treasury in the Cabinet of President Franklin D. Roosevelt; died in Washington, D.C., May 28, 1946; interment in Spring Hill Cemetery, Lynchburg, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Henry Middleton",
+    "birthDate": "1770-09-28",
+    "deathDate": "1846-06-14",
+    "bio": "a Representative from South Carolina; born in London, England, September 28, 1770; his parents, then traveling in Europe, returned a year later to South Carolina; pursued classical studies with tutors at his father's estate, \"Middleton Place,\" near Charleston, S.C., with a year in England; returned to America after his father's death in 1787; later returned to England and resided at Clifton, Gloucestershire, until his return to Charleston in 1800; engaged in planting in South Carolina; member of the South Carolina state house of representatives, 1802-1810; elected to the South Carolina state senate, 1810; elected Governor of South Carolina in December 1810 and served until December 1812; elected as a Democratic Republican to the Fourteenth and to the succeeding Congress (March 4, 1815-March 3, 1819); unsuccessful candidate for renomination in 1818; Minister to Russia from April 6, 1820, to August 3, 1830; leader of the Union Party of South Carolina and vice president of the Union Convention in 1833; retired to private life; died in Charleston, S.C., June 14, 1846; interment in the family mausoleum at ``Middleton Place,'' near Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

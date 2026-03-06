@@ -1,0 +1,15 @@
+{
+    "name": "Mike Kennedy",
+    "birthDate": "1969-02-02",
+    "deathDate": null,
+    "bio": "a Representative from Utah; born in Michigan., February 2, 1969; graduated from Ypsilanti High School, Ypsilanti, Mich., 1987; B.S., Brigham Young University, Provo, Utah, 1994; M.D., Michigan State University, East Lansing, Mich., 1998; J.D., Brigham Young University, Provo, Utah, 2007; physician; lawyer, private practice; member of the Utah state house of representatives, 2013-2019; unsuccessful candidate for nomination to the United States Senate in 2018; member of the Utah state senate, 2021-2025; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Samuel Sewall",
+    "birthDate": "1757-12-11",
+    "deathDate": "1814-06-08",
+    "bio": "A Representative from Massachusetts; born in Boston, Mass., December 11, 1757; attended the common schools and was graduated from Harvard College in 1776; studied law; was admitted to the bar and commenced practice in Marblehead, Mass.; member of the State house of representatives 1784 and 1788-1796; elected as a Federalist to the Fourth Congress to fill the vacancy caused by the resignation of Benjamin Goodhue; reelected to the Fifth and Sixth Congresses and served from December 7, 1796, until his resignation on January 10, 1800; one of the managers appointed by the House of Representatives in 1798 to conduct the impeachment proceedings against William Blount, a Senator from Tennessee; associate judge of the supreme court of Massachusetts 1801-1813 and served as chief justice in 1813 and 1814; died in Wiscasset, Maine, June 8, 1814; interment in Ancient Cemetery; reinterment in the family tomb at Marblehead, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

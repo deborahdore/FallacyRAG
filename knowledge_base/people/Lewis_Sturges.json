@@ -1,0 +1,56 @@
+{
+    "name": "Lewis Sturges",
+    "birthDate": "1763-03-15",
+    "deathDate": "1844-03-30",
+    "bio": "A Representative from Connecticut; born in Fairfield, Conn., March 15, 1763; was graduated from Yale College in 1782; engaged in mercantile pursuits in New Haven; returned to Fairfield, Conn., in 1786; clerk of the probate court for the district of Fairfield 1787-1791; member of the State house of representatives 1794-1803; elected as a Federalist to the Ninth Congress to fill in part the vacancies caused by the resignations of Calvin Goddard and Roger Griswold; reelected to the Tenth and to the four succeeding Congresses and served from September 16, 1805, to March 3, 1817; moved to Norwalk, Huron County, Ohio, where he died March 30, 1844; interment in St. Paul's Episcopal Churchyard.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

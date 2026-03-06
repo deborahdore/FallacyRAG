@@ -1,0 +1,88 @@
+{
+    "name": "Gordon Canfield",
+    "birthDate": "1898",
+    "deathDate": "1972",
+    "bio": "A Representative from New Jersey; born in Salamanca, Cattaraugus County, N.Y., April 15, 1898; attended the public schools of Binghamton, N.Y.; served as a private in the Signal Corps, United States Army, in 1917 and 1918; reporter in Passaic, N.J., 1919-1923; studied law at New Jersey Law School in Newark; George Washington University Law School, Washington, D.C., LL.B., 1926; was admitted to the District of Columbia bar in 1927; served as secretary to Representative George N. Seger 1923-1940; elected as a Republican to the Seventy-seventh and to the nine succeeding Congresses (January 3, 1941-January 3, 1961); served during the Congressional recess in 1944 as an ordinary seaman, North Atlantic tanker duty, United States Merchant Marine; was not a candidate for renomination in 1960 to the Eighty-seventh Congress; director, National Housing Conference, and First Federal Savings and Loan Association of Paterson; remained active in civic affairs until his death in Hawthorne, N.J., June 20, 1972; interment in Laurel Grove Memorial Park, Totowa Borough, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

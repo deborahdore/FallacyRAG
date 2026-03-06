@@ -1,0 +1,56 @@
+{
+    "name": "Jim Gerlach",
+    "birthDate": "1955",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Ellwood City, Lawrence County, Pa., on February 25, 1955; B.A., Dickinson College, Carlisle, Pa., 1977; J.D., Dickinson College, Carlisle, Pa., 1980; lawyer, private practice; member of the Pennsylvania state house of representatives, 1991-1994; member of the Pennsylvania state senate, 1995-2002; elected as a Republican to the One Hundred Eighth and to the five succeeding Congresses (January 3, 2003-January 3, 2015); was not a candidate for reelection to the One Hundred Fourteenth Congress in 2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

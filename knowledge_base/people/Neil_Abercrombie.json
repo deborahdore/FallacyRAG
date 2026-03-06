@@ -1,0 +1,96 @@
+{
+    "name": "Neil Abercrombie",
+    "birthDate": "1938-06-26",
+    "deathDate": null,
+    "bio": "a Representative from Hawaii; born in Buffalo, Erie County, N.Y., June 26, 1938; graduated from Williamsville High School, Williamsville, N.Y., 1955; B.A., Union College, Schenectady, N.Y., 1959; M.A., University of Hawaii, Manoa, Hawaii, 1964; Ph.D., University of Hawaii, Manoa, Hawaii, 1974; unsuccessful candidate for United States Senate in 1970; member of the Hawaii state house of representatives, 1974-1978; member of the Hawaii state senate, 1978-1986; elected as a Democrat to the Ninety-ninth Congress in a special election to fill the vacancy caused by the resignation of United States Representative Cecil Heftel (September 20, 1986-January 3, 1987); unsuccessful candidate for election to the One Hundredth Congress in 1986; member of the Honolulu city council, 1988-1991; elected to the One Hundred Second and to the nine succeeding Congresses until his resignation on February 28, 2010 (January 3, 1991-February 28, 2010); Governor of Hawaii, 2010-2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "HAWAII"
+        }
+    ]
+}

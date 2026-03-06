@@ -1,0 +1,23 @@
+{
+    "name": "Uriah Forrest",
+    "birthDate": "1756",
+    "deathDate": "1805-07-06",
+    "bio": "A Delegate and a Representative from Maryland; born near Leonardtown, St. Mary's County, Md., in 1756; received a limited schooling; served in the Revolutionary War, as a first lieutenant, captain, and major in Maryland forces, Flying Camp; wounded at the Battle of Germantown and lost a leg at the Battle of Brandywine; Delegate to the Confederation Congress in 1787; unsuccessful candidate for election to United States Senate for the First Congress in 1788; elected as a Pro-Administration candidate to the Third Congress and served until his resignation on November 8, 1794 (March 4, 1793-November 8, 1794); commissioned major general of Maryland Militia in 1795; clerk of the circuit court of the District of Columbia, 1800-1805; died on July 6, 1805, at his home, ``Rosedale,'' near Georgetown, D.C.; interment in Oak Hill Cemetery, Washington, D.C.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MARYLAND"
+        }
+    ]
+}

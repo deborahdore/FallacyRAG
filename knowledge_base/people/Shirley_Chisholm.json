@@ -1,0 +1,64 @@
+{
+    "name": "Shirley Chisholm",
+    "birthDate": "1924-11-30",
+    "deathDate": "2005-01-01",
+    "bio": "a Representative from New York; born Shirley Anita St. Hill, November 30, 1924, in Brooklyn, Kings County, N.Y.; attended public schools of Brooklyn, N.Y.; B.A., Brooklyn College, 1946; M.A., Columbia University, 1952; nursery school teacher, 1946-1953; director, Hamilton-Madison Child Care Center, New York City, 1953-1959; educational consultant, Division of Day Care, New York City, 1959-1964; assemblywoman, New York State Legislature, 1964-1968; elected as a Democrat to the Ninety-first and to the six succeeding Congresses (January 3, 1969-January 3, 1983); was not a candidate for reelection to the Ninety-eighth Congress in 1982; unsuccessful candidate for the Democratic nomination for President of the United States in 1972; died on January 1, 2005, in Ormond Beach, Fla.; interment in Forest Lawn Cemetery, Buffalo, N.Y.; awarded posthumously the Presidential Medal of Freedom by President Barack Obama, 2015.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

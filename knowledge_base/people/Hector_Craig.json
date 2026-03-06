@@ -1,0 +1,24 @@
+{
+    "name": "Hector Craig",
+    "birthDate": "1775",
+    "deathDate": "1842-01-31",
+    "bio": "a Representative from New York; born in Paisley, Scotland, in 1775; immigrated to the United States and settled in Orange County, N.Y., in 1790; founded the town of Craigsville, where he built a paper mill, grist mill, and saw mill; elected as a Jackson Republican to the Eighteenth Congress (March 4, 1823-March 3, 1825); elected as a Jacksonian candidate to the Twenty-first Congress and served until his resignation on July 12, 1830 (March 4, 1829-July 12, 1830); appointed surveyor of the port of New York by President Jackson in 1830; United States Commissioner of Insolvency in 1832; surveyor of customs in New York 1833-1839; died in Craigsville, N.Y., January 31, 1842; interment in a private cemetery on the Caldwell estate in Blooming Grove, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

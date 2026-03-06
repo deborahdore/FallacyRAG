@@ -1,0 +1,23 @@
+{
+    "name": "Harriet Hageman",
+    "birthDate": "1962-10-18",
+    "deathDate": null,
+    "bio": "a Representative from Wyoming; born in Douglas, Converse County, Wyo., October 18, 1962; graduated from Lingle-Fort Laramie High School, Lingle, Wyo., 1981; attended Casper College, Casper, Wyo., 1981-1983; B.S., University of Wyoming, Laramie, Wyo., 1986; J.D., University of Wyoming, Laramie, Wyo., 1989; judicial clerk, United States Court of Appeals, Tenth Circuit; lawyer, private practice; adjunct professor, Central Michigan University, Mount Pleasant, Mich.; staff attorney, Wyoming state attorney general&rsquo;s office; Delegate, Republican National Convention, 2016, 2020; unsuccessful candidate for nomination for Governor of Wyoming in 2018; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present); one of the managers appointed by the House of Representatives in 2024 to conduct the impeachment proceedings of Alejandro N. Mayorkas, United States Secretary of Homeland Security.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "James Domengeaux",
+    "birthDate": "1907",
+    "deathDate": "1988",
+    "bio": "A Representative from Louisiana; born in Lafayette, Lafayette Parish, La., January 6, 1907; attended Mount Carmel Academy, Cathedral High School, Southwestern Louisiana Institute at Lafayette, and Loyola University, New Orleans, La.; was graduated from the law department of Tulane University, New Orleans, La., in 1931; was admitted to the bar the same year and commenced practice in Lafayette, La.; member of the State house of representatives in 1940; elected as a Democrat to the Seventy-seventh Congress; reelected to the Seventy-eighth Congress and served from January 3, 1941, to April 15, 1944, when he resigned to join the armed forces of the United States; served as a private in the Combat Engineers until his medical discharge; was subsequently elected to fill the vacancy in the Seventy-eighth Congress caused by his own resignation; reelected to the Seventy-ninth and Eightieth Congresses and served from November 7, 1944, to January 3, 1949; chairman, Committee on Elections No. 1 (Seventy-eighth and Seventy-ninth Congresses); was not a candidate for renomination in 1948, but was an unsuccessful candidate for the Democratic nomination for United States Senator; resumed the practice of law; founder, Council for the Development of French in Louisiana, 1968; member, Governor's Committee on Tidelands; was a resident of Lafayette, La., until his death there on April 11, 1988; interment in St. John's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

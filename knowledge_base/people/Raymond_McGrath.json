@@ -1,0 +1,56 @@
+{
+    "name": "Raymond McGrath",
+    "birthDate": "1942",
+    "deathDate": null,
+    "bio": "A Representative from New York; born in Valley Stream, Nassau County, N.Y., March 27, 1942; attended the private schools; graduated, Valley Stream High School, 1959; B.S., New York State University, Brockport, 1963; M.A., New York University, New York City, 1968; teacher; author; deputy commissioner, Hempstead Township Parks and Recreation, 1965-1971; served in the New York State assembly, 1976-1980; elected as a Republican to the Ninety-seventh and to the five succeeding Congresses (January 3, 1981-January 3, 1993); was not a candidate for renomination in 1992 to the One Hundred Third Congress; president of a national brewers trade association; is a resident of Valley Stream, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

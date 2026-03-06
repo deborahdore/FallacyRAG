@@ -1,0 +1,15 @@
+{
+    "name": "Sheri Biggs",
+    "birthDate": "1970-03-28",
+    "deathDate": null,
+    "bio": "a Representative from South Carolina; born in Mississippi, March 28, 1970; graduated from Kosciusko High School, Kosciusko, Miss., 1988; graduated from Carolina Bible College, Anderson, S.C.; D.N.P., Samford University, Homewood, Ala.; Mississippi Air National Guard; nurse practitioner; nursing home administrator; elected as a Republican to the One Hundred Nineteenth Congress (January 03, 2025 &ndash; present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

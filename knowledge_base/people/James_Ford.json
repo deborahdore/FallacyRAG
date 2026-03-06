@@ -1,0 +1,24 @@
+{
+    "name": "James Ford",
+    "birthDate": "1783-05-04",
+    "deathDate": "1859-08-18",
+    "bio": "A Representative from Pennsylvania; born in Perth Amboy, Middlesex County, N.J., May 4, 1783; attended the common schools; moved to New York City in 1797 and to Lindsley Town (later Lindley), Steuben County, N.Y., in 1803; moved to Tioga County, Pa.; member of the State house of representatives in 1824 and 1825; elected as a Jacksonian candidate to the Twenty-first and Twenty-second Congresses (March 4, 1829-March 3, 1833); operated a sawmill and a gristmill at Lawrenceville, Tioga County, Pa., until his death at that place on August 18, 1859; interment in the old Lindsley family cemetery at Lindley, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

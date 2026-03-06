@@ -1,0 +1,48 @@
+{
+    "name": "George Grennell",
+    "birthDate": "1786-12-25",
+    "deathDate": "1877-11-19",
+    "bio": "a Representative from Massachusetts; born in Greenfield, Mass., December 25, 1786; attended Deerfield Academy and graduated from Dartmouth College, Hanover, N.H., in 1808; admitted to the bar in 1811; prosecuting attorney for Franklin County 1820-1828; member of the State senate 1825-1827; elected as an Anti-Jacksonian candidate to the Twenty-first through the Twenty-fourth Congresses and reelected as a Whig to the Twenty-fifth Congress (March 4, 1829-March 3, 1839); was not a candidate for renomination in 1838; trustee of Amherst College, Massachusetts, 1838-1859; judge of probate 1849-1853; clerk of Franklin County Courts 1853-1865; first president of the Troy &amp; Greenfield Railroad; died in Greenfield, Mass., November 19, 1877; interment in Green River Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

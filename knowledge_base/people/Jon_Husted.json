@@ -1,0 +1,15 @@
+{
+    "name": "Jon Husted",
+    "birthDate": "1967-08-25",
+    "deathDate": null,
+    "bio": "a Senator from Ohio; born in Royal Oak, Mich., August 25, 1967; graduated Montpelier High School, Montpelier, Ohio, 1985; B.A., education, University of Dayton, 1989; M.A., communications, University of Dayton, 1992; vice president for economic development, Dayton area chamber of commerce; member of the Ohio house of representatives, 2001-2009, serving as speaker of the house, 2005-2009; member of the Ohio state senate, 2009-2011; Ohio secretary of state, 2011-2019; lieutenant governor of Ohio, 2019-2025; appointed as a Republican to the United States Senate to fill the vacancy caused by the resignation of J.D. Vance for the term ending January 3, 2029; took the oath of office on January 21, 2025.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

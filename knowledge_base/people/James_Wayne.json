@@ -1,0 +1,32 @@
+{
+    "name": "James Wayne",
+    "birthDate": "1790",
+    "deathDate": "1867-07-05",
+    "bio": "a Representative from Georgia; born in Savannah, Ga., in 1790; completed preparatory studies and graduated from Princeton College in 1808; studied law in New Haven, Conn.; was admitted to the bar in 1810 and commenced practice in Savannah, Ga.; entered the military service during the War of 1812, and served as an officer in the Georgia Hussars; member of the Georgia state house of representatives in 1815 and 1816; mayor of Savannah, 1817-1819; judge of the court of common pleas and oyer and terminer of Savannah 1820-1822; judge of the superior court of Savannah, 1822-1828; elected as a Jacksonian candidate to the Twenty-first and to the two succeeding Congresses and served from March 4, 1829, to January 13, 1835, when he resigned to accept a judicial position; chair, Committee on Foreign Affairs (Twenty-third Congress); reelected to the Twenty-fourth Congress but resigned before Congress convened to accept an appointment as an Associate Justice of the Supreme Court of the United States and served from January 14, 1835, until his death in Washington, D.C., on July 5, 1867; interment in Laurel Grove Cemetery, Savannah, Chatham County, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        }
+    ]
+}

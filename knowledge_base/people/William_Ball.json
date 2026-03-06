@@ -1,0 +1,40 @@
+{
+    "name": "William Ball",
+    "birthDate": "1781-01-02",
+    "deathDate": "1824-02-29",
+    "bio": "A Representative from Virginia; born in Lancaster County, Va., January 2, 1781; received a liberal schooling; served in the Virginia state house of delegates, 1805-1806 and 1810-1814 and in the Virginia state senate, 1814-1817; served as paymaster in the War of 1812 and was assigned to the Ninety-second Virginia Regiment; elected as a Democratic Republican to the Fifteenth and to the two succeeding Congresses and as a Crawford Republican to the Eighteenth Congress and served from March 4, 1817, until his death in Washington, D.C., February 29, 1824; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

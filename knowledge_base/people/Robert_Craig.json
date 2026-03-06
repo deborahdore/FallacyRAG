@@ -1,0 +1,48 @@
+{
+    "name": "Robert Craig",
+    "birthDate": "1792",
+    "deathDate": "1852-11-25",
+    "bio": "a Representative from Virginia; born near Christiansburg, Montgomery County, Va., in 1792; attended the rural schools, Washington College (now Washington and Lee University), Lexington, Va., and graduated from Lewisburg Academy in Greenbrier County; engaged in planting; served in the State house of delegates in 1817, 1818, and again in 1825-1829; member of the Virginia Board of Public Works 1820-1823; elected as a Jacksonian candidate to the Twenty-first and Twenty-second Congresses (March 4, 1829-March 3, 1833); unsuccessful candidate for reelection in 1832 to the Twenty-third Congress; resumed agricultural pursuits; elected as a Jacksonian candidate to the Twenty-fourth Congress and reelected as a Democrat to the Twenty-fifth and Twenty-sixth Congresses (March 4, 1835-March 3, 1841); chairman, Committee on Revolutionary Claims (Twenty-fifth and Twenty-sixth Congresses); was not a candidate for renomination in 1840; moved to Roanoke County, Va., in 1842 and engaged in agricultural pursuits; again a member of the State house of delegates 1850-1852; died on his estate, \"Green Hill,\" near Salem, Roanoke County, Va., November 25, 1852; interment in the family burying ground at \"Green Hill.\"",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

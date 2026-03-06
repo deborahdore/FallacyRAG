@@ -1,0 +1,16 @@
+{
+    "name": "Marcus Lisle",
+    "birthDate": "1862-09-23",
+    "deathDate": "1894-07-07",
+    "bio": "A Representative from Kentucky; born near Winchester, Clark County, Ky., September 23, 1862; attended the common schools of his native county and the University of Kentucky at Lexington; was graduated from the law department of Columbia College (now Columbia University), New York City; was admitted to the bar and commenced the practice of his profession in Winchester, Ky., in 1887; served as county judge of Clark County, Ky., in 1890; elected as a Democrat to the Fifty-third Congress and served from March 4, 1893, until his death in Winchester, Ky., July 7, 1894; interment in Winchester Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

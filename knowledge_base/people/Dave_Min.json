@@ -1,0 +1,15 @@
+{
+    "name": "Dave Min",
+    "birthDate": "1976-03-05",
+    "deathDate": null,
+    "bio": "a Representative from California, born in Rhode Island, March 5, 1976; B.A., University of Pennsylvania, Philadelphia, Pa., 1999; B.S., University of Pennsylvania, Philadelphia, Pa., 1999; J.D., Harvard University, Cambridge, Mass., 2002; lawyer, private practice; staff attorney, United States Securities and Exchange Commission; staff, United States Senator Charles Ellis (Chuck) Schumer of New York, 2007; staff, Senate Committee on Banking, Housing, and Urban Development, 2007; staff, Joint Economic Committee, 2008-2009; faculty, University of California-Irvine, School of Law, Irvine, Calif., 2012-2020; member of the California state senate, 2020-2024; unsuccessful candidate for nomination to the One Hundred Eighteenth Congress in 2018; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

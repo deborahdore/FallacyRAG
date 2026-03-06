@@ -1,0 +1,32 @@
+{
+    "name": "William Ketchum",
+    "birthDate": "1921",
+    "deathDate": "1978",
+    "bio": "A Representative from California; born in Los Angeles on September 2, 1921; attended schools in Los Angeles County and military school in North Hollywood, Calif.; attended Colorado School of Mines, 1939-1940, and the University of Southern California, 1940-1942; entered the United States Army in 1942 and served in the Pacific before discharge in 1946; recalled into service during the Korean War and served 1950-1953; owned and operated a hardware and auto-supply store, 1946-1950; salesman, 1953-1957; engaged in cattle ranching and farming; member, Republican State Central committee, 1964-1966; member, California assembly, 1967-1972; delegate to the Republican National Convention, 1968; elected as a Republican to the Ninety-third and to the two succeeding Congresses and served from January 3, 1973, until his death in Bakersfield, Calif., on June 24, 1978.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

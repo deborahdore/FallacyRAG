@@ -1,0 +1,31 @@
+{
+    "name": "Cleo Fields",
+    "birthDate": "1962-11-22",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Baton Rouge, East Baton Rouge Parish, La., November 22, 1962; graduated from McKinley High School, Baton Rouge, La., 1980; B.A., Southern University, 1984, J.D., Southern University Law Center, 1987; nonprofit executive; lawyer, private practice; unsuccessful candidate for election to the One Hundred Second Congress in 1990; member of the Louisiana state senate, 1988-1993 1997-2008, 2019-2024; elected as a Democrat to the One Hundred Third and to the succeeding Congress (January 3, 1993-January 3, 1997); was not a candidate for reelection to the One Hundred Fifth Congress in 1996; unsuccessful candidate for election for Governor of Louisiana in 1995; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Scott Taylor",
+    "birthDate": "1979",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Baltimore, Md., June 27, 1979; graduated from Mardela High School, Mardela Springs, Md., 1997; certificate in Public Procurement and Contract Management, Old Dominion University; A.L.B., Harvard University Extension School, Cambridge, Mass., 2013; United States Navy, 1997-2005; real estate broker; entrepreneur; author; unsuccessful candidate for nomination to the One Hundred Twelfth Congress in 2010; member of the Virginia state house of delegates, 2014-2016; elected as a Republican to the One Hundred Fifteenth Congress (January 3, 2017-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018; unsuccessful candidate for election to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

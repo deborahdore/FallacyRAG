@@ -1,0 +1,39 @@
+{
+    "name": "Sharice Davids",
+    "birthDate": "1980-05-22",
+    "deathDate": null,
+    "bio": "a Representative from Kansas; born in Frankfurt, Germany, May 22, 1980; an enrolled member of the Ho-Chunk Nation; graduated from Leavenworth High School, Leavenworth, Kans., 1998; attended Haskell Indian Nations University, Lawrence, Kans.; attended University of Kansas, Lawrence, Kans.; A.A., Johnson County Community College, Overland Park, Kans., 2003; B.A., University of Missouri, Kansas City, Mo., 2007; J.D., Cornell University, Ithaca, N.Y., 2010; lawyer; business owner; non-profit executive; professional athlete; White House Fellow, 2016-2017; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Hattie Caraway",
+    "birthDate": "1878",
+    "deathDate": "1950",
+    "bio": "(Wife of Thaddeus Horatius Caraway), a Senator from Arkansas; born in Bakerville, Humphreys County, Tenn., February 1, 1878; attended the public schools and graduated from Dickson (Tenn.) Normal College in 1896; thereafter located in Jonesboro, Ark.; appointed as a Democrat on November 13, 1931, and subsequently elected on January 12, 1932, to the United States Senate to fill the vacancy caused by the death of her husband, Thaddeus H. Caraway; reelected in 1932 and 1938 and served from November 13, 1931, to January 3, 1945; unsuccessful candidate for renomination in 1944; first woman elected to the United States Senate; chairwoman, Committee on Enrolled Bills (Seventy-third through Seventy-eighth Congresses); member of the United States Employees' Compensation Commission 1945-1946; member of the Employees' Compensation Appeals Board from July 1946 until her death in Falls Church, Va., December 21, 1950; interment in West Lawn Cemetery, Jonesboro, Ark.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

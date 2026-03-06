@@ -1,0 +1,80 @@
+{
+    "name": "Charles Plumley",
+    "birthDate": "1875-04-14",
+    "deathDate": "1964-10-31",
+    "bio": "A Representative from Vermont; born in Northfield, Washington County, Vt., April 14, 1875; attended the public schools; was graduated from Norwich University, Northfield, Vt., in 1896; assistant secretary of the State senate in 1894; principal and superintendent of the Northfield graded and high schools 1896-1900; assistant clerk and clerk of the State house of representatives 1900-1910; captain in the Vermont National Guard in 1901; colonel in the Officers' Reserve Corps; studied law; was admitted to the bar in 1903 and commenced practice in Northfield, Vt.; secretary of the French-Venezuela Mixed Commission in 1906; member of the State house of representatives 1912-1915, serving as speaker; commissioner of taxes for the State of Vermont 1912-1919; general counsel and tax attorney for a rubber company in Akron, Ohio, in 1919 and 1920; president of Norwich University 1920-1934; reading clerk of the Republican National Conventions of 1936 and 1940; also engaged in banking; elected as a Republican to the Seventy-third Congress to fill the vacancy caused by the resignation of Ernest W. Gibson; reelected to the Seventy-fourth and to the seven succeeding Congresses and served from January 16, 1934, to January 3, 1951; was not a candidate for renomination in 1950; resumed the practice of law in Northfield, Vt.; died in Barre, Vt., October 31, 1964; interment in Mount Hope Cemetery, Northfield, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        }
+    ]
+}

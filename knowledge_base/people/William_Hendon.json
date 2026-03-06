@@ -1,0 +1,24 @@
+{
+    "name": "William Hendon",
+    "birthDate": "1944",
+    "deathDate": "2018",
+    "bio": "A Representative from North Carolina; born in Asheville, Buncombe County, N.C., November 9, 1944; attended the public schools; graduated from Lee H. Edwards High School, 1962; B.S., University of Tennessee, Knoxville, 1966, and M.B.A., 1968; University of Tennessee faculty member, 1968-1970; businessman, 1970-1980; elected as a Republican to the Ninety-seventh Congress (January 3, 1981-January 3, 1983); unsuccessful candidate for reelection in 1982 to the Ninety-eighth Congress; elected to the Ninety-ninth Congress (January 3, 1985-January 3, 1987); was an unsuccessful candidate for reelection in 1986; fellow, American Defense Institute, Washington, D.C.; died on June 20, 2018, in Forest City, N.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

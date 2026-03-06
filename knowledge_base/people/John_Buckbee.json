@@ -1,0 +1,48 @@
+{
+    "name": "John Buckbee",
+    "birthDate": "1871-08-01",
+    "deathDate": "1936-04-23",
+    "bio": "A Representative from Illinois; born on a farm near Rockford, Winnebago County, Ill., August 1, 1871; attended the public schools of Rockford; studied agriculture and horticulture in Austria, France, Holland, Denmark, Sweden, Belgium, Italy, and Great Britain; established and engaged in a seed business in Rockford, Ill.; elected as a Republican to the Seventieth and to the four succeeding Congresses; served from March 4, 1927, until his death in Rockford, Ill., April 23, 1936; was not a candidate for renomination in 1936; interment in Greenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

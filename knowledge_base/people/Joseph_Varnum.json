@@ -1,0 +1,110 @@
+{
+    "name": "Joseph Varnum",
+    "birthDate": "1750-01-29",
+    "deathDate": "1821-09-21",
+    "bio": "a Representative and a Senator from Massachusetts; born in Dracut, Middlesex County, Mass., January 29, 1750 or 1751; largely self-taught; farmer; served in the Revolutionary War; member of the Massachusetts state house of representatives, 1780-1785; member of the Massachusetts state senate, 1786-1795; delegate to the Massachusetts state convention that ratified the Federal Constitution in 1788; justice of the court of common pleas; chief justice of the court of general sessions; elected to the Fourth and to the eight succeeding Congresses and served from March 4, 1795, to June 29, 1811, when he resigned, having been elected Senator; Speaker of the House (Tenth and Eleventh Congresses); chair, Committee on Elections (Fifth Congress); elected as a Democratic Republican to the United States Senate in 1811 to fill the vacancy in the term commencing March 4, 1811, and served from June 29, 1811, to March 3, 1817; served as President pro tempore of the Senate during the Thirteenth Congress; chairman, Committee on Militia (Fourteenth Congress); delegate to the Massachusetts state constitutional convention in 1820; member of the Massachusetts state senate, 1817-1821; died in Dracut, Mass., September 21, 1821; interment in Varnum Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

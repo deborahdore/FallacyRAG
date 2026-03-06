@@ -1,0 +1,24 @@
+{
+    "name": "Richard Habersham",
+    "birthDate": "1786-12",
+    "deathDate": "1842-12-02",
+    "bio": "A Representative from Georgia; born in Savannah, Ga., in December 1786; attended private schools, and was graduated from Princeton College in 1810; studied law; was admitted to the bar and commenced practice in Savannah, Ga.; appointed United States attorney and served until 1825, when he resigned; attorney general of Georgia; moved to Clarksville, Habersham County, in 1835; elected as a Whig to the Twenty-sixth and Twenty-seventh Congresses and served from March 4, 1839, until his death; died in Clarksville, Ga., December 2, 1842; interment in the Old Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Harcourt Pratt",
+    "birthDate": "1866-10-23",
+    "deathDate": "1934-05-21",
+    "bio": "A Representative from New York; born in Highland, Ulster County, N.Y., October 23, 1866; attended the public schools and Claverack Academy at Claverack, N.Y.; engaged in the lumber and coal business; also interested in banking; member of the Board of Supervisors of Ulster County 1895-1897; member of the State assembly in 1897; director of the First National Bank of Highland since 1900 and of the Kingston Trust Co. since 1921; was president of the Board of Education of Highland, N.Y., 1908-1926; elected as a Republican to the Sixty-ninth and to the three succeeding Congresses (March 4, 1925-March 3, 1933); was not a candidate for renomination in 1932; resumed his former business interests; died from injuries received in an automobile accident near Highland, N.Y., May 21, 1934; interment in Highland Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

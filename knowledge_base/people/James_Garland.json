@@ -1,0 +1,32 @@
+{
+    "name": "James Garland",
+    "birthDate": "1791-06-06",
+    "deathDate": "1885-08-08",
+    "bio": "a Representative from Virginia; born at Ivy Depot, Albemarle County, Va., June 6, 1791; pursued preparatory studies; studied law; admitted to the bar and commenced practice in Lovingston, Va.; served in the War of 1812; resumed the practice of law; served in the State house of delegates 1829-1831; elected as a Jacksonian candidate to the Twenty-fourth Congress; reelected as a Democrat to the Twenty-fifth Congress and as a Conservative to the Twenty-sixth Congress (March 4, 1835-March 3, 1841); unsuccessful candidate for reelection in 1840 to the Twenty-seventh Congress; resumed the practice of law; moved to Lynchburg, Va., in 1841; Commonwealth attorney for Lynchburg 1849-1872; elected judge of the corporation court in 1841, and served until December 31, 1882; lived in retirement until his death in Lynchburg, Va., August 8, 1885; interment in Spring Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Conservative",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

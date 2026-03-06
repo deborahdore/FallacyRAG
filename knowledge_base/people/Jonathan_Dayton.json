@@ -1,0 +1,85 @@
+{
+    "name": "Jonathan Dayton",
+    "birthDate": "1760-10-16",
+    "deathDate": "1824-10-09",
+    "bio": "a Delegate, a Representative, and a Senator from New Jersey; born in Elizabethtown (now Elizabeth), N.J., October 16, 1760; graduated from the College of New Jersey (now Princeton University) in 1776; studied law; admitted to the bar; served in the Revolutionary War in the Third and later the Second New Jersey Regiment of the Continental Army 1776-1783, attaining the rank of captain; taken prisoner at Elizabethtown, N.J., and later exchanged; member of the New Jersey state general assembly, 1786-1787, 1790, and served as speaker in 1790; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; Delegate to the Confederation Congress, 1787-1788; member, New Jersey Legislative State council, 1790; elected to the Second and to the three succeeding Congresses (March 4, 1791-March 3, 1799); Speaker of the House of Representatives (Fourth and Fifth Congresses); chair, Committee on Elections (Third Congress); was not a candidate for renomination in 1798, having become a candidate for the United States Senate; elected as a Federalist to the United States Senate and served from March 4, 1799, to March 3, 1805; was arrested in 1807 on the charge of conspiring with Aaron Burr in treasonable projects; subsequently released and never brought to trial; member, New Jersey state assembly, 1814-1815; died in Elizabethtown, N.J., October 9, 1824; interment in a vault in St. John's Churchyard; the city of Dayton, Ohio, was named for him.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

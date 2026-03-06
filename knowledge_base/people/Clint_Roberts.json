@@ -1,0 +1,16 @@
+{
+    "name": "Clint Roberts",
+    "birthDate": "1935-01-30",
+    "deathDate": "2017-02-17",
+    "bio": "a Representative from South Dakota; born in Presho, Lyman County, S.Dak., January 30, 1935; attended the public schools; graduated from Presho High School, Presho, S.Dak., 1952; attended Black Hills State College, Spearfish, S.Dak., 1952-1953; farmer; rancher; owner of clothing store; member of the South Dakota state senate, 1972-1978; unsuccessful nominee for Governor of South Dakota, 1978; South Dakota secretary of agriculture, 1979-1980; elected as a Republican to the Ninety-seventh Congress (January 3, 1981-January 3, 1983); unsuccessful candidate for reelection to the Ninety-eighth Congress in 1982; director, South Dakota Energy Office, 1987-1989; was a resident of Ft. Pierre, S.Dak.; died on February 12, 2017, in Pierre, S.Dak.; interment at Presho Cemetery, Presho, S.Dak.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        }
+    ]
+}

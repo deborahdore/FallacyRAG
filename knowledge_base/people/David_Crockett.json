@@ -1,0 +1,32 @@
+{
+    "name": "David Crockett",
+    "birthDate": "1786-08-17",
+    "deathDate": "1836-03-06",
+    "bio": "a Representative from Tennessee; born at the confluence of Limestone Creek and Nolichuckey River in the State of Franklin, present day Greene County, Tenn., August 17, 1786; attended the common schools; served in Creek campaign, 1813-1814; member of the Tennessee state house of representatives, 1821-1823; unsuccessful candidate for election to the Nineteenth Congress in 1825; elected as a Jacksonian candidate to the Twentieth Congress (March 4, 1827-March 3, 1829); changed from a Jacksonian candidate to an Anti-Jacksonian candidate; elected as an Anti-Jacksonian candidate to the Twenty-first Congress (March 4, 1829-March 3, 1831); unsuccessful candidate for reelection to the Twenty-second Congress in 1830; elected as an Anti-Jacksonian candidate to the Twenty-third Congress (March 4, 1833-March 3, 1835); unsuccessful candidate for reelection to the Twenty-fourth Congress in 1834; fought at the Battle of the Alamo, San Antonio, Tex., 1836; died about March 6, 1836; remains cremated.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

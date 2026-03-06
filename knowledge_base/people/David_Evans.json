@@ -1,0 +1,40 @@
+{
+    "name": "David Evans",
+    "birthDate": "1946",
+    "deathDate": null,
+    "bio": "A Representative from Indiana; born in Lafayette, Tippecanoe County, Ind., August 17, 1946; attended public schools in Shoals, Ind.; A.B., Indiana University, 1967; postgraduate work at Indiana University, 1967-1969, Butler University, 1969-1971; teacher of social studies and science, 1968-1974; delegate to Democratic National Mid-term Convention, 1974; elected as a Democrat to the Ninety-fourth and to the three succeeding Congresses (January 3, 1975-January 3, 1983); unsuccessful candidate for nomination in 1982 to the Ninety-eighth Congress from the tenth congressional district of Indiana; legislative consultant in Washington, D.C.; is a resident of McLean, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

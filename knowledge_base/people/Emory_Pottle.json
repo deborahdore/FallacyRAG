@@ -1,0 +1,24 @@
+{
+    "name": "Emory Pottle",
+    "birthDate": "1815-07-04",
+    "deathDate": "1891-04-18",
+    "bio": "A Representative from New York; born in Naples, Ontario County, N.Y., July 4, 1815; pursued classical studies at Penn Yan (N.Y.) Academy; studied law; was admitted to the bar at New York City in 1838 and commenced practice in Springfield, Clark County, Ohio; returned to Naples, N.Y., and continued the practice of law; member of the State assembly in 1847; elected as a Republican to the Thirty-fifth and Thirty-sixth Congresses (March 4, 1857-March 3, 1861); again resumed the practice of his profession; appointed by President Lincoln a member of the commission which prepared a bill providing for a tariff on wool; died in Naples, N.Y., April 18, 1891; interment in Rose Ridge Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

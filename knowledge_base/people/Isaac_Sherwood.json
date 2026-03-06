@@ -1,0 +1,80 @@
+{
+    "name": "Isaac Sherwood",
+    "birthDate": "1835-08-13",
+    "deathDate": "1925-10-15",
+    "bio": "A Representative from Ohio; born in Stanford, Dutchess County, N.Y., August 13, 1835; attended the common schools, the Hudson River Institute, Claverack, N.Y., Antioch College, Yellow Springs, Ohio, and the Ohio Law College, Poland, Ohio; editor of the Williams County Gazette, Bryan, Ohio, in 1857; elected probate judge of Williams County in October 1860; resigned at the beginning of the Civil War and enlisted April 22, 1861, as a private in the Fourteenth Regiment, Ohio Volunteer Infantry, and promoted through the ranks to lieutenant colonel; honorably mustered out June 27, 1865; settled in Toledo, Ohio, and was editor of the Toledo Daily Commercial; political editorial writer on the Cleveland Leader; secretary of state of Ohio in 1868 and 1870; organized and established the Bureau of Statistics of the State of Ohio in 1869; elected as a Republican to the Forty-third Congress (March 4, 1873-March 3, 1875); was not a candidate for renomination in 1874; proprietor and editor of the Toledo Journal 1875-1884; elected probate judge of Lucas County in 1878 and 1881; editor of the Canton News-Democrat 1885-1895; elected as a Democrat to the Sixtieth and to the six succeeding Congresses (March 4, 1907-March 3, 1921); chairman, Committee on Invalid Pensions (Sixty-second through Sixty-fifth Congresses); unsuccessful candidate for reelection in 1920 to the Sixty-seventh Congress; again elected to the Sixty-eighth Congress (March 4, 1923-March 3, 1925); unsuccessful candidate for reelection in 1924 to the Sixty-ninth Congress; retired from public life and returned to Toledo, Ohio, where he died October 15, 1925; interment in Woodlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

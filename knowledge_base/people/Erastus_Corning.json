@@ -1,0 +1,32 @@
+{
+    "name": "Erastus Corning",
+    "birthDate": "1794-12-14",
+    "deathDate": "1872-04-09",
+    "bio": "A Representative from New York; born in Norwich, Conn., December 14, 1794; moved to Troy, N.Y., and thence, in 1814, to Albany, where he established himself in iron manufacturing; served in the State senate 1842-1845; alderman of Albany; mayor 1834-1837; elected as a Democrat to the Thirty-fifth Congress (March 4, 1857-March 3, 1859); unsuccessful candidate for reelection to the Thirty-sixth Congress; member of the peace conference of 1861; elected to the Thirty-seventh and Thirty-eighth Congresses and served from March 4, 1861, to October 5, 1863, when he resigned; delegate to the State constitutional convention in 1867; died in Albany, N.Y., April 9, 1872; interment in Rural Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

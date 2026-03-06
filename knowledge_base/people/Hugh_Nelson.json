@@ -1,0 +1,56 @@
+{
+    "name": "Hugh Nelson",
+    "birthDate": "1768-09-30",
+    "deathDate": "1836-03-18",
+    "bio": "A Representative from Virginia; born in Yorktown, York County, Va., September 30, 1768; completed preparatory studies; graduated from the College of William and Mary, Williamsburg, Va., in 1780; served in the Virginia state senate, 1786-1791; member of the Virginia state house of delegates, 1805-1809, 1828-1829; judge of the general court; elected as a Democratic Republican to the Twelfth and to the five succeeding Congresses and served from March 4, 1811, until his resignation on January 14, 1823, having received an appointment in the diplomatic service; chairman, Committee on the Judiciary (Fourteenth, Fifteenth, and Seventeenth Congresses); appointed by President James Monroe United States Minister to Spain on January 15, 1823, and served until November 23, 1824; died at his home, \"Belvoir,\" Albemarle County, Va., March 18, 1836; interment in Belvoir Cemetery, Cismont, Albemarle County, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,152 @@
+{
+    "name": "Quentin Burdick",
+    "birthDate": "1908",
+    "deathDate": "1992",
+    "bio": "a Representative and a Senator from North Dakota; born in Munich, Cavalier County, N.Dak., June 19, 1908; attended the public schools; graduated, University of Minnesota 1931 and from the law department of the same university 1932; admitted to the bar the same year and commenced practice in Fargo, N.Dak.; elected as a Democrat to the Eighty-sixth Congress and served from January 3, 1959, until his resignation August 8, 1960; elected to the United States Senate June 28, 1960, to fill the vacancy caused by the death of William Langer; reelected in 1964, 1970, 1976, 1982, and again in 1988, and served from August 8, 1960, until his death; chairman, Committee on Environment and Public Works (One Hundredth through One Hundred Second Congresses); died of a heart attack in Fargo, N. Dak., September 8, 1992; remains were cremated, and ashes interred in Bohemian National Cemetery in Hutchinson, Minn.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH DAKOTA"
+        }
+    ]
+}

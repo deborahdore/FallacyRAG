@@ -1,0 +1,64 @@
+{
+    "name": "Hugh Butler",
+    "birthDate": "1878",
+    "deathDate": "1954",
+    "bio": "A Senator from Nebraska; born on a farm near Missouri Valley, Harrison County, Iowa, February 28, 1878; attended the public schools and was graduated from Doane College at Crete, Nebr., in 1900; construction engineer with the Chicago, Burlington Quincy Railroad 1900-1908; member of the city board of Curtis, Nebr. 1908-1913; engaged in the flour-milling and grain business 1908-1940; member of the board of education of Omaha, Nebr.; Republican National committeeman for Nebraska 1936-1940; elected as a Republican to the United States Senate in 1940; reelected in 1946 and again in 1952 and served from January 3, 1941, until his death in the naval hospital at Bethesda, Md., July 1, 1954; chairman, Committee on Public Lands (Eightieth Congress), Committee on Interior and Insular Affairs (Eighty-third Congress); interment in Forest Lawn Cemetery, Omaha, Nebr.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

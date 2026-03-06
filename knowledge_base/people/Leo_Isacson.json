@@ -1,0 +1,16 @@
+{
+    "name": "Leo Isacson",
+    "birthDate": "1910-04-20",
+    "deathDate": "1996-09-28",
+    "bio": "a Representative from New York; born in New York City, April 20, 1910; attended the public schools; graduated from New York University in 1931 and from the law department of New York University in 1933; admitted to the bar in 1934 and commenced practice in New York City; member of the New York state assembly in 1945 and 1946; elected as an American Laborite to the Eightieth Congress to fill the vacancy caused by the resignation of Benjamin J. Rabin and served from February 17, 1948, to January 3, 1949; unsuccessful candidate for reelection in 1948 to the Eighty-first Congress; resumed the practice of law; delegate to Democratic National Convention in 1968; moved to Florida in 1970; professor of political science, Nova University; died September 28, 1996.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "American Laborite",
+            "represents": "NEW YORK"
+        }
+    ]
+}

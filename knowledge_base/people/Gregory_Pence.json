@@ -1,0 +1,32 @@
+{
+    "name": "Gregory Pence",
+    "birthDate": "1956-11-14",
+    "deathDate": null,
+    "bio": "a Representative from Indiana; born in Columbus, Bartholomew County, Ind., November 14, 1956; graduated from Columbus North High School, Columbus, Ind., 1975; B.A., Loyola University, Chicago, Ill., 1979; M.B.A., Loyola University, Chicago, Ill., 1985; United States Marine Corps., 1979-1983; engaged in the oil industry; retail consultant; small business owner; elected as a Republican to the One Hundred Sixteenth and to the two succeeding Congresses (January 3, 2019-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

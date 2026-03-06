@@ -1,0 +1,24 @@
+{
+    "name": "Samuel Riker",
+    "birthDate": "1743-04-08",
+    "deathDate": "1823-05-19",
+    "bio": "A Representative from New York; born in Newtown, Long Island, N.Y., April 8, 1743; attended the common schools; member of the Newtown, N.Y., committee of correspondence in 1774; was supervisor of Suffolk County, N.Y., in 1783; served in the Revolutionary War, lieutenant of Light Horse; member of the New York state assembly, 1784; elected as a Democratic Republican to the Eighth Congress to fill the vacancy caused by the resignation of John Smith (November 5, 1804-March 3, 1805); unsuccessful candidate for re-election to the Ninth Congress in 1804; elected to the Tenth Congress as a Democratic Republican (March 4, 1807-March 3, 1809); died on May 19, 1823, in Newtown, Long Island, N.Y.; interment in the Dutch Reformed Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

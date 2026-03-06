@@ -1,0 +1,80 @@
+{
+    "name": "J. Exon",
+    "birthDate": "1921",
+    "deathDate": "2005",
+    "bio": "A Senator from Nebraska; born in Geddes, Charles Mix County, S. Dak., August 9, 1921; attended the public schools; attended University of Omaha, Omaha, Nebr., 1939-1941; United States Army Signal Corps 1942-1945; United States Army Reserve 1945-1949; branch manager of a financial corporation; founder and president of an office equipment firm 1953-1971; Governor of Nebraska 1971-1979; elected as a Democrat to the United States Senate in 1978; reelected in 1984 and again in 1990 and served from January 3, 1979 to January 3, 1997; not a candidate for reelection in 1996; was a resident of Lincoln, Neb., until his death, due to cancer, on June 10, 2005; lay in state in the rotunda of the Nebraska state capitol, June 14-15, 2005; interment in Wyuka Cemetery, Lincoln.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

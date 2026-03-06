@@ -1,0 +1,24 @@
+{
+    "name": "Steven Kagen",
+    "birthDate": "1949",
+    "deathDate": null,
+    "bio": "A Representative from Wisconsin; born in Appleton, Outagamie County, Wis., December 12, 1949; attended Appleton East High School, Appleton, Wis., B.S., University of Wisconsin, Madison, Wis., 1972; M.D., University of Wisconsin, Madison, Wis., 1976; physician; founder, Kagen Allergy Clinics; professor, Medical College of Wisconsin, Milwaukee, Wis.; elected as a Democrat to the One Hundred Tenth Congress and to the succeeding Congress (January 3, 2007-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

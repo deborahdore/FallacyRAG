@@ -1,0 +1,39 @@
+{
+    "name": "Chris Pappas",
+    "birthDate": "1980-06-04",
+    "deathDate": null,
+    "bio": "A Representative from New Hampshire; born in Manchester, Hillsborough County, N.H., June 4, 1980; graduated from Manchester Central High School, Manchester, N.H., 1998; A.B., Harvard University, Cambridge, Mass., 2002; restaurant manager; member of the New Hampshire state house of representatives, 2003-2007; Hillsborough County, N.H., treasurer, 2007-2011; member of the New Hampshire executive council, 2013-2019; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Alexander Smyth",
+    "birthDate": "1765",
+    "deathDate": "1830-04-17",
+    "bio": "a Representative from Virginia; born on the Island of Rathlin, Ireland, in 1765; immigrated to the United States and settled in Botetourt County, Va., in 1775; completed preparatory studies; studied law; was admitted to the bar and commenced practice in Abingdon, Va.; moved to Wythe County, Va.; member of the Virginia state house of delegates in 1792, 1796, 1801, 1802, and 1804-1808; served in the Virginia state senate in 1808 and 1809; United States Army, 1808-1813; resumed the practice of his profession; again a member of the Virginia state house of delegates in 1816, 1817, 1826, and 1827; elected as a Democratic Republican to the Fifteenth and to the two succeeding Congresses, and reelected as a Crawford Republican to the Eighteenth Congress (March 4, 1817-March 3, 1825); elected as a Jacksonian candidate to the Twentieth and to the succeeding Congress and served from March 4, 1827, until his death in Washington, D.C., April 17, 1830; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

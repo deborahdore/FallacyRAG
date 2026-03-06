@@ -1,0 +1,56 @@
+{
+    "name": "Tim Walz",
+    "birthDate": "1964-04-06",
+    "deathDate": null,
+    "bio": "A Representative from Minnesota; born in West Point, Cuming County, Nebr., April 6, 1964; graduated from Butte High School, Butte, Nebr., 1982; B.S., Chadron State College, Chadron, Nebr., 1989; M.S., Minnesota State University, Mankato, Minn., 2001; attended Saint Mary&rsquo;s University of Minnesota, Winona, Minn.; Nebraska National Guard, 1981-1996; Minnesota National Guard, 1996-2005; teacher; elected as a Democrat to the One Hundred Tenth and to the five succeeding Congresses (January 3, 2007-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018, but was elected Governor of Minnesota; Governor of Minnesota, 2019-present; unsuccessful Democratic candidate for Vice President of the United States in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MINNESOTA"
+        }
+    ]
+}

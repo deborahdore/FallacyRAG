@@ -1,0 +1,24 @@
+{
+    "name": "William Byron",
+    "birthDate": "1895-05-15",
+    "deathDate": "1941-02-27",
+    "bio": "A Representative from Maryland; born in Danville, Pittsylvania County, Va., May 15, 1895; moved to Williamsport, Washington County, Md. with his parents in 1899; attended the public schools, Phillips Exeter Academy, Exeter, N.H., and Pratt Institute, Brooklyn, N.Y.; during the First World War enlisted as a private in the Aviation Corps; commissioned a first lieutenant, and was assigned as an instructor in flying and in aerial gunnery; engaged in the leather manufacturing business in 1919; served as mayor of Williamsport 1926-1930; member of the State senate 1930-1934; member of the Maryland Roads commission in 1934 and 1935; elected as a Democrat to the Seventy-sixth and Seventy-seventh Congresses and served from January 3, 1939, until his death in an airplane crash at Jonesboro, near Atlanta, Ga., February 27, 1941; interment in Riverview Cemetery, Williamsport, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Jan Meyers",
+    "birthDate": "1928",
+    "deathDate": "2019",
+    "bio": "A Representative from Kansas; born in Lincoln, Nebr., July 20, 1928; attended public schools in Superior, Nebr., and William Woods College, Fulton, Mo.; B.A., University of Nebraska, Lincoln, 1951; advertising and public relations assistant for radio station in Omaha and a department store in Lincoln, Nebr., 1951-1954; city councilwoman in Overland Park, Kans., 1967-1972; city council, 1970-1972; Kansas senate, 1972-1984; elected as a Republican to the Ninety-ninth and to the five succeeding Congresses (January 3, 1985-January 3, 1997); chairman, Committee on Small Business (One Hundred Fourth Congress); was not a candidate for reelection to the One Hundred Fifth Congress; died on June 21, 2019, in Merriam, Kans.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

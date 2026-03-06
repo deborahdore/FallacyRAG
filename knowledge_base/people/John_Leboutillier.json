@@ -1,0 +1,16 @@
+{
+    "name": "John Leboutillier",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "A Representative from New York; born in Glen Cove, Nassau County, N.Y., May 26, 1953; attended grammar school in Greenvale, N.Y.; graduated from Brooks School, North Andover, Mass., 1971; A.B., Harvard University, 1976; M.B.A., Harvard Business School, 1979; elected as a Republican to the Ninety-seventh Congress (January 3, 1981-January 3, 1983); unsuccessful candidate for reelection in 1982 to the Ninety-eighth Congress; president of account, POW/MIA, Inc.; chairman of the board, Winston Churchill Foundation; is a resident of Westbury, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

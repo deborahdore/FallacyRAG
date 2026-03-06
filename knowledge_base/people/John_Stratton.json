@@ -1,0 +1,24 @@
+{
+    "name": "John Stratton",
+    "birthDate": "1817-11-27",
+    "deathDate": "1889-05-17",
+    "bio": "A Representative from New Jersey; born in Mount Holly, Burlington County, N.J., November 27, 1817; attended private schools at Mount Holly; prepared for college at Mendham; graduated from Princeton College, 1836; lawyer, private practice; elected as a Republican to the Thirty-sixth and to the succeeding Congress (March 4, 1859-March 3, 1863); was not a candidate for renomination in 1862; delegate to the Union National Convention of Conservatives at Philadelphia, 1866; president of the Farmers' National Bank of Mount Holly in 1875; died on May 17, 1889, Mount Holly, N.J.; interment in St. Andrews Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

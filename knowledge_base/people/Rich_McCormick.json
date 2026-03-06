@@ -1,0 +1,23 @@
+{
+    "name": "Rich McCormick",
+    "birthDate": "1968-10-07",
+    "deathDate": null,
+    "bio": "a Representative from Georgia; born in Las Vegas, Clark County, Nev., October 7, 1968; graduated from Central Catholic High School, Portland, Oreg., 1986; B.S., Oregon State University, Corvallis, Oreg., 1990; M.B.A., National University, San Diego, Calif.; M.D., Morehouse School of Medicine, Atlanta, Ga., 2010; United States Marine Corps, 1990-2006; instructor, Morehouse College, Atlanta, Ga.; instructor, Georgia Institute of Technology, Atlanta, Ga.; United States Navy, 2013-2017; physician; unsuccessful candidate for election to the One Hundred Seventeenth Congress in 2020; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

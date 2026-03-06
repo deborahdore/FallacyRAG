@@ -1,0 +1,64 @@
+{
+    "name": "Harris Fawell",
+    "birthDate": "1929-03-25",
+    "deathDate": "2021-11-11",
+    "bio": "A Representative from Illinois; born in West Chicago, Du Page County, Ill., March 25, 1929; graduated from West Chicago Community High School, West Chicago, Ill., 1929; attended North Central College, Naperville, Ill., 1947-1949; LL.B., Chicago-Kent College of Law, Chicago, Ill., 1952; admitted to the bar and practiced law 1954-1984; member of the Illinois state senate, 1963-1977; member of the Illinois Commission on Children, 1967-1977; unsuccessful candidate for the Illinois Supreme Court in 1976; delegate to Republican National Convention, 1968 and 1988; elected as a Republican to the Ninety-ninth and to the six succeeding Congresses (January 3, 1985-January 3, 1999); died on November 11, 2021, in Naperville, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

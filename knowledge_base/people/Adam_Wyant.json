@@ -1,0 +1,56 @@
+{
+    "name": "Adam Wyant",
+    "birthDate": "1869-09-15",
+    "deathDate": "1935-01-05",
+    "bio": "A Representative from Pennsylvania; born near Kittanning, Armstrong County, Pa., September 15, 1869; attended the public schools, Mount Pleasant Institute, and Bucknell University, Lewisburg, Pa.; was graduated from the University of Chicago in 1895; moved to Greensburg, Westmoreland County, Pa., in 1896; studied law; was admitted to the Westmoreland County Bar in 1902 and commenced the practice of law in Greensburg; interested in coal mining and other business enterprises; elected as a Republican to the Sixty-seventh and to the five succeeding Congresses (March 4, 1921-March 3, 1933); was an unsuccessful candidate for reelection in 1932 to the Seventy-third Congress; resumed his former business pursuits; died in Greensburg, Pa., on January 5, 1935; interment in St. Clair Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

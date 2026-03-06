@@ -1,0 +1,112 @@
+{
+    "name": "John Jarman",
+    "birthDate": "1915-07-17",
+    "deathDate": "1982-01-15",
+    "bio": "a Representative from Oklahoma; born in Sallisaw, Sequoyah County, Okla., July 17, 1915; attended the public schools of Oklahoma City, Okla., and Westminster Presbyterian College, Fulton, Mo., 1932-1934; graduated from Yale University in 1937 and from Harvard Law School in 1941; was admitted to the bar in 1941 and commenced the practice of law in Oklahoma City, Okla.; enlisted as a private in the United States Army on January 12, 1942, and served in the Security Intelligence Corps, assigned to the United Nations Conference in California; was discharged as a master sergeant on December 11, 1945; member of the State house of representatives in 1947 and 1948; served in the State senate in 1949 and 1950; elected as a Democrat to the Eighty-second and to the twelve succeeding Congresses (January 3, 1951-January 3, 1977); changed party affiliation to Republican, effective January 24, 1975; was not a candidate for reelection in 1976 to the Ninety-fifth Congress; practiced law in Oklahoma City, Okla., where he resided until his death there on January 15, 1982; cremated and buried at Rose Hill Burial Park.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

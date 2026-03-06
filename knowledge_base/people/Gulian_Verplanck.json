@@ -1,0 +1,40 @@
+{
+    "name": "Gulian Verplanck",
+    "birthDate": "1786-08-06",
+    "deathDate": "1870-03-18",
+    "bio": "a Representative from New York; born in New York City August 6, 1786; pursued classical studies, and graduated from Columbia College (now Columbia University), New York City, in 1801; studied law and was admitted to the bar in 1807; member of the New York state assembly, 1820-1823; professor at General Theological Seminary, New York City, 1821-1824; elected as a Jacksonian candidate to the Nineteenth and to the three succeeding Congresses (March 4, 1825-March 3, 1833); chairman, Committee on Ways and Means (Twenty-second Congress); was not a candidate for renomination in 1832; unsuccessful Whig candidate for mayor of New York City in 1834; member of the State senate 1838-1841; governor of the city hospital 1823-1865; regent of the State university 1826-1870 and vice chancellor 1858-1870; president of the board of commissioners of immigration 1846-1870; member of the State constitutional convention in 1867 and 1868; died in New York City on March 18, 1870; interment in Trinity Churchyard, Fishkill, Dutchess County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

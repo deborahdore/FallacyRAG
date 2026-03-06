@@ -1,0 +1,176 @@
+{
+    "name": "John Sherman",
+    "birthDate": "1823-05-10",
+    "deathDate": "1900-10-22",
+    "bio": "A Representative and a Senator from Ohio; born in Lancaster, Fairfield County, Ohio, on May 10, 1823; attended the common schools and an academy in Ohio; left school to work as an engineer on canal projects; studied law; admitted to the bar in 1844 and began practice in Mansfield, Ohio; moved to Cleveland, Ohio, in 1853; elected as an Opposition candidate to the Thirty-fourth Congress, and reelected as a Republican to the Thirty-fifth and to the succeeding Congress until his resignation on March 21, 1861 (March 4, 1855-March 21, 1861); chairman, Committee on Ways and Means (Thirty-sixth Congress); elected as a Republican to the United States Senate in 1861 to fill the vacancy caused by the resignation of Salmon P. Chase; reelected in 1866 and 1872 and served from March 21, 1861, until his resignation on March 8, 1877; chairman, Committee on Agriculture (1863-67), Committee on Finance (1863-65, 1867-77); appointed Secretary of the Treasury in the Cabinet of President Rutherford Hayes in March 1877, and served until March 1881; again elected as a Republican to the United States Senate in 1881 in the place of James A. Garfield, who had been elected President of the United States; reelected in 1886 and 1892 and served from March 4, 1881, until his resignation on March 4, 1897; Republican Conference chairman (1884-1885, 1891-1897); President pro tempore (1885-1887); chairman, Committee on the Library (Forty-seventh through Forty-ninth Congresses), Committee on Foreign Relations (Forty-ninth through Fifty-second Congresses, Fifty-fourth Congress); appointed Secretary of State in the Cabinet of President William McKinley and served from March 1897, until his resignation in April 1898; retired to private life; died in Washington, D.C., October 22, 1900; interment in Mansfield Cemetery, Mansfield, Richland County, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

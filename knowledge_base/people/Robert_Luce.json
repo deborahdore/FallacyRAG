@@ -1,0 +1,88 @@
+{
+    "name": "Robert Luce",
+    "birthDate": "1862-12-02",
+    "deathDate": "1946-04-07",
+    "bio": "A Representative from Massachusetts; born in Auburn, Androscoggin County, Maine, December 2, 1862; attended the public schools of Auburn and Lewiston, Maine, and Somerville, Mass., and was graduated from Harvard University in 1882; taught in the Waltham (Mass.) High School for a year; engaged in journalism, founding and serving as president of the Luce's Press Clipping Bureau in Boston and New York in 1888; Republican member of the State house of representatives in 1899 and 1901-1908; studied law and was admitted to the bar in Boston in 1908, but did not engage in extensive practice; president of the Republican State convention in 1910; Lieutenant Governor of Massachusetts in 1912; member of the Massachusetts Teachers Retirement Board 1914-1919; delegate to the State constitutional convention 1917-1919; president of the Republican Club of Massachusetts in 1918; Regent of the Smithsonian Institution 1929-1931; author, notably on the subject of political science; elected as a Republican to the Sixty-sixth and the seven succeeding Congresses (March 4, 1919-January 3, 1935); chairman, Committee on Elections No. 2 (Sixty-seventh Congress), Committee on World War Veterans' Legislation (Sixty-eighth Congress); unsuccessful candidate for reelection in 1934 to the Seventy-fourth Congress; elected to the Seventy-fifth and Seventy-sixth Congresses (January 3, 1937-January 3, 1941); unsuccessful candidate for reelection in 1940 to the Seventy-seventh Congress; resumed his former business pursuits; died in Waltham, Mass., April 7, 1946; the remains were cremated and the ashes interred in Mount Auburn Cemetery, Cambridge, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

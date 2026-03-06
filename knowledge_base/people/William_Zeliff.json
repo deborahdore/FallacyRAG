@@ -1,0 +1,32 @@
+{
+    "name": "William Zeliff",
+    "birthDate": "1936-06-12",
+    "deathDate": "2021-10-18",
+    "bio": "A Representative from New Hampshire; born in East Orange, Essex County, N.J., June 12, 1936; graduated from Milford High School, Millford, Conn. 1954; B.S., University of Connecticut, Storrs, Conn., 1959; Connecticut National Guard,1958-1964; United States Army Reserve; sales and marketing manager; consumer products division, E.I. DuPont de Nemours and Co., 1959-1976; innkeeper and small business owner; unsuccessful candidate for the New Hampshire state senate in 1984; delegate, Republican National Convention, 1988; elected as a Republican to the One Hundred Second and to the two succeeding Congresses (January 3, 1991-January 3, 1997); was not a candidate for reelection to the United States House of Representatives in 1996, but was an unsuccessful candidate for gubernatorial nomination in New Hampshire; private advocate; died on October 18, 2021, in Venice, Fla; interment at Venice Presbyterian Memorial Gardens, Venice, Fla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

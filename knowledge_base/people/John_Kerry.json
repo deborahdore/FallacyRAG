@@ -1,0 +1,136 @@
+{
+    "name": "John Kerry",
+    "birthDate": "1943",
+    "deathDate": null,
+    "bio": "A Senator from Massachusetts; born in Fitzsimons Army Hospital (Colorado), December 11, 1943; graduated, St. Paul's School, Concord, N.H., 1962; graduated, Yale University 1966; served in the United States Navy 1966-1970, with service in Vietnam; received numerous awards, including the Silver Star, Bronze Star, and Purple Heart; graduated, Boston College Law School 1976; admitted to the Massachusetts bar in 1976 and commenced practice in 1976; assistant district attorney of Middlesex County, Mass. 1977-1982; lieutenant governor of Massachusetts 1982-1984; elected as a Democrat to the United States Senate in 1984; subsequently appointed to the remainder of the term left vacant by the resignation of Paul Tsongas, and took the oath of office on January 2, 1985; reelected in 1990, 1996, 2002, and again in 2008, and served from January 2, 1985, until his resignation on February 1, 2013, to accept a Cabinet position; chair, Democratic Senatorial Campaign Committee (One Hundredth Congress), Committee on Small Business and Entrepreneurship (One Hundred Seventh Congress [January 3-20, 2001; June 6, 2001-January 3, 2003], One Hundred Tenth Congress), Committee on Foreign Relations (One Hundred Eleventh to One Hundred Thirteenth [January 3, 2013-February 1, 2013] Congresses); was an unsuccessful Democratic nominee for President of the United States in 2004; Secretary of State in the Cabinet of President Barack Obama, 2013-2017; appointed by President Joseph R. Biden to serve as Special Presidential Envoy for Climate (2021-2024); awarded the Presidential Medal of Freedom on May 3, 2024.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

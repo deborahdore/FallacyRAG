@@ -1,0 +1,24 @@
+{
+    "name": "William Carter",
+    "birthDate": "1864-06-15",
+    "deathDate": "1955-04-23",
+    "bio": "A Representative from Massachusetts; born at Needham Heights, Norfolk County, Mass., June 15, 1864; attended public schools; was graduated from Comers Commercial College, Boston, Mass.; worked in several capacities at the knit-underwear manufacturing plant of the William Carter Co.; member of the State house of representatives in 1906; member of the Republican State committee in 1907 and 1908; elected as a Republican to the Sixty-fourth and Sixty-fifth Congresses (March 4, 1915-March 3, 1919); was not a candidate for reelection in 1918; interested in real-estate development; was elected president of the William Carter Co. in 1918 and continued manufacturing activities until his death; died in Needham, Mass., April 23, 1955; interment in Needham Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

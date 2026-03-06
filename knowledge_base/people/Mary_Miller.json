@@ -1,0 +1,31 @@
+{
+    "name": "Mary Miller",
+    "birthDate": "1959-08-07",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Oak Park, Cook County, Ill., August 7, 1959; graduated from Naperville Central High School, Naperville, Ill., 1977; B.S., Eastern Illinois University, Charleston, Ill., 1981; farmer; teacher; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

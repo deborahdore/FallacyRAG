@@ -1,0 +1,16 @@
+{
+    "name": "William Mulkey",
+    "birthDate": "1871-07-27",
+    "deathDate": "1943-06-30",
+    "bio": "A Representative from Alabama; born in Brundidge, Pike County, Ala., July 27, 1871; attended the public schools and was graduated from State Normal College, Troy, Ala., in 1892; studied law; was admitted to the bar in 1893 and commenced practice in Troy, Geneva County, Ala., in 1894; member of the State constitutional convention in 1901; served in the State house of representatives in 1911; elected as a Democrat to the Sixty-third Congress to fill the vacancy caused by the resignation of Henry D. Clayton and served from June 29, 1914, to March 3, 1915; was not a candidate for renomination in 1914; resumed the practice of law; died in Geneva, Ala., June 30, 1943; interment in Geneva Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

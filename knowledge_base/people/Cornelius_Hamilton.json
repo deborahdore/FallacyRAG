@@ -1,0 +1,16 @@
+{
+    "name": "Cornelius Hamilton",
+    "birthDate": "1821-01-02",
+    "deathDate": "1867-12-22",
+    "bio": "A Representative from Ohio; born in Gratiot, Muskingum County, Ohio, January 2, 1821; attended the common schools and Granville (Ohio) College; moved with his parents to Union County in 1839; engaged in agricultural pursuits with his father; studied law; was admitted to the bar in 1845 and commenced practice in Marysville, Ohio; land appraiser and assessor in 1845; delegate to the State constitutional convention 1850-1851; editor and proprietor of the Marysville Tribune 1850-1853; member of the State senate in 1856 and 1857; appointed by President Lincoln assessor of the eighth congressional district of Ohio in 1862 and served until 1866; elected as a Republican to the Fortieth Congress and served from March 4, 1867, until killed by an insane son in Marysville, Union County, Ohio, December 22, 1867; interment in Oakdale Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

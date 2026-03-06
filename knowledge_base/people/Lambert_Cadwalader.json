@@ -1,0 +1,31 @@
+{
+    "name": "Lambert Cadwalader",
+    "birthDate": "1742",
+    "deathDate": "1823-09-13",
+    "bio": "a Delegate and a Representative from New Jersey; born near Trenton, N.J., in 1742; attended Dr. Alison's Academy, and the University of Pennsylvania at Philadelphia in 1760; member of the common council of Philadelphia at the beginning of the Revolution; signed the nonimportation agreement in 1765; delegate to the provincial convention in Pennsylvania in 1775 and to the Pennsylvania constitutional convention in 1776; served in the Revolutionary War; entered the Continental Army and commanded a regiment of \"The Greens\"; lieutenant colonel of the Third Pennsylvania Battalion in 1776; colonel of the Fourth Pennsylvania Line; after being taken a prisoner at Fort Washington on the Hudson resigned from the Army; Delegate to the Confederation Congress, 1785, 1786, and 1787; elected as a Pro-Administration candidate to the First Congress (March 4, 1789-March 3, 1791); elected as a Pro-Administration candidate to the Third Congress (March 4, 1793-March 3, 1795); died on his estate, \"Greenwood,\" near Trenton, N.J., September 13, 1823; interment in the Friends Burying Ground, Trenton, N.J.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

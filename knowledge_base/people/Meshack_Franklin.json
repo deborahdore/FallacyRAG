@@ -1,0 +1,40 @@
+{
+    "name": "Meshack Franklin",
+    "birthDate": "1772",
+    "deathDate": "1839-12-18",
+    "bio": "a Representative from North Carolina; born in Surry County, N.C., in 1772; member of the North Carolina state house of commons in 1800 and 1801; served in the North Carolina state senate in 1828, 1829, and 1838; elected as a Democratic Republican to the Tenth and to the three succeeding Congresses (March 4, 1807-March 3, 1815); died in Surry County, N.C., December 18, 1839; interment on his estate in Surry County, N.C. (now known as the Edwards-Franklin House).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

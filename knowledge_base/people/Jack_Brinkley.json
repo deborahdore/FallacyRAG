@@ -1,0 +1,72 @@
+{
+    "name": "Jack Brinkley",
+    "birthDate": "1930-12-22",
+    "deathDate": "2019-01-23",
+    "bio": "A Representative from Georgia; born in Faceville, Decatur County, Ga., December 22, 1930; attended the public schools of Faceville, Ga.; graduated from Young Harris College in 1949; taught school, 1949-1951; was a pilot in the United States Air Force, 1951-1956; graduated from the University of Georgia School of Law in 1959; was admitted to the bar and commenced practice in Columbus, Ga., in 1959; elected to the State house of representatives in 1965-1966; elected as a Democrat to the Ninetieth and to the seven succeeding Congresses (January 3, 1967-January 3, 1983); was not a candidate for reelection in 1982 to the Ninety-eighth Congress; died on January 23, 2019, in Columbus, Ga.; interment at the Oswichee Baptist Church and Alexandria Methodist Church Cemetery, Fort Mitchell, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

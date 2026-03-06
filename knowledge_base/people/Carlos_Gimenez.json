@@ -1,0 +1,31 @@
+{
+    "name": "Carlos Gimenez",
+    "birthDate": "1954-01-17",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Havana, Cuba, January 17, 1954; graduated from Christopher Columbus High School, Miami, Fla., 1972; B.P.A., Barry University, Miami Shores, Fla., 1999; attended Harvard University, Cambridge, Mass., 1993; firefighter; chief of the Miami, Fla. fire-rescue department, 1991-2000; city manager, Miami, Fla., 2000-2003; commissioner, Miami-Dade County, Fla., 2005-2011, Mayor of Miami-Dade County, Fla., 2011-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Martha Keys",
+    "birthDate": "1930-08-10",
+    "deathDate": "2024-12-19",
+    "bio": "a Representative from Kansas; born Martha Elizabeth Ludwig in Hutchinson, Reno County, Kans., August 10, 1930; graduated from Paseo High School, Kansas City, Mo., 1945; attended Olivet College, Kankakee, Ill., 1946-1947; B.A., University of Missouri, Kansas City, Mo., 1951; elected as a Democrat to the Ninety-fourth and to the Ninety-fifth Congresses (January 3, 1975-January 3, 1979); unsuccessful candidate for reelection to the Ninety-sixth Congress in 1978; special adviser to the Secretary of the Department of Health, Education, and Welfare, February 1979-May 1980; Assistant Secretary of Education, June 1980-January 1981; consultant; director, Center for a New Democracy, 1985-1986; died on December 19, 2024, in Locust Grove, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KANSAS"
+        }
+    ]
+}

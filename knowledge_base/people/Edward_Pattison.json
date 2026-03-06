@@ -1,0 +1,24 @@
+{
+    "name": "Edward Pattison",
+    "birthDate": "1932-04-29",
+    "deathDate": "1990-08-22",
+    "bio": "a Representative from New York; born in Troy, Rensselaer County, N.Y., April 29, 1932; graduated from Albany (N.Y.) Academy, 1949; A.B., Cornell University, Ithaca, N.Y., 1953; LL.B., Cornell University, Ithaca, N.Y., 1957; admitted to the New York bar in 1957 and commenced practice in Troy; served in the United States Army, 1954-1956; served as Rensselaer County (N.Y.) treasurer, 1970-1975; unsuccessful candidate for election in 1970 to the Ninety-second Congress; unsuccessful candidate for Rensselaer County Executive, 1973; elected as a Democrat to the Ninety-fourth and to the Ninety-fifth Congresses (January 3, 1975-January 3, 1979); unsuccessful candidate for reelection in 1978 to the Ninety-sixth Congress; was a resident of West Sand Lake, N.Y., until his death there on August 22, 1990; interment in Oakwood Cemetery, Troy, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

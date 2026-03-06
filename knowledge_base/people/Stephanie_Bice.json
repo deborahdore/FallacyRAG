@@ -1,0 +1,31 @@
+{
+    "name": "Stephanie Bice",
+    "birthDate": "1973-11-11",
+    "deathDate": null,
+    "bio": "a Representative from Oklahoma; born in Oklahoma City, Oklahoma County, Okla., November 11, 1973; graduated from Putnam City High School, Oklahoma City, Okla., 1991; B.A., Oklahoma State University, Stillwater, Okla., 1995; marketing executive; member of the Oklahoma state senate, 2014-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021&ndash;present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

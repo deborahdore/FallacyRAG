@@ -1,0 +1,56 @@
+{
+    "name": "Gordon Humphrey",
+    "birthDate": "1940",
+    "deathDate": null,
+    "bio": "A Senator from New Hampshire; born in Bristol, Hartford County, Conn., October 9, 1940; attended the public schools; attended George Washington University, Washington, D.C., 1962-1963, University of Maryland, College Park 1961-1962, and Burnside-Ott Aviation Institute 1962; served in the United States Air Force 1958-1962; professional pilot 1964-1978; elected as a Republican to the United States Senate in 1978; reelected in 1984 and served from January 3, 1979, to December 4, 1990, when he resigned to take his seat in the New Hampshire senate; not a candidate for reelection in 1990; elected to the New Hampshire state senate in 1990; is a resident of Concord, N.H.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

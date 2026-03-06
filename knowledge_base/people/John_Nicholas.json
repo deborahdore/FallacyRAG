@@ -1,0 +1,40 @@
+{
+    "name": "John Nicholas",
+    "birthDate": "1757",
+    "deathDate": "1819-12-31",
+    "bio": "A Representative from Virginia; born in Williamsburg, Va., about 1757; attended the common schools; graduated from the College of William and Mary, Williamsburg, Va.; studied law; was admitted to the bar and practiced in his native county; elected as an Anti-Administration candidate to the Third Congress, and reelected as a Democratic Republican to the three succeeding Congresses (March 4, 1793-March 3, 1801); moved to Geneva, Ontario County, N.Y.; member of the New York state senate 1806-1809; judge of the court of common pleas 1806-1819; engaged in agricultural pursuits; died in Geneva, Ontario County, N.Y., December 31, 1819; interment in Glenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

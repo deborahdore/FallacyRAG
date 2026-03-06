@@ -1,0 +1,32 @@
+{
+    "name": "Theodore Peyser",
+    "birthDate": "1873-02-18",
+    "deathDate": "1937-08-08",
+    "bio": "A Representative from New York; born in Charleston, W.Va., February 18, 1873; attended the public schools; engaged in various occupations until 1893, when he moved to Cincinnati, Ohio, and became employed as a traveling salesman, in which capacity he served until 1900; moved to New York City in 1900 and engaged in the life insurance business; elected as a Democrat to the Seventy-third, Seventy-fourth, and Seventy-fifth Congresses and served from March 4, 1933, until his death in New York City August 8, 1937; interment in United Cemetery, Cincinnati, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

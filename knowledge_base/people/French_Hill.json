@@ -1,0 +1,55 @@
+{
+    "name": "French Hill",
+    "birthDate": "1956-12-05",
+    "deathDate": null,
+    "bio": "a Representative from Arkansas; born in Little Rock, Pulaski County, Ark., December 5, 1956; graduated from Little Rock Catholic High School, Little Rock, Ark., 1975; B.S., Vanderbilt University, Nashville, Tenn., 1979; banker; businessman; staff, United States Senator John Tower and the United States Senate Committee on Banking, Housing, and Urban Affairs, 1982-1984; deputy assistant secretary, United States Treasury, 1989-1991; special assistant to President George H. W. Bush and Executive Secretary of Economic Policy Council, 1991-1993; senior advisor, Governor Mike Huckabee of Arkansas, 2008; elected as a Republican to the One Hundred Fourteenth and to the five succeeding Congresses (January 3, 2015-present); chair, Committee on Financial Services (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

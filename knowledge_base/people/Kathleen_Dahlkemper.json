@@ -1,0 +1,16 @@
+{
+    "name": "Kathleen Dahlkemper",
+    "birthDate": "1957-12-10",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Erie, Erie County, Pa., December 10, 1957; B. S., Edinboro State College, Edinboro, Pa., 1982; business owner; director, Lake Erie Arboretum at Frontier Park, Pa.; elected as a Democrat to the One Hundred Eleventh Congress (January 3, 2009-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; Erie County, Pa., executive, 2014-2021.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

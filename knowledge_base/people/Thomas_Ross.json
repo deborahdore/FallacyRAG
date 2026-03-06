@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Ross",
+    "birthDate": "1806-12-01",
+    "deathDate": "1865-07-07",
+    "bio": "A Representative from Pennsylvania; born in Easton, Northampton County, Pa., December 1, 1806; attended the Doylestown, Pa., schools; was graduated from Princeton College in 1823; studied law; was admitted to the bar in 1829 and commenced practice in Doylestown, Pa.; appointed deputy attorney general of the State for Bucks County in 1829; frequently a candidate of the Democratic Party and also affiliated with the Anti-Masonic Party; elected as a Democrat to the Thirty-first and Thirty-second Congresses (March 4, 1849-March 3, 1853); resumed the practice of law in Doylestown, Bucks County, Pa.; died July 7, 1865; interment in Doylestown Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

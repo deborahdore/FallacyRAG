@@ -1,0 +1,16 @@
+{
+    "name": "John Bucher",
+    "birthDate": "1792-12-28",
+    "deathDate": "1851-10-15",
+    "bio": "a Representative from Pennsylvania; born in Harrisburg, Pa., December 28, 1792; attended the public schools; studied law; was admitted to the bar and commenced practice in Harrisburg; clerk of the land department of Pennsylvania in 1813; member of the borough council of Harrisburg; member of the board of school directors; elected as a Jacksonian candidate to the Twenty-second Congress (March 4, 1831-March 3, 1833); trustee of Harrisburg Academy, Franklin College, Lancaster, Pa., and Marshall College, Mercersburg, Pa.; by appointment of Governor Porter was an associate judge of Dauphin County from 1839 until his death in Harrisburg, Pa., October 15, 1851; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

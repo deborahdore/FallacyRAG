@@ -1,0 +1,80 @@
+{
+    "name": "Charles Timberlake",
+    "birthDate": "1854-09-25",
+    "deathDate": "1941-05-31",
+    "bio": "A Representative from Colorado; born in Wilmington, Clinton County, Ohio, September 25, 1854; attended the common schools and Earlham College, Richmond, Ind., 1871-1874; taught school; moved to Colorado in 1885, and settled near Holyoke, Phillips County; engaged in agricultural pursuits and stock raising; member of the Republican State committee 1892-1910; superintendent of schools of Phillips County 1889-1895; county clerk 1895-1897; appointed receiver of the United States land office at Sterling, Colo., on July 1, 1897, and served until April 30, 1914; elected as a Republican to the Sixty-fourth and to the eight succeeding Congresses (March 4, 1915-March 3, 1933); unsuccessful candidate for renomination in 1932; engaged in banking in Sterling, Colo., until his death there on May 31, 1941; interment in Grand View Cemetery, Fort Collins, Colo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

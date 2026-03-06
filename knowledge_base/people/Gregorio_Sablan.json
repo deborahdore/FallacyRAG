@@ -1,0 +1,72 @@
+{
+    "name": "Gregorio Sablan",
+    "birthDate": "1955-01-19",
+    "deathDate": null,
+    "bio": "a Delegate from the Northern Mariana Islands; born in Saipan, Northern Mariana Islands, January 19, 1955; graduated from Marianas High School, Susupe, Northern Mariana Islands, 1972; attended University of Hawaii, Manoa, Hawaii, 1989-1990; United States Army, 1981-1986; member of the Northern Mariana Islands house of representatives, 1982-1986; staff, United States Senator Daniel Inouye of Hawaii; staff, office of the Governor of the Northern Mariana Islands; elected as an Independent to the One Hundred Eleventh Congress, changed his party affiliation from an Independent to a Democrat on February 23, 2009, elected as a Democrat to the One Hundred Twelfth and to the six succeeding Congresses (January 3, 2009-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Independent",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MP"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+{
+    "name": "Esteban Torres",
+    "birthDate": "1930-01-27",
+    "deathDate": "2022-01-25",
+    "bio": "a Representative from California; born in Miami, Gila County, Ariz., January 27, 1930; graduated from James A. Garfield High School, East Los Angeles, Calif., 1949; attended East Los Angeles College, East Los Angeles, Calif., 1959; attended California State University, Los Angeles, Calif.,1963; attended University of Maryland, College Park, Md., 1965; attended American University, Washington, D.C., 1966; United States Army, sergeant, first class, 1949-1953; United Auto Workers representative and international labor consultant, 1954-1968; community affairs organizer, 1968-1974; United Auto Worker official, 1975-1976; consultant, Office of Technology Assessment, 1976-1977; United States Ambassador to the United Nations Educational, Scientific and Cultural Organization (UNESCO), Paris, France, 1977-1979; special assistant to the President, The White House, 1979-1981; delegate, California State Democratic conventions, 1968-1983; delegate, Democratic National Conventions, 1984, 1988, 1992, and 1995; unsuccessful candidate for election to the Ninety-fourth Congress in 1974; elected as a Democrat to the Ninety-eighth and seven succeeding Congresses (January 3, 1983-January 3, 1999); was not a candidate for reelection to the One Hundred Sixth Congress in 1998; member, California state transportation commission, 1999-2007; died on January 25, 2022; interment at Riverside National Cemetery, Riverside, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

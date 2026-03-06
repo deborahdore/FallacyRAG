@@ -1,0 +1,24 @@
+{
+    "name": "George Strother",
+    "birthDate": "1783",
+    "deathDate": "1840-11-28",
+    "bio": "a Representative from Virginia; born in Stevensburg, Culpeper County, Va., in 1783; attended the College of William and Mary, Williamsburg, Va.; studied law; was admitted to the bar and commenced practice in Culpeper; member of the Virginia state house of delegates, 1806-1809; elected as a Democratic Republican to the Fifteenth and to the succeeding Congress and served from March 4, 1817, until his resignation February 10, 1820; receiver of public moneys at St. Louis, Mo.; died in St. Louis November 28, 1840; interment in Christ Church Cemetery; reinterment in Bellefontaine Cemetery in 1860.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

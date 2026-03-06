@@ -1,0 +1,80 @@
+{
+    "name": "Thomas Ferry",
+    "birthDate": "1827-06-10",
+    "deathDate": "1896-10-13",
+    "bio": "A Representative and a Senator from Michigan; born in the old mission house of the Astor Fur Co. on Mackinac Island, Mich., June 10, 1827; moved with his parents to Grand Haven, Mich.; attended the public schools; engaged in mercantile pursuits; member, State house of representatives 1850-1852; member, State senate 1856; delegate to the Loyalist Convention at Philadelphia in 1866; elected as a Republican to the Thirty-ninth, Fortieth, and Forty-first Congresses (March 4, 1865-March 3, 1871); reelected to the Forty-second Congress, but resigned, having been elected Senator; elected to the United States Senate in 1871, reelected in 1877, and served from March 4, 1871, to March 3, 1883; unsuccessful candidate for reelection in 1882; served as President pro tempore of the Senate during the Forty-fourth and Forty-fifth Congresses; chairman, Committee on Rules (Forty-third through Forty-fifth Congresses), Committee on Post Office and Post Roads (Forty-fifth and Forty-seventh Congresses); presided over the high court of impeachment of Secretary of War William Belknap and over the sixteen joint meetings of the Senate and House of Representatives during the Hayes-Tilden presidential electoral contest in 1877; died in Grand Haven, Mich., October 13, 1896; interment in Lake Forest Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Samuel Woods",
+    "birthDate": "1845-09-19",
+    "deathDate": "1915-12-24",
+    "bio": "A Representative from California; born in Mount Pleasant, Maury County, Tenn., September 19, 1845; moved with his parents to Stockton, Calif., in February 1850; attended the public schools; studied law; was admitted to the California bar in April 1875 and engaged in practice in Stockton and in the city and county of San Francisco; elected as a Republican to the Fifty-sixth Congress to fill the vacancy caused by the resignation of Marion De Vries; reelected to the Fifty-seventh Congress and served from December 3, 1900, to March 3, 1903; was not a candidate for reelection in 1902 to the Fifty-eighth Congress; resumed the practice of law in San Francisco, Calif., and died there December 24, 1915; interment in Mount Olivet Cemetery, San Mateo County, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

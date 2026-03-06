@@ -1,0 +1,64 @@
+{
+    "name": "John Gordon",
+    "birthDate": "1832",
+    "deathDate": "1904",
+    "bio": "A Senator from Georgia; born in Upson County, Ga., February 6, 1832; attended private schools and the University of Georgia at Athens; studied law; admitted to the bar in 1853 and commenced practice in Atlanta, Ga.; engaged in coal mining; upon the outbreak of the Civil War entered the Confederate Army as captain of Infantry and rose to lieutenant general; resumed the practice of law in Atlanta, Ga.; unsuccessful Democratic candidate for Governor in 1868; elected as a Democrat to the United States Senate in 1873; reelected in 1879 and served from March 4, 1873, until May 26, 1880, when he resigned to promote the building of the Georgia Pacific Railroad; chairman, Committee on Commerce (Forty-sixth Congress); Governor of Georgia 1886-1890; again elected to the United States Senate and served from March 4, 1891, to March 3, 1897; declined to be a candidate for reelection; chairman, Committee on Coastal Defenses (Fifty-third Congress); engaged in lecturing and literary work; died in Miami, Fla., January 9, 1904; interment in Oakland Cemetery, Atlanta, Ga.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

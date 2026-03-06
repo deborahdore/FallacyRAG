@@ -1,0 +1,80 @@
+{
+    "name": "Lamar Alexander",
+    "birthDate": "1940",
+    "deathDate": null,
+    "bio": "A Senator from Tennessee; born in Maryville, Tennessee, on July 3, 1940; B.A., Vanderbilt University 1962; J.D., New York University Law School 1965; governor of Tennessee 1979-1987; chairman of the National Governors Association 1985-1986; U.S. secretary of education 1991-1993; elected as a Republican to the U.S. Senate in 2002; reelected in 2008, and again in 2014, and served from January 3, 2003, to January 3, 2021; chair, Republican Conference (2008-2012); chair, Committee on Health, Education, Labor, and Pensions (One Hundred Fourteenth through One Hundred Sixteenth Congresses); was not a candidate for reelection to the Senate in 2020.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

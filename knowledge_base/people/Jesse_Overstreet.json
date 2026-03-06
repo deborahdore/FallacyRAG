@@ -1,0 +1,64 @@
+{
+    "name": "Jesse Overstreet",
+    "birthDate": "1859-12-14",
+    "deathDate": "1910-05-27",
+    "bio": "A Representative from Indiana; born in Franklin, Johnson County, Ind., December 14, 1859; attended the schools of his native city; was graduated from the Franklin High School in 1877 and from Franklin College in 1882; studied law; was admitted to the bar in 1886 and commenced practice in Franklin; member of the Republican State central committee of Indiana in 1892; elected as a Republican to the Fifty-fourth and to the six succeeding Congresses (March 4, 1895-March 3, 1909); chairman, Committee on Expenditures in the Department of Justice (Fifty-sixth and Fifty-seventh Congresses), Committee on the Post Office and Post Roads (Fifty-eighth through Sixtieth Congresses); unsuccessful candidate for reelection in 1908 to the Sixty-first Congress; resumed the practice of his profession; died in Indianapolis, Ind., May 27, 1910; interment in the Columbus City Cemetery, Columbus, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

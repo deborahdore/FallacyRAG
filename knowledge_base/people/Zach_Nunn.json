@@ -1,0 +1,23 @@
+{
+    "name": "Zach Nunn",
+    "birthDate": "1979-05-04",
+    "deathDate": null,
+    "bio": "a Representative from Iowa, born in Story City, Story County, Iowa, May 4, 1979; graduated from Southeast Polk High School, Pleasant Hill, Iowa, 1998; B.A., Drake University, Des Moines, Iowa, 2002; M.S., Air Command and Staff College, Montgomery, Alabama; M. St., Cambridge University, Cambridge, England, 2007; United States Air Force; Iowa Air National Guard; staff, United States Senator Charles Ernest Grassley of Iowa, 2003; staff, National Security Council; staff, Office of the Director of National Intelligence; cybersecurity consultant; adjunct professor, Drake University; member of the Iowa state house of representatives, 2015-2019; member of the Iowa state senate, 2019-2023; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

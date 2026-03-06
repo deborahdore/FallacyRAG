@@ -1,0 +1,15 @@
+{
+    "name": "Pablo Hernández",
+    "birthDate": "1991-05-11",
+    "deathDate": null,
+    "bio": "a Resident Commissioner from Puerto Rico; born in San Juan, P.R., May 11, 1991; A.B., Harvard College, Cambridge, Mass., 2013; J.D., Stanford University, Stanford, Calif., 2017; lawyer, private practice; clerk, U.S. District Court of Puerto Rico; author; elected as a Popular Democrat to the One Hundred Nineteenth Congress to a four-year term in 2024 (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Popular Democrat",
+            "represents": "PR"
+        }
+    ]
+}

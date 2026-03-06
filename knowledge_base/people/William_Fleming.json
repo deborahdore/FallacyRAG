@@ -1,0 +1,32 @@
+{
+    "name": "William Fleming",
+    "birthDate": "1856-10-18",
+    "deathDate": "1944-06-09",
+    "bio": "A Representative from Georgia; born in Augusta, Richmond County, Ga., October 18, 1856; attended Summerville Academy and Academy of Richmond County; was graduated from the University of Georgia at Athens in 1874; superintendent of the public schools of Augusta and Richmond County, Ga., from 1877 to 1880, when he resigned; studied law; was admitted to the bar in 1880 and commenced practice in Augusta, Ga.; member of the State house of representatives 1888-1896, and served as speaker of the house in 1894 and 1895; president of the State bar association in 1894 and 1895; elected as a Democrat to the Fifty-fifth, Fifty-sixth, and Fifty-seventh Congresses (March 4, 1897-March 3, 1903); unsuccessful candidate for renomination in 1902; resumed the practice of law and engaged in literary pursuits; died in Augusta, Ga., June 9, 1944; interment in Summerville Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

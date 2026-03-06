@@ -1,0 +1,64 @@
+{
+    "name": "Roman Pucinski",
+    "birthDate": "1919",
+    "deathDate": "2002",
+    "bio": "A Representative from Illinois; born in Buffalo, Erie County, N.Y., May 13, 1919; attended the public schools in Chicago, Ill.; attended Northwestern University, Evanston, Ill., 1938-1941; attended John Marshall Law School, Chicago, Ill., 1945-1949; journalist; United States Air Force, 1940-1945; chief investigator, Congressional Special Committee to Conduct an Investigation and Study of the Facts, Evidence, and Circumstances of the Katyn Forest Massacre, 1952; elected as a Democrat to the Eighty-sixth Congress and reelected to the six succeeding Congresses (January 3, 1959-January 3, 1973); was not a candidate for reelection to the Ninety-third Congress in 1972, but was an unsuccessful candidate for election to the United States Senate; appointed to the National Advisory Council on Vocational Education, 1974-1982; alderman, Chicago, Ill., 1973-1991; died on September 25, 2002, in Chicago, Ill.; interment in Saint Joseph Cemetery, River Grove, Cook County, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

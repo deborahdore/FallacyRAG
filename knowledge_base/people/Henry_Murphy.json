@@ -1,0 +1,24 @@
+{
+    "name": "Henry Murphy",
+    "birthDate": "1810-07-05",
+    "deathDate": "1882-12-01",
+    "bio": "A Representative from New York; born in Brooklyn, N.Y., July 5, 1810; was graduated from Columbia College in New York City in 1830; studied law; was admitted to the bar in 1833 and commenced practice in Brooklyn, N.Y.; prosecuting attorney for Kings County in 1841 and 1842; edited the Brooklyn Daily Eagle; mayor of Brooklyn, N.Y., in 1842 and 1843; delegate to the State constitutional convention in 1846; elected as a Democrat to the Twenty-eighth Congress (March 4, 1843-March 3, 1845); unsuccessful candidate for reelection in 1844 to the Twenty-ninth Congress; elected to the Thirtieth Congress (March 4, 1847-March 3, 1849); unsuccessful candidate for renomination in 1848; unsuccessful presidential candidate at the Democratic National Convention in 1852; appointed Minister Resident to the Netherlands June 1, 1857, and served until June 8, 1861; member of the State senate 1861-1873; delegate to the State constitutional convention of 1867 and 1868; owner and editor of the Brooklyn Daily Eagle; died in Brooklyn, N.Y., December 1, 1882; interment in Greenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

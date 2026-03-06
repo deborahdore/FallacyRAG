@@ -1,0 +1,64 @@
+{
+    "name": "Frank Guarini",
+    "birthDate": "1924",
+    "deathDate": null,
+    "bio": "A Representative from New Jersey; born in Jersey City, Hudson County, N.J., August 20, 1924; graduated from Lincoln High School, 1942; commissioned a naval officer at Columbia University, 1944; served in the United States Navy aboard the U.S.S. <i>Mount McKinley, </i>1944-1946; B.A., Dartmouth College, Hanover, N.H., 1947; J.D., New York University School of Law, 1950; LL.M., New York University School of Law, 1955; graduate work, Hague Academy of International Law, The Hague, Netherlands; admitted to the New Jersey bar in 1951 and commenced practice in Jersey City; served in the New Jersey State senate, 1965-1972; elected as a Democrat to the Ninety-sixth and to the six succeeding Congresses (January 3, 1979-January 3, 1993); was not a candidate for renomination in 1992 to the One Hundred Third Congress; is a resident of New York, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

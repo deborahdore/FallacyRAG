@@ -1,0 +1,24 @@
+{
+    "name": "Hopkins Holsey",
+    "birthDate": "1779-08-25",
+    "deathDate": "1859-03-31",
+    "bio": "a Representative from Georgia; born near Lynchburg, Campbell County, Va., August 25, 1779; received an English training and attended the University of Virginia at Charlottesville; graduated from a law school in Litchfield, Conn.; admitted to the bar and commenced practice in Hamilton, Ga.; held several local offices and represented Hancock County several years in the State house of representatives; moved to Harris County; elected as a Jacksonian candidate to the Twenty-fourth Congress to fill the vacancy caused by the resignation of James C. Terrell; reelected as a Democrat to the Twenty-fifth Congress and served from October 5, 1835, to March 3, 1839; moved to Athens, Ga., and engaged in newspaper work as publisher of the Southern Banner; unsuccessful candidate for election in 1852 to the Thirty-third Congress; relinquished the newspaper business and resumed the practice of law, in Butler, Ga.; died at his home, \"Brightwater,\" near Butler, Ga., March 31, 1859; interment on his estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "name": "Margaret Smith",
+    "birthDate": "1897-12-14",
+    "deathDate": "1995-05-29",
+    "bio": "A Senator and a Representative from Maine; born Margaret Madeline Chase, December 14, 1897, in Skowhegan, Somerset County, Maine; attended the public schools; taught school in Skowhegan, Maine 1916-1917; business executive for country weekly newspaper and a woolen company 1919-1930; secretary to husband while he was in Congress 1937-1940; lieutenant colonel, Air Force Reserve 1950-1957; elected as a Republican to the Seventy-sixth Congress, by special election, June 3, 1940, to fill the vacancy caused by the death of her husband, Clyde H. Smith; reelected to the four succeeding Congresses and served from June 3, 1940, to January 3, 1949; was not a candidate for reelection but was elected in 1948 to the United States Senate; reelected in 1954, 1960 and 1966, and served from January 3, 1949, until January 3, 1973; unsuccessful candidate for reelection in 1972; first woman to serve in both houses of Congress; chairwoman, Special Committee on Rates of Compensation (Eighty-third Congress), Republican Conference (Ninetieth through Ninety-second Congresses); first woman to be placed in nomination for the presidency at a major party convention 1964; visiting professor for the Woodrow Wilson National Fellowship Foundation 1973-1976; awarded the Presidential Medal of Freedom on July 6, 1989; was a resident of Skowhegan, Maine, until her death on May 29, 1995; remains were cremated, and ashes placed in the residential wing of the Margaret Chase Smith Library, Skowhegan, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

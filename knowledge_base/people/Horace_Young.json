@@ -1,0 +1,56 @@
+{
+    "name": "Horace Young",
+    "birthDate": "1850-08-04",
+    "deathDate": "1917-08-04",
+    "bio": "A Representative from Michigan; born in New Albion, Cattaraugus County, N.Y., August 4, 1850; attended the common schools and high school of Albion, N.Y., and Randolph (N.Y.) Institute; moved to Ishpeming, Mich.; engaged in accounting; studied law; was admitted to the bar in 1879 and commenced practice in Ishpeming, Mich.; member of the State house of representatives in 1879; prosecuting attorney of Marquette County 1886-1896; elected as a Republican to the Fifty-eighth and to the four succeeding Congresses (March 4, 1903-March 3, 1913); presented credentials as a Member-elect to the Sixty-third Congress and served from March 4, 1913, until his resignation, effective May 16, 1913, while a contest for the seat was pending; president of the Miners' National Bank in Ishpeming; died in Ishpeming, Mich., August 5, 1917; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Stephen Brundidge",
+    "birthDate": "1857-01-01",
+    "deathDate": "1938-01-14",
+    "bio": "A Representative from Arkansas; born in Searcy, White County, Ark., January 1, 1857; educated by private tutors and in the public schools in his native city; studied law; was admitted to the bar in 1879 and commenced practice in Newport, Ark.; returned to Searcy, Ark., in 1880 and continued the practice of law; elected prosecuting attorney of the first judicial district of Arkansas in 1886; reelected in 1888 and served until 1890; resumed the practice of law; member of the Democratic State central committee 1890-1892; elected as a Democrat to the Fifty-fifth and to the five succeeding Congresses (March 4, 1897-March 3, 1909); was not a candidate for renomination in 1908, but was an unsuccessful candidate for Governor that year; resumed the practice of law in Searcy, Ark.; unsuccessful candidate for election to the United States Senate in 1918; died in Searcy, Ark., January 14, 1938; interment in Oak Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

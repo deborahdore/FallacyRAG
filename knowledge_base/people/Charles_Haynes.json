@@ -1,0 +1,48 @@
+{
+    "name": "Charles Haynes",
+    "birthDate": "1784-04-15",
+    "deathDate": "1841-08-29",
+    "bio": "a Representative from Georgia; born in Brunswick, Mecklenburg County, Va., April 15, 1784; moved to Sparta, Ga.; completed preparatory studies; graduated in medicine from the University of Pennsylvania at Philadelphia and practiced; elected as a Jacksonian candidate to the Nineteenth and to the two succeeding Congresses (March 4, 1825-March 3, 1831); chairman, Committee on Expenditures in the Department of War (Twentieth Congress); unsuccessful candidate for reelection in 1830 to the Twenty-second Congress and for election in 1832 to the Twenty-third Congress; elected as a Jacksonian candidate to the Twenty-fourth Congress; and reelected as a Democrat to the Twenty-fifth Congress (March 4, 1835-March 3, 1839); died August 29, 1841; interment in Sparta, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

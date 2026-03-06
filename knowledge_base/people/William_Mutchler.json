@@ -1,0 +1,56 @@
+{
+    "name": "William Mutchler",
+    "birthDate": "1831-12-21",
+    "deathDate": "1893-06-23",
+    "bio": "A Representative from Pennsylvania; born in Palmer Township, Northampton County, Pa., December 21, 1831; attended the public schools and Vandeveer's Academy, Easton, Pa.; studied law; was admitted to the bar and commenced practice at Easton, Northampton County, Pa.; sheriff of Northampton County 1854-1860; prothonotary of Northampton County 1861-1867; adjutant of the Thirty-eighth Pennsylvania Volunteers in 1863; appointed assessor of internal revenue in March 1867 and served until May 1869; chairman of the Democratic State committee of Pennsylvania in 1869 and 1870; delegate to the Democratic National Conventions from 1876 until his death; elected as a Democrat to the Forty-fourth Congress (March 4, 1875-March 3, 1877); chairman, Committee on Expenditures in the Department of the Interior (Forty-fourth Congress); was not a candidate for renomination in 1876; elected to the Forty-seventh and Forty-eighth Congresses (March 4, 1881-March 3, 1885); was not a candidate for renomination in 1884; again elected to the Fifty-first, Fifty-second, and Fifty-third Congresses, and served from March 4, 1889, until his death in Easton, Northampton County, Pa., June 23, 1893; interment in Easton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

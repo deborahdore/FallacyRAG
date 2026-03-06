@@ -1,0 +1,16 @@
+{
+    "name": "George Gale",
+    "birthDate": "1756-06-03",
+    "deathDate": "1815-01-02",
+    "bio": "A Representative from Maryland; born in Somerset County, Md., June 3, 1756; attended the common schools; served in the Revolutionary War; member of the Maryland convention which ratified the Federal Constitution in 1788; elected as a Pro-Administration candidate to the First Congress (March 4, 1789-March 3, 1791); appointed by President George Washington on March 4, 1791, supervisor of distilled liquors for the district of Maryland; died on January 2, 1815, at ``Brookland,'' Cecil County, Md.; interment in the family burying ground on his estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MARYLAND"
+        }
+    ]
+}

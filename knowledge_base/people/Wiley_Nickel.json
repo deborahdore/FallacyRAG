@@ -1,0 +1,16 @@
+{
+    "name": "Wiley Nickel",
+    "birthDate": "1975-11-23",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Fresno County, Calif., November 23, 1975; graduated from Francis W. Parker School, Chicago Ill.; B.A., Tulane University, New Orleans, La., 1998; J.D., Pepperdine University, Malibu, Calif., 2005; lawyer, private practice; staff, office of Vice President Albert Gore, Jr., White House, 1998-1999; staff, presidential campaign of Albert Gore, Jr., 1999-2000; campaign staff, United States Representative Dennis Cardoza of California, 2001-2002; business owner; deputy district attorney, office of district attorney, Merced County, Calif., 2006; staff, White House, 2009-2011; member of the North Carolina state senate, 2019-2022; elected as a Democrat to the One Hundred Eighteenth Congress (January 3, 2023-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

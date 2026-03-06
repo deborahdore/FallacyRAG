@@ -1,0 +1,24 @@
+{
+    "name": "George Ege",
+    "birthDate": "1748-03-09",
+    "deathDate": "1829-12-14",
+    "bio": "A Representative from Pennsylvania; born near Womelsdorf, Berks County, Pa., March 9, 1748; attended the common schools; engaged in land and iron interests; member of the State house of representatives in 1783; appointed one of the first associate judges of Berks County under the constitution in 1790, and served from 1791 until 1818, when he resigned; resumed his extensive business interests; elected as a Federalist to the Fourth Congress to fill the vacancy caused by the resignation of Daniel Hiester; reelected to the Fifth Congress and served from December 8, 1796, until October 1797, when he resigned; resumed business interests; built and operated Schuylkill County Forge, near Port Clinton, Pa., in 1804; died at his residence, ``Charming Forge,'' Marion Township, Berks County, Pa., December 14, 1829; interment in Zion's Church Cemetery, Womelsdorf, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Nathaniel Hazard",
+    "birthDate": "1776",
+    "deathDate": "1820-12-17",
+    "bio": "A Representative from Rhode Island; born in Newport, R.I., in 1776; graduated from Brown University, Providence, R.I., in 1792; member of the Rhode Island state house of representatives in 1818 and 1819 and served as speaker; elected as a Democratic Republican to the Sixteenth Congress and served from March 4, 1819, until his death in Washington, D.C., December 17, 1820; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

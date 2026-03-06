@@ -1,0 +1,29 @@
+{
+    "name": "James Vance",
+    "birthDate": "1984-08-02",
+    "deathDate": null,
+    "bio": "a Senator from Ohio and a Vice President of the United States; born in Middletown, Ohio, August 2, 1984; graduated Middletown High School, 2003; B.A., political science and philosophy, Ohio State University, 2009; J.D., Yale Law School, 2013; United States Marine Corps, 2003-2007; served in Operation Iraqi Freedom; lawyer; venture capitalist; writer; lecturer; non-profit organization founder; elected as a Republican to the United States Senate in 2022 and served from January 3, 2023, until January 10, 2025, when he resigned to become Vice President; elected Vice President of the United States on the Republican ticket headed by Donald J. Trump in 2024.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican"
+        }
+    ]
+}

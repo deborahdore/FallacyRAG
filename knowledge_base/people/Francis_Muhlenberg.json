@@ -1,0 +1,16 @@
+{
+    "name": "Francis Muhlenberg",
+    "birthDate": "1795-04-22",
+    "deathDate": "1831-12-17",
+    "bio": "A Representative from Ohio; born in Philadelphia, Pa., April 22, 1795; attended the public schools of Philadelphia and Dickinson College, Carlisle, Pa.; studied law; was admitted to the bar in 1816 and commenced practice in Reading, Pa.; private secretary to Governor Hiester 1820-1823; moved to Pickaway County, Ohio; member of the state house of representatives in 1827; elected as an Adams candidate to the Twentieth Congress to fill the vacancy caused by the resignation of William Creighton, Jr., and served from December 19, 1828, to March 3, 1829; engaged in the real estate business in Ohio and Kentucky; died in Pickaway County, Ohio, on December 17, 1831; interment in Protestant Cemetery, Circleville, Pickaway County, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "OHIO"
+        }
+    ]
+}

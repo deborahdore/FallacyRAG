@@ -1,0 +1,24 @@
+{
+    "name": "George Owens",
+    "birthDate": "1786-08-29",
+    "deathDate": "1856-03-02",
+    "bio": "A Representative from Georgia; born in Savannah, Ga., August 29, 1786; attended school in Harrow, England, and was graduated from Cambridge University; studied law in the office of Mr. Chitty in London; returned to Savannah, Ga.; was admitted to the bar and practiced; elected as a Jacksonian candidate to the Twenty-fourth Congress and reelected as a Democrat to the Twenty-fifth Congress (March 4, 1835-March 3, 1839); resumed the practice of law; died in Savannah, Ga., March 2, 1856; interment in Laurel Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

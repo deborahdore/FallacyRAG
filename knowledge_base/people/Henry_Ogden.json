@@ -1,0 +1,32 @@
+{
+    "name": "Henry Ogden",
+    "birthDate": "1842-10-21",
+    "deathDate": "1905-07-23",
+    "bio": "A Representative from Louisiana; born in Abingdon, Washington County, Va., October 21, 1842; moved with his parents to Warrensburg, Mo., in 1851; attended the common schools; entered the Confederate Army and served throughout the Civil War; first lieutenant of Company D, Sixteenth Regiment, Missouri Infantry, and afterward on the staff of Brigadier General Lewis, Second Brigade, Parsons' division, Missouri Infantry; paroled at Shreveport on June 8, 1865; remained in Louisiana and engaged in agricultural pursuits; member of the State constitutional convention in 1879; served in the State house of representatives 1880-1888 and was speaker of the house from 1884 to 1888; elected as a Democrat to the Fifty-third Congress to fill the vacancy caused by the resignation of Newton C. Blanchard; reelected to the Fifty-fourth and Fifty-fifth Congresses and served from May 12, 1894, to March 3, 1899; resumed agricultural pursuits; died in Benton, Bossier Parish, La., on July 23, 1905; interment in Cottage Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

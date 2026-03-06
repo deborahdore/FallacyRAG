@@ -1,0 +1,31 @@
+{
+    "name": "John Hickenlooper",
+    "birthDate": "1952-02-07",
+    "deathDate": null,
+    "bio": "a Senator from Colorado; born in Narbeth, Penn., February 7, 1952; graduated The Haverford School, Haverford, Penn., 1970; B.A., English, Wesleyan University, 1974; M.S., geology, Wesleyan University, 1980; geologist; brewpub owner; mayor of Denver 2003-2011; governor of Colorado 2011-2019; was an unsuccessful candidate for the Democratic presidential nomination in 2020; elected as a Democrat to the United States Senate in 2020 for the term ending January 3, 2027.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        }
+    ]
+}

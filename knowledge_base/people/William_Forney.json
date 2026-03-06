@@ -1,0 +1,80 @@
+{
+    "name": "William Forney",
+    "birthDate": "1823-11-09",
+    "deathDate": "1894-01-16",
+    "bio": "A Representative from Alabama; born in Lincolnton, Lincoln County, N.C., November 9, 1823; pursued classical studies, and was graduated from the University of Alabama at Tuscaloosa in 1844; served in the war with Mexico as a first lieutenant in the First Regiment of Alabama Volunteers; studied law; was admitted to the bar in 1848 and commenced practice in Jacksonville, Calhoun County, Ala.; trustee of the University of Alabama 1851-1860; member of the State house of representatives in 1859 and 1860; during the Civil War entered the Confederate Army in 1861 as a captain, and was successively promoted to major, lieutenant colonel, colonel, and brigadier general; surrendered at Appomattox Court House; member of the State senate in 1865 and 1866; elected as a Democrat to the Forty-fourth and to the eight succeeding Congresses (March 4, 1875-March 3, 1893); chairman, Committee on Expenditures in the Department of the Treasury (Forty-sixth Congress); was not a candidate for renomination in 1892; appointed by President Cleveland a member of the Gettysburg Battlefield Commission and served until his death in Jacksonville, Ala., January 16, 1894; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

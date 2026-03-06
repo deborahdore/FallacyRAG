@@ -1,0 +1,32 @@
+{
+    "name": "Doug Ose",
+    "birthDate": "1955",
+    "deathDate": null,
+    "bio": "A Representative from California; born in Sacramento, Sacramento, Calif., June 27, 1955; graduated from Rio Americano High School, Sacramento, Calif.; B.S., University of California, Berkeley, Calif., 1977; elected as a Republican to the One Hundred Sixth and to the two succeeding Congresses (January 3, 1999-January 3, 2005); was not a candidate for reelection to the One Hundred Ninth Congress in 2004; was an unsuccessful candidate for election to the One Hundred Fourteenth Congress in 2014.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

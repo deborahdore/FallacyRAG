@@ -1,0 +1,48 @@
+{
+    "name": "Robert Underwood",
+    "birthDate": "1948",
+    "deathDate": null,
+    "bio": "a Delegate from Guam; born in Tamuning, Guam, July 13, 1948; graduated from John F. Kennedy High School, Tamuning, Guam, 1965; B.A., California State University, Los Angeles, Calif., 1969, M.A., California State University, Los Angeles, Calif., 1971; Ed.D., University of Southern California, Los Angeles, Calif., 1987; teacher; instructor and director, bilingual bicultural training program, University of Guam, Mangilao, Guam, 1976-1981; faculty, University of Guam, Mangilao, Guam, 1981-1983; director, bilingual education assistance for Micronesia, 1983-1988; administrator, University of Guam, Mangilao, Guam, 1988-1992; elected as a Democrat to the One Hundred Third and to the four succeeding Congresses (January 3, 1993-January 3, 2003); was not a candidate for reelection to the One Hundred Eighth Congress in 2002, but was an unsuccessful candidate for Governor of Guam; unsuccessful candidate for election to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GU"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GU"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GU"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GU"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GU"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Benjamin Bourne",
+    "birthDate": "1755-09-09",
+    "deathDate": "1808-09-17",
+    "bio": "A Representative from Rhode Island; born in Bristol, R.I., September 9, 1755; was graduated from Harvard College in 1775; studied law; was admitted to the bar and commenced practice in Providence; held several public offices; quartermaster of the Second Rhode Island Regiment in 1776; member of the general assembly in 1789 and 1790; upon the ratification of the Constitution by the State of Rhode Island was elected as a Pro-Administration candidate to the First through Third Congresses and as a Federalist to the Fourth and Fifth Congresses and served from August 31, 1790, until his resignation in 1796, before the close of the Fourth Congress; appointed judge of the United States District Court for the District of Rhode Island in 1801 and, later, judge of the United States Circuit Court for the Eastern Circuit; died in Bristol, R.I., September 17, 1808; interment in Juniper Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

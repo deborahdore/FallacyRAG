@@ -1,0 +1,32 @@
+{
+    "name": "Harold Hollenbeck",
+    "birthDate": "1938",
+    "deathDate": null,
+    "bio": "A Representative from New Jersey; born in Passaic, Passaic County, N.J., December 29, 1938; attended the public schools of East Rutherford, New Jersey; B.A., Fairleigh Dickinson University, Rutherford, 1961; LL.B., University of Virginia, 1964; admitted to the New Jersey bar in 1965 and commenced practice in Ridgewood; member, East Rutherford Borough Council, 1967-1969, New Jersey assembly, 1968-1971; New Jersey senate, 1972-1973; delegate, Republican National Convention, 1968; elected as a Republican to the Ninety-fifth and to the two succeeding Congresses (January 3, 1977-January 3, 1983); unsuccessful candidate for reelection in 1982 to the Ninety-eighth Congress; appointed by Governor Thomas Kean judge, superior court of New Jersey and sworn in July 1, 1987; is a resident of Ridgewood, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "John Paterson",
+    "birthDate": "1744",
+    "deathDate": "1808-07-19",
+    "bio": "A Representative from New York; born in New Britain, Hartford County, Conn., in 1744; attended the common schools; completed preparatory studies; graduated from Yale College, New Haven, Conn., 1762; studied law; admitted to the bar and practiced in New Britain and Lenox, Mass.; member of the Berkshire convention of 1774; member of the general court that became the first Provincial Congress in 1774; served in the Revolutionary War; colonel of the regiment from April to December 1775; colonel of the Fifteenth Continental Infantry January 1, 1776; brigadier general February 21, 1777, and served until the close of the war; brevetted major general September 30, 1783; after the war returned to Lenox, Mass.; commander of the Massachusetts troops in putting down Shays' Rebellion; moved to Lisle, Broome County, N.Y., in 1790; member of the New York state assembly, 1792 and 1793; county judge of Broome County, N.Y., 1798 and 1806; member of the committee to revise the constitution of the State of New York, 1801; elected as a Democratic Republican to the Eighth Congress (March 4, 1803-March 3, 1805); from 1805 until his death he devoted himself to farming; died on July 19, 1808, in Lisle, N.Y. (now Whitneys Point); interment in Lenox Cemetery, Lenox, Mass.&nbsp;",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

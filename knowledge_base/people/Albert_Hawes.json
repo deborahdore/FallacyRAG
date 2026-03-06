@@ -1,0 +1,32 @@
+{
+    "name": "Albert Hawes",
+    "birthDate": "1804-04-01",
+    "deathDate": "1849-03-14",
+    "bio": "a Representative from Kentucky; born near Bowling Green, Caroline County, Va., April 1, 1804; moved to Kentucky in 1810 with his parents, who settled in Fayette County near Lexington; pursued classical studies at Transylvania University, Lexington, Ky.; moved to Hancock County and settled near Hawesville; engaged in agricultural pursuits; elected as a Jacksonian candidate to the Twenty-second, Twenty-third, and Twenty-fourth Congresses (March 4, 1831-March 3, 1837); chairman, Committee on Expenditures in the Post Office Department (Twenty-second through Twenty-fourth Congresses); resumed agricultural pursuits; moved to Daviess County and settled near Yelvington and continued agricultural pursuits; died near Yelvington, Ky., March 14, 1849; interment in the Hawes family burial ground on the Owensboro and Yelvington Road.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

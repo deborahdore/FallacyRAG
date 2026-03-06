@@ -1,0 +1,32 @@
+{
+    "name": "Thomas Kenan",
+    "birthDate": "1771-02-26",
+    "deathDate": "1843-10-22",
+    "bio": "a Representative from North Carolina; born in Kenansville, Duplin County, N.C., February 26, 1771; educated by private tutors; member of the North Carolina state house of commons 1799-1803; served in the North Carolina state senate in 1804; elected as a Democratic Republican to the Ninth, Tenth, and Eleventh Congresses (March 4, 1805-March 3, 1811); was not a candidate for renomination; moved to Selma, Dallas County, Ala., in 1833 and engaged in planting; member of the Alabama house of representatives for several years; died near Selma, Ala., October 22, 1843; interment in Valley Creek Cemetery, near Selma.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Charles McVean",
+    "birthDate": "1802",
+    "deathDate": "1848-12-22",
+    "bio": "a Representative from New York; born near Johnstown, N.Y., in 1802; pursued an academic course; studied law; admitted to the bar and commenced practice in Johnstown; editor of a newspaper in Canajoharie 1827-1831; elected as a Jacksonian candidate to the Twenty-third Congress (March 4, 1833-March 3, 1835); was not a candidate for renomination in 1834; district attorney of Montgomery County 1836-1839; moved to New York City in 1839; resumed the practice of his profession; appointed surrogate of New York County January 24, 1844, and served until 1848; appointed United States attorney for the southern district of New York September 1, 1848; died in New York City, December 22, 1848; interment in St. Andrew's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

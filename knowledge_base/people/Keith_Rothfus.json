@@ -1,0 +1,32 @@
+{
+    "name": "Keith Rothfus",
+    "birthDate": "1962",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Endicott, Broome County, N.Y., April 25, 1962; graduated from West Seneca West Senior High School, West Seneca, N.Y., 1980; B.S., State University of New York-Buffalo State, Buffalo, N.Y., 1984; J.D., University of Notre Dame, Notre Dame, Ind., 1990; lawyer, private practice; director, Center for Faith-Based and Community Initiatives, United States Department of Homeland Security, 2006-2007; unsuccessful candidate for election to the One Hundred Twelfth Congress in 2010; elected as a Republican to the One Hundred Thirteenth and to the two succeeding Congresses (January 3, 2013-January 3, 2019); was an unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

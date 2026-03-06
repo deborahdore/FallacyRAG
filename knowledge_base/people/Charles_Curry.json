@@ -1,0 +1,16 @@
+{
+    "name": "Charles Curry",
+    "birthDate": "1893-08-13",
+    "deathDate": "1972-10-07",
+    "bio": "a Representative from California; born in San Francisco, Calif., August 13, 1893; attended the public schools, Howe's Academy, Sacramento, Calif., and George Washington University and Georgetown University School of Law, Washington, D.C.; secretary to his father, Congressman Charles F. Curry, 1913-1917; during the First World War enlisted in the Aviation Section, Signal Enlisted Reserve Corps, on August 15, 1917; commissioned a second lieutenant and served until May 22, 1919, with overseas service; clerk to the Committee on the Territories, House of Representatives, 1919-1930; was admitted to the bar in 1921; elected as a Republican as a write-in candidate to the Seventy-second Congress (March 4, 1931-March 3, 1933); unsuccessful candidate for reelection in 1932 to the Seventy-third Congress; engaged in the practice of law, and in mining and other business enterprises; resided in Long Beach, Calif., where he died October 7, 1972; interment in Westminster Memorial Park, Westminster, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

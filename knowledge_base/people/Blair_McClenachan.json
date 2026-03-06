@@ -1,0 +1,16 @@
+{
+    "name": "Blair McClenachan",
+    "birthDate": "1735",
+    "deathDate": "1812-05-08",
+    "bio": "a Representative from Pennsylvania; born in Ireland, c. 1735; immigrated to the United States at an early age and settled in Philadelphia, Pa.; engaged in mercantile pursuits and in banking and shipping; served in the Revolutionary War; one of the founders of and served with the First Troop of Philadelphia Cavalry; in 1780 he subscribed a large sum of money to help the American forces and aided the Continental Congress with money and credit; member of the Pennsylvania state house of representatives, 1790-1795; elected as a Democratic Republican to the Fifth Congress (March 4, 1797-March 3, 1799); died in Philadelphia, Pa., May 9, 1812; interment in a vault in St. Paul's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

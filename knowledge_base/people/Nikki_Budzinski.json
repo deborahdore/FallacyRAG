@@ -1,0 +1,23 @@
+{
+    "name": "Nikki Budzinski",
+    "birthDate": "1977-03-11",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Peoria, Peoria County, Ill., March 11, 1977; B.A., University of Illinois, Urbana-Champaign, Ill., 1999; trade unionist; senior advisor, Governor of Illinois J. B. Pritzker, 2019-2020; chief of staff, Office of Management and Budget, 2021; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Josh Riley",
+    "birthDate": "1981-01-21",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Endicott, Broome County, N.Y., January 21, 1981; graduated from Union-Endicott High School, Endicott, N.Y.; B.A., College of William and Mary, Williamsburg, Va., 2003; J.D., Harvard University, Cambridge, Mass., 2007; staff, United States Department of Labor; law clerk, United States Court of Appeals, Ninth Circuit; staff, United States Senator Al Franken of Minnesota, 2011-2014; lawyer; unsuccessful candidate for election to the One Hundred Eighteenth Congress in 2022; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Joseph Walker",
+    "birthDate": "1829-12-21",
+    "deathDate": "1907-04-03",
+    "bio": "A Representative from Massachusetts; born in Boston, Mass., December 21, 1829; moved with his parents to Hopkinton in 1830 and to Worcester, Mass., in 1843; attended the public schools; engaged in the manufacture of boots and shoes; established the business of manufacturing leather in Chicago, Ill., in 1868; member of the common council of Worcester 1852-1854; served in the State house of representatives in 1879, 1880, and 1887; elected as a Republican to the Fifty-first and to the four succeeding Congresses (March 4, 1889-March 3, 1899); chairman, Committee on Banking and Currency (Fifty-fourth and Fifty-fifth Congresses); unsuccessful candidate for reelection in 1898 to the Fifty-sixth Congress; resumed his former business pursuits; died in Worcester, Mass., April 3, 1907; interment in the Rural Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Francis Rooney",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Tulsa, Tulsa County, Okla., December 4, 1953; graduated from Georgetown Preparatory School, North Bethesda, Md., 1971; A.B., Georgetown University, Washington, D.C., 1975; J.D., Georgetown University, Washington, D.C., 1978; business owner; United States Ambassador to the Holy See, 2005-2008; elected as a Republican to the One Hundred Fifteenth Congress and to the succeeding Congress (January 3, 2017-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

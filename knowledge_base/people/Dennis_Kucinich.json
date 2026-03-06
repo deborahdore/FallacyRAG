@@ -1,0 +1,72 @@
+{
+    "name": "Dennis Kucinich",
+    "birthDate": "1946-10-08",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Cleveland, Cuyahoga County, Ohio, October 8, 1946; graduated from St. John Cantius, Cleveland, Ohio, 1964; B.A., Case Western Reserve University, Cleveland, Ohio, 1973; M.A., Case Western Reserve University, Cleveland, Ohio, 1973; member, Cleveland, Ohio, city council, 1969-1973, 1983; clerk of courts, Cleveland, Ohio, 1975; mayor, Cleveland, Ohio, 1977-1979; member, Ohio state senate, 1995-1996; elected as a Democrat to the One Hundred Fifth and to the seven succeeding Congresses (January 3, 1997-January 3, 2013); unsuccessful candidate for the Democratic nomination for President of the United States in 2004 and in 2008; unsuccessful candidate for nomination to the One Hundred Thirteenth Congress in 2012; unsuccessful candidate for nomination as Governor of Ohio in 2018; unsuccessful candidate for election to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

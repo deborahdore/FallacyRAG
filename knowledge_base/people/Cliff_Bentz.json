@@ -1,0 +1,31 @@
+{
+    "name": "Cliff Bentz",
+    "birthDate": "1952-01-12",
+    "deathDate": null,
+    "bio": "a Representative from Oregon; born in Salem, Marion County, Oreg., January 12, 1952; graduated from Regis High School, Stayton, Oreg., 1970; B.S., Eastern Oregon State College, La Grande, Oreg., 1974; J.D., Lewis and Clark College, Portland, Oreg., 1977; rancher; farmer; lawyer, private practice; member of the Oregon water resources commission, 1988-1996, chairman, 1994-1996; member of the Oregon state house of representatives, 2008-2018; member of the Oregon state senate, 2018-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        }
+    ]
+}

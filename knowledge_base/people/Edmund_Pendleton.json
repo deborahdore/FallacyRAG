@@ -1,0 +1,16 @@
+{
+    "name": "Edmund Pendleton",
+    "birthDate": "1788",
+    "deathDate": "1862-02-25",
+    "bio": "a Representative from New York; born in Savannah, Ga., in 1788; received a liberal schooling; studied law; admitted to the bar and practiced for several years in Hyde Park, Dutchess County, N.Y.; county judge of Dutchess County 1830-1840; was elected as an Anti-Jacksonian candidate to the Twenty-second Congress (March 4, 1831-March 3, 1833); died in New York City February 25, 1862; interment in St. James' Churchyard, Hyde Park, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

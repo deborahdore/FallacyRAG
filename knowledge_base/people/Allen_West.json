@@ -1,0 +1,16 @@
+{
+    "name": "Allen West",
+    "birthDate": "1961-02-07",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Atlanta, Fulton County, Ga., February 7, 1961; graduated from Henry W. Grady High School, Atlanta, Ga., 1979; B.A., University of Tennessee, Knoxville, Tenn., 1983; M.A., Kansas State University, Manhattan, Kans., 1986; United States Army, 1982-2004; M.M.A.S., U.S. Army Command and General Staff College, Fort Leavenworth, Kans.; educator; military adviser to the Afghan army; unsuccessful candidate for election to the One Hundred Eleventh Congress in 2008; elected as a Republican to the One Hundred Twelfth Congress (January 3, 2011-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012; chair, Texas Republican Party, 2020-2021; unsuccessful candidate for nomination for Governor of Texas in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

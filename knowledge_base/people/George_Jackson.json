@@ -1,0 +1,32 @@
+{
+    "name": "George Jackson",
+    "birthDate": "1757-01-09",
+    "deathDate": "1831-05-17",
+    "bio": "a Representative from Virginia; born in Cecil County, Md., January 9, 1757; moved with his parents to Moorefield, Va. (now West Virginia), and in 1769 to Jacksons Fort, Va. (now Buckhannon, W.Va.); served in the Revolutionary War, attaining the rank of colonel; studied law; admitted to the bar in 1784 and commenced practice in Clarksburg, Va. (now West Virginia); justice of the peace in 1784; member of the Virginia state house of delegates, 1785-1791 and again in 1794; member of the Virginia state convention which ratified the U.S. Constitution in 1788; elected as a Democratic Republican to the Fourth Congress (March 4, 1795-March 3, 1797); elected as a Democratic Republican to the Sixth and to the succeeding Congress (March 4, 1799-March 3, 1803); was not a candidate for reelection; moved to Zanesville, Ohio, about 1806 and engaged in agricultural pursuits; member of the Virginia state house of representatives, 1809-1812; member of the Virginia state senate, 1817-1819; died in Zanesville, Ohio, May 17, 1831; interment on an estate once owned by him in Falls Township, near Zanesville.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

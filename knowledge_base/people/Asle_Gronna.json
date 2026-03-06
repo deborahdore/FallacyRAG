@@ -1,0 +1,80 @@
+{
+    "name": "Asle Gronna",
+    "birthDate": "1858-12-10",
+    "deathDate": "1922-04-04",
+    "bio": "A Representative and a Senator from North Dakota; born in Elkader, Clayton County, Iowa, December 10, 1858; moved with his parents to Houston County, Minn.; attended the public schools and the Caledonia Academy; taught school in Wilmington, Minn.; moved to Dakota Territory in 1879 and engaged in farming, teaching, and business; member, Territorial house of representatives 1889; president of the village board of trustees of Lakota and president of the board of education several terms; member, board of regents of the University of North Dakota 1902; elected as a Republican to the Fifty-ninth, Sixtieth, and Sixty-first Congresses and served from March 4, 1905, until February 2, 1911, when he resigned, having been elected Senator; elected as a Republican in 1911 to the United States Senate to fill the vacancy caused by the death of Martin N. Johnson; reelected in 1914 and served from February 2, 1911, to March 3, 1921; unsuccessful candidate for renomination in 1920; chairman, Committee on Expenditures in the Department of the Navy (Sixty-second and Sixty-fifth Congresses), Committee on Agriculture and Forestry (Sixty-sixth Congress); resumed agricultural pursuits; died in Lakota, N.Dak., May 4, 1922; interment in Lakota Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Joseph McClurg",
+    "birthDate": "1818-02-22",
+    "deathDate": "1900-12-02",
+    "bio": "A Representative from Missouri; born near Lebanon, St. Louis County, Mo., February 22, 1818; attended Xenia (Ohio) Academy and Oxford (Ohio) College; taught school in Louisiana and Mississippi in 1835 and 1836; moved to Texas in 1839; studied law and was admitted to practice at Columbus, Tex.; clerk of the circuit court in 1840; returned to Missouri in 1841 and engaged in mercantile pursuits; served during the Civil War as colonel of Cavalry in the Union Army; member of the State convention 1861-1863; elected as an Unconditional Unionist to the Thirty-eighth Congress; reelected as a Republican to the Thirty-ninth and Fortieth Congresses and served from March 3, 1863, until his resignation in July 1868, having been elected Governor; elected as a Republican Governor of Missouri and served from January 31, 1869, to January 31, 1871; unsuccessful candidate for reelection; resumed mercantile pursuits at Linn Creek, Mo., and also engaged in steamboating and lead mining; register of the land office at Springfield, Mo., in 1889; died in London, Mo., on December 2, 1900; interment in Lebanon Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Unconditional Unionist",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

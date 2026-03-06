@@ -1,0 +1,40 @@
+{
+    "name": "Earle Cabell",
+    "birthDate": "1906",
+    "deathDate": "1975",
+    "bio": "A Representative from Texas; born on a farm, south of Trinity River in Dallas County, Tex., October 27, 1906; graduated from North Dallas High School in 1925; attended Texas A. &amp; M. and Southern Methodist University; in 1932 with two brothers organized Cabell's, Inc. (dairies and convenience stores) and became president and chairman of the board; engaged in banking and investments; elected mayor of Dallas May 1961 and reelected in 1963, serving until his resignation February 3, 1964, to be a candidate for Congress; elected as a Democrat to the Eighty-ninth and to the three succeeding Congresses (January 3, 1965-January 3, 1973); unsuccessful candidate for reelection in 1972 to the Ninety-third Congress; retired and returned to Dallas where he died September 24, 1975; interment in Restland Memorial Park.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

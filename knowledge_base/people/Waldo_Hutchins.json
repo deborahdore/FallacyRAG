@@ -1,0 +1,32 @@
+{
+    "name": "Waldo Hutchins",
+    "birthDate": "1822",
+    "deathDate": "1891",
+    "bio": "A Representative from New York; born in Brooklyn, Windham County, Conn., September 30, 1822; was graduated from Amherst (Mass.) College in 1842; studied law; was admitted to the bar in 1845 and commenced practice in New York City; member of the State assembly in 1852; delegate to the State constitutional convention in 1867; park commissioner 1857-1869; elected as a Democrat to the Forty-sixth Congress to fill the vacancy caused by the death of Alexander Smith; reelected to the Forty-seventh and Forty-eighth Congresses and served from November 4, 1879, to March 3, 1885; was not a candidate for renomination in 1884; resumed the practice of law in New York City; appointed in 1887 member of the park commission and served until his death, February 8, 1891, in New York City; interment in Woodlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

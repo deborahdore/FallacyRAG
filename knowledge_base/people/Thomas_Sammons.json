@@ -1,0 +1,40 @@
+{
+    "name": "Thomas Sammons",
+    "birthDate": "1762-10-01",
+    "deathDate": "1838-10-20",
+    "bio": "A Representative from New York; born in Shamenkop, Ulster County, N.Y., October 1, 1762; attended the rural schools; served in the Revolutionary War, lieutenant, captain, and major in the New York militia; engaged in agricultural pursuits; delegate to the New York state constitutional convention in 1801; member of the council of appointment;&nbsp; elected as a Republican to the Eighth and Ninth Congresses (March 4, 1803-March 3, 1807); unsuccessful Democratic candidate for reelection; elected to the Eleventh and Twelfth Congresses (March 4, 1809-March 3, 1813); resumed agricultural pursuits; died on the Sammons homestead, in Montgomery County, near Johnstown, N.Y., November 20, 1838; interment on the homestead in the Simeon Sammons Cemetery, Johnstown, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

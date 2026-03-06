@@ -1,0 +1,16 @@
+{
+    "name": "Nathaniel Allen",
+    "birthDate": "1780",
+    "deathDate": "1832-12-22",
+    "bio": "A Representative from New York; born in East Bloomfield, N.Y., in 1780; attended the common schools; worked as a blacksmith at Canandaigua, Ontario County, N.Y.; started a blacksmith shop at Richmond, near Allens Hill, in 1796; served as an officer in the militia; appointed postmaster of Honeoye Falls, N.Y., July 1, 1811; was commissioner and paymaster on the Niagara frontier in 1812; member of the State assembly in 1812; sheriff of Ontario County, N.Y., 1815-1819; elected as a Democratic Republican to the Sixteenth Congress (March 4, 1819-March 3, 1821); was not a candidate for renomination in 1820; supervisor of the town of Richmond 1824-1826; engaged in the prosecution of claims for money due in connection with the construction of the Louisville &amp; Portland Canal; died in the Gault House at Louisville, Ky., while on a business trip to that city, December 22, 1832; interment in the churchyard of the Episcopal Church, Allens Hill, Ontario County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

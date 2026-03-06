@@ -1,0 +1,56 @@
+{
+    "name": "Weldon Edwards",
+    "birthDate": "1788-01-25",
+    "deathDate": "1873-12-18",
+    "bio": "A Representative from North Carolina; born in Gaston, Northampton County, N.C., January 25, 1788; attended Warrenton Academy; studied law; was admitted to the bar in 1810 and commenced practice in Warrenton, N.C.; member of the State house of representatives in 1814 and 1815; elected as a Democratic Republican to the Fourteenth Congress to fill the vacancy caused by the resignation of Nathaniel Macon; reelected as a Democratic Republican to the Fifteenth, Sixteenth, and Seventeenth Congresses, elected as a Crawford Republican to the Eighteenth Congress, and as a Jacksonian candidate to the Nineteenth Congress; and served from February 7, 1816, to March 3, 1827; chairman, Committee on Expenditures in the Department of the Treasury (Eighteenth Congress), Committee on Public Expenditures (Nineteenth Congress); declined to be a candidate for reelection in 1826; returned to his plantation; member of the State senate 1833-1844; member of the State constitutional convention in 1835; again elected to the State senate in 1850 and chosen its president; president of the State secession convention in 1861; died in Warren County, N.C., December 18, 1873; interment in a private cemetery at his home, ``Poplar Mount,'' about twelve miles from Warrenton, Warren County, N.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

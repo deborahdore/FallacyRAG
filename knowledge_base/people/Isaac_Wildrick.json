@@ -1,0 +1,24 @@
+{
+    "name": "Isaac Wildrick",
+    "birthDate": "1803-03-03",
+    "deathDate": "1892-03-22",
+    "bio": "A Representative from New Jersey; born in Marksboro, Warren County, N.J., March 3, 1803; attended the common schools; engaged in agricultural pursuits near Blairstown, Warren County, N.J.; constable from 1827 to 1832; coroner 1829-1831; justice of the peace 1834-1839; judge in 1839; sheriff 1839-1841; director of the county poorhouse 1842-1848; member freeholder 1845-1848; elected as a Democrat to the Thirty-first and Thirty-second Congresses (March 4, 1849-March 3, 1853); was not a candidate for renomination in 1852; resumed agricultural pursuits; again a freeholder 1856-1859; member of the State assembly 1882-1885; died in Blairstown, N.J., March 22, 1892; interment in the Presbyterian Cemetery, Marksboro, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

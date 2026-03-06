@@ -1,0 +1,56 @@
+{
+    "name": "James Leath",
+    "birthDate": "1931",
+    "deathDate": "2000",
+    "bio": "A Representative from Texas; born in Henderson, Rusk County, Tex., May 6, 1931; attended the Rusk County public schools; graduated from Henderson High School, 1949; attended Kilgore Junior College; B.B.A., University of Texas, Austin, 1954; served in United States Army, 1954-1956; coached football and track, Henderson High School, 1957-1959; business salesman, 1959; banking, 1962; officer and director in five Texas banks, and two manufacturing companies; special assistant to United States Representative W.R. Poage, 1972-1974; elected as a Democrat to the Ninety-sixth and to the five succeeding Congresses (January 3, 1979-January 3, 1991); was not a candidate for renomination in 1990 to the One Hundred Second Congress; died on December 8, 2000 in Arlington, Va.; interment in Rusk County Memorial Gardens, Henderson, Rusk County, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Connie Conway",
+    "birthDate": "1950-09-25",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Bakersfield, Kern County, Calif., September 25, 1950; graduated from San Joaquin Memorial High School, Bakersfield, Calif., 1968; attended College of the Sequoias, Visalia, Calif.; attended California State University, Fresno, Calif.; hospital wellness coordinator; marketing director; corporate district manager; director, Tulare, Calif., redevelopment agency, 1996-2001; member, Tulare County, Calif., board of supervisors, 2001-2008, chair, 2005 and 2008; president, Calif. state association of counties, 2006; member of the California state assembly, 2008-2014, minority leader, 2010-2014; executive director, United States Farm Service Agency, United States Department of Agriculture, 2019-2021; member, Calif. community college board of governors; elected as a Republican to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Devin Nunes (June 7, 2022-January 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "name": "William Hughes",
+    "birthDate": "1932",
+    "deathDate": "2019",
+    "bio": "A Representative from New Jersey; born in Salem, Salem County, N.J., October 17, 1932; attended public schools; A.B., Rutgers University, New Brunswick, N.J., 1955; J.D., Rutgers Law School, Camden, N.J., 1958; admitted to the New Jersey bar in 1959 and commenced practice in Ocean City; served as township solicitor for Upper Township, N.J., 1959-1961; appointed assistant prosecutor for Cape May County, N.J., 1960; reappointed as first assistant prosecutor in 1961 and served until the spring of 1970; unsuccessful candidate for election in 1970 to the Ninety-second Congress; appointed by the Supreme Court of New Jersey to the Advisory Committee on Professional Ethics, 1972; elected as a Democrat to the Ninety-fourth and to the nine succeeding Congresses (January 3, 1975-January 3, 1995); one of the managers appointed by the House of Representatives in 1986 to conduct the impeachment proceedings against Harry E. Claiborne, judge of the United States District Court for Nevada; not a candidate for reelection to the One Hundred Fourth Congress; United States Ambassador to Panama, 1995 to 1998; died on October 30, 2019, in Ocean City, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

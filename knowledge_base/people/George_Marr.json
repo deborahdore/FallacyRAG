@@ -1,0 +1,16 @@
+{
+    "name": "George Marr",
+    "birthDate": "1779-05-25",
+    "deathDate": "1856-09-05",
+    "bio": "A Representative from Tennessee; born near Marrs Hill, Henry County, Va., May 25, 1779; attended rural schools and the University of North Carolina at Chapel Hill; attorney general for west Tennessee 1807-1809; attorney general of the fifth district 1809-1813; served in the Creek War and was wounded; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); unsuccessful candidate for renomination in 1818; engaged in planting; was one of the largest landowners in west Tennessee; moved from Clarksville to Obion County in 1821; member of the Tennessee State Constitutional convention in 1834; affiliated with the Whig Party after its formation; died at his residence on Island No. 10 (since washed away), in the Mississippi River, near New Madrid, New Madrid County, Mo., on September 5, 1856; interment in Troy Cemetery, Troy, Tenn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Dave Loebsack",
+    "birthDate": "1952-12-23",
+    "deathDate": null,
+    "bio": "A Representative from Iowa; born in Sioux City, Woodbury County, Iowa, December 23, 1952; graduated from East High School, Sioux City, Iowa, 1970; B.S., Iowa State University, Ames, Iowa, 1974; M.A., Iowa State University, Ames, Iowa, 1976; Ph.D., University of California, Davis, Calif., 1985; professor, Cornell College, Mount Vernon, Iowa; elected as a Democrat to the One Hundred Tenth and to the six succeeding Congresses (January 3, 2007-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

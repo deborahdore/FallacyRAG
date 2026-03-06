@@ -1,0 +1,88 @@
+{
+    "name": "Bob Filner",
+    "birthDate": "1942-09-04",
+    "deathDate": "2025-04-20",
+    "bio": "A Representative from California; born in Pittsburgh, Allegheny County, Pa., September 4, 1942; graduated from Forest Hills High School, Queens, N.Y., 1959; B.A., Cornell University, Ithaca, N.Y., 1963; M.A., University of Delaware, Newark, Del., 1969; Ph.D., Cornell University, Ithaca, N.Y., 1973; faculty, San Diego State University, San Diego, Calif., 1970-1992; staff, United States Senator Hubert H. Humphrey of Minnesota, 1975; staff, United States Representative Donald M. Fraser of Minnesota, 1976; member, San Diego, Calif., school board, 1979-1983, president, 1982; staff, United States Representative Jim Bates of California, 1984; member of the San Diego, Calif., city council, 1987-1992; deputy mayor of San Diego, Calif., 1990; elected as a Democrat to the One Hundred Third and to the nine succeeding Congresses until his resignation on December 3, 2012 (January 3, 1993-December 3, 2012); chair, Committee on Veterans' Affairs (One Hundred Tenth and One Hundred Eleventh Congresses); was not a candidate for reelection to the One Hundred Thirteenth Congress in 2012, but was elected Mayor of San Diego, Calif.; Mayor of San Diego, Calif., 2012-2013; died on April 20, 2025, in Costa Mesa, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

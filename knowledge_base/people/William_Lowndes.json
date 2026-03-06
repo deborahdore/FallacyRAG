@@ -1,0 +1,56 @@
+{
+    "name": "William Lowndes",
+    "birthDate": "1782-02-11",
+    "deathDate": "1822-10-27",
+    "bio": "A Representative from South Carolina; born on \"Horseshoe\" plantation, near Jacksonborough, St. Bartholomew's parish, South Carolina, February 11, 1782; pursued classical studies in England and at home; studied law; was admitted to the bar in 1804 and commenced practice in Charleston, S.C.; also engaged in agricultural pursuits; member of the South Carolina state house of representatives, 1804-1808; captain of militia in 1807; elected as a Democratic Republican to the Twelfth and to the five succeeding Congresses and served from March 4, 1811, until May 8, 1822, when he resigned; chairman, Committee on Ways and Means (Fourteenth and Fifteenth Congresses), Committee on Expenditures in the Department of the Treasury (Fifteenth Congress); nominated by the general assembly of South Carolina for the office of President of the United States in 1821; died at sea while en route to England October 27, 1822; remains were buried at sea.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

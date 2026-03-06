@@ -1,0 +1,24 @@
+{
+    "name": "John Pinckney",
+    "birthDate": "1845-05-04",
+    "deathDate": "1905-04-24",
+    "bio": "A Representative from Texas; born in Grimes County, Tex., near the town of Hempstead, Waller County, May 4, 1845; attended the public schools and was privately instructed; enlisted as a private in the Confederate Army and served in Company D, Fourth Texas Brigade, until the close of the Civil War, attaining the rank of first lieutenant; studied law; was admitted to the bar in 1875 and commenced practice in Hempstead, Tex.; district attorney for the twenty-third judicial district of Texas 1890-1900; county judge of Waller County 1900-1903; elected as a Democrat to the Fifty-eighth Congress to fill the vacancy caused by the resignation of Thomas H. Ball; reelected to the Fifty-ninth Congress and served from November 17, 1903, until April 24, 1905, when he was assaulted and killed at Hempstead, Tex.; interment in the City Cemetery at Hempstead.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

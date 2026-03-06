@@ -1,0 +1,24 @@
+{
+    "name": "Rod Blum",
+    "birthDate": "1955",
+    "deathDate": null,
+    "bio": "A Representative from Iowa; born in Dubuque, Dubuque County, Iowa, April 26, 1955; graduated from Dubuque Senior High School, Dubuque, Iowa, 1973; B.A., Loras College, Dubuque, Iowa, 1977; M.B.A., University of Dubuque, Dubuque, Iowa, 1989; business executive; unsuccessful candidate for nomination to the One Hundred Thirteenth Congress in 2012; elected as a Republican to the One Hundred Fourteenth and to the succeeding Congress (January 3, 2015-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

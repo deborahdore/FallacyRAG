@@ -1,0 +1,39 @@
+{
+    "name": "Jacob Read",
+    "birthDate": "1752",
+    "deathDate": "1816-07-17",
+    "bio": "a Delegate and a Senator from South Carolina; born at \"Hobcaw\" plantation in Christ Church Parish, near Charleston, S.C., in 1752; completed preparatory studies; studied law and was admitted to the bar; studied in England 1773-1776; joined other Americans in London in 1774 in a petition against the Boston port bill; returned to the United States and served in the Revolutionary War in various military and civil capacities; sent with other Americans as a prisoner of the British to St. Augustine 1780-1781; member, State assembly 1782, and of the privy council 1783; Delegate to the Confederation Congress, 1783-1785; member, South Carolina house of representatives and served as speaker; elected as a Federalist to the United States Senate and served from March 4, 1795, to March 3, 1801; unsuccessful candidate for reelection; served as President pro tempore of the Senate during the Fifth Congress; died in Charleston, S.C., July 17, 1816; interment in the family cemetery at \"Hobcaw,\" in Christ Church Parish, near Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

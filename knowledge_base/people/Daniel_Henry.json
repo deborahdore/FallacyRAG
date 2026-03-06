@@ -1,0 +1,24 @@
+{
+    "name": "Daniel Henry",
+    "birthDate": "1823",
+    "deathDate": "1899",
+    "bio": "A Representative from Maryland; born near Cambridge, Dorchester County, Md., February 19, 1823; attended Cambridge Academy and St. John's College, Annapolis, Md.; studied law; was admitted to the bar in 1844 and practiced in Cambridge; member of the house of delegates in 1846 and 1849; served in the State senate in 1869; elected as a Democrat to the Forty-fifth and Forty-sixth Congresses (March 4, 1877-March 3, 1881); chairman, Committee on Accounts (Forty-sixth Congress); resumed the practice of law; died in Cambridge, Md., August 31, 1899; interment in Christ Protestant Episcopal Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

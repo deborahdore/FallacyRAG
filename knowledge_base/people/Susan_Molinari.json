@@ -1,0 +1,48 @@
+{
+    "name": "Susan Molinari",
+    "birthDate": "1958-03-27",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Staten Island, Richmond County, N.Y., March 27, 1958; graduated from St. Joseph Hill Academy, 1976; B.A., State University of New York, Albany, N.Y., 1980; M.A., State University of New York, Albany, N.Y., 1982; research analyst, New York state senate finance committee; finance assistant, National Republican Governors Association; ethnic community liaison, Republican National Committee, 1983-1984; member of the New York, N.Y. council, 1986-1990; elected as a Republican to the One Hundred First Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Guy V. Molinari, reelected to the four succeeding Congresses, and served until her resignation August 2, 1997 (March 20, 1990-August 2, 1997); television journalist.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

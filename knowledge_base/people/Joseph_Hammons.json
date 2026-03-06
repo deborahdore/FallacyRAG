@@ -1,0 +1,24 @@
+{
+    "name": "Joseph Hammons",
+    "birthDate": "1787-03-03",
+    "deathDate": "1836-03-29",
+    "bio": "a Representative from New Hampshire; born in Cornish, York County, Maine, March 3, 1787; educated by private tutors and in the common schools; studied medicine in Ossipee, N.H., and commenced practice in Farmington, N.H., in 1817; elected as a Jacksonian candidate to the Twenty-first and Twenty-second Congresses (March 4, 1829-March 3, 1833); postmaster at Dover, N.H., from June 1833 until his death in Farmington, N.H., March 29, 1836; interment in the old family cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

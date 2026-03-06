@@ -1,0 +1,24 @@
+{
+    "name": "Michael Harter",
+    "birthDate": "1846-04-06",
+    "deathDate": "1896-02-22",
+    "bio": "A Representative from Ohio; born in Canton, Ohio, April 6, 1846; attended the public schools; engaged in mercantile pursuits and banking; moved to Mansfield, Ohio, in 1869; at the age of twenty-three became treasurer and manager of the Aultman &amp; Taylor Co. upon its organization; elected as a Democrat to the Fifty-second and Fifty-third Congresses (March 4, 1891-March 3, 1895); declined to be a candidate for renomination in 1894; moved to Philadelphia, Pa., but spent his summers in Mansfield; died in Fostoria, Ohio, February 22, 1896; interment in Mansfield Cemetery, Mansfield, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

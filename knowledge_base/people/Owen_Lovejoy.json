@@ -1,0 +1,40 @@
+{
+    "name": "Owen Lovejoy",
+    "birthDate": "1811-01-06",
+    "deathDate": "1864-03-25",
+    "bio": "A Representative from Illinois; born in Albion, Maine, on January 6, 1811; attended the common schools and was graduated from Bowdoin College, Brunswick, Maine, in 1832; studied law but never practiced; studied theology; moved to Alton, Madison County, Ill., in 1836; ordained pastor of the Congregational Church in Princeton, Ill., 1839-1856; member of the State house of representatives in 1854; elected as a Republican to the Thirty-fifth and to the three succeeding Congresses and served from March 4, 1857, until his death in Brooklyn, N.Y., March 25, 1864; chairman, Committee on Agriculture (Thirty-seventh Congress), Committee on District of Columbia (Thirty-eighth Congress); interment in Oakland Cemetery, Princeton, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Robert Foerderer",
+    "birthDate": "1860-05-16",
+    "deathDate": "1903-07-26",
+    "bio": "a Representative from Pennsylvania; born in Frankenhausen, Germany, May 16, 1860, while his parents were sojourning in Europe; attended public and private schools in Philadelphia, Pa.; engaged in the manufacture of leather and in various other business enterprises; elected as a Republican to the Fifty-seventh and Fifty-eighth Congresses and served from March 4, 1901, until his death in Torresdale, Pa., July 26, 1903, before the convening of the Fifty-eighth Congress; interment in South Laurel Hill Cemetery, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

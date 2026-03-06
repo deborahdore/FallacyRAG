@@ -1,0 +1,24 @@
+{
+    "name": "Luis Fortuño",
+    "birthDate": "1960",
+    "deathDate": null,
+    "bio": "A Resident Commissioner from Puerto Rico; born in San Juan, P.R., October 31, 1960; B.S.F.S., Georgetown University, Washington, D.C., 1982; J.D., University of Virginia, Charlottesville, Va., 1985; lawyer, private practice; executive director, Puerto Rico Tourism Company, 1993-1996; secretary, Puerto Rico Economic Development and Commerce, 1994-1996; elected as a New Progressive to the One Hundred Ninth Congress to a four-year term (January 3, 2005-January 3, 2009); caucused with the Republican Party; was not a candidate for reelection to the One Hundred Eleventh Congress in 2008, but was a successful candidate for Governor of Puerto Rico; Governor of Puerto Rico, 2009-2013.",
+    "jobs": [
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        },
+        {
+            "role": "Resident Commissioner",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "New Progressive",
+            "represents": "PR"
+        }
+    ]
+}

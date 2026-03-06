@@ -1,0 +1,32 @@
+{
+    "name": "Kelly Armstrong",
+    "birthDate": "1976-10-08",
+    "deathDate": null,
+    "bio": "a Representative from North Dakota; born in Dickinson, Stark County, N.Dak., October 8, 1976; graduated from Dickinson High School, Dickinson, N.Dak., 1995; B.A., University of North Dakota, Grand Forks, N.Dak., 2001; J.D., University of North Dakota, Grand Forks, N.Dak., 2003; lawyer; business executive; member of the North Dakota state senate, 2013-2018; chairman, North Dakota Republican Party, 2015-2018; elected as a Republican to the One Hundred Sixteenth and to the two succeeding Congresses until his resignation on December 14, 2024 (January 3, 2019-December 14, 2024); Governor of North Dakota, 2024-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        }
+    ]
+}

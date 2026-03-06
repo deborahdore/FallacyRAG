@@ -1,0 +1,16 @@
+{
+    "name": "Norman Hall",
+    "birthDate": "1829-11-17",
+    "deathDate": "1917-09-29",
+    "bio": "A Representative from Pennsylvania; born on the Muncy Farms, near Halls Station, Lycoming County, Pa., November 17, 1829; was graduated from Dickinson College, Carlisle, Pa., in 1847; engaged in the iron business; elected as a Democrat to the Fiftieth Congress (March 4, 1887-March 3, 1889); engaged in banking in Sharon, Pa.; retired from active business; died in Sharon, Pa., September 29, 1917; interment in Hall's Burying Ground, Halls Station, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

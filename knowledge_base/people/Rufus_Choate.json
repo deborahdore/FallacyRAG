@@ -1,0 +1,48 @@
+{
+    "name": "Rufus Choate",
+    "birthDate": "1799-10-01",
+    "deathDate": "1859-07-13",
+    "bio": "A Representative and a Senator from Massachusetts; born in Essex, Mass., on October 1, 1799; graduated from Dartmouth College, Hanover, N.H., in 1819; studied law; admitted to the bar and commenced practice in Danvers, Mass., in 1823; member, State house of representatives 1825; member, State senate 1826; moved to Salem in 1828; elected as a Anti-Jacksonian candidate to the Twenty-second and Twenty-third Congresses and served from March 4, 1831, to June 30, 1834, when he resigned; moved to Boston in 1834; elected to the United States Senate to fill the vacancy caused by the resignation of Daniel Webster and served from February 23, 1841, to March 3, 1845; retired from political life to devote his time to law; member of the State constitutional convention in 1853; attorney general of Massachusetts in 1853; died in Halifax, Nova Scotia, July 13, 1859; interment in Mount Auburn Cemetery, Cambridge, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

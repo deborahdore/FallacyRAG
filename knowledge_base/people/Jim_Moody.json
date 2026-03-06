@@ -1,0 +1,48 @@
+{
+    "name": "Jim Moody",
+    "birthDate": "1935-09-02",
+    "deathDate": "2019-03-22",
+    "bio": "a Representative from Wisconsin; born in Richlands, Tazewell County, Va., September 2, 1935; graduated from Anglo American High School, Athens, Greece, 1953; B.A., Haverford College, Haverford, Pa., 1957; M.P.A., Harvard University, Cambridge, Mass., 1967; Ph.D., University of California, Berkeley, Calif., 1973; Peace Corps and CARE assignments in Yugoslavia, Iran, and Pakistan, 1958-1965; economist for Federal Government, 1967-1969; associate professor of economics, University of Wisconsin, Milwaukee, Wis., 1973-1976; member of the Wisconsin state assembly, 1977-1978; member of the Wisconsin state senate, 1979-1982; elected as a Democrat to the Ninety-eighth and to the four succeeding Congresses (January 3, 1983-January 3, 1993); was not a candidate for renomination to the One Hundred Third Congress in 1992, but was an unsuccessful candidate for nomination to the United States Senate; vice president, International Fund for Agricultural Development, 1995-1998; president of an association of international development and relief organizations, 1998-2000; financial advisor; adjunct professor, University of Maryland, College Park, Md., 2003 to 2004; resident scholar, American University, Washington, D.C.; founder, National Security Archives; died on March 22, 2019, in Bethesda, Md.; interment at Parklawn Memorial Park and Menorah Gardens, Rockville, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

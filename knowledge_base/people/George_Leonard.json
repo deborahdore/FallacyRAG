@@ -1,0 +1,32 @@
+{
+    "name": "George Leonard",
+    "birthDate": "1729-07",
+    "deathDate": "1819-07-26",
+    "bio": "A Representative from Massachusetts; born in Norton, Mass., July 4, 1729; was graduated from Harvard College in 1748; register of probate 1749-1783; studied law; was admitted to the bar and commenced practice at Norton in 1750; member of the provincial assembly 1764-1766; executive councilor 1770-1775; judge of the probate court 1784-1790; judge of the common pleas court 1785-1798 and chief justice 1798-1804; elected as a Pro-Administration candidate to the First and Second Congresses (March 4, 1789-March 3, 1793); member of the state senate in 1792 and 1793; elected as a Federalist to the Fourth Congress (March 4, 1795-March 3, 1797); served in the state house of representatives in 1801and 1802; died in Raynham, Mass., July 26, 1819; interment in the local cemetery at Norton, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

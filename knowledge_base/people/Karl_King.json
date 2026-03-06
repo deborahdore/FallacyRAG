@@ -1,0 +1,32 @@
+{
+    "name": "Karl King",
+    "birthDate": "1897",
+    "deathDate": "1974",
+    "bio": "A Representative from Pennsylvania; born in Plevna, Reno County, Kans., January 26, 1897; attended high school in Bucklin, Kans., Kansas State Teachers College at Emporia, Columbia University, New York City, and Wharton School of Business at Philadelphia, Pa.; during the First World War served in the United States Navy; newspaper reporter in Kansas City, New York, and Philadelphia; engaged in farming and the farm supply business at Morrisville, Pa., in 1922; elected as a Republican to the Eighty-second Congress, by special election, November 6, 1951, to fill the vacancy caused by the death of Albert C. Vaughn; reelected to the two succeeding Congresses and served from November 6, 1951, to January 3, 1957; was not a candidate for renomination in 1956 to the Eighty-fifth Congress; resided on his farm near Morrisville, Pa.; died in Philadelphia, Pa., April 16, 1974; interment in Newtown Cemetery, Newtown, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

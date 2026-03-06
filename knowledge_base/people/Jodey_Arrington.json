@@ -1,0 +1,47 @@
+{
+    "name": "Jodey Arrington",
+    "birthDate": "1972-03-09",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Plainview, Tex., March 9, 1972; graduated from Plainview High School, Plainview, Hale County, Tex., 1990; B.A., Texas Tech University, Lubbock, Tex., 1994; M.A., Texas Tech University, Lubbock, Tex., 1997; special assistant to President George W. Bush, 2001; staff, chairman of the Federal Deposit Insurance Corporation, 2001-2005; Deputy Federal Coordinator and Chief Operating Officer, Office of the Federal Coordinator for Gulf Coast Rebuilding, 2005-2006; administrator, Texas Tech University, Lubbock, Tex., 2007-2014; business executive; elected as a Republican to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present); chair, Committee on the Budget (One Hundred Eighteenth and One Hundred Nineteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

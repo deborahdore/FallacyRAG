@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Fitzpatrick",
+    "birthDate": "1850-09-20",
+    "deathDate": "1906-01-21",
+    "bio": "A Representative from Kentucky; born near Prestonsburg, Floyd County, Ky., September 20, 1850; attended the common schools; studied law; was admitted to the bar in 1877 and practiced; county judge in 1874 and 1875; member of the State house of representatives in 1876 and 1877; county attorney 1880-1884; elected as a Democrat to the Fifty-fifth and Fifty-sixth Congresses (March 4, 1897-March 3, 1901); died in Frankfort, Ky., January 21, 1906; interment in Frankfort Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

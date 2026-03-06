@@ -1,0 +1,24 @@
+{
+    "name": "Jeremiah Wilson",
+    "birthDate": "1828",
+    "deathDate": "1901",
+    "bio": "A Representative from Indiana; born near Lebanon, Warren County, Ohio, November 25, 1828; completed preparatory studies; studied law; was admitted to the bar and practiced; moved to Indiana and settled in Connersville and continued the practice of law; judge of the court of common pleas 1860-1865; elected judge of the circuit court in October 1865 and served until his election to Congress; elected as a Republican to the Forty-second and Forty-third Congresses (March 4, 1871-March 3, 1875); was not a candidate for reelection in 1874; resumed the practice of his profession in Washington, D.C., where he died September 24, 1901; interment in Rock Creek Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Erica Lee Carter",
+    "birthDate": "1980-02-02",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Harris County, Tex., February 2, 1980; graduated from Bellaire High School, Bellaire, Tex., 1998; B.A., University of North Carolina, Chapel Hill, N.C., 2002; M.P.P., Duke University, Durham, N.C., 2006; teacher; policy analyst; nonprofit executive; member of the Harris County, Tex., department of education, 2013-2019; elected as a Democrat to the One Hundred Eighteenth Congress, by special election, to fill the vacancy caused by the death of United States Representative Sheila Jackson Lee (November 5, 2024-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

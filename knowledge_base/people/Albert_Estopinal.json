@@ -1,0 +1,64 @@
+{
+    "name": "Albert Estopinal",
+    "birthDate": "1845-01-30",
+    "deathDate": "1919-04-28",
+    "bio": "A Representative from Louisiana; born in St. Bernard Parish, La., January 30, 1845; attended the public and private schools; left school in January 1862 to enlist in the Confederate Army and served in Company G, Twenty-eighth Regiment, Louisiana Infantry; made sergeant of Company G, Twenty-second Louisiana Heavy Artillery, and served throughout the Civil War; engaged in the commission business at New Orleans for several years but most of his life was spent at his home, ``Kenilworth Plantation,'' near New Orleans; sheriff of St. Bernard Parish 1872-1876; member of the State house of representatives 1876-1880; member of the constitutional conventions in 1879 and 1898; served in the State senate 1880-1900; Lieutenant Governor 1900-1904; chairman of the Democratic State central committee in 1908; elected as a Democrat to the Sixtieth Congress to fill the vacancy caused by the death of Adolph Meyers; reelected to the Sixty-first and to the five succeeding Congresses and served from November 3, 1908, until his death in New Orleans, La., April 28, 1919; interment in St. Louis Cemetery No. 3, New Orleans, La.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

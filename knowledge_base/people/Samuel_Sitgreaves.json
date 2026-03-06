@@ -1,0 +1,24 @@
+{
+    "name": "Samuel Sitgreaves",
+    "birthDate": "1764-03-16",
+    "deathDate": "1827-04-04",
+    "bio": "A Representative from Pennsylvania; born in Philadelphia, Pa., March 16, 1764; pursued classical studies; studied law; was admitted to the bar in Philadelphia, Pa., September 3, 1783, and began practice in Easton, Pa., in 1786; delegate to the Pennsylvania state constitutional convention in 1790; elected as a Federalist to the Fourth and Fifth Congresses and served until his resignation (March 4, 1795-August 29, 1798); one of the managers appointed by the House of Representatives in 1798 to conduct the impeachment proceedings against Senator William Blount; appointed United States commissioner to Great Britain under the Jay treaty, regarding British claims, August 11, 1798; burgess of Easton 1804-1807; treasurer of Northampton County 1816-1819; resumed the practice of law; president of the Easton Bank 1815-1827; died in Easton, Pa., April 4, 1827; interment in Easton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

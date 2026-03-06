@@ -1,0 +1,24 @@
+{
+    "name": "William Montgomery",
+    "birthDate": "1818-04-11",
+    "deathDate": "1870-04-28",
+    "bio": "A Representative from Pennsylvania; born in Canton Township, Washington County, Pa., April 11, 1818; pursued classical studies and was graduated from Washington (now Washington and Jefferson) College, Washington, Pa., in 1839; studied law; was admitted to the bar in 1841 and commenced practice in Washington, Pa.; district attorney in 1845; unsuccessful candidate for election in 1854 to the Thirty-fourth Congress; elected as a Democrat to the Thirty-fifth and Thirty-sixth Congresses (March 4, 1857-March 3, 1861); was not a candidate for renomination in 1860; resumed the practice of law; unsuccessful candidate for election in 1866 to the Fortieth Congress; died in Washington, Pa., April 28, 1870; interment in Washington Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

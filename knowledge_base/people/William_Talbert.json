@@ -1,0 +1,48 @@
+{
+    "name": "William Talbert",
+    "birthDate": "1846-10-06",
+    "deathDate": "1931-02-05",
+    "bio": "A Representative from South Carolina; born near Edgefield, Edgefield County, S.C., October 6, 1846; attended the common schools in Greenwood and Due West Academy at Abbeville, and was graduated from Erskine College, Due West, S.C.; served in the Confederate Army as a private, Company F, Fifth South Carolina Reserves, as a substitute for his father B.M. Talbert, who was discharged December 17, 1862; enlisted at Richmond, Va., September 15, 1864, as a private, Company B, Infantry Regiment, Hampton Legion, South Carolina; engaged in agricultural pursuits near Parksville, McCormick County, S.C.; member of the State house of representatives 1880-1883; served in the State senate 1884-1888; superintendent of the State penitentiary 1891-1893; delegate to the Democratic National Convention in 1892; mayor of Parksville 1895-1900; president of the Democratic State convention in 1899; held various positions in the Farmers' Alliance; elected as a Democrat to the Fifty-third and to the four succeeding Congresses (March 4, 1893-March 3, 1903); was not a candidate for renomination in 1902, but was an unsuccessful candidate in the second primary for the Democratic nomination for Governor in 1902; resumed agricultural pursuits near Parksville, McCormick County, S.C.; moved to McCormick, S.C., in 1927 and lived in retirement until his death in Greenwood, S.C., February 5, 1931; interment in Parksville Cemetery, Parksville, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

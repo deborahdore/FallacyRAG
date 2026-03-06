@@ -1,0 +1,48 @@
+{
+    "name": "John Heard",
+    "birthDate": "1840-10-29",
+    "deathDate": "1927-01-27",
+    "bio": "A Representative from Missouri; born in Georgetown, Pettis County, Mo., October 29, 1840; attended the public schools and was graduated from the University of Missouri at Columbia in 1860; studied law; was admitted to the bar in 1862 and practiced several years in Sedalia, Pettis County, Mo.; member of the State house of representatives 1872-1875; served in the State senate 1880-1884; employed in 1881 by the fund commissioners of the State to prosecute and adjust all claims of the State against the General Government; elected as a Democrat to the Forty-ninth and to the four succeeding Congresses (March 4, 1885-March 3, 1895); chairman, Committee on District of Columbia (Fifty-third Congress); unsuccessful candidate for reelection in 1894 to the Fifty-fourth Congress; delegate to the Democratic National Convention in 1904; engaged in banking; retired from active business in 1922; died while on a visit to Los Angeles, Calif., January 27, 1927; interment in Crown Hill Cemetery, Sedalia, Mo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        }
+    ]
+}

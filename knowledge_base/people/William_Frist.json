@@ -1,0 +1,56 @@
+{
+    "name": "William Frist",
+    "birthDate": "1952",
+    "deathDate": null,
+    "bio": "A Senator from Tennessee; born in Nashville, Davidson County, Tenn., on February 22, 1952; attended public and private schools in Nashville; graduated from Princeton University 1974; graduated from Harvard Medical School 1978; worked as a heart and lung transplant surgeon; director, heart and lung transplantation program, Vanderbilt University Medical Center; author; elected as a Republican to the United States Senate in 1994; reelected in 2000, and served from January 3, 1995, to January 3, 2007; chairman, National Republican Senatorial Committee (2001-2003); majority leader (2003-2007); not a candidate for reelection in 2006.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

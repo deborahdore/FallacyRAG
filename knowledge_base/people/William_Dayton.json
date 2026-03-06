@@ -1,0 +1,48 @@
+{
+    "name": "William Dayton",
+    "birthDate": "1807",
+    "deathDate": "1864",
+    "bio": "A Senator from New Jersey; born in Basking Ridge, Somerset County, N.J., February 17, 1807; attended Trenton (N.J.) Academy and was graduated from the College of New Jersey (now Princeton University) in 1825; studied law; admitted to the bar in 1830 and commenced practice in Freehold, N.J.; member, State council 1837-1838: associate judge of the State supreme court 1838- 1841, when he resigned; appointed and subsequently elected as a Whig to the United States Senate to fill the vacancy caused by the death of Samuel L. Southard; reelected in 1845, and served from July 2, 1842, to March 3, 1851; unsuccessful candidate for reelection; chairman, Committee on Public Buildings (Twenty-seventh and Twenty-eighth Congresses), Committee on Engrossed Bills (Twenty-eighth Congress); resumed the practice of law; nominated in 1856 by the Republican Party as its candidate for vice president on the ticket with John C. Frémont; attorney general of New Jersey 1857-1861; appointed Minister to France on March 18, 1861, and served until his death in Paris, December 1, 1864; interment in Riverview Cemetery, Trenton, N.J.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

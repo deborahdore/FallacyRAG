@@ -1,0 +1,80 @@
+{
+    "name": "William Jefferson",
+    "birthDate": "1947-03-14",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Lake Providence, East Carroll Parish, La., March 14, 1947; G.W. Griffin High School, Lake Providence, La.; B.A., Southern University and Agricultural &amp; Mechanical College, Baton Rouge, La., 1969; J.D., Harvard University, Cambridge, Mass., 1972; United States Army, c. 1969-1975; lawyer, private practice; law clerk for United States District Judge Alvin B. Rubin, Eastern District of Louisiana, 1972-1973; staff, United States Senator J. Bennett Johnston of Louisiana, 1973-1975; member of the Louisiana state senate, 1979-1990; candidate for Mayor of New Orleans in 1982 and 1986; elected as a Democrat to the One Hundred Second and to the eight succeeding Congresses (January 3, 1991-January 3, 2009); unsuccessful candidate for reelection to the One Hundred Eleventh Congress in 2008; convicted on November 13, 2009, of conspiracy to violate the Foreign Corrupt Practices Act, conspiracy to solicit bribes, solicitation of bribes, honest services wire fraud, money laundering, and racketeering; sentenced to federal prison; convictions for solicitation of bribes, honest services wire fraud, money laundering, and racketeering vacated on December 1, 2017.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

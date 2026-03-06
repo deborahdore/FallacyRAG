@@ -1,0 +1,48 @@
+{
+    "name": "Earl Hilliard",
+    "birthDate": "1942",
+    "deathDate": null,
+    "bio": "A Representative from Alabama; born in Birmingham, Ala., April 9, 1942; graduated from Western-Olin High School, Birmingham, Ala., 1960; B.A., Morehouse College, Atlanta, Ga., 1964; J.D., Howard University, Washington, D.C., 1967; M.B.A., Atlanta University, Atlanta, Ga., 1970; lawyer, private practice; member of the Alabama state house of representatives, 1974-1980; member of the Alabama state senate, 1981-1992; elected as a Democrat to the One Hundred Third and to the four succeeding Congresses (January 3, 1993-January 3, 2003); unsuccessful candidate for nomination to the One Hundred Eighth Congress in 2002.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

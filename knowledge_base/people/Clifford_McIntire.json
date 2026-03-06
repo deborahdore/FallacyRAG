@@ -1,0 +1,64 @@
+{
+    "name": "Clifford McIntire",
+    "birthDate": "1908",
+    "deathDate": "1974",
+    "bio": "A Representative from Maine; born in Perham, Aroostock County, Maine, May 4, 1908; attended the public schools of Perham and Washburn (Maine) High School; was graduated from the University of Maine College of Agriculture at Orono in 1930; engaged in farming at Perham, 1930-1952; appraiser, supervisor, and regional manager for Farm Credit Administration, Springfield, Mass., 1933-1947; assistant general manager of Maine Potato Growers, Inc., at Presque Isle 1947-1951; elected as a Republican to the Eighty-second Congress, by special election, October 22, 1951, to fill the vacancy caused by the death of Frank Fellows; reelected to the six succeeding Congresses and served from October 22, 1951, to January 3, 1965; was not a candidate for reelection in 1964 but was an unsuccessful candidate for election to the Senate; director, American Farm Bureau Federation, Natural Resources Department; member, President Nixon's Task Force on Rural Development, 1969-1970; member, Advisory Council, Public Land Law Review Commission, 1969-1970; appointed by President Ford in September 1974 to the newly created United States Railway Association; died in Bangor, Maine, October 1, 1974; interment in Fairview Cemetery, Perham, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Monroe Kulp",
+    "birthDate": "1858-10-23",
+    "deathDate": "1911-10-19",
+    "bio": "A Representative from Pennsylvania; born in Barto, Berks County, Pa., October 23, 1858; attended the public schools of Shamokin, the State Normal College, Lebanon, Ohio, and was graduated from Eastman Business College, Poughkeepsie, N.Y.; engaged in the lumber, brick, and ice business in Shamokin, Pa.; elected as a Republican to the Fifty-fourth and Fifty-fifth Congresses (March 4, 1895-March 3, 1899); unsuccessful candidate for renomination in 1898; delegate to the Republican National Convention in 1900; devoted himself to the lumber business and to many other interests; died in Shamokin, Northumberland County, Pa., on October 19, 1911; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

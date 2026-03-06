@@ -1,0 +1,32 @@
+{
+    "name": "Worthington Smith",
+    "birthDate": "1823-04-23",
+    "deathDate": "1894-01-02",
+    "bio": "A Representative from Vermont; born in St. Albans, Franklin County, Vt., April 23, 1823; pursued classical studies, and was graduated from the University of Vermont at Burlington in 1843; studied law, but did not practice; engaged in the iron trade; during the Civil War assisted in raising the First Regiment, Vermont Volunteer Infantry; member of the State house of representatives in 1863; served in the State senate in 1864 and 1865, and was elected president pro tempore of that body in 1865; elected as a Republican to the Fortieth, Forty-first, and Forty-second Congresses (March 4, 1867-March 3, 1873); president of St. Albans Foundry Co.; died in St. Albans, Vt., January 2, 1894; interment in Greenwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "VERMONT"
+        }
+    ]
+}

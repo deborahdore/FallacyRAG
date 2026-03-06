@@ -1,0 +1,31 @@
+{
+    "name": "Mariannette Miller-Meeks",
+    "birthDate": "1955-09-06",
+    "deathDate": null,
+    "bio": "a Representative from Iowa; born in Herlong, Lassen County, Calif., September 6, 1955; attended San Antonio Junior College, San Antonio, Texas; B.S.N., Texas Christian University, Fort Worth, Texas, 1976; M.S., University of Southern California, Los Angeles, Calif., 1980; M.D., University of Texas Health Science Center, San Antonio, Texas, 1986; United States Army, 1976-1982; United States Army Reserve, 1983-2000; assistant professor, University of Michigan, 1991-1994; assistant professor, University of Iowa, 1994-1997; ophthalmologist; director, Iowa Department of Public Health, 2010-2013; unsuccessful candidate for election to the One Hundred Eleventh Congress in 2008, One Hundred Twelfth Congress in 2010, and One Hundred Fourteenth Congress in 2014; member of the Iowa state senate, 2019-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

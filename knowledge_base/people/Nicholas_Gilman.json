@@ -1,0 +1,87 @@
+{
+    "name": "Nicholas Gilman",
+    "birthDate": "1755-08-03",
+    "deathDate": "1814-05-04",
+    "bio": "a Delegate, a Representative, and a Senator from New Hampshire; born in Exeter, Rockingham County, N.H., August 3, 1755; pursued an academic course; employed as a clerk in his father's countinghouse; served in the Revolutionary War as part of the Continental Army; Delegate to the Confederation Congress, 1787-1789; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; elected as a Pro-Administration candidate to the First and to the two succeeding Congresses, and elected as a Federalist to the Fourth Congress (March 4, 1789-March 3, 1797); declined to be a candidate for renomination in 1796; chairman, Committee on Revisal and Unfinished Business (Fourth Congress); elected in 1805 as a Democratic Republican to the United States Senate; reelected in 1811 and served from March 4, 1805, until his death in Philadelphia, Pa., May 2, 1814; interment in Exeter Cemetery, Exeter, N.H.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

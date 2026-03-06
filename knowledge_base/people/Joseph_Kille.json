@@ -1,0 +1,16 @@
+{
+    "name": "Joseph Kille",
+    "birthDate": "1790-04-12",
+    "deathDate": "1865-03-01",
+    "bio": "A Representative from New Jersey; born near Bridgeport, Gloucester County, N.J., April 12, 1790; pursued academic studies; located in Salem; sheriff of Salem County 1822-1829; clerk of Salem County 1829-1839; member of the State house of assembly in 1856; elected as a Democrat to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); died in Salem, N.J., March 1, 1865; interment in St. John's Episcopal Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Chris Bell",
+    "birthDate": "1959-11-23",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in Texas, November 23, 1959; B.J., University of Texas, Austin, Tex., 1982; J.D., South Texas University, Houston, Tex., 1992; journalist; lawyer, private practice; member, Houston, Tex., city council, 1997-2001; elected as a Democrat to the One Hundred Eighth Congress (January 3, 2003-January 3, 2005); unsuccessful candidate for renomination in 2004; unsuccessful candidate for Governor of Texas in 2006; unsuccessful candidate for nomination to the United States Senate in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

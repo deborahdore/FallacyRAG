@@ -1,0 +1,64 @@
+{
+    "name": "Charles Dent",
+    "birthDate": "1960-05-24",
+    "deathDate": null,
+    "bio": "A Representative from Pennsylvania; born in Allentown, Lehigh County, Pa., May 24, 1960; graduated from William Allen High School, Allentown, Pa., 1978; B.A., Pennsylvania State University, University Park, Pa., 1982; M.P.A., Lehigh University, Bethlehem, Pa., 1993; staff, United States Representative Donald Ritter of Pennsylvania; college administrator; sales representative; hotel clerk; member of the Pennsylvania state house of representatives, 1991-1998; member of the Pennsylvania state senate, 1999-2004; elected as a Republican to the One Hundred Ninth and to the six succeeding Congresses until his resignation on May 12, 2018 (January 3, 2005-May 12, 2018); chair, Committee on Ethics (One Hundred Fourteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

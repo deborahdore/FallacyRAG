@@ -1,0 +1,48 @@
+{
+    "name": "Mendel Davis",
+    "birthDate": "1942",
+    "deathDate": "2007",
+    "bio": "A Representative from South Carolina; born in North Charleston, Charleston County, S.C., October 23, 1942; attended the North Charleston public schools; B.S., College of Charleston, 1966; J.D., University of South Carolina School of Law, 1970; admitted to the South Carolina bar in 1970 and commenced practice in North Charleston; district assistant to Congressman L. Mendel Rivers for ten years; elected as a Democrat to the Ninety-second Congress, by special election, to fill the vacancy caused by the death of United States Representative L. Mendel Rivers, and reelected to the four succeeding Congresses (April 27, 1971-January 3, 1981); was not a candidate for reelection to the Ninety-eighth Congress in 1980; resumed the practice of law; died on May 13, 2007, in Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

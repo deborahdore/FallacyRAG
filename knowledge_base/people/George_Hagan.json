@@ -1,0 +1,56 @@
+{
+    "name": "George Hagan",
+    "birthDate": "1916",
+    "deathDate": "1990",
+    "bio": "A Representative from Georgia; born in Sylvania, Screven County, Ga., May 24, 1916; attended the Screven County public schools and the University of Georgia; served five terms in the State house of representatives and one term in the State senate; at the outbreak of the Second World War resigned from the State house of representatives and served two years in the Army Signal Corps; secretary-treasurer and deputy director of the State Board of Workmen's Compensation, 1946; member of National Council of State Governments for two terms; district director of Office of Price Stabilization for southern half of Georgia in 1951 and 1952 and deputy regional director, Atlanta Regional Office, in 1953; engaged in life insurance-estate planning, general farming and livestock raising; member of the board of trustees of Tift College; elected as a Democrat to the Eighty-seventh and to the five succeeding Congresses (January 3, 1961-January 3, 1973); unsuccessful candidate for renomination in 1972 to the Ninety-third Congress; died on December 26, 1990, in Sylvania, Ga.; interment in Screven County Memorial Cemetery, Sylvania, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Alfred Ely",
+    "birthDate": "1815-02-15",
+    "deathDate": "1892-05-18",
+    "bio": "A Representative from New York; born in Lyme, New London County, Conn., February 15, 1815; attended the common schools and Bacon Academy at Colchester, Conn.; moved to Rochester, N.Y., in 1835; studied law; was admitted to the bar in 1841 and commenced practice in Rochester; elected as a Republican to the Thirty-sixth and Thirty-seventh Congresses (March 4, 1859-March 3, 1863); chairman, Committee on Invalid Pensions (Thirty-seventh Congress); was not a candidate for renomination in 1862; while witnessing the Battle of Bull Run was taken a prisoner by the Confederates, and imprisoned in Richmond for nearly six months; resumed the practice of law; died in Rochester, N.Y., May 18, 1892; interment in the Ely vault in Mount Hope Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Henry Woods",
+    "birthDate": "1764",
+    "deathDate": "1826",
+    "bio": "a Representative from Pennsylvania; born in Bedford, Bedford County, Pa., in 1764; received a limited schooling; attended the subscription schools of Bedford County, Pa.; studied law; admitted to the bar in 1792 and commenced practice in Bedford, Pa.; elected as a Federalist to the Sixth and Seventh Congresses (March 4, 1799-March 3, 1803); engaged as a land speculator; died in Bedford, Pa., in 1826.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

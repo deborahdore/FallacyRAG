@@ -1,0 +1,40 @@
+{
+    "name": "Dennis Ross",
+    "birthDate": "1959",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Lakeland, Polk County, Florida, on October 18, 1959; graduated from Lakeland Senior High School, Lakeland, Fla., 1977; B.S., Auburn University, Auburn, Ala.; J.D., Samford University, Birmingham, Ala.; lawyer, private practice; member of the Florida state house of representatives, 2000-2008; elected as a Republican to the One Hundred Twelfth and to the three succeeding Congresses (January 3, 2011-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Michael Parker",
+    "birthDate": "1949",
+    "deathDate": null,
+    "bio": "A Representative from Mississippi; born in Laurel, Jones County, Miss., October 31, 1949; graduated from Franklin County High School, Meadville, Miss., 1967; B.A., William Carey College, Hattiesburg, Miss., 1970; small businessman; elected as a Democrat to the One Hundred First and to the three succeeding Congresses, changed party affiliation from a Democrat to a Republican on November 10, 1995, elected as a Republican to the One Hundred Fifth Congress (January 3, 1989-January 3, 1999); was not a candidate for reelection to the One Hundred Sixth Congress in 1998; unsuccessful candidate for Governor of Mississippi in 2000; assistant secretary of the Army for civil works, 2001-2002.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Benjamin Cline",
+    "birthDate": "1972-02-29",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Stillwater, Payne County, Okla., February 29, 1972; graduated from Lexington High School, Lexington, Va., 1990; B.A., Bates College, Lewiston, Me., 1994; J.D., University of Richmond Law School, Richmond, Va., 2007; staff, United States Representative Bob Goodlatte of Virginia, 1994-2002; marketing consultant, 2002-2007; assistant commonwealth's attorney, Rockingham County, Va., 2007-2013; member of the Virginia state house of delegates, 2002-2018; lawyer, private practice; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present); one of the managers appointed by the House of Representatives in 2024 to conduct the impeachment proceedings of Alejandro N. Mayorkas, United States Secretary of Homeland Security.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Jonathan Sturges",
+    "birthDate": "1740-08-23",
+    "deathDate": "1819-10-04",
+    "bio": "a Delegate and a Representative from Connecticut; born in Fairfield, Conn., August 23, 1740; was graduated from Yale College in 1759; was admitted to the bar in May 1772 and commenced practice in Fairfield, Conn.; member of the state house of representatives in 1772 and 1773-1784; justice of the peace in 1773; Delegate to the Confederation Congress, 1786; judge of the probate court for the district of Fairfield in 1775; again a member of the state house of representatives in 1786; elected as a Pro-Administration candidate to the First and Second Congresses (March 4, 1789-March 3, 1793); associate justice of the state supreme court 1793-1805; died in Fairfield, Fairfield County, Conn., October 4, 1819; interment in the Old Burying Ground.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

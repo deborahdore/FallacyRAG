@@ -1,0 +1,64 @@
+{
+    "name": "Thaddeus Stevens",
+    "birthDate": "1792-04-04",
+    "deathDate": "1868-08-11",
+    "bio": "<p>A Representative from Pennsylvania; born in Danville, Caledonia County, Vt. April 4, 1792; attended Peacham Academy and the University of Vermont at Burlington; was graduated from Dartmouth College, Hanover, N.H., in 1814; moved to Pennsylvania in 1815; studied law; was admitted to the bar in 1816 and commenced practice in Gettysburg; member of the State house of representatives 1833-1835, 1837, and 1841; delegate to the State constitutional convention in 1838; appointed as a canal commissioner in 1838; moved to Lancaster, Pa., in 1842; elected as a Whig to the Thirty-first and Thirty-second Congresses (March 4, 1849-March 3, 1853); elected as a Republican to the Thirty-sixth and to the four succeeding Congresses and served from March 4, 1859, until his death; chairman, Committee on Ways and Means (Thirty-seventh and Thirty-eighth Congresses), Committee on Appropriations (Thirty-ninth and Fortieth Congresses); one of the managers appointed by the House of Representatives in 1868 to conduct the impeachment proceedings against Andrew Johnson, President of the United States; died in Washington, D.C., on August 11, 1868; lay in state in the Rotunda of the U.S. Capitol, August 13-14, 1868; interment in Shreiner's Cemetery, Lancaster, Pa.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

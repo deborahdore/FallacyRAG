@@ -1,0 +1,24 @@
+{
+    "name": "John Aycrigg",
+    "birthDate": "1798-07-09",
+    "deathDate": "1856-11-08",
+    "bio": "A Representative from New Jersey; born in New York City July 9, 1798; studied medicine; was graduated from the College of Physicians and Surgeons (now the medical department of Columbia University), New York City, in 1818 and was admitted to practice in New York; moved to New Jersey and located at Paramus; elected as a Whig to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); presented credentials as a Member-elect to the Twenty-sixth Congress but was not permitted to qualify; elected as a Whig to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); was not a candidate for renomination in 1842 to the Twenty-eighth Congress; resumed the practice of medicine in Paramus; moved to Passaic, N.J., and died there November 8, 1856; interment in Paramus Church Cemetery, Ridgewood, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

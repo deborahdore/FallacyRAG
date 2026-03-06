@@ -1,0 +1,32 @@
+{
+    "name": "Ebenezer Herrick",
+    "birthDate": "1785-10-21",
+    "deathDate": "1839-05-07",
+    "bio": "a Representative from Maine; born in Lewiston, Androscoggin County, Maine (then a district of Massachusetts), October 21, 1785; attended the common schools; studied law; admitted to the bar and commenced practice in Bowdoinham, Lincoln County, Maine; engaged in mercantile pursuits 1814-1818; member of the Massachusetts house of representatives in 1819; member of the convention which formed the first constitution of the state of Maine in 1820; secretary of the Maine senate in 1821; elected as a Democratic Republican to the Seventeenth Congress, elected as an Adams-Clay Republican to the Eighteenth Congress, and reelected as an Adams candidate to the Nineteenth Congress (March 4, 1821-March 3, 1827); declined to be a candidate for reelection in 1826; member of the Maine senate in 1828 and 1829; died in Lewiston, Maine, May 7, 1839; interment in the Old Herrick Burying Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MAINE"
+        }
+    ]
+}

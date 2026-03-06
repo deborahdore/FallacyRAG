@@ -1,0 +1,24 @@
+{
+    "name": "Richard Murphy",
+    "birthDate": "1875",
+    "deathDate": "1936",
+    "bio": "A Senator from Iowa; born in Dubuque, Dubuque County, Iowa, November 6, 1875; attended the public schools of Dubuque; reporter for the Galena (Ill.) Gazette 1890-1892; returned to Dubuque, Iowa, in 1892 and was successively a reporter, city editor, and editor 1892-1914; member of the Dubuque County Library Board 1909-1914; served as collector of internal revenue for Iowa 1913-1920; income tax counselor 1920-1931, when he retired from active pursuits; elected as a Democrat to the United States Senate and served from March 4, 1933, until his death in an automobile accident near Chippewa Falls, Wis., July 16, 1936; interment in Mount Olivet Cemetery, Key West (a suburb of Dubuque), Iowa.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Brad Carson",
+    "birthDate": "1967-03-11",
+    "deathDate": null,
+    "bio": "a Representative from Oklahoma; born in Winslow, Navajo County, Ariz., March 11, 1967; an enrolled member of the Cherokee Nation; graduated from Jenks High School, Jenks, Okla., 1985; B.A., Baylor University, Waco, Tex., 1989; Rhodes Scholar, M.A., Oxford University, Oxford, England, 1991; J.D., University of Oklahoma, Norman, Okla., 1994.; lawyer, private practice; elected as a Democrat to the One Hundred Seventh and to the succeeding Congress (January 3, 2001-January 3, 2005); was not a candidate for reelection to the One Hundred Ninth Congress in 2004, but was an unsuccessful candidate for election to the United States Senate; business executive; United States Navy, 2008-2009; faculty, University of Tulsa, Okla., 2009-2012; General Counsel of the Army, United States Army, 2011-2014; Under Secretary of the Army, United States Army, 2014-2016; Acting Under Secretary of Defense for Personnel and Readiness, United States Department of Defense, 2015-2016; faculty, University of Virginia, Charlottesville, Va., 2018-2021; president, University of Tulsa, Tulsa, Okla., 2021-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

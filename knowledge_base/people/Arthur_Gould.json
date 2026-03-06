@@ -1,0 +1,32 @@
+{
+    "name": "Arthur Gould",
+    "birthDate": "1857",
+    "deathDate": "1946",
+    "bio": "A Senator from Maine; born in East Corinth, Penobscot County, Maine, March 16, 1857; attended the common schools and East Corinth Academy; moved to Presque Isle, Maine, in 1887; engaged in the lumber business and built power plants and an electric railroad; president of the Aroostook Valley Railroad Co. 1902-1946; member, State senate 1921-1922; elected on September 13, 1926, as a Republican to the United States Senate to fill the vacancy caused by the death of Bert M. Fernald and served from November 30, 1926, to March 3, 1931; was not a candidate for renomination in 1930; chairman, Committee on Immigration (Seventy-first Congress); engaged in the railroad and lumber businesses; died in Presque Isle, Maine, July 24, 1946; interment in Mount Hope Cemetery, Bangor, Maine.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

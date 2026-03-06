@@ -1,0 +1,32 @@
+{
+    "name": "Josiah Patterson",
+    "birthDate": "1837-04-14",
+    "deathDate": "1904-02-10",
+    "bio": "A Representative from Tennessee; born in Morgan County, Ala., April 14, 1837; attended the common schools and Somerville (Ala.) Academy; studied law; was admitted to the bar and commenced the practice of law in Morgan County in 1859; entered the Confederate Army in September 1861; commissioned a first lieutenant in the First Regiment of Alabama Cavalry in 1862; promoted to the rank of captain, then to colonel, and subsequently assigned to the command of the Fifth Regiment of Alabama Cavalry; resumed the practice of law; settled in Florence, Ala., in January 1867; moved to Memphis, Tenn., in March 1872 and continued the practice of his profession; member of the State house of representatives, 1883-1885; elected as a Democrat to the Fifty-second, Fifty-third, and Fifty-fourth Congresses (March 4, 1891-March 3, 1897); unsuccessful candidate for reelection in 1896 to the Fifty-fifth Congress as a Gold Democrat; again resumed the practice of his profession; died in Memphis, Shelby County, Tenn., February 10, 1904; interment in Forest Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

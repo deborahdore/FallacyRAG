@@ -1,0 +1,16 @@
+{
+    "name": "Herman Gould",
+    "birthDate": "1799-01-16",
+    "deathDate": "1852-01-26",
+    "bio": "A Representative from New York; born in Sharon, Litchfield County, Conn., January 16, 1799; pursued an academic course; engaged in mercantile pursuits; president of the Delhi National Bank 1839-1849; unsuccessful candidate for election in 1840 to the Twenty-seventh Congress and in 1844 to the Twenty-ninth Congress; elected as a Whig to the Thirty-first Congress (March 4, 1849-March 3, 1851); was not a candidate for renomination in 1850; resumed business interests in Delhi, N.Y., and died there January 26, 1852; interment in Woodland Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

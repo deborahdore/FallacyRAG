@@ -1,0 +1,23 @@
+{
+    "name": "Jared Moskowitz",
+    "birthDate": "1980-12-18",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Coral Springs, Broward County, Fla., December 18, 1980; graduated from Marjory Stoneman Douglas High School, Parkland, Fla., 1999; B.A., George Washington University, Washington, D.C., 2003; J.D., Nova Southeastern University, Davie, Fla., 2007; campaign staff; lawyer, private practice; business executive; Parkland, Fla., city commissioner, 2006-2012; member of the Florida state house of representatives, 2012-2019; director of the Florida department of emergency management, 2019-2021; Broward County, Fla., commissioner, 2022; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023&ndash;present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

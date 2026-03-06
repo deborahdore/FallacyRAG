@@ -1,0 +1,144 @@
+{
+    "name": "Michael Mansfield",
+    "birthDate": "1903",
+    "deathDate": "2001",
+    "bio": "A Representative and a Senator from Montana; born in New York City, March 16, 1903; moved with his family to Great Falls, Cascade County, Mont., in 1906; attended the public schools in Great Falls; served as a seaman when only fourteen years old in the United States Navy during the First World War, as a private in the United States Army in 1919-1920, and as a private first class in the United States Marine Corps 1920-1922; worked as a miner and mining engineer in Butte, Mont., 1922-1930; attended the Montana School of Mines at Butte in 1927 and 1928; graduated from University of Montana at Missoula in 1933, and received a masters degree from that institution in 1934; also attended the University of California at Los Angeles in 1936 and 1937; professor of history and political science at the Montana State University (now University of Montana-Missoula) 1933-1942; elected as a Democrat to the Seventy-eighth Congress; reelected to the four succeeding Congresses (January 3, 1943-January 3, 1953); was not a candidate for reelection in 1952, having become a candidate for the Senate; chairman, Special Committee on Campaign Expenditures (Eighty-first Congress); was elected to the United States Senate in 1952; reelected in 1958, 1964, and 1970 and served from January 3, 1953, to January 3, 1977; Democratic whip 1957-1961; majority leader and Democratic caucus chairman 1961-1977; Democratic Policy Committee chairman 1961-1977; chairman, Committee on Rules and Administration (Eighty-seventh Congress), Select Committee on Secret and Confidential Documents (Ninety-second Congress), Special Committee on Secret and Confidential Documents (Ninety-third Congress); was not a candidate for reelection in 1976; Ambassador Extraordinary and Plenipotentiary to Japan 1977-1988; East Asian advisor, Goldman, Sachs; awarded the Presidential Medal of Freedom on January 19, 1989; was a resident of Washington, D.C. until his death due to congestive heart failure on October 5, 2001; interment in Arlington National Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        }
+    ]
+}

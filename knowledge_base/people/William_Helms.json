@@ -1,0 +1,48 @@
+{
+    "name": "William Helms",
+    "birthDate": null,
+    "deathDate": "1813",
+    "bio": "a Representative from New Jersey; born in Sussex County, N.J, birth date unknown; served in the Revolutionary War as second lieutenant, first lieutenant, and captain, and was brevetted major on September 30, 1783; member of the New Jersey state house of assembly, 1791 and 1792; elected as a Democratic Republican to the Seventh and to the four succeeding Congresses (March 4, 1801-March 3, 1811); moved to Hamilton County, Ohio; died in 1813.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Edward Warren",
+    "birthDate": "1818-05-02",
+    "deathDate": "1875-07-02",
+    "bio": "A Representative from Arkansas; born near Eutaw, Green County, Ala., May 2, 1818; completed preparatory studies; studied law; was admitted to the bar in 1843 and commenced the practice of law in Clinton, Miss.; member of the State house of representatives in 1845 and 1846; moved to Arkansas in 1847 and settled in Camden, where he continued the practice of his profession; member of the State house of representatives in 1848 and 1849, serving as speaker in 1849; judge of the circuit court of the sixth district of Arkansas; elected as a Democrat to the Thirty-third Congress (March 4, 1853-March 3, 1855); elected to the Thirty-fifth Congress (March 4, 1857-March 3, 1859); resumed the practice of law; died in Prescott, Nevada County, Ark., July 2, 1875; interment in Moscow Cemetery, near Prescott, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

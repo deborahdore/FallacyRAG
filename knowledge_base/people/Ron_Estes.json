@@ -1,0 +1,47 @@
+{
+    "name": "Ron Estes",
+    "birthDate": "1956-07-19",
+    "deathDate": null,
+    "bio": "A Representative from Kansas; born in Topeka, Shawnee County, Kans., July 19, 1956; graduated from Union City High School, Union City, Tenn.; B.A., Tennessee Technological University, Cookeville, Tenn., 1973; M.B.A., Tennessee Technological University, Cookeville, Tenn., 1983; businessman; farmer; Sedgwick County, Kans., treasurer, 2005-2011; Kansas state treasurer, 2011-2017; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Mike Pompeo, and reelected to the four succeeding Congresses (April 11, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

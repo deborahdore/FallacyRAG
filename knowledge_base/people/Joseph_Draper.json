@@ -1,0 +1,24 @@
+{
+    "name": "Joseph Draper",
+    "birthDate": "1794-12-25",
+    "deathDate": "1834-06-10",
+    "bio": "A Representative from Virginia; born in Draper Valley, Wythe (now Pulaski) County, Va., December 25, 1794; attended private schools; studied law; was admitted to the bar in 1818 and commenced practice in Wytheville, Wythe County, Va.; served as a private in the War of 1812; member of the State senate 1828-1830; elected as a Jacksonian candidate to the Twenty-first Congress to fill the vacancy caused by the death of Alexander Smyth and served from December 6, 1830, to March 3, 1831; unsuccessfully contested the election of Charles C. Johnston to the Twenty-second Congress; subsequently elected as a Jacksonian candidate to the Twenty-second Congress to fill the vacancy caused by the death of Charles C. Johnston and served from December 6, 1832, to March 3, 1833; was not a candidate for renomination; resumed the practice of law until his death in Wytheville, Va., June 10, 1834; interment in a private cemetery known as Oglesbies Cemetery, Drapers Valley, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

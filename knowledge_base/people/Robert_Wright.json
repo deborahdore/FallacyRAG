@@ -1,0 +1,72 @@
+{
+    "name": "Robert Wright",
+    "birthDate": "1752-11-20",
+    "deathDate": "1826-09-07",
+    "bio": "a Senator and a Representative from Maryland; born at \"Narborough,\" near Chestertown, Queen Annes County, Md., November 20, 1752; attended the common schools and Washington College, Chestertown, Md.; studied law; admitted to the bar in 1773 and commenced practice in Chestertown; served in the Revolutionary War, private, lieutenant, and later as captain; member of the Maryland house of delegates, 1784-1786; member of the Maryland senate, 1801; elected as a Democratic Republican to the United States Senate on November 19, 1801, for the term commencing March 4, 1801, and served until his resignation on November 12, 1806, having been elected Governor; delegate to the Farmers' National Convention in 1803; Governor of Maryland, 1806-1809; clerk of Queen Anne's County, Md., 1810; elected as a Democratic Republican in a special election to the Eleventh Congress to fill the vacancy caused by the resignation of John Brown; reelected to the Twelfth and the two succeeding Congresses (November 29, 1810-March 3, 1817); unsuccessful candidate for reelection to the Fifteenth Congress in 1816; elected as a Democratic Republican to the Seventeenth Congress (March 4, 1821-March 3, 1823); was not a candidate for renomination in 1822; district judge of the lower Eastern Shore district of Maryland from 1823 until his death; died on September 7, 1826, at \"Blakeford,\" Queen Annes County, Md.; interment in the private burying ground of the DeCourcy family at \"Cheston-on-Wye,\" Queen Anne's County, Md.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Lemuel Alston",
+    "birthDate": "1760",
+    "deathDate": "1836",
+    "bio": "a Representative from South Carolina; born in the eastern part of Granville (now Warren) County, N.C., in 1760; moved to South Carolina after the Revolutionary War and settled near Greens Mill, which soon became the town of Greenville; studied law; admitted to the bar and commenced practice in Greenville; member of the South Carolina state house of representatives, 1789-1790; elected as a Republican to the Tenth and Eleventh Congresses (March 4, 1807-March 3, 1811); moved in 1816 to Clarke County, Ala., and settled near Grove Hill, where he presided over the orphans' court and the county court from November 1816 until May 1821; died at \"Alston Place,\" Clarke County, Ala., in 1836.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

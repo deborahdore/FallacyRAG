@@ -1,0 +1,16 @@
+{
+    "name": "John Snodgrass",
+    "birthDate": "1804-03-02",
+    "deathDate": "1854-06-05",
+    "bio": "A Representative from Virginia; born in Berkeley County, Va. (now West Virginia), March 2, 1804; completed preparatory studies; studied law; was admitted to the bar in 1843 and commenced practice in Parkersburg, Va.; delegate to the State constitutional convention in 1850 and 1851; elected as a Democrat to the Thirty-third Congress and served from March 4, 1853, until his death in Parkersburg, Va. (now West Virginia), June 5, 1854; interment in Riverview Cemetery, Parkersburg, Wood County, Va. (Now W. Va.).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

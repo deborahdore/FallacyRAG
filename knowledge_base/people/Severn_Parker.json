@@ -1,0 +1,16 @@
+{
+    "name": "Severn Parker",
+    "birthDate": "1787-07-19",
+    "deathDate": "1836-10-21",
+    "bio": "A Representative from Virginia; born near Eastville, Northampton County, Va., July 19, 1787; attended the common schools; studied law; was admitted to the bar and practiced; member of the Virginia state house of delegates, 1809-1821; appointed deputy clerk of Northampton County March 8, 1813; captain of a rifle company in 1814; served in the Virginia state senate, 1817-1820; elected as a Democratic Republican to the Sixteenth Congress (March 4, 1819-March 3, 1821); again a member of the Virginia state house of delegates in 1828, 1829, and 1834-1836; died in Northampton County, Va., October 21, 1836; interment in the private cemetery on Kendall Grove farm, near Eastville, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

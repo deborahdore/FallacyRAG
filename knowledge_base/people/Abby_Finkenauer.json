@@ -1,0 +1,16 @@
+{
+    "name": "Abby Finkenauer",
+    "birthDate": "1988-12-27",
+    "deathDate": null,
+    "bio": "a Representative from Iowa; born in Dubuque, Dubuque County, Iowa, December 27, 1988; graduated from Hempstead High School, Dubuque, Iowa, 2007; U.S. Capitol Page School, 2006; B.A., Drake University, Des Moines, Iowa, 2011; legislative assistant; staff, Iowa state house; member of the Iowa state house, 2015-2019; elected as a Democrat to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for reelection to the One Hundred Seventeenth Congress in 2020; unsuccessful candidate for nomination to the United States Senate in 2022; United States Special Envoy for Global Youth Issues, November 2022-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

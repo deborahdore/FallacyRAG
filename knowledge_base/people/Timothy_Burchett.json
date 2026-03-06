@@ -1,0 +1,39 @@
+{
+    "name": "Timothy Burchett",
+    "birthDate": "1964-08-25",
+    "deathDate": null,
+    "bio": "a Representative from Tennessee; born in Knoxville, Knox County, Tenn., August 25, 1964; graduated from Bearden High School, Knoxville, Tenn., 1982; B.S., University of Tennessee, Knoxville, Tenn., 1988; business owner; member of the Tennessee state house of representatives, 1994-1998; member of the Tennessee state senate, 1998-2010; Mayor of Knox County, Tenn., 2010-2018; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

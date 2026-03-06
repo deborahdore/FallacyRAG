@@ -1,0 +1,63 @@
+{
+    "name": "Rafael Cruz",
+    "birthDate": "1970",
+    "deathDate": null,
+    "bio": "A Senator from Texas; born in Calgary, Alberta, Canada, December 22, 1970; graduated Princeton University, B.A., 1992; graduated Harvard University, J.D., 1995; law clerk to Chief Justice of the United States William Rehnquist; associate deputy attorney general, U.S. Department of Justice; director of the Office of Policy Planning, Federal Trade Commission; solicitor general of Texas 2003-2008; lawyer; elected as a Republican to the United States Senate in 2012 for the term commencing January 3, 2013; reelected in 2018 and again in 2024 for the term ending January 3, 2031; chair, Committee on Commerce, Science, and Transportation (One Hundred Nineteenth Congress); was an unsuccessful candidate for the Republican presidential nomination in 2016.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

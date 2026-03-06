@@ -1,0 +1,56 @@
+{
+    "name": "Henry Storrs",
+    "birthDate": "1787-09-03",
+    "deathDate": "1837-07-29",
+    "bio": "a Representative from New York; born in Middletown, Conn., September 3, 1787; was graduated from Yale College in 1804; studied law; was admitted to the bar in 1807 and commenced practice in Champion, Jefferson County, N.Y.; later practiced in Whitesboro and Utica, N.Y.; elected as a Federalist to the Fifteenth and to the succeeding Congress (March 4, 1817-March 3, 1821); unsuccessful candidate for renomination in 1820; elected as an Adams-Clay Federalist to the Eighteenth Congress, reelected as an Adams candidate to the Nineteenth and to the succeeding Congress; reelected as an Anti-Jacksonian candidate to the Twenty-first Congress (March 4, 1823-March 3, 1831); chairman, Committee on Naval Affairs (Nineteenth Congress); one of the managers appointed by the House of Representatives in 1830 to conduct the impeachment proceedings against James H. Peck, United States judge for the district of Missouri; presiding judge of the court of common pleas of Oneida County 1825-1829; moved to New York City and practiced law; died in New Haven, Conn., July 29, 1837; interment in Grove Street Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

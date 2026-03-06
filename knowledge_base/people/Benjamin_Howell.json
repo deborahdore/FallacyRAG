@@ -1,0 +1,72 @@
+{
+    "name": "Benjamin Howell",
+    "birthDate": "1844-01-27",
+    "deathDate": "1933-02-01",
+    "bio": "A Representative from New Jersey; born in Cedarville, Cumberland County, N.J., January 27, 1844; attended the common schools; was graduated from Fort Edward Institute, New York; enlisted in the Twelfth Regiment, New Jersey Volunteers, in 1862 and served until the close of the war; engaged in mercantile pursuits in South Amboy, N.J., 1865; surrogate of Middlesex County 1882-1892; president of the People's National Bank of New Brunswick and vice president of the New Brunswick Savings Institution; elected as a Republican to the Fifty-fourth and to the seven succeeding Congresses (March 4, 1895-March 3, 1911); chairman, Committee on Immigration and Naturalization (Fifty-eighth through Sixty-first Congresses); unsuccessful candidate for reelection in 1910 to the Sixty-second Congress; delegate to the Republican National Convention in 1896; member of the United States Immigration Commission 1907-1910; died at New Brunswick, N.J., February 1, 1933; interment in Christ Cemetery, South Amboy, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

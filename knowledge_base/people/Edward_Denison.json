@@ -1,0 +1,72 @@
+{
+    "name": "Edward Denison",
+    "birthDate": "1873-08-28",
+    "deathDate": "1953-06-17",
+    "bio": "A Representative from Illinois; born in Marion, Williamson County, Ill., August 28, 1873; attended the public schools; was graduated from Baylor University, Waco, Tex., in 1895, from Yale University, in 1896, and from Columbian (now George Washington) University Law School, Washington, D.C., in 1899; was admitted to the bar in 1899 and commenced practice in Marion, Ill., in 1900; engaged in the banking business for one year; elected as a Republican to the Sixty-fourth and to the seven succeeding Congresses (March 4, 1915-March 3, 1931); unsuccessful candidate for reelection in 1930 to the Seventy-second Congress and for election in 1932 to the Seventy-third Congress; resumed the general practice of law in Marion, Ill.; unsuccessful candidate for circuit judge of the first judicial circuit of Illinois in 1939; died in Carbondale, Ill., June 17, 1953; interment in Maplewood Cemetery, Marion, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

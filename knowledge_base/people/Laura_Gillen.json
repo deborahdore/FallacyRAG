@@ -1,0 +1,15 @@
+{
+    "name": "Laura Gillen",
+    "birthDate": "1969-07-10",
+    "deathDate": null,
+    "bio": "a Representative from New York; born July 10, 1969; graduated from Sacred Heart Academy, Hempstead, New York; A.B., Georgetown University, Washington, D.C., 1991; J.D., New York University, New York, N.Y., 2000; lawyer; faculty member, Hofstra University, Hempstead, N.Y.; town supervisor, Hempstead, N.Y., 2018-2019; unsuccessful candidate for election to the One Hundred Eighteenth Congress in 2022; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

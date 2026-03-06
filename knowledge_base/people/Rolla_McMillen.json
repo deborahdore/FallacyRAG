@@ -1,0 +1,40 @@
+{
+    "name": "Rolla McMillen",
+    "birthDate": "1880",
+    "deathDate": "1961",
+    "bio": "A Representative from Illinois; born near Monticello, Piatt County, Ill., October 5, 1880; attended the public schools of Monticello, Ill., and the University of Illinois at Chicago; was graduated from the University of Michigan Law School at Ann Arbor in 1906; was admitted to the bar the same year and commenced practice in Decatur, Ill.; delegate to the Republican National Convention in 1940; member of State housing board 1940-1944; elected as a Republican to the Seventy-eighth Congress to fill the vacancy caused by the death of William H. Wheat; reelected to the Seventy-ninth, Eightieth, and Eighty-first Congresses, and served from June 13, 1944, to January 3, 1951; was not a candidate for renomination in 1950; died in Evanston, Ill., May 6, 1961; interment in Greenwood Cemetery, Decatur, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

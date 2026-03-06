@@ -1,0 +1,32 @@
+{
+    "name": "Robert Hurt",
+    "birthDate": "1969-06-16",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in New York, New York County, N.Y., June 16, 1969; graduated from Episcopal High School, Alexandria, Va., 1987; B.A., Hampden-Sydney College, Hampden-Sydney, Va., 1991; J.D., Mississippi College, Clinton, Miss., 1995; lawyer, private practice; Pittsylvania County, Va. deputy attorney; member of the Chatham, Va., town council, 2000-2001; member of Virginia state house of delegates, 2002-2008; member of Virginia state senate, 2008-2010; elected as a Republican to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Michael Rulli",
+    "birthDate": "1969-03-11",
+    "deathDate": null,
+    "bio": "a Representative from Ohio; born in Mahoning County, Ohio, March 11, 1969; graduated from Poland Seminary High School, Poland, Ohio; graduated from Emerson College, Boston, Mass., 1991; business executive; member of the Leetonia Exempted Village School District board of education, Leetonia, Ohio, 2009-2017; member of the Ohio state senate, 2019-2024; elected as a Republican to the One Hundred Eighteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Bill Johnson, and reelected to the succeeding Congress (June 11, 2024-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "John Hathorn",
+    "birthDate": "1749-01-09",
+    "deathDate": "1825-02-19",
+    "bio": "A Representative from New York; born in Wilmington, Del., January 9, 1749; completed preparatory studies; surveyor by profession and a school teacher; served in the Revolutionary War, captain of the Colonial Militia; colonel of the Fourth Orange County (N.Y.) Regiment February 7, 1776, and served throughout the Revolutionary War; brigadier general of the Orange County Militia September 26, 1786; major general of New York state militia October 8, 1793; member of the New York assembly, 1778, 1780, 1782-1785, 1795, and 1805, and served as speaker in 1783 and 1784; served in the New York senate, 1786-1790 and 1799-1803; member of the council of appointment in 1787 and 1789; elected to the Confederation Congress in December 1788, but no further sessions were held; elected as an Anti-Administration candidate to the First Congress (March 4, 1789-March 3, 1791); unsuccessful candidate for reelection to the Second Congress in 1790; unsuccessful candidate for&nbsp; election to the Third Congress in 1792; elected as a Democratic Republican to the Fourth Congress (March 4, 1795-March 3, 1797); unsuccessful candidate for reelection to the Fifth Congress in 1796; engaged in mercantile pursuits; died on February 19, 1825, in Warwick, Orange County, N.Y.; interment in the cemetery on the family estate; reinterment in Warwick Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

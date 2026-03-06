@@ -1,0 +1,23 @@
+{
+    "name": "Nathaniel Moran",
+    "birthDate": "1974-09-23",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born on September 23, 1974; graduated from Whitehouse High School, Whitehouse, Tex., 1993; attended the United States Military Academy, West Point, N.Y.; B.A., Texas Tech University, Lubbock, Tex., 1997; M.B.A., Texas Tech University, Lubbock, Tex., 1998; J.D., Texas Tech University, Lubbock, Tex., 2002; teaching assistant; business owner; lawyer, private practice; member of the Tyler, Tex., city council, 2005-2009, mayor pro tem, 2009; county judge, Smith County, Tex., 2016-2022; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

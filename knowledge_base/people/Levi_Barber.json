@@ -1,0 +1,24 @@
+{
+    "name": "Levi Barber",
+    "birthDate": "1777-10-16",
+    "deathDate": "1833-04-23",
+    "bio": "A Representative from Ohio; born in Simsbury, Hartford County, Conn., October 16, 1777; moved to Ohio; was a surveyor in the employ of the Federal Government; member of the Ohio state house of representatives in 1806; was commissioned receiver of the United States land office in Marietta, Ohio, on April 1, 1807; aide to Governor Meigs during the War of 1812; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); unsuccessful candidate for reelection in 1818 to the Sixteenth Congress; elected to the Seventeenth Congress (March 4, 1821-March 3, 1823); unsuccessful candidate for reelection in 1822 to the Eighteenth Congress; clerk of the court of common pleas and the court of Washington County; justice of the peace; president of the Bank of Marietta; died in Harmar (now a part of Marietta), Ohio, April 23, 1833; interment in Harmar Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

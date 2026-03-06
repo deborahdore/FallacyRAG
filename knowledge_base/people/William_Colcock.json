@@ -1,0 +1,24 @@
+{
+    "name": "William Colcock",
+    "birthDate": "1804-11-05",
+    "deathDate": "1889-06-13",
+    "bio": "A Representative from South Carolina; born in Beaufort, S.C., November 5, 1804; attended Hulburt's School, Charleston, S.C., and was graduated from South Carolina College (now the University of South Carolina) at Columbia in 1823; studied law; was admitted to the bar in 1825 and commenced practice in Coosawhatchie, Jasper County, S.C.; also engaged in planting; member of the State house of representatives 1830-1847; elected as a Democrat to the Thirty-first and Thirty-second Congresses (March 4, 1849-March 3, 1853); a Regent of the Smithsonian Institution 1850-1853; collector of the port of Charleston 1853-1865, serving first under the United States Government and subsequently under the Confederate States Government; delegate to the Democratic National Convention at Charleston in 1860; resumed the practice of law; died in McPhersonville, Hampton County, S.C., on June 13, 1889; interment in Stoney Creek Cemetery, Beaufort County, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

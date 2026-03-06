@@ -1,0 +1,24 @@
+{
+    "name": "Philip Doddridge",
+    "birthDate": "1773-05-17",
+    "deathDate": "1832-11-19",
+    "bio": "A Representative from Virginia; born in Bedford County, Va., May 17, 1773; reared on a farm; moved to Brooke County, Va. (now West Virginia); schooled in Wellsburg (then Charleston), Va. (now West Virginia); studied law and was admitted to the bar in 1797; member, State senate, 1804-1809; member of the house of delegates of Virginia in 1815, 1816, 1822, 1823, 1828, and 1829; delegate to the Virginia constitutional convention in 1829; unsuccessful candidate for election in 1822 to the Eighteenth Congress and in 1824 to the Nineteenth Congress; elected as an Anti-Jacksonian candidate to the Twenty-first and Twenty-second Congresses and served from March 4, 1829, until his death in Washington, D.C., November 19, 1832; chairman, Committee on District of Columbia (Twenty-first and Twenty-second Congresses); interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

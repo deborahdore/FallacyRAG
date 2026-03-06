@@ -1,0 +1,24 @@
+{
+    "name": "Michelle Steel",
+    "birthDate": "1955-06-21",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Seoul, South Korea, June 21, 1955; B.B.S., Pepperdine University, Malibu, Calif.; M.B.A. University of Southern California, Los Angeles, Calif., 2010; business professional; member, California state board of equalization, 2007-2015; member of the Orange County, Calif. board of supervisors, 2015-2017, chair, 2017-2020; elected as a Republican to the One Hundred Seventeenth and to the succeeding Congress (January 3, 2021-January 3, 2025); unsuccessful candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

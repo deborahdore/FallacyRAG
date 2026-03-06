@@ -1,0 +1,31 @@
+{
+    "name": "Philemon Dickinson",
+    "birthDate": "1739",
+    "deathDate": "1809",
+    "bio": "a Delegate from Delaware and a Senator from New Jersey; born at 'Crosia-dore,' near Trappe, Talbot County, Md., April 5, 1739; moved with his parents to Dover, Del., in 1740, where he received his education from a private tutor; graduated in the first class of the University of Pennsylvania at Philadelphia in 1759; superintended his father's estates in Delaware until 1760; studied law in Philadelphia; admitted to the bar, but never practiced; moved to Trenton, N.J., in 1767; delegate to the New Jersey Provincial Congress in 1776; served in the Revolutionary War as a brigadier general in 1776, and, in 1777, major general commanding the New Jersey Militia; Delegate to the Confederation Congress from Delaware, 1782-1783; member of the commission to choose a site for the national capital in 1784; elected to the United States Senate from New Jersey to fill the vacancy caused by the resignation of William Paterson and served from November 23, 1790, to March 3, 1793; was not a candidate for renomination; devoted his time to the care of his estates; died at his home, 'The Hermitage,' near Trenton, N.J., February 4, 1809; interment in the Friends Meeting House Burying Ground, Trenton, N.J.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

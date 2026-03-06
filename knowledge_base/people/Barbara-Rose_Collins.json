@@ -1,0 +1,32 @@
+{
+    "name": "Barbara-Rose Collins",
+    "birthDate": "1939-04-13",
+    "deathDate": "2021-11-04",
+    "bio": "a Representative from Michigan; born in Detroit, Mich., April 13, 1939; graduated from public schools and attended Wayne State University; member, Detroit Region I public school board, 1971-1973; member, Michigan house of representatives, 1975-1981; member, Detroit city council, 1982-1991, 2002-2009; unsuccessful candidate for nomination to the One Hundred First Congress in 1988; elected as a Democrat to the One Hundred Second and to the two succeeding Congresses (January 3, 1991-January 3, 1997); was an unsuccessful candidate for renomination to the One Hundred Fifth Congress; died on November 4, 2021, in Detroit, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

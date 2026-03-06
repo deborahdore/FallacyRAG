@@ -1,0 +1,56 @@
+{
+    "name": "Henry Hubbard",
+    "birthDate": "1784-05-03",
+    "deathDate": "1857-06-05",
+    "bio": "A Representative and a Senator from New Hampshire; born in Charlestown, Sullivan County, N.H., May 3, 1784; pursued classical studies under private tutors and graduated from Dartmouth College, Hanover, N.H., in 1803; studied law in Portsmouth, N.H.; admitted to the bar about 1806 and commenced practice in Charlestown; town moderator sixteen times, beginning in 1810; first selectman in 1819, 1820, and 1828; member, State house of representatives 1812-1815, 1819-1820, 1823-1827, and served three years as speaker; State solicitor for Cheshire County 1823-1828; probate judge of Sullivan County 1827-1829; elected as a Jacksonian candidate to the Twenty-first, Twenty-second, and Twenty-third Congresses (March 4, 1829-March 3, 1835); chairman, Committee on Revolutionary Pensions (Twenty-second Congress); elected as a Democrat to the United States Senate and served from March 4, 1835, to March 3, 1841; was not a candidate for reelection; chairman, Committee on Claims (Twenty-fourth through Twenty-sixth Congresses); Governor of New Hampshire 1841-1843; United States subtreasurer at Boston, Mass., 1846-1849; died in Charlestown, N.H., June 5, 1857; interment in Forest Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

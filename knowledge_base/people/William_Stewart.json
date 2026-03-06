@@ -1,0 +1,128 @@
+{
+    "name": "William Stewart",
+    "birthDate": "1827",
+    "deathDate": "1909",
+    "bio": "A Senator from Nevada; born in Galen, near Lyons, Wayne County, N.Y., August 9, 1827; moved with his parents to Mesopotamia Township, Trumbull County, Ohio; attended Lyons Union School and West Farmington Academy; teacher of mathematics at Lyons Union School; attended Yale College 1849-1850; moved to San Francisco, Calif., in 1850 and engaged in gold mining in Nevada County; studied law; admitted to the bar in 1852 and commenced practice in Nevada City, Calif.; district attorney 1852; attorney general of California 1854; moved to Virginia City, Nev., in 1860; involved in early mining litigation and in the development of the Comstock lode; member, Territorial council 1861; member of the State constitutional convention in 1863; upon the admission of Nevada as a State into the Union was elected as a Republican to the United States Senate in 1864; took oath of office on February 1, 1865; reelected in 1869, and served until March 3, 1875; did not seek reelection; chairman, Committee on Pacific Railroads (Forty-second Congress), Committee on Railroads (Forty-third Congress); resumed the practice of law in Nevada and California; again elected as a Republican to the United States Senate in 1887; reelected in 1893 and 1899, as a Silver Republican, and served from March 4, 1887, to March 3, 1905; chairman, Committee on Mines and Mining (Fiftieth through Fifty-sixth Congresses), Committee on Indian Affairs (Fifty-seventh and Fifty-eighth Congresses); declined to be a candidate for reelection in 1905; died in Washington, D.C., April 23, 1909; remains were cremated and the ashes deposited in Laurel Hill Cemetery, San Francisco, Calif.; remains removed and deposited in Cypress Lawn Cemetery, Colma, Calif..",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Silver",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Silver",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Silver",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Silver",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        }
+    ]
+}

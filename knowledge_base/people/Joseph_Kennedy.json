@@ -1,0 +1,40 @@
+{
+    "name": "Joseph Kennedy",
+    "birthDate": "1980-10-04",
+    "deathDate": null,
+    "bio": "a Representative from Massachusetts; born in Brighton, Suffolk County, Mass., October 4, 1980; B.S., Stanford University, Stanford, Calif., 2003; J.D., Harvard University, Cambridge, Mass., 2009; United States Peace Corps, 2004-2006; research analyst; Middlesex, Mass. county assistant district attorney, 2011-2012; elected as a Democrat to the One Hundred Thirteenth Congress and to the three succeeding Congresses (January 3, 2013-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020, but was an unsuccessful candidate for nomination to the United States Senate; United States Special Envoy for Northern Ireland, 2022-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Benedict Semmes",
+    "birthDate": "1789-11-01",
+    "deathDate": "1863-02-10",
+    "bio": "a Representative from Maryland; born in Charles County, Md., November 1, 1789; attended the rural schools and a medical college in Philadelphia; graduated from Baltimore Medical School in 1811; commenced practice in Piscataway, Prince George's County, Md., and later engaged in farming; member of the state house of delegates 1825-1828 and served as speaker; served in the state senate; elected as an Anti-Jacksonian candidate to the Twenty-first and Twenty-second Congresses (March 4, 1829-March 3, 1833); again a member of the state house of delegates in 1842 and 1843; lived in retirement until his death at Oak Lawn, Prince George's County, Md., February 10, 1863.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MARYLAND"
+        }
+    ]
+}

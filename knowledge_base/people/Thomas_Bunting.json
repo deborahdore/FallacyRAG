@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Bunting",
+    "birthDate": "1844-04-24",
+    "deathDate": "1898-12-27",
+    "bio": "A Representative from New York; born in Eden, Erie County, N.Y., April 24, 1844; was educated in the common schools and the Griffith Institute, Springville, N.Y.; taught school in winters and attended the academy in summer months; illness having interrupted his preparation for college, he moved to Hamburg, N.Y., in 1868 and later established a general mercantile store; engaged in the canning business; elected as a Democrat to the Fifty-second Congress (March 4, 1891-March 3, 1893); declined to be a candidate for renomination in 1892; resumed the canning business and also became interested in farming, dairying, and stock raising; died in Buffalo, N.Y., December 27, 1898; interment in Forest Lawn Cemetery at Hamburg, Erie County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

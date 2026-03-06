@@ -1,0 +1,31 @@
+{
+    "name": "Tracey Mann",
+    "birthDate": "1976-12-17",
+    "deathDate": null,
+    "bio": "a Representative from Kansas; born in Quinter, Gove County, Kans., December 17, 1976; graduated from Quinter High School, Quinter, Kans.; B.A., Kansas State University, Manhattan, Kans., 2000; commercial real estate broker; unsuccessful candidate for nomination to the One Hundred Twelfth Congress in 2010; appointed Kansas state lieutenant governor, 2018-2019; unsuccessful candidate for nomination for Kansas state lieutenant governor in 2019; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

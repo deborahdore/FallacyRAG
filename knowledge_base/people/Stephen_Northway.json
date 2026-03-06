@@ -1,0 +1,32 @@
+{
+    "name": "Stephen Northway",
+    "birthDate": "1833-06-19",
+    "deathDate": "1898-09-18",
+    "bio": "A Representative from Ohio; born in Christian Hollow, Onondaga County, N.Y., June 19, 1833; moved with his parents in 1840 to the township of Orwell, Ashtabula County, Ohio; attended the district school, Kingsville Academy, and Orwell Academy; taught school; studied law; was admitted to the bar in 1859 and commenced practice in Jefferson, Ashtabula County, Ohio; prosecuting attorney of Ashtabula County 1861-1865; member of the State house of representatives in 1865 and 1866; resumed the practice of law; elected as a Republican to the Fifty-third, Fifty-fourth, and Fifty-fifth Congresses and served from March 4, 1893, until his death in Jefferson, Ashtabula County, Ohio, on September 8, 1898; interment in Oakdale Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

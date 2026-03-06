@@ -1,0 +1,40 @@
+{
+    "name": "Henry Burnett",
+    "birthDate": "1825-10-05",
+    "deathDate": "1866-10-01",
+    "bio": "A Representative from Kentucky; born in Essex County, Va., October 5, 1825; moved with his parents to Kentucky in early childhood; attended the common schools and an academy at Hopkinsville, Christian County; studied law; was admitted to the bar in 1847 and commenced practice in Cadiz, Ky.; clerk of the Trigg County circuit court, 1851-1853; elected as a Democrat to the Thirty-fourth and to the three succeeding Congresses (March 4, 1855-December 3, 1861); expelled from the U.S. House of Representatives on December 3, 1861, for open rebellion against the government of the United States;&nbsp; colonel of the Eighth Regiment, Kentucky Infantry, in the Confederate army during the Civil War; president of the Kentucky southern conference in Russellville, October 29, 1861, and of the sovereignty convention in Russellville, November 18, which passed an ordinance of secession and organized a state government; representative from Kentucky to the provisional Confederate congress and served from November 18, 1861, to February 17, 1862; elected as a senator from Kentucky to the first and second Confederate congresses and served from February 19, 1862, to February 18, 1865; resumed the practice of law; died on October 1m 1886, in Hopkinsville, Ky.; interment in East End Cemetery, Cadiz, Trigg County, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

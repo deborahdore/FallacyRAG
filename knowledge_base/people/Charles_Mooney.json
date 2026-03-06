@@ -1,0 +1,56 @@
+{
+    "name": "Charles Mooney",
+    "birthDate": "1879-01-05",
+    "deathDate": "1931-05-29",
+    "bio": "A Representative from Ohio; born in St. Marys, Auglaize County, Ohio, January 5, 1879; attended the public and Jesuit schools; was graduated from St. Marys High School in 1895; engaged in the life insurance business at St. Marys; moved to Cleveland, Ohio, in 1910 and continued the life insurance business; member of the State senate 1915-1919; elected as a Democrat to the Sixty-sixth Congress (March 4, 1919-March 3, 1921); unsuccessful candidate for reelection in 1920 to the Sixty-seventh Congress; delegate to the Democratic National Conventions in 1920, 1924, and 1928; elected to the Sixty-eighth and to the four succeeding Congresses and served from March 4, 1923, until his death in Cleveland, Ohio, on May 29, 1931; interment in Gethsemane Cemetery, St. Marys, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

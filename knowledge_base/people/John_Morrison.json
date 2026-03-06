@@ -1,0 +1,16 @@
+{
+    "name": "John Morrison",
+    "birthDate": "1814-01-31",
+    "deathDate": "1904-07-25",
+    "bio": "A Representative from Pennsylvania; born in Colerain, Lancaster County, Pa., January 31, 1814; attended the public schools; studied medicine; was graduated from the Jefferson Medical College at Philadelphia, Pa., in 1837 and commenced practice in Cochranville, Pa.; elected as a Democrat to the Thirty-second Congress (March 4, 1851-March 3, 1853); inspector and appraiser of imports of drugs at the port of Philadelphia, Pa., 1853-1861; resumed the practice of medicine in Cochranville, Pa., 1861-1865; engaged in agricultural and mercantile pursuits; again resumed the practice of medicine in Cochranville, Pa., and died there July 25, 1904; interment in Fagg's Manor Presbyterian Church Cemetery, Londonderry Township, Chester County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

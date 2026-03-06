@@ -1,0 +1,56 @@
+{
+    "name": "Jennifer Dunn",
+    "birthDate": "1941-07-29",
+    "deathDate": "2007-09-05",
+    "bio": "a Representative from Washington; born in Seattle, King County, Wash., July 29, 1941; graduated from Bellevue High School, Bellevue, Wash., 1959; attended the University of Washington, Seattle, Wash., 1960-1962; B.A., Stanford University, Stanford, Calif., 1963; systems engineer; section supervisor, King County, Wash., Department of Assessments, 1978-1980; chair, Washington State Republican Party, 1981-1992; member, United States delegations to the United Nations Commission on the Status of Women, 1984 and 1990; elected as a Republican to the One Hundred Third and to the five succeeding Congresses (January 3, 1993- January 3, 2005); not a candidate for reelection to the One Hundred Ninth Congress in 2004; died on September 5, 2007, in Alexandria, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

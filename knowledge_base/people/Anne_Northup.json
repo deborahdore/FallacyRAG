@@ -1,0 +1,48 @@
+{
+    "name": "Anne Northup",
+    "birthDate": "1948",
+    "deathDate": null,
+    "bio": "A Representative from Kentucky; born in Louisville, Jefferson County, Ky., January 22, 1948; graduated from Sacred Heart Academy, Louisville, Ky., 1966; B.A., Saint Mary's College, 1970; member of the Kentucky state house of representatives, 1987-1996; elected as a Republican to the One Hundred Fifth and to the four succeeding Congresses (January 3, 1997-January 3, 2007); unsuccessful candidate for reelection to the One Hundred Tenth Congress in 2006; unsuccessful candidate for nomination for Governor of Kentucky in 2007; unsuccessful candidate for election to the One Hundred Eleventh Congress in 2008.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

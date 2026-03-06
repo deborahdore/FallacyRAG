@@ -1,0 +1,112 @@
+{
+    "name": "Frank Brandegee",
+    "birthDate": "1864-07-08",
+    "deathDate": "1924-10-14",
+    "bio": "A Representative and a Senator from Connecticut; born in New London, Conn., July 8, 1864; attended the common schools, and graduated from Yale College in 1885; studied law; admitted to the bar in 1888 and practiced in New London; member, State house of representatives 1888; corporation counsel of New London 1889-1893, 1894-1897, when he resigned; member, State house of representatives 1899, and served as speaker; again elected corporation counsel of New London 1901-1902, when he resigned to become a Member of Congress; chairman of the Republican State convention in 1904; elected as a Republican to the Fifty-seventh Congress to fill the vacancy caused by the death of Charles A. Russell; reelected to the Fifty-eighth and Fifty-ninth Congresses and served from November 4, 1902, until May 10, 1905, when he resigned, having been elected a United States Senator to fill the vacancy caused by the death of Orville H. Platt; reelected in 1908, 1914, and 1920, and served from May 10, 1905, until his death by suicide in Washington, D.C., October 14, 1924; served as President pro tempore during the Sixty-second Congress; chairman, Committee on Forest Reservations and Game Protection (Fifty-ninth through Sixty-first Congresses), Committee on Interoceanic Canals (Sixty-second Congress), Committee on Panama (Sixty-second Congress), Committee on Pacific Railroads (Sixty-third through Sixty-fifth Congresses), Committee on Library (Sixty-sixth and Sixty-seventh Congresses), Committee on Judiciary (Sixty-eighth Congress); interment in Cedar Grove Cemetery, New London, Conn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

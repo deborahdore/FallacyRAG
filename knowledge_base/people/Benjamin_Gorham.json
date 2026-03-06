@@ -1,0 +1,48 @@
+{
+    "name": "Benjamin Gorham",
+    "birthDate": "1775-02-13",
+    "deathDate": "1855-09-27",
+    "bio": "a Representative from Massachusetts; born in Charlestown, Mass., February 13, 1775; pursued preparatory studies; graduated from Harvard University in 1795; studied law; was admitted to the bar and commenced practice in Boston, Mass.; member of the Massachusetts state house of representatives, 1814-1818; served in the Massachusetts state senate from May 26, 1819, to January 10, 1821, when he resigned; elected as a Democratic Republican to the Sixteenth Congress, by special election, to fill the vacancy caused by the resignation of Jonathan Mason, and reelected to the succeeding Congress (November 6, 1820-March 3, 1823); again a member of the Massachusetts state senate for one term beginning May 28, 1823; elected as an Adams candidate to the Twentieth Congress, by special election, to fill the vacancy caused by the resignation of Daniel Webster, and reelected as an Anti-Jacksonian candidate to the succeeding Congress (July 23, 1827-March 3, 1831); elected as an Anti-Jacksonian candidate to the Twenty-third Congress (March 4, 1833-March 3, 1835); again a member of the Massachusetts state house of representatives in 1841; resumed the practice of law; died in Boston, Mass., September 27, 1855; interment in the old burial ground of Phipps Street Cemetery, Charlestown, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

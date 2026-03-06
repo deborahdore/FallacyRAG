@@ -1,0 +1,56 @@
+{
+    "name": "Donald Sundquist",
+    "birthDate": "1936-05-15",
+    "deathDate": "2023-08-27",
+    "bio": "a Representative from Tennessee; born in Moline, Rock Island County, Ill., March 15, 1936; graduated from Moline High School, Moline, Ill., 1953; B.A., Augustana College, Rock Island, Ill., 1957; United States Navy, 1957-1959; United States Naval Reserve, 1959-1963; businessman; delegate, Republican National Convention, 1976, 1980; elected as a Republican to the Ninety-eighth and to the five succeeding Congresses (January 3, 1983-January 3, 1995); Governor of Tennessee, 1995-2002; died on August 27, 2023, in Memphis, Tenn.; interment at Tuckaleechee United Methodist Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

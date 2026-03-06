@@ -1,0 +1,80 @@
+{
+    "name": "Thruston Morton",
+    "birthDate": "1907",
+    "deathDate": "1982",
+    "bio": "(Brother of Rogers C.B. Morton), a Representative and a Senator from Kentucky; born in Louisville, Jefferson County, Ky., August 19, 1907; attended the public schools and Woodberry Forest School, Orange, Va.; graduated from Yale University in 1929; engaged in the grain and milling business; during the Second World War served as a lieutenant commander in the United States Naval Reserve 1941-1946; director of the Louisville Board of Trade, Louisville Goodwill Industries, Frontier Nursing Service, and Lincoln Institute; also interested in banking; elected as a Republican to the Eightieth, Eighty-first, and Eighty-second Congresses (January 3, 1947-January 3, 1953); was not a candidate for renomination in 1952 to the Eighty-third Congress; was appointed Assistant Secretary of State for Congressional Relations by President Dwight D. Eisenhower 1953-1956; elected as a Republican to the United States Senate in 1956; reelected in 1962 and served from January 3, 1957, until his resignation on December 16, 1968; was not a candidate for reelection in 1968; chairman, Republican National Committee 1959-1961; vice chairman of the board and director, Liberty National Bank, Louisville, Ky.; chairman of the board and director, Churchill Downs, Louisville, Ky.; president, American Horse Council; resided in Louisville, Ky. until his death there on August 14, 1982; interment at Cave Hill Cemetery, Louisville, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "name": "Nehemiah Knight",
+    "birthDate": "1780",
+    "deathDate": "1854",
+    "bio": "(Son of Nehemiah Knight [1746-1808]), a Senator from Rhode Island; born in Cranston, R.I., December 31, 1780; attended the common schools; member, State house of representatives 1802; moved to Providence and was clerk of the court of common pleas 1805-1811; clerk of the circuit court 1812-1817; collector of customs for the same period; Governor of Rhode Island 1817-1821; president of the Roger Williams Bank 1817-1854; elected in 1821 as a Democratic Republican to the United States Senate to fill the vacancy caused by the death of James Burrill, Jr.; reelected in 1823 as a Crawford Republican, in 1829 as an Anti-Jacksonian, and again in 1835 as a Whig, the last time as a Whig, and served from January 9, 1821, to March 3, 1841; chairman, Committee to Audit and Control the Contingent Expenses (Twenty-second, Twenty-third and Twenty-sixth Congresses), Committee on Manufactures (Twenty-fourth Congress); retired from public life; delegate to the State constitutional convention in 1843; died in Providence, R.I., April 18, 1854; interment in Grace Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

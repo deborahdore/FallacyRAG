@@ -1,0 +1,48 @@
+{
+    "name": "Edward Feighan",
+    "birthDate": "1947-10-22",
+    "deathDate": null,
+    "bio": "a Representative from Ohio; born in Lakewood, Cuyahoga County, Ohio, October 22, 1947; attended schools in Cleveland, Ohio and Notre Dame International High School, Rome, Italy; B.A., Loyola University, New Orleans, La., 1969; J.D., Cleveland Marshall College of Law at Cleveland State University, 1978; admitted to the Ohio bar, 1978 and commenced practice in Cleveland, 1979; elected, Ohio house of representatives, 1973-1979; elected, Cuyahoga commissioner, 1979-1982; delegate, Ohio State Democratic convention, 1978; delegate, Democratic National Convention, 1980; elected as a Democrat to the Ninety-eighth and to the four succeeding Congresses (January 3, 1983-January 3, 1993); was not a candidate for renomination in 1992 to the One Hundred Third Congress; is a resident of Lakewood, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

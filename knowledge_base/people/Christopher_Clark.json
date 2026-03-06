@@ -1,0 +1,24 @@
+{
+    "name": "Christopher Clark",
+    "birthDate": "1767",
+    "deathDate": "1828-11-21",
+    "bio": "a Representative from Virginia; born in Albemarle County, Va., in 1767; attended Washington College (now Washington and Lee University), Lexington, Va.; studied law in the office of Patrick Henry; was admitted to the bar in 1788 and commenced practice in New London (now Bedford Springs), Va.; member of the Virginia state house of delegates in 1790; elected as a Democratic Republican to the Eighth Congress to fill the vacancy caused by the death of John Trigg; reelected as a Democratic Republican to the Ninth Congress and served from November 5, 1804, to July 1, 1806, when he resigned; resumed the practice of law; died near New London, Va., November 21, 1828; interment in a private cemetery at Old Lawyers Station, near Lynchburg, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,104 @@
+{
+    "name": "John Crittenden",
+    "birthDate": "1786-09-10",
+    "deathDate": "1863-07-26",
+    "bio": "A Senator and a Representative from Kentucky; born near Versailles, Woodford County, Ky., September 10, 1786; completed preparatory studies; attended Pisgah Academy, Woodford County, Ky., Washington College (now Washington and Lee University), Lexington, Va., and graduated from William and Mary College, Williamsburg, Va., in 1806; studied law; admitted to the bar and commenced practice in Woodford County, Ky., in 1807; attorney general of Illinois Territory 1809-1810; served in the War of 1812 as aide to the Governor; resumed the practice of law in Russellville, Ky.; member, State house of representatives 1811-1817, and served as speaker the last term; elected as a Democratic Republican to the United States Senate and served from March 4, 1817, to March 3, 1819, when he resigned; chairman, Committee on Judiciary (Fifteenth Congress); moved to Frankfort, Ky., in 1819; member, State house of representatives 1825, 1829-1832; appointed and was confirmed as United States district attorney in 1827, but was removed by President Andrew Jackson in 1829; nominated in 1828 by President John Quincy Adams as an Associate Justice of the Supreme Court of the United States, but was not confirmed by the Senate; again elected to the United States Senate as a Whig and served from March 4, 1835, to March 3, 1841; appointed Attorney General of the United States by President William Henry Harrison March to September 1841; appointed and subsequently elected as a Whig to the United States Senate to fill the vacancy caused by the resignation of Henry Clay and served from March 31, 1842, to June 12, 1848, when he resigned; chairman, Committee on Military Affairs (Twenty-seventh and Twenty-eighth Congresses); Governor of Kentucky 1848-1850, when he resigned; again appointed Attorney General by President Millard Fillmore 1850-1853; again elected to the United States Senate as a Whig (later American/Know-Nothing) and served from March 4, 1855, to March 3, 1861; chair, Committee on Revolutionary Claims (Thirty-sixth Congress); chair Committee on Foreign Affairs (Thirty-seventh Congress); elected as a Unionist to the Thirty-seventh Congress (March 4, 1861-March 3, 1863); was a candidate for reelection at the time of his death; died in Frankfort, Ky., July 26, 1863; interment in State Cemetery, Frankfort, Ky.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "American (Know-Nothing)",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "American (Know-Nothing)",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Unionist",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

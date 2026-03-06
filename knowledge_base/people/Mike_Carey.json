@@ -1,0 +1,31 @@
+{
+    "name": "Mike Carey",
+    "birthDate": "1971-03-13",
+    "deathDate": null,
+    "bio": "a Representative from Ohio; born in Sabina, Clinton County, Ohio; March 13, 1971; graduated from East Clinton High School, Sabina, Ohio, 1989; A.S., Marion Military Institute, Marion, Alabama, 1991; B.A., Ohio State University, Columbus, Ohio, 1993; United States Army Reserve, 1989-1999; staff, Ohio state senator Merle Grace Kearns, 1991-1993; staff, United States Representative Robert William Ney of Ohio, 1995-1998; professional advocate; business executive; elected as a Republican to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Steve Stivers, and reelected to the two succeeding Congresses (November 2, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

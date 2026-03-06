@@ -1,0 +1,104 @@
+{
+    "name": "Ronald Paul",
+    "birthDate": "1935-08-20",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in Pittsburgh, Allegheny County, Pa., August 20, 1935; graduated from Dormont High School, Dormont, Pa., 1953; B.A., Gettysburg College, Gettysburg, Pa., 1957; M.D., Duke University Medical Center, Durham, N.C., 1961; internship and residency training, Henry Ford Hospital, Detroit, Mich., 1961 and 1962; obstetrics and gynecology training, University of Pittsburgh, Pittsburgh, Pa., 1965-1968; medical doctor; United States Air Force, 1963-1965; United States Air National Guard, 1965-1968; delegate, Texas state Republican convention, 1974; unsuccessful candidate for election to the Ninety-fourth Congress in 1974; elected as a Republican to the Ninety-fourth Congress, by special election to fill the vacancy created by the resignation of United States Representative Robert R. Casey (April 3, 1976-January 3, 1977); unsuccessful candidate for reelection to the Ninety-fifth Congress in 1976; elected to the Ninety-sixth and to the two succeeding Congresses (January 3, 1979-January 3, 1985); was not a candidate for reelection to the House of Representatives in 1984, but was an unsuccessful candidate for nomination to the United States Senate; author; unsuccessful Libertarian Party candidate for election for President of the United States in 1988; elected as a Republican to the One Hundred Fifth and to the seven succeeding Congresses (January 3, 1997-January 3, 2013); unsuccessful candidate for the Republican nomination for President of the United States in 2008 and in 2012; was not a candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

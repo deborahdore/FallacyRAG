@@ -1,0 +1,32 @@
+{
+    "name": "John Harmanson",
+    "birthDate": "1803-01-15",
+    "deathDate": "1850-10-24",
+    "bio": "a Representative from Louisiana; born in Norfolk, Va., January 15, 1803; pursued classical studies and was graduated from Jefferson College, Washington, Miss.; moved to Avoyelles Parish, La., in 1830 and engaged in agricultural pursuits; studied law; was admitted to the bar and practiced; member of the State senate in 1844; elected as a Democrat to the Twenty-ninth Congress, by special election, to fill the vacancy caused by the death of United States Representative John Bennett Dawson, and re-elected to the Thirtieth and Thirty-first Congresses; served from December 1, 1845, until his death on October 24, 1850; died in New Orleans, La., on October 24, 1850; chairman, Committee on Expenditures in the Post Office Department (Twenty-ninth Congress); interment in Moreau Plantation Cemetery, Pointe Coupee Parish, La.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

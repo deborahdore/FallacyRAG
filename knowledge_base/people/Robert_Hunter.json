@@ -1,0 +1,111 @@
+{
+    "name": "Robert Hunter",
+    "birthDate": "1809-04-21",
+    "deathDate": "1887-07-18",
+    "bio": "a Representative and a Senator from Virginia; born at \"Mount Pleasant,\" near Loretto, Essex County, Va., April 21, 1809; tutored at home; graduated from the University of Virginia at Charlottesville in 1828; studied law; admitted to the bar in 1830 and commenced practice at Lloyds; member of the Virginia state house of delegates, 1834-1837; elected as a Whig to the Twenty-fifth and Twenty-sixth Congresses, then elected as an Independent to the Twenty-seventh Congress (March 4, 1837-March 3, 1843); Speaker of the House (Twenty-sixth Congress); unsuccessful candidate for reelection to the Twenty-eighth Congress; elected as a Democrat to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); chair, Committee on the District of Columbia (Twenty-ninth Congress); elected to the United States Senate in 1846; reelected in 1852 and 1858 and served from March 4, 1847, to March 28, 1861, when he withdrew; expelled from the Senate on July 11, 1861, for support of the rebellion; chairman, Committee on Public Buildings (Thirtieth through Thirty-second Congresses), Committee on Finance (Thirty-first through Thirty-sixth Congresses); delegate from Virginia to the Confederate Provincial Congress at Richmond; Confederate Secretary of State 1861-1862; served in the Confederate Senate from Virginia in the First and Second Congresses 1862-1865 and was President pro tempore on various occasions; was one of the peace commissioners that met with President Abraham Lincoln in Hampton Roads in February 1865; briefly imprisoned at the end of the Civil War; state treasurer of Virginia 1874-1880; collector for the port of Tappahannock, Va. 1885; died on his estate 'Fonthill,' near Lloyds, Va., on July 18, 1887; interment in 'Elmwood,' the family burial ground, near Loretto, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Independent",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

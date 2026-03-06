@@ -1,0 +1,24 @@
+{
+    "name": "John Weems",
+    "birthDate": "1778",
+    "deathDate": "1862-01-20",
+    "bio": "A Representative from Maryland; born in Waterloo, Calvert County, Md., in 1778; attended St. John's College, Annapolis, Md.; engaged in planting; elected as Jacksonian candidate to the Nineteenth Congress to fill the vacancy caused by the resignation of Joseph Kent; reelected as a Jacksonian candidate to the Twentieth Congress and served from February 1, 1826, to March 3, 1829; resumed agricultural pursuits; died on his plantation, ``Loch Eden,'' in Anne Arundel County, Md., January 20, 1862; interment in a private cemetery on his estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        }
+    ]
+}

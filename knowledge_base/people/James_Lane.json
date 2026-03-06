@@ -1,0 +1,40 @@
+{
+    "name": "James Lane",
+    "birthDate": "1814-06-22",
+    "deathDate": "1866-07-11",
+    "bio": "A Representative from Indiana and a Senator from Kansas; born in Lawrenceburg, Ind., June 22, 1814; attended the public schools; studied law; admitted to the bar in 1840 and commenced practice in Lawrenceburg; member of the city council; served in the Mexican War; lieutenant governor of Indiana 1849-1853; elected as a Democrat to the Thirty-third Congress (March 4, 1853-March 3, 1855); moved to the Territory of Kansas in 1855; member of the Topeka constitutional convention 1855; elected to the United States Senate by the legislature that convened under the Topeka constitution in 1856, but the election was not recognized by the United States Senate; president of the Leavenworth constitutional convention in 1857; elected as a Republican to the United States Senate in 1861; reelected in 1865 and served from April 4, 1861, until his death; chairman, Committee on Agriculture (Thirty-eighth Congress); appointed by President Abraham Lincoln brigadier general of volunteers and saw battle during the Civil War; deranged and charged with financial irregularities, Lane shot himself on July 1, 1866, but lingered ten days, dying on July 11, near Fort Leavenworth, Kans.; interment in the City Cemetery, Lawrence, Kans.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

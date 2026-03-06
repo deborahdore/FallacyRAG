@@ -1,0 +1,24 @@
+{
+    "name": "James Lent",
+    "birthDate": "1782",
+    "deathDate": "1833-02-22",
+    "bio": "a Representative from New York; born in Newtown, Long Island (now a part of the Borough of Queens), N.Y., in 1782; engaged in mercantile pursuits in New York City; judge of Queens County and served from February 5, 1823, to March 4, 1829; elected as a Jacksonian candidate to the Twenty-first and Twenty-second Congresses and served from March 4, 1829, until his death in Washington, D.C., February 22, 1833; chairman, Committee on Expenditures in the Department of State (Twenty-second Congress); interment in the Congressional Cemetery; reinterment in the Presbyterian Cemetery, Newtown, Long Island, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Leonard Jordan",
+    "birthDate": "1899",
+    "deathDate": "1983",
+    "bio": "A Senator from Idaho; born in Mount Pleasant, Sanpete County, Utah, May 15, 1899; educated in the public schools of Enterprise, Oreg.; enlisted in the United States Army during the First World War; graduated from University of Oregon in 1923; farmer, rancher, businessman, and economic adviser; director of Circle C Ranch and of the Jordan Motor Co.; resident of Grangeville, Idaho, 1941-1951; member, State legislature 1947-1949; Governor of Idaho 1951-1955; chairman, International Joint Commission 1955-1957; member, International Development Advisory Board 1958-1959; appointed on August 6, 1962, as a Republican to the United States Senate to fill the vacancy caused by the death of Henry C. Dworshak; elected November 6, 1962, for remainder of term, ending January 3, 1967; reelected in 1966 and served from August 6, 1962, to January 3, 1973; was not a candidate for reelection in 1972; was a resident of Boise, Idaho, until his death there June 30, 1983; interment in Cloverdale Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        }
+    ]
+}

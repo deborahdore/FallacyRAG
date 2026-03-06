@@ -1,0 +1,16 @@
+{
+    "name": "Louise Reece",
+    "birthDate": "1898-11-06",
+    "deathDate": "1970-05-14",
+    "bio": "a Representative from Tennessee; born in Milwaukee, Wis., November 6, 1898; educated at Miss Treat's School, Milwaukee Downer Seminary, and Miss Spence's School, New York City; member of the board of the First Peoples Bank, Johnson City, Tenn.; chairman of the board of Carter County Bank, Elizabethton, Tenn.; proprietor and manager of Goff Properties, Clarksburg, W.Va.; elected as a Republican to the Eighty-seventh Congress May 16, 1961, to fill the vacancy caused by the death of her husband, Brazilla Carroll Reece, and served until January 3, 1963; was not a candidate for renomination in 1962 to the Eighty-eighth Congress; remained active in State and national politics; businesswoman with wide interests in Tennessee and West Virginia; died in Johnson City, Tenn., May 14, 1970; interment in Monte Vista Burial Park, <span class=\"place\"><span id=\"cemeteryCityName\">Johnson City</span></span>, Tenn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

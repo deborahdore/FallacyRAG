@@ -1,0 +1,24 @@
+{
+    "name": "Michael Bishop",
+    "birthDate": "1967",
+    "deathDate": null,
+    "bio": "A Representative from Michigan; born in Almont, Lapeer County, Mich., March 18, 1967; graduated from Rochester Adams High School, Rochester Hills, Mich.; A.B., University of Michigan, Ann Arbor, Mich., 1989; J.D., Detroit College of Law (now Michigan State College of Law), East Lansing, Mich., 1993; lawyer, private practice; realtor; business owner; member of the Michigan state house of representatives, 1999-2002; member of the Michigan state senate, 2003-2010, majority leader, 2007-2010; unsuccessful candidate for nomination for Michigan state attorney general, 2010; unsuccessful candidate for election as Oakland County, Mich., prosecutor, 2012; elected as a Republican to the One Hundred Fourteenth and to the succeeding Congress (January 3, 2015-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Jefferson Long",
+    "birthDate": "1836-03-03",
+    "deathDate": "1901-02-04",
+    "bio": "A Representative from Georgia; born a slave near Knoxville, Crawford County, Ga., March 3, 1836; self-educated; became a merchant tailor in Macon, Ga.; upon the readmission of the State of Georgia to representation was elected as a Republican to the Forty-first Congress and served from December 20, 1870 to March 3, 1871; was not a candidate for renomination to the Forty-second Congress in 1870; delegate to the Republican National Convention in 1880; resumed business in Macon, Ga.; died on February 4, 1901, in Macon, Ga.; interment at Linwood Cemetery, Macon, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

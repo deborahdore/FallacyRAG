@@ -1,0 +1,15 @@
+{
+    "name": "Adelita Grijalva",
+    "birthDate": "1970-10-30",
+    "deathDate": null,
+    "bio": "A Representative from Arizona; born in Tucson, Pima County, Ariz., October 30, 1970; graduated from Pueblo High School, Tucson, Ariz., 1989; B.A., University of Arizona, Tucson, Ariz., 1995; non-profit staff; member of the Tucson, Ariz., unified school board, 2003-2023; member of the Pima County, Ariz. board of supervisors, 2021-2025, chair, 2023-2025; elected as a Democrat to the One Hundred Nineteenth Congress, by special election, to fill the vacancy caused by the death of United States Representative Ra&uacute;l M. Grijalva (September 23, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Michael Fitzpatrick",
+    "birthDate": "1963-06-28",
+    "deathDate": "2020-01-06",
+    "bio": "<p>a Representative from Pennsylvania; born in Philadelphia, Philadelphia County, Pa., June 28, 1963; B.A., St. Thomas University, Miami Gardens, Florida, 1985; J.D., Dickinson School of Law, Carlisle, Pa., 1988; lawyer, private practice; Bucks County, Pa. commissioner, 1995-2004; elected as a Republican to the One Hundred Ninth Congress (January 3, 2005-January 3, 2007); unsuccessful candidate for reelection to the One Hundred Tenth Congress in 2006; elected as a Republican to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016; died on January 6, 2020; interment at Washington Crossing National Cemetery, Upper Makefield Township, Pa.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Jacob Isacks",
+    "birthDate": null,
+    "deathDate": null,
+    "bio": "a Representative from Tennessee; born in Montgomery County, Pa., birth date unknown; moved to Winchester, Tenn.; elected as a Jackson Republican to the Eighteenth Congress; and reelected as a Jacksonian candidate to the Nineteenth and to the three succeeding Congresses (March 4, 1823-March 3, 1833); chairman, Committee on Public Lands (Twentieth and Twenty-first Congresses); unsuccessful candidate for reelection in 1832; died in Winchester, Tenn.; death date unknown.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

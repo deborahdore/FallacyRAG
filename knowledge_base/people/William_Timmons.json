@@ -1,0 +1,39 @@
+{
+    "name": "William Timmons",
+    "birthDate": "1984-04-30",
+    "deathDate": null,
+    "bio": "a Representative from South Carolina; born in Greenville, Greenville County, S.C., April 30, 1984; graduated from Christ Church Episcopal School, Greenville, S.C., 2002; B.A., The George Washington University, Washington, D.C., 2006; M.A., University of South Carolina, Columbia, S.C., 2009; J.D., University of South Carolina, Columbia, S.C., 2010; M.S., New York University, New York, N.Y., 2021; South Carolina Air National Guard, 2018-present; lawyer; businessman; staff, United States Senator William H. Frist of Tennessee, 2006-2007; member of South Carolina state senate, 2016-2019; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

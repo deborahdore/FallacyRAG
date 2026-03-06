@@ -1,0 +1,16 @@
+{
+    "name": "William Collins",
+    "birthDate": "1818-02-22",
+    "deathDate": "1878-06-18",
+    "bio": "A Representative from New York; born in Lowville, Lewis County, N.Y., February 22, 1818; studied law; was admitted to the bar and commenced practice in Lowville; district attorney for Lewis County 1845-1847; elected as a Democrat to the Thirtieth Congress (March 4, 1847-March 3, 1849); declined to be a candidate for renomination in 1848; moved to Cleveland, Ohio, in 1853 and continued the practice of law; also engaged in banking; served as a director of the Lake Shore Railroad and East Cleveland Railroad; affiliated with the Republican Party upon its organization in 1856; died in Cleveland, Ohio, June 18, 1878; interment in Lake View Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

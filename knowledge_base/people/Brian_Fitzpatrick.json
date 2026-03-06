@@ -1,0 +1,47 @@
+{
+    "name": "Brian Fitzpatrick",
+    "birthDate": "1973-12-17",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Philadelphia County, Pa., December 17, 1973; graduated from Bishop Egan High School, Fairless Hills, Pa., 1992; B.S.B.A., La Salle University, Philadelphia, Pa., 1996; M.B.A., Pennsylvania State University, University Park, Pa., 2001; J.D., Dickinson School of Law, Pennsylvania State University, Carlisle, Pa., 2001; judicial clerk, Eastern District of Pennsylvania, 2001-2002; special agent, Federal Bureau of Investigation; special assistant United States attorney for the Eastern District of Pennsylvania; lawyer, private practice; accountant; elected as a Republican to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

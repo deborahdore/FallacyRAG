@@ -1,0 +1,24 @@
+{
+    "name": "Charles Lore",
+    "birthDate": "1831-03-16",
+    "deathDate": "1911-03-06",
+    "bio": "A Representative from Delaware; born in Odessa, New Castle County, Del., March 16, 1831; attended the public schools and Middletown Academy, Delaware; was graduated from Dickinson College, Carlisle, Pa., in June 1852; studied law; was admitted to the bar of New Castle County, Del., in 1861 and practiced; clerk of the State house of representatives in 1857; during the Civil War served as commissioner of the draft for New Castle County, Del., in 1862; attorney general of Delaware 1869-1874; elected as a Democrat to the Forty-eighth and Forty-ninth Congresses (March 4, 1883-March 3, 1887); was not a candidate for renomination; appointed chief justice of the supreme court of Delaware in 1893; reappointed in 1897 for a term of twelve years but retired in 1909; member of the code commission in 1909 and 1910; died in Wilmington, Del., March 6, 1911; remains were cremated and the ashes deposited in the Methodist Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        }
+    ]
+}

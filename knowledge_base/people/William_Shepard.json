@@ -1,0 +1,40 @@
+{
+    "name": "William Shepard",
+    "birthDate": "1799-05-14",
+    "deathDate": "1852-06-20",
+    "bio": "a Representative from North Carolina; born in New Bern, N.C., May 14, 1799; completed preparatory studies; attended the University of North Carolina at Chapel Hill in 1813; graduated from the University of Pennsylvania at Philadelphia; studied law; admitted to the bar and commenced practice in Camden County, later removing to Elizabeth City, Pasquotank County, N.C.; also engaged in banking; elected as an Anti-Jacksonian candidate to the Twenty-first through the Twenty-fourth Congresses (March 4, 1829-March 3, 1837); chairman, Committee on District of Columbia (Twenty-fourth Congress); was not a candidate for renomination in 1836; member of the state senate 1838-1840 and 1848-1850; member of the board of trustees of the University of North Carolina 1838-1852; died in Elizabeth City, N.C., June 20, 1852; interment in St. Paul's Churchyard, Edenton, N.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

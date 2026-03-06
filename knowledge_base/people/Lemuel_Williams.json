@@ -1,0 +1,32 @@
+{
+    "name": "Lemuel Williams",
+    "birthDate": "1747-06-18",
+    "deathDate": "1828-11-08",
+    "bio": "A Representative from Massachusetts; born in Taunton, Mass., June 18, 1747; was graduated from Harvard College in 1765; studied law; was admitted to the bar and practiced in Bristol and Worcester Counties, Mass.; town clerk of New Bedford, Mass., 1792-1800; elected as a Federalist to the Sixth, Seventh, and Eighth Congresses (March 4, 1799-March 3, 1805); member of the State house of representatives in 1806; resumed the practice of law; died in Acushnet, Mass., November 8, 1828; interment in Acushnet Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

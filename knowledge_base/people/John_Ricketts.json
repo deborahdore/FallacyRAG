@@ -1,0 +1,23 @@
+{
+    "name": "John Ricketts",
+    "birthDate": "1964-08-19",
+    "deathDate": null,
+    "bio": "a Senator from Nebraska; born in Nebraska City, Nebr., August 19, 1964; graduated Westside High School, Omaha, Nebr., 1982; B.A., biology, University of Chicago, 1986; M.B.A., marketing and finance, University of Chicago, 1991; online brokerage firm president and chief operating officer; co-owner of Chicago Cubs baseball team; unsuccessful candidate for the United States Senate in 2006; governor of Nebraska 2015-2023; appointed as a Republican to the United States Senate on January 12, 2023, to fill the vacancy caused by the resignation of Benjamin Sasse; took the oath of office on January 23, 2023; subsequently elected in the November 5, 2024 special election to fill the unexpired term ending January 3, 2027.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

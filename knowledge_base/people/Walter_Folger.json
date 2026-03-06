@@ -1,0 +1,24 @@
+{
+    "name": "Walter Folger",
+    "birthDate": "1765-06-12",
+    "deathDate": "1849-09-08",
+    "bio": "a Representative from Massachusetts; born in Nantucket, Mass., June 12, 1765; attended the public schools; studied law; admitted to the bar and practiced; member of the Massachusetts state senate 1809-1815 and in 1822; elected as a Democratic Republican to the Fifteenth Congress and reelected to the Sixteenth Congress (March 4, 1817-March 3, 1821); resumed the practice of law; died in Nantucket, Mass., September 8, 1849; interment in Friends Burying Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

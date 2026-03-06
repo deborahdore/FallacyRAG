@@ -1,0 +1,32 @@
+{
+    "name": "Lewis Douglas",
+    "birthDate": "1894-07-02",
+    "deathDate": "1974-03-07",
+    "bio": "A Representative from Arizona; born in Bisbee, Cochise County, Ariz., July 2, 1894; attended the public schools and Montclair (N.J.) Academy; was graduated from Amherst (Mass.) College in 1916; attended the Massachusetts Institute of Technology in 1916; commissioned as a second lieutenant on August 15, 1917, and assigned to the Three Hundred and Forty-seventh Regiment, Field Artillery; promoted to first lieutenant and served overseas as assistant, G-3 staff, Ninety-first Division, until discharged on February 18, 1919; instructor of history at Amherst College in 1920; engaged in mining and general business; member of the Arizona State house of representatives 1923-1925; elected as a Democrat to the Seventieth Congress; reelected to the three succeeding Congresses and served from March 4, 1927, until his resignation March 4, 1933, before the commencement of the Seventy-third Congress; appointed Director of the Budget by President Franklin D. Roosevelt; took the oath of office on March 7, 1933, and served until August 31, 1934, when he resigned; vice president and member of the board of a chemical company 1934-1938; principal and vice chancellor of McGill University, Montreal, Canada, from January 1938 to December 1939; president of an insurance company from 1940-1947, and chairman of the board on leave of absence, 1947-1959; deputy administrator of the War Shipping Administration from May 1942 to March 1944; United States Ambassador to Great Britain 1947-1950; director, General Motors Corporation, 1944-1965; chairman and director, Southern Arizona Bank &amp; Trust Company, 1949-1966; appointed by the President to head Government Study of Foreign Economic Problems, 1953; member, President's Task Force on American Indians, 1966-1967; died in Tucson, Ariz., March 7, 1974; cremated.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        }
+    ]
+}

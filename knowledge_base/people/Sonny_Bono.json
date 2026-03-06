@@ -1,0 +1,24 @@
+{
+    "name": "Sonny Bono",
+    "birthDate": "1935-02-16",
+    "deathDate": "1998-01-05",
+    "bio": "a Representative from California; born in Detroit, Mich., February 16, 1935; attended Inglewood High School, Inglewood, Calif.; restaurateur, entertainer, songwriter, and producer; mayor of Palm Springs, Calif., 1988-1992; elected as a Republican to the One Hundred Fourth and One Hundred Fifth Congresses (January 3, 1995-January 3, 1999) and served from January 3, 1995, until his death on January 5, 1998, in a skiing accident in Lake Tahoe, Calif.; interment in Desert Memorial Park, Cathedral City, Riverside County, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

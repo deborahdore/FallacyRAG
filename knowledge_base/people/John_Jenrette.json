@@ -1,0 +1,32 @@
+{
+    "name": "John Jenrette",
+    "birthDate": "1936-05-19",
+    "deathDate": "2023-03-17",
+    "bio": "a Representative from South Carolina; born in Conway, Horry County, S.C., May 19, 1936; graduated from Loris High School, Loris, S.C., 1954; B.A., Wofford College, Wofford, S.C., 1958; LL.B., University of South Carolina Law School, Columbia, S.C., 1962; admitted to the South Carolina bar, 1962; served as North Myrtle Beach city judge, 1962-1965; city attorney, 1965-1969; member of the South Carolina house of representatives, 1964-1972; unsuccessful candidate for election to the Ninety-third Congress in 1972; delegate, Democratic National Conventions, 1974, 1980; elected as a Democrat to the Ninety-fourth and to the two succeeding Congresses, until his resignation on December 10, 1980, (November 5, 1975-December 10, 1980); convicted on October 7, 1980, of bribery and conspiracy; sentenced to federal prison and was fined; president of an advertising and public relations firm in Florence and Myrtle Beach, S.C.; died on March 17, 2023, in Conway, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

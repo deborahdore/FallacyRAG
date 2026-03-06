@@ -1,0 +1,40 @@
+{
+    "name": "Dudley Haskell",
+    "birthDate": "1842-03-23",
+    "deathDate": "1883-12-16",
+    "bio": "a Representative from Kansas; born in Springfield, Windsor County, Vt., March 23, 1842; moved with his parents to Lawrence, Kans., in 1855; attended school at Springfield, Vt., in 1857 and 1858; engaged in business as a shoe merchant; followed the gold rush to Pikes Peak, Colo., in 1859 and resided there until 1861; assistant to the quartermaster of the Union Army in Missouri, Arkansas, Kansas, and the Indian Territory in 1861 and 1862; left the service and entered Williston's Seminary, Easthampton, Mass., in 1863; was graduated from Yale College in 1865; returned to Lawrence, Kans., and engaged in the shoe business 1865-1867; member of the State house of representatives in 1872, 1875, and 1876, and served as speaker in 1876; elected as a Republican to the Forty-fifth and to the three succeeding Congresses and served from March 4, 1877, until his death in Washington, D.C., December 16, 1883; chairman, Committee on Indian Affairs (Forty-seventh Congress); interment in Oak Hill Cemetery, Lawrence, Douglas County, Kans.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

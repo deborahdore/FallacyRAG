@@ -1,0 +1,32 @@
+{
+    "name": "Abigail Spanberger",
+    "birthDate": "1979-08-07",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Red Bank, Monmouth County, N.J., August 7, 1979; graduated from J.R. Tucker High School, Henrico, Va.; United States Capitol Page School, 1996; B.A., University of Virginia, Charlottesville, Va., 2001; M.B.A., Purdue University, 2002; teacher; postal inspector, United States Postal Service; case officer, Central Intelligence Agency, 2006-2014; consultant; elected as a Democrat to the One Hundred Sixteenth and to the two succeeding Congresses (January 3, 2019-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024; Governor of Virginia, 2026-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Smith Turner",
+    "birthDate": "1842-11-21",
+    "deathDate": "1898-04-08",
+    "bio": "A Representative from Virginia; born in Warren County, Va., November 21, 1842; cadet at the Virginia Military Institute, Lexington, Va., when the Civil War commenced, and was subsequently given an honorary diploma; enlisted in the Confederate Army in 1861; served with Gen. T.J. Jackson as drill officer; an officer of Pickett's division during the remainder of the war; taught mathematics in a female seminary in Winchester, Va., 1865-1867; studied law; was admitted to the bar in 1869 and commenced practice in Front Royal, Va.; member of the State house of delegates 1869-1872; prosecuting attorney for Warren County, Va., 1874-1879; member of the State board of visitors of the Virginia Military Institute for eight years; elected as a Democrat to the Fifty-third Congress to fill the vacancy caused by the resignation of Charles T. O'Ferrall; reelected to the Fifty-fourth Congress and served from January 30, 1894, to March 3, 1897; was not a candidate for renomination in 1896; died in Front Royal, Va., April 8, 1898; interment in Prospect Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

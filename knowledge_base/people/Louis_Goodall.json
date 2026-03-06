@@ -1,0 +1,24 @@
+{
+    "name": "Louis Goodall",
+    "birthDate": "1851-09-23",
+    "deathDate": "1935-06-26",
+    "bio": "A Representative from Maine; born in Winchester, Cheshire County, N.H., September 23, 1851; moved to Troy, N.H., with his parents in 1852; attended the common schools of Troy, N.H., a private school in Thompson, Conn., in 1862 and 1863, Vermont Episcopal Institute at Burlington 1863-1866, a private school in England in 1866 and 1867, and Kimball Union Academy at Meridian, N.H., in 1870; entered his father's mills at Sanford, Maine, in 1874 and afterward engaged extensively in the wool-manufacturing industry and in the railroad business; established the Goodall Worsted Co., which originated Palm Beach cloth; president of the Sanford National Bank from its organization in 1896; chairman of the Maine commission to the Louisiana Purchase Exposition, St. Louis, Mo., in 1904; lieutenant colonel on the staff of Governor Fernald in 1909; elected as a Republican to the Sixty-fifth and Sixty-sixth Congresses (March 4, 1917-March 3, 1921); chairman, Committee on Elections No. 2 (Sixty-sixth Congress); was not a candidate for renomination in 1920; resumed manufacturing interests and banking in Sanford, Maine, until his death there June 26, 1935; interment in Oakdale Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

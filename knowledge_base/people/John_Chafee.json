@@ -1,0 +1,112 @@
+{
+    "name": "John Chafee",
+    "birthDate": "1922",
+    "deathDate": "1999",
+    "bio": "(Great-nephew of Henry F. Lippitt; father of Lincoln D. Chafee), a Senator from Rhode Island; born in Providence, Providence County, R.I., October 22, 1922; graduated, Deerfield (Mass.) Academy 1940; graduated, Yale University 1947 and Harvard Law School 1950; admitted to the Rhode Island bar in 1950 and commenced practice in Providence; served in United States Marine Corps 1942-1945, 1951-1953; served in Rhode Island house of representatives 1957-1963; Governor of Rhode Island 1963-1969; Secretary of the Navy in the Cabinet of President Richard Nixon 1969-1972; unsuccessful candidate for election to the United States Senate in 1972; elected as a Republican to the United States Senate in November 1976 for the term commencing January 3, 1977; subsequently appointed by the Governor, December 29, 1976, to fill the vacancy caused by the resignation of John Pastore for the term ending January 3, 1977; reelected in 1982, 1988, and 1994, and served until his death due to heart failure on October 24, 1999; Senate Republican Conference chairman (1985-1991), Committee on Environment and Public Works (1995-1999); interment in family plot; posthumously awarded the Presidential Medal of Freedom on August 9, 2000.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

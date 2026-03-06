@@ -1,0 +1,48 @@
+{
+    "name": "Gregg Harper",
+    "birthDate": "1956",
+    "deathDate": null,
+    "bio": "A Representative from Mississippi; born in Jackson, Hinds County, Miss., June 1, 1956; graduated from Pearl High School, Pearl, Miss., 1974; B.S., Mississippi College, Clinton, Miss., 1978; J.D., University of Mississippi, Oxford, Miss., 1981; lawyer, private practice; prosecutor, Brandon, Miss.; prosecutor, Richland, Miss.; chairman, Rankin County, Miss. Republican Party, 2000-2007; elected as a Republican to the One Hundred Eleventh and to the four succeeding Congresses (January 3, 2009-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018; chair, Joint Committee on the Library of Congress (One Hundred Thirteenth and One Hundred Fifteenth Congresses); chair, Joint Committee on Printing (One Hundred Twelfth and One Hundred Fourteenth Congresses); chair, Committee on House Administration (One Hundred Fifteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

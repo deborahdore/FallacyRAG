@@ -1,0 +1,48 @@
+{
+    "name": "Wilson Lumpkin",
+    "birthDate": "1783-01-14",
+    "deathDate": "1870-12-28",
+    "bio": "a Representative and a Senator from Georgia; born near Dan River, Pittsylvania County, Va., January 14, 1783; moved in 1784 to Oglethorpe (then a part of Wilkes) County, Ga., with his parents, who settled near Point Peter, and subsequently at Lexington, Ga.; attended the common schools; taught school and farmed; studied law; admitted to the bar and commenced practice in Athens, Ga.; member, Georgia state house of representatives, 1804-1812; elected as a Democratic Republican to the Fourteenth Congress (March 4, 1815-March 3, 1817); unsuccessful candidate for reelection to the Fifteenth Congress; State Indian Commissioner; elected as a Jacksonian candidate to the Twentieth and to the two succeeding Congresses and served from March 4, 1827, until his resignation in 1831 before the convening of the Twenty-second Congress to run for the governorship; commissioner on the Georgia-Florida boundary line commission; Governor of Georgia 1831-1835; appointed commissioner under the Cherokee treaty in 1835; elected to the United States Senate to fill the vacancy caused by the resignation of John P. King and served from November 22, 1837, to March 3, 1841; chairman, Committee on Manufactures (Twenty-sixth Congress); member of the State board of public works; died in Athens, Ga., December 28, 1870; interment in Oconee Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

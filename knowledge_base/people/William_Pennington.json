@@ -1,0 +1,23 @@
+{
+    "name": "William Pennington",
+    "birthDate": "1796-05-04",
+    "deathDate": "1862-02-16",
+    "bio": "a Representative from New Jersey; born in Newark, N.J., May 4, 1796; completed preparatory studies; graduated from Princeton College in 1813; clerk of the United States district court, 1815-1826; studied law; was admitted to the bar and commenced practice in Newark in 1820; member of the New Jersey state general assembly in 1828; served as sergeant at law in 1834; Governor of New Jersey, 1837-1843; appointed Governor of Minnesota Territory by President Fillmore but declined to accept; elected as a Republican to the Thirty-sixth Congress (March 4, 1859-March 3, 1861); Speaker of the House (Thirty-sixth Congress); unsuccessful candidate for reelection in 1860 to the Thirty-seventh Congress; died in Newark, N.J., February 16, 1862; interment in Mount Pleasant Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican"
+        }
+    ]
+}

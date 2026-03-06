@@ -1,0 +1,15 @@
+{
+    "name": "Luz Rivas",
+    "birthDate": "1974-02-06",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Los Angeles, Los Angeles County, Calif., February 6, 1974; graduated from San Fernando High School, San Fernando, Calif., 1991; B.S., Massachusetts Institute of Technology, Cambridge, Mass., 1995; Ed.M., Harvard University, Cambridge, Mass., 2003; electrical engineer; non-profit executive; staff, American Museum of Natural History, 2003-2005; staff, California Institute of Technology, Pasadena, Calif., 2006-2010; Los Angeles, Calif., public works commissioner, 2016-2017; member of the California state assembly, 2018-2024; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Joseph Fry",
+    "birthDate": "1781-08-04",
+    "deathDate": "1860-08-15",
+    "bio": "a Representative from Pennsylvania; born in Upper Saucon Township, Northampton (later Lehigh) County, Pa., August 4, 1781; attended the rural schools; engaged in mercantile pursuits in Fryburg (later Coopersburg), Lehigh County, Pa.; member of the Pennsylvania state house of representatives in 1816 and 1817; served in the Pennsylvania state senate, 1817-1821; served in the Pennsylvania state militia and attained the rank of colonel; elected as a Jacksonian candidate to the Twentieth Congress and to the succeeding Congress (March 4, 1827-March 3, 1831); was not a candidate for renomination in 1830; resumed business activities; member of the Pennsylvania state constitutional convention in 1837 and 1838; died in Allentown, Pa., August 15, 1860; interment in Union Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

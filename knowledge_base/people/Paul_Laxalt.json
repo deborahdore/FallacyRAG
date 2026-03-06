@@ -1,0 +1,64 @@
+{
+    "name": "Paul Laxalt",
+    "birthDate": "1922-08-02",
+    "deathDate": "2018-08-06",
+    "bio": "A Senator from Nevada; born in Reno, Washoe County, Nev., August 2, 1922; attended the public schools of Carson City, Nev.; attended Santa Clara (Calif.) University 1940-1943; served in the U.S. army during the Second World War; graduated, University of Denver 1949 and University of Denver Law School 1949; admitted to the Nevada bar in 1949 and commenced practice in Carson City; district attorney, Ormsby County, Nev., 1950-1954; city attorney, Carson City 1951-1954; Nevada lieutenant governor 1963-1967; Governor of Nevada 1967-1971; elected as a Republican to the United States Senate November 5, 1974, for the six-year term commencing January 3, 1975; subsequently appointed by the Governor, December 18, 1974, to fill the vacancy caused by the resignation of Alan Bible for the term ending January 3, 1975; reelected in 1980 and served from December 18, 1974, to January 3, 1987; did not seek reelection in 1986; subsequently practiced law and consulting in Washington, D.C.; was a resident of McLean, Va., until his death on August 6, 2018; interment in Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEVADA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "William Chetwood",
+    "birthDate": "1771-06-17",
+    "deathDate": "1857-12-17",
+    "bio": "A Representative from New Jersey; born in Elizabeth, N.J., June 17, 1771; was graduated from Princeton College in 1792; studied law; was admitted to the bar in 1796 and commenced practice in Elizabeth, N.J.; served as prosecutor of the pleas for Essex County; member of the State Council of New Jersey; was a major of militia and served in the Whisky Rebellion of 1794 as aide-de-camp to Maj. Gen. Henry Lee; elected as a Whig to the Twenty-fourth Congress to fill the vacancy caused by the resignation of Philemon Dickerson and served from December 5, 1836, to March 3, 1837; resumed the practice of law; died in Elizabeth, N.J., December 17, 1857; interment in Evergreen Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

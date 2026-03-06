@@ -1,0 +1,56 @@
+{
+    "name": "Aaron Ward",
+    "birthDate": "1790-07-05",
+    "deathDate": "1867-03-02",
+    "bio": "a Representative from New York; was born in Sing Sing (now Ossining), N.Y., on July 5, 1790; completed preparatory studies in Mount Pleasant Academy; served in the War of 1812 as lieutenant and captain in the Twenty-ninth Infantry; studied law; was admitted to the bar and commenced practice at Sing Sing; district attorney for Westchester County; served in the State militia as colonel, brigadier general, and major general; elected as an Adams candidate to the Nineteenth and Twentieth Congresses (March 4, 1825-March 3, 1829); was not a candidate for reelection; elected as a Jacksonian candidate to the Twenty-second and to the two succeeding Congresses (March 4, 1831-March 3, 1837); was not a candidate for reelection to the Twenty-fifth Congress; elected as a Democrat to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); unsuccessful candidate for reelection to the Twenty-eighth Congress; delegate to the State constitutional convention in 1846; unsuccessful Democratic candidate for secretary of state in 1855; trustee of Mount Pleasant Academy; died at the home of his son-in-law in Georgetown, D.C., March 2, 1867; interment in Dale Cemetery, Ossining, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Henry Bullard",
+    "birthDate": "1788-09-09",
+    "deathDate": "1851-04-17",
+    "bio": "A Representative from Louisiana; born in Pepperell, Mass., September 9, 1788; was graduated from Harvard University in 1807; studied law in Boston and Philadelphia; was admitted to the bar about 1812; accompanied Gen. Jos&eacute; &Aacute;lvarez Toledo as military secretary on his revolutionary expedition into Texas in 1813; moved to Natchitoches, La., and commenced the practice of law; appointed district judge in 1822, but resigned after a few years' service, returning to the bench later for another period of service; elected as an Anti-Jacksonian candidate to the Twenty-second and Twenty-third Congresses and served from March 4, 1831, until January 4, 1834, when he resigned, having been appointed judge; judge of the supreme court of Louisiana from 1834 to 1846; acted as secretary of state of Louisiana in 1839; resumed the practice of law in New Orleans, La.; appointed professor of civil law in the Law School of Louisiana in 1847; served as a member of the State house of representatives in 1850; elected as a Whig to the Thirty-first Congress to fill the vacancy caused by the resignation of Charles M. Conrad and served from December 5, 1850, to March 3, 1851; died in New Orleans on April 17, 1851; interment in Girod Street Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

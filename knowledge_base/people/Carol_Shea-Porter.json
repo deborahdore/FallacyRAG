@@ -1,0 +1,40 @@
+{
+    "name": "Carol Shea-Porter",
+    "birthDate": "1952",
+    "deathDate": null,
+    "bio": "A Representative from New Hampshire; born in New York City, New York County, N.Y., December 2, 1952; graduated from Oyster River High School, Durham, N.H., 1971; B.A., University of New Hampshire, Durham, N.H., 1975; M.P.A., University of New Hampshire, Durham, N.H., 1979; social worker; professor; elected as a Democrat to the One Hundred Tenth and to the succeeding Congress (January 3, 2007-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; elected as a Democrat to the One Hundred Thirteenth Congress (January 3, 2013-January 3, 2015); unsuccessful candidate for reelection to the One Hundred Fourteenth Congress in 2014; elected as a Democrat to the One Hundred Fifteenth Congress (January 3, 2017-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

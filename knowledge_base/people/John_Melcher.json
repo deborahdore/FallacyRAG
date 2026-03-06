@@ -1,0 +1,88 @@
+{
+    "name": "John Melcher",
+    "birthDate": "1924",
+    "deathDate": "2018",
+    "bio": "A Representative and a Senator from Montana; born in Sioux City, Woodbury County, Iowa, September 6, 1924; attended the University of Minnesota; served in the United States Army 1943-1945; graduated with a degree in veterinary medicine, Iowa State University 1950; moved to Forsyth, Mont., and established a veterinary clinic; alderman in Forsyth, Mont., 1953; elected mayor of Forsyth 1955, reelected in 1957 and 1959; elected State representative for Rosebud County, Mont., 1960; elected State senator 1962, served in the 1963 and 1965 sessions; again served in 1969 as a State representative; elected as a Democrat to the Ninety-first Congress, by special election, June 24, 1969, to fill the vacancy caused by the resignation of James F. Battin; reelected to the three succeeding Congresses and served from June 24, 1969, to January 3, 1977; was not a candidate for reelection to the House of Representatives, but was elected to the United States Senate in 1976; reelected in 1982 and served from January 3, 1977, until January 3, 1989; unsuccessful candidate for reelection in 1988; established a legal consulting firm; chairman, Select Committee on Indian Affairs (Ninety-sixth Congress), Special Committee on Aging (One Hundredth Congress); was a resident of Missoula, Mont., until his death on April 12, 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MONTANA"
+        }
+    ]
+}

@@ -1,0 +1,96 @@
+{
+    "name": "Charles Crisp",
+    "birthDate": "1870-10-19",
+    "deathDate": "1937-02-07",
+    "bio": "A Representative from Georgia; born in Ellaville, Schley County, Ga., October 19, 1870; attended the public schools of Americus, Ga.; clerk in the Interior Department, Washington, D.C., 1889-1891; parliamentarian of the House of Representatives 1891-1895; studied law; was admitted to the bar in 1895 and commenced practice in Americus, Sumter County, Ga.; elected as a Democrat to the Fifty-fourth Congress to fill the vacancy caused by the death of his father, Charles F. Crisp, and served from December 19, 1896, to March 3, 1897; was not a candidate for renomination in 1896; resumed the practice of law in Americus, Ga.; judge of the city court of Americus 1900-1912; again parliamentarian of the House of Representatives in the Sixty-second Congress; parliamentarian of the Democratic National Convention in 1912; elected to the Sixty-third and to the nine succeeding Congresses and served from March 4, 1913, until October 7, 1932, when he resigned to become a member of the United States Tariff Commission, in which capacity he served until December 30, 1932; was not a candidate for renomination in 1932, but was an unsuccessful candidate for the nomination for United States Senator to fill the vacancy occasioned by the death of William J. Harris; member of the American World War Debt Funding Commission; resumed the practice of his chosen profession in Washington, D.C.; died in Americus, Ga., February 7, 1937; interment in Oak Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

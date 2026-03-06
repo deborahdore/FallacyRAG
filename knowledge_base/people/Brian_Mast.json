@@ -1,0 +1,47 @@
+{
+    "name": "Brian Mast",
+    "birthDate": "1980-07-10",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Grand Rapids, Kent County, Mich., July 10, 1980; graduated from South Christian High School, Grand Rapids, Mich., 1999; attended Palm Beach Atlantic University, West Palm Beach, Fla., 2000-2002; attended American Military University, Charles Town, W.Va., 2008-2010; A.L.B., Harvard University Extension School, Cambridge, Mass., 2016; United States Army, 2000-2012; instructor, Bureau of Alcohol, Tobacco, Firearms, and Explosives; analyst, National Nuclear Security Administration, 2011-2012; explosive specialist, United States Department of Homeland Security, 2012-2015; elected as a Republican to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present); chair, Committee on Foreign Affairs (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

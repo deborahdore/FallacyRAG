@@ -1,0 +1,23 @@
+{
+    "name": "Jennifer Kiggans",
+    "birthDate": "1971-06-18",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Tampa, Hillsborough County, Fla., June 18, 1971; graduated from Bishop Moore Catholic High School, Orlando, Fla., 1989; B.A. Boston University, Boston, Mass., 1993; B.S., Old Dominion University, Norfolk, Va., 2011; M.S. Vanderbilt University, Nashville, Tenn., 2012; United States Navy, 1993-2003; nurse practitioner; adjunct faculty; member of the Virginia state senate, 2020-2023; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

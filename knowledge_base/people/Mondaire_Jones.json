@@ -1,0 +1,16 @@
+{
+    "name": "Mondaire Jones",
+    "birthDate": "1987-05-18",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Nyack, Rockland County, N.Y., May 18, 1987; graduated from Spring Valley High School, Spring Valley, N.Y., 2005; B.A., Stanford University, Stanford, Calif., 2009; J.D., Harvard University, Cambridge, Mass., 2013; fellow, United States Department of Justice, 2009&ndash;2010; lawyer, private practice; Westchester County, N.Y., attorney, 2018-2019; elected as a Democrat to the One Hundred Seventeenth Congress (January 3, 2021-January 3, 2023); unsuccessful candidate for renomination to the One Hundred Eighteenth Congress in 2022; unsuccessful candidate for election to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

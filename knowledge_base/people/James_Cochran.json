@@ -1,0 +1,24 @@
+{
+    "name": "James Cochran",
+    "birthDate": "1767",
+    "deathDate": "1813-04-07",
+    "bio": "a Representative from North Carolina; born near Mount Tirzah Township, Person County, N.C., about 1767; attended the public schools; engaged in agricultural pursuits near Helena, N.C.; member of the North Carolina state house of commons 1802-1806; served in the North Carolina state senate in 1807; elected as a Democratic Republican to the Eleventh and Twelfth Congresses (March 4, 1809-March 3, 1813); died in Roxboro, Person County, N.C., April 7, 1813; interment in the burial ground at Leas Chapel, five miles west of Roxboro, N.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

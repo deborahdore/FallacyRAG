@@ -1,0 +1,48 @@
+{
+    "name": "Harold Ford",
+    "birthDate": "1970-05-11",
+    "deathDate": null,
+    "bio": "a Representative from Tennessee; born in Memphis, Shelby County, Tenn., May 11, 1970; graduated from St. Albans School for Boys, Washington, D.C., 1988; B.A., University of Pennsylvania, Philadelphia, Pa., 1992; J.D., University of Michigan Law School, 1996; staff aide, United States Senate Committee on the Budget, 1992; special assistant, United States Department of Commerce, 1993; elected as a Democrat to the One Hundred Fifth and to the four succeeding Congresses (January 3, 1997-January 3, 2007); not a candidate for reelection, but was an unsuccessful candidate to the United States Senate in 2006.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

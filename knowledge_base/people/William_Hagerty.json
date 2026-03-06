@@ -1,0 +1,31 @@
+{
+    "name": "William Hagerty",
+    "birthDate": "1959-08-14",
+    "deathDate": null,
+    "bio": "a Senator from Tennessee; born in Gallatin, Tenn., August 14, 1959; graduated Madisonville North Hopkins High School, Madisonville, Ky., 1977; B.A., Vanderbilt University, 1981; J.D., Vanderbilt University, 1984; management consultant; White House Fellow and staff member during the George H. W. Bush administration; co-founder and managing director, private equity investment firm; commissioner of the Tennessee Department of Economic and Community Development 2011-2014; U.S. Ambassador to Japan 2017-2019; elected as a Republican to the United States Senate in 2020 for the term ending January 3, 2027.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

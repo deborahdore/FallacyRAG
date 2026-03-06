@@ -1,0 +1,40 @@
+{
+    "name": "Benjamin Wilson",
+    "birthDate": "1825",
+    "deathDate": "1901",
+    "bio": "A Representative from West Virginia; born in Wilsonburg, Harrison County, Va. (now West Virginia), April 30, 1825; attended the Northwestern Virginia Academy at Clarksburg and the law school in Staunton, Va.; was admitted to the bar in 1848 and commenced practice in Clarksburg, Harrison County, Va. (now West Virginia); Commonwealth attorney for Harrison County 1852-1860; member of the State constitutional convention in 1861; member of the State constitutional convention of West Virginia in 1871; delegate to the Democratic National Convention in 1872; unsuccessful candidate for election in 1872 to the Forty-third Congress; elected as a Democrat to the Forty-fourth and to the three succeeding Congresses (March 4, 1875-March 3, 1883); Assistant Attorney General of the United States 1885-1893; died in Clarksburg, W.Va., April 26, 1901; interment in the Odd Fellows Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

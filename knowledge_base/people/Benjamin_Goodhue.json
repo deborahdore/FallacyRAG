@@ -1,0 +1,64 @@
+{
+    "name": "Benjamin Goodhue",
+    "birthDate": "1748-09-20",
+    "deathDate": "1814-07-28",
+    "bio": "A Representative and a Senator from Massachusetts; born in Salem, Mass., September 20, 1748; graduated from Harvard College in 1766; merchant; member, State house of representatives 1780-1782; member, State senate 1783, 1786-1788; member of the State constitutional convention in 1779 and 1780; elected to the First and to the three succeeding Congresses and served from March 4, 1789, until his resignation in June 1796; chairman, Committee on Commerce and Manufactures (Fourth Congress); elected in 1796 as a Federalist to the United States Senate to fill the vacancy caused by the resignation of George Cabot; reelected and served from June 11, 1796, to November 8, 1800, when he resigned; died in Salem, Mass., on July 28, 1814; interment in Broad Street Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "David Brunner",
+    "birthDate": "1835-03-07",
+    "deathDate": "1903-11-29",
+    "bio": "A Representative from Pennsylvania; born in Amity, Berks (now Washington) County, Pa., March 7, 1835; attended the common schools; learned the carpenter's trade; taught school from 1853 to 1856, during which time he studied the classics; was graduated from Dickinson College, Carlisle, Pa., in 1860; principal of Reading Classical Academy, Reading, Pa., 1860-1869; established the Reading Business College in 1880; elected as a Democrat to the Fifty-first and Fifty-second Congresses (March 4, 1889-March 3, 1893); chairman, Committee on Education (Fifty-second Congress); was not a candidate for renomination in 1892; taught at the Reading Business College; died in Reading, Pa., on November 29, 1903; interment in Amityville Cemetery, Berks County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "David Sweeney",
+    "birthDate": "1955-09-15",
+    "deathDate": "2024-07-21",
+    "bio": "a Representative from Texas; born in Wharton, Tex., September 15, 1955; attended public schools; graduated from Wharton High School, Wharton, Tex., 1974; B.A., University of Texas, 1978; attended University of Texas School of Law, 1979-1981; staff, United States Senator John Tower, 1977-1978; staff, Texas Governor John B. Connally, 1979-1980; director of administrative operations at the White House, 1981-1983; elected as a Republican to the Ninety-ninth and to the succeeding Congress (January 3, 1985-January 3, 1989); unsuccessful candidate for reelection in 1988 to the One Hundred First Congress; died on July 21, 2024, in Honolulu, Hawaii.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

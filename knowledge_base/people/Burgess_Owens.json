@@ -1,0 +1,31 @@
+{
+    "name": "Burgess Owens",
+    "birthDate": "1951-08-02",
+    "deathDate": null,
+    "bio": "a Representative from Utah; born in Columbus, Franklin County, Ohio, August 2, 1951; graduated from James S. Rickards High School, Tallahassee, Fla., 1969; B.S., University of Miami, Coral Gables, Fla., 1975; professional athlete; business executive; nonprofit executive; entrepreneur; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        }
+    ]
+}

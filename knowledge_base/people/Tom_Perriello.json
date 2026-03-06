@@ -1,0 +1,16 @@
+{
+    "name": "Tom Perriello",
+    "birthDate": "1974-10-09",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Charlottesville, Albemarle County, Va., October 9, 1974; B. A. Yale University, 1996; J. D., Yale University, New Haven, Conn., 2001; entrepreneur; elected as a Democrat to the One Hundred Eleventh Congress (January 3, 2009-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; United States Special Envoy for the Africa Great Lakes region, 2015-2016; United States Special Envoy for Sudan, 2024-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

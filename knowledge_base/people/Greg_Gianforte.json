@@ -1,0 +1,24 @@
+{
+    "name": "Greg Gianforte",
+    "birthDate": "1961-04-17",
+    "deathDate": null,
+    "bio": "A Representative from Montana; born in San Diego, San Diego County, Calif., April 17, 1961; graduated from Upper Merion High School, King of Prussia, Penn., 1979; B.S., Stevens Institute of Technology, Hoboken, N.J., 1983; M.S., Stevens Institute of Technology, Hoboken, N.J., 1983; engineer; business owner; unsuccessful candidate for Governor of Montana in 2016; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Ryan Zinke, and reelected to the succeeding Congress (May 25, 2017-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020, but was elected Governor of Montana; Governor of Montana, 2021-present.&nbsp;",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        }
+    ]
+}

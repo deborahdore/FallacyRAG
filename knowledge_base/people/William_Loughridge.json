@@ -1,0 +1,32 @@
+{
+    "name": "William Loughridge",
+    "birthDate": "1827-07-11",
+    "deathDate": "1889-09-26",
+    "bio": "A Representative from Iowa; born in Youngstown, Mahoning County, Ohio, July 11, 1827; attended the common schools; studied law; was admitted to the bar in 1849 and commenced practice in Mansfield, Ohio; moved to Iowa in 1852 and settled in Oskaloosa, Mahaska County; member of the State senate 1857-1860; judge of the sixth judicial circuit of Iowa 1861-1867; elected as a Republican to the Fortieth and Forty-first Congresses (March 4, 1867-March 3, 1871); elected to the Forty-third Congress (March 4, 1873-March 3, 1875); died near Reading, Pa., September 26, 1889; interment in Forest Cemetery, Oskaloosa, Iowa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

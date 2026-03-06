@@ -1,0 +1,40 @@
+{
+    "name": "Samuel Hilborn",
+    "birthDate": "1834-12-09",
+    "deathDate": "1899-04-19",
+    "bio": "A Representative from California; born in Minot, Androscoggin (then Cumberland) County, Maine, December 9, 1834; attended the common schools, Hebron Academy, and Gould's Academy, Bethel, Maine, and was graduated from Tufts College, Medford, Mass., in 1859; studied law and was admitted to the bar in 1861; moved to California; located in Vallejo, Solano County, and engaged in the practice of law; served in the State senate 1875-1879; member of the constitutional convention in 1879; moved to San Francisco, Calif., in 1883; appointed by President Arthur United States district attorney for the district of California and served from 1883 to 1886; moved to Oakland in 1887 and continued the practice of his profession; elected as a Republican to the Fifty-second Congress to fill the vacancy caused by the resignation of Joseph McKenna; presented credentials as a Member-elect to the Fifty-third Congress and served from December 5, 1892, until April 4, 1894, when he was succeeded by Warren B. English, who contested his election; elected to the Fifty-fourth and Fifty-fifth Congresses (March 4, 1895-March 3, 1899); unsuccessful candidate for renomination in 1898; lived in retirement until his death in Washington, D.C., April 19, 1899; interment in Rock Creek Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

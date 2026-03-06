@@ -1,0 +1,32 @@
+{
+    "name": "Edward Darlington",
+    "birthDate": "1795-09-17",
+    "deathDate": "1884-11-21",
+    "bio": "a Representative from Pennsylvania; born in West Chester, Chester County, Pa., September 17, 1795; moved in early youth with his parents to Delaware County; attended the common schools and graduated from West Chester Academy; taught school 1817-1820; studied law; was admitted to the bar in 1821 and commenced practice in Chester, Pa.; deputy attorney general 1824-1830; elected as an Anti-Mason to the Twenty-third through Twenty-fifth Congresses (March 4, 1833-March 3, 1839); chairman, Committee on Expenditures on Public Buildings (Twenty-fourth Congress); was not a candidate for renomination in 1838; resumed the practice of law; attorney for county commissioners 1846-1856; moved to Media, Pa., in 1851; district attorney of Delaware County 1851-1854; died in Media, Delaware County, Pa., November 21, 1884; interment in Chester Rural Cemetery, Chester, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Masonic",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Masonic",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Anti-Masonic",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

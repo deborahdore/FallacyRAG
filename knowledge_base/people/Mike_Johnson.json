@@ -1,0 +1,60 @@
+{
+    "name": "Mike Johnson",
+    "birthDate": "1972-01-30",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Shreveport, Caddo Parish, La., January 30, 1972; graduated from Captain Shreve High School, Shreveport, La., 1990; B.S., Louisiana State University, Baton Rouge, La., 1995; J.D., Louisiana State University, Baton Rouge, La., 1998; lawyer, private practice; member of the Louisiana state house of representatives, 2015-2017; elected as a Republican to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present); Speaker of the House (One Hundred Eighteenth and One Hundred Nineteenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican"
+        }
+    ]
+}

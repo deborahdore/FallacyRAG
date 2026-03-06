@@ -1,0 +1,23 @@
+{
+    "name": "Michael Lawler",
+    "birthDate": "1986-09-09",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Suffern, Rockland County, N.Y., September 9, 1986; graduated from Suffern High School, Suffern, N.Y., 2005; B.A., Manhattan College, New York City, N.Y., 2009; executive director, New York Republican State Committee; staff, Westchester County executive, 2015-2016; deputy supervisor, Orangetown, N.Y., 2018-2020; business owner; member of the New York state assembly, 2020-2023; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

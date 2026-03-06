@@ -1,0 +1,23 @@
+{
+    "name": "Mark Alford",
+    "birthDate": "1963-10-04",
+    "deathDate": null,
+    "bio": "a Representative from Missouri; born in Baytown, Harris County, Tex., October 4, 1963; graduated from Ross S. Sterling High School, Baytown, Tex., 1982; attended Lee College, Baytown, Tex.; attended Southwest Texas State College, San Marcos, Tex.; attended University of Texas, Austin, Tex.; television news anchor; realtor; business owner; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

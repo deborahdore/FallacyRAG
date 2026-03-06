@@ -1,0 +1,32 @@
+{
+    "name": "George Kremer",
+    "birthDate": "1775-11-21",
+    "deathDate": "1854-09-11",
+    "bio": "A Representative from Pennsylvania; born in Middletown, Dauphin County, Pa., November 21, 1775; received a limited schooling; studied law; was admitted to the bar and commenced practice in Lewisburg, Pa.; member of the State house of representatives in 1812 and 1813; elected as a Jackson Republican to the Eighteenth Congress and reelected as a Jacksonian candidate to the Nineteenth and Twentieth Congresses (March 4, 1823-March 3, 1829); died in Middleburg, Snyder County (then a part of Union County), Pa., September 11, 1854; interment in the private burial ground on the family estate near Middleburg, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

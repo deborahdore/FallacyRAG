@@ -1,0 +1,40 @@
+{
+    "name": "Robert Rodgers",
+    "birthDate": "1875-06-02",
+    "deathDate": "1960-05-09",
+    "bio": "A Representative from Pennsylvania; born in El Dorado, Butler County, Kans., June 2, 1875; raised on a farm near Jamestown, Mercer County, Pa.; attended district school and Fredonia (Pa.) Institute; during the War with Spain enlisted in Company K, Fifteenth Regiment, Pennsylvania Volunteer Infantry; taught in the district schools; engaged in agricultural pursuits; moved to Erie, Erie County, Pa., in 1914 and engaged in the insurance, real estate, and mortgage business; elected as a Republican to the Seventy-sixth and to the three succeeding Congresses (January 3, 1939-January 3, 1947); unsuccessful candidate for renomination in 1946 to the Eightieth Congress; resided in Erie, Pa., until his death there May 9, 1960; interment in Rocky Glen Cemetery, Adamsville, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

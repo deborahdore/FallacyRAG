@@ -1,0 +1,24 @@
+{
+    "name": "Clare Luce",
+    "birthDate": "1903-03-10",
+    "deathDate": "1987-10-09",
+    "bio": "a Representative from Connecticut; born in New York City, on March 10, 1903; graduated from St. Mary's School, Garden City, Long Island, N.Y., and from Miss Mason's School at Tarrytown, N.Y., in 1919, writer, associate editor, and managing editor of Vanity Fair, 1929-1934; administrative representative of the public to the National Recovery Administration Code Authority for the legitimate theater and motion pictures in 1934; author, playwright, journalist, foreign correspondent, and lecturer; elected as a Republican to the Seventy-eighth and Seventy-ninth Congresses (January 3, 1943-January 3, 1947); was not a candidate for renomination in 1946; engaged in writing; United States Ambassador to Italy, March 2, 1953-January 4, 1957; confirmed as United States Ambassador to Brazil April 28, 1959, but resigned three days later on May 1, 1959; member, President's Foreign Intelligence Advisory Board, 1973-1977 and 1982-1987; awarded the Presidential Medal of Freedom by President Ronald Reagan, 1983; died on October 9, 1987, in Washington, D.C.; interment at Mepkin Abbey, Moncks Corner, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

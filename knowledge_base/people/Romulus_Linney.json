@@ -1,0 +1,32 @@
+{
+    "name": "Romulus Linney",
+    "birthDate": "1841-12-26",
+    "deathDate": "1910-04-15",
+    "bio": "A Representative from North Carolina; born in Rutherford County, N.C., December 26, 1841; attended the common schools, York's Collegiate Institute, and Doctor Millen's School in Taylorsville, N.C.; during the Civil War served in the Confederate Army until the Battle of Chancellorsville, when he was severely wounded; returned to Taylorsville and joined a class in Doctor Millen's School; engaged in agricultural pursuits; studied law; was admitted to the bar by the supreme court in 1868 and commenced practice in Taylorsville; elected to the State senate in 1870, 1873, and 1882; elected as a Republican to the Fifty-fourth, Fifty-fifth, and Fifty-sixth Congresses (March 4, 1895-March 3, 1901); died in Taylorsville, Alexander County, N.C., April 15, 1910; interment in Taylorsville Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

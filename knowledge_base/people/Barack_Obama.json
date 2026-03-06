@@ -1,0 +1,64 @@
+{
+    "name": "Barack Obama",
+    "birthDate": "1961-08-04",
+    "deathDate": null,
+    "bio": "A Senator from Illinois and 44th President of the United States; born in Honolulu, Hawaii, August 4, 1961; obtained early education in Jakarta, Indonesia, and Hawaii; continued education at Occidental College, Los Angeles, Calif.; received a B.A. in 1983 from Columbia University, New York City; worked as a community organizer in Chicago, Ill.; studied law at Harvard University, where he became the first African American president of the Harvard Law Review, and received J.D. in 1991; lecturer on constitutional law, University of Chicago; member, Illinois State senate 1997-2004; elected as a Democrat to the U.S. Senate in 2004, and served from January 3, 2005, to November 16, 2008, when he resigned from office, having been elected president; elected as the 44th President of the United States on November 4, 2008, and was inaugurated on January 20, 2009; reelected in 2012 and served until January 20, 2017.",
+    "jobs": [
+        {
+            "role": "President",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "President",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "President",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "President",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "President",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        }
+    ]
+}

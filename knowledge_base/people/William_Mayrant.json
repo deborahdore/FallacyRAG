@@ -1,0 +1,16 @@
+{
+    "name": "William Mayrant",
+    "birthDate": null,
+    "deathDate": null,
+    "bio": "A Representative from South Carolina; born in South Carolina, birth date unknown; elected as a Democratic Republican to the Fourteenth Congress and served until his resignation on October 21, 1816 (March 4, 1815-October 21, 1816); unsuccessful candidate for reelection; member of the South Carolina state house of representatives, 1818-1821; death date unknown.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

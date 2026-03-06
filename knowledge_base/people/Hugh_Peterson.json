@@ -1,0 +1,56 @@
+{
+    "name": "Hugh Peterson",
+    "birthDate": "1898-08-21",
+    "deathDate": "1961-10-03",
+    "bio": "A Representative from Georgia; born on a farm near Ailey, Montgomery County, Ga., August 21, 1898; attended the public schools, Brewton Parker Institute, Mount Vernon-Ailey, Ga., and the University of Georgia at Athens; studied law; was admitted to the bar in 1921 and commenced practice in Mount Vernon, Ga.; also engaged in agricultural pursuits and editorial work; served as mayor of Ailey, Ga., in 1922; member of the State house of representatives 1923-1931; served in the State senate in 1931 and 1932; elected as a Democrat to the Seventh-fourth and to the five succeeding Congresses (January 3, 1935-January 3, 1947); chairman, Committee on Elections No. 3 (Seventy-seventh and Seventy-eighth Congresses), Committee on Territories (Seventy-ninth Congress); unsuccessful for renomination in 1946; practiced law in Ailey, Ga.; died in Sylva, N.C., October 3, 1961; interment in the Peterson family cemetery, Ailey, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

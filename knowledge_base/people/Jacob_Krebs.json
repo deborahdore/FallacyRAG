@@ -1,0 +1,16 @@
+{
+    "name": "Jacob Krebs",
+    "birthDate": "1782-03-13",
+    "deathDate": "1847-09-26",
+    "bio": "A Representative from Pennsylvania; born in Orwigsburg, Schuylkill County, Pa., March 13, 1782; attended the public schools; engaged in agricultural pursuits; elected as a Jacksonian candidate to the Nineteenth Congress to fill the vacancy caused by the death of Henry Wilson and served from December 4, 1826, to March 3, 1827; resumed agricultural pursuits; died in Orwigsburg, Pa., September 26, 1847; interment in the Lutheran Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

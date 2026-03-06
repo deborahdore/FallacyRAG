@@ -1,0 +1,31 @@
+{
+    "name": "Lauren Boebert",
+    "birthDate": "1986-12-19",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Altamonte Springs, Seminole County, Fla., December 19, 1986; attended Rifle High School, Rifle, Colo., 2004; earned G.E.D., 2020; restaurateur; business owner; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

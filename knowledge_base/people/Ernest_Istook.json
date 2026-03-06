@@ -1,0 +1,64 @@
+{
+    "name": "Ernest Istook",
+    "birthDate": "1950",
+    "deathDate": null,
+    "bio": "A Representative from Oklahoma; born in Fort Worth, Tarrant County, Tex., February 11, 1950; graduated from Castleberry High School, Ft. Worth, Tex., 1967; B.A., Baylor University, Waco, Tex., 1971; J.D., Oklahoma City University School of Law, Oklahoma City, 1976; lawyer, private practice; journalist; director, Oklahoma State Alcoholic and Beverage Control Board, 1977-1978; legal counsel to Governor David L. Boren of Oklahoma, 1978; board member, Oklahoma County, Okla., metropolitan library system, 1982-1986, and chair, 1985-1986; member, Warr Acres, Okla., city council, 1982-1986; director, Warr Acres, Okla., chamber of commerce; member of the Oklahoma state house of representative, 1987-1993; elected as a Republican to the One Hundred Third and to the six succeeding Congresses (January 3, 1993-January 3, 2007); not a candidate for reelection, but was an unsuccessful candidate for Governor of Oklahoma in 2006.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

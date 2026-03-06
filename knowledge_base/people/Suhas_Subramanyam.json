@@ -1,0 +1,15 @@
+{
+    "name": "Suhas Subramanyam",
+    "birthDate": "1986-09-26",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Houston, Harris County, Tex., September 26, 1986; graduated from Clear Lake High School, Houston, Tex., 2004; B.A., Tulane University, New Orleans, La., 2008; J.D., Northwestern University, Chicago, Ill., 2013; staff, United States Representative Suzanne Kosmas of Florida, 2009-2010; staff, Senate Judiciary Committee, 2011; staff, White House Office of the Chief Technology Officer, 2015-2017; lawyer; business owner; member of the Virginia state house of delegates, 2020-2024; member of the Virginia state senate, 2024; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "John Crozier",
+    "birthDate": "1812-02-10",
+    "deathDate": "1889-10-25",
+    "bio": "A Representative from Tennessee; born in Knoxville, Tenn., February 10, 1812; attended the public schools; was graduated from the University of Tennessee at Knoxville in 1829; studied law; was admitted to the Tennessee bar and practiced in Knoxville; member of the State house of representatives 1837-1839; elected as a Whig to the Twenty-ninth and Thirtieth Congresses (March 4, 1845-March 3, 1849); chairman, Committee on Expenditures in the Department of War (Thirtieth Congress); resumed the practice of his profession in Knoxville; affiliated with the Democratic Party in 1856; retired from active practice about 1866 and engaged in literary pursuits and historical research; died in Knoxville, Tenn., October 25, 1889; interment in the Old Gray Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

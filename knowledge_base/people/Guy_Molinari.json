@@ -1,0 +1,48 @@
+{
+    "name": "Guy Molinari",
+    "birthDate": "1928-11-23",
+    "deathDate": "2018-07-25",
+    "bio": "a Representative from New York; born in New York City, November 23, 1928; attended private schools; graduated, New Dorp High School, Staten Island, 1945; B.A., Wagner College, Staten Island, 1949; LL.B., New York Law School, New York City, 1951; served in the United States Marine Corps, sergeant, 1951-1953; admitted to the New York bar in 1953 and commenced practice in Staten Island; member, New York State assembly, 1974-1980; delegate, New York State Republican conventions, 1979-1980; delegate, Republican National Convention, 1980 and 1984; elected as a Republican to the Ninety-seventh and to the four succeeding Congresses and served from January 3, 1981, until his resignation December 31, 1989, to become borough president of Staten Island for the four-year term beginning the same day; died on July 25, 2018, in Manhattan, N.Y.; interment at Moravian Cemetery, New Dorp, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

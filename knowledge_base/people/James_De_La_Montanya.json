@@ -1,0 +1,16 @@
+{
+    "name": "James De La Montanya",
+    "birthDate": "1798-03-20",
+    "deathDate": "1849-04-29",
+    "bio": "A Representative from New York; born in New York City March 20, 1798; resided in Haverstraw, Rockland County, N.Y.; supervisor of Haverstraw in 1832 and 1833; member of the State assembly in 1833; elected as a Democrat to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); died in New York City April 29, 1849; interment in the Barnes family burial ground, Stony Point, Rockland County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

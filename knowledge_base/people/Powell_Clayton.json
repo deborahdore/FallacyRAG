@@ -1,0 +1,32 @@
+{
+    "name": "Powell Clayton",
+    "birthDate": "1833",
+    "deathDate": "1914",
+    "bio": "A Senator from Arkansas; born in Bethel, Delaware County, Pa., August 7, 1833; attended the common schools and Partridge Military Academy, Bristol, Pa.; studied civil engineering in Wilmington, Del.; moved to Leavenworth, Kans., where he practiced his profession; appointed city engineer in 1857; at the outbreak of the Civil War entered the Union Army and served until 1865, attaining the rank of brigad ier general; moved to Arkansas and became a planter; elected Governor of Arkansas in 1868; elected as a Republican to the United States Senate and served from March 4, 1871, to March 3, 1877; chairman, Committee on Enrolled Bills (Forty-third Congress), Committee on Civil Service Retrenchment (Forty-fourth Congress); moved to Little Rock, Ark.; member of the Republican National Committee; ambassador to Mexico 1897-1905; lived in retirement until his death in Washington, D.C., on August 25, 1914; interment in Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

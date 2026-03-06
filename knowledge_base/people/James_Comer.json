@@ -1,0 +1,55 @@
+{
+    "name": "James Comer",
+    "birthDate": "1972-08-19",
+    "deathDate": null,
+    "bio": "A Representative from Kentucky; born in Carthage, Smith County, Tenn., August 19, 1972; graduated from Monroe County High School, Tompkinsville, Ky., 1990; B.S., Western Kentucky University, Bowling Green, Ky., 1993; businessman; farmer; chairman, Monroe County, Ky., Republican party, 1993-1995; Delegate, Republican National Convention, 1996; member of the Kentucky state house of representatives, 2001-2012; Kentucky state commissioner of agriculture, 2012-2015; elected simultaneously as a Republican to the One Hundred Fourteenth and to the One Hundred Fifteenth Congresses, by special election, to fill the vacancy caused by the resignation of United States Representative Ed Whitfield, and reelected to the four succeeding Congresses (November 8, 2016-present); chair, Committee on Oversight and Accountability (One Hundred Eighteenth Congress); chair, Committee on Oversight and Government Reform (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

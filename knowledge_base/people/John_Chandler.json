@@ -1,0 +1,64 @@
+{
+    "name": "John Chandler",
+    "birthDate": "1762-02-01",
+    "deathDate": "1841-09-25",
+    "bio": "A Representative from Massachusetts and a Senator from Maine; born in Epping, N.H., February 1, 1762; self-educated; served in the Revolutionary War; moved to the Maine district of Massachusetts and settled on a farm near Monmouth; member, Massachusetts senate 1803-1805; elected as a Democratic Republican to the Ninth and Tenth Congresses (March 4, 1805-March 3, 1809); was not a candidate for renomination in 1808; appointed sheriff of Kennebec County the same year; served as a brigadier general in the Massachusetts Militia 1803-1815, and during the War of 1812, attained the rank of brigadier general in the U.S. Army; member of the Massachusetts General Court in 1819; first president of the Maine senate; member of the Maine constitutional convention 1819-1820; upon the admission of Maine as a State into the Union was elected as a Democratic Republican to the United States Senate in 1820; reelected in 1823 as a Crawford Republican (later Jacksonian), and served from June 14, 1820, to March 3, 1829; was not a candidate for renomination; chairman, Committee on Militia (Eighteenth through Twentieth Congresses); collector of customs at Portland 1829-1837; died in Augusta, Kennebec County, Maine, September 25, 1841; interment in Mount Pleasant Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MAINE"
+        }
+    ]
+}

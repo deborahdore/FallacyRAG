@@ -1,0 +1,24 @@
+{
+    "name": "William Barnett",
+    "birthDate": "1761-03-04",
+    "deathDate": "1832-04",
+    "bio": "a Representative from Georgia; born in Amherst County, Va., March 4, 1761; moved to Georgia with his father, who settled in Columbia County; served in the Revolutionary War in Virginia with his brother, joining a military company from Amherst County under the leadership of the Marquis de Lafayette and was present at the surrender of Cornwallis at Yorktown; returned to Georgia at the close of the war and settled on Broad River, Elbert County; sheriff of Elbert County for several years; member of the Georgia state senate and served as president of that body; elected as a Democratic Republican to the Twelfth Congress to fill the vacancy caused by the resignation of Howell Cobb; reelected to the Thirteenth Congress and served from October 5, 1812, to March 3, 1815; appointed commissioner to establish the boundaries of the Creek Indian Reservation in 1815; moved to Montgomery County, Ala., and engaged in planting; died in Montgomery County, Ala., April 1832; interment in the Gilmer-Christian-Barnett Cemetery, near Mathews Station, Montgomery County, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

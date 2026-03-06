@@ -1,0 +1,48 @@
+{
+    "name": "Scott Tipton",
+    "birthDate": "1956",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Espanola, Rio Arriba County, N. Mex., November 9, 1956; graduated from Cortez High School; B.A., Fort Lewis College, Durango, Colo., 1978; business owner; member of the Colorado state house of representatives, 2008-2010; unsuccessful candidate for election to the One Hundred Tenth Congress in 2006; elected as a Republican to the One Hundred Twelfth and to the four succeeding Congresses (January 3, 2011-January 3, 2021); unsuccessful candidate for renomination to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

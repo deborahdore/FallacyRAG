@@ -1,0 +1,56 @@
+{
+    "name": "Pete Olson",
+    "birthDate": "1962-12-09",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Fort Lewis, Pierce County, Wash., December 9, 1962; graduated from Clear Lake High School, Houston, Tex., 1981; B.A., Rice University, Houston, Tex., 1985; J.D., University of Texas School of Law, Austin, Tex., 1988; United States Navy, 1988-1997; United States Naval Reserve, 1998-2009; staff, United States Senator William Philip (Phil) Gramm of Texas, 1998-2002; staff, United States Senator John Cornyn of Texas, 2002-2007; elected as a Republican to the One Hundred Eleventh and to the five succeeding Congresses (January 3, 2009-January 3, 2021); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

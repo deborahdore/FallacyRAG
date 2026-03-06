@@ -1,0 +1,24 @@
+{
+    "name": "David Young",
+    "birthDate": "1968-05-11",
+    "deathDate": null,
+    "bio": "A Representative from Iowa; born in Van Meter, Dallas County, Iowa, May 11, 1968; graduated from Johnston High School, Johnston, Iowa, 1986; B.A., Drake University, Des Moines, Iowa, 1991; businessman; staff, United States Senator George Hanks (Hank) Brown of Colorado, 1993-1996; staff, campaign manager, United States Senator James Paul David Bunning of Kentucky, 1998-2006; chief of staff, United States Senator Charles Ernest Grassley of Iowa, 2006-2013; elected as a Republican to the One Hundred Fourteenth and to the succeeding Congress (January 3, 2015-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018 and One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

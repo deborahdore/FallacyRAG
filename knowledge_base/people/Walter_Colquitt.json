@@ -1,0 +1,48 @@
+{
+    "name": "Walter Colquitt",
+    "birthDate": "1799-12-27",
+    "deathDate": "1855-05-07",
+    "bio": "A Representative and a Senator from Georgia; born in Halifax County, Va., December 27, 1799; moved with his parents to Mount Zion, Carroll County, Ga.; attended the common schools and Princeton College; studied law; admitted to the bar in 1820 and commenced practice in Sparta, Hancock County, Ga.; moved to Cowpens, Ga.; elected judge of the Chattahoochee circuit in 1826 and reelected in 1829; was licensed a Methodist preacher in 1827; member, State senate 1834, 1837; elected as a Whig to the Twenty-sixth Congress and served from March 4, 1839, to July 21, 1840, when he resigned; elected as a Democrat to the Twenty-seventh Congress to fill in part vacancies caused by the resignations of Julius C. Alford, William C. Dawson, and Eugenius A. Nisbet, and served from January 3, 1842, to March 3, 1843; elected as a Democrat to the United States Senate and served from March 4, 1843, until his resignation in February 1848; chairman, Committee on District of Columbia (Twenty-ninth Congress), Committee on Patents and Patent Office (Twenty-ninth Congress); member of the Nashville convention in 1850; died in Macon, Ga., May 7, 1855; interment in Linwood Cemetery, Columbus, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

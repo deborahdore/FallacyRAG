@@ -1,0 +1,48 @@
+{
+    "name": "Sampson Harris",
+    "birthDate": "1809-02-23",
+    "deathDate": "1857-04-01",
+    "bio": "A Representative from Alabama; born in Elbert County, Ga., February 23, 1809; obtained his early education from his mother and was graduated from the University of Georgia at Athens in 1828; studied law; was admitted to the bar in 1830 and commenced practice in Athens, Ga.; member of the State house of representatives in 1834 and 1835; moved to Wetumpka, Ala., in 1838; elected solicitor of the eighth circuit in 1841; member of the State senate in 1844 and 1845; elected as a Democrat to the Thirtieth and to the four succeeding Congresses (March 4, 1847-March 3, 1857); declined to be a candidate for renomination in 1856; died in Washington, D.C., April 1, 1857; interment in Oconee Cemetery, Athens, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

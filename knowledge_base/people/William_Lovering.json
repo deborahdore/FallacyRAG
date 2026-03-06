@@ -1,0 +1,64 @@
+{
+    "name": "William Lovering",
+    "birthDate": "1835-02-25",
+    "deathDate": "1910-02-04",
+    "bio": "A Representative from Massachusetts; born in Woonsocket, R.I., February 25, 1835; moved with his parents to Taunton, Mass., in 1837; attended the Cambridge High School and the Hopkins Classical School, Cambridge, Mass.; left school in 1859 for employment in his father's mill; during the Civil War served as quartermaster of Engineers in the Second Massachusetts Brigade, consisting of the Second and Third Regiments; engaged in cotton manufacturing in Taunton; first president of the Taunton Street Railway; president of the American Liability Insurance Co.; interested in several other business enterprises; president of the New England Cotton Manufacturers' Association for two years; member of the State senate in 1874 and 1875; delegate to the Republican National Convention in 1880; presided at the Republican State convention in 1892; elected as a Republican to the Fifty-fifth and to the six succeeding Congresses and served from March 4, 1897, until his death in Washington, D.C., February 4, 1910; interment in Mount Pleasant Cemetery, Taunton, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

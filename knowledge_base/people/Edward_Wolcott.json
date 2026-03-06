@@ -1,0 +1,56 @@
+{
+    "name": "Edward Wolcott",
+    "birthDate": "1848",
+    "deathDate": "1905",
+    "bio": "A Senator from Colorado; born in Long Meadow, Hampden County, Mass., March 26, 1848; attended the common schools; served in the One Hundred and Fiftieth Regiment, Ohio Volunteer Infantry, during the Civil War; attended Yale College; graduated from the law department of Harvard University in 1875; moved to Colorado; taught school and practiced law; elected district attorney in 1876; moved to Denver in 1879; member, State senate 1879-1882; elected in 1889 as a Republican to the United States Senate; reelected in 1895 and served from March 4, 1889, to March 3, 1901; unsuccessful candidate for reelection in 1901 and again in 1902 and 1903; chairman, Committee on Civil Service and Retrenchment (Fifty-first and Fifty-second Congresses), Committee on Post Office and Post Roads (Fifty-fourth through Fifty-sixth Congresses); resumed the practice of law in Denver, Colo.; died in Monte Carlo, Principality of Monaco, March 1, 1905; remains were cremated in Paris, France, and the ashes interred in Woodlawn Cemetery, New York City.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

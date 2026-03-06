@@ -1,0 +1,64 @@
+{
+    "name": "Charles Bass",
+    "birthDate": "1952-01-08",
+    "deathDate": null,
+    "bio": "A Representative from New Hampshire; born in Boston, Suffolk County, Mass., January 8, 1952; graduated from Holderness School, Plymouth, N.H., 1970; A.B., Dartmouth College, Hanover, N.H., 1974; staff for United States Representative William S. Cohen of Maine, 1974; staff for United States Representative David F. Emery of Maine, 1975-1979; unsuccessful candidate for nomination to the Ninety-seventh Congress in 1980; delegate to New Hampshire constitutional convention, 1984; member of the New Hampshire general court, 1982-1988; member of the New Hampshire state senate, 1988-1992; elected as a Republican to the One Hundred Fourth and to the five succeeding Congresses (January 3, 1995-January 3, 2007); unsuccessful candidate for reelection to the One Hundred Tenth Congress in 2006; elected as a Republican to the One Hundred Twelfth Congress (January 3, 2011-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

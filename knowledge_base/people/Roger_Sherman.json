@@ -1,0 +1,52 @@
+{
+    "name": "Roger Sherman",
+    "birthDate": "1721-04-19",
+    "deathDate": "1793-07-23",
+    "bio": "a Delegate, a Representative, and a Senator from Connecticut; born in Newton, Mass., April 19, 1721; moved with his parents to Stoughton (now Canton), Mass., in 1723; attended the public schools; learned the shoemaker's trade; moved to New Milford, Conn., in 1743; surveyor of New Haven County in 1745; studied law; admitted to the bar in 1754 and practiced; member, Connecticut assembly 1755-1756, 1758-1761, 1764-1766; justice of the peace for Litchfield County 1755-1761, and of the quorum 1759-1761; moved to New Haven, Conn., in June 1761; justice of the peace and member of the court 1765-1766; member, State senate 1766-1785; judge of the superior court 1766-1767, 1773-1788; member of the council of safety 1777-1779; Delegate to the First Continental Congress, 1774; Delegate to the Second Continental Congress, 1775-1780; Delegate to the Confederation Congress, 1781, 1784; member of the committee which drafted the Declaration of Independence; signed the Declaration of Independence; member of the committee to prepare the Articles of Confederation; signed the Articles of Confederation; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; the only Member of the Continental Congress who signed the Declaration of 1774, the Declaration of Independence, the Articles of Confederation, and the Federal Constitution; mayor of New Haven from 1784 until his death; delegate to the Federal Constitutional Convention in Philadelphia in 1787 and one of the signers of the Constitution; elected to the First Congress (March 4, 1789-March 3, 1791); elected to the United States Senate to fill the vacancy caused by the resignation of William S. Johnson and served from June 13, 1791, until his death in New Haven, Conn., July 23, 1793; interment in Grove Street Cemetery in New Haven (formerly known as New Haven City Burying Ground).",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 1st Continental Congress",
+            "startDate": "1774-09-05",
+            "endDate": "1774-10-26",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 2nd Continental Congress",
+            "startDate": "1775-05-10",
+            "endDate": "1781-03-01",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

@@ -1,0 +1,80 @@
+{
+    "name": "George McLean",
+    "birthDate": "1857",
+    "deathDate": "1932",
+    "bio": "A Senator from Connecticut; born in Simsbury, Hartford County, Conn., October 7, 1857; attended the common schools; studied law; admitted to the bar in 1881 and commenced practice in Hartford, Conn.; member, State house of representatives 1883-1884; member of the commission to revise the Connecticut statutes 1885; member, State senate 1886-1888; United States district attorney for Connecticut 1892-1896; resumed the practice of law in Hartford; Governor of Connecticut 1901-1903; elected as a Republican to the United States Senate in 1911; reelected in 1916 and again in 1922 and served from March 4, 1911, to March 3, 1929; declined to be a candidate for reelection in 1928; chairman, Committee on Forest Reservations and Game Protection (Sixty-second and Sixty-fifth Congresses), Committee on Banking and Currency (Sixty-sixth through Sixty-ninth Congresses), Committee on Manufactures (Seventieth Congress); resumed the practice of law in Hartford, Conn.; died in Simsbury, Conn., June 6, 1932; interment in Simsbury Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Peter Fitzgerald",
+    "birthDate": "1960",
+    "deathDate": null,
+    "bio": "A Senator from Illinois; born on October 20, 1960, in Elgin, Illinois, and raised in Inverness, Illinois; attended St. Theresa Catholic Elementary School in Palatine, Illinois, and Portsmouth Abbey, a Catholic secondary school in Portsmouth, Rhode Island; A.B., Dartmouth College 1982, graduating <i>cum laude</i>; Rotary Scholar, Aristotelian University, Greece 1982-1983; J.D., University of Michigan School of Law 1986; practiced as a corporate lawyer and general counsel in Chicago; Illinois state senator 1993-1998; elected as a Republican to the U.S. Senate in 1998 and served from January 3, 1999, to January 3, 2005; was not a candidate for reelection in 2004; bank founder and chairman; is a resident of McLean, Virginia.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

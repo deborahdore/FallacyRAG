@@ -1,0 +1,31 @@
+{
+    "name": "Julia Letlow",
+    "birthDate": "1981-03-16",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Monroe, Ouachita Parish, La., March 16, 1981; graduated from Ouachita Christian High School, Monroe, La.; B.A., University of Louisiana, Monroe, La., 2002; M.A., University of Louisiana, Monroe, La., 2005; Ph.D., University of South Florida, Tampa, Fla., 2011; ombudsperson and special projects coordinator, University of Louisiana, Monroe, La.; director, education, resident patient safety, and quality improvement, and clinical instructor, Tulane University, New Orleans, La.; director, marketing and communications, University of Louisiana, Monroe, La.; executive director, external affairs and strategic communications, University of Louisiana, Monroe, La., 2018-2019; executive assistant to president for external affairs and community outreach, University of Louisiana, Monroe, La.; elected as a Republican to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the death of her husband, United States Representative-elect Luke J. Letlow, and reelected to the two succeeding Congresses (March 20, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

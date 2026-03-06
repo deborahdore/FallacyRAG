@@ -1,0 +1,56 @@
+{
+    "name": "George Fairchild",
+    "birthDate": "1854-05-06",
+    "deathDate": "1924-12-31",
+    "bio": "A Representative from New York; born in Oneonta, Otsego County, N.Y., May 6, 1854; completed preparatory studies; engaged in agricultural pursuits and apprenticed as a printer; owner of the Oneonta Herald Publishing Co. 1890-1912; also interested in banking and in the manufacture of time recorders; elected as a Republican to the Sixtieth and to the five succeeding Congresses (March 4, 1907-March 3, 1919); elected vice president of the International Peace Conference; appointed by President Taft on August 10, 1910, as special commissioner to the First Centenary of Mexico at Mexico City, with the rank of Minister; resumed his former business pursuits; president and director of the White Plains Development Co., White Plains, N.Y.; died in New York City December 31, 1924; interment in Glenwood Cemetery, Oneonta, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

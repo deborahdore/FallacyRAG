@@ -1,0 +1,16 @@
+{
+    "name": "Harry Davenport",
+    "birthDate": "1902",
+    "deathDate": "1977",
+    "bio": "A Representative from Pennsylvania; born in Wilmerding, Allegheny County, Pa., August 22, 1902; attended St. Peter's Parochial School and McKeesport High School; newspaper publisher; unsuccessful candidate for nomination in 1946 to the Eightieth Congress; elected as a Democrat to the Eighty-first Congress (January 3, 1949-January 3, 1951); was an unsuccessful candidate for reelection in 1950 to the Eighty-second Congress and was also unsuccessful for nomination in 1960 to the Eighty-seventh Congress; lecturer and book salesman; resided in Millvale, Pa., where he died December 19, 1977; interment in New St. Joseph Cemetery, North Versailles, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

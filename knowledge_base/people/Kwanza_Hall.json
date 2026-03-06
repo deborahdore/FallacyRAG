@@ -1,0 +1,16 @@
+{
+    "name": "Kwanza Hall",
+    "birthDate": "1971-05-01",
+    "deathDate": null,
+    "bio": "a Representative from Georgia; born in Atlanta, Fulton County, Ga., May 1, 1971; graduated from Benjamin E. Mays High School, Atlanta, Ga., 1989; attended Massachusetts Institute of Technology, Cambridge, Mass., 1989&ndash;1995; civil servant; public advocate; business executive; member of the Atlanta, Ga., board of education, 2002&ndash;2005; member of the Atlanta, Ga., city council, 2005&ndash;2017; elected as a Democrat to the One Hundred Sixteenth Congress, by special election, to fill the vacancy caused by the death of United States Representative John R. Lewis (December 1, 2020&ndash;January 3, 2021).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

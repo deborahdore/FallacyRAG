@@ -1,0 +1,40 @@
+{
+    "name": "Alexander Rice",
+    "birthDate": "1818-08-30",
+    "deathDate": "1895-07-22",
+    "bio": "A Representative from Massachusetts; born in Newton Lower Falls, Mass., August 30, 1818; was graduated from Union College in 1844; engaged in the manufacture of paper at Boston; mayor of Boston in 1856 and 1857; elected as a Republican to the Thirty-sixth and to the three succeeding Congresses (March 4, 1859-March 3, 1867); chairman, Committee on Naval Affairs (Thirty-eighth and Thirty-ninth Congresses); was not a candidate for renomination in 1866; resumed his former business pursuits in Boston; delegate to the Philadelphia Loyalist Convention in 1866; delegate to the Republican National Convention in 1868; Governor of Massachusetts 1876-1878; died in Boston, Mass., July 22, 1895; interment in Newton Cemetery, Newton, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

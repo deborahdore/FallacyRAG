@@ -1,0 +1,80 @@
+{
+    "name": "Thomas Curtis",
+    "birthDate": "1911",
+    "deathDate": "1993",
+    "bio": "A Representative from Missouri; born in St. Louis, Mo., May 14, 1911; attended the public schools of Webster Groves, Mo.; Dartmouth College, Hanover, N.H., A.B., 1932, and M.A., 1951; Washington University, St. Louis, Mo., LL.B., 1935; Westminster College, J.D., 1964; was admitted to the bar in 1934 and commenced the practice of law in St. Louis, Mo.; member of the Board of Election Commissioners of St. Louis County in 1942; served in the United States Navy from April 8, 1942, until discharged as a lieutenant commander December 21, 1945; member of the Missouri State Board of Law Examiners 1947-1950; elected as a Republican to the Eighty-second and to the eight succeeding Congresses (January 3, 1951-January 3, 1969); was not a candidate for reelection in 1968 to the House of Representatives but was an unsuccessful candidate for election to the United States Senate; delegate to the Republican National Convention, 1964, 1976 and 1980; vice president and general counsel, Encyclopedia Britannica, 1969-1973; unsuccessful candidate for the United States Senate in 1974; chairman, Corporation for Public Broadcasting, 1972-1973; chairman, Federal Election Commission from April 1975 to May 1976; consultant, National Association of Technical and Trade Schools; was a resident of Pier Cove, Mich., until his death in Allegan, Mich., on January 10, 1993.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

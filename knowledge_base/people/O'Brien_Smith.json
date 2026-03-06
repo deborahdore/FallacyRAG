@@ -1,0 +1,16 @@
+{
+    "name": "O'Brien Smith",
+    "birthDate": "1756",
+    "deathDate": "1811-04-27",
+    "bio": "A Representative from South Carolina; born in Ireland about 1756; came to South Carolina following the Revolutionary War, taking the oath of allegiance to the Government of the United States July 31, 1784; member of the South Carolina state house of representatives, 1791-1799; served in the South Carolina state senate in 1803; elected as a Democratic Republican to the Ninth Congress (March 4, 1805-March 3, 1807); died April 27, 1811; interment in the burial ground of the colonial Chapel of Ease of St. Bartholomew's Parish, Colleton County, near Jacksonboro, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

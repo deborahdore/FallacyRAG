@@ -1,0 +1,24 @@
+{
+    "name": "Mary Peltola",
+    "birthDate": "1973-08-31",
+    "deathDate": null,
+    "bio": "a Representative from Alaska; born in Anchorage, Alaska, August 31, 1973; an enrolled member of the Orutsararmiut Traditional Native Council; attended the University of Northern Colorado, Greeley, Colo., 1991-1994; attended the University of Alaska Fairbanks, Fairbanks, Alaska, 1994; attended the University of Alaska Southeast, Juneau, Alaska, 1995-1997; attended the University of Alaska Anchorage, Anchorage, Alaska, 1997-1998; manager of community development and sustainability; professional advocate; executive director, Kuskokwim River inter-tribal fish commission, 2017-2022; member of the Alaska state house of representatives, 1999-2009; member of the Bethel, Alaska, city council; elected as a Democrat to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the death of United States Representative Donald Edwin Young, and reelected to the succeeding Congress (August 16, 2022-January 3, 2025); unsuccessful candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALASKA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALASKA"
+        }
+    ]
+}

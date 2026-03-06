@@ -1,0 +1,24 @@
+{
+    "name": "Ebenezer Stoddard",
+    "birthDate": "1785-05-06",
+    "deathDate": "1847-08-19",
+    "bio": "a Representative from Connecticut; born in Union, Tolland County, Conn., May 6, 1785; attended Woodstock Academy in 1802 and in 1803, and graduated from Brown University, Providence, R.I., in 1807; studied law; admitted to the bar in 1810 and commenced practice in West Woodstock, Conn.; elected as Democratic Republican to the Seventeenth Congress and reelected as an Adams-Clay Republican to the Eighteenth Congresses (March 4, 1821-March 3, 1825); served in the Connecticut state senate 1825-1827; Lieutenant Governor of Connecticut in 1833 and 1835-1837; practiced law; died in West Woodstock, Conn., on August 19, 1847; interment in Bungay Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

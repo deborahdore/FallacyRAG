@@ -1,0 +1,16 @@
+{
+    "name": "Isaac Delaplaine",
+    "birthDate": "1817-10-27",
+    "deathDate": "1866-07-17",
+    "bio": "A Representative from New York; born in New York City October 27, 1817; pursued an academic course; was graduated from Columbia College (now Columbia University), New York City, in 1834; studied law; was admitted to the bar about 1840 and commenced practice in New York City; elected as a Democrat to the Thirty-seventh Congress (March 4, 1861-March 3, 1863); died in New York City July 17, 1866; interment in Greenwood Cemetery, Brooklyn, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

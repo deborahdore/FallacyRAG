@@ -1,0 +1,16 @@
+{
+    "name": "Xochitl Torres Small",
+    "birthDate": "1984-11-15",
+    "deathDate": null,
+    "bio": "a Representative from New Mexico; born in Portland, Multnomah County, Oreg., November 15, 1984; graduated from Waterford Kamhlaba United World College of Southern Africa, Eswatini (then Swaziland), 2003; B.S.F.S., Georgetown University, Washington, D.C., 2007; J.D., University of New Mexico, Albuquerque, N. Mex., 2015; lawyer, private practice; law clerk, federal district court of N. Mex., 2015-2016; staff, Senator Tom Udall of New Mexico, 2009-2012; elected as a Democrat to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for reelection to the One Hundred Seventeenth Congress in 2020; Under Secretary of Agriculture for Rural Development, United States Department of Agriculture, 2021-2023; Deputy Secretary, United States Department of Agriculture, 2023-2025.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        }
+    ]
+}

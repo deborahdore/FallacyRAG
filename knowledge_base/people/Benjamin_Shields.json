@@ -1,0 +1,16 @@
+{
+    "name": "Benjamin Shields",
+    "birthDate": "1811-01-09",
+    "deathDate": "1892-11-15",
+    "bio": "a Representative from Alabama; born in Abbeville, Abbeville County, S.C., on January 9, 1811; moved with his father to Clarke County, Ala.; resided in Demopolis, Marengo County, Ala.; completed preparatory studies; attended Franklin College, Athens, Ga.; attended South Carolina College, Columbia, S.C.; member of the Alabama state house of representatives, 1834-1839; elected as a Democrat to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); delegate, Democratic National Convention, 1844; commissioned in 1845 by President Polk United States Charg&eacute; d'Affaires to Venezuela, where he remained until January 7, 1850; moved to Texas and engaged in planting; delegate, Texas state constitutional convention, 1866; postmaster, Carolina, Tex., 1868-1871; collector of customs, Galveston, Tex., 1874-1879; died on November 15, 1892, in Marlin, Tex.; interment at Calvary Cemetery, Marlin, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

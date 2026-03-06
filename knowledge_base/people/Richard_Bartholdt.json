@@ -1,0 +1,96 @@
+{
+    "name": "Richard Bartholdt",
+    "birthDate": "1855-11-02",
+    "deathDate": "1932-03-19",
+    "bio": "A Representative from Missouri; born in Schleiz, Germany, November 2, 1855; attended the public schools and Schleiz College (Gymnasium); immigrated to the United States in April 1872 and settled in Brooklyn, N.Y.; learned the printing trade and became a newspaper writer and publisher; moved to Missouri and settled in St. Louis in 1877; was connected with several papers as reporter, legislative correspondent, and editor, and at the time of his election to Congress was editor in chief of the St. Louis Tribune; member of the St. Louis Board of Education from 1888 to 1892, serving as president from 1890 to 1892; elected as a Republican to the Fifty-third and to the ten succeeding Congresses (March 4, 1893-March 3, 1915); chairman, Committee on Immigration and Naturalization (Fifty-fourth Congress), Committee on Levees and Improvements of the Mississippi River (Fifty-fifth through Fifty-eighth Congresses), Committee on Public Buildings and Grounds (Fifty-ninth through Sixty-first Congresses); in 1911 was appointed by President Taft as a special envoy to the German Emperor to present a statue of Baron Steuben as a gift from Congress and the American people; was not a candidate for renomination in 1914; engaged in literary pursuits; served as chairman of the Republican State convention at St. Joseph, Mo., in 1896; elected president of the Interparliamentary Union at the conference held in St. Louis in 1904, and for many years was president of the arbitration group in Congress, which he founded in 1903; died in St. Louis, Mo., March 19, 1932; his body was cremated and the ashes interred in Concordia Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MISSOURI"
+        }
+    ]
+}

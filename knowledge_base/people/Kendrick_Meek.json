@@ -1,0 +1,40 @@
+{
+    "name": "Kendrick Meek",
+    "birthDate": "1966-09-06",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Miami, Dade County, Fla., September 6, 1966; B.S., Florida A&amp;M University, Tallahassee, Fla., 1989; member of the Florida state house of representatives, 1994-1998; member of the Florida state senate, 1998-2002; elected as a Democrat to the One Hundred Eighth Congress and to the three succeeding Congresses (January 3, 2003-January 3, 2011); not a candidate for reelection to the One Hundred Twelfth Congress, but was an unsuccessful candidate for the United States Senate in 2010.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

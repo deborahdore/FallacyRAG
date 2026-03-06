@@ -1,0 +1,55 @@
+{
+    "name": "Aumua Radewagen",
+    "birthDate": "1947-12-29",
+    "deathDate": null,
+    "bio": "a Delegate from American Samoa; born in Washington, D.C., December 29, 1947; attended Sacred Hearts Academy, Honolulu, Hawaii; B.S., University of Guam, 1975; attended George Mason University, Fairfax, Va.; attended Loyola Marymount University, Los Angeles, Calif.; journalist; staff, United States Representative Philip Crane of Illinois, 1997-1999; staff, United States Representative Julius Caesar (J.C.) Watts, Jr. of Oklahoma, 1999-2003; staff, House Republican Conference, 2003-2005; unsuccessful candidate for election to the One Hundred Fourth Congress in 1994; unsuccessful candidate for nomination to the One Hundred Fifth Congress in 1996; unsuccessful candidate for election to the One Hundred Sixth Congress in 1998; unsuccessful candidate for nomination to the One Hundred Seventh Congress in 2000; unsuccessful candidate for election to the One Hundred Eighth Congress in 2002; unsuccessful candidate for election to the One Hundred Ninth Congress in 2004; unsuccessful candidate for election to the One Hundred Tenth Congress in 2006; unsuccessful candidate for election to the One Hundred Eleventh Congress in 2008; unsuccessful candidate for election to the One Hundred Twelfth Congress in 2010; unsuccessful candidate for election to the One Hundred Thirteenth Congress in 2012; elected as a Republican to the One Hundred Fourteenth and to the five succeeding Congresses (January 3, 2015-present).",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "AS"
+        }
+    ]
+}

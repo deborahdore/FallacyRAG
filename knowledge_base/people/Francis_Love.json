@@ -1,0 +1,16 @@
+{
+    "name": "Francis Love",
+    "birthDate": "1901-01-23",
+    "deathDate": "1989-10-30",
+    "bio": "A Representative from West Virginia; born in Cadiz, Harrison County, Ohio, on January 23, 1901; attended the public schools; A.B., Bethany College, Bethany, W.Va., 1924; principal of Warwood High School in Wheeling, W.Va., 1926-1929; J.D., West Virginia University Law School, Morgantown, W.Va., 1932; was admitted to the bar the same year and commenced practice in Wheeling, W.Va.; elected as a Republican to the Eightieth Congress (January 3, 1947-January 3, 1949); unsuccessful candidate for reelection to the Eighty-first Congress in 1948; resumed the general practice of law; delegate to Republican National Conventions in 1956, 1960, 1964, and 1968; died on October 30, 1989, in Wheeling, W.Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

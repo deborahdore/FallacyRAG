@@ -1,0 +1,48 @@
+{
+    "name": "William MacLay",
+    "birthDate": "1812-03-20",
+    "deathDate": "1882-02-19",
+    "bio": "A Representative from New York; born in New York City March 20, 1812; received private instruction; was graduated from the College of the City of New York in 1836; associate editor of the New York Quarterly Review in 1836; taught Latin; studied law; was admitted to the bar in 1839 and commenced the practice of his profession in New York City; member of the State assembly 1840-1842; elected as a Democrat to the Twenty-eighth, Twenty-ninth, and Thirtieth Congresses (March 4, 1843-March 3, 1849); unsuccessful candidate for reelection in 1848 to the Thirty-first Congress; elected to the Thirty-fifth and Thirty-sixth Congresses (March 4, 1857-March 3, 1861); was not a candidate for reelection in 1860 to the Thirty-seventh Congress; died in New York City February 19, 1882; interment in Greenwood Cemetery, Brooklyn, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

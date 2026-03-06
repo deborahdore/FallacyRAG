@@ -1,0 +1,24 @@
+{
+    "name": "Elaine Luria",
+    "birthDate": "1975-08-15",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Birmingham, Jefferson County, Ala., August 15, 1975; B.S., United States Naval Academy, Annapolis, Md., 1997; attended United States Naval Nuclear Power School, Goose Greek, S.C., 2000; M.S., Old Dominion University, Norfolk, Va., 2004; United States Navy, 1997-2017; small business owner; elected as a Democrat to the One Hundred Sixteenth and to the succeeding Congress (January 3, 2019-January 3, 2023); unsuccessful candidate for reelection to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

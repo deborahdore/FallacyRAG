@@ -1,0 +1,48 @@
+{
+    "name": "Lawrence Smith",
+    "birthDate": "1941-04-25",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Brooklyn, Kings County, N.Y., April 25, 1941; attended public schools in East Meadow, N.Y.; attended the New York University, New York City, 1958-1961; LL.B. and J.D., Brooklyn Law School, Brooklyn, N.Y., 1964; admitted to the New York bar, 1964 and commenced practice in New York City; admitted to the Florida bar, 1972; elected to the Florida house of representatives, 1978-1982; chairman, planning and zoning board, Hollywood, Fla., 1974-1978; delegate to seven Democratic National Conventions from 1980 to 2004; elected as a Democrat to the Ninety-eighth and to the four succeeding Congresses (January 3, 1983-January 3, 1993); was not a candidate for renomination in 1992 to the One Hundred Third Congress.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

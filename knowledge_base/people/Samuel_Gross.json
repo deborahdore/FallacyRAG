@@ -1,0 +1,24 @@
+{
+    "name": "Samuel Gross",
+    "birthDate": "1776-11-10",
+    "deathDate": "1839-03-19",
+    "bio": "A Representative from Pennsylvania; born in Upper Providence, Montgomery County, Pa., November 10, 1776; attended the public schools; engaged in agricultural pursuits; member of the Pennsylvania state house of representatives 1803-1807; served in the Pennsylvania state senate 1811-1815; elected as a Democratic Republican to the Sixteenth and Seventeenth Congresses (March 4, 1819-March 3, 1823); retired from public life; died in Trappe, Pa., March 19, 1839; interment in Augustus Lutheran Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

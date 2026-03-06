@@ -1,0 +1,72 @@
+{
+    "name": "William Brantley",
+    "birthDate": "1860-09-18",
+    "deathDate": "1934-09-11",
+    "bio": "A Representative from Georgia; born in Blackshear, Pierce County, Ga., September 18, 1860; attended the public schools, and the University of Georgia at Athens; studied law; was admitted to the bar in 1881 and commenced practice in Blackshear, Pierce County, Ga.; member of the State house of representatives in 1884 and 1885; served in the State senate in 1886 and 1887; solicitor general (prosecuting attorney) of the Brunswick Circuit Court of Georgia 1888-1896; moved to Brunswick in 1889 and continued the practice of law; elected as a Democrat to the Fifty-fifth and to the seven succeeding Congresses (March 4, 1897-March 3, 1913); was not a candidate for renomination in 1912; delegate to the Democratic National Convention in 1912; moved from Brunswick, Ga., to Washington, D.C., in 1913 and resumed the practice of law; died in Washington, D.C., September 11, 1934; interment in Blackshear Cemetery, Blackshear, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

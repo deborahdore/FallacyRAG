@@ -1,0 +1,40 @@
+{
+    "name": "Ninian Edwards",
+    "birthDate": "1775",
+    "deathDate": "1833",
+    "bio": "(Son of Benjamin Edwards), a Senator from Illinois; born at 'Mount Pleasant,' Montgomery County, Md., March 17, 1775; attended private schools; was graduated from Dickinson College, Carlisle, Pa., in 1792; studied law; moved to Bardstown, Ky., in 1795; member, State house of representatives 1796-1797; admitted to the bar in 1798 and commenced practice in Russellville, Ky.; judge of the general court of Kentucky 1803; judge of the circuit court 1804; judge of the court of appeals 1806; chief justice of the State 1808; Governor of the Territory of Illinois 1809-1818; upon the admission of Illinois as a State into the Union was elected as a Democratic Republican (and later as Adams-Clay Republican) to the United States Senate and served from December 3, 1818, to March 4, 1824, when he resigned; appointed Minister to Mexico in 1824, but while en route was recalled to testify before a select committee of the House of Representatives appointed to investigate charges made by him against William H. Crawford, Secretary of the Treasury; resumed the practice of law; interested in saw and grist mills and engaged in mercantile pursuits; Governor of Illinois 1826-1831; died in Belleville, Ill., on July 20, 1833; interment in Hutchinson Cemetery, Springfield, Ill.; reinterment in 1866 in Oak Ridge Cemetery, Springfield, Ill.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

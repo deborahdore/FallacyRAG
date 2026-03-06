@@ -1,0 +1,56 @@
+{
+    "name": "Henry Barnhart",
+    "birthDate": "1858-09-11",
+    "deathDate": "1934-03-26",
+    "bio": "A Representative from Indiana; born near Twelve Mile, Cass County, Ind., September 11, 1858; attended the common schools, Amboy Academy, and Wabash Normal Training School; teacher; farmer; surveyor of Fulton County, Ind., 1885-1887; newspaper publisher; businessman; director of the United States Bank Trust Co.; director, Indiana State Prison, 1893; hospital executive; elected as a Democrat to the Sixtieth Congress to fill the vacancy caused by the death of United States Representative Abram L. Brick; reelected to the Sixty-first and to the four succeeding Congresses (November 3, 1908-March 3, 1919); unsuccessful candidate for reelection to the Sixty-sixth Congress in 1918; lecturer; died on March 26, 1934, in Rochester, Ind.; interment in the Mausoleum, Rochester, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

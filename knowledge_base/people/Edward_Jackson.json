@@ -1,0 +1,24 @@
+{
+    "name": "Edward Jackson",
+    "birthDate": "1793-01-25",
+    "deathDate": "1826-09-08",
+    "bio": "a Representative from Virginia; born in Clarksburg, Harrison County, Va. (now West Virginia), January 25, 1793; attended Randolph Academy at Clarksburg; studied medicine and commenced practice in Clarksburg; during the War of 1812 was detailed surgeon's mate, Third Regular Virginia Militia, at Fort Meigs, Ohio; member of the Virginia state house of delegates, 1815-1818; clerk of the United States district court in 1819; elected as a Democratic Republican to the Sixteenth Congress to fill the vacancy caused by the resignation of James Pindall and reelected to the Seventeenth Congress (October 23, 1820-March 3, 1823); declined to be a candidate for renomination in 1822; died at Bedford Springs, near Bedford, Pa., September 8, 1826; interment near Bedford, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

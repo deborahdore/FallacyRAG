@@ -1,0 +1,48 @@
+{
+    "name": "Jared Polis",
+    "birthDate": "1975",
+    "deathDate": null,
+    "bio": "A Representative from Colorado; born in Boulder, Boulder County, Colo., May 12, 1975; A.B., Princeton University, Princeton, N. J., 1996; business owner; entrepreneur; member of the Colorado state board of education, 2001-2007; chairman of the Colorado state board of education, 2004-2005; elected as a Democrat to the One Hundred Eleventh and to the four succeeding Congresses (January 3, 2009-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018; Governor of Colorado, 2019-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        }
+    ]
+}

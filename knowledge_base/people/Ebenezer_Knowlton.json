@@ -1,0 +1,16 @@
+{
+    "name": "Ebenezer Knowlton",
+    "birthDate": "1815-12-06",
+    "deathDate": "1874-09-10",
+    "bio": "A Representative from Maine; born in Pittsfield, N.H., December 6, 1815; moved with his parents to South Montville, Maine, in 1825; attended the common schools; studied theology and entered the ministry; member of the State house of representatives 1844-1850 and served as speaker in 1846; elected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1855-March 3, 1857); resumed his ministerial duties; died in South Montville, Maine, September 10, 1874; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "MAINE"
+        }
+    ]
+}

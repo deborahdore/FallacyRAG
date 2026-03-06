@@ -1,0 +1,32 @@
+{
+    "name": "Tommy Robinson",
+    "birthDate": "1942-03-07",
+    "deathDate": "2024-07-10",
+    "bio": "A Representative from Arkansas; born in Little Rock, Ark., March 7, 1942; graduated from Little Rock High School, Little Rock, Ark., 1959; B.A., University of Little Rock, Little Rock, Ark.; United States Navy, 1959-1963; North Little Rock Police Department and Arkansas State Police, 1963-1971; United States Marshal Service, 1971-1974; director of public safety, University of Arkansas Medical Sciences, 1974-1975; police chief, city of Jacksonville, Ark., 1975-1979; director of public safety, State of Arkansas, 1979-1980; sheriff of Pulaski County, Ark., 1980-1984; elected as a Democrat to the Ninety-ninth and to the two succeeding Congresses until his resignation on December 31, 1990 (January 3, 1985-December 31, 1990); changed party affiliation from a Democrat to a Republican on July 28, 1989; was not a candidate for renomination to the One Hundred Second Congress in 1990, but was an unsuccessful candidate for nomination for Governor of Arkansas; unsuccessful candidate for election to the One Hundred Eighth Congress in 2002; died on July 10, 2024, in Forrest City, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "William Rodman",
+    "birthDate": "1757-10-07",
+    "deathDate": "1824-07-27",
+    "bio": "a Representative from Pennsylvania; born in Bensalem Township, near Bristol, Bucks County, Pa., October 7, 1757; completed preparatory studies; served in the Revolutionary War as a private and subsequently as brigade quartermaster; commanded a company during the Whiskey Rebellion in 1794; justice of the peace, 1791-1800; member of the Pennsylvania state senate, 1804-1808; elected as a Democratic Republican to the Twelfth Congress (March 4, 1811-March 3, 1813); died at \"Flushing\" near Bristol, Bucks County, Pa., July 27, 1824; interment in the Episcopal Cemetery (later known as the St. James Burying Ground).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

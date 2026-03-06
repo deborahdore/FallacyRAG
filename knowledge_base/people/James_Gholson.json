@@ -1,0 +1,16 @@
+{
+    "name": "James Gholson",
+    "birthDate": "1798",
+    "deathDate": "1848-07-02",
+    "bio": "a Representative from Virginia; born in Gholsonville, Brunswick County, Va., in 1798; pursued an academic course and graduated from Princeton College in 1820; studied law; admitted to the bar and commenced practice in Percivals, Va.; member of the State house of delegates 1824-1828 and 1830-1833; elected as an Anti-Jacksonian candidate to the Twenty-third Congress (March 4, 1833-March 3, 1835); served as judge of the circuit court for the Brunswick circuit for many years; died in Brunswick County, Va., July 2, 1848; interment in Blandford Cemeter, Petersburg, Petersburg City, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

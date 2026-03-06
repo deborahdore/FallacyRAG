@@ -1,0 +1,64 @@
+{
+    "name": "George O'Brien",
+    "birthDate": "1917-06-17",
+    "deathDate": "1986-07-17",
+    "bio": "A Representative from Illinois; born in Chicago, Ill., June 17, 1917; attended St. Ignatius Grammar School and Loyola Academy, Chicago, Ill.; A.B., Northwestern University, Evanston, Ill., 1939; J.D., Yale Law School, New Haven, Conn., 1947; United States Air Force, Eighth and Twelfth Air Force, 1941-1945, attained the rank of lieutenant colonel; admitted to the Illinois bar in 1947; commenced practice in Chicago; member, Will County, Ill., Board of Supervisors, 1956-1964; Legislative Advisory Committee to Northeastern Illinois Planning Commission, 1970-1971; member of the Illinois state house of representatives, 1970-1971; elected as a Republican to the Ninety-third and to the six succeeding Congresses and served until his death on July 17, 1986 (January 3, 1973-July 17, 1986); died on July 17, 1986, in Bethesda, Md.; interment in Resurrection Cemetery, Lockport, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

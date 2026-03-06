@@ -1,0 +1,64 @@
+{
+    "name": "Harlan Hagen",
+    "birthDate": "1914",
+    "deathDate": "1990",
+    "bio": "A Representative from California; born in Lawton, Ramsey County, N.Dak., October 8, 1914; graduated from Long Beach Polytechnic High School, Long Beach, Calif.; graduated from Long Beach Junior College, Long Beach, Calif., 1933; A.B., University of California, Berkeley, Calif., 1936; L.L.B., University of California, Berkeley, Calif., 1940; lawyer, private practice; United States Army, 1943-1946; city council, Hanford, Calif., 1948; member of the California state assembly, 1949-1952; delegate to the Democratic National Convention, 1960 and 1964; elected as a Democrat to the Eighty-third and to the six succeeding Congresses (January 3, 1953-January 3, 1967); unsuccessful candidate for reelection to the Ninetieth Congress in 1966; died on November 25, 1990, in Hanford, Calif.; interment in Grangeville Cemetery, Hanford, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

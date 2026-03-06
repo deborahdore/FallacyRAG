@@ -1,0 +1,72 @@
+{
+    "name": "Jabez Huntington",
+    "birthDate": "1788-11-08",
+    "deathDate": "1847-11-02",
+    "bio": "A Representative and a Senator from Connecticut; born in Norwich, Conn., November 8, 1788; pursued classical studies; graduated from Yale College in 1806; taught in the Litchfield South Farms Academy one year; studied law; admitted to the bar and commenced practice in Litchfield; member, State house of representatives 1829; elected as an Anti-Jacksonian candidate to the Twenty-first, Twenty-second, and Twenty-third Congresses and served from March 4, 1829, to August 16, 1834, when he resigned to accept the appointment of judge of the State supreme court of errors; moved to Norwich in 1834; elected as a Whig to the United States Senate to fill the vacancy caused by the death of Thaddeus Betts; reelected, and served from May 4, 1840, until his death in Norwich, Conn., November 2, 1847; chairman, Committee on Commerce (Twenty-seventh and Twenty-eighth Congresses); interment in Old Norwich Town Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

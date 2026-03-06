@@ -1,0 +1,23 @@
+{
+    "name": "Delia Ramirez",
+    "birthDate": "1983-06-02",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Chicago, Cook County, Ill., June 2, 1983; graduated from St. Gregory High School, Chicago, Ill., 2001; B.A., Northeastern Illinois University, Chicago, Ill.; nonprofit executive; member of the Illinois state house of representatives, 2019-2022; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

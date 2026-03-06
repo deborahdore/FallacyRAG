@@ -1,0 +1,47 @@
+{
+    "name": "Ralph Norman",
+    "birthDate": "1953-06-20",
+    "deathDate": null,
+    "bio": "A Representative from South Carolina; born in Rock Hill, York County, S.C., June 20, 1953; graduated from Rock Hill High School, Rock Hill, S.C., 1971; B.S., Presbyterian College, Clinton, S.C., 1975; real estate developer; member of the South Carolina state house of representatives, 2005-2006, 2009-2017; unsuccessful candidate for election to the One Hundred Tenth Congress in 2006; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Mick Mulvaney, and reelected to the four succeeding Congresses (June 20, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

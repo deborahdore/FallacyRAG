@@ -1,0 +1,24 @@
+{
+    "name": "John Candler",
+    "birthDate": "1828-02-10",
+    "deathDate": "1903-03-16",
+    "bio": "A Representative from Massachusetts; born in Boston, Mass., February 10, 1828; attended the Marblehead Academy and Dummer Academy, Byfield, Mass.; entered a countingroom in Boston in 1845; merchant, engaged in shipping and commerce with the East and West Indies and South America; served as a member of the Massachusetts house of representatives in 1866; chairman of the commissioners of prisons of Massachusetts; president of the Boston Board of Trade and of the Commercial Club of Boston; elected as a Republican to the Forty-seventh Congress (March 4, 1881-March 3, 1883); unsuccessful candidate for reelection in 1882 to the Forty-eighth Congress; elected to the Fifty-first Congress (March 4, 1889-March 3, 1891); unsuccessful candidate for reelection in 1890 to the Fifty-second Congress; engaged in mercantile pursuits until his retirement in 1893; died in Providence, R.I., March 16, 1903; interment in Mount Auburn Cemetery, Cambridge, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

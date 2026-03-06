@@ -1,0 +1,64 @@
+{
+    "name": "Bobby Etheridge",
+    "birthDate": "1941-08-07",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Sampson County, N.C., August 7, 1941; graduated from Cleveland High School, Clayton, N.C., 1959; B.S. Campbell University, Buies Creek, N.C., 1965; graduate studies, North Carolina State University, Raleigh, N.C., 1967; United States Army, 1965-1967; commissioner, Harnett County, N.C., 1972-1976; member of the North Carolina state general assembly, 1978-1988; superintendent of public instruction, North Carolina, 1988-1996; elected as a Democrat to the One Hundred Fifth and to the six succeeding Congresses (January 3, 1997-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; state executive director, United States Department of Agriculture, 2021-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

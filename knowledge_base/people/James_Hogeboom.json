@@ -1,0 +1,16 @@
+{
+    "name": "James Hogeboom",
+    "birthDate": "1766-08-25",
+    "deathDate": "1839-12-23",
+    "bio": "A Representative from New York; born in Ghent, Columbia County, N.Y., August 25, 1766; moved to Pittstown, Rensselaer County, N.Y., in 1794; moved to Castleton, N.Y., in April 1802; merchant; member of the State assembly in 1804, 1805, and 1808; judge of Rensselaer County 1805-1808; member of the State constitutional convention in 1821; elected as a Crawford Republican to the Eighteenth Congress (March 4, 1823-March 3, 1825); engaged in the mercantile business; died in Castleton, N.Y., December 23, 1839; interment in Castleton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

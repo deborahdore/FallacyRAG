@@ -1,0 +1,47 @@
+{
+    "name": "John Curtis",
+    "birthDate": "1960-05-10",
+    "deathDate": null,
+    "bio": "A Representative and a Senator from Utah; born in Ogden, Weber County, Utah, May 10, 1960; graduated from Skyline High School, Salt Lake City, Utah, 1978; attended University of Utah, Salt Lake City, Utah, 1979; B.S., Brigham Young University, Provo, Utah, 1985; sales representative; business executive; Mayor of Provo, Utah, 2009-2017; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Jason Chaffetz, and reelected to the three succeeding Congresses (November 7, 2017-January 3, 2025); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2024 for the term ending January 3, 2031.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        }
+    ]
+}

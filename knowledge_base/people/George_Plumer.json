@@ -1,0 +1,32 @@
+{
+    "name": "George Plumer",
+    "birthDate": "1762-12-05",
+    "deathDate": "1843-06-08",
+    "bio": "A Representative from Pennsylvania; born near Pittsburgh, Pa., December 5, 1762; received a limited schooling; member of the state house of representatives 1812-1815 and again in 1817; elected as a Democratic Republican to the Seventeenth Congress, reelected as a Jackson Republican to the Eighteenth Congress, and reelected as a Jacksonian candidate to the Nineteenth Congress (March 4, 1821-March 3, 1827); declined to be a candidate for renomination; engaged in agricultural pursuits; died near West Newton, Westmoreland County, Pa., June 8, 1843; interment in Old Sewickley Presbyterian Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

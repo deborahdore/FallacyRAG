@@ -1,0 +1,72 @@
+{
+    "name": "Michael Synar",
+    "birthDate": "1950",
+    "deathDate": "1996",
+    "bio": "A Representative from Oklahoma; born in Vinita, Craig County, Okla., October 17, 1950; attended Muskogee public schools; graduated from Muskogee High School, 1968; B.S., University of Oklahoma, Norman, 1972; LL.B., University of Oklahoma Law Center, 1977; Rotary International Scholar, Graduate School of Economics, University of Edinburgh, Scotland, 1973; M.A., Northwestern University, Evanston, Ill., 1974; rancher; real estate broker; admitted to the Oklahoma bar in 1976 and commenced practice in Muskogee; elected as a Democrat to the Ninety-sixth and to the seven succeeding Congresses (January 3, 1979-January 3, 1995); one of the managers appointed by the House of Representatives in 1988 to conduct the impeachment proceedings against Alcee Lamar Hastings, judge of the United States District Court for the Southern District of Florida; unsuccessful candidate for renomination to the One Hundred Fourth Congress; chairman of the Campaign for America Project and of the National Bankruptcy Review Commission; was a resident of Washington, D.C., until his death there on January 9, 1996; interment in Memorial Park Cemetery, Muskogee, Okla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

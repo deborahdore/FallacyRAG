@@ -1,0 +1,15 @@
+{
+    "name": "Angela Alsobrooks",
+    "birthDate": "1971-02-23",
+    "deathDate": null,
+    "bio": "a Senator from Maryland, born in Suitland, Md., February 23, 1971; graduated Benjamin Banneker Academic High School, Washington, D.C., 1989; B.A., public policy and Afro-American studies, Duke University, Durham, N.C., 1993; J.D., University of Maryland School of Law, Baltimore, Md., 1996; admitted to the Maryland bar in 1996; intern in the office of District of Columbia Delegate Eleanor Holmes Norton 1993; law clerk to Circuit Court Judge William D. Quarles 1996-1997; assistant state&rsquo;s attorney, Prince George&rsquo;s County, Md., 1997-2002; executive liaison for the Prince George&rsquo;s County Executive 2002-2004; executive director of the Prince George&rsquo;s County Revenue Authority 2004-2010; state&rsquo;s attorney of Prince George&rsquo;s County 2011-2018; executive of Prince George&rsquo;s County 2018-2024; elected as a Democrat to the United States Senate in 2024 for the term ending January 3, 2031.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

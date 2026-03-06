@@ -1,0 +1,16 @@
+{
+    "name": "Charles Walker",
+    "birthDate": "1824-06-27",
+    "deathDate": "1888-01-26",
+    "bio": "A Representative from New York; was born in Drewsville, near Keene, N.H., June 27, 1824; completed preparatory studies; moved to Corning, Steuben County, N.Y., in 1848; postmaster of Corning 1856-1860; was a contractor and also engaged in the hardware and lumber business; during the Civil War served as brigade quartermaster with the rank of captain in the New York State Militia; delegate to the Democratic National Conventions at Charleston in 1860 and at Baltimore in 1872; elected as a Democrat to the Forty-fourth Congress (March 4, 1875-March 3, 1877); resumed former business activities; member of the board of control of the New York Agricultural Experiment Station from June 10, 1885, until his death in Corning, N.Y., January 26, 1888; interment in Palmyra Cemetery, Palmyra, Wayne County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

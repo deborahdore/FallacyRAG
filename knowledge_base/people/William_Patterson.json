@@ -1,0 +1,16 @@
+{
+    "name": "William Patterson",
+    "birthDate": "1789-06-04",
+    "deathDate": "1838-08-14",
+    "bio": "A Representative from New York; born in Londonderry, Rockingham County, N.H., June 4, 1789; attended the common schools; moved to Rensselaerville, Albany County, N.Y., in 1815, and in the following year to Lyons, Wayne County; engaged in the manufacture and sale of fanning mills; moved to a farm near Warsaw, N.Y., in 1822 and engaged in agricultural pursuits; settled in Warsaw, N.Y., in 1837; held several local offices; elected as a Whig to the Twenty-fifth Congress and served from March 4, 1837, until his death in Warsaw, Wyoming County, N.Y., August 14, 1838; interment in Warsaw Town Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

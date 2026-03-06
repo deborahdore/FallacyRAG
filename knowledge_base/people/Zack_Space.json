@@ -1,0 +1,24 @@
+{
+    "name": "Zack Space",
+    "birthDate": "1961",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Dover, Tuscarawas County, Ohio, January 27, 1961; graduated from Dover High School, Dover, Ohio, 1979; B.A., Kenyon College, Gambier, Ohio, 1983; J.D., Ohio State University, 1986; lawyer, private practice; Dover, Ohio, city attorney, 2000-2006; elected as a Democrat to the One Hundred Tenth and to the succeeding Congress (January 3, 2007-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

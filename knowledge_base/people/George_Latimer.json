@@ -1,0 +1,15 @@
+{
+    "name": "George Latimer",
+    "birthDate": "1953-11-22",
+    "deathDate": null,
+    "bio": "a Representative from New York; born in Mount Vernon, Westchester County, N.Y., November 22, 1953; graduated from Mount Vernon High School, Mount Vernon, N.Y., 1970; B.A., Fordham University, New York, N.Y., 1974; M.P.A., New York University, New York, N.Y., 1976; business executive; member of the Rye, N.Y., city council, 1988-1991; member of the Westchester County, N.Y., board of legislators, 1992-2004; member of the New York state assembly, 2005-2012; member of the New York state senate, 2013-2017; executive of Westchester County, N.Y., 2018-2025; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

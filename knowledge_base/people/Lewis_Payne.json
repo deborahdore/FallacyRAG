@@ -1,0 +1,48 @@
+{
+    "name": "Lewis Payne",
+    "birthDate": "1945",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Amherst, Amherst County, Va., July 9, 1945; graduated from Amherst County High School, Amherst, Va., 1963; B.S., Virginia Military Institute, Lexington, Va., 1967; M.B.A., University of Virginia, Charlottesville, Va., 1973; United States Army, 1968-1970; United States Army Reserves; engineer; businessman; business executive; elected as a Democrat to the One Hundredth Congress, by special election to fill the vacancy caused by the death of United States Representative Wilbur Clarence Daniel and reelected to the four succeeding Congresses (June 14, 1988- January 3, 1997); was not a candidate for reelection to the One Hundred Fifth Congress in 1996.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

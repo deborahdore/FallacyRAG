@@ -1,0 +1,48 @@
+{
+    "name": "Charles Littlefield",
+    "birthDate": "1851-06-21",
+    "deathDate": "1915-05-02",
+    "bio": "A Representative from Maine; born in Lebanon, York County, Maine, June 21, 1851; attended the common schools and Foxcroft Academy; studied law; was admitted to the bar in 1876 and practiced in Rockland, Maine; member of the State house of representatives 1885-1887 and served as speaker the last year; attorney general of the State 1889-1893; delegate to the Republican National Conventions in 1892 and 1896; elected as a Republican to the Fifty-sixth Congress to fill the vacancy caused by the death of Nelson Dingley, Jr.; reelected to the four succeeding Congresses and served from June 19, 1899, until his resignation, effective September 30, 1908; chairman, Committee on Expenditures in the Department of Agriculture (Fifty-ninth and Sixtieth Congresses); moved to New York City and engaged in the practice of law until his death there on May 2, 1915; interment in Achorn Cemetery, Rockland, Knox County, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

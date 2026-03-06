@@ -1,0 +1,48 @@
+{
+    "name": "Harve Tibbott",
+    "birthDate": "1885-05-27",
+    "deathDate": "1969-12-31",
+    "bio": "A Representative from Pennsylvania; born near Ebensburg, Cambria County, Pa., May 27, 1885; attended the public schools; was graduated from the school of pharmacy of the University of Pittsburgh in 1906; engaged in the retail drug business and as a pharmacist in Ebensburg, Pa., in 1906; treasurer of the William Penn Highway Association 1913-1915; treasurer of Cambria County, Pa., 1932-1935; member of the Republican State committee in 1936 and 1937; president of the First National Bank of Ebensburg since 1938; elected as a Republican to the Seventy-sixth and to the four succeeding Congresses (January 3, 1939-January 3, 1949); unsuccessful candidate for reelection in 1948 to the Eighty-first Congress; returned to Ebensburg and resumed his banking career as president and chairman of the board of the First National Bank; died December 31, 1969, in Ebensburg, Pa.; interment in Lloyd Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

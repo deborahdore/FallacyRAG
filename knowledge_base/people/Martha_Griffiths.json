@@ -1,0 +1,88 @@
+{
+    "name": "Martha Griffiths",
+    "birthDate": "1912",
+    "deathDate": "2003",
+    "bio": "A Representative from Michigan; born Martha Edna Wright, January 29, 1912, Pierce City, Lawrence County, Mo.; attended the public schools; B.A., University of Missouri, Columbia, Mo., 1934; graduated from the University of Michigan Law School, Ann Arbor, Mich., 1940; lawyer, private practice; legal department, American Automobile Insurance Co., 1941-1942; Detroit, Mich., Ordnance District contract negotiator, 1942-1946; elected to the Michigan state house of representatives, 1948-1952; appointed as recorder and judge of Recorders Court in Detroit, 1953; elected as judge, 1953-1954; delegate, Democratic National Conventions, 1956 and 1968; unsuccessful candidate for election to the Eighty-third Congress in 1952; elected as a Democrat to the Eighty-fourth and to the nine succeeding Congresses (January 3, 1955-December 31, 1974); was not a candidate for reelection to the Ninety-fourth Congress in 1974; lieutenant governor of Michigan, 1982-1991; died on April 22, 2003, in Amarda, Mich..",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

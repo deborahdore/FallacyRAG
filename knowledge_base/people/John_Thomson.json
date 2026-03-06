@@ -1,0 +1,48 @@
+{
+    "name": "John Thomson",
+    "birthDate": "1800",
+    "deathDate": "1862",
+    "bio": "A Senator from New Jersey; born in Philadelphia, Pa., September 25, 1800; attended the common schools in Princeton, N.J., and the College of New Jersey (now Princeton University); went to China in 1817 and became a merchant in Canton; United States consul at that port 1823-1825; returned to the United States and settled in Princeton, N.J.; director and secretary of the Delaware &amp; Raritan Canal Co.; connected with the Philadelphia &amp; Trenton Railroad Co. as president and later as treasurer; member of the State constitutional convention in 1844; unsuccessful Democratic candidate for governor of New Jersey in 1844; elected as a Democrat to the United States Senate to fill the vacancy caused by the resignation of Robert F. Stockton; reelected in 1857, and served from March 4, 1853, until his death in Princeton, N.J., September 12, 1862; chairman, Committee on Naval Affairs (Thirty-sixth Congress), Committee on Pensions (Thirty-sixth Congress), Committee on Patents and the Patent Office (Thirty-sixth Congress); interment in the Princeton Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

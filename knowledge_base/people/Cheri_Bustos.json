@@ -1,0 +1,48 @@
+{
+    "name": "Cheri Bustos",
+    "birthDate": "1961-10-17",
+    "deathDate": null,
+    "bio": "A Representative from Illinois; born in Springfield, Sangamon County, Ill., October 17, 1961; graduated from Springfield High School, Springfield, Ill., 1979; attended Illinois College, Jacksonville, Ill.; B.A., University of Maryland, College Park, Md., 1983; M.A., University of Illinois, Springfield, Ill., 1985; journalist; businesswoman; member of the East Moline, Ill., city council, 2007-2011; elected as a Democrat to the One Hundred Thirteenth and to the four succeeding Congresses (January 3, 2013-January&nbsp; 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

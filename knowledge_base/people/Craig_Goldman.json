@@ -1,0 +1,15 @@
+{
+    "name": "Craig Goldman",
+    "birthDate": "1968-10-03",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Texas, October 3, 1968; graduated from Trinity Valley School, Fort Worth, Tex., 1987; B.A., University of Texas at Austin, Austin, Tex., 1991; business owner; staff, National Republican Senatorial Committee; staff, presidential campaign of United States Senator John Sidney McCain III; member of the Texas state house of representatives, 2013-2025; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "James Banks",
+    "birthDate": "1979",
+    "deathDate": null,
+    "bio": "A Representative and a Senator from Indiana; born in Columbia City, Whitley County, Ind., July 16, 1979; graduated from Columbia City High School, Columbia City, Ind., 1997; B.A., Indiana University, Bloomington, Ind., 2004; M.B.A., Grace College and Seminary, Winona Lake, Ind., 2013; United States Navy Reserve, 2012-present, Afghanistan War Veteran, 2014-2015; commercial real estate broker; chairman, Whitley County, Ind., Republican Party, 2007-2011; member of the Whitley County, Ind. Council, 2008-2010; member of the Indiana state senate, 2010-2016; elected as a Republican to the One Hundred Fifteenth and to the three succeeding Congresses (January 3, 2017-January 3, 2025); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2024 for the term ending January 3, 2031.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

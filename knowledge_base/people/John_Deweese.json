@@ -1,0 +1,24 @@
+{
+    "name": "John Deweese",
+    "birthDate": "1835-06-04",
+    "deathDate": "1906-07-04",
+    "bio": "A Representative from North Carolina; born in Van Buren, Crawford County, Ark., June 4, 1835; educated at home; studied law; was admitted to the bar in 1856 and commenced practice in Henderson, Ky.; resident of Denver, Colo., for some years; moved to Pike County, Ind., in 1860; entered the Union Army July 6, 1861, as second lieutenant of Company E, Twenty-fourth Regiment, Indiana Volunteer Infantry, and served with that command until February 15, 1862, when he resigned; mustered in as captain of Company F, Fourth Indiana Cavalry, August 8, 1862; successively promoted to rank of colonel; moved to North Carolina; upon the reorganization of the Army was appointed second lieutenant, Eighth United States Infantry, July 24, 1866; resigned August 14, 1867, having been elected to Congress; appointed register in bankruptcy for North Carolina in 1868; upon the readmission of North Carolina to the Union, elected as a Republican to the Fortieth and to the succeeding Congress, and served until his resignation (July 6, 1868-February 28, 1870); resigned, pending the investigation of certain appointments to the United States Military and Naval Academies; chairman, Committee on Expenditures in the Department of the Interior (Forty-first Congress), Committee on Revolutionary Pensions (Forty-first Congress); censured by the U.S. House of Representatives on March 1, 1870, for selling an appointment to the United States Naval Academy; delegate to the Democratic National Convention in 1876; resumed the practice of law; died in Washington, D.C., July 4, 1906; interment in Arlington National Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

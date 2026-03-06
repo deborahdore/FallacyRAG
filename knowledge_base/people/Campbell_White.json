@@ -1,0 +1,32 @@
+{
+    "name": "Campbell White",
+    "birthDate": "1787-11-30",
+    "deathDate": "1859-02-12",
+    "bio": "A Representative from New York; born in Ireland November 30, 1787; received a limited education; immigrated to the United States in 1816 and engaged in mercantile pursuits in New York City; elected as a Jacksonian candidate to the Twenty-first and to the three succeeding Congresses and served from March 4, 1829, until his resignation on October 2, 1835, which occurred before the convening of the Twenty-fourth Congress; chairman, Committee on Naval Affairs (Twenty-third Congress); resumed mercantile pursuits; appointed quartermaster general of the State militia on January 24, 1831; delegate to the New York State constitutional convention in 1845; resided in New York City, where he died February 12, 1859; interment in St. Paul's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

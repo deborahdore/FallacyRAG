@@ -1,0 +1,32 @@
+{
+    "name": "Kay Hagan",
+    "birthDate": "1953",
+    "deathDate": "2019",
+    "bio": "a Senator from North Carolina; born in Shelby, N.C., May 26, 1953; B.A., Florida State University, 1975; J.D., Wake Forest University, 1978; banker; North Carolina State senator, 1999-2009; elected as a Democrat to the United States Senate in 2008, and served from January 3, 2009, to January 3, 2015; was an unsuccessful candidate for reelection in 2014; was a resident of Greensboro, N.C., until her death on October 28, 2019.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

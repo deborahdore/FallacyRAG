@@ -1,0 +1,37 @@
+{
+    "name": "John Muhlenberg",
+    "birthDate": "1746-10-01",
+    "deathDate": "1807-10-01",
+    "bio": "a Representative and a Senator from Pennsylvania; born in Trappe, Pa., October 1, 1746; pursued classical studies; attended the Academy of Philadelphia (later the University of Pennsylvania); studied in the University of Halle, Germany, 1763-1766; apprenticed to a grocer, absconded, and served in a German regiment of dragoons; returned to Philadelphia in 1766; studied theology and was ordained in 1768; pastor of Lutheran churches in New Germantown and Bedminster, N.J.; moved to Woodstock, Va.; on a visit to England in 1772 was ordained a priest in the Anglican Church; member, Virginia house of burgesses, 1774; chairman of the committee of safety for Dunmore County, Va.; served in the Revolutionary War; raised and commanded the Eighth Virginia (German) Regiment; commissioned brigadier general of the Continental Army in 1777, and brevetted major general in 1783; returned to Pennsylvania and settled in Montgomery County; elected a member of the supreme executive council of Pennsylvania in 1784 and served as vice president, 1785-1788; elected to the First Congress (March 4, 1789-March 3, 1791), the Third Congress (March 4, 1793-March 3, 1795), and the Sixth Congress (March 4, 1799-March 3, 1801); presidential elector in 1796; elected to the United States Senate and served from March 4, 1801, until his resignation on June 30, 1801; appointed by President Thomas Jefferson supervisor of revenue for Pennsylvania in 1801 and collector of customs at Philadelphia in 1802, in which latter capacity he served until his death at Gray's Ferry, Montgomery County, Pa., October 1, 1807; interment in the Augustus Lutheran Church Cemetery, Trappe, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

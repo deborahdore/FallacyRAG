@@ -1,0 +1,84 @@
+{
+    "name": "William Hendricks",
+    "birthDate": "1782-11-12",
+    "deathDate": "1850-05-16",
+    "bio": "A Representative and a Senator from Indiana; born in Ligonier Valley, Westmoreland County, Pa., November 12, 1782; attended the common schools and graduated from Jefferson College (later Washington and Jefferson College), Washington, Pa., in 1810; taught school 1810-1812; studied law in Cincinnati, Ohio; admitted to the bar and practiced; moved to Madison, Indiana Territory, in 1813; became a printer and owner of the second printing press set up in the Territory; proprietor of the Western Eagle; elected to the territorial legislature in 1813 and 1814, and was chosen speaker of the Assembly in 1814; territorial printer; secretary of the first State constitutional convention in 1816; upon the admission of Indiana as a State into the Union was elected to the Fourteenth Congress; reelected to the Fifteenth, Sixteenth, and Seventeenth Congresses and served from December 11, 1816, until his resignation July 25, 1822, to become Governor; Governor of Indiana 1822-1825, when he resigned to become a Senator; elected to the United States Senate in 1824; reelected in 1830 and served from March 4, 1825, to March 3, 1837; unsuccessful candidate for reelection in 1836; chairman, Committee on Roads and Canals (Twenty-first through Twenty-fourth Congresses); resumed the practice of law in Madison, Ind.; trustee of Indiana University at Bloomington 1829-1840; died in Madison, Ind., May 16, 1850; interment in Fairmount Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "INDIANA"
+        }
+    ]
+}

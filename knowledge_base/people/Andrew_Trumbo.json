@@ -1,0 +1,16 @@
+{
+    "name": "Andrew Trumbo",
+    "birthDate": "1797-09-15",
+    "deathDate": "1871-08-21",
+    "bio": "A Representative from Kentucky; born in Montgomery (now Bath) County, Ky., September 15, 1797; attended the common schools; employed in the county clerk's office; studied law; was admitted to the bar and commenced practice in Owingsville, Ky., in 1824; clerk of Bath County in 1830; Commonwealth attorney for Bath County in 1830; elected as a Whig to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); presidential elector on the Democratic ticket in 1848; resumed the practice of law; moved to Franklin County, Ky.; died in Frankfort, Ky., August 21, 1871; interment in the City Cemetery, Owingsville, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

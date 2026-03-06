@@ -1,0 +1,23 @@
+{
+    "name": "Morgan McGarvey",
+    "birthDate": "1979-12-23",
+    "deathDate": null,
+    "bio": "a Representative from Kentucky; born in Louisville, Jefferson County, Ky., December 23, 1979; graduated from duPont Manual High School, Louisville, Ky., 1998; B.A., University of Missouri, Columbia, Missouri, 2002; J.D., University of Kentucky, Lexington, Kentucky, 2007; staff, United States Representative A. B. (Ben) Chandler of Kentucky, 2004; staff, Office of the Attorney General, State of Kentucky; lawyer, private practice; member of the Kentucky state senate, 2013-2023; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

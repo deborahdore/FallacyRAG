@@ -1,0 +1,24 @@
+{
+    "name": "Charles Mitchell",
+    "birthDate": "1844-08-06",
+    "deathDate": "1890-03-01",
+    "bio": "A Representative from Connecticut; born in New Haven, Conn., August 6, 1844; was graduated from Cheshire Academy in 1863; traveled in Europe, Asia, and Africa; returned to New Haven, Conn., and engaged in the manufacture of silver-plated ware and brass; member of the State house of representatives in 1877; elected as a Democrat to the Forty-eighth and Forty-ninth Congresses (March 4, 1883-March 3, 1887); chairman, Committee on Patents (Forty-ninth Congress); was not a candidate for renomination in 1886; moved to New York City in 1886; but retained his former business interests in Connecticut; died in New York City March 1, 1890; interment in Evergreen Cemetery, New Haven, Conn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

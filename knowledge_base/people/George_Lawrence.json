@@ -1,0 +1,72 @@
+{
+    "name": "George Lawrence",
+    "birthDate": "1859-05-19",
+    "deathDate": "1917-11-21",
+    "bio": "A Representative from Massachusetts; born in Adams, Berkshire County, Mass., May 19, 1859; was graduated from Drury Academy in 1876 and from Amherst (Mass.) College in 1880; studied law at the Columbia Law School; was admitted to the bar in 1883 and commenced practice in North Adams, Mass.; appointed judge of the district of northern Berkshire in 1885; resigned in 1894 upon being elected to the Massachusetts senate; served in the State senate 1895-1897 and was its president in 1896 and 1897; elected as a Republican to the Fifty-fifth Congress to fill the vacancy caused by the death of Ashley B. Wright; reelected to the Fifty-sixth and to the six succeeding Congresses and served from November 2, 1897, to March 3, 1913; chairman, Committee on Expenditures in the Department of War (Fifty-ninth through Sixty-first Congresses); was not a candidate for renomination in 1912; member of the Massachusetts Public Service Commission from July 1 to September 17, 1913; died in New York City on November 21, 1917; interment in Hillside Cemetery, North Adams, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

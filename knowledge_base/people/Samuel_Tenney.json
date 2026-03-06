@@ -1,0 +1,40 @@
+{
+    "name": "Samuel Tenney",
+    "birthDate": "1748-11-27",
+    "deathDate": "1816-02-06",
+    "bio": "a Representative from New Hampshire; born in Byfield, Mass., November 27, 1748; attended Dummer Academy, Byfield, Mass.; graduated from Harvard College in 1772; taught school in Andover, Mass.; studied medicine and began practice in Exeter, N.H.; served in the Revolutionary War as a surgeon; returned to Exeter at the close of the war and continued the practice of his profession; delegate to the New Hampshire state constitutional convention in 1788; judge of probate for Rockingham County, 1793-1800; elected as a Federalist to the Sixth Congress to fill the vacancy caused by the resignation of William Gordon; reelected to the Seventh, Eighth, and Ninth Congresses and served from December 8, 1800, to March 3, 1807; chairman, Committee on Revisal and Unfinished Business (Eighth and Ninth Congresses); pursued literary, historical, and scientific studies; died in Exeter, N.H., February 6, 1816; interment in the Old Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

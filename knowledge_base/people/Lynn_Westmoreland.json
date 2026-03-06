@@ -1,0 +1,56 @@
+{
+    "name": "Lynn Westmoreland",
+    "birthDate": "1950",
+    "deathDate": null,
+    "bio": "A Representative from Georgia; born in Atlanta, Fulton County, Ga., April 2, 1950; graduated from Therrell High School, Atlanta, Ga., 1968; attended Georgia State University, Atlanta, Ga., 1969-1971; real estate developer; member of the Georgia state house of representatives, 1993-2004, and minority leader, 2000-2004; elected as a Republican to the One Hundred Ninth and to the five succeeding Congresses (January 3, 2005-January 3, 2017); was not a candidate for reelection to the One Hundredth Fifteenth Congress in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "William Wheeler",
+    "birthDate": "1915",
+    "deathDate": "1989",
+    "bio": "A Representative from Georgia; born near Alma, Bacon County, Ga., July 11, 1915; attended the public schools and South Georgia College at Douglas, Middle Georgia College at Cochran, Georgia Teachers College at Statesboro, Ga.; LL.B, Atlanta Law School, 1966; farmer; teacher; United States Army Air Force, 1942-1946; delegate, Democratic National Convention, 1952; elected as a Democrat to the Eightieth and to the three succeeding Congresses (January 3, 1947-January 3, 1955); unsuccessful candidate for renomination in 1954; Georgia Motor Vehicle Division in the Internal Revenue Department, Atlanta, Ga., 1955-1956; engaged in sales and public relations; tax examiner, State of Georgia; coordinator, Federal programs, Bacon County, Ga., Board of Education; assistant director, Governor's Highway Safety Program, State of Mississippi; died on May 5, 1989, in Alma, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

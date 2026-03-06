@@ -1,0 +1,48 @@
+{
+    "name": "Baron Hill",
+    "birthDate": "1953-06-23",
+    "deathDate": null,
+    "bio": "A Representative from Indiana; born in Seymour, Jackson County, Ind., June 23, 1953; attended Seymour High School, Seymour, Ind., 1971; B.A., Furman University, Greenville, S.C., 1975; member of the Indiana state house of representatives, 1982-1990; unsuccessful candidate for election to the United States Senate in 1990; elected as a Democrat to the One Hundred Sixth and to the two succeeding Congresses (January 3, 1999-January 3, 2005); unsuccessful candidate for reelection to the One Hundred Ninth Congress in 2004; elected as a Democrat to the One Hundred Tenth and to the succeeding Congress (January 3, 2007-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; successful candidate for nomination to the United States Senate in 2016, but withdrew following the primary.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

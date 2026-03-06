@@ -1,0 +1,24 @@
+{
+    "name": "Francis Le Blond",
+    "birthDate": "1821-02-14",
+    "deathDate": "1902-11-09",
+    "bio": "A Representative from Ohio; born in Bellville, Ohio, February 14, 1821; pursued an academic course; studied law; was admitted to the bar in 1844 and commenced practice in Celina, Ohio; member of the State house of representatives 1851-1855; served as speaker of the house in 1854 and 1855; elected as a Democrat to the Thirty-eighth and Thirty-ninth Congresses (March 4, 1863-March 3, 1867); declined to be a candidate for renomination in 1866; resumed the practice of law and also engaged in business; died in Celina, Ohio, November 9, 1902; interment in North Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

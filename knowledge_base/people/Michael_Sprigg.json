@@ -1,0 +1,24 @@
+{
+    "name": "Michael Sprigg",
+    "birthDate": "1791-07-01",
+    "deathDate": "1845-12-18",
+    "bio": "a Representative from Maryland; born in Frostburg, Md., July 1, 1791; completed preparatory studies; held a number of local offices; member of the Maryland state house of delegates in 1821, 1823, 1837, 1840, and 1844; president of the Chesapeake &amp; Ohio Canal Co. in 1841 and 1842; elected as a Jacksonian candidate to the Twentieth and to the succeeding Congress (March 4, 1827-March 3, 1831); chairman, Committee on Expenditures on Public Buildings (Twentieth and Twenty-first Congresses); died in Cumberland, Allegany County, Md., December 18, 1845; interment in Rose Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        }
+    ]
+}

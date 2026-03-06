@@ -1,0 +1,56 @@
+{
+    "name": "Chris Stewart",
+    "birthDate": "1960-07-15",
+    "deathDate": null,
+    "bio": "a Representative from Utah; born in Logan, Cache County, Utah, July 15, 1960; graduated from Sky View High School, Smithfield, Utah, 1978; B.S., Utah State University, Logan, Utah, 1984; United States Air Force, 1984-1998; author; business executive; elected as a Republican to the One Hundred Thirteenth and to the five succeeding Congresses until his resignation on September 15, 2023 (January 3, 2013-September 15, 2023).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        }
+    ]
+}

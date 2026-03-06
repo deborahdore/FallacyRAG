@@ -1,0 +1,64 @@
+{
+    "name": "William Sirovich",
+    "birthDate": "1882-03-18",
+    "deathDate": "1939-12-17",
+    "bio": "A Representative from New York; born in York, York County, Pa., March 18, 1882; moved to New York City with his parents in 1888; attended the public schools; was graduated from the College of the City of New York in 1902 and from the College of Physicians and Surgeons of Columbia University, New York City, in 1906; commenced the practice of medicine in New York City in 1906; also engaged as a lecturer, editor, and playwright, several of his plays being produced on Broadway; member of the fifth district school board 1906-1926; appointed as a member of the commission to inquire into the subject of widows' pensions and of the State pension commission in 1913; appointed a member of the State charities convention in 1914; served as superintendent of Peoples Hospital, New York City, 1910-1927; appointed commissioner of child welfare in 1919 and served until 1931; unsuccessful candidate for election in 1924 to the Sixty-ninth Congress; elected as a Democrat to the Seventieth and to the six succeeding Congresses and served from March 4, 1927, until his death; chairman, Committee on Patents (Seventy-second through Seventy-sixth Congresses); president of the Industrial National Bank, New York City, 1929-1932; delegate to the Interparliamentary Union Congress held at Bucharest, Rumania, in 1931; died in New York City December 17, 1939; interment in Mount Hebron Cemetery, Flushing, Long Island, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Morgan Luttrell",
+    "birthDate": "1975-11-07",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Houston, Harris County, Tex., November 7, 1975; graduated from Willis High School, Willis, Tex.; B.S., Sam Houston State University, Huntsville, Tex., 2000; M.S., University of Texas at Dallas, Richardson, Tex., 2016; attended Harvard University, Cambridge Mass.; United States Navy, 2000-2014; nonprofit executive; business owner; adjunct professor, Sam Houston State University, Huntsville, Tex.; staff, United States Department of Energy, 2017-2019; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

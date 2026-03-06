@@ -1,0 +1,72 @@
+{
+    "name": "Richard Ottinger",
+    "birthDate": "1929-01-27",
+    "deathDate": "2026-02-16",
+    "bio": "a Representative from New York; born in New York City, January 27, 1929; attended public schools of Scarsdale, N.Y.; graduated from Loomis School, Windsor, Conn., Windsor, Conn., 1946; B.A., Cornell University, 1950; LL.B, Harvard Law School, 1953; took postgraduate study in international law, Georgetown University, 1960-1961; served in the United States Air Force, 1955-1957, and was discharged as a captain; admitted to the New York bar in 1955; practiced international and corporate law, 1955-1960; chair, member of the board of directors, Legal Environmental Assistance Foundation and Environmental and Energy Study Institute; contract manager, International Cooperation Administration, 1960-1961; a founder and second staff member of the Peace Corps, serving as director of programs for the West Coast of South America, 1961-1964; elected as a Democrat to the Eighty-ninth and to the two succeeding Congresses (January 3, 1965-January 3, 1971); was not a candidate for reelection, but was an unsuccessful candidate for election to the United States Senate in 1970; organizer of Grassroots Action, Inc., in Washington, D.C., 1971-1972; unsuccessful candidate for election to the Ninety-third Congress in 1972; elected as a Democrat to the Ninety-fourth and to the four succeeding Congresses (January 3, 1975-January 3, 1985); did not seek reelection to the Ninety-ninth Congress in 1984; dean emeritus, Pace University Law School; died on February 16, 2026, in Mamaroneck, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

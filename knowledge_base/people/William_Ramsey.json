@@ -1,0 +1,16 @@
+{
+    "name": "William Ramsey",
+    "birthDate": "1810-06-12",
+    "deathDate": "1840-10-17",
+    "bio": "A Representative from Pennsylvania; born in Carlisle, Cumberland County, Pa., June 12, 1810; pursued classical studies in the United States and Europe; attaché of the American Legation in London; elected as a Democrat to the Twenty-sixth Congress and served from March 4, 1839, until his death before the commencement of the Twenty-seventh Congress, to which he had been reelected; died in Baltimore, Md., October 17, 1840; interment in Ashland Cemetery, Carlisle, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

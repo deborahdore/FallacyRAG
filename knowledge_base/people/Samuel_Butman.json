@@ -1,0 +1,24 @@
+{
+    "name": "Samuel Butman",
+    "birthDate": "1788-04-30",
+    "deathDate": "1864-10-09",
+    "bio": "a Representative from Maine; born in Worcester, Worcester County, Mass., on April 30, 1788; moved to Maine in 1804, and settled in Dixmont, Penobscot County; engaged in agricultural pursuits; served as a captain in the War of 1812; member of the Maine state constitutional convention in 1820; member of the Maine state house of representatives in 1822, 1826, and 1827; elected as an Adams candidate to the Twentieth Congress; reelected as an Anti-Jacksonian candidate to the Twenty-first Congress (March 4, 1827-March 3, 1831); county commissioner of Penobscot County in 1846; served in the State senate and was its president in 1853; died in Plymouth, Maine, October 9, 1864; interment at Sawyer Cemetery, Plymouth, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MAINE"
+        }
+    ]
+}

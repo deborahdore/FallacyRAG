@@ -1,0 +1,32 @@
+{
+    "name": "Raymond Lederer",
+    "birthDate": "1938-05-19",
+    "deathDate": "2008-12-01",
+    "bio": "<p>a Representative from Pennsylvania; born in Philadelphia, Pa., May 19, 1938; attended the Catholic schools of Philadelphia; graduated from Roman Catholic High School, 1956; attended St. Joseph's College of Philadelphia, 1960-1965, Community College of Philadelphia, 1967-1969, Pennsylvania State University, University Park, 1972; assistant engineer, Pennsylvania Department of Highways, 1957; probation officer, later director, Philadelphia Probation Department, 1967-1974; board member, Pennsylvania Committee on Probation; member, Pennsylvania house of representatives, 1974-1977; elected as a Democrat to the Ninety-fifth, Ninety-sixth and Ninety-seventh Congresses and served from January 3, 1977, until his resignation on April 29, 1981; convicted on January 9, 1981, of conspiracy, bribery, travel in interstate commerce to carry on the unlawful act of bribery, and accepting an unlawful gratuity; sentenced to federal prison and was fined; died on December 1, 2008, in Philadelphia, Pa.; interment at Holy Sepulchre Cemetery, Cheltenham Township, Montgomery County, Pa.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

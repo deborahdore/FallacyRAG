@@ -1,0 +1,96 @@
+{
+    "name": "Charles Fuller",
+    "birthDate": "1849-03-31",
+    "deathDate": "1926-06-25",
+    "bio": "A Representative from Illinois; born near Belvidere, Boone County, Ill., March 31, 1849; attended the common schools; studied law; was admitted to the bar in 1870 and commenced practice in Belvidere, Ill.; city attorney of Belvidere in 1875 and 1876; prosecuting attorney for Boone County 1876-1878; served in the State senate 1878-1882; member of the State house of representatives 1882-1888; again a member of the State senate 1888-1892; raised a provisional regiment for the war with Spain and was commissioned colonel of the Thirteenth Illinois Infantry by Governor Tanner; judge of the seventeenth judicial circuit 1897-1903; vice president of the People's Bank of Belvidere for many years; elected as a Republican to the Fifty-eighth and to the four succeeding Congresses (March 4, 1903-March 3, 1913); unsuccessful candidate for reelection in 1912 to the Sixty-third Congress; elected to the Sixty-fourth and to the five succeeding Congresses and served from March 4, 1915, until his death at a hospital in Rochester, Minn., June 25, 1926; chairman, Committee on Invalid Pensions (Sixty-sixth through Sixty-ninth Congresses); interment in Belvidere Cemetery, Belvidere, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

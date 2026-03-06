@@ -1,0 +1,56 @@
+{
+    "name": "Berkley Bedell",
+    "birthDate": "1921-03-05",
+    "deathDate": "2019-12-07",
+    "bio": "A Representative from Iowa; born in Spirit Lake, Dickinson County, Iowa, March 5, 1921; educated in Spirit Lake public schools; graduated, Spirit Lake High School, Spirit Lake, Iowa, 1939; attended Iowa State University, Ames, Iowa, 1940-1942; engaged in fishing tackle business; founder and chairman of Berkley &amp; Co., Spirit Lake; served in United States Army, first lieutenant, 1942-1945; member, Spirit Lake Board of Education, 1957-1962; unsuccessful candidate for election to the Ninety-third Congress in 1972; delegate to Iowa State Democratic conventions, 1972-1974; elected as a Democrat to the Ninety-fourth and to the five succeeding Congresses (January 3, 1975-January 3, 1987); was not a candidate for reelection in 1986; died on December 7, 2019, in Naples, Fla.; remains cremated; ashes interred at Elinor Bedell State Park, Spirit Lake, Iowa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

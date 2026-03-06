@@ -1,0 +1,40 @@
+{
+    "name": "Samuel MacLay",
+    "birthDate": "1741-06-17",
+    "deathDate": "1811-10-05",
+    "bio": "a Representative and a Senator from Pennsylvania; born in Lurgan Township, Franklin County, Pa., June 17, 1741; completed preparatory studies; engaged in agricultural pursuits and surveying; served in the Revolutionary War; member, lower house of the Pennsylvania state legislature, 1787-1791; associate judge of Franklin County, 1792-1795; elected to the Fourth Congress (March 4, 1795-March 3, 1797); member, lower house of the Pennsylvania state legislature, 1797; member, Pennsylvania state senate, 1798-1802, and served as speaker, 1801-1802; elected to the United States Senate as a Democratic Republican and served from March 4, 1803, until his resignation on January 4, 1809; retired and died in Buffalo Township, Union County, Pa., September 5, 1811; interment in Driesbach Church Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

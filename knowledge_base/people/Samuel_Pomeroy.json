@@ -1,0 +1,56 @@
+{
+    "name": "Samuel Pomeroy",
+    "birthDate": "1816",
+    "deathDate": "1891",
+    "bio": "A Senator from Kansas; born in Southampton, Mass., January 3, 1816; attended Amherst College, Massachusetts, 1836-1838; moved to New York State in 1838 and taught school; returned to Southampton, Mass., in 1842; held various local offices; member, State house of representatives 1852-1853; organizer and financial agent of the New England Emigrant Aid Co.; moved to Kansas in 1854 and settled in Lawrence; moved to Atchison, Kans.; mayor of Atchison 1858-1859; member of the free State convention at Lawrence in 1859; president of the relief committee during the famine in Kansas in 1860 and 1861; upon the admission of Kansas as a State into the Union was elected as a Republican to the United States Senate; reelected in 1867 and served from April 4, 1861, to March 3, 1873; unsuccessful candidate for reelection in 1872; chairman, Committee on Public Lands (Thirty-ninth through Forty-second Congresses); resided in Washington, D.C., for several years; died in Whitinsville, Worcester County, Mass., August 27, 1891; interment in Forest Hills Cemetery, Boston, Mass.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

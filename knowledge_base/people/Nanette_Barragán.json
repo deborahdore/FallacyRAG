@@ -1,0 +1,47 @@
+{
+    "name": "Nanette Barragán",
+    "birthDate": "1976-09-15",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Los Angeles, Los Angeles County, Calif., September 15, 1976; B.A., University of California, Los Angeles, Calif., 2000; J.D., University of Southern California, Los Angeles, Calif., 2005; lawyer, private practice; member of the Hermosa Beach, Calif., city council, 2013-2015, Mayor pro tem, 2015; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

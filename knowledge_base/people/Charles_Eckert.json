@@ -1,0 +1,24 @@
+{
+    "name": "Charles Eckert",
+    "birthDate": "1868-01-20",
+    "deathDate": "1959-10-26",
+    "bio": "A Representative from Pennsylvania; born in Pittsburgh, Allegheny County, Pa., January 20, 1868; attended the public schools, Piersol's Academy at West Bridgewater, Pa., and Geneva College at Beaver Falls, Pa.; studied law; was admitted to the bar in 1894 and commenced practice in Beaver, Pa., the same year; delegate to the Democratic National Convention in 1928; elected as a Democrat to the Seventy-fourth and Seventy-fifth Congresses (January 3, 1935-January 3, 1939); unsuccessful candidate for reelection in 1938 to the Seventy-sixth Congress; member of board of directors of Beaver Trust Co.; resumed the practice of law until his death as the result of an automobile accident in Rochester, Pa., October 26, 1959; interment in Beaver Cemetery, Beaver, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

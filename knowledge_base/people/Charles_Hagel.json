@@ -1,0 +1,56 @@
+{
+    "name": "Charles Hagel",
+    "birthDate": "1946",
+    "deathDate": null,
+    "bio": "A Senator from Nebraska; born in North Platte, Nebraska, October 4, 1946; graduated from St. Bonaventure High School, Columbus, Neb.; graduated from the Brown Institute for Radio and Television, Minneapolis, MN, 1966; graduated from University of Nebraska, Omaha, 1971; served in the U.S. Army infantry, attaining the rank of Sergeant E-5, 1967-1968, and serving in Vietnam in 1968; newscaster and talk show host in Omaha 1969-1971; administrative assistant to Representative John Y. McCollister (R-Neb.) 1971-1977; manager of government affairs for Firestone Tire &amp; Rubber Company, Washington, D.C. 1977-1980; deputy administrator, United States Veterans Administration, 1981-1982; investment banker and business executive in Washington and Omaha; deputy director and chief executive officer of the Economic Summit of Industrialized Nations (G-7) in 1990; elected as a Republican to the United States Senate in 1996; reelected in 2002, and served from January 3, 1997, to January 3, 2009; was not a candidate for reelection in 2008; Secretary of Defense in the Cabinet of President Barack Obama, 2013-2015.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEBRASKA"
+        }
+    ]
+}

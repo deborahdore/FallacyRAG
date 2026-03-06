@@ -1,0 +1,80 @@
+{
+    "name": "Melvin Laird",
+    "birthDate": "1922-09-01",
+    "deathDate": "2016-11-16",
+    "bio": "a Representative from Wisconsin; born in Omaha, Douglas County, Nebr., September 1, 1922; attended the public schools; B.A., Carleton College, Northfield, Minn., 1944; United States Navy, 1942-1946, Pacific Theater; awarded the Purple Heart; member, Wisconsin state senate, 1946-1952; delegate to the Republican National Conventions, 1948, 1952, 1956, and 1960; elected as a Republican to the Eighty-third and to the eight succeeding Congresses until his resignation on January 21, 1969 (January 3, 1953-January 21, 1969); Secretary of Defense in the Cabinet of President Richard M. Nixon, 1969-1973; domestic adviser to President Richard M. Nixon, 1973-1974; awarded the Presidential Medal of Freedom by President Richard M. Nixon, 1974; senior counselor for national and international affairs, Reader&rsquo;s Digest Association; died on November 16, 2016, in Fort Myers, Fla.; interment at Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

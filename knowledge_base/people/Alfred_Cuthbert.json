@@ -1,0 +1,88 @@
+{
+    "name": "Alfred Cuthbert",
+    "birthDate": "1785-12-23",
+    "deathDate": "1856-07-09",
+    "bio": "A Representative and a Senator from Georgia; born in Savannah, Ga., December 23, 1785; instructed by private tutors and graduated from Princeton College in 1803; studied law; admitted to the bar about 1805 but did not practice; captain of a company of volunteer infantry in 1809; member, State house of representatives 1810-1813; elected as a Democratic Republican to the Thirteenth Congress to fill the vacancy caused by the resignation of William W. Bibb; reelected to the Fourteenth Congress and served from December 13, 1813, to November 9, 1816, when he resigned; member, State senate 1817-1819; elected as a Democratic Republican to the Seventeenth Congress, reelected as a Crawford Republican to the Eighteenth Congress, and reelected as a Jacksonian candidate to the Nineteenth Congress (March 4, 1821-March 3, 1827); was not a candidate for renomination in 1826; elected as a Democrat to the United States Senate to fill the vacancy caused by the resignation of John Forsyth; reelected in 1837, and served from January 12, 1835, to March 3, 1843; was not a candidate for reelection in 1843; retired from active business pursuits and lived on his estate near Monticello, Jasper County, Ga., until his death on July 9, 1856; interment in Summerville Cemetery, Augusta, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

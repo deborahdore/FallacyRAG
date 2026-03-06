@@ -1,0 +1,16 @@
+{
+    "name": "Isaac Smith",
+    "birthDate": "1761-01-04",
+    "deathDate": "1834-04-04",
+    "bio": "A Representative from Pennsylvania; born in Chester County, Pa., January 4, 1761; attended the common schools; engaged in agricultural pursuits near Level Corners, Lycoming County, Pa.; member of the State house of representatives 1806-1808; elected as a Democratic Republican to the Thirteenth Congress (March 4, 1813-March 3, 1815); resumed agricultural pursuits and also engaged in the occupation of millwright; died on his farm at Level Corners, near Jersey Shore, Lycoming County, Pa., April 4, 1834; interment in the Pine Creek Presbyterian Churchyard; reinterment in Jersey Shore Cemetery, Jersey Shore, Lycoming County, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

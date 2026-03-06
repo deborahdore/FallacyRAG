@@ -1,0 +1,31 @@
+{
+    "name": "Andrew Clyde",
+    "birthDate": "1963-11-22",
+    "deathDate": null,
+    "bio": "a Representative from Georgia; born in Ontario, Canada, November 22, 1963; attended the University of Notre Dame, Notre Dame, Ind.; B.B.A., Bethel College, Mishawaka, Ind., 1985; M.B.A., University of Georgia, Athens, Ga., 1999; United States Navy, 1985-1996; United States Navy Reserve, 1996-2013; business owner; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

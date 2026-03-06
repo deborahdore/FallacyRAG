@@ -1,0 +1,24 @@
+{
+    "name": "Edward Cooke",
+    "birthDate": "1849-10-17",
+    "deathDate": "1897-06-24",
+    "bio": "A Representative from Illinois; born in Cascade, Dubuque County, Iowa, October 17, 1849; attended the common schools, the local academy, and the high school at Dubuque; studied law at Dubuque and in the law department of Columbian (now George Washington) University, Washington, D.C., and was graduated from that institution in 1873; was admitted to the bar in the same year and commenced practice in Chicago, Ill.; member of the State house of representatives in 1883; elected as a Republican to the Fifty-fourth and Fifty-fifth Congresses and served from March 4, 1895, until his death in Washington, D.C., June 24, 1897; interment in Rosehill Cemetery, Chicago, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

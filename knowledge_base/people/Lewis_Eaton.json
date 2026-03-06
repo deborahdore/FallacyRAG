@@ -1,0 +1,16 @@
+{
+    "name": "Lewis Eaton",
+    "birthDate": "1789",
+    "deathDate": "1857-08-22",
+    "bio": "A Representative from New York; born in Duanesburg, Schenectady County, New York, 1789; farmer; Duanesburg town supervisor, 1819-1820; sheriff of Schenectady County, 1821-1822; elected as Crawford Republican to the Eighteenth Congress (March 4, 1823-March 3, 1825); member of the State senate, 1829-1832; engaged in banking; Special Agent of the U.S. Postal Service; died in Buffalo, N.Y., on August 22, 1857.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

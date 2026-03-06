@@ -1,0 +1,56 @@
+{
+    "name": "Jacob Miller",
+    "birthDate": "1800",
+    "deathDate": "1862",
+    "bio": "A Senator from New Jersey; born in German Valley, Morris County, N.J., August 29, 1800; attended the public schools; studied law; admitted to the bar in 1823 and practiced in Morristown, N.J.; elected to the State general assembly in 1832; served in the State council 1838-1840; elected as a Whig to the United States Senate in 1840; reelected in 1846 and served from March 4, 1841, to March 3, 1853; chairman, Committee on the District of Columbia (Twenty-seventh and Twenty-eighth Congresses); died in Morristown, N.J., September 30, 1862; interment in St. Peter's Parish Churchyard.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

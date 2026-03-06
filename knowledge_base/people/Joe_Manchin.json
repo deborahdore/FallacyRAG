@@ -1,0 +1,72 @@
+{
+    "name": "Joe Manchin",
+    "birthDate": "1947",
+    "deathDate": null,
+    "bio": "A Senator from West Virginia; born August 24, 1947, in Farmington, Marion County, West Virginia; graduated Farmington High School, Farmington, WV, 1965; B.A., West Virginia University, 1970; businessman; member of the West Virginia house of delegates 1982-1986; member of the West Virginia state senate 1986-1996; unsuccessful candidate for the Democratic gubernatorial nomination in 1996; Secretary of State, West Virginia 2000-2004; elected governor of West Virginia in 2004 and reelected in 2008; chairman of the National Governors Association 2010; elected as a Democrat to the U.S. Senate in a special election on November 2, 2010, to fill the vacancy caused by the death of Robert C. Byrd, a seat subsequently held by appointed senator Carte Goodwin, and took the oath of office on November 15, 2010; reelected in 2012, and again in 2018, and served from November 15, 2010, to January 3, 2025; switched to Independent party status effective May 31, 2024; vice-chair, Democratic Policy and Communications Committee (2017-2021, 2023-2025); chair, Committee on Energy and Natural Resources (One Hundred Seventeenth and One Hundred Eighteenth Congresses); was not a candidate for reelection to the Senate in 2024.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

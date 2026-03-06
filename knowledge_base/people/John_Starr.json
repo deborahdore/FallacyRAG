@@ -1,0 +1,24 @@
+{
+    "name": "John Starr",
+    "birthDate": "1818-03-25",
+    "deathDate": "1904-08-09",
+    "bio": "A Representative from New Jersey; born in Philadelphia, Pa., March 25, 1818; completed preparatory studies; moved to Camden, N.J., in 1844; one of the founders of the Camden Iron Works; engaged in mercantile pursuits; president of the First National Bank of Camden for over thirty years, up to the time of his death; elected as a Republican to the Thirty-eighth and Thirty-ninth Congresses (March 4, 1863-March 3, 1867); was not a candidate for renomination in 1866; died in Atlantic City, N.J., August 9, 1904; interment in Harleigh Cemetery, Camden, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "C. Poulson",
+    "birthDate": "1895-07-23",
+    "deathDate": "1982-09-25",
+    "bio": "a Representative from California; born and reared on a ranch near Haines, Baker County, Oreg., July 23, 1895; attended the public schools, Oregon State College at Corvallis, and Southwestern University, Los Angeles, Calif., 1923-1925; moved to Los Angeles, Calif., in 1923; became a certified public accountant in 1933; member of the California assembly 1938-1942; delegate to California State Republican conventions on seven occasions; delegate to Republican National Convention, 1956; elected as a Republican to the Seventy-eighth Congress (January 3, 1943-January 3, 1945); unsuccessful candidate for reelection in 1944 to the Seventy-ninth Congress; elected in 1946 to the Eightieth and to the three succeeding Congresses and served from January 3, 1947, until his resignation on June 11, 1953; elected mayor of Los Angeles, Calif., in 1953 and again in 1957 and served from June 1953 to June 1961; unsuccessful for reelection as mayor in 1961; California State Water Commissioner, June 1963 to April 1969; resided in Tustin, Calif., until his death in Orange, Calif., on September 25, 1982; cremated; ashes buried at Mount Hope Cemetery in Baker, Oreg.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

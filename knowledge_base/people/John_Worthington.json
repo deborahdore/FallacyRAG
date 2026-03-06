@@ -1,0 +1,32 @@
+{
+    "name": "John Worthington",
+    "birthDate": "1788-11-01",
+    "deathDate": "1849-04-27",
+    "bio": "a Representative from Maryland; born at \"Shewan,\" near Baltimore, Baltimore County, Md., November 1, 1788; received a limited schooling; engaged in agricultural pursuits; elected as a Jacksonian candidate to the Twenty-second Congress (March 4, 1831-March 3, 1833); unsuccessful candidate for reelection in 1832 to the Twenty-third Congress and for election in 1834 to the Twenty-fourth Congress; elected as a Democrat to the Twenty-fifth and Twenty-sixth Congresses (March 4, 1837-March 3, 1841); resumed agricultural pursuits; died at \"Shewan,\" Baltimore County, Md., April 27, 1849; interment in a private cemetery on his farm; reinterment in St. John's Episcopal Churchyard, Worthington Valley, Baltimore County, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

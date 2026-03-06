@@ -1,0 +1,40 @@
+{
+    "name": "Joseph Thompson",
+    "birthDate": "1871-04-29",
+    "deathDate": "1919-09-18",
+    "bio": "A Representative from Oklahoma; born near Sherman, Grayson County, Tex., April 29, 1871; attended the public schools, and was graduated from Savoy College in Fannin County, Tex., in 1890; studied law; was admitted to the bar in 1892 and commenced practice in Purcell, Indian Territory; moved to Ardmore, Indian Territory; appointed commissioner for the United States court in 1893 and returned to Purcell, Indian Territory; resigned in 1897; moved to Pauls Valley and resumed the practice of law; delegate to the Democratic National Conventions in 1900, 1904, and 1908; member of the Democratic Territorial committee 1896-1904; chairman of the Democratic State committee in 1906 and 1908; served in the State senate 1910-1914; elected as a Democrat to the Sixty-third and to the three succeeding Congresses and served from March 4, 1913, until his death on a train near Martinsburg, W.Va., while en route to his home at Pauls Valley, Okla., September 18, 1919; interment in Mount Olivet Cemetery, Pauls Valley, Okla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

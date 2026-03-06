@@ -1,0 +1,112 @@
+{
+    "name": "Albert Gore",
+    "birthDate": "1948-03-31",
+    "deathDate": null,
+    "bio": "A Representative and Senator from Tennessee, and a Vice President of the United States; born in Washington, D.C., March 31, 1948; attended the public elementary schools of Carthage, Tenn.; graduated, St. Albans High School, Washington, D.C., 1965; graduated, Harvard University 1969; attended Vanderbilt University School of Religion, Nashville, Tenn., 1971-1972 and the School of Law 1974-1976; business executive; engaged in real estate development in Carthage; served in United States Army 1969-1971 in Viet Nam; investigative reporter for the Nashville Tennessean 1971-1976; elected in 1976 as a Democrat to the Ninety-fifth Congress; reelected to the three succeeding Congresses (January 3, 1977-January 3, 1985); was not a candidate for reelection in 1984 to the House of Representatives, but was elected in November 1984 to the United States Senate; reelected in 1990 and served from January 3, 1985, until his resignation on January 2, 1993; unsuccessful candidate for the Democratic presidential nomination in 1988; elected Vice President of the United States on the Democratic ticket headed by William Jefferson Clinton in 1992 and was inaugurated on January 20, 1993; reelected Vice President in 1996; unsuccessful Democratic candidate for president in 2000; awarded the Presidential Medal of Freedom on May 3, 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "UNITED STATES"
+        }
+    ]
+}

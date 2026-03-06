@@ -1,0 +1,32 @@
+{
+    "name": "Betty Sutton",
+    "birthDate": "1963-07-31",
+    "deathDate": null,
+    "bio": "A Representative from Ohio; born in Barberton, Summit County, Ohio, July 31, 1963; graduated from Barberton High School, Barberton, Ohio, 1981; B.A., Kent State University, Kent, Ohio, 1985; J.D., University of Akron, Akron, Ohio, 1990; lawyer, private practice; Barberton, Ohio, city council, 1991-1992; member, Ohio state house of representatives, 1993-2000; elected as a Democrat to the One Hundred Tenth and to the two succeeding Congresses (January 3, 2007-January 3, 2013); unsuccessful candidate for reelection to the One Hundred Thirteenth Congress in 2012; unsuccessful candidate for election as lieutenant governor of Ohio in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Smith Miller",
+    "birthDate": "1804-05-30",
+    "deathDate": "1872-03-21",
+    "bio": "A Representative from Indiana; born near Charlotte, N.C., May 30, 1804; moved to Gibson County, Ind., with his parents who settled in Patoka in 1813; received a limited schooling; engaged in agricultural pursuits; member of the State house of representatives 1835-1839 and in 1846; served in the State senate 1841-1844 and 1847-1850; delegate to the State constitutional convention in 1850; elected as a Democrat to the Thirty-third and Thirty-fourth Congresses (March 4, 1853-March 3, 1857); resumed agricultural pursuits; delegate to the Democratic National Convention at Charleston, S.C., in 1860; died near Patoka, Ind., March 21, 1872; interment in Robb Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "INDIANA"
+        }
+    ]
+}

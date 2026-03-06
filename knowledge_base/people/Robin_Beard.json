@@ -1,0 +1,48 @@
+{
+    "name": "Robin Beard",
+    "birthDate": "1939-08-21",
+    "deathDate": "2007-06-16",
+    "bio": "a Representative from Tennessee; born in Knoxville, Knox County, Tenn., August 21, 1939; attended Montgomery Bell Academy, Nashville, Tenn.; B.A., Vanderbilt University, Nashville, Tenn., 1961; United States Marine Corps, first lieutenant, 1962-1965; United States Marine Corps Reserves; State commissioner of personnel, 1970-1972; delegate to Tennessee State Republican convention, 1972; delegate to Republican National Convention, 1972; elected as a Republican to the Ninety-third Congress and to the four succeeding Congresses (January 3, 1973-January 3, 1983); was not a candidate for reelection to the United States House of Representatives in 1982, but was an unsuccessful candidate for election to the United States Senate; assistant secretary general for defense support, NATO, Brussels, 1984-1987 and 1992-1995; president of an import-export company in Washington, D.C.; senior fellow, Croton Institute; died on June 16, 2007, in Charleston, S.C.; interment at French Protestant Huguenot Church Cemetery, Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

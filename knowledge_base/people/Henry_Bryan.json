@@ -1,0 +1,24 @@
+{
+    "name": "Henry Bryan",
+    "birthDate": "1786-02-23",
+    "deathDate": "1835-05-07",
+    "bio": "A Representative from Tennessee; born in Martin County, N.C., February 23, 1786; attended grammar and high schools; moved to Tennessee and held several local offices; elected as a Democratic Republican to the Sixteenth Congress (March 4, 1819-March 3, 1821); had been reelected to the Seventeenth Congress but did not qualify; died in Montgomery County, Tenn., May 7, 1835.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Sprigg",
+    "birthDate": "1747",
+    "deathDate": "1809-12-13",
+    "bio": "A Representative from Maryland; born in Prince George's County, Md., in 1747; served in the Revolutionary War, ensign in the Maryland Battalion of the Flying Camp from September to December 1776; appointed the first register of wills of Washington County, Md., in 1777, and served until September 29, 1780, when he resigned; appointed lieutenant of Washington County by the governor and Council of Maryland, December 21, 1779; elected as an Anti-Administration candidate to the Third Congress and reelected as a Democratic Republican to the Fourth Congress (March 4, 1793-March 3, 1797); died on December 13, 1809, in Washington County, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MARYLAND"
+        }
+    ]
+}

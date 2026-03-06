@@ -1,0 +1,88 @@
+{
+    "name": "Walter Baring",
+    "birthDate": "1911",
+    "deathDate": "1975",
+    "bio": "A Representative from Nevada; born in Goldfield, Esmeralda County, Nev., September 9, 1911; graduated from Reno High School in 1929 and from the University of Nevada at Reno, B.A. and B.S., 1934; holder of high school teacher's certificate; elected chairman of the Democratic Central Committee of Washoe County, Nev., in 1936; elected assemblyman from Washoe County to the State assembly in 1936, reelected in 1942, and served until his resignation to enlist in the United States Navy; served in the Navy from September 26, 1942, until May 31, 1945; engaged in the furniture business at Reno, Nev., 1945-1948; member of the Reno City Council in 1947 and 1948; elected as a Democrat to the Eighty-first and Eighty-second Congresses (January 3, 1949-January 3, 1953); unsuccessful candidate for reelection in 1952 to the Eighty-third Congress; delegate to the Democratic National Conventions in 1952, 1956, 1960, 1964, and 1968; engaged in the insurance business; unsuccessful candidate for election in 1954 to the Eighty-fourth Congress; elected to the Eighty-fifth and to the seven succeeding Congresses (January 3, 1957-January 3, 1973); unsuccessful candidate for renomination in 1972; returned to his home in Reno, Nev.; died in Los Angeles, Calif., July 13, 1975; cremated; ashes entombed in a mausoleum at Masonic Memorial Gardens, Reno, Nev.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEVADA"
+        }
+    ]
+}

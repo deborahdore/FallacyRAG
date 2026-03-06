@@ -1,0 +1,16 @@
+{
+    "name": "Laphonza Butler",
+    "birthDate": "1979-05-11",
+    "deathDate": null,
+    "bio": "a Senator from California; born in Magnolia, Miss., May 11, 1979; graduated South Pike High School, Magnolia, Miss., 1997; B.A., political science, Jackson State University, 2001; union organizer and president; political campaign consultant and strategist; political action committee executive; University of California Board of Regents 2018-2021; appointed as a Democrat to the United States Senate on October 1, 2023, to fill the vacancy caused by the death of Dianne Feinstein; took the oath of office on October 3, 2023; and served until her resignation on December 8, 2024; not a candidate for election to the unexpired portion of the term.<br />.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

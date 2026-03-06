@@ -1,0 +1,80 @@
+{
+    "name": "John Kunkel",
+    "birthDate": "1898-07-21",
+    "deathDate": "1970-07-27",
+    "bio": "A Representative from Pennsylvania; born in Harrisburg, July 21, 1898; attended Harrisburg Academy, Harrisburg, Pa. and Phillips Academy, Andover, Mass.; graduated from Yale University, New Haven, Conn., 1916; graduated from the law department of Harvard University, Cambridge, Mass., 1926; during the First World War served in the Students' Army Training Corps; was admitted to the bar in Oklahoma and Pennsylvania in 1926; banker; farmer; elected as a Republican to the Seventy-sixth and to the five succeeding Congresses (January 3, 1939-January 3, 1951); was not a candidate for renomination in 1950 but was an unsuccessful candidate for the nomination for United States Senator; county commissioner of Dauphin County, Pa., 1952-1956; elected as a Republican to the Eighty-seventh Congress, by special election, to fill the vacancy caused by the death of United States Representative Walter M. Mumma; reelected to the two succeeding Congresses and served until his resignation on December 30, 1966 (May 16, 1961- December 30, 1966); was not a candidate for reelection to the Ninetieth Congress in 1966; died on July 27, 1970, in Harrisburg, Pa.; interment in Harrisburg Cemetery, Harrisburg, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

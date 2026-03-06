@@ -1,0 +1,56 @@
+{
+    "name": "John Reyburn",
+    "birthDate": "1845-02-07",
+    "deathDate": "1914-01-04",
+    "bio": "A Representative from Pennsylvania; born in New Carlisle, Clark County, Ohio, February 7, 1845; was instructed by a private tutor and attended Saunders Institute, West Philadelphia, Pa.; studied law, was admitted to the bar in 1870 and commenced practice in Philadelphia; member of the State house of representatives in 1871 and 1874-1876; member of the State senate 1876-1892 and served as president pro tempore during the session of 1883; elected as a Republican to the Fifty-first Congress to fill the vacancy caused by the death of William D. Kelley; reelected to the Fifty-second, Fifty-third, and Fifty-fourth Congresses and served from February 18, 1890, to March 3, 1897; unsuccessful candidate for renomination in 1896; elected to the Fifty-ninth Congress to fill the vacancy caused by the death of Robert Adams; reelected to the Sixtieth Congress and served from November 6, 1906, to March 31, 1907, when he resigned, having been elected mayor of Philadelphia, Pa.; served as mayor from April 1, 1907, to December 4, 1911; engaged in manufacturing in Philadelphia, but retained a residence in Washington, D.C., where he died on January 4, 1914; interment in Laurel Hill Cemetery, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

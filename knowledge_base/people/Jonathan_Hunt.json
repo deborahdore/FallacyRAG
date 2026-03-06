@@ -1,0 +1,32 @@
+{
+    "name": "Jonathan Hunt",
+    "birthDate": "1787-08-12",
+    "deathDate": "1832-05-15",
+    "bio": "a Representative from Vermont; born in Vernon, Windham County, Vt., August 12, 1787; graduated from Dartmouth College, Hanover, N.H., in 1807; studied law; was admitted to the bar and commenced practice in Brattleboro, Vt., in 1812; first president of the Old Brattleboro Bank in 1821; member of the Vermont state house of representatives in 1811, 1816, 1817, and 1824; elected as an Adams candidate to the Twentieth Congress; and reelected as an Anti-Jacksonian candidate to the Twenty-first and to the succeeding Congress, and served from March 4, 1827, until his death in Washington, D.C., May 15, 1832; interment in Congressional Cemetery; reinterment in Brattleboro, Vt.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "VERMONT"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "Isaac Holmes",
+    "birthDate": "1796-04-06",
+    "deathDate": "1867-02-24",
+    "bio": "A Representative from South Carolina; born in Charleston, S.C., April 6, 1796; attended the common schools, received private tuition, and was graduated from Yale College in 1815; studied law; was admitted to the bar in 1818 and commenced practice in Charleston; member of the city council; served in the State house of representatives 1826-1829 and 1832-1833; elected as a Democrat to the Twenty-sixth and to the five succeeding Congresses (March 4, 1839-March 3, 1851); chairman, Committee on Commerce (Twenty-eighth Congress), Committee on Naval Affairs (Twenty-ninth Congress); practiced law in San Francisco, Calif., 1851-1854, when he returned to Charleston, S.C.; again resided in San Francisco 1857-1861; returned to South Carolina in 1861 and was appointed a commissioner of the State to confer with the Federal Government; died in Charleston, S.C., February 24, 1867; interment in Circular Churchyard.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

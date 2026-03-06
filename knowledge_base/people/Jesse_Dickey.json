@@ -1,0 +1,16 @@
+{
+    "name": "Jesse Dickey",
+    "birthDate": "1808-02-27",
+    "deathDate": "1890-02-19",
+    "bio": "A Representative from Pennsylvania; born in New Castle, Lawrence County, Pa., February 27, 1808; moved with his parents to New London, Chester County, in 1812; attended the common schools, and was graduated from New London Academy; began teaching school at Hopewell Academy in 1828; engaged in agricultural pursuits; member of the State house of representatives 1842-1845; elected as a Whig to the Thirty-first Congress (March 4, 1849-March 3, 1851), unsuccessful candidate for reelection to the Thirty-second Congress; resumed agricultural pursuits; quartermaster and later paymaster in the United States Army during the Civil War; continued agricultural pursuits; died in New London, Pa., February 19, 1890; interment in Presbyterian Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Garrett",
+    "birthDate": "1972",
+    "deathDate": null,
+    "bio": "A Representative from Virginia; born in Atlanta, Fulton County, Georgia, March 27, 1972; graduated from Louisa County High School, Mineral, Va., 1990; B.A., University of Richmond, Richmond, Va., 1994; J.D., University of Richmond, Richmond, Va., 2002; United States Army, 1995-2000; assistant attorney general, Va., 2002-2007; Louisa County commonwealth attorney, 2008-2012; member of the Virginia state senate, 2012-2016; elected as a Republican to the One Hundred Fifteenth Congress (January 3, 2017-January 3, 2019); was not a candidate for reelection in the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

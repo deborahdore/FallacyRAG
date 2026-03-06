@@ -1,0 +1,24 @@
+{
+    "name": "Jonas Earll",
+    "birthDate": "1786",
+    "deathDate": "1846-10-28",
+    "bio": "a Representative from New York; born in 1786; resided in Onondaga County, N.Y., and attended the common schools; sheriff of Onondaga County, 1815-1819; member of the New York state assembly in 1820 and 1821; served in the New York state senate from January 1823 to January 1827; elected as a Jacksonian candidate to the Twentieth and to the succeeding Congress (March 4, 1827-March 3, 1831); chairman, Committee on Expenditures in the Department of State (Twenty-first Congress); elected a canal commissioner and served from January 1832 to February 1840; postmaster of Syracuse, N.Y., from June 26, 1840, until March 10, 1842; again elected a canal commissioner and served from February 8, 1842, until his death in Syracuse, N.Y., October 28, 1846; interment in Walnut Grove Cemetery, Onondaga Hill, Onondaga County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

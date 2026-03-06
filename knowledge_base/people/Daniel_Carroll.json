@@ -1,0 +1,30 @@
+{
+    "name": "Daniel Carroll",
+    "birthDate": "1730-07-22",
+    "deathDate": "1796-04-07",
+    "bio": "A Delegate and a Representative from Maryland; born in Upper Marlboro, Prince George's County, Md., July 22, 1730; educated at the Jesuit School at Bohemia Manor, Md., and at St. Omer's College, France; returned to Maryland in 1748; member of the Md. state executive council, 1778-1781; Delegate to the Second Continental Congress, 1781; signed the Articles of Confederation; Delegate to the Confederation Congress, 1781-1783; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; member of the Maryland state senate, 1781-1789 and served as president, 1786-1787; elected as a Pro-Administration candidate to the First Congress (March 4, 1789-March 3, 1791); took an active part in fixing the seat of government for the United States; appointed on March 4, 1791, as one of the commissioners to locate the District of Columbia and the Federal City and served until July 25, 1795, when he resigned; engaged in agricultural pursuits, his farm being the site of the present city of Washington; died at Rock Creek (Forest Glen), near Washington, D.C., May 7, 1796.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 2nd Continental Congress",
+            "startDate": "1775-05-10",
+            "endDate": "1781-03-01",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MARYLAND"
+        }
+    ]
+}

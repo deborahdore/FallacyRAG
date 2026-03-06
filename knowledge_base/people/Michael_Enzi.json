@@ -1,0 +1,104 @@
+{
+    "name": "Michael Enzi",
+    "birthDate": "1944",
+    "deathDate": "2021",
+    "bio": "A Senator from Wyoming; born in Bremerton, Wash., February 1, 1944; attended public schools of Thermopolis and Sheridan, Wyo.; graduated, Sheridan High School 1962; received degree in accounting, George Washington University 1966; M.B.A. in retail marketing from Denver University 1968; served in Wyoming National Guard 1967-73; owned and operated family shoe stores in Gillette and Sheridan, Wyo., and Miles City, Mont.; accountant; Certified Professional in Human Resources, 1993-present; Mayor of Gillette 1975-1982; member, Wyoming house of representatives 1987-1991; member, Wyoming state senate 1991-1996; commissioner, Western Interstate Commission for Higher Education 1995-1996; elected as a Republican to the United States Senate in 1996; reelected in 2002, 2008, and again in 2014, and served from January 3, 1997, to January 3, 2021; chair, Committee on Health, Education, Labor, and Pensions (One Hundred Ninth Congress), Committee on Budget (One Hundred Fourteenth through One Hundred Sixteenth Congresses); was not a candidate for reelection to the Senate in 2020; was a resident of Gillette, Wyo., until his death on July 26, 2021; interment in Mount Pisgah Cemetery, Gillette, Wyo.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WYOMING"
+        }
+    ]
+}

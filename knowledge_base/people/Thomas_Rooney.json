@@ -1,0 +1,48 @@
+{
+    "name": "Thomas Rooney",
+    "birthDate": "1970",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Philadelphia, Philadelphia County, Pa., November 21, 1970; attended Syracuse University, Syracuse, N.Y., 1989; B.A., Washington and Jefferson College, Washington, Pa., 1993; M.A., University of Florida, Gainesville, Fla., 1996; J.D., University of Miami, Coral Gables, Fla., 1999; United States Army, 2000-2004; lawyer, private practice; assistant attorney general, Office of the Attorney General, State of Florida; professor, United States Military Academy, West Point, N.Y.; staff, United States Senator Connie Mack III of Florida; elected as a Republican to the One Hundred Eleventh and to the four succeeding Congresses (January 3, 2009-January 3, 2019); was not a candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

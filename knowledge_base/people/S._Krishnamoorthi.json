@@ -1,0 +1,47 @@
+{
+    "name": "S. Krishnamoorthi",
+    "birthDate": "1973-07-19",
+    "deathDate": null,
+    "bio": "A Representative from Illinois; born in New Delhi, India, July 19, 1973; graduated from Richwoods High School, Peoria, Ill., 1991; B.A., Princeton University, Princeton, N.J., 1995; J.D., Harvard Law School, Cambridge, Mass., 2000; lawyer, private practice; business executive; clerk, United States District Court for Northern District of Illinois, 2000-2002; campaign staff, Barack Obama, 2004, 2008; staff, Illinois housing development authority, 2005-2007; Illinois special assistant attorney general, 2006-2007; deputy state treasurer of Illinois, 2008-2009; unsuccessful candidate for Illinois state comptroller, 2010; unsuccessful candidate for nomination to the One Hundred Thirteenth Congress in 2012; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

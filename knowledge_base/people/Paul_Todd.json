@@ -1,0 +1,16 @@
+{
+    "name": "Paul Todd",
+    "birthDate": "1921-09-22",
+    "deathDate": "2008-11-18",
+    "bio": "a Representative from Michigan; born in Kalamazoo, Mich., September 22, 1921; graduated from Beverly Hills High School, Beverly Hills, Calif., 1937; B.S., Cornell University, Ithaca, N.Y., 1942; served in the United States Army Signal Corps and the Office of Strategic Services, 1942-1945; founder of Kalamazoo Spice Extraction Co. in 1958; elected as a Democrat to the Eighty-ninth Congress (January 3, 1965-January 3, 1967); unsuccessful candidate for reelection to the Ninetieth Congress in 1966; chief executive officer, Planned Parenthood Association, 1967-1970; appointed to Governor's Commission on Ethics and served from 1972-1976; business executive; unsuccessful candidate for election to the Ninety-fourth Congress in 1974; died on November 18, 2008, in Kalamazoo, Mich.; interment at Mountain Home Cemetery, Kalamazoo, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

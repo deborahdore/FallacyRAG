@@ -1,0 +1,16 @@
+{
+    "name": "Henry Crocheron",
+    "birthDate": "1772-12-26",
+    "deathDate": "1819-11-08",
+    "bio": "A Representative from New York; born on Staten Island, Richmond County, N.Y., December 26, 1772; attended the common schools; engaged in mercantile pursuits in Northfield; supervisor of Northfield 1808-1814; elected as a Democratic Republican to the Fourteenth Congress (March 4, 1815-March 3, 1817); captain of militia in 1818; died in New Springville, Richmond County, N.Y., on November 8, 1819; interment in St. Andrew's Churchyard, Richmond County, Staten Island, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

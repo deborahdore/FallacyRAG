@@ -1,0 +1,16 @@
+{
+    "name": "Greg Lopez",
+    "birthDate": "1964-06-07",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Dallas, Dallas County, Tex., June 7, 1964; graduated from Chester W. Nimitz High School, Irving, Tex., 1982; graduated from New Mexico State University, Alamogordo, N. Mex., 1986; United States Air Force, 1983-1987; financial advisor; business owner; Mayor of Parker, Colo., 1992-1996; Colo. state director, U.S. Small Business Administration, 2008-2014; unsuccessful candidate for nomination for Governor of Colorado in 2018; unsuccessful candidate for nomination for Governor of Colorado in 2022; elected as a Republican to the One Hundred Eighteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Kenneth Robert Buck (June 25, 2024-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

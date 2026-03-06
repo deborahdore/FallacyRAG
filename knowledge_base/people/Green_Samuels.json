@@ -1,0 +1,16 @@
+{
+    "name": "Green Samuels",
+    "birthDate": "1806-02-01",
+    "deathDate": "1859-01-05",
+    "bio": "A Representative from Virginia; born near Red Banks, Shenandoah County, Va., February 1, 1806; pursued classical studies; studied law; was admitted to the Pennsylvania bar in 1827 and commenced the practice of law; resided at Woodstock, Va.; elected as a Democrat to the Twenty-sixth Congress (March 4, 1839-March 3, 1841); resumed the practice of law; member of the State constitutional convention in 1850 and 1851; elected judge of the circuit court in 1850 and of the court of appeals in 1852; died in Richmond, Va., on January 5, 1859; interment in the Old Lutheran Graveyard, Woodstock, Shenandoah County, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Cornelius Warren",
+    "birthDate": "1790-03-15",
+    "deathDate": "1849-07-28",
+    "bio": "A Representative from New York; born in Phillipstown, Putnam County, N.Y., March 15, 1790; completed preparatory studies; studied law; was admitted to the bar and commenced the practice of law; appointed judge of the court of common pleas in 1841; elected as a Whig to the Thirtieth Congress (March 4, 1847-March 3, 1849); died at Cold Spring, Putnam County, N.Y., July 28, 1849; interment in the Old Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

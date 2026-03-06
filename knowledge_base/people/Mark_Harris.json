@@ -1,0 +1,15 @@
+{
+    "name": "Mark Harris",
+    "birthDate": "1966-04-24",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Winston-Salem, Forsyth County, N.C., April 24, 1966; graduated from Reynolds High School, Winston-Salem, N.C.; B.S., Appalachian State University, Boone, N.C., 1987; M. Div., Southeastern Baptist Theological Seminary, Wake Forest, N.C., 1991; D. Div., Southeastern Baptist Theological Seminary, Wake Forest, N.C., 2009; pastor; unsuccessful candidate for nomination to the United States Senate in 2014; unsuccessful candidate for nomination to the One Hundred Fifteenth Congress in 2016; elected as a Republican to the One Hundred Sixteenth Congress in 2018, but the North Carolina state board of elections directed a new election, in which he chose not to run; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Bolling Hall",
+    "birthDate": "1767-12-25",
+    "deathDate": "1836-02-25",
+    "bio": "a Representative from Georgia; born in Dinwiddie County, Va., December 25, 1767; pursued classical studies; served in the Revolutionary War at the age of 16; moved to Hancock County, Ga., in 1792; held several local offices; member of the Georgia state house of representatives 1800-1802 and 1804-1806; elected as a Democratic Republican to the Twelfth, Thirteenth, and Fourteenth Congresses (March 4, 1811-March 3, 1817); retired to private life; moved to Alabama in 1808 and engaged in planting near Montgomery; chairman of the reception committee to welcome General Lafayette in 1824; died on his plantation, \"Ellerslie,\" in Autauga (now Elmore) County, Ala., February 25, 1836; interment on his estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

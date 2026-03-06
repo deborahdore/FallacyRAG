@@ -1,0 +1,48 @@
+{
+    "name": "Garret Graves",
+    "birthDate": "1972-01-31",
+    "deathDate": null,
+    "bio": "a Representative from Louisiana; born in Baton Rouge, East Baton Rouge Parish, Louisiana, January 31, 1972; graduated from Catholic High School, Baton Rouge, La., 1990; attended the University of Alabama, Tuscaloosa, Ala.; attended Louisiana Tech University, Ruston, La.; attended American University, Washington, D.C.; staff, United States Senator John Breaux of Louisiana; staff, United States Representative Billy Tauzin of Louisiana; staff, United States Senator David Vitter of Louisiana; staff, United States Senate Committee on Commerce; staff, United States Senate Committee on Science and Transportation; staff, United States House Committee on Energy and Commerce; appointed to National Resource Damage Assessment, Gulf Coast; chairman, the Coastal Protection and Restoration Authority of Louisiana; vice chairman of the Gulf Coast Ecosystem Restoration Task Force, United States Environmental Protection Agency; elected as a Republican to the One Hundred Fourteenth and to the four succeeding Congresses (January 3, 2015-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

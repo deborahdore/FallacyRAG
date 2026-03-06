@@ -1,0 +1,16 @@
+{
+    "name": "Luther Strange",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "A Senator from Alabama; born in Birmingham, Ala., March 1, 1953; B.A., Tulane University, 1975; J.D., Tulane University Law School, 1979; admitted to the Alabama Bar in 1981, and engaged in the practice of law in Birmingham; attorney general of Alabama 2011-2017; appointed as a Republican to the United States Senate to fill the vacancy caused by the resignation of Jefferson Sessions; took the oath of office on February 9, 2017, and served until January 3, 2018, a successor having been chosen in a special election; unsuccessful candidate for Republican nomination to the unexpired portion of the term.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

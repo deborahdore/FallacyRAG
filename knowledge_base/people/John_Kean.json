@@ -1,0 +1,72 @@
+{
+    "name": "John Kean",
+    "birthDate": "1852-12-04",
+    "deathDate": "1914-11-04",
+    "bio": "A Representative and a Senator from New Jersey; born at 'Ursino,' near Elizabeth, N.J., December 4, 1852; studied in private schools and attended Yale College; graduated from the Columbia Law School, New York City, in 1875; admitted to the New Jersey bar in 1877, but did not engage in extensive practice; engaged in banking and interested in manufacturing; elected as a Republican to the Forty-eighth Congress (March 4, 1883-March 3, 1885); unsuccessful candidate for reelection in 1884; elected to the Fiftieth Congress (March 4, 1887-March 3, 1889); unsuccessful candidate for reelection in 1888; unsuccessful Republican candidate for Governor in 1892; member of the committee to revise the judiciary system of New Jersey; elected to the United States Senate in 1899; reelected in 1905, and served from March 4, 1899, to March 3, 1911; chairman, Committee on the Geological Survey (Fifty-seventh Congress), Committee to Audit and Control the Contingent Expenses (Fifty-eighth through Sixty-first Congresses); engaged in banking in Elizabeth, N.J.; died in Ursino, N.J., on November 4, 1914; interment in Evergreen Cemetery, Elizabeth, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

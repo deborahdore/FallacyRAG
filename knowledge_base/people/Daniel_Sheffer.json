@@ -1,0 +1,16 @@
+{
+    "name": "Daniel Sheffer",
+    "birthDate": "1783-05-24",
+    "deathDate": "1880-02-16",
+    "bio": "A Representative from Pennsylvania; born in York, Pa., May 24, 1783; attended the common schools and Harvard University; studied medicine in Philadelphia and commenced practice at York Springs, Adams County, Pa.; associate judge of Adams County, Pa., 1813-1837; elected as a Democrat to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); unsuccessful candidate for reelection in 1838 to the Twenty-sixth Congress; resumed the practice of his profession; was a delegate to the Democratic National Convention in 1848; died at York Springs, Pa., February 16, 1880; interment in the Old Lutheran Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

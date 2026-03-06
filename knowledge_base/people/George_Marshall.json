@@ -1,0 +1,16 @@
+{
+    "name": "George Marshall",
+    "birthDate": "1851-09-14",
+    "deathDate": "1899-04-21",
+    "bio": "A Representative from Ohio; born near Sidney, Shelby County, Ohio, September 14, 1851; attended the public schools of Shelby County and Ohio Wesleyan University, Delaware, Ohio; studied law; was admitted to the bar in 1876 and commenced practice in Sidney, Ohio; prosecuting attorney of Shelby County for eight years, being elected in 1878, 1880, and 1883; elected as a Democrat to the Fifty-fifth Congress (March 4, 1897-March 3, 1899); was not a candidate for reelection in 1898; died in Sidney, Ohio, April 21, 1899; interment in Presbyterian Cemetery, Hardin, Shelby County, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

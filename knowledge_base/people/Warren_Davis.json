@@ -1,0 +1,40 @@
+{
+    "name": "Warren Davis",
+    "birthDate": "1793-05-08",
+    "deathDate": "1835-01-29",
+    "bio": "a Representative from South Carolina; born in Columbia, S.C., May 8, 1793; pursued preparatory studies; graduated from South Carolina College (now the University of South Carolina) at Columbia in 1810; studied law; was admitted to the bar in 1814 and practiced in Pendleton, S.C.; State solicitor of the western circuit 1818-1824; elected as a Jacksonian candidate to the Twentieth and to the succeeding Congress; reelected as a Nullifier to the Twenty-second through Twenty-fourth Congresses and served from March 4, 1827, until his death in Washington, D.C., on January 29, 1835, before the opening of the Twenty-fourth Congress; chairman, Committee on the Judiciary (Twenty-second Congress); interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

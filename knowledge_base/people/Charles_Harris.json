@@ -1,0 +1,16 @@
+{
+    "name": "Charles Harris",
+    "birthDate": "1821-04-10",
+    "deathDate": "1896-09-20",
+    "bio": "A Representative from Illinois; born in Munfordsville, Hart County, Ky., April 10, 1821; attended the common schools; studied law; was admitted to the bar; moved to Illinois and located in Oquawka, where he commenced the practice of his profession; elected as a Democrat to the Thirty-eighth Congress (March 4, 1863-March 3, 1865); unsuccessful candidate for reelection in 1864 to the Thirty-ninth Congress; died in Chicago, Ill., September 20, 1896; interment in Oquawka, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

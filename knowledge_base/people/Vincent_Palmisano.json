@@ -1,0 +1,56 @@
+{
+    "name": "Vincent Palmisano",
+    "birthDate": "1882-08-05",
+    "deathDate": "1953-01-12",
+    "bio": "A Representative from Maryland; born in Termini Imerse, Italy, August 5, 1882; immigrated to the United States with his parents, who settled in Baltimore, Md., in 1887; attended parochial schools and studied law at the University of Maryland at Baltimore; was admitted to the bar in 1909 and commenced practice in Baltimore, Md.; member of the State house of delegates in 1914 and 1915; member of the city council 1915-1923; member of the Democratic State central committee of Baltimore 1923-1927; police examiner of Baltimore, Md., 1925-1927; elected as a Democrat to the Seventieth and to the five succeeding Congresses (March 4, 1927-January 3, 1939); chairman, Committee on Education (Seventy-fourth and Seventy-fifth Congresses), Committee on District of Columbia (Seventy-fifth Congress); unsuccessful for renomination in 1938; resumed the practice of law; served on the Baltimore Zoning Board until his resignation in 1952; disappeared from his home on January 12, 1953, and his body was recovered from the Baltimore Harbor on March 5, 1953; interment in New Cathedral Cemetery, Baltimore, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

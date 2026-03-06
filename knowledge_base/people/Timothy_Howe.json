@@ -1,0 +1,80 @@
+{
+    "name": "Timothy Howe",
+    "birthDate": "1816",
+    "deathDate": "1883",
+    "bio": "A Senator from Wisconsin; born in Livermore, Androscoggin County, Maine, February 24, 1816; attended the common schools and graduated from the Maine Wesleyan Seminary; studied law; admitted to the bar in 1839 and commenced practice in Readfield, Maine; moved to Wisconsin in 1845 and settled in Green Bay; judge of the circuit court and supreme court justice of Wisconsin 1850-1853, when he resigned; unsuccessful Republican candidate for the United States Senate in 1856; elected as a Republican to the United States Senate in 1860; reelected in 1866 and 1872 and served from March 4, 1861, to March 3, 1879; unsuccessful candidate for reelection; chairman, Committee on Enrolled Bills (Thirty-eighth and Thirty-ninth Congresses), Committee on Claims (Thirty-ninth through Forty-second Congresses), Committee on the Library (Thirty-ninth Congress, Forty-first Congress, Forty-third through Forty-fifth Congresses); served as a commissioner for the purchase of the Black Hills territory from the Indians; delegate to the International Monetary Conference held at Paris in 1881; appointed Postmaster General in the Cabinet of President Chester Arthur in 1881, and served until his death in Kenosha, Wis., on March 25, 1883; interment in Woodlawn Cemetery, Green Bay, Wis.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

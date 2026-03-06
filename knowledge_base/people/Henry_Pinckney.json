@@ -1,0 +1,24 @@
+{
+    "name": "Henry Pinckney",
+    "birthDate": "1794-09-24",
+    "deathDate": "1863-02-03",
+    "bio": "A Representative from South Carolina; born in Charleston, S.C., September 24, 1794; attended private schools; was graduated from South Carolina College (now the University of South Carolina) at Columbia in 1812; studied law; was admitted to the bar and commenced practice in Charleston; member of the State house of representatives 1816-1832; founded the Charleston Mercury in 1819 and was its sole editor for fifteen years; intendant of Charleston 1830-1832; elected as a Nullifier to the Twenty-third and Twenty-fourth Congresses (March 4, 1833-March 3, 1837); unsuccessful candidate for renomination in 1836; mayor of Charleston 1837-1840; collector of the port of Charleston in 1841 and 1842; tax collector of St. Philip's and St. Michael's parishes 1845-1863; died in Charleston, S.C., February 3, 1863; interment in the Circular Congregational Church Burying Ground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

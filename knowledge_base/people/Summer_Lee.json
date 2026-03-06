@@ -1,0 +1,23 @@
+{
+    "name": "Summer Lee",
+    "birthDate": "1987-11-26",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in North Braddock, Allegheny County, Pa., November 26, 1987; graduated from Woodland Hills High School, Pittsburgh, Pa., 2005; B.A., Pennsylvania State University, University Park, Pa., 2009; J.D., Howard University, Washington, D.C., 2015; field manager; community organizer; intern, office of the attorney general, Washington, D.C., 2013; fellow, NAACP Legal Defense and Educational Fund, 2014; member of the Pennsylvania state house of representatives, 2018-2022; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

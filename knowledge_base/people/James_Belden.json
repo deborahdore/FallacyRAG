@@ -1,0 +1,48 @@
+{
+    "name": "James Belden",
+    "birthDate": "1825-09-30",
+    "deathDate": "1904-01-01",
+    "bio": "A Representative from New York; born in Fabius, Onondaga County, N.Y., September 30, 1825; attended the common schools; engaged in the banking business at Syracuse, N.Y., in 1880; also interested in the construction of railroads and public works; served as mayor of Syracuse, N.Y., in 1877 and 1878; elected as a Republican to the Fiftieth Congress to fill the vacancy caused by the resignation of Frank Hiscock; reelected to the Fifty-first, Fifty-second, and Fifty-third Congresses and served from November 8, 1887, to March 3, 1895; was not a candidate for renomination in 1894; elected to the Fifty-fifth Congress (March 4, 1897-March 3, 1899); was not a candidate for renomination in 1898; died in Syracuse, Onondaga County, N.Y., January 1, 1904; interment in Oakwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "John Wever",
+    "birthDate": "1847-02-24",
+    "deathDate": "1914-09-27",
+    "bio": "A Representative from New York; born in Ganges, Allegan County, Mich., February 24, 1847; attended the common schools and Albion (Mich.) College; during the Civil War entered the Union Army at the age of sixteen and served in the Army of the Cumberland and the Army of the Ohio; at the close of the war settled in Plattsburg, Clinton County, N.Y., and engaged in banking; elected county treasurer of Clinton County in 1884 and reelected in 1887; elected as a Republican to the Fifty-second and Fifty-third Congresses (March 4, 1891-March 3, 1895); was not a candidate for renomination in 1894 to the Fifty-fourth Congress; cashier and later president of the Merchants' National Bank of Plattsburg, N.Y.; died in Plattsburg, N.Y., September 27, 1914; interment in Riverside Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

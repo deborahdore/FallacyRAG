@@ -1,0 +1,48 @@
+{
+    "name": "Alex Mooney",
+    "birthDate": "1971-06-07",
+    "deathDate": null,
+    "bio": "<p>A Representative from West Virginia; born in Washington, D.C., June 7, 1971; graduated from Frederick High School, Frederick, Md., 1989; A.B., Dartmouth College, Hanover, N.H., 1993; unsuccessful candidate for the New Hampshire state house of representatives, 1992; staff, United States Representative Roscoe Gardner Bartlett of Maryland, 1993-1995; staff, House Republican Conference, 1995; member of the Maryland state senate, 1999-2010; chairman, Maryland Republican Party, 2010-2013; member, Republican National Committee, 2011-2013; elected as a Republican to the One Hundred Fourteenth and to the four succeeding Congresses (January 3, 2015-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024, but was an unsuccessful candidate for nomination to the United States Senate.&nbsp;&nbsp;</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

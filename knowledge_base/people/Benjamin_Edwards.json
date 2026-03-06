@@ -1,0 +1,16 @@
+{
+    "name": "Benjamin Edwards",
+    "birthDate": "1753-08-12",
+    "deathDate": "1829-11-13",
+    "bio": "a Representative from Maryland; born in Stafford County, Va., August 12, 1753; attended the common schools; engaged in agricultural and mercantile pursuits in Montgomery County, Md.; member of the State house of delegates for several years; delegate to the State convention which ratified the Federal Constitution in 1788; elected as a Pro-Administration candidate to the Third Congress to fill the vacancy caused by the resignation of Uriah Forrest and served from January 2 to March 3, 1795; moved to Todd County, Ky.; died in Elkton, Ky., November 13, 1829; interment on his estate at Elkton, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "MARYLAND"
+        }
+    ]
+}

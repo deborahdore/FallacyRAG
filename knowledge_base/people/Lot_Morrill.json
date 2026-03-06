@@ -1,0 +1,80 @@
+{
+    "name": "Lot Morrill",
+    "birthDate": "1813",
+    "deathDate": "1883",
+    "bio": "(Brother of Anson Peaslee Morrill), a Senator from Maine; born in Belgrade, Maine, May 3, 1813; attended the district schools and Waterville (now Colby) College, Maine; studied law; admitted to the bar in 1839 and commenced practice in Readfield; moved to Augusta in 1841; member, State house of representatives 1854, and senate 1856, and was elected president of the senate; Governor of Maine 1858-1860; elected as a Republican to the United States Senate to fill the vacancy caused by the resignation of Hannibal Hamlin; reelected in 1863 and served from January 17, 1861, to March 3, 1869; member of the peace convention of 1861 held in Washington, D.C., in an effort to devise means to prevent the impending war; resumed the practice of law in Augusta; appointed in 1869 and subsequently elected to the United States Senate to fill the vacancy caused by the death of William Pitt Fessenden; reelected in 1871 and served from October 30, 1869, until his resignation on July 7, 1876; chairman, Committee to Audit and Control the Contingent Expense (Thirty-eighth and Thirty-ninth Congresses), Committee on the District of Columbia (Thirty-ninth Congress), Committee on Appropriations (Fortieth, Forty-first, Forty-third and Forty-fourth Congresses), Committee on the Library (Forty-first and Forty-second Congresses); Secretary of the Treasury of the United States under President Ulysses Grant 1876-1877; appointed by President Rutherford Hayes collector of customs in Portland from 1877 until his death; died in Augusta, Maine, on January 10, 1883; interment in Forest Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

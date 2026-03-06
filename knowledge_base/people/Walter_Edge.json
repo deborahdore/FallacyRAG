@@ -1,0 +1,56 @@
+{
+    "name": "Walter Edge",
+    "birthDate": "1873",
+    "deathDate": "1956",
+    "bio": "A Senator from New Jersey; born in Philadelphia, Pa., November 20, 1873; moved with his parents to Pleasantville, N.J., in 1877; attended the public schools; employed in a printing office in Atlantic City, N.J., 1890-1894; newspaper owner and publisher; journal clerk of the State senate 1897-1899; during the Spanish-American War served as a second lieutenant; secretary of the State senate 1901-1904; member, State house of assembly 1910; member, State senate 1911-1916, serving as president in 1915; Governor of New Jersey 1917-1919, when he resigned, having been elected United States Senator; elected as a Republican to the United States Senate in 1918; reelected in 1924 and served from March 4, 1919, until his resignation on November 21, 1929, to accept a diplomatic post; chairman, Committee on Coast and Insular Survey (Sixty-sixth Congress), Committee on Interoceanic Canals (Sixty-seventh through Seventy-first Congresses), Committee on Post Office and Post Roads (Sixty-eighth Congress); appointed Ambassador to France by President Herbert Hoover 1929-1933; again Governor of New Jersey 1944-1947; died in New York City, October 29, 1956; interment in Northwood Cemetery, Downingtown, Pa.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

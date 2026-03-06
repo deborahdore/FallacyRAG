@@ -1,0 +1,24 @@
+{
+    "name": "George Eustis",
+    "birthDate": "1828-09-28",
+    "deathDate": "1872-03-15",
+    "bio": "A Representative from Louisiana; born in New Orleans, La., September 28, 1828; was graduated from Jefferson College, Convent, La., and from the law department of Harvard University; was admitted to the bar and commenced practice in New Orleans; elected as an American to the Thirty-fourth and Thirty-fifth Congresses (March 4, 1855-March 3, 1859); secretary to John Slidell and was taken prisoner with him from the British mail steamer <i>Trent</i> in 1861; secretary of the Confederate mission at Paris; remained in Paris after the close of the war; commissioned by Elihu B. Washburne, United States Minister at Paris, to negotiate a postal treaty with the French Government; died in Cannes, France, March 15, 1872; interment in Oak Hill Cemetery, Washington, D.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "American",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "American",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

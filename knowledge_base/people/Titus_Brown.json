@@ -1,0 +1,24 @@
+{
+    "name": "Titus Brown",
+    "birthDate": "1786-02-11",
+    "deathDate": "1849-01-29",
+    "bio": "A Representative from New Hampshire; born in Alstead, Cheshire County, N.H., February 11, 1786; was graduated from Middlebury (Vt.) College in 1811; studied law; was admitted to the bar and commenced practice in Reading, Vt., in 1814; moved to Francestown, N.H., in 1817 and continued the practice of law; member of the State house of representatives 1820-1825; solicitor of Hillsborough County 1823-1825 and 1829-1834; elected as a Adams candidate to the Nineteenth and Twentieth Congresses (March 4, 1825-March 3, 1829); was not a candidate for reelection in 1828; member of the State senate and served as its president in 1842; chairman of the boards of bank and railroad commissioners at the time of his death; died in Francestown, N.H., January 29, 1849; interment in Mill Village Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

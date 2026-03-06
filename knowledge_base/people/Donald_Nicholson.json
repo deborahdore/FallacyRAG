@@ -1,0 +1,56 @@
+{
+    "name": "Donald Nicholson",
+    "birthDate": "1888",
+    "deathDate": "1968",
+    "bio": "A Representative from Massachusetts; born in Wareham, Plymouth County, Mass., August 11, 1888; attended the public schools and took college extension courses; engaged as a salesman; during the First World War served in the United States Army 1917-1919, with overseas service; selectman, assessor, and overseer of the poor, Town of Wareham, Mass., 1920-1925; delegate to all Republican state conventions 1924-1947; served in the Massachusetts state house of representatives in 1925 and 1926; member of the Massachusetts state senate 1926-1947, serving as president in 1946 and 1947; elected as a Republican to the Eightieth Congress by special election, to fill the vacancy caused by the death of United States Representative Charles L. Gifford, and reelected to the five succeeding Congresses (November 18, 1947-January 3, 1959); was not a candidate for renomination to the Eighty-sixth Congress in 1958; retired and resided at Wareham, Mass., until his death February 16, 1968; interment in Center Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

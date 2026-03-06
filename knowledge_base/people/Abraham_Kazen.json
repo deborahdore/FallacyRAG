@@ -1,0 +1,80 @@
+{
+    "name": "Abraham Kazen",
+    "birthDate": "1919-01-17",
+    "deathDate": "1987-11-29",
+    "bio": "A Representative from Texas; born in Laredo, Webb County, Tex., January 17, 1919; graduated from Laredo High School, Laredo, Tex., 1937; attended the University of Texas, 1937-1940; attended Cumberland University Law School, Lebanon, Tenn., 1941; admitted to the Texas bar in 1942 and practiced in Laredo, Tex.; lawyer, private practice; United States Air Force, World War II, 1942-1946; commissioned an Air Force pilot upon his graduation from Lubbock Air Force Base, 1942; during the Second World War served in North Africa, Sicily, and Italy as a pilot in Troop Carrier Command; United States Air Force Reserve, 1946-1953, discharged with the rank of captain; member of the Texas state house of representatives, 1947-1952; member of the Texas state senate, 1953-1966, elected president pro tempore in 1959; served as Acting Governor of Texas, August 4, 1959; member of Texas legislative council for sixteen years; delegate, Democratic National Conventions, 1960 and 1964; elected as a Democrat to the Ninetieth and to the eight succeeding Congresses (January 3, 1967-January 3, 1985); unsuccessful candidate for renomination to the Ninety-ninth Congress in 1984; was a resident of Laredo, Tex., until his death in Austin, Tex., on November 29, 1987; interment in Catholic Cemetery, Laredo, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

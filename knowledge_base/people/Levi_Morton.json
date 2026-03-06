@@ -1,0 +1,40 @@
+{
+    "name": "Levi Morton",
+    "birthDate": "1824-05-16",
+    "deathDate": "1920-05-16",
+    "bio": "A Representative from New York and a Vice President of the United States; born in Shoreham, Addison County, Vt., May 16, 1824; attended the public schools and Shoreham Academy; clerk in a general store in Enfield, Mass., 1838-1840; taught school in Boscawen, N.H., in 1840 and 1841; engaged in mercantile pursuits in Hanover, N.H., in 1845; moved to Boston in 1850; entered the dry-goods business in New York City in 1854; engaged in banking in New York City in 1863; unsuccessful candidate for election in 1876 to the Forty-fifth Congress; was appointed by President Rutherford Hayes honorary commissioner to the Paris Exhibition of 1878; elected as a Republican to the Forty-sixth and Forty-seventh Congresses and served from March 4, 1879, until his resignation, effective March 21, 1881; United States Minister to France 1881-1885; elected Vice President of the United States on the Republican ticket with Benjamin Harrison and served from March 4, 1889, to March 3, 1893; Governor of New York 1895-1897; was an investor in real estate; died in Rhinebeck, Dutchess County, N.Y., on May 16, 1920; interment in the Rhinebeck Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "UNITED STATES"
+        },
+        {
+            "role": "Vice President",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "UNITED STATES"
+        }
+    ]
+}

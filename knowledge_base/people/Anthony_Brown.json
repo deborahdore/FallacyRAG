@@ -1,0 +1,32 @@
+{
+    "name": "Anthony Brown",
+    "birthDate": "1961-11-21",
+    "deathDate": null,
+    "bio": "a Representative from Maryland; born in Huntington, Suffolk County, N.Y., November 21, 1961; graduated from Huntington High School, Huntington, N.Y., 1979; attended United States Military Academy, West Point, N.Y.; A.B., Harvard University, Cambridge, Mass., 1984; J.D., Harvard University, Cambridge, Mass.,1992; United States Army, 1984-1989; United States Army Reserve, 1989-2014; lawyer, private practice; member of the Maryland state general assembly, 1999-2007, majority whip, 2004-2007; lieutenant governor of Maryland, 2007-2015; unsuccessful candidate for Governor of Maryland in 2014; elected as a Democrat to the One Hundred Fifteenth and to the two succeeding Congresses (January 3, 2017-January 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022; attorney general of Maryland, 2023-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Edwin Ricketts",
+    "birthDate": "1867-08-03",
+    "deathDate": "1937-07-03",
+    "bio": "A Representative from Ohio; born near Maxville, Perry County, Ohio, August 3, 1867; attended the public schools; for twelve years was a teacher and superintendent of schools; studied law; was admitted to the bar in 1899 and commenced practice in Logan, Hocking County, Ohio; elected as a Republican to the Sixty-fourth Congress (March 4, 1915-March 3, 1917); was an unsuccessful candidate for reelection in 1916 to the Sixty-fifth Congress; elected to the Sixty-sixth and Sixty-seventh Congresses (March 4, 1919-March 3, 1923); was an unsuccessful candidate for reelection in 1922 to the Sixty-eighth Congress; resumed the practice of law; delegate to the Republican National Convention in 1928; died in Logan, Ohio, on July 3, 1937; interment in Oak Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

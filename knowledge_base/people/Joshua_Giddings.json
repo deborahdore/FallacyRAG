@@ -1,0 +1,104 @@
+{
+    "name": "Joshua Giddings",
+    "birthDate": "1795-10-06",
+    "deathDate": "1864-05-27",
+    "bio": "A Representative from Ohio; born in Tioga Point (later Athens), Bradford County, Pa., October 6, 1795; moved with his parents to Canandaigua, N.Y., in 1795; received a common-school education; again moved with his parents to Ashtabula County, Ohio, in 1806; completed preparatory studies; served in the War of 1812; taught school; studied law; was admitted to the bar in February 1821 and commenced practice in Jefferson, Ohio; member of the Ohio state house of representatives in 1826; elected as a Whig to the Twenty-fifth Congress to fill the vacancy caused by the resignation of Elisha Whittlesey; reelected to the Twenty-sixth and Twenty-seventh Congresses and resigned on March 22, 1842 (December 3, 1838-March 22, 1842); censured by the U.S. House of Representatives on March 22, 1842, in response to his motion in defense of the slave mutineers in the <i>Creole</i> case; subsequently elected to the Twenty-seventh Congress to fill the vacancy caused by his own resignation; reelected as a Whig to the Twenty-eighth through Thirtieth Congresses, reelected as a Free Soiler to the Thirty-first through Thirty-third Congresses, reelected as an Opposition candidate to the Thirty-fourth Congress, and reelected as a Republican to the Thirty-fifth Congress (December 5, 1842-March 3, 1859); chairman, Committee on Claims (Twenty-seventh and Thirty-fourth Congresses); declined to be a candidate for reelection to the Thirty-sixth Congress in 1858; appointed consul general to the British North American Provinces by President Abraham Lincoln on March 25, 1861, and served until his death; died in Montreal, Canada, May 27, 1864; interment in Oakdale Cemetery, Jefferson, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Free Soil",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Free Soil",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Free Soil",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        }
+    ]
+}

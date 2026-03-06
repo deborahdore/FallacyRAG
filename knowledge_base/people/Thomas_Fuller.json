@@ -1,0 +1,40 @@
+{
+    "name": "Thomas Fuller",
+    "birthDate": "1808-03-17",
+    "deathDate": "1876-02-13",
+    "bio": "A Representative from Maine; born in Hardwick, Caledonia County, Vt., March 17, 1808; attended the common schools; studied law; was admitted to the bar and commenced practice in Calais, Maine; elected as a Democrat to the Thirty-first and to the three succeeding Congresses (March 4, 1849-March 3, 1857); chairman, Committee on Commerce (Thirty-third Congress); was not a candidate for renomination in 1856; appointed by President Buchanan as Second Auditor of the Treasury and served from April 15, 1857, to August 3, 1861; engaged in the practice of law before the United States Supreme Court and the Court of Claims in Washington, D.C.; died, while on a visit to his son, near Upperville, Fauquier County, Va., February 13, 1876; interment in Oak Hill Cemetery, Washington, D.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        }
+    ]
+}

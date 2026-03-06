@@ -1,0 +1,40 @@
+{
+    "name": "Charles Scarborough",
+    "birthDate": "1963-04-09",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Atlanta, Fulton County, Ga., April 9, 1963; graduated from Catholic High School, Pensacola, Fla., 1981; B.A., University of Alabama, 1985; J.D., University of Florida School of Law, Gainesville, Fla., 1990; admitted to the Florida State bar, 1991; elected as a Republican to the One Hundred Fourth and three succeeding Congresses, and served until his resignation on September 5, 2001 (January 3, 1995-September 5, 2001); television commentator.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

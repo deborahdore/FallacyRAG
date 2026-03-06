@@ -1,0 +1,72 @@
+{
+    "name": "Benjamin Tallmadge",
+    "birthDate": "1754-02-25",
+    "deathDate": "1835-03-07",
+    "bio": "a Representative from Connecticut; born in Brookhaven, Long Island, N.Y., February 25, 1754; moved to Litchfield, Conn., in 1783; was graduated from Yale College in 1773; superintendent of Wethersfield High School 1773-1776; served in the Revolutionary War; commissioned lieutenant in the Continental Line June 20, 1776; promoted to captain of dragoons December 15, 1776, major April 7, 1777, and colonel September 5, 1779; was appointed postmaster at Litchfield, Conn., in 1792; first president of the Phoenix Branch Bank; treasurer and later president of the Society of the Cincinnati; elected as a Federalist to the Seventh and to the seven succeeding Congresses (March 4, 1801-March 3, 1817); declined to be a candidate for renomination; engaged in mercantile pursuits and was an importer; also interested in banking; died in Litchfield, Conn., March 7, 1835; interment in the East Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

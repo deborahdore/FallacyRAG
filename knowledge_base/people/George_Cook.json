@@ -1,0 +1,16 @@
+{
+    "name": "George Cook",
+    "birthDate": "1851-11-10",
+    "deathDate": "1916-12-18",
+    "bio": "A Representative from Colorado; born in Bedford, Lawrence County, Ind., November 10, 1851; at the age of eleven ran away from home and enlisted in the Fifteenth Regiment, Indiana Volunteer Infantry, in the Union Army and served as a drummer boy; was transferred to the One Hundred and Forty-fifth Regiment, Indiana Volunteer Infantry, and served as chief regimental clerk; at the close of the Civil War attended the public schools, Bedford Academy, and the Indiana University at Bloomington; moved to Chicago in 1880 and entered the employ of the Louisville, New Albany &amp; Chicago Railway; moved to Leadville, Colo., in 1880 and became division superintendent of the Denver &amp; Rio Grande Railroad; mayor of Leadville 1885-1887; moved to Denver in 1888 and became general sales agent for the Colorado Fuel &amp; Iron Co.; department commander of the Grand Army of the Republic for Colorado and Wyoming in 1891 and 1892; became an independent mining operator in 1893; senior vice commander in chief of the Grand Army of the Republic in 1905 and 1906; organized and commanded the Cook Drum Corps, of Denver; elected as a Republican to the Sixtieth Congress (March 4, 1907-March 3, 1909); was not a candidate for renomination in 1908; resumed mining operations in Colorado; died in Pueblo, Colo., December 18, 1916; interment in Fairmount Cemetery, Denver, Colo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

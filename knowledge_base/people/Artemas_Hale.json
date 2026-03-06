@@ -1,0 +1,24 @@
+{
+    "name": "Artemas Hale",
+    "birthDate": "1783-10-20",
+    "deathDate": "1882-08-03",
+    "bio": "A Representative from Massachusetts; born in Winchendon, Worcester County, Mass., October 20, 1783; received a limited education and worked on a farm; taught school in Hingham, Mass., 1804-1814; became interested in the manufacture of cotton gins in Bridgewater; member of the State house of representatives 1824, 1825, 1827, and 1828; served in the State senate 1833 and 1834; again a member of the State house of representatives 1838-1842; delegate to the State constitutional convention in 1853; elected as a Whig to the Twenty-ninth and Thirtieth Congresses (March 4, 1845-March 3, 1849); engaged in agricultural pursuits; presidential elector on the Republican ticket in 1864; died in Bridgewater, Mass., August 3, 1882; interment in Mount Prospect Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

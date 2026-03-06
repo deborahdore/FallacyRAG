@@ -1,0 +1,64 @@
+{
+    "name": "Ronald Coleman",
+    "birthDate": "1941",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in El Paso, El Paso County, Tex., November 29, 1941; attended public schools of El Paso; B.A., University of Texas at El Paso, 1963; J.D., University of Texas School of Law, 1967; attended the University of Kent, Canterbury, England, 1981; served in the United States Army, captain, 1967-1969; teacher, El Paso public schools, 1967; legislative assistant, Texas house and senate; admitted to the Texas bar, 1969 and commenced practice in El Paso; assistant county attorney, El Paso County, Texas, 1969-1973; elected to the Texas house of representatives, 1973-1982; delegate, Texas constitutional convention, 1974; elected as a Democrat to the Ninety-eighth and to the six succeeding Congresses (January 3, 1983-January 3, 1997); was not a candidate for reelection to the One Hundred Fifth Congress.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

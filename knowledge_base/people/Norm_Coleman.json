@@ -1,0 +1,32 @@
+{
+    "name": "Norm Coleman",
+    "birthDate": "1949",
+    "deathDate": null,
+    "bio": "A Senator from Minnesota; born in Brooklyn, New York, on August 17, 1949; B.A., Hofstra University; J.D., University of Iowa 1976; attorney; chief prosecutor for Minnesota state attorney general; Minnesota state solicitor general; mayor of St. Paul, Minnesota 1993-1998; elected as a Republican to the U.S. Senate in 2002, and served from January 3, 2003, to January 3, 2009; was an unsuccessful candidate for reelection in 2008, having failed in his bid to challenge the results of the election.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "name": "Russell Fulcher",
+    "birthDate": "1962-03-09",
+    "deathDate": null,
+    "bio": "A Representative from Idaho; born in Boise, Ada County, Idaho, on March 9, 1962; graduated from Meridian High School, Meridian, Idaho, 1980; B.S., Boise State University, Boise, Idaho, 1984; M.B.A., Boise State University, Boise, Idaho, 1988; businessman; realtor; member of the Idaho state senate, 2005-2014; unsuccessful candidate for nomination as Governor of Idaho in 2014; Delegate, Republican National Convention, 2016; unsuccessful candidate for nomination as Governor of Idaho in 2018; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IDAHO"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Van Taylor",
+    "birthDate": "1972-08-01",
+    "deathDate": null,
+    "bio": "A Representative from Texas; born in Dallas, Dallas County, Tex., August 1, 1972; graduated from St. Paul's School, Concord, N.H., 1991; A.B., Harvard University, Cambridge, Mass., 1995; M.B.A., Harvard University, Cambridge, Mass., 2001; United States Marine Corps, 1995-1999; United States Marine Corps Reserve, 1999-2005; real estate executive; member of the Texas state house of representatives, 2010-2014; member of the Texas state senate, 2015-2019; unsuccessful candidate for nomination to the One Hundred Tenth Congress in 2006; elected as a Republican to the One Hundred Sixteenth and to the succeeding Congress (January 3, 2019-January 3, 2023); was not a candidate for reelection to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

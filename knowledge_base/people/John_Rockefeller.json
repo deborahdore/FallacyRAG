@@ -1,0 +1,128 @@
+{
+    "name": "John Rockefeller",
+    "birthDate": "1937",
+    "deathDate": null,
+    "bio": "(Nephew of Nelson Aldrich Rockefeller, great-grandson of Nelson Aldrich, and son-in-law of Charles Harting Percy), a Senator from West Virginia; born in New York City, June 18, 1937; graduated, Phillips Academy, Exeter, N.H., 1954; graduated, Harvard University 1961; VISTA volunteer, Emmons, W. Va., 1964-1966; member, West Virginia house of delegates 1966-1968; secretary of State of West Virginia 1968-1972; president, West Virginia Wesleyan College 1973-1976; Governor of West Virginia 1977-1985; elected as a Democrat to the United States Senate in 1984 and began service on January 15, 1985; reelected in 1990, 1996, 2002, and again in 2008, and served from January 15, 1985, to January 3, 2015; chair, Committee on Veterans' Affairs (One Hundred Third Congress, One Hundred Seventh Congress [January 3-20, 2001; June 6, 2001-January 3, 2003]), Select Committee on Intelligence (One Hundred Tenth Congress), Committee on Commerce, Science and Transportation (One Hundred Eleventh to One Hundred Thirteenth Congresses); vice-chair, Select Committee on Intelligence (One Hundred Eighth Congress); was not a candidate for reelection in 2014.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

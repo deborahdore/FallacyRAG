@@ -1,0 +1,32 @@
+{
+    "name": "John Van Alen",
+    "birthDate": "1749",
+    "deathDate": "1807-02-27",
+    "bio": "a Representative from New York; born in Kinderhook, Columbia County, N.Y., in 1749; completed preparatory studies; served in the Revolutionary War, a private in the 7th regiment of the Albany County, N.Y., Militia; moved to Defreestville, N.Y., in 1778;&nbsp; engaged in extensive farming operations; surveyed the town of Greenbush, N.Y., 1790; and conducted a general store there; engaged in civil engineering and surveying; assistant court justice in Rensselaer County, N.Y., 1791; elected as a Federalist to the Third Congress, and reelected to the two succeeding Congresses (March 4, 1793-March 3, 1799); member of the New York state assembly, 1800 and 1801; died on February 27, 1807, in Defreestville, N.Y. ; interment in Bloomington Rural Cemetery, North Greenbush, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        }
+    ]
+}

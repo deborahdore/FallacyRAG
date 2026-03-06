@@ -1,0 +1,16 @@
+{
+    "name": "Mark Sibley",
+    "birthDate": "1796",
+    "deathDate": "1852-09-08",
+    "bio": "A Representative from New York; born in Great Barrington, Mass., in 1796; completed preparatory studies; studied law; was admitted to the bar and commenced practice in Canandaigua, N.Y., in 1814; member of the State assembly in 1834 and 1835; elected as a Whig to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); member of the State senate in 1841; judge of Ontario County 1847-1851; resumed the practice of his profession; died in Canandaigua, Ontario County, N.Y., September 8, 1852; interment in West Avenue Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

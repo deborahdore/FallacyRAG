@@ -1,0 +1,31 @@
+{
+    "name": "Sheila Cherfilus-McCormick",
+    "birthDate": "1979-01-25",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Brooklyn, King's County, N.Y., January 25, 1979; graduated from Chaminade-Madonna College Preparatory, Hollywood, Fla., 1997; B.A., Howard University, Washington, D.C., 2001; attended University of Maryland Global Campus, Adelphi, Md., 2005-2007; J.D., St. Thomas University School of Law, Miami Gardens, Fla., 2010; health care executive; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; unsuccessful candidate for nomination to the One Hundred Seventeenth Congress in 2020; elected as a Democrat to the One Hundred Seventeenth Congress, by special election, to fill the vacancy caused by the death of United States Representative Alcee Lamar Hastings, and reelected to the two succeeding Congresses (January 11, 2022-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

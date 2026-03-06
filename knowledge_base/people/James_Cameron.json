@@ -1,0 +1,88 @@
+{
+    "name": "James Cameron",
+    "birthDate": "1833",
+    "deathDate": "1918",
+    "bio": "(Son of Simon Cameron), a Senator from Pennsylvania; born in Middletown, Dauphin County, Pa., May 14, 1833; graduated from Princeton College in 1852, and received a graduate degree in 1855; bank clerk and cashier; president of the Northern Central Railway Co. of Pennsylvania 1866-1874; Secretary of War in the Cabinet of President Ulysses Grant 1876-1877; chairman of the Republican National Committee in 1880; elected as a Republican to the United States Senate to fill the vacancy caused by the resignation of his father, Simon Cameron, March 5, 1877; reelected in 1879, 1885, and 1890, and served from March 20, 1877, to March 3, 1897; chairman, Committee on Naval Affairs (Forty-seventh through Fifty-second and Fifty-fourth Congresses), Committee on Revolutionary Claims (Fifty-third Congress); was not a candidate for reelection; engaged in several business enterprises in Harrisburg, Pa.; died at his country home, 'Donegal,' in Lancaster County, Pa., August 30, 1918; interment in the Harrisburg Cemetery, Harrisburg, Pa.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

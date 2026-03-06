@@ -1,0 +1,72 @@
+{
+    "name": "Andrew Ireland",
+    "birthDate": "1930-08-23",
+    "deathDate": "2024-10-20",
+    "bio": "A Representative from Florida; born in Cincinnati, Hamilton County, Ohio, August 23, 1930; attended private schools in Cincinnati; graduated, Phillips Academy, Andover, Mass., 1948; B.S., Yale University, 1952; graduate studies, Columbia University, New York City, 1953-1954; graduated, Louisiana State University, School of Banking of the South, 1959; consultant; businessman; joined Barnett National Bank in Jacksonville, Fla., 1954; president, chairman, chief executive officer, American National Banks of Winter Haven, Cypress Gardens, and Auburndale, Fla., 1962-1968; senior vice president, director, chief executive officer, Barnett First National Bank of Jacksonville, Winter Haven, Cypress Gardens, and Auburndale, Fla., 1968-1970; director, Federal Reserve Bank of Atlanta, Jacksonville branch, 1966-1968; Winter Haven city commissioner, 1966-1968; delegate, United Nations General Assembly, 1981; elected as a Democrat to the Ninety-fifth and to the three succeeding Congresses; on July 5, 1984, switched party affiliation and continued in office as a Republican; reelected as a Republican to the Ninety-ninth and to the three succeeding Congresses (January 3, 1977-January 3, 1993); was not a candidate for renomination in 1992 to the One Hundred Third Congress; died on October 20, 2024, in Sarasota, Fla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

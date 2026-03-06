@@ -1,0 +1,16 @@
+{
+    "name": "Abraham Stephens",
+    "birthDate": "1796-02-18",
+    "deathDate": "1859-11-25",
+    "bio": "A Representative from New York; born near New City, Rockland County, N.Y., February 18, 1796; justice of the peace; elected as a Democrat to the Thirty-second Congress (March 4, 1851-March 3, 1853); died in Nyack, Rockland County, N.Y., November 25, 1859; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Oliver Dockery",
+    "birthDate": "1830-08-12",
+    "deathDate": "1906-03-21",
+    "bio": "A Representative from North Carolina; born near Rockingham, Richmond County, N.C., August 12, 1830; attended the public schools and Wake Forest (N.C.) College; was graduated from the University of North Carolina at Chapel Hill in 1848; studied law, but never practiced; engaged in agricultural pursuits; member of the State house of representatives in 1858 and 1859; served for a short time in the Confederate service, but withdrew and advocated sustaining the Federal Government; upon the readmission of North Carolina to representation was elected as a Republican to the Fortieth Congress; reelected to the Forty-first Congress and served from July 13, 1868, to March 3, 1871; chairman, Committee on the Freedmen's Bureau (Forty-first Congress); unsuccessful candidate for reelection in 1870 to the Forty-second Congress; again engaged in agricultural pursuits; member of the State constitutional convention in 1875; unsuccessful candidate for Governor in 1888; appointed United States consul general at Rio de Janeiro, Brazil, on June 14, 1889, and served until July 1, 1893; resumed agricultural pursuits; died in Baltimore, Md., March 21, 1906; interment in the family cemetery at Mangum, Richmond County, N.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

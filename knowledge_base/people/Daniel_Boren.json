@@ -1,0 +1,40 @@
+{
+    "name": "Daniel Boren",
+    "birthDate": "1973-08-02",
+    "deathDate": null,
+    "bio": "a Representative from Oklahoma; born in Shawnee, Pottawatomie County, Okla., August 2, 1973; United States Capitol Page School, 1989; B.S., Texas Christian University, Fort Worth, Tex., 1997; M.B.A., University of Oklahoma, 2001; staff, United States Representative Wesley Watkins of Oklahoma; education administrator; bank teller; aide, Oklahoma Corporation Commission; member of the Oklahoma state house of representatives, 2002-2004; elected as a Democrat to the One Hundred Ninth and to the three succeeding Congresses (January 3, 2005-January 3, 2013); was not a candidate for reelection to the One Hundred Thirteenth Congress in 2012.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OKLAHOMA"
+        }
+    ]
+}

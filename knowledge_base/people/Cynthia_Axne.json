@@ -1,0 +1,24 @@
+{
+    "name": "Cynthia Axne",
+    "birthDate": "1965-04-20",
+    "deathDate": null,
+    "bio": "a Representative from Iowa; born in Grand Rapids, Kent County, Michigan, April 20, 1965; graduated from Valley High School, West Des Moines, Iowa, 1983; B.A., University of Iowa, Iowa City, Iowa, 1987; M.B.A., Northwestern University, Evanston, Ill., 2002; staff, Iowa department of natural resources; staff, Iowa department of management; staff, Iowa department of administrative services; journalist; elected as a Democrat to the One Hundred Sixteenth and to the succeeding Congress (January 3, 2019-January 3, 2023); unsuccessful candidate for reelection to the One Hundred Eighteenth Congress in 2022; staff, United States Department of Agriculture.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

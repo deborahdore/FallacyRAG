@@ -1,0 +1,24 @@
+{
+    "name": "George Bradbury",
+    "birthDate": "1770-10-10",
+    "deathDate": "1823-11-07",
+    "bio": "A Representative from Massachusetts; born in Falmouth, Mass., October 10, 1770; was graduated from Harvard University in 1789; studied law; was admitted to the bar and commenced practice in Portland, Maine (until 1820 a district of Massachusetts); member of the Massachusetts house of representatives 1806-1812; elected as a Federalist to the Thirteenth and Fourteenth Congresses (March 4, 1813-March 3, 1817); unsuccessful candidate for renomination in 1816; resumed the practice of law; associate clerk of the Portland Court 1817-1820; member of the State senate in 1820; died in Portland, Maine, November 7, 1823; interment in Eastern Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

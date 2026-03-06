@@ -1,0 +1,16 @@
+{
+    "name": "David Levy",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "A Representative from New York; born in Johnson County, Ind., December 18, 1953; B.A., Hofstra University, 1973, J.D., 1979; admitted to the bar in 1980 and commenced the practice of law; utility company executive; member, Hempstead town council, 1989-1993; elected as a Republican to the One Hundred Third Congress (January 3, 1993-January 3, 1995); unsuccessful candidate for renomination to the One Hundred Fourth Congress.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

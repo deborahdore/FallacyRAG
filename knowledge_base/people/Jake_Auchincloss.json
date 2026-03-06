@@ -1,0 +1,31 @@
+{
+    "name": "Jake Auchincloss",
+    "birthDate": "1988-01-29",
+    "deathDate": null,
+    "bio": "a Representative from Massachusetts; born in Boston, Suffolk County, Mass., on January 29, 1988; graduated from Newton North High School, Newton, Mass., 2006; A.B., Harvard University, Cambridge, Mass., 2010; M.B.A., Massachusetts Institute of Technology, Cambridge, Mass., 2016; United States Marine Corps, 2010-2015; member of the Newton, Mass., city council, 2016-2020; business professional; elected as a Democrat to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

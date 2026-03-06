@@ -1,0 +1,64 @@
+{
+    "name": "Bill Delahunt",
+    "birthDate": "1941-07-17",
+    "deathDate": "2024-03-30",
+    "bio": "a Representative from Massachusetts; born in Quincy, Norfolk County, Mass., July 18, 1941; graduated from Thayer Academy, Braintree, Mass.; B.A., Middlebury College, Middlebury, Vt., 1963; J.D., Boston College School of Law, Chestnut Hill, Mass., 1967; United States Coast Guard Reserves, 1963-1971; lawyer, private practice; member of the Massachusetts state house of representatives, 1973-1975; Norfolk County, Mass., district attorney, 1975-1996; elected as a Democrat to the One Hundred Fifth and to the six succeeding Congresses (January 3, 1997-January 3, 2011); not a candidate for reelection to the One Hundred Twelfth Congress in 2010; died on March 30, 2024, in Quincy, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

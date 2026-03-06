@@ -1,0 +1,16 @@
+{
+    "name": "Alexander Mebane",
+    "birthDate": "1744-11-26",
+    "deathDate": "1795-07-05",
+    "bio": "A Representative from North Carolina; born in Hawfields, N.C., November 26, 1744; attended the common schools of Orange County; delegate to the Provincial Congress of North Carolina in 1776; justice of the peace in 1776 and sheriff of Orange County in 1777; auditor of the Hillsboro district in 1783 and 1784; member of the Hillsboro convention in 1788 and of the Fayetteville convention in 1789; member of the state house of commons 1787-1792; elected as an Anti-Administration candidate to the Third Congress (March 4, 1793-March 3, 1795); died at Hawfields, Orange County, N.C., July 5, 1795.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

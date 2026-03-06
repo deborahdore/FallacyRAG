@@ -1,0 +1,40 @@
+{
+    "name": "Michael Hoffman",
+    "birthDate": "1787-10-11",
+    "deathDate": "1848-09-27",
+    "bio": "a Representative from New York; born in Half Moon, Saratoga County, N.Y., October 11, 1787; completed academic studies; studied medicine and law; was admitted to the bar and commenced practice in Herkimer, Herkimer County, N.Y.; district attorney 1823-1825; elected as a Jacksonian candidate to the Nineteenth Congress and to the three succeeding Congresses (March 4, 1825-March 3, 1833); chairman, Committee on Naval Affairs (Twentieth through Twenty-second Congresses); judge of Herkimer County 1830-1833; canal commissioner of New York 1833-1835; register of the land office at Saginaw, Mich., in 1836; returned to Herkimer, N.Y.; member of the New York state assembly in 1841, 1842, and 1844; delegate to the New York state constitutional convention in 1846; naval officer of New York City from May 3, 1845, until his death in Brooklyn, N.Y., September 27, 1848.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        }
+    ]
+}

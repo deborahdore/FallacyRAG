@@ -1,0 +1,15 @@
+{
+    "name": "Timothy Sheehy",
+    "birthDate": "1985-11-18",
+    "deathDate": null,
+    "bio": "a Senator from Montana; born in Ramsey, Minn., November 18, 1985; graduated St. Paul Academy, St. Paul, Minn., 2004; B.S., United States Naval Academy, Annapolis, Md., 2008; served in the United States Navy SEAL special forces unit; combat veteran of the War in Afghanistan; attained the rank of lieutenant and received the Bronze Star and Purple Heart; aerial firefighter and company founder; elected as a Republican to the United States Senate in 2024 for the term ending January 3, 2031.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        }
+    ]
+}

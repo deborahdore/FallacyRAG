@@ -1,0 +1,32 @@
+{
+    "name": "Emory Price",
+    "birthDate": "1899",
+    "deathDate": "1976",
+    "bio": "A Representative from Florida; born in Bostwick, Putnam County, Fla., December 3, 1899; attended the public schools of Duval County, Fla.; was graduated from Jacksonville (Fla.) Law College in 1936; was admitted to the bar the same year and commenced practice in Jacksonville, Fla.; member of the city council of Jacksonville, Fla., 1929-1932; supervisor of registration of Duval County, Fla., 1932-1942; elected as a Democrat to the Seventy-eighth and to the two succeeding Congresses (January 3, 1943-January 3, 1949); unsuccessful candidate for renomination in 1948 to the Eighty-first Congress; resumed the practice of law and real estate pursuits; died in Jacksonville, Fla., February 11, 1976; interment in Greenlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

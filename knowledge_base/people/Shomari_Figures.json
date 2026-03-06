@@ -1,0 +1,15 @@
+{
+    "name": "Shomari Figures",
+    "birthDate": "1985-09-03",
+    "deathDate": null,
+    "bio": "a Representative from Alabama; born in Mobile, Mobile County, Ala., September 3, 1985; graduated from John L. LeFlore High School, Mobile, Ala., 2003; B.A., University of Alabama, Tuscaloosa, Ala., 2006; J.D., University of Alabama, Tuscaloosa, Ala., 2010; staff, United States District Court, Eastern District of Missouri, 2011-2012; campaign staff, presidential campaign of Barack Obama, 2012; staff, White House Office of Presidential Personnel, 2014-2015; staff, United States Senator Sherrod Brown of Ohio, 2017-2020; staff, United States Department of Justice, 2015-2017, 2021-2023; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

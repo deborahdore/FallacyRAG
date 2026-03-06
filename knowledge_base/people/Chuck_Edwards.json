@@ -1,0 +1,23 @@
+{
+    "name": "Chuck Edwards",
+    "birthDate": "1960-09-13",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Waynesville, Haywood County, N.C., September 13, 1960; graduated from West Henderson High School, Hendersonville, N.C., 1978; attended Blue Ridge Community College, Flat Rock, N.C., 1979-1983; business owner; entrepreneur; member of the North Carolina state senate, 2016-2022; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Horace Voorhis",
+    "birthDate": "1901-04-06",
+    "deathDate": "1984-09-11",
+    "bio": "A Representative from California; born in Ottawa, Franklin County, Kans., April 6, 1901; attended the public schools in Ottawa, Kans., Oklahoma City, Okla., Peoria, Ill., and Pontiac, Mich; was graduated from Yale University in 1923 and from Claremont (Calif.) College in 1928; worked in a factory, handled freight on the railroads, and worked as a cowboy in Wyoming; traveling representative for Y.M.C.A. in Germany in 1923 and 1924; worked in an automobile assembling plant in Charlotte, N.C., in 1924 and 1925; teacher in Allendale Farm School, Lake Villa, Ill., in 1925 and 1926 and Dray Cottage Home for Boys, Laramie, Wyo., in 1926 and 1927; headmaster and trustee of Voorhis School for Boys, San Dimas, Calif., 1928-1938; lecturer at Pomona College, Claremont, Calif., 1930-1935; unsuccessful candidate for the State assembly in 1934; elected as a Democrat to the Seventy-fifth and to the four succeeding Congresses (January 3, 1937-January 3, 1947); unsuccessful candidate for reelection in 1946 to the Eightieth Congress; author; executive director of the Cooperative League of the United States of America, 1947-1967; became secretary, Group Health Association of America, in 1947; resided in Claremont, Calif., until his death there, September 11, 1984; interment in Mountain View Cemetery, Pasadena, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

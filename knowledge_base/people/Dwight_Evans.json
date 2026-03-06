@@ -1,0 +1,55 @@
+{
+    "name": "Dwight Evans",
+    "birthDate": "1954-05-16",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Philadelphia County, Pa., May 16, 1954; graduated from Germantown High School, Philadelphia, Pa., 1971; A.A., Community College of Philadelphia, Philadelphia, Pa., 1973; B.A., La Salle University, Philadelphia, Pa., 1975; teacher, Philadelphia, Pa., public schools; employment counselor, Urban League of Philadelphia, Pa.; member of the Pennsylvania state house of representatives, 1980-2016; unsuccessful candidate for nomination as lieutenant governor of Pennsylvania in 1986; unsuccessful candidate for nomination for Governor of Pennsylvania in 1994; unsuccessful candidate for nomination as Mayor of Philadelphia, Pa., in 1999 &amp; 2007; elected simultaneously as a Democrat to the One Hundred Fourteenth and the One Hundred Fifteenth Congresses, by special election, to fill the vacancy caused by the resignation of United States Representative Chaka Fattah, and reelected to the four succeeding Congresses (November 8, 2016-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

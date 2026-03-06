@@ -1,0 +1,32 @@
+{
+    "name": "Charles Waterman",
+    "birthDate": "1861",
+    "deathDate": "1932",
+    "bio": "A Senator from Colorado; born in Waitsfield, Washington County, Vt., November 2, 1861; attended the rural schools and St. Johnsbury Academy; graduated from the University of Vermont at Burlington in 1885; taught school in Connecticut and also at Fort Dodge, Iowa, 1885-1888; graduated from the law school of the University of Michigan at Ann Arbor in 1889; admitted to the bar the same year and commenced practice in Denver, Colo.; elected as a Republican to the United States Senate in 1926 and served from March 4, 1927, until his death; chairman, Committee on Patents (Seventy-first Congress), Committee on Enrolled Bills (Seventy-second Congress); died in Washington, D.C., August 27, 1932; remains were cremated and the ashes deposited in Cedar Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

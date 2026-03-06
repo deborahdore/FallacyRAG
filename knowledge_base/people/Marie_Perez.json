@@ -1,0 +1,23 @@
+{
+    "name": "Marie Perez",
+    "birthDate": "1988-06-04",
+    "deathDate": null,
+    "bio": "a Representative from Washington; born in Harris County, Tex., June 4, 1988; B.A., Reed College, Portland, Oreg., 2012; small business owner; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

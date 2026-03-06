@@ -1,0 +1,104 @@
+{
+    "name": "Adam Powell",
+    "birthDate": "1908",
+    "deathDate": "1972",
+    "bio": "A Representative from New York; born in New Haven, Conn., November 29, 1908; attended the public schools of New York City; graduated from Colgate University, Hamilton, N.Y., 1930; graduated from Columbia University, New York, N.Y., 1932; graduated from Shaw University, Raleigh, N.C., 1934; ordained minister; member of the New York, N.Y., city council, 1941; newspaper publisher and editor; journalist; instructor, Columbia University Extension School, 1932-1940; cofounder of the National Negro Congress; member of the New York state, Consumer Division, Office of Price Administration, 1942-1944; member of the Manhattan Civilian Defense 1942-1945; elected as a Democrat to the Seventy-ninth and to the ten succeeding Congresses (January 3, 1945-January 3, 1967); elected as a Democrat to the Ninetieth Congress, but was not sworn in and, pursuant to H.Res. 278, on March 1, 1967, was excluded from membership; elected as a Democrat to the Ninetieth Congress, by special election, to fill the vacancy caused by his exclusion but was not sworn in; reelected to the Ninety-first Congress (January 3, 1969-January 3, 1971); unsuccessful candidate for renomination to the Ninety-second Congress in 1970; chairman, Committee on Education and Labor (Eighty-seventh through Eighty-ninth Congresses); died on April 4, 1972, in Miami, Fla.; cremated and ashes scattered over South Bimini in the Bahamas.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

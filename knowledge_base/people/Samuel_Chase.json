@@ -1,0 +1,16 @@
+{
+    "name": "Samuel Chase",
+    "birthDate": null,
+    "deathDate": "1838-08-03",
+    "bio": "A Representative from New York; born in Cooperstown, N.Y., birth date unknown; district attorney of Otsego County, 1821-1829; elected as an Adams candidate to the Twentieth Congress (March 4, 1827-March 3, 1829); died in Richfield, Otsego County, N.Y., August 3, 1838.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        }
+    ]
+}

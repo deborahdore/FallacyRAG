@@ -1,0 +1,48 @@
+{
+    "name": "George Nethercutt",
+    "birthDate": "1944-10-07",
+    "deathDate": "2024-06-14",
+    "bio": "a Representative from Washington; born in Spokane, Spokane County, Wash., October 7, 1944; graduated from North Central High School, Spokane, Wash., 1963; B.A., Washington State University, Spokane, Wash., 1967; J.D., Gonzaga University School of Law, Spokane, Wash., 1971; clerk to United States Judge Raymond E. Plummer of the District of Alaska, 1971-1972; staff counsel and chief of staff to United States Senator Ted Stevens of Alaska, 1972-1977; lawyer, private practice; elected as a Republican to the One Hundred Fourth and to the four succeeding Congresses (January 3, 1995- January 3, 2005); not a candidate for reelection, but was an unsuccessful candidate to the United States Senate in 2004; died on June 14, 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

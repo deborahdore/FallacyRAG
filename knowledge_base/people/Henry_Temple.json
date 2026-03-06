@@ -1,0 +1,88 @@
+{
+    "name": "Henry Temple",
+    "birthDate": "1864-03-31",
+    "deathDate": "1955-01-11",
+    "bio": "A Representative from Pennsylvania; born in Belle Center, Logan County, Ohio, March 31, 1864; attended the common schools; was graduated from Geneva College, Beaver Falls, Pa., in 1883 and from the Covenanter Theological Seminary, Allegheny, Pa., in 1887, pastor of churches at Baxter, Leechburg, and Washington, Pa.; professor of political science at Washington and Jefferson College, Washington, Pa., 1898-1913; elected as a Progressive to the Sixty-third Congress (March 4, 1913-March 3, 1915); unsuccessful candidate for reelection to succeed himself in 1914 to the Sixty-fourth Congress; elected as a Republican to the Sixty-fourth Congress to fill the vacancy caused by the death of William M. Brown; reelected to the Sixty-fifth and to the seven succeeding Congresses and served from November 2, 1915, to March 3, 1933; chairman, Committee on Foreign Affairs (Seventy-first Congress); unsuccessful candidate for reelection in 1932 to the Seventy-third Congress; professor of international relations in Washington and Jefferson College from 1933 until his retirement in 1947; died in Washington, Pa., January 11, 1955; interment in Washington Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Progressive",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

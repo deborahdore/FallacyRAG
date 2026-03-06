@@ -1,0 +1,64 @@
+{
+    "name": "Richard Elliott",
+    "birthDate": "1873-04-25",
+    "deathDate": "1948-03-21",
+    "bio": "A Representative from Indiana; born near Connersville, Fayette County, Ind., April 25, 1873; attended the common schools; taught school three years; studied law; was admitted to the bar in 1896; lawyer, private practice; county attorney of Fayette County, Ind., 1897-1906; member of the Indiana state house of representatives, 1905-1909; city attorney of Connersville,1905-1909; delegate to the Republican National Convention, 1916; chair of the Republican State convention in 1930; elected as a Republican to the Sixty-fifth Congress to fill the vacancy caused by the death of United States Representative Daniel W. Comstock; reelected to the Sixty-sixth and to the five succeeding Congresses (June 29, 1917-March 3, 1931); chair, Committee on Expenditures in the Department of State (Sixty-sixth and Sixty-seventh Congresses), Committee on Elections No. 3 (Sixty-eighth Congress), Committee on Public Buildings and Grounds (Sixty-ninth through Seventy-first Congresses); unsuccessful candidate for reelection to the Seventy-second Congress in 1930; assistant comptroller general of the United States,1931-1943; died on March 21, 1948, in Washington, D.C.; interment in Dale Cemetery, Connersville, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

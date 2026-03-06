@@ -1,0 +1,16 @@
+{
+    "name": "Silas Niblack",
+    "birthDate": "1825-05-17",
+    "deathDate": "1883-02-13",
+    "bio": "a Representative from Florida; born in Camden County, Ga., March 17, 1825; attended the common schools; studied law; admitted to the bar about 1851 and commenced practice in Lake City, Columbia County, Fla.; judge of the probate court of Columbia County; successfully contested as a Democrat the election of Josiah T. Walls to the Forty-second Congress and served from January 29 to March 3, 1873; unsuccessful candidate for reelection in 1872 to the Forty-third Congress; member of the Florida state senate in 1879; carried on extensive farming operations and engaged in the practice of law in Lake City, Columbia County, Fla., until his death on February 13, 1883; interment in the Old Cathey Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

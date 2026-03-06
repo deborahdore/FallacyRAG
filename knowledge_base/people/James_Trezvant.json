@@ -1,0 +1,32 @@
+{
+    "name": "James Trezvant",
+    "birthDate": null,
+    "deathDate": "1841-09-02",
+    "bio": "a Representative from Virginia; born in Sussex County, Va., birth date unknown; completed preparatory studies; studied law; was admitted to the bar and commenced practice in Jerusalem, Va.; attorney general of Virginia; delegate to the Virginia state constitutional convention in 1820; served in the Virginia state house of delegates; elected as a Jacksonian candidate to the Nineteenth and to the two succeeding Congresses (March 4, 1825-March 3, 1831); chairman, Committee on Military Pensions (Twenty-first Congress); died in Southampton County, Va., September 2, 1841.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

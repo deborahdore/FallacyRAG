@@ -1,0 +1,16 @@
+{
+    "name": "Richard Schell",
+    "birthDate": "1810",
+    "deathDate": "1879",
+    "bio": "A Representative from New York; born in Rhinebeck, Rhinebeck County, N.Y., May 15, 1810; completed preparatory studies; engaged in mercantile pursuits; moved to New York City in 1830 and became a wholesale dry-goods merchant; member of the State senate in 1857; elected as a Democrat to the Forty-third Congress to fill the vacancy caused by the death of David B. Mellish and served from December 7, 1874, to March 3, 1875; resumed mercantile pursuits; died in New York City, November 10, 1879; interment in the Old Dutch Cemetery, Rhinebeck, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

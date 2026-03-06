@@ -1,0 +1,88 @@
+{
+    "name": "George McDuffie",
+    "birthDate": "1790-08-10",
+    "deathDate": "1851-03-11",
+    "bio": "a Representative and a Senator from South Carolina; born in Columbia County, Ga., August 10, 1790; attended an old-field school and a private academy; graduated from South Carolina College (now the University of South Carolina) at Columbia in 1813; studied law; admitted to the bar in 1814 and commenced practice in Pendleton, Anderson County, S.C.; member, South Carolina state house of representatives, 1818-1819; elected as a Democratic Republican to the Seventeenth Congress; reelected as a Jackson Republican to the Eighteenth Congress; reelected as a Jacksonian candidate to the Nineteenth and to the two succeeding Congresses; reelected as a Nullifier to the Twenty-second and to the succeeding Congress, and served from March 4, 1821, until his resignation in 1834; chairman, Committee on Ways and Means (Nineteenth through Twenty-second Congresses); one of the managers appointed by the House of Representatives in 1830 to conduct the impeachment proceedings against James H. Peck; Governor of South Carolina 1834-1836; president of the board of trustees of South Carolina College; elected as a Democrat to the United States Senate to fill the vacancy caused by the resignation of William C. Preston; reelected, and served from December 23, 1842, until August 17, 1846, when he resigned; chairman, Committee on Foreign Relations (Twenty-ninth Congress); died at 'Cherry Hill,' Sumter District (now Sumter County), S.C., March 11, 1851; interment in Cherry Hill Cemetery, Sumter District, S.C.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

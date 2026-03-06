@@ -1,0 +1,72 @@
+{
+    "name": "Julia Hansen",
+    "birthDate": "1907-06-14",
+    "deathDate": "1988-05-13",
+    "bio": "a Representative from Washington; born Julia Carrie Butler, June 14, 1907, in Portland, Multnomah County, Oreg.; attended the public schools of Washington and Oregon State College, 1924-1926; graduated from the University of Washington at Seattle in 1930; member of Cathlamet, Wash., city council 1938-1946; chairman of Western Interstate Committee on Highway Policies 1951-1961; manager of a title and casualty insurance business 1958-1961; member of the State house of representatives from January 1939 until November 1960, serving as speaker pro tempore 1955-1960; member of board of trustees of the Century 21 Exposition, 1958-1962; elected simultaneously as a Democrat to the Eighty-sixth and to the Eighty-seventh Congress by special election, to fill the vacancy caused by the death of United States Representative Russell V. Mack and reelected to the six succeeding Congresses; served until her resignation on December 31, 1974 (November 8, 1960-December 31, 1974); was not a candidate for renomination to the Ninety-fourth Congress in 1974; appointed in 1975 to a six-year term on the Washington State Toll Bridge Authority and State Highway Commission; chairman, Washington State Transportation commission, 1979-1981; died on May 3, 1988, in Cathlamet, Wash.; interment at Greenwood Cemetery, Cathlamet, Wash.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

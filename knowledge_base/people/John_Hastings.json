@@ -1,0 +1,24 @@
+{
+    "name": "John Hastings",
+    "birthDate": "1778",
+    "deathDate": "1854-12-08",
+    "bio": "A Representative from Ohio; born in Ireland in 1778; engaged in agricultural pursuits; studied law in Lisbon, Ohio; was admitted to the bar and practiced in Mississippi; engaged in various business enterprises; returned to Ohio and settled in Hanover Township, Columbiana County; engaged in agricultural pursuits; elected as a Democrat to the Twenty-sixth and Twenty-seventh Congresses (March 4, 1839-March 3, 1843); resumed agricultural pursuits; died near Hanoverton, Ohio, December 8, 1854; interment in Grove Hill Cemetery, Hanoverton, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

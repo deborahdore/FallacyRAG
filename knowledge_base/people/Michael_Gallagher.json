@@ -1,0 +1,40 @@
+{
+    "name": "Michael Gallagher",
+    "birthDate": "1984-03-03",
+    "deathDate": null,
+    "bio": "A Representative from Wisconsin; born in Green Bay, Brown County, Wis., March 3, 1984; graduated from Mater Dei High School, Santa Ana, Calif., 2002; A.B., Princeton University, Princeton, N.J., 2006; M.S., National Intelligence University, Washington, D.C., 2010; M.A., Georgetown University, Washington, D.C., 2012; M.A., Georgetown University, Washington, D.C., 2013; Ph.D., Georgetown University, Washington, D.C., 2015; United States Marine Corps, 2006-2013; staff, United States Senate Foreign Relations Committee, 2013-2015; presidential campaign staff, Scott Walker, 2015; businessman; elected as a Republican to the One Hundred Fifteenth and to the three succeeding Congresses until his resignation on April 24, 2024 (January 3, 2017-April 24, 2024); chair, Select Committee on the Strategic Competition between the U.S. and the Chinese Communist Party (One Hundred Eighteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

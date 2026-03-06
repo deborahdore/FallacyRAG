@@ -1,0 +1,56 @@
+{
+    "name": "Loren Fletcher",
+    "birthDate": "1833-04-10",
+    "deathDate": "1919-04-15",
+    "bio": "A Representative from Minnesota; born in Mount Vernon, Kennebec County, Maine, April 10, 1833; attended the public schools and Maine Wesleyan Seminary, Kents Hill, Maine; moved to Bangor in 1853; was a stonecutter, clerk in a store, and an employee of a lumber company; moved to Minneapolis, Minn., in 1856 and engaged in manufacturing and mercantile pursuits, largely in the manufacture of lumber and flour; member of the board of directors of the First National Bank upon its establishment in 1864; member of the State house of representatives 1872-1886 and served as speaker from 1880 to 1886; elected as a Republican to the Fifty-third and to the four succeeding Congresses (March 4, 1893-March 3, 1903); chairman, Committee on Expenditures on Public Buildings (Fifty-seventh Congress); unsuccessful candidate for reelection in 1902 to the Fifty-eighth Congress; elected to the Fifty-ninth Congress (March 4, 1905-March 3, 1907); declined to be a candidate for reelection; retired from active business; died in Atlanta, Ga., April 15, 1919; interment in Lakewood Cemetery, Minneapolis, Minn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MINNESOTA"
+        }
+    ]
+}

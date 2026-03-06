@@ -1,0 +1,80 @@
+{
+    "name": "Hiram Fong",
+    "birthDate": "1906",
+    "deathDate": "2004",
+    "bio": "A Senator from Hawaii; born in Honolulu, Hawaii, October 15, 1906; attended public schools; graduated from the University of Hawaii in 1930 and Harvard Law School in 1935; admitted to the bar in 1935 and commenced the practice of law in Honolulu; deputy attorney for city and county of Honolulu 1935-1938; during the Second World War served as judge advocate of the Seventh Fighter Command of the Seventh Air Force with rank of major 1942-1945; member of the Territorial legislature 1938-1954, serving four years as vice speaker and six years as speaker; vice president of the Territorial Constitutional Convention in 1950; chairman of the board and president of several insurance and financial institutions; engaged in banana farming in Honolulu; elected as a Republican to the United States Senate in 1959 upon the admission of Hawaii as a State; reelected in 1964 and again in 1970 and served from August 21, 1959, to January 3, 1977; was not a candidate for reelection in 1976; returned to private enterprise, and served as chairman of Finance Enterprises, Ltd.; was a resident of Kahaluu, Hawaii, until his death due to kidney failure on August 18, 2004; interment in Nuuanu Memorial Park and Mortuary, Honolulu, Hawaii.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        }
+    ]
+}

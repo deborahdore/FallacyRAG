@@ -1,0 +1,48 @@
+{
+    "name": "Thomas Gunter",
+    "birthDate": "1826",
+    "deathDate": "1904",
+    "bio": "A Representative from Arkansas; born near McMinnville, Warren County, Tenn., September 18, 1826; pursued classical studies and was graduated from Irving College in 1850; studied law; was admitted to the bar in 1853 and commenced practice in Fayetteville, Washington County, Ark., in 1853; during the Civil War served in the Confederate Army as colonel of the Thirteenth Regiment, Arkansas Volunteers; prosecuting attorney for the fourth judicial circuit 1866-1868; successfully contested as a Democrat the election of William W. Wilshire to the Forty-third Congress; reelected to the Forty-fourth and to the three succeeding Congresses and served from June 16, 1874, to March 3, 1883; chairman, Committee on Private Land Claims (Forty-fourth through Forty-sixth Congresses); was not a candidate for renomination in 1882; resumed the practice of law in Fayetteville, Ark., and died there January 12, 1904; interment in Evergreen Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

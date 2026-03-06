@@ -1,0 +1,88 @@
+{
+    "name": "Cathy McMorris Rodgers",
+    "birthDate": "1969-05-22",
+    "deathDate": null,
+    "bio": "(served under the name of McMorris, Cathy in the One Hundred Ninth Congress and the name McMorris Rodgers, Cathy in the One Hundred Tenth through One Hundred Fifteenth Congresses), a Representative from Washington; born in Salem, Marion County, Oreg., May 22, 1969; graduated from Columbia River Christian Academy, Kettle Falls, Wash., 1986; B.A., Pensacola Christian College, Pensacola, Fla., 1990; M.B.A., University of Washington, Seattle, Wash., 2002; family orchard business; member of the Washington state house of representatives, 1994-2004, minority leader, 2002-2003; elected as a Republican to the One Hundred Ninth and to the nine succeeding Congresses (January 3, 2005-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024; chair, House Republican Conference (One Hundred Thirteenth through One Hundred Fifteenth Congresses); chair, Committee on Energy and Commerce (One Hundred Eighteenth Congress).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

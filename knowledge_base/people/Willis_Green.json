@@ -1,0 +1,32 @@
+{
+    "name": "Willis Green",
+    "birthDate": "1818",
+    "deathDate": "1893",
+    "bio": "A Representative from Kentucky; born in 1818; miller; lumberman; merchant; postmaster; member of the Kentucky state house of representatives, 1836-1837; elected as a Whig to the Twenty-sixth, Twenty-seventh, and Twenty-eighth Congresses (March 4, 1839-March 3, 1845); died in 1893.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "John Conness",
+    "birthDate": "1821",
+    "deathDate": "1909",
+    "bio": "A Senator from California; born in Abbey, County Galway, Ireland, September 22, 1821; immigrated to the United States in 1833; learned the art of pianoforte making in New York; moved to California in 1849 and engaged in mining and mercantile pursuits; member, State assembly 1853-1854, 1860-1861; unsuccessful candidate for Governor of California in 1861; elected as a Douglas Democrat to the United States Senate, afterwards changed to a Union Republican, and served from March 4, 1863, to March 3, 1869; chairman, Committee on Mining (Thirty-ninth and Fortieth Congresses); moved to Boston, Mass., in 1869; retired from active business pursuits; died in Jamaica Plain, Mass., January 10, 1909; interment in Cedar Grove Cemetery, Dorchester, Mass.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Francis Johnson",
+    "birthDate": "1776-06-19",
+    "deathDate": "1842-04-16",
+    "bio": "A Representative from Kentucky; born in Caroline County, Va., June 19, 1776; pursued preparatory studies; studied law; was admitted to the bar and practiced; moved to Woodford County, Ky., in 1796 and to Bowling Green in 1807; member of the Kentucky state house of representatives in 1812, 1813, and 1815; elected as a Democratic Republican to the Sixteenth Congress to fill the vacancy caused by the death of David Walker; reelected as a Democratic Republican to the Seventeenth Congress; elected as an Adams-Clay Republican to the Eighteenth Congress and as an Adams candidate to the Nineteenth Congress; and served from November 13, 1820, to March 3, 1827; chairman, Committee on the Post Office and Post Roads (Seventeenth and Eighteenth Congresses); moved to Louisville, Ky., in 1829 and resumed the practice of law; served as Commonwealth attorney for the fifth district; unsuccessful Republican candidate for Governor; died in Louisville, Ky., May 16, 1842; interment in the old family burial ground, later a municipal playground.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

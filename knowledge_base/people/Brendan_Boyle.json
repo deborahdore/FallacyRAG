@@ -1,0 +1,55 @@
+{
+    "name": "Brendan Boyle",
+    "birthDate": "1977-02-06",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Philadelphia County, Pa., February 6, 1977; graduated from Cardinal Dougherty High School, Philadelphia, Pa., 1995; B.A., University of Notre Dame, Notre Dame, Ind., 1999; M.P.P., Harvard University Kennedy School of Government, Cambridge, Mass., 2005; radio broadcaster; management consultant; adjunct professor, Drexel University, Philadelphia, Pa.; member of the Pennsylvania state house of representatives, 2008-2014; elected as a Democrat to the One Hundred Fourteenth and to the five succeeding Congresses (January 3, 2015-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

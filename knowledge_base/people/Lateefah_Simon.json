@@ -1,0 +1,15 @@
+{
+    "name": "Lateefah Simon",
+    "birthDate": "1977-01-29",
+    "deathDate": null,
+    "bio": "a Representative from California; born in San Francisco, San Francisco County, Calif., January 29, 1977; B.A., Mills College, Oakland, Calif., 2009; M.P.A., University of San Francisco, San Francisco, Calif., 2022; non-profit executive; member of the Bay Area Rapid Transit (BART) board of directors, 2016-2024, president, 2020-2024; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "John King",
+    "birthDate": "1842-04-20",
+    "deathDate": "1915-05-08",
+    "bio": "a Representative from Louisiana; born on St. Simons Island, off the coast of Georgia, April 20, 1842; attended the Russell School, New Haven, Conn., Bartlett's College Hill School, Poughkeepsie, N.Y., the Military Institute of Georgia, and the University of Virginia at Charlottesville; enlisted in the Confederate Army and served in the Army of Virginia throughout the Civil War, attaining the rank of colonel of Artillery; moved to Louisiana and engaged in planting; studied law; was admitted to the bar in 1872 and commenced practice in Vidalia, La.; appointed brigadier general of State troops; elected inspector of levees and president of the board of school directors of his district and also a trustee of the University of the South; elected as a Democrat to the Forty-sixth and to the three succeeding Congresses (March 4, 1879-March 3, 1887); chairman, Committee on Levees and Improvements of the Mississippi River (Forty-eighth and Forty-ninth Congresses); unsuccessful candidate for renomination in 1886; engaged in mining operations, with residence in Washington, D.C.; Assistant Register of the United States Treasury from May 19, 1914, until his death in Washington, D.C., May 8, 1915; interment at Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

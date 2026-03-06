@@ -1,0 +1,80 @@
+{
+    "name": "Charles Boutelle",
+    "birthDate": "1839-02-09",
+    "deathDate": "1901-05-21",
+    "bio": "A Representative from Maine; born in Damariscotta, Lincoln County, Maine, February 9, 1839; attended the public schools at Brunswick and the Yarmouth Academy; adopted the profession of shipmaster; in the spring of 1862 volunteered and was appointed acting master in the United States Navy; served in the North and South Atlantic and West Gulf Squadrons; promoted to lieutenant, May 5, 1864; participated in the capture of Mobile and in receiving surrender of the Confederate Fleet; afterwards assigned to command of naval forces in Mississippi Sound; honorably discharged January 14, 1866; engaged in business in New York; became managing editor of the Bangor (Maine) Whig and Courier in 1870 and purchased controlling ownership in 1874; delegate to the Republican National Convention at Cincinnati in 1876; elected as a Republican to the Forty-eighth and to the nine succeeding Congresses and served from March 4, 1883, until his resignation, March 3, 1901, before the commencement of the Fifty-seventh Congress, to which he had been reelected; chairman, Committee on Naval Affairs (Fifty-first Congress and Fifty-fourth through Fifty-sixth Congresses); by joint resolution of Congress on January 16, 1901, was placed on the retired list of the Navy, with the rank of captain; died in Waverley, Middlesex County, Mass., May 21, 1901; interment in Mount Hope Cemetery, Bangor, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

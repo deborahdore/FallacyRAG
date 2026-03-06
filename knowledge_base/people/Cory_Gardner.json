@@ -1,0 +1,48 @@
+{
+    "name": "Cory Gardner",
+    "birthDate": "1974",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from Colorado; born in Yuma, Yuma County, Colo., on August 22, 1974; graduated from Yuma High School, Yuma, Colo., 1993; B.A., Colorado State University, Fort Collins, Colo., 1997; J.D., University of Colorado, Boulder, Colo., 2001; agricultural advocate; staff, United States Senator Wayne Allard of Colorado, 2002-2005; member of the Colorado state house of representatives, 2005-2010; elected as a Republican to the One Hundred Twelfth and to the succeeding Congress (January 3, 2011-January 3, 2015); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2014, and served from January 3, 2015, to January 3, 2021; chair, National Republican Senatorial Committee (2017-2018); was an unsuccessful candidate for reelection to the Senate in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "name": "William Murphy",
+    "birthDate": "1899",
+    "deathDate": "1978",
+    "bio": "A Representative from Illinois; born in Chicago, Ill., August 7, 1899; attended Yale and Harvard elementary schools and Calumet High School in Chicago; graduated from Loyola University School of Law in 1926; was admitted to the bar in 1927 and commenced the practice of law in Chicago, Ill.; during the First World War served in the United States Army; alderman of the seventeenth ward, city of Chicago, 1935-1959; member of Chicago Planning Commission 1947-1959; licensed professional engineer; registered land surveyor; delegate to the Democratic National Conventions in 1944, 1948, 1952, and 1956; elected as a Democrat to the Eighty-sixth and to the five succeeding Congresses (January 3, 1959-January 3, 1971); was not a candidate for reelection in 1970 to the Ninety-second Congress; died in Oak Lawn, Ill., January 29, 1978; interment in Holy Sepulchre Cemetery, Worth, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

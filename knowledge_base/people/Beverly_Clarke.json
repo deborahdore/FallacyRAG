@@ -1,0 +1,16 @@
+{
+    "name": "Beverly Clarke",
+    "birthDate": "1809-02-11",
+    "deathDate": "1860-03-17",
+    "bio": "A Representative from Kentucky; born in Winterfield, Chesterfield County, Va., February 11, 1809; attended the common schools; moved to Kentucky in 1823; studied law in Franklin, Ky., and was graduated from the Lexington Law School in 1831; was admitted to the bar in 1833 and commenced practice in Franklin, Ky.; member of the State house of representatives in 1841 and 1842; delegate to the State constitutional convention in 1849; elected as a Democrat to the Thirtieth Congress (March 4, 1847-March 3, 1849); delegate to the State constitutional convention in 1849; unsuccessful Democratic nominee for Governor in 1855; appointed by President Buchanan Minister to Guatemala, and was also accredited to Honduras, and served from January 7, 1858, until his death in Guatemala, March 17, 1860; interment in the State Cemetery, Frankfort, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

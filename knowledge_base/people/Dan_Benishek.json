@@ -1,0 +1,32 @@
+{
+    "name": "Dan Benishek",
+    "birthDate": "1952-04-20",
+    "deathDate": "2021-10-15",
+    "bio": "A Representative from Michigan; born in Iron River, Iron County, Mich., April 20, 1952; graduated from West Iron County High School, Iron River, Mich., 1970; B.S., University of Michigan, Ann Arbor, Mich., 1974; M.D., Wayne State University Medical School, Detroit, Mich., 1978; physician; elected as a Republican to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016; died on October 15, 2021.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

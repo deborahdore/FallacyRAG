@@ -1,0 +1,48 @@
+{
+    "name": "Llewellyn Powers",
+    "birthDate": "1836-10-14",
+    "deathDate": "1908-07-28",
+    "bio": "A Representative from Maine; born in Pittsfield, Somerset County, Maine, October 14, 1836; attended the common schools of Pittsfield and St. Albans Academy; was graduated from the Colburn Classical Institute; attended Colby University, Waterville, Maine, and was graduated from the law department of Union University, Albany, N.Y., in 1860; was admitted to the bar in Albany, N.Y., and Somerset, Maine, in 1860 and commenced practice in Houlton, Maine, in January 1861; prosecuting attorney for Aroostook County 1864-1871; collector of customs for the district of Aroostook 1868-1872; member of the State house of representatives 1873-1876, 1883, 1892, and 1895 and served as speaker during the last term; elected as a Republican to the Forty-fifth Congress (March 4, 1877-March 3, 1879); unsuccessful candidate for reelection in 1878 to the Forty-sixth Congress; Governor of Maine 1896-1900; elected as a Republican to the Fifty-seventh Congress to fill the vacancy caused by the resignation of Charles A. Boutelle; reelected to the Fifty-eighth, Fifty-ninth, and Sixtieth Congresses and served from April 8, 1901, until his death in Houlton, Maine, July 28, 1908; interment in West Pittsfield Cemetery, near Pittsfield, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "name": "Mary Scanlon",
+    "birthDate": "1959-08-30",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born in Syracuse, Onondaga County, N.Y., August 30, 1959; graduated from Watertown High School, Watertown, N.Y., 1976; B.A., Colgate University, Hamilton, N.Y., 1980; J.D., University of Pennsylvania, Philadelphia, Pa., 1984; lawyer, private practice; judicial law clerk, superior court of Pennsylvania; <span class=\"cf0\">member of the Wallingford-Swarthmore, Pa., school board, 2007-2015, president, 2009-2011;</span> attorney, Education Law Center of Pennsylvania, 1992-2001; elected simultaneously as a Democrat to the One Hundred Fifteenth and the One Hundred Sixteenth Congresses, by special election, to fill the vacancy caused by the resignation of United States Representative Patrick Meehan, and reelected to the three succeeding Congresses (November 6, 2018-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

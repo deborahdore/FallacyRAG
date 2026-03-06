@@ -1,0 +1,24 @@
+{
+    "name": "Daniel Forney",
+    "birthDate": "1784-05",
+    "deathDate": "1847-10-15",
+    "bio": "a Representative from North Carolina; born near Lincolnton, Lincoln County, N.C., in May 1784; attended the public schools and the University of North Carolina at Chapel Hill; engaged in agricultural pursuits; served as a major in the War of 1812; held several local offices; elected as a Democratic Republican to the Fourteenth and Fifteenth Congresses and served from March 4, 1815, until his resignation in 1818; appointed by President Monroe a commissioner to treat with the Creek Indians in 1820; served as a member of the North Carolina state senate 1823-1826; moved to Alabama in 1834 and settled in Lowndes County; resumed agricultural pursuits and became interested in various business enterprises; died in Lowndes County, Ala., October 15, 1847; interment in family burying ground, Lowndes County, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Richard Aldrich",
+    "birthDate": "1884-02-29",
+    "deathDate": "1941-12-25",
+    "bio": "A Representative from Rhode Island; born in Washington, D.C., February 29, 1884; attended the public schools in Providence, R.I.; was graduated from Hope Street High School at Providence in 1902, from Yale University in 1906, and from the law department of Harvard University in 1909; was admitted to the bar in 1911 and commenced the practice of law in New York City; returned to Providence, R.I., in 1913 and continued the practice of his profession; member of the Rhode Island house of representatives 1914-1916; served in the State senate 1916-1918; elected as a Republican to the Sixty-eighth and to the four succeeding Congresses (March 4, 1923-March 3, 1933); was not a candidate for renomination in 1932; resumed legal pursuits in Providence, R.I., until his death there on December 25, 1941; interment in Swan Point Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

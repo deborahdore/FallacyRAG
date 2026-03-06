@@ -1,0 +1,39 @@
+{
+    "name": "Christina Houlahan",
+    "birthDate": "1967-06-05",
+    "deathDate": null,
+    "bio": "a Representative from Pennsylvania; born at Naval Air Station Patuxent River, St. Mary's County, Md., June 5, 1967; graduated from St. George's School, Middletown, R.I., 1985; B.S., Stanford University, Stanford, Calif., 1989; M.S., Massachusetts Institute of Technology, Cambridge, Mass., 1994; United States Air Force, 1989-1991; United States Air Force Reserve, 1991-2004; Teach for America Corps; engineer; business executive; non-profit executive; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

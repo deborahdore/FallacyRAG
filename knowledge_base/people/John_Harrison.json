@@ -1,0 +1,24 @@
+{
+    "name": "John Harrison",
+    "birthDate": "1804-10-04",
+    "deathDate": "1878-05-25",
+    "bio": "A Representative from Ohio; born in Vincennes, Knox County, Ind., October 4, 1804; completed preparatory studies; studied medicine but abandoned the profession; engaged in agricultural pursuits; elected as a Whig to the Thirty-third Congress and reelected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1853-March 3, 1857); unsuccessful candidate for reelection; retired to his estate ``Point Farm,'' near North Bend, Ohio, and died there May 25, 1878; interment in the Harrison Tomb, North Bend, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "OHIO"
+        }
+    ]
+}

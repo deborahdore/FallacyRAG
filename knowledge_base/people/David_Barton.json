@@ -1,0 +1,48 @@
+{
+    "name": "David Barton",
+    "birthDate": "1783",
+    "deathDate": "1837",
+    "bio": "A Senator from Missouri; born near Greeneville, N.C. (now Tennessee), December 14, 1783; read law; admitted to the Tennessee bar; moved to the Territory of Missouri in 1809; elected attorney general of the Territory in 1813; first circuit judge of Howard County in 1815 and presiding judge in 1816; member, Territorial house of representatives 1818 and served as speaker; member and president of the convention which formed the State constitution in 1820; upon the admission of Missouri as a State into the Union was elected as a Democratic Republican (later Adams-Clay Republican) to the United States Senate; reelected in 1825 as an Adams and served from August 10, 1821, to March 3, 1831; unsuccessful candidate for reelection as an Anti-Jacksonian in 1830; chairman, Committee on Public Lands (Eighteenth through Twenty-first Congresses); member, State senate 1834-1835; died in Boonville, Mo., on September 28, 1837; interment in Walnut Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "MISSOURI"
+        }
+    ]
+}

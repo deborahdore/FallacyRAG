@@ -1,0 +1,88 @@
+{
+    "name": "Herbert Roberts",
+    "birthDate": "1913-03-28",
+    "deathDate": "1992-04-13",
+    "bio": "a Representative from Texas; born in Collin County, near McKinney, Tex., March 28, 1913; graduated from McKinney High School, McKinney, Tex.; attended Texas Agricultural and Mechanical College; attended North Texas State University; attended University of Texas; United States Navy, 1942-1945; active duty in the Korean conflict; United States Naval Reserve; staff for Speaker of the House Sam Rayburn of Texas, Washington, D.C., 1941-1942; businessman; farmer; member of the Texas state senate, 1955-1962, president pro tempore, 1961; elected as a Democrat to the Eighty-seventh Congress, by special election, to fill the vacancy caused by the death of United States Representative Sam Rayburn, and reelected to the nine succeeding Congresses (January 30, 1962-January 3, 1981); chair, Committee on Veterans' Affairs (Ninety-fourth through Ninety-sixth Congresses); not a candidate for reelection to the Ninety-seventh Congress in 1980; died on April 13, 1992, in Denton, Tex.; interment at Roselawn Memorial Park, Denton, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

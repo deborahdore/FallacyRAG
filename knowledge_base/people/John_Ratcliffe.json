@@ -1,0 +1,32 @@
+{
+    "name": "John Ratcliffe",
+    "birthDate": "1965-10-20",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Chicago, Cook County, Ill., October 20, 1965; graduated from Carbondale Community High School, Carbondale, Ill., 1983; B.A., University of Notre Dame, Notre Dame, Ind., 1987; J.D., Southern Methodist University, Dallas, Tex., 1989; lawyer, private practice; professor; United States attorney for the Eastern District of Texas, 2007-2008; mayor of Heath, Tex., 2004-2012; elected as a Republican to the One Hundred Fourteenth and to the two succeeding Congresses until his resignation on May 22, 2020 (January 3, 2015-May 22, 2020); Director of National Intelligence in the Cabinet of President Donald J. Trump, 2020-2021; director, Central Intelligence Agency, 2025-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

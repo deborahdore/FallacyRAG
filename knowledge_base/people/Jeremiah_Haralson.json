@@ -1,0 +1,16 @@
+{
+    "name": "Jeremiah Haralson",
+    "birthDate": "1846-04-01",
+    "deathDate": null,
+    "bio": "a Representative from Alabama; born on a plantation near Columbus, Muscogee County, Ga., April 1, 1846; born enslaved; self-educated; moved to Alabama and engaged in agricultural pursuits; member of the Alabama state house of representatives, 1870-1872; member of the Alabama state senate, 1872-1875; elected as a Republican to the Forty-fourth Congress (March 4, 1875-March 3, 1877); unsuccessful candidate for election to the Forty-fifth Congress in 1876; unsuccessful candidate for election to the Forty-sixth Congress in 1878; unsuccessful candidate for election to the Forty-ninth Congress in 1884; appointed to a Federal position in the United States customhouse in Baltimore, Md.; later employed as a clerk in the Interior Department; appointed August 12, 1882, to the Pension Bureau in Washington, D.C., and resigned August 21, 1884; pension agent, Pine Bluff, Ark., 1891-1894; convicted on December 8, 1894, of forgery; sentenced to prison and fined; circumstances and date of death unknown.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

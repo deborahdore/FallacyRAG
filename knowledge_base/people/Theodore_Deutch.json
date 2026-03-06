@@ -1,0 +1,64 @@
+{
+    "name": "Theodore Deutch",
+    "birthDate": "1966-05-07",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Bethlehem, Northampton County, Pa., May 7, 1966; graduated from Liberty High School, Bethlehem, Pa., 1984; A.B., University of Michigan, Ann Arbor, Mich., 1988; J.D., University of Michigan, Ann Arbor, Mich., 1990; lawyer, private practice; member of the Florida state senate, 2007-2010; elected as a Democrat to the One Hundred Eleventh Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Robert Wexler, and reelected to the six succeeding Congresses until his resignation on September 30, 2022 (April 13, 2010-September 30, 2022); chair, Committee on Ethics (One Hundred Sixteenth and One Hundred Seventeenth Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

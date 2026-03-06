@@ -1,0 +1,24 @@
+{
+    "name": "Bob Good",
+    "birthDate": "1965-09-11",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Pennsylvania, September 11, 1965; graduated from Liberty Christian Academy, Lynchburg, Va., 1983 ; B.S., Liberty University, Lynchburg, Va., 1988; M.B.A., Liberty University, Lynchburg, Va., 2010; financial executive; faculty, Liberty University, 2005&ndash;2020; member, board of supervisors, Campbell County, Va., 2016&ndash;2019; elected as a Republican to the One Hundred Seventeenth and to the succeeding Congress (January 3, 2021&ndash;January 3, 2025); unsuccessful candidate for nomination to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

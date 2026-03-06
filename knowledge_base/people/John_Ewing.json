@@ -1,0 +1,16 @@
+{
+    "name": "John Ewing",
+    "birthDate": "1796-10-05",
+    "deathDate": "1887-06-09",
+    "bio": "A Representative from Pennsylvania; born near Brownsville, Fayette County, Pa., October 5, 1796; attended the common schools and was graduated from Washington (now Washington and Jefferson) College, Washington, Pa., in 1814; studied law; was admitted to the bar in 1818 and commenced practice in Washington, Pa.; engaged in agricultural pursuits; trustee of Washington College 1834-1887 and of Washington Female Seminary 1846-1887; member of the State house of representatives in 1835 and 1836; served in the State senate 1838-1842; elected as a Whig to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); resumed agricultural pursuits; delegate to the Republican National Convention in 1860; died in Washington, Pa., June 9, 1887; interment in Washington Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

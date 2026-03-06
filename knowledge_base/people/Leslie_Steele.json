@@ -1,0 +1,24 @@
+{
+    "name": "Leslie Steele",
+    "birthDate": "1868-11-21",
+    "deathDate": "1929-07-24",
+    "bio": "A Representative from Georgia; born near Decatur, De Kalb County, Ga., November 21, 1868; attended the public and private schools of Decatur and was graduated from Emory College, Oxford, Ga., in 1893; taught school 1893-1898; was graduated from the law department of Georgia University, Athens, Ga., in 1899; was admitted to the bar the same year and commenced practice in Decatur, Ga.; member of the De Kalb County Board of Education 1902-1921; mayor of Decatur 1915-1920; served in the State house of representatives 1915-1919; city and county attorney 1921-1925; elected as a Democrat to the Seventieth and Seventy-first Congresses and served from March 4, 1927, until his death in Washington, D.C., on July 24, 1929; interment in Decatur Cemetery, Decatur, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

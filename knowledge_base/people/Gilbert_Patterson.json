@@ -1,0 +1,24 @@
+{
+    "name": "Gilbert Patterson",
+    "birthDate": "1863-05-29",
+    "deathDate": "1922-01-26",
+    "bio": "A Representative from North Carolina; born near Maxton, Robeson County, N.C., May 29, 1863; attended Shoe Heel Academy, Shoe Heel (now Maxton), N.C., and the Lurinburg (N.C.) High School; was graduated from the University of North Carolina at Chapel Hill in 1886; studied law; was admitted to the bar in 1890 and commenced practice in Maxton, N.C.; member of the State house of representatives 1899-1901; elected as a Democrat to the Fifty-eighth and Fifty-ninth Congresses (March 4, 1903-March 3, 1907); resumed the practice of law; died in Maxton, N.C., January 26, 1922; interment in Maxton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

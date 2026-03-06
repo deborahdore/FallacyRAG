@@ -1,0 +1,23 @@
+{
+    "name": "Jonathan Jackson",
+    "birthDate": "1966-01-07",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Chicago, Cook County, Ill., January 7, 1966; graduated from Whitney M. Young Magnet High School, Chicago, Ill., 1984; B.S. North Carolina Agricultural and Technical University, Greensboro, NC, 1988; M.B.A., Northwestern University, Evanston, Ill., 1991; financial analyst; business owner; nonprofit spokesperson; professor, City Colleges of Chicago, Kennedy-King College, 2011-2013; professor, Chicago State University, 2013-2015; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

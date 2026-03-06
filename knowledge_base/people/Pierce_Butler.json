@@ -1,0 +1,63 @@
+{
+    "name": "Pierce Butler",
+    "birthDate": "1744-07-11",
+    "deathDate": "1822-02-15",
+    "bio": "a Delegate and a Senator from South Carolina; born in County Carlow, Ireland, July 11, 1744; pursued preparatory studies; came to America in 1758 as an officer in the British Army; resigned his commission prior to the Revolutionary War and settled in Charles Town (now Charleston), S.C.; planter; served in the Revolutionary War for the American cause; Delegate to the Continental Congress, 1787; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; elected to the United States Senate in 1789 for the term ending March 3, 1793; reelected December 5, 1792, and served from March 4, 1789, to October 25, 1796, when he resigned; again elected to the United States Senate to fill the vacancy caused by the death of John Ewing Colhoun and served from November 4, 1802, until his resignation November 21, 1804; died in Philadelphia, Pa., February 15, 1822; interment in Christ Churchyard, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

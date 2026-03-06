@@ -1,0 +1,16 @@
+{
+    "name": "Marie Newman",
+    "birthDate": "1964-04-13",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Chicago, Cook County, Ill., April 13, 1964; graduated from Carl Sandburg High School, Orland Park, Ill.; attended Marquette University, Milwaukee, Wis.; B.A., University of Wisconsin Madison, Madison, Wis., 1986; advertising executive; consultant; non-profit executive; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; elected as a Democrat to the One Hundred Seventeenth Congress (January 3, 2021-January 3, 2023); unsuccessful candidate for renomination to the One Hundred Eighteenth Congress in 2022.&nbsp;",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

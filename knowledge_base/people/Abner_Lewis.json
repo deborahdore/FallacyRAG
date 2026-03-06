@@ -1,0 +1,16 @@
+{
+    "name": "Abner Lewis",
+    "birthDate": "1801-08-17",
+    "deathDate": "1879-10-11",
+    "bio": "A Representative from New York; born in Rutland County, Vt., August 17, 1801; attended the public schools; member of the State assembly in 1838 and 1839; elected as a Whig to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); Chautauqua county judge 1847-1852; practiced law in Winona, Minn., where he died on October 11, 1879; interment in Woodlawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

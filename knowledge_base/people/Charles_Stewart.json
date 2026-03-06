@@ -1,0 +1,48 @@
+{
+    "name": "Charles Stewart",
+    "birthDate": "1836-05-30",
+    "deathDate": "1895-09-21",
+    "bio": "A Representative from Texas; born in Memphis, Tenn., May 30, 1836; moved to Texas in 1845 with his parents, who settled in Galveston; attended the common schools; studied law; was admitted to the bar in 1854 and commenced the practice of law in Marlin, Falls County, Tex.; prosecuting attorney for the thirteenth judicial district from 1856 to 1860; delegate to the secession convention in 1861; enlisted in the Confederate Army and served throughout the Civil War, first in the Tenth Regiment of Texas Infantry and later in Baylor's Cavalry; moved to Houston in 1866 and resumed the practice of law; was city attorney of Houston 1874-1876; member of the State senate 1878-1882; elected as a Democrat to the Forty-eighth and to the four succeeding Congresses (March 4, 1883-March 3, 1893); was not a candidate for renomination in 1892; resumed the practice of his profession in Houston, Tex.; died in San Antonio, Tex., September 21, 1895; interment in Glenwood Cemetery, Houston, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

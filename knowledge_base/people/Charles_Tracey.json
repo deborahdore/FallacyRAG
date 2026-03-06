@@ -1,0 +1,40 @@
+{
+    "name": "Charles Tracey",
+    "birthDate": "1847-05-27",
+    "deathDate": "1905-03-24",
+    "bio": "A Representative from New York; born in Albany, N.Y., May 27, 1847; was graduated from the Albany Academy in 1866; served in the Papal Zouaves at Rome, Italy, portions of the years 1867-1870; appointed aide-de-camp to Governor Tilden, of New York, January 1, 1877; appointed manager of the House of Refuge in Hudson, N.Y., by Governor Cleveland and reappointed by Governor Hill in 1886; engaged in the distilling business; elected as a Democrat to the Fiftieth Congress to fill the vacancy caused by the death of Nicholas T. Kane; reelected to the Fifty-first, Fifty-second, and Fifty-third Congresses and served from November 8, 1887, to March 3, 1895; was an unsuccessful candidate for reelection in 1894 to the Fifty-fourth Congress; resumed business activities in Albany and Rochester, N.Y.; died at Watkins Glen, Schuyler County, N.Y., on March 24, 1905; interment in St. Agnes Cemetery, Albany, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Peter Dominick",
+    "birthDate": "1915",
+    "deathDate": "1981",
+    "bio": "(Nephew of Howard Alexander Smith), a Representative and a Senator from Colorado; born in Stamford, Fairfield County, Conn., July 7, 1915; attended public schools; graduated from St. Mark's School, Southborough, Mass., in 1933, Yale University in 1937, and Yale Law School in 1940; during the Second World War entered the Army Air Corps in 1942 as an aviation cadet and served until 1945 when discharged as a captain; engaged in law practice in New York City in 1940-1942 and early 1946, and in Denver, Colo., 1946-1961; member, State house of representatives 1957-1961; member of National Commission for the United Nations Educational, Scientific, and Cultural Organization 1960-1961; elected as a Republican to the Eighty-seventh Congress (January 3, 1961-January 3, 1963); was not a candidate for reelection in 1962; elected as a Republican to the United States Senate in 1962; reelected in 1968 and served from January 3, 1963, to January 3, 1975; unsuccessful candidate for reelection in 1974; Ambassador Extraordinary and Plenipotentiary to Switzerland 1975; resided in Cherry Hills, Colo., until his death in Hobe Sound, Fla., March 18, 1981; interment in Fairmount Cemetery, Denver, Colo.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

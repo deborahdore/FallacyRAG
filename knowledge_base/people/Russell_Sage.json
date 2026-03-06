@@ -1,0 +1,24 @@
+{
+    "name": "Russell Sage",
+    "birthDate": "1816-08-04",
+    "deathDate": "1906-07-22",
+    "bio": "A Representative from New York; born in Shenandoah, Oneida County, N.Y., August 4, 1816; moved with his parents to Durhamville in 1818; attended the public schools; engaged in mercantile pursuits in Troy, N.Y.; treasurer of Rensselaer County 1844-1851; alderman of Troy 1845-1848; delegate to the Whig National Convention in 1848; elected as a Whig to the Thirty-third Congress and reelected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1853-March 3, 1857); was not a candidate for renomination in 1856; moved to New York City in 1863; became president and director of several railroad companies and financial institutions; died in Lawrence, Long Island, N.Y., July 22, 1906; interment in Oakwood Cemetery, Troy, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "NEW YORK"
+        }
+    ]
+}

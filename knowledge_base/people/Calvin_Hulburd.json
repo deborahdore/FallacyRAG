@@ -1,0 +1,32 @@
+{
+    "name": "Calvin Hulburd",
+    "birthDate": "1809-06-05",
+    "deathDate": "1897-10-25",
+    "bio": "A Representative from New York; born in Stockholm, St. Lawrence County, N.Y., June 5, 1809; completed preparatory studies; was graduated from Middlebury College, Vermont; attended Yale College Law School; was admitted to the bar in 1833; member of the New York assembly 1842-1844 and in 1862; elected as a Republican to the Thirty-eighth, Thirty-ninth, and Fortieth Congresses (March 4, 1863-March 3, 1869); chairman, Committee on Public Expenditures (Thirty-eighth through Fortieth Congresses); superintendent of construction of the New York post office; died in Brasher Falls, N.Y., on October 25, 1897; interment in Fairview Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Troy Nehls",
+    "birthDate": "1968-04-07",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Beaver Dam, Dodge County, Wis., April 7, 1968; graduated from Dodgeland High School, Juneau, Wis., 1986; B.A., Liberty University, Lynchburg, Va.; M.S., University of Houston-Downtown, Houston, Tex.; Wisconsin Army National Guard; United States Army Reserve; police officer; deputy constable, Fort Bend County, Tex., 1998-2002, constable, 2005-2012; deputy sheriff, Fort Bend County, Tex., 2002-2004; sheriff, Fort Bend County, Tex., 2013-2020; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

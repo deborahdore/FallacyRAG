@@ -1,0 +1,71 @@
+{
+    "name": "Mike Lee",
+    "birthDate": "1971-06-04",
+    "deathDate": null,
+    "bio": "A Senator from Utah; born in Mesa, Ariz., June 4, 1971; graduated Brigham Young University, B.A., 1994; graduated Brigham Young University, J.D., 1997; law clerk to 3rd Circuit Court of Appeals Justice Samuel Alito 1998; lawyer; assistant U.S. attorney 2002-2005; counsel to Utah Governor John Huntsman 2005-2006; law clerk to United States Supreme Court Justice Samuel Alito 2006-2007; lawyer; elected as a Republican to the United States Senate in 2010; reelected in 2016, and again in 2022 for the term ending January 3, 2029; vice chair, Joint Economic Committee (One Hundred Fifteenth Congress); chair, Joint Economic Committee (One Hundred Sixteenth Congress), Committee on Energy and Natural Resources (One Hundred Nineteenth Congress).",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "UTAH"
+        }
+    ]
+}

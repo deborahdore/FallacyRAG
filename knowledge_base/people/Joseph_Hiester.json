@@ -1,0 +1,64 @@
+{
+    "name": "Joseph Hiester",
+    "birthDate": "1752-11-18",
+    "deathDate": "1832-06-10",
+    "bio": "a Representative from Pennsylvania; born in Berne Township, Berks County, Pa., November 18, 1752; attended the common schools; engaged in mercantile pursuits; served in the Revolutionary War as captain and colonel; member of the Pennsylvania state conference in 1776 which assumed the government of the colony; member of the Pennsylvania state constitutional convention which ratified the Federal Constitution, December 12, 1787, and of the state constitutional convention of 1790; member of the Pennsylvania state house of representatives, 1787-1790; served in the Pennsylvania state senate, 1790-1794; elected as a Democratic Republican to the Fifth Congress to fill the vacancy caused by the resignation of George Ege; reelected to the Sixth, Seventh, and Eighth Congresses and served from December 1, 1797, to March 3, 1805; major general of Pennsylvania Militia in 1807; elected to the Fourteenth, Fifteenth, and Sixteenth Congresses and served from March 4, 1815, until his resignation in December 1820, having been elected chief executive of the State; Governor of Pennsylvania 1820-1824; died in Reading, Pa., June 10, 1832; interment in the burying ground of the Reformed Church; reinterment in Charles Evans Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

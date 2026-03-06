@@ -1,0 +1,15 @@
+{
+    "name": "Jefferson Shreve",
+    "birthDate": "1965-09",
+    "deathDate": null,
+    "bio": "a Representative from Indiana; born in Indiana, September 1965; graduated from Silver Creek High School, Sellersburg, Ind., 1984; B.A., Indiana University, Bloomington, Ind., 1989; M.A., University of London, London, England, 1998; M.B.A., Purdue University, West Lafayette, Ind., 2003; business owner; member of the Indianapolis, Ind., city-county council, 2013-2016, 2018-2019; delegate, Republican National Convention, 2016; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "INDIANA"
+        }
+    ]
+}

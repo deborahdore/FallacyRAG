@@ -1,0 +1,79 @@
+{
+    "name": "Tim Scott",
+    "birthDate": "1965-09-19",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from South Carolina; born in North Charleston, Charleston County, S.C., September 19, 1965; attended Presbyterian College, Clinton, S.C., 1983-1984; B.S., Charleston Southern University, Charleston, S.C., 1988; entrepreneur; Charleston County, S.C. council, 1995-2008; unsuccessful candidate for the South Carolina state senate in 1996; member of the South Carolina house of representatives, 2009-2010; elected as a Republican to the One Hundred Twelfth Congress, and served from January 3, 2011, to January 2, 2013, when he resigned to become a U.S. Senator; appointed January 2, 2013, to fill the vacancy caused by the resignation of James DeMint; appointment took effect upon his resignation from the House of Representatives on January 2, 2013; took the oath of office on January 3, 2013; subsequently elected as a Republican in 2014 in a special election; reelected in 2016, and again in 2022 for the term ending January 3, 2029; chair, National Republican Senatorial Committee (2025-); chair, Committee on Banking, Housing and Urban Affairs (One Hundred Nineteenth Congress); was an unsuccessful candidate for the Republican presidential nomination in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

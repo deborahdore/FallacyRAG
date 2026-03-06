@@ -1,0 +1,48 @@
+{
+    "name": "Adam Putnam",
+    "birthDate": "1974-07-31",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Bartow, Polk County, Fla., July 31, 1974; B.S., University of Florida, Gainesville, Fla., 1995; farmer; rancher; member of the Florida state house of representatives, 1996-2001; elected as a Republican to the One Hundred Seventh and to the four succeeding Congresses (January 3, 2001-January 3, 2011); House Republican Conference Chair (One Hundred Tenth Congress); not a candidate for reelection to the One Hundred Twelfth Congress in 2010; Commissioner of Agriculture, Florida Department of Agriculture and Consumer Services, 2011-2019;  was an unsuccessful candidate for nomination for Governor of Florida in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

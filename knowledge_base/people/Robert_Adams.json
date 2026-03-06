@@ -1,0 +1,64 @@
+{
+    "name": "Robert Adams",
+    "birthDate": "1849-02-26",
+    "deathDate": "1906-06-01",
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Pa., February 26, 1849; attended Doctor Fairies Physical Institute, Philadelphia, Pa., and graduated from the University of Pennsylvania at Philadelphia in 1869; studied law; admitted to the bar April 27, 1872, and practiced; member of the United States Geological Survey during the explorations of Yellowstone Park 1871-1875; member of the Pennsylvania state militia 1881-1895; served in the Pennsylvania state senate 1883-1886; was graduated from the Wharton School of Economy and Finance of the University of Pennsylvania in 1884; appointed United States Minister to Brazil on April 1, 1889, and served until June 1, 1890, when he resigned; elected as a Republican to the Fifty-third Congress to fill the vacancy caused by the death of Charles O'Neill; reelected to the Fifty-fourth and to the five succeeding Congresses and served from December 19, 1893, until his death in Washington, D.C., June 1, 1906; interment in Laurel Hill Cemetery, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

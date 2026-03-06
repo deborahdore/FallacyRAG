@@ -1,0 +1,32 @@
+{
+    "name": "Harold Claypool",
+    "birthDate": "1886-06-02",
+    "deathDate": "1958-08-02",
+    "bio": "A Representative from Ohio; born in Bainbridge, Ross County, Ohio, June 2, 1886; attended the public schools and Ohio State University at Columbus; engaged in the publishing business at Columbus, Ohio, and published Hunter and Trader Magazine; deputy probate judge of Ross County, Ohio; elected as a Democrat to the Seventy-fifth, Seventy-sixth, and Seventy-seventh Congresses (January 3, 1937-January 3, 1943); unsuccessful candidate for reelection in 1942 to the Seventy-eighth Congress; resumed the publishing and office supply business; United States marshal for the southern district of Ohio 1944-1953; died in Chillicothe, Ohio, August 2, 1958; interment in Grandview Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OHIO"
+        }
+    ]
+}

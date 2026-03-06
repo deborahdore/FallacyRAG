@@ -1,0 +1,23 @@
+{
+    "name": "Maxwell Frost",
+    "birthDate": "1997-01-17",
+    "deathDate": null,
+    "bio": "a Representative from Florida; born in Orlando, Orange County, Fla., January 17, 1997; graduated from Osceola County School for the Arts, Kissimmee, Fla.; attended the Valencia College, Orlando, Fla.; campaign staff; organizer; rideshare driver; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023&ndash;present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "FLORIDA"
+        }
+    ]
+}

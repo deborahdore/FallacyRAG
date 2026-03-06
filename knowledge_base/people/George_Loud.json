@@ -1,0 +1,56 @@
+{
+    "name": "George Loud",
+    "birthDate": "1852-06-18",
+    "deathDate": "1925-11-13",
+    "bio": "A Representative from Michigan; born in Bracebridge, Ohio, June 18, 1852; moved with his parents to Massachusetts in 1856 and to Au Sable, Mich., in 1866; attended the English High School, Boston, Mass., and Professor Patterson's School at Detroit, Mich.; was graduated from the Ann Arbor High School in 1869; vice president and general manager of the Au Sable &amp; Northwestern Railroad; for four years was a colonel on the staff of Governor Pingree; paymaster on the U. S. revenue cutter <i>McCulloch</i> when it participated in the Battle of Manila Bay during the Spanish-American War; elected as a Republican to the Fifty-eighth and to the four succeeding Congresses (March 4, 1903-March 3, 1913); unsuccessful candidate for reelection; elected to the Sixty-fourth Congress (March 4, 1915-March 3, 1917); unsuccessful candidate for renomination; engaged in the lumber business at Au Sable, Mich.; killed in an automobile accident at Myrtle Point, Mich., November 13, 1925; interment in Au Sable Cemetery, Oscoda, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

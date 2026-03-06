@@ -1,0 +1,15 @@
+{
+    "name": "Addison McDowell",
+    "birthDate": "1994-01-21",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Whiteville, Columbus County, N.C., January 21, 1994; graduated from North Davidson High School, Lexington, N.C., 2012; B.A., University of North Carolina, Charlotte, N.C., 2016; staff, United States Representative Theodore Paul Budd of North Carolina, 2017-2019; professional consultant; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

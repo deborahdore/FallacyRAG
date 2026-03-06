@@ -1,0 +1,39 @@
+{
+    "name": "Dustin Johnson",
+    "birthDate": "1976-09-30",
+    "deathDate": null,
+    "bio": "a Representative from South Dakota; born in Pierre, Hughes County, S.Dak., September 30, 1976; graduated from T.F. Riggs High School, Pierre, S.Dak., 1995; B.A., University of South Dakota, Vermillion, S.Dak., 1999; M.P.A., University of Kansas, Lawrence, Kans., 2002; staff, Governor Mike Rounds of South Dakota, 2003-2005; member of the South Dakota public utilities commission, 2004-2011; staff, Governor Dennis Daugaard of South Dakota, 2011-2014; business executive and co-owner of telecommunications engineering firm; elected as a Republican to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        }
+    ]
+}

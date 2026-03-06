@@ -1,0 +1,24 @@
+{
+    "name": "Bannon Thibodeaux",
+    "birthDate": "1812-12-22",
+    "deathDate": "1866-03-05",
+    "bio": "A Representative from Louisiana; born on St. Bridget plantation, near Thibodeaux, Terrebonne Parish, La., December 22, 1812; attended the country schools; studied law in Hagerstown, Md.; was admitted to the bar and commenced practice in Lafourche and Terrebonne Parishes, La.; member of the State constitutional conventions in 1845 and 1852; held several local offices; elected to the Twenty-ninth and Thirtieth Congresses (March 4, 1845-March 3, 1849); resumed the practice of law in Terrebonne and Lafourche Parishes, La.; sugar planter and manufacturer; died in Terrebonne Parish, La., March 5, 1866; interment in the Half-way Cemetery, near Houma, La.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

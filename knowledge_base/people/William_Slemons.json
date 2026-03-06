@@ -1,0 +1,32 @@
+{
+    "name": "William Slemons",
+    "birthDate": "1830",
+    "deathDate": "1918",
+    "bio": "A Representative from Arkansas; born near Dresden, Weakley County, Tenn., March 15, 1830; attended Bethel College; moved to Arkansas in 1852; studied law; was admitted to the bar in 1855 and practiced in Monticello, Drew County; member of the Arkansas State convention in 1861; entered the Confederate Army in July 1861 and served as colonel in Price's Cavalry throughout the Civil War; resumed the practice of law; district attorney 1866-1868; elected as a Democrat to the Forty-fourth, Forty-fifth, and Forty-sixth Congresses (March 4, 1875-March 3, 1881); was not a candidate for renomination in 1880; resumed the practice of his profession in Monticello, Ark.; county and probate judge of Drew County 1903-1907; justice of the peace 1908-1918; died in Monticello, Ark., December 10, 1918; interment in Union Ridge Cemetery, near Monticello, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

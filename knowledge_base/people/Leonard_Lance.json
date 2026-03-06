@@ -1,0 +1,48 @@
+{
+    "name": "Leonard Lance",
+    "birthDate": "1952",
+    "deathDate": null,
+    "bio": "A Representative from New Jersey; born in Easton, Northampton County, Pa., June 25, 1952; graduated from North Hunterdon Regional High School, Annandale, N.J., 1970; B.A., Lehigh University, Bethlehem, Pa., 1974; J.D., Vanderbilt University, Nashville, Tenn., 1977; M.P.A., Princeton University, Princeton, N.J., 1982; judicial clerk; lawyer, private practice; member of the New Jersey state general assembly, 1991-2002; member of the New Jersey state senate, 2002-2009, minority leader, 2004-2008; unsuccessful candidate for election to the United States House of Representatives in 1996; elected as a Republican to the One Hundred Eleventh and to the four succeeding Congresses (January 3, 2009-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

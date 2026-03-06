@@ -1,0 +1,24 @@
+{
+    "name": "William Shinn",
+    "birthDate": "1782-10-24",
+    "deathDate": "1871-08-18",
+    "bio": "a Representative from New Jersey; born in Burlington County, N.J., October 24, 1782; attended the public schools; engaged in agricultural pursuits; sheriff of Burlington County 1825-1828; member of the State general assembly in 1828; served in the State council 1829-1831; chairman of the Democratic State central committee in 1832; elected as a Jacksonian candidate to the Twenty-third and Twenty-fourth Congresses (March 4, 1833-March 3, 1837); resumed agricultural pursuits; president of the Burlington Agricultural Association in 1853 and 1854; elected a director of the Camden &amp; Amboy Railroad Co.; died in Mount Holly, Burlington County, N.J., on August 18, 1871; interment in Mount Holly Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

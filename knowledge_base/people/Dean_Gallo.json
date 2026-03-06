@@ -1,0 +1,48 @@
+{
+    "name": "Dean Gallo",
+    "birthDate": "1935",
+    "deathDate": "1994",
+    "bio": "A Representative from New Jersey; born in Hackensack, N.J., November 23, 1935; attended public schools; realtor; president, Parsippany-Troy Hills Township Council, 1970; director, Morris County Board of Chosen Freeholders, 1973-1975; member, New Jersey general assembly, 1976-1984; elected as a Republican to the Ninety-ninth and to the four succeeding Congresses and served from January 3, 1985, until his death on November 6, 1994; had been renominated to the One Hundred Fourth Congress but withdrew his name from consideration on August 29, 1994, because of ill health; died on November 6, 1994.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "name": "Gabe Evans",
+    "birthDate": "1986-07-28",
+    "deathDate": null,
+    "bio": "a Representative from Colorado; born in Aurora, Colo., July 28, 1986; home schooled; B.A., Patrick Henry College, Purcellville, Virginia, 2009; attending Colorado State University, Fort Collins, Colo.; Virginia Army National Guard, 2007-2009; United States Army, 2009-2019; Colorado Army National Guard, 2009-2019; police officer; farmer; member of the Colorado state general assembly, 2023-2025; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "name": "Thomas Spight",
+    "birthDate": "1841-10-25",
+    "deathDate": "1924-01-05",
+    "bio": "A Representative from Mississippi; born near Ripley, Tippah County, Miss., October 25, 1841; attended the common schools, Ripley Academy, Purdy (Tenn.) College, and the La Grange (Tenn.) Synodical College; enlisted in the Confederate Army as a private in 1861; promoted to the rank of lieutenant the same year; in 1862 became captain of Company B, Thirty-fourth Regiment, Mississippi Volunteer Infantry, and served until the close of the war; taught school and also engaged in agricultural pursuits; studied law; was admitted to the bar in 1875 and commenced practice in Ripley, Miss.; member of the State house of representatives 1874-1880; established the Southern Sentinel in 1879, retiring from the newspaper business five years later; prosecuting attorney of the third judicial district 1884-1892; elected as a Democrat to the Fifty-fifth Congress to fill the vacancy caused by the resignation of William V. Sullivan; reelected to the Fifty-sixth and to the five succeeding Congresses and served from July 5, 1898, to March 3, 1911; unsuccessful candidate for renomination in 1910; again resumed the practice of his profession and also engaged in religious work until his death in Ripley, Miss., January 5, 1924; interment in Ripley Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "John McGrath",
+    "birthDate": "1872-07-23",
+    "deathDate": "1951-08-25",
+    "bio": "A Representative from California; born in Limerick, Ireland, July 23, 1872; attended the national schools and Christian Brothers College in Cork; immigrated to the United States when seventeen and located in Chicago, Ill.; studied law for two years; engaged as a salesman for two years and as a sales manager for eighteen years; naturalized July 25, 1896; postmaster of San Mateo, Calif., 1916-1925; justice of the peace of San Mateo County 1928-1932; president of Tri-City Chamber of Commerce for four years; elected as a Democrat to the Seventy-third, Seventy-fourth, and Seventy-fifth Congresses (March 4, 1933-January 3, 1939); unsuccessful candidate for reelection in 1938 to the Seventy-sixth Congress; commissioner of immigration and naturalization for San Francisco, Calif., in 1939 and 1940; died in San Mateo, Calif., August 25, 1951; interment in St. John's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

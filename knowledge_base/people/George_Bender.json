@@ -1,0 +1,80 @@
+{
+    "name": "George Bender",
+    "birthDate": "1896",
+    "deathDate": "1961",
+    "bio": "A Representative and a Senator from Ohio; born in Cleveland, Ohio, September 29, 1896; attended the public schools; owner of an insurance business; in 1934 founder, editor and publisher of the National Republican magazine; member, State senate 1920-1930; unsuccessful candidate for election to the United States House of Representatives in 1930, 1932, 1934, and 1936; elected as a Republican to the Seventy-sixth and to the four succeeding Congresses (January 3, 1939-January 3, 1949); unsuccessful candidate for reelection in 1948 to the Eighty-first Congress; elected to the Eighty-second and Eighty-third Congresses and served from January 3, 1951, until his resignation effective December 15, 1954; elected on November 2, 1954, as a Republican to the United States Senate to fill the vacancy in the term ending January 3, 1957, caused by the death of Robert A. Taft, and served from December 16, 1954, to January 3, 1957; unsuccessful candidate for reelection in 1956; special assistant to Secretary of the Interior, Washington, D.C., 1957-1958; died in Chagrin Falls, Ohio, June 18, 1961; interment in Knollwood Cemetery, Mayfield Heights, Cleveland, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        }
+    ]
+}

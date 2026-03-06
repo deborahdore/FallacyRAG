@@ -1,0 +1,16 @@
+{
+    "name": "James Bates",
+    "birthDate": "1789-09-24",
+    "deathDate": "1882-02-25",
+    "bio": "a Representative from Maine; born in Greene, Lincoln (now Kennebec) County, Maine, September 24, 1789; attended the common schools; studied medicine at Harvard Medical University, Cambridge, Mass.; surgeon during the War of 1812; physician; elected as a Jacksonian candidate to the Twenty-second Congress (March 4, 1831-March 3, 1833); hospital executive; died on February 25, 1882, in Yarmouth, Maine; interment in the Old Oak Cemetery, Norridgewock, Somerset County, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "MAINE"
+        }
+    ]
+}

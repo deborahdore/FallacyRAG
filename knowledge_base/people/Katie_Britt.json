@@ -1,0 +1,23 @@
+{
+    "name": "Katie Britt",
+    "birthDate": "1982-02-02",
+    "deathDate": null,
+    "bio": "a Senator from Alabama; born in Enterprise, Ala., February 2, 1982; graduated Enterprise High School, 2000; B.S., political science, University of Alabama, 2004; J.D., University of Alabama School of Law, 2013;&nbsp; worked as press secretary and later as chief of staff to Senator Richard Shelby; campaign manager and campaign communications director for Senator Richard Shelby; lawyer; organization president and CEO; elected as a Republican to the United States Senate in 2022 for the term ending January 3, 2029.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

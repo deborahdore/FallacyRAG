@@ -1,0 +1,24 @@
+{
+    "name": "David Hough",
+    "birthDate": "1753-03-13",
+    "deathDate": "1831-04-18",
+    "bio": "A Representative from New Hampshire; born in Norwich, Conn., March 13, 1753; attended the common schools; ship carpenter; moved to Lebanon, N.H., in 1778; member of the State house of representatives in 1788, 1789, and 1794; justice of the peace; colonel of militia; delegate to the State constitutional convention in 1783; commissioner of valuation in 1798; elected as a Federalist to the Eighth and Ninth Congresses (March 4, 1803-March 3, 1807); engaged in agricultural pursuits; died in Lebanon, N.H., April 18, 1831; interment in the cemetery in the southern vicinity of Lebanon.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Ely Moore",
+    "birthDate": "1798-07-04",
+    "deathDate": "1860-01-27",
+    "bio": "a Representative from New York; born near Belvidere, Warren County, N.J., July 4, 1798; attended the public schools; moved to New York City; studied medicine, but did not engage in extensive practice; became a printer and subsequently became editor of the National Trades Union, a labor paper in New York City; elected as a Jacksonian candidate to the Twenty-fourth Congress and reelected as a Democrat to the Twenty-fifth Congress (March 4, 1835-March 3, 1839); political editor of the New York Evening Post in 1838 and 1839; president of the board of trade and surveyor of the port of New York City 1839-1845; appointed by President Polk United States marshal for the southern district of New York in 1845; became owner and editor of the Warren Journal of Belvidere, N.J.; appointed agent for the Miami and other tribes of Indians in Kansas in 1853; appointed register of the United States land office in Lecompton, Kans., in 1855 and served until 1860; died in Lecompton, Douglas County, Kans., January 27, 1860; interment on his farm near Lecompton.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

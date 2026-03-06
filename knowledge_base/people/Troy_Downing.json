@@ -1,0 +1,15 @@
+{
+    "name": "Troy Downing",
+    "birthDate": "1967-03-04",
+    "deathDate": null,
+    "bio": "a Representative from Montana; born March 4, 1967; graduated from Indio High School, Indio, Calif., 1985; attended New York University, New York, N.Y.; United States Air Force and California Air National Guard, 2001-2009; research scientist; teacher; business owner; unsuccessful candidate for nomination to the United States Senate in 2018; Montana state auditor, 2021-2024; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        }
+    ]
+}

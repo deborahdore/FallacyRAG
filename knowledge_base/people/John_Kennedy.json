@@ -1,0 +1,47 @@
+{
+    "name": "John Kennedy",
+    "birthDate": "1951",
+    "deathDate": null,
+    "bio": "A Senator from Louisiana; born in Centreville, Miss., November 21, 1951; B.A., Vanderbilt University, 1973; J.D., University of Virginia School of Law, 1977; B.C.L., Oxford University, Oxford, England, 1979; lawyer; special counsel to Louisiana governor Buddy Roemer; secretary to Governor Roemer&rsquo;s Cabinet; secretary of the state Department of Revenue in the Cabinet of Louisiana governor Mike Foster 1996-1999; Louisiana state treasurer 1999-2016; elected as a Republican to the United States Senate in 2016; reelected in 2022 for the term ending January 3, 2029.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Stephen Ormsby",
+    "birthDate": "1759",
+    "deathDate": "1844",
+    "bio": "a Representative from Kentucky; born in County Sligo, Ireland, in 1759; immigrated to the United States when a boy and settled in Philadelphia, Pa.; pursued classical studies; studied law; admitted to the bar in 1786 and commenced the practice of his profession in Danville, Ky.; deputy attorney general of Jefferson County in 1787; served in the early Indian wars, and as a brigadier general under Gen. Josiah Harmar in the campaign of 1790; judge of the district court of Jefferson County in 1791; presidential elector in 1796; judge of the circuit court 1802-1810; elected as a Democratic Republican to the Twelfth Congress (March 4, 1811-March 3, 1813); unsuccessful candidate for reelection to the Thirteenth Congress; elected to the Thirteenth Congress to fill the vacancy caused by the death of Representative-elect John Simpson; reelected to the Fourteenth Congress and served from April 20, 1813, to March 3, 1817; unsuccessful candidate for reelection to the Fifteenth Congress; appointed first president of the branch of the Bank of the United States of Louisville, Ky., in 1817; died near Louisville, Ky., in 1844; interment in the Ormsby Burial Ground (later the property of the Kentucky Military Institute) at Lyndon, near Louisville, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

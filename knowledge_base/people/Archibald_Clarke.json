@@ -1,0 +1,16 @@
+{
+    "name": "Archibald Clarke",
+    "birthDate": "1788",
+    "deathDate": "1821-12-04",
+    "bio": "A Representative from New York; born on a plantation in Prince George's County, Md., in 1788; attended grammar and high schools; studied law; was admitted to the bar and practiced in Niagara County, N.Y.; surrogate of Niagara County in 1808 and 1809; member of the State assembly 1809-1811; served in the State senate 1813-1816; county clerk in 1815 and 1816; elected as a Democratic Republican to the Fourteenth Congress to fill the vacancy caused by the resignation of Peter B. Porter and served from December 2, 1816, to March 3, 1817; died in Clarence, Erie County, N.Y., December 4, 1821; interment in Ledge Lawn Cemetery, Newstead, Erie County, N.Y .",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

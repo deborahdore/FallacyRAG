@@ -1,0 +1,48 @@
+{
+    "name": "Helen Bentley",
+    "birthDate": "1923-11-28",
+    "deathDate": "2016-08-06",
+    "bio": "a Representative from Maryland; born in Ruth, White Pine County, Nev., November 28, 1923; attended the University of Nevada, and Georgetown University, Washington, D.C..; BA., University of Missouri, 1944; journalist; television producer; chair, Federal Maritime Commission, 1969-1975; international business consultant; unsuccessful candidate for election to the Ninety-seventh in 1980 and Ninety-eighth Congresses in 1982; elected as a Republican to the Ninety-ninth and to the four succeeding Congresses (January 3, 1985-January 3, 1995); was not a candidate for reelection to the One Hundred Fourth Congress in 1994, but was an unsuccessful candidate for nomination for Governor of Maryland; private advocate; unsuccessful candidate for election to the One Hundred Eighth Congress in 2002; died on August 6, 2016, in Timonium, Md.; interment at Dulaney Valley Memorial Gardens, Timonium, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MARYLAND"
+        }
+    ]
+}

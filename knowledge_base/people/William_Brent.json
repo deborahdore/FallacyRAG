@@ -1,0 +1,32 @@
+{
+    "name": "William Brent",
+    "birthDate": "1784-02-20",
+    "deathDate": "1848-07-07",
+    "bio": "A Representative from Louisiana; born at Port Tobacco, Charles County, Md., February 20, 1784; studied law and was admitted to the bar; moved to Louisiana about 1809 and commenced practice; appointed by President Madison as deputy attorney general for the western district of the Territory of Orleans; elected as an Adams-Clay Republican to the Eighteenth Congress and reelected as an Adams candidate to the Nineteenth and Twentieth Congresses (March 4, 1823-March 3, 1829); affiliated with the Whig Party upon its formation; resumed the practice of law in Louisiana, and in Washington, D.C.; died in St. Martinsville, La., July 7, 1848; interment in St. Martin's Catholic Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "LOUISIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "LOUISIANA"
+        }
+    ]
+}

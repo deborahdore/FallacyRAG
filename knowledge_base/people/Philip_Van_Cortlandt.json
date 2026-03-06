@@ -1,0 +1,72 @@
+{
+    "name": "Philip Van Cortlandt",
+    "birthDate": "1749-08-21",
+    "deathDate": "1831-11-21",
+    "bio": "A Representative from New York; born in New York, N.Y., on August 21, 1749; pursued classical studies; attended Coldenham Academy; engaged as a civil engineer; member of the New York Provincial congress, 1775; served in the Revolutionary War, entered as a lieutenant colonel; mustered out of the service with the rank of brigadier general for gallant conduct at the siege of Yorktown under General Marquis de Lafayette; delegate to the New York state ratification convention in 1788; served as supervisor of the town of Cortlandt, and as school commissioner and road master; member of the New York state assembly, 1788-1790; served in the New York state senate, 1791-1793; elected as an Anti-Administration candidate to the Third Congress and reelected as a Democratic Republican to the seven succeeding Congresses (March 4, 1793-March 3, 1809); engaged in agricultural pursuits; was a charter member of the Society of the Cincinnati; died on November 21, 1831, at Van Cortlandt Manor, Croton on Hudson, Westchester County, N.Y.; interment in Hillside Cemetery, Peekskill, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

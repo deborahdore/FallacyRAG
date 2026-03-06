@@ -1,0 +1,40 @@
+{
+    "name": "Lincoln Chafee",
+    "birthDate": "1953",
+    "deathDate": null,
+    "bio": "(Son of John H. Chafee; great-great-nephew of Henry F. Lippitt), a Senator from Rhode Island; born in Warwick, R.I. on March 26, 1953; attended Warwick public schools; graduated Brown University 1975; delegate to Rhode Island constitutional convention 1985; member, Warwick city council 1986-1992; mayor of Warwick 1992-1999; appointed on November 2, 1999, as a Republican to the United States Senate to fill the vacancy caused by the death of his father, John H. Chafee; elected as a Republican to the U.S. Senate in 2000, and served from November 2, 1999, to January 3, 2007; unsuccessful candidate for reelection in 2006; elected governor of Rhode Island as an Independent in 2010, and took the oath of office on January 4, 2011.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

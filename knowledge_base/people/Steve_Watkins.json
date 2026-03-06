@@ -1,0 +1,16 @@
+{
+    "name": "Steve Watkins",
+    "birthDate": "1976-09-18",
+    "deathDate": null,
+    "bio": "A Representative from Kansas; born at Lackland Air Force Base, San Antonio, Bexar County, Texas, September 18, 1976; graduated from Topeka West High School, Topeka, Kans., 1995; B.S., United States Military Academy, West Point, N.Y., 1995; M.S.R.E.D., Massachusetts Institute of Technology, Cambridge, Mass., 2010; M.C./M.P.A., Harvard University, Cambridge, Mass., 2017; United States Army, 1994-2004; independent contractor, United States Department of Defense; business consultant; elected as a Republican to the One Hundred Sixteenth Congress (January 3, 2019-January 3, 2021); unsuccessful candidate for nomination to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

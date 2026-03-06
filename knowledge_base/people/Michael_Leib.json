@@ -1,0 +1,72 @@
+{
+    "name": "Michael Leib",
+    "birthDate": "1760-01-08",
+    "deathDate": "1822-12-08",
+    "bio": "a Representative and a Senator from Pennsylvania; born in Philadelphia, Pa., January 8, 1760; attended the common schools; studied medicine and commenced practice in Philadelphia, Pa.; served in the Revolutionary War; commissioned surgeon in the Philadelphia Militia in 1780; resumed the practice of medicine and served on the staff of several Philadelphia hospitals; member of the committee of correspondence in 1793; member of the Pennsylvania state house of representatives, 1795-1798; elected to the Sixth and to the three succeeding Congresses and served from March 4, 1799, until February 14, 1806, when he resigned; member of the Pennsylvania state house of representatives, 1806-1808; brigadier general of the Philadelphia Militia, 1807-1811; member of the committee of correspondence on the Chesapeake affair, June 1807; elected as a Democratic Republican to the United States Senate in 1808 for the term beginning March 4, 1809; subsequently elected to fill the vacancy in the term ending March 3, 1809, caused by the resignation of Samuel Maclay and served from January 9, 1809, to February 14, 1814, when he resigned, having been appointed postmaster of Philadelphia; served as postmaster until 1815; member of the Pennsylvania state house of representatives, 1817-1818, and the Pennsylvania state senate, 1818-1821; appointed as a prothonotary of the United States district court at Philadelphia and served from November 1822, until his death in Philadelphia, Pa., on December 28, 1822; interment in St. John's Lutheran Churchyard, Northern Liberties, Philadelphia, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

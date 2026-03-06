@@ -1,0 +1,32 @@
+{
+    "name": "Frederick Sawyer",
+    "birthDate": "1822",
+    "deathDate": "1891",
+    "bio": "A Senator from South Carolina; born in Bolton, Worcester County, Mass., December 12, 1822; attended the public schools; graduated from Harvard University in 1844; taught school in New England 1844-1859; took charge of the State normal school at Charleston, S.C., in 1859; returned to the North during the Civil War; returned to Charleston in February 1865 and was active in advancing reconstruction measures; appointed collector of internal revenue in the second South Carolina district 1865; upon the readmission of the State of South Carolina to representation was elected as a Republican to the United States Senate and served from July 16, 1868, to March 3, 1873; chairman, Committee on Education (Forty-first Congress), Committee on Education and Labor (Forty-second Congress); Assistant Secretary of the Treasury 1873-1874; employed in the United States Coast Survey 1874-1880; special agent of the War Department 1880-1887; conducted a preparatory school in Ithaca, N.Y., and gave private instruction to students in Cornell University; moved to Tennessee and became president of a company at Cumberland Gap to promote the sale of agricultural lands in that vicinity; died suddenly at Shawnee, Tenn., July 31, 1891; interment in 'Sawyer Heights,' on the property of his land company, near East Cumberland Gap.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

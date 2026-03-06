@@ -1,0 +1,56 @@
+{
+    "name": "William Crain",
+    "birthDate": "1848-11-25",
+    "deathDate": "1896-02-10",
+    "bio": "A Representative from Texas; born in Galveston, Tex., November 25, 1848; attended the Christian Brothers' School, New York City, until the age of fourteen, and was graduated from St. Francis Xavier's College, New York City, in 1867; returned to Texas and lived on a ranch for two years; studied law in Indianola, Tex., while teaching school; was admitted to the bar in 1871 and commenced practice in Indianola, Tex.; member of the State senate 1876-1878; district attorney of the twenty-third judicial district of Texas 1872-1876; elected as a Democrat to the Forty-ninth and to the five succeeding Congresses and served from March 4, 1885, until his death in Washington, D.C., February 10, 1896; chairman, Committee on Expenditures on Public Buildings (Fifty-third Congress); interment in Hillside Cemetery, Cuero, Tex.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

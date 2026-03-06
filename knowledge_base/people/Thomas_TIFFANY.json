@@ -1,0 +1,39 @@
+{
+    "name": "Thomas TIFFANY",
+    "birthDate": "1957-12-30",
+    "deathDate": null,
+    "bio": "a Representative from Wisconsin; born in Wabasha, Wabasha County, Minn., December 30, 1957; graduated from Elmwood High School, Elmwood, Wis., 1976; B.S., University of Wisconsin, River Falls, Wis., 1980; business owner; member of the Town of Little Rice, Oneida County, Wis., board of supervisors, 2009-2013; member of the Wisconsin state assembly, 2011-2013; member of the Wisconsin state senate, 2013-2020; elected as a Republican to the One Hundred Sixteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Sean Duffy, and reelected to the three succeeding Congresses (May 12, 2020-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

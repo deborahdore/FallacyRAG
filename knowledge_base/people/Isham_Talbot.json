@@ -1,0 +1,56 @@
+{
+    "name": "Isham Talbot",
+    "birthDate": "1773",
+    "deathDate": "1837",
+    "bio": "A Senator from Kentucky; born near Talbot, Bedford County, Va., in 1773; moved with his father to Harrodsburg, Ky.; completed preparatory studies; studied law; admitted to the bar and commenced practice in Versailles, Ky.; moved to Frankfort, Ky., and continued the practice of law; member, State senate 1812-1815; elected January 3, 1815, as a Democratic Republican to the United States Senate to fill the vacancy caused by the resignation of Bledsoe and served from February 2, 1815, to March 3, 1819; again elected to the United States Senate to fill the vacancy caused by the resignation of William Logan and served from October 19, 1820, to March 3, 1825; resumed the practice of law; died near Frankfort, Ky., September 25, 1837; interment in the State Cemetery, Frankfort, Ky.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

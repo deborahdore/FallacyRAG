@@ -1,0 +1,32 @@
+{
+    "name": "William Bradford",
+    "birthDate": "1729",
+    "deathDate": "1808",
+    "bio": "A Senator from Rhode Island; born in Plympton, Plymouth County, Mass., November 4, 1729; studied medicine in Hingham, Mass., and afterwards practiced in Warren, R.I.; moved to Bristol, R.I.; abandoned the profession of medicine and studied law; admitted to the Rhode Island bar in 1767 and commenced practice in Bristol; member, State house of representatives for several terms between 1761 and 1803, serving as speaker on several occasions; member of the Rhode Island Committee of Correspondence in 1773; deputy governor of Rhode Island 1775-1778; elected as a Delegate to the Continental Congress in 1776 but did not attend; elected to the United States Senate and served from March 4, 1793, until October 1797, when he resigned; served as President pro tempore of the Senate during the Fifth Congress; retired to his home in Bristol, R.I., and died there on July 6, 1808; interment in East Burial Ground.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 4th United States Congress",
+            "startDate": "1795-06-08",
+            "endDate": "1797-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 5th United States Congress",
+            "startDate": "1797-03-04",
+            "endDate": "1799-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Joseph Walsh",
+    "birthDate": "1875-12-16",
+    "deathDate": "1946-01-13",
+    "bio": "A Representative from Massachusetts; born in Boston (Brighton), Mass., December 16, 1875; attended public schools in Falmouth, Mass., and Boston University Law School; was admitted to the bar in 1906 and practiced in New Bedford; served as a fish culturist and clerk in the United States Bureau of Fisheries at Woods Hole, Mass., 1900-1905; also engaged in newspaper reporting in Boston and New Bedford, Mass.; member of the State house of representatives in 1905; elected as a Republican to the Sixty-fourth and to the three succeeding Congresses and served from March 4, 1915, to August 2, 1922, when he resigned to accept a judicial position; appointed August 2, 1922, as a justice of the superior court of Massachusetts, in which capacity he served until his death in New Bedford, Mass., January 13, 1946; interment in St. Mary's Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

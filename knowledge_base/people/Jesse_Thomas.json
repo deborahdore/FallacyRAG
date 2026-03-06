@@ -1,0 +1,64 @@
+{
+    "name": "Jesse Thomas",
+    "birthDate": "1777",
+    "deathDate": "1853-05-02",
+    "bio": "A Delegate from Indiana Territory and a Senator from Illinois; born in Shepherdstown, Va. (now West Virginia) in 1777; studied law in Mason County, Ky., where he also served as county clerk until 1803; moved to Lawrenceburg, Indiana Territory in 1803 and practiced law; appointed deputy attorney general of Indiana Territory in 1805; member, Territorial house of representatives 1805-1808, and served as speaker 1805-1808; elected as a Delegate from Indiana Territory to the Tenth Congress to fill the vacancy caused by the resignation of Benjamin Parke and served from October 22, 1808, to March 3, 1809; moved to Kaskasia in 1809, then to Cahokia, and later to Edwardsville, Ill.; upon the organization of Illinois Territory was appointed judge of the United States court for the northwestern judicial district 1809-1818; delegate to the State constitutional convention in 1818 and served as president of that body; upon the admission of Illinois as a State into the Union in 1818 was elected as a Democratic Republican to the United States Senate; reelected as a Crawford Republican (later Adams Republican) in 1823, and served from December 3, 1818, to March 3, 1829; declined to be a candidate for reelection in 1829; chairman, Committee on Public Lands (Sixteenth and Seventeenth Congresses); moved to Mount Vernon, Ohio, in 1829; committed suicide at Mount Vernon, Ohio, May 2, 1853; interment in Mound View Cemetery.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

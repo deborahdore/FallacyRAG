@@ -1,0 +1,24 @@
+{
+    "name": "Ebenezer Shields",
+    "birthDate": "1778-12-22",
+    "deathDate": "1846-04-21",
+    "bio": "a Representative from Tennessee; born in Georgia, December 22, 1778; moved to Tennessee in 1809 and settled on Robertson Fork Creek near Lynnville, Giles County; completed preparatory studies; graduated from the University of Nashville, Tennessee, in 1827; studied law; admitted to the bar and commenced practice in Pulaski, Tenn.; member of the state house of representatives 1833-1835; elected as an Anti-Jacksonian candidate to the Twenty-fourth Congress and reelected as a Whig to the Twenty-fifth Congress (March 4, 1835-March 3, 1839); unsuccessful candidate for reelection in 1838 to the Twenty-sixth Congress; resumed the practice of law in Pulaski, Tenn.; moved to Memphis, Tenn., in 1844 and continued the practice of his profession; died near La Grange, Fayette County, Tex., April 21, 1846.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

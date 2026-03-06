@@ -1,0 +1,24 @@
+{
+    "name": "Gary Lee",
+    "birthDate": "1933-08-18",
+    "deathDate": "2022-10-12",
+    "bio": "A Representative from New York; born in Buffalo, Erie County, N.Y., August 18, 1933; attended the public schools of Corning, N.Y.; graduated from Corning Northside High School, 1951; served in the United States Navy, 1952-1956; second class petty officer; B.A., Colgate University, Hamilton, N.Y., 1960; graduate work, Colgate University, 1960; Cornell University, Ithaca, N.Y., 1963; educational administrator and consultant, 1963-1979; alderman, Corning, N.Y., common council, 1962; councilman, Dryden, N.Y., town board, 1963-1967; supervisor, Dryden, N.Y., 1967-1969; Tompkins County Board of Supervisors and Board of Representatives, 1968-1974; served in the New York State assembly, 1974-1978; delegate, New York State Republican conventions, 1966-1970; elected as a Republican to the Ninety-sixth and the Ninety-seventh Congresses (January 3, 1979-January 3, 1983); unsuccessful candidate for renomination in 1982 to the Ninety-eighth Congress; corporate vice president, IC Industries, Inc.; died on October 12, 2022, in Ft. Myers, Fla.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

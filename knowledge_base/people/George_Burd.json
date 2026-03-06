@@ -1,0 +1,24 @@
+{
+    "name": "George Burd",
+    "birthDate": "1793",
+    "deathDate": "1844-01-13",
+    "bio": "a Representative from Pennsylvania; born in 1793; studied law; was admitted to the bar in 1810 at Carlisle, Cumberland County, Pa., and practiced; elected as an Anti-Jacksonian candidate to the Twenty-second and Twenty-third Congresses (March 4, 1831-March 3, 1835); moved to Mercer County in 1843; died in Bedford, Bedford County, Pa., on January 13, 1844; interment in Bedford Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

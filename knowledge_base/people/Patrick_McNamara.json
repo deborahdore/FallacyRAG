@@ -1,0 +1,56 @@
+{
+    "name": "Patrick McNamara",
+    "birthDate": "1894",
+    "deathDate": "1966",
+    "bio": "A Senator from Michigan; born in North Weymouth, Mass., October 4, 1894; attended the public schools in Weymouth and Fore River Apprentice School in Quincy, Mass.; moved to Detroit, Mich., in 1921, and became active in union and civic affairs; engaged in the construction industry 1921-1955; director, Detroit area of Office of Price Administration, Rent Division 1942-1945; vice president of Stanley-Carter Co., Detroit, Mich., 1946-1954; member, Detroit City Council 1946-1947, and the Detroit Board of Education 1949-1955; elected as a Democrat to the United States Senate in 1954; reelected in 1960, and served from January 3, 1955, until his death in Bethesda, Md., April 30, 1966; chairman, Special Committee on Aging (Eighty-seventh Congress), Committee on Public Works (Eighty-eighth and Eighty-ninth Congresses); interment in Mt. Olivet Cemetery, Detroit, Mich.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

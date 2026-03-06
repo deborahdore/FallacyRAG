@@ -1,0 +1,47 @@
+{
+    "name": "Josh Gottheimer",
+    "birthDate": "1975-03-08",
+    "deathDate": null,
+    "bio": "a Representative from New Jersey; born in North Caldwell, Essex County, N.J., March 8, 1975; graduated from West Essex Senior High School, North Caldwell, N.J., 1993; B.A., University of Pennsylvania, Philadelphia, Pa., 1997; J.D., Harvard Law School, Cambridge, Mass., 2004; special assistant and speechwriter for President William J. Clinton, 1998-2001; staff, Wesley Clark presidential campaign, 2004; staff, John Kerry presidential campaign, 2004; business executive; senior counselor to the chairman of the Federal Communications Commission, 2010-2012; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

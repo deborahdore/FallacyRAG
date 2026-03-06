@@ -1,0 +1,56 @@
+{
+    "name": "John Box",
+    "birthDate": "1871-03-28",
+    "deathDate": "1941-05-17",
+    "bio": "A Representative from Texas; born near Crockett, Houston County, Tex., March 28, 1871; attended the country schools, and Alexander Collegiate Institute (later Lon Morris College), Kilgore, Tex.; studied law; was admitted to the bar in 1893 and commenced practice in Lufkin, Tex.; moved to Jacksonville, Cherokee County, Tex., in 1897 and continued the practice of his profession; also a licensed Methodist minister; judge of the Cherokee County Court 1898-1901; mayor of Jacksonville 1902-1905; member of the Democratic State committee 1908-1910; member of the board of education and served as chairman 1913-1918; elected as a Democrat to the Sixty-sixth and to the five succeeding Congresses (March 4, 1919-March 3, 1931); unsuccessful candidate for renomination in 1930; resumed the practice of law in Jacksonville, Tex., until his death there May 17, 1941; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

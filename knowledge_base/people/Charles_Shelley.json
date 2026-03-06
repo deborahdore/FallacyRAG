@@ -1,0 +1,40 @@
+{
+    "name": "Charles Shelley",
+    "birthDate": "1833",
+    "deathDate": "1907",
+    "bio": "A Representative from Alabama; born in Sullivan County, Tenn., December 28, 1833; moved with his father to Selma, Ala., in 1836; received a limited schooling; became an architect and builder; entered the Confederate Army in February 1861 as lieutenant and was stationed first at Fort Morgan and afterward attached to the Fifth Alabama Regiment; was commissioned brigadier general; elected as a Democrat to the Forty-fifth and Forty-sixth Congresses (March 4, 1877-March 3, 1881); presented credentials as a Member-elect to the Forty-seventh Congress, but the election was contested by James Q. Smith and the seat declared vacant July 20, 1882; subsequently elected to fill the vacancy thus caused and served from November 7, 1882, to March 3, 1883; presented credentials as a Member-elect to the Forty-eighth Congress and served from March 4, 1883, to January 9, 1885, when he was succeeded by George H. Craig, who contested the election; returned to Birmingham, Jefferson County, Ala., and engaged in promoting the industrial interests of that region until his death in that city January 20, 1907; interment in Oak Hill Cemetery, Talladega, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

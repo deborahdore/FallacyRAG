@@ -1,0 +1,56 @@
+{
+    "name": "Steven Palazzo",
+    "birthDate": "1970-02-21",
+    "deathDate": null,
+    "bio": "A Representative from Mississippi; born in Gulfport, Harrison County, Miss., February 21, 1970; graduated from Saint John High School, Gulfport, Miss., 1988; B.S., University of Southern Mississippi, Hattiesburg, Miss., 1994; M.P.A., University of Southern Mississippi, Hattiesburg, Miss., 1996; United States Marine Corps Reserve, 1988-1996; Mississippi Army National Guard, 2007-present; accountant; member of the Mississippi state house of representatives, 2007-2010; elected as a Republican to the One Hundred Twelfth and to the five succeeding Congresses (January 3, 2011-January 3, 2023); unsuccessful candidate for renomination to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

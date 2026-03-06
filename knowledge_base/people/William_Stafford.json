@@ -1,0 +1,88 @@
+{
+    "name": "William Stafford",
+    "birthDate": "1869-10-12",
+    "deathDate": "1957-04-22",
+    "bio": "A Representative from Wisconsin; born in Milwaukee, Wis., October 12, 1869; attended the public schools, and was graduated from Harvard University Law School in 1893; was admitted to the bar in 1894 and commenced practice in Milwaukee, Wis.; elected as a Republican to the Fifty-eighth and to the three succeeding Congresses (March 4, 1903-March 3, 1911); unsuccessful candidate for renomination in 1910; resumed the practice of his profession in Milwaukee, Wis.; elected to the Sixty-third, Sixty-fourth, and Sixty-fifth Congresses (March 4, 1913-March 3, 1919); unsuccessful candidate for reelection in 1918 to the Sixty-sixth Congress; elected to the Sixty-seventh Congress (March 4, 1921-March 3, 1923); unsuccessful candidate for reelection in 1922 to the Sixty-eighth Congress and for election in 1926 to the Seventieth Congress; elected to the Seventy-first and Seventy-second Congresses (March 4, 1929-March 3, 1933); unsuccessful candidate for renomination in 1932 and for the Republican nomination for United States Senator in 1938; resumed the practice of law; died in Milwaukee, Wis., April 22, 1957; interment in Forest Home Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WISCONSIN"
+        }
+    ]
+}

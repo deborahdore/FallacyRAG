@@ -1,0 +1,16 @@
+{
+    "name": "John Hutchinson",
+    "birthDate": "1935-02-04",
+    "deathDate": "2024-05-31",
+    "bio": "A Representative from West Virginia; born in Charleston, Kanawha County, W. Va., February 4,1935; attended the public schools; B.S., West Virginia University, Morgantown, 1956; served in the United States Air Force, first lieutenant, 1956-1958; treasurer, city of Charleston, 1967-1971; mayor, city of Charleston, 1971-1980; elected as a Democrat to the Ninety-sixth Congress, by special election, to fill the vacancy caused by the death of United States Representative John M. Slack, Jr., (June 30, 1980-January 3, 1981); unsuccessful candidate for reelection to the Ninety-seventh Congress in 1980; business executive; died on May 31, 2024, in Atlanta, Ga.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WEST VIRGINIA"
+        }
+    ]
+}

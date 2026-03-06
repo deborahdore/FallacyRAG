@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Hubbard",
+    "birthDate": "1781-12-05",
+    "deathDate": "1857-05-21",
+    "bio": "A Representative from New York; born in New Haven, Conn., December 5, 1781; pursued classical studies; was graduated from Yale College in 1799; studied law; was admitted to the bar in 1804 and commenced practice in Hamilton, N.Y.; surrogate of Madison County 1806-1816; presidential elector on the Clinton and Ingersoll ticket in 1812; district attorney of the sixth district 1816-1818 and of Madison County 1818-1821; elected as a Democratic Republican to the Fifteenth Congress (March 4, 1817-March 3, 1819); chairman, Committee on Expenditures in the Post Office Department (Fifteenth Congress); elected to the Seventeenth Congress (March 4, 1821-March 3, 1823); moved to Utica, N.Y., in 1823; appointed the first clerk of the court of chancery of Oneida County in 1823; clerk of the supreme court 1825-1835; one of the founders of Hamilton College, Clinton, N.Y., and Hamilton (N.Y.) Academy; served as a trustee of Utica (N.Y.) Academy; presidential elector on the Democratic ticket in 1844 and 1852; died in Utica, N.Y., May 21, 1857; interment in Forest Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "name": "Herbert Zelenko",
+    "birthDate": "1906",
+    "deathDate": "1979",
+    "bio": "A Representative from New York; born in New York City, March 16, 1906; attended public schools; graduated from Columbia University in 1926 and from Columbia Law School in 1928; was admitted to the bar in 1929 and commenced the practice of law in New York City; lecturer, Practicing Law Institute and Law Science Institute; former assistant United States attorney for the southern district of New York; elected as a Democrat to the Eighty-fourth and to the three succeeding Congresses (January 3, 1955-January 3, 1963); unsuccessful candidate for renomination in 1962 to the Eighty-eighth Congress; resumed the practice of law; died in New York City, February 23, 1979; interment at Sharon Gardens, Valhalla, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

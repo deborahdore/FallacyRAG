@@ -1,0 +1,48 @@
+{
+    "name": "Thomas Bradley",
+    "birthDate": "1844-04-06",
+    "deathDate": "1920-05-30",
+    "bio": "A Representative from New York; born in Yorkshire, England, April 6, 1844; immigrated to the United States in 1846 with his parents, who settled in Walden, Orange County, N.Y.; attended school until nine years of age; during the Civil War entered the Union Army as a private; promoted to captain in the One Hundred and Twenty-fourth Regiment, New York Volunteer Infantry; was aide-de-camp to Major General Mott, Third Division, Second Army Corps; awarded theMedal of Honor, ``for gallantry at Chancellorsville''; was brevetted major of United States Volunteers; member of the State house of assembly in 1876; delegate to the Republican National Conventions in 1892, 1896, and 1900; elected as a Republican to the Fifty-eighth and to the four succeeding Congresses (March 4, 1903-March 3, 1913); was not a candidate for renomination in 1912; engaged in banking; president and treasurer of the New York Knife Co.; died in Walden, N.Y., May 30, 1920; interment in Wallkill Valley Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

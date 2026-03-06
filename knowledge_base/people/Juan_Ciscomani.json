@@ -1,0 +1,23 @@
+{
+    "name": "Juan Ciscomani",
+    "birthDate": "1982-08-31",
+    "deathDate": null,
+    "bio": "a Representative from Arizona; born in Hermosillo, Sonora, Mexico, August 31, 1982; graduated from Rincon High School, Tucson, Ariz.; A.A., Pima Community College, Tucson, Ariz., 2003; B.A., University of Arizona, Tucson, Ariz., 2005; senior program development specialist, University of Arizona, Tucson, Ariz., 2006-2011; membership director and vice president of outreach, Tucson, Ariz., Hispanic chamber of commerce, 2011-2014; staff, office of Arizona Governor Doug Ducey, 2015-2022; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ARIZONA"
+        }
+    ]
+}

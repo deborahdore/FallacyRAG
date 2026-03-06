@@ -1,0 +1,31 @@
+{
+    "name": "Samuel Johnston",
+    "birthDate": "1733-12-15",
+    "deathDate": "1816-08-17",
+    "bio": "a Delegate and a Senator from North Carolina; born in Dundee, Scotland, December 15, 1733; immigrated to the United States in 1736 with his parents, who settled in Chowan County, N.C.; attended school in New England; studied law in North Carolina, admitted to the bar, and practiced in that State; member, State assembly 1760-1775; clerk of the courts for the Edenton District; deputy naval officer for the port of Edenton; member of the Committee of Correspondence 1773; delegate to the first four provincial congresses and president of the third and fourth; colonial treasurer; served in the Revolutionary War; member at large of the provincial Council of Safety, and district paymaster of troops 1775; member, State senate 1779, 1783, and 1784; Delegate to the Second Continental Congress, 1780-1781; elected first President of Congress after the Articles of Confederation were signed, but declined to serve; presided over the State conventions of 1788 and 1789; elected Governor of North Carolina and was twice reelected but resigned in 1789 to become a United States Senator; elected to the United States Senate and served from November 26, 1789, to March 3, 1793; judge of the superior court of North Carolina 1800-1803; died near Edenton, Chowan County, N.C., August 17, 1816; interment in the Johnston Burial Ground on the Hayes plantation, near Edenton, N.C.",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 2nd Continental Congress",
+            "startDate": "1775-05-10",
+            "endDate": "1781-03-01",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 1st United States Congress",
+            "startDate": "1789-03-04",
+            "endDate": "1791-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 2nd United States Congress",
+            "startDate": "1791-03-04",
+            "endDate": "1793-03-02",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "William McManus",
+    "birthDate": "1780",
+    "deathDate": "1835-01-18",
+    "bio": "A Representative from New York; born in Brunswick, Rensselaer County, N.Y., in 1780; received an academic education; studied law; was admitted to the bar in 1817 and commenced practice in Troy, Rensselaer County, N.Y.; surrogate of Rensselaer County 1815-1818; district attorney 1818-1821; elected as an Adams candidate to the Nineteenth Congress (March 4, 1825-March 3, 1827); resumed the practice of law; moved to Texas in 1833; returned to Brunswick, N.Y., the following year, where he died January 18, 1835.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "NEW YORK"
+        }
+    ]
+}

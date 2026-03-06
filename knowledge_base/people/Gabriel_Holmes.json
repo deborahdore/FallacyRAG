@@ -1,0 +1,32 @@
+{
+    "name": "Gabriel Holmes",
+    "birthDate": "1769",
+    "deathDate": "1829-09-26",
+    "bio": "a Representative from North Carolina; born near Clinton, Sampson County, N.C., in 1769; attended Zion Parnassus Academy in Rowan County and Harvard University; studied law in Raleigh, N.C.; was admitted to the bar in 1790 and commenced practice in Clinton, N.C.; served in the North Carolina state house of commons, 1794 and 1795; member of the North Carolina state senate, 1797-1802, 1812, and 1813; Governor of North Carolina 1821-1824; elected as a Jacksonian candidate to the Nineteenth and to the two succeeding Congresses and served from March 4, 1825, until his death near Clinton, Sampson County, N.C., September 26, 1829; chairman, Committee on Expenditures in the Post Office Department (Twentieth Congress); interment in the family burial plot on his estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

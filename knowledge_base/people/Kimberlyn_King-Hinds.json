@@ -1,0 +1,15 @@
+{
+    "name": "Kimberlyn King-Hinds",
+    "birthDate": "1975-04-10",
+    "deathDate": null,
+    "bio": "a Delegate from the Northern Mariana Islands; born in Tinian, Northern Mariana Islands, April 10, 1975; graduated from Tinian Junior/Senior High School, Tinian, Northern Mariana Islands; B.A., Loyola Marymount University, Los Angeles, Calif., 2000; M.H.R.M., University of Hawaii, Manoa, Hawaii, 2007; J.D., University of Hawaii, Manoa, Hawaii, 2014; staff, Tinian office of the mayor; lawyer; member, Northern Marianas College board of regents; member, Northern Mariana Islands commonwealth ports authority board of directors; elected as a Republican to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MP"
+        }
+    ]
+}

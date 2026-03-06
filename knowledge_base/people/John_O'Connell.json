@@ -1,0 +1,32 @@
+{
+    "name": "John O'Connell",
+    "birthDate": "1872-08-10",
+    "deathDate": "1941-12-06",
+    "bio": "A Representative from Rhode Island; born in Westerly, Washington County, R.I., August 10, 1872; attended the public schools; taught in the local schools 1892-1902; was graduated from the Philadelphia (Pa.) Dental College (now a branch of Temple University) in 1905 and commenced practice in Westerly, R.I., the same year; during the First World War served for sixteen months with Headquarters Sanitary Train, Twelfth Division, and later as major in the United States Dental Reserve; member of the State house of representatives 1929-1932; elected as a Democrat to the Seventy-third, Seventy-fourth, and Seventy-fifth Congresses (March 4, 1933-January 3, 1939); was not a candidate for renomination in 1938; died in Westerly, R.I., December 6, 1941; interment in St. Sebastian Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

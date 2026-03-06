@@ -1,0 +1,32 @@
+{
+    "name": "Bernhard Jacobsen",
+    "birthDate": "1862-03-26",
+    "deathDate": "1936-06-30",
+    "bio": "A Representative from Iowa; born in Töendren, Schleswig-Holstein, Germany, March 26, 1862; attended the public schools; immigrated in 1876 to the United States with his parents, who settled in Clinton, Iowa; employed as a clerk in a dry goods store until 1886, when he engaged in the mercantile business; served as postmaster of Clinton 1914-1923; retired from the mercantile business in 1927 and engaged in the industrial finance business; elected as a Democrat to the Seventy-second, Seventy-third, and Seventy-fourth Congresses and served from March 4, 1931, until his death; had been renominated for reelection to the Seventy-fifth Congress at the time of his death; died in Rochester, Minn., June 30, 1936; interment in Springdale Cemetery, Clinton, Iowa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "IOWA"
+        }
+    ]
+}

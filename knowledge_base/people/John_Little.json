@@ -1,0 +1,64 @@
+{
+    "name": "John Little",
+    "birthDate": "1853-03-15",
+    "deathDate": "1916-10-29",
+    "bio": "A Representative from Arkansas; born at Jenny Lind, Sebastian County, Ark., March 15, 1853; attended the common schools and Cane Hill College, Arkansas; studied law; was admitted to the bar in 1874 and commenced practice in Greenwood, Ark.; elected district attorney in 1877, and reelected for four successive terms; member of the State house of representatives in 1884; elected circuit judge in 1886 for a term of four years; chosen chairman of the State judicial convention in 1893; elected as a Democrat to the Fifty-third Congress to fill the vacancy caused by the resignation of Clifton R. Breckinridge; reelected to the Fifty-fourth and to the five succeeding Congresses and served from December 3, 1894, until January 14, 1907, when he resigned, having been elected Governor of Arkansas; after being sworn in as Governor in January 1907, he suffered a physical and mental breakdown, from which he did not recover; died in Little Rock, Pulaski County, Ark., October 29, 1916; interment in City Cemetery, Greenwood, Ark.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ARKANSAS"
+        }
+    ]
+}

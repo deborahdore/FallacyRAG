@@ -1,0 +1,32 @@
+{
+    "name": "Elizabeth Dole",
+    "birthDate": "1936-07-29",
+    "deathDate": null,
+    "bio": "a Senator from North Carolina; born in Salisbury, Rowan County, North Carolina, on July 29, 1936; B.A., Duke University 1958; M.A., Harvard University 1960; J.D., Harvard University 1965; U.S. secretary of transportation 1983-1987; U.S. secretary of labor 1989-1990; president, American Red Cross 1991-2000; unsuccessful candidate for the Republican presidential nomination in 2000; elected as a Republican to the U.S. Senate in 2002, and served from January 3, 2003, to January 3, 2009; chair, National Republican Senatorial Committee (2005-2007); was an unsuccessful candidate for reelection in 2008; awarded the Presidential Medal of Freedom on May 3, 2024.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

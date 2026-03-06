@@ -1,0 +1,16 @@
+{
+    "name": "William Sweeney",
+    "birthDate": "1832-05-05",
+    "deathDate": "1895-04-21",
+    "bio": "A Representative from Kentucky; born in Liberty, Casey County, Ky., May 5, 1832; attended the common schools and Bethany (W.Va.) College; studied law; was admitted to the bar in 1853 and commenced practice in Liberty, Ky.; moved to Owensboro, Daviess County, in 1853; prosecuting attorney of Daviess County 1854-1858; presidential elector on the Democratic ticket of Douglas and Johnson in 1860; elected as a Democrat to the Forty-first Congress (March 4, 1869-March 3, 1871); was renominated in 1870, but declined to accept the nomination; resumed the practice of law in Owensboro, Ky., and died there April 21, 1895; interment in Elmwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

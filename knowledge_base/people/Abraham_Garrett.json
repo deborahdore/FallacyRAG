@@ -1,0 +1,16 @@
+{
+    "name": "Abraham Garrett",
+    "birthDate": "1830",
+    "deathDate": "1907",
+    "bio": "A Representative from Tennessee; born near Livingston, Overton County, Tenn., March 6, 1830; attended the public schools and Poplar Springs College, Kentucky; studied law; was admitted to the bar and commenced practice in Livingston, Tenn.; also engaged in agricultural pursuits; served as lieutenant colonel of the First Regiment, Tennessee Mounted Infantry, in the Union Army during the Civil War; delegate to the State constitutional convention in 1865; member of the State house of representatives in 1865 and 1866; elected as a Democrat to the Forty-second Congress (March 4, 1871-March 3, 1873); unsuccessful candidate for reelection in 1872; resumed the practice of law in Carthage, Tenn., where he died February 14, 1907; interment in Carthage Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

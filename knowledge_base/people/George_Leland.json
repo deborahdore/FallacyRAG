@@ -1,0 +1,56 @@
+{
+    "name": "George Leland",
+    "birthDate": "1944",
+    "deathDate": "1989",
+    "bio": "A Representative from Texas; born in Lubbock, Lubbock County, Tex., November 27, 1944; attended the Harris County public schools; graduated from Phillis Wheatly Senior High School, Houston, 1963; B.S., Texas Southern University, Houston, 1970; senior vice president, King State Bank, 1977; director, special development projects, Hermann Hospital, 1977; Texas State representative, District 88, 1972-1979; delegate, Texas Constitutional convention, 1974; elected to Democratic National Committee, 1976; delegate, Democratic National Convention, 1972; elected as a Democrat to the Ninety-sixth and to the five succeeding Congresses and served from January 3, 1979, until his death August 7, 1989, in an aircraft crash near Gambela, Ethiopia while en route to a United Nations refugee camp near the Sudan-Ethiopia border; chairman, Select Committee on Hunger (Ninety-eighth through One Hundred First Congresses).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

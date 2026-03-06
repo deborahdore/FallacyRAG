@@ -1,0 +1,80 @@
+{
+    "name": "Les Aucoin",
+    "birthDate": "1942-10-21",
+    "deathDate": null,
+    "bio": "<p>a Representative from Oregon; born in Portland, Multnomah County, Oreg., October 21, 1942; attended public schools in Redmond, Oreg.; graduated, Redmond Union High School, 1960; attended Portland State University, 1961, 1965-1966; B.A., Pacific University, Forest Grove, 1969; worked as a newsman and public information director; served in the United States Army, 1961-1964; served in the Oregon house of representatives, 1971-1974, and served as majority leader, 1973-1974; elected as a Democrat to the Ninety-fourth and to the eight succeeding Congresses (January 3, 1975-January 3, 1993); was not a candidate in 1992 for reelection to the United States House of Representatives, but was an unsuccessful candidate for election to the United States Senate; faculty, Southern Oregon University, Ashland, Ore., 1998-2004.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "OREGON"
+        }
+    ]
+}

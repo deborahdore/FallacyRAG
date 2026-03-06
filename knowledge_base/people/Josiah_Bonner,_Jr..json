@@ -1,0 +1,56 @@
+{
+    "name": "Josiah Bonner, Jr.",
+    "birthDate": "1959-11-19",
+    "deathDate": null,
+    "bio": "a Representative from Alabama; born in Selma, Dallas County, Ala., November 19, 1959; B.A., University of Alabama, 1982; attended University of Alabama Law School; staff, United States Representative Sonny Callahan of Alabama, 1985&ndash;2002; elected as a Republican to the One Hundred Eighth and to the five succeeding Congresses until his resignation on August 2, 2013 (January 3, 2003&ndash;August 2, 2013); chair, Committee on Ethics (One Hundred Twelfth Congress); vice chancellor, University of Alabama, Tuscaloosa, Ala., 2013&ndash;2018; staff, Alabama Governor Kay Ivey, 2018&ndash;2021; president, University of Southern Alabama, Mobile, Ala., 2022&ndash;present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ALABAMA"
+        }
+    ]
+}

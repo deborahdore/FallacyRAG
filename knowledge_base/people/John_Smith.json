@@ -1,0 +1,40 @@
+{
+    "name": "John Smith",
+    "birthDate": "1904-01-25",
+    "deathDate": "1980-02-16",
+    "bio": "a Representative from Connecticut; born in Waterbury, New Haven County, Conn., January 25, 1904; attended the public schools; B.A., Yale University, 1925; law department of Yale University, LL.B., 1927; research fellow, Yale Law School, 1927-1928; admitted to the bar in 1927 and commenced practice in Waterbury, Conn.; served in the Field Artillery Reserves 1925-1935; elected as a Democrat to the Seventy-fourth Congress; reelected to the three succeeding Congresses and served from January 3, 1935, until his resignation on November 4, 1941, having been appointed a United States district judge for the district of Connecticut; appointed judge for the Second Circuit Court of the United States on September 2, 1960, and served until November 6, 1971, when he retired to become a senior judge; resided in West Hartford, Conn., until his death in Waterbury, Conn., February 16, 1980; interment in Calvary Cemetery, Waterbury.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CONNECTICUT"
+        }
+    ]
+}

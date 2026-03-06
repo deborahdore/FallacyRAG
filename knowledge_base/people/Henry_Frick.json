@@ -1,0 +1,16 @@
+{
+    "name": "Henry Frick",
+    "birthDate": "1795-03-17",
+    "deathDate": "1844-03-01",
+    "bio": "A Representative from Pennsylvania; born in Northumberland, Pa., March 17, 1795; attended the public schools; apprenticed to a printer in Philadelphia; served in the War of 1812; settled in Milton, Pa., in 1816; established the Miltonian, a political journal, with which he was connected for over twenty years; member of the State house of representatives 1828-1831; elected as a Whig to the Twenty-eighth Congress and served from March 4, 1843, until his death in Washington, D.C., March 1, 1844; interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

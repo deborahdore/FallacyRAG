@@ -1,0 +1,24 @@
+{
+    "name": "Edward Ball",
+    "birthDate": "1811-11-06",
+    "deathDate": "1872-11-22",
+    "bio": "A Representative from Ohio; born in Fairfax County, near Falls Church, Va., November 6, 1811; attended the village school; moved to Ohio and located near Zanesville; engaged in agricultural pursuits; deputy sheriff of Muskingum County, 1837-1838, and sheriff 1839-1843; member of the Ohio state house of representatives, 1845-1849; editor of the Zanesville Courier in 1849; elected as a Whig to the Thirty-third Congress and reelected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1853-March 3, 1857); chairman, Committee on Public Buildings and Grounds (Thirty-fourth Congress); was not a candidate for renomination in 1856; studied law; was admitted to the bar in 1860 and commenced practice in Zanesville; delegate to the Republican National Convention at Chicago in 1860; elected Sergeant at Arms of the United States House of Representatives to the Thirty-seventh Congress, July 5, 1861- December 8, 1863; resumed the practice of law; again a member of the Ohio state house of representatives, 1868-1870; accidentally killed by a railroad train near Zanesville, Ohio, on November 22, 1872; interment in Greenwood Cemetery, Zanesville, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "OHIO"
+        }
+    ]
+}

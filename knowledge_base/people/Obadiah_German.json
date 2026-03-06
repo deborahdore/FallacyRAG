@@ -1,0 +1,32 @@
+{
+    "name": "Obadiah German",
+    "birthDate": "1766",
+    "deathDate": "1842",
+    "bio": "A Senator from New York; born in Amenia, Dutchess County, N.Y., April 22, 1766; attended the district schools; studied law; admitted to the bar in 1792 and commenced practice in Norwich, N.Y.; member, State assembly 1798, 1804-1805, 1807-1809; elected as a Democratic Republican to the United States Senate and served from March 4, 1809, to March 3, 1815; judge of Chenango County 1815-1819; appointed commissioner of public works in 1817; member, State assembly 1819, and served as speaker; affiliated with the Whig Party on its organization; died in Norwich, N.Y., September 24, 1842; interment in North Norwich Cemetery (formerly Riverside Cemetery), North Norwich, N.Y.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

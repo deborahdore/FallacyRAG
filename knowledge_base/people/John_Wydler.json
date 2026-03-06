@@ -1,0 +1,80 @@
+{
+    "name": "John Wydler",
+    "birthDate": "1924",
+    "deathDate": "1987",
+    "bio": "A Representative from New York; born in Brooklyn, N.Y., June 9, 1924; attended West School of Long Beach, Long Beach High School, and Brown University, Providence, R.I.; enlisted as a private in the United States Army Air Corps November 16, 1942, was promoted to staff sergeant in a chemical weapons company and assigned to the China-Burma-India Theater, and was discharged in November 1945; served as a lieutenant in the judge advocate's office, and in Air Force Reserve, 1945-1955; resumed studies at Brown University until 1947; LL.B., Harvard University Law School, 1950; was admitted to the bar in October 1950; served in the United States attorney's office, Eastern District of New York, 1953-1959; entered the private practice of law in Mineola, N.Y., in 1959; delegate, Republican National Convention, 1968; elected as a Republican to the Eighty-eighth and to the eight succeeding Congresses (January 3, 1963-January 3, 1981); was not a candidate for reelection in 1980 to the Ninety-seventh Congress; chairman, Long Island Development Agency; was a resident of Garden City, N.Y., until his death in Washington, D.C., on August 4, 1987; interment in Holy Rood Cemetery, Garden City, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

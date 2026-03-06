@@ -1,0 +1,16 @@
+{
+    "name": "Charles Djou",
+    "birthDate": "1970-08-09",
+    "deathDate": null,
+    "bio": "A Representative from Hawaii; born in Los Angeles, Los Angeles County, Calif., August 9, 1970; graduated from Punahou School, Honolulu, Hawaii, 1988; B.A., University of Pennsylvania, Philadelphia, Pa., 1992; B.S., University of Pennsylvania, Philadelphia, Pa., 1992; J.D., University of Southern California, Los Angeles, Calif., 1996; United States Army Reserve, 2001-present; lawyer, private practice; vice chairman, Hawaii Republican Party, 1998-1999; member of the Hawaii state house of representatives, 2000-2002, minority floor leader, 2001-2002; member of the Honolulu, Hawaii city council, 2002-2010; elected as a Republican to the One Hundred Eleventh Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Neil Abercrombie (May 22, 2010-January 3, 2011); unsuccessful candidate for reelection to the One Hundred Twelfth Congress in 2010; unsuccessful candidate for election to the One Hundred Thirteenth Congress in 2012; unsuccessful candidate for nomination to the One Hundred Fourteenth Congress in 2014; unsuccessful candidate for Mayor of Honolulu, Hawaii, in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "HAWAII"
+        }
+    ]
+}

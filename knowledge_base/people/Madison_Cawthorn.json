@@ -1,0 +1,16 @@
+{
+    "name": "Madison Cawthorn",
+    "birthDate": "1995-08-01",
+    "deathDate": null,
+    "bio": "a Representative from North Carolina; born in Buncombe County, N.C., August 1, 1995; home schooled in Hendersonville, N.C.; attended Patrick Henry College, Purcellville, Va.; business owner; elected as a Republican to the One Hundred Seventeenth Congress (January 3, 2021-January 3, 2023); unsuccessful candidate for renomination to the One Hundred Eighteenth Congress in 2022.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH CAROLINA"
+        }
+    ]
+}

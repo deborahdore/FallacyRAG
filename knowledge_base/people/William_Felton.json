@@ -1,0 +1,32 @@
+{
+    "name": "William Felton",
+    "birthDate": "1823-06-19",
+    "deathDate": "1909-09-24",
+    "bio": "a Representative from Georgia; born near Lexington, Oglethorpe County, Ga., June 19, 1823; attended the common and primary schools; was graduated from the University of Georgia at Athens in 1843 and from the Medical College of Georgia at Augusta in 1844; practiced medicine, taught school, and also engaged in agricultural pursuits near Cartersville, Ga.; member of the Georgia State house of representatives, 1851, 1884-1890; ordained as a Methodist minister in 1857; served as a surgeon during the Civil War; elected as an Independent Democrat to the Forty-fourth, Forty-fifth, and Forty-sixth Congresses (March 4, 1875-March 3, 1881); unsuccessful candidate for reelection in 1880 to the Forty-seventh Congress; resumed his activity as a minister and again followed agricultural pursuits; trustee from the State at large for the University of Georgia 1886-1892; died in Cartersville, Ga., September 24, 1909; interment in Oak Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Independent Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Independent Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Independent Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

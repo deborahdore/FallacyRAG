@@ -1,0 +1,48 @@
+{
+    "name": "Frank Buck",
+    "birthDate": "1887-09-23",
+    "deathDate": "1942-09-17",
+    "bio": "A Representative from California; born on a ranch near Vacaville, Solano County, Calif., September 23, 1887; attended the public schools; was graduated from the University of California at Berkeley in 1908 and from the law department of Harvard University in 1911; was admitted to the bar the same year and commenced practice in San Francisco, Calif.; fruit grower and farmer at Vacaville, Calif.; also engaged in the lumber business and in oil refining; delegate to the Democratic National Conventions in 1928, 1936, and 1940; elected as a Democrat to the Seventy-third and to the four succeeding Congresses and served from March 4, 1933, until his death in Washington, D.C., September 17, 1942; interment in Vacaville-Elmira Cemetery, Vacaville, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

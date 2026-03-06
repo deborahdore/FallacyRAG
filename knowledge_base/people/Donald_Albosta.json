@@ -1,0 +1,32 @@
+{
+    "name": "Donald Albosta",
+    "birthDate": "1925-12-05",
+    "deathDate": "2014-12-18",
+    "bio": "a Representative from Michigan; born in Saginaw, Saginaw County, Mich., December 5, 1925; attended Saginaw and Chesaning public schools; graduated Chesaning Agricultural School; attended Delta College, Saginaw, Mich.; served in the United States Navy; farmer; owner and developer of Misteguay Creek Farms; Albee Township Trustee; associate director, Saginaw County Soil Conservation District; Saginaw County Commissioner, 1970-1974; served in the Michigan house of representatives, 1974-1976; elected as a Democrat to the Ninety-sixth and to the two succeeding Congresses (January 3, 1979-January 3, 1985); unsuccessful candidate for reelection to the Ninety-ninth Congress; died on December 18, 2014, in St. Charles, Mich.; interment at St. Mary's Cemetery, Albee Township, Mich.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

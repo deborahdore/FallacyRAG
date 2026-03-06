@@ -1,0 +1,48 @@
+{
+    "name": "William Browning",
+    "birthDate": "1850-04-11",
+    "deathDate": "1920-03-24",
+    "bio": "A Representative from New Jersey; born in Camden, N.J., April 11, 1850; attended the Friends' School; at an early age engaged in the wholesale dry goods business in Camden; member of the Camden Board of Education and of the city council; appointed postmaster of Camden on June 18, 1889, and served until June 1, 1894, when his successor was appointed; Chief Clerk of the House of Representatives of the United States 1895-1911; elected as a Republican to the Sixty-second Congress to fill the vacancy caused by the death of Henry C. Loudenslager; reelected to the Sixty-third and to the three succeeding Congresses and served from November 7, 1911, until his death in the Capitol Building, Washington, D.C., March 24, 1920; interment in Harleigh Cemetery, Camden, N.J.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 65th United States Congress",
+            "startDate": "1917-03-05",
+            "endDate": "1919-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

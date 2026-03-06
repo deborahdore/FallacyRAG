@@ -1,0 +1,72 @@
+{
+    "name": "Frank Stubblefield",
+    "birthDate": "1907-04-05",
+    "deathDate": "1977-10-14",
+    "bio": "a Representative from Kentucky; born in Murray, Calloway County, Ky., April 5, 1907; attended the public schools; student at University of Arizona in 1927; B.S., University of Kentucky College of Commerce, 1932; engaged in the retail drug business in Murray, Ky., in 1933; member of city council, Murray, Ky., 1939-1942; served as a lieutenant in the United States Navy from 1944 until September 1945; member of the Kentucky Railroad Commission, 1951-1955; reelected to four-year term in 1955, but resigned December 31, 1958, to run for Congress; elected as a Democrat to the Eighty-sixth and to the seven succeeding Congresses and served from January 3, 1959, until his resignation December 31, 1974; unsuccessful candidate for renomination in 1974 to the Ninety-fourth Congress; resided in Murray, Ky., where he died October 14, 1977; interment in Murray City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

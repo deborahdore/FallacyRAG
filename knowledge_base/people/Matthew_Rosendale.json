@@ -1,0 +1,24 @@
+{
+    "name": "Matthew Rosendale",
+    "birthDate": "1960-07-07",
+    "deathDate": null,
+    "bio": "a Representative from Montana; born in Baltimore, Md., July 7, 1960; graduated from Queen Anne&rsquo;s County High School, Centreville, Md, 1978; attended Chesapeake College, Wye Mills, Md.; sales representative; rancher; real estate developer; member of the Montana state house of representatives, 2011-2013; member of the Montana state senate, 2013-2017, majority leader, 2015-2017; Montana state auditor, 2017-2020; unsuccessful candidate for nomination to the One Hundred Fourteenth Congress in 2014; unsuccessful candidate for election to the United States Senate in 2018; elected as a Republican to the One Hundred Seventeenth and to the succeeding Congress (January 3, 2021-January 3, 2025); was not a candidate for reelection to the One Hundred Nineteenth Congress in 2024.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MONTANA"
+        }
+    ]
+}

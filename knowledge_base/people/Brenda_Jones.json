@@ -1,0 +1,16 @@
+{
+    "name": "Brenda Jones",
+    "birthDate": "1959-10-24",
+    "deathDate": null,
+    "bio": "A Representative from Michigan; born on October 24, 1959; graduated from Cass Tech High School, Detroit, Mich.; B.A., Wayne State University, Detroit, Mich.; graduate certificate, Wayne State University; trade union president; member of the Detroit, Mich., city council, 2005-2021, president, 2014-2021; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; unsuccessful write-in candidate for election to the One Hundred Sixteenth Congress in 2018; elected as a Democrat to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative John Conyers, Jr. (November 6, 2018-January 3, 2019); unsuccessful candidate for nomination to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

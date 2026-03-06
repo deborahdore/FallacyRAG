@@ -1,0 +1,16 @@
+{
+    "name": "Rensselaer Westerlo",
+    "birthDate": "1776-04-29",
+    "deathDate": "1851-04-18",
+    "bio": "A Representative from New York; born in Albany, N.Y., April 29, 1776; was graduated from Columbia College, New York City, in 1795; studied law; was admitted to the bar and practiced; elected as a Federalist to the Fifteenth Congress (March 4, 1817-March 3, 1819); was not a candidate for reelection; resumed the practice of law; died in Albany, N.Y., April 18, 1851; interment in the Albany Rural Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Peter Swart",
+    "birthDate": "1752-07-05",
+    "deathDate": "1829-11-03",
+    "bio": "A Representative from New York; born in Schoharie, N.Y., July 5, 1752; attended the common schools; studied law; was admitted to the New York bar and commenced the practice of law in Schoharie; judge of the court of common pleas of Schoharie County in 1795; member of the New York state assembly in 1798 and 1799; elected as a Democratic Republican to the Tenth Congress (March 4, 1807-March 3, 1809); sheriff of Schoharie County in 1810 and 1813; served in the New York state senate 1817-1820; resumed the practice of his profession in Schoharie, N.Y., and died there on November 3, 1829; interment in the Old Stone Fort Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

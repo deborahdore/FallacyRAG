@@ -1,0 +1,39 @@
+{
+    "name": "Greg Stanton",
+    "birthDate": "1970-03-08",
+    "deathDate": null,
+    "bio": "a Representative from Arizona; born in Long Island, N.Y., March 8, 1970; graduated from Cortez High School, Phoenix, Ariz. 1988; B.A., Marquette University, Milwaukee, Wis., 1992; J.D., University of Michigan, Ann Arbor, Mich., 1995; lawyer, private practice; member of the Phoenix, Ariz., city council, 2000-2009; deputy attorney general, Ariz. state attorney general's office, 2009-2011; Mayor of Phoenix, Ariz., 2012-2018; elected as a Democrat to the One Hundred Sixteenth and to the three succeeding Congresses (January 3, 2019-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ARIZONA"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Zachary Taylor",
+    "birthDate": "1849",
+    "deathDate": "1921",
+    "bio": "A Representative from Tennessee; born near Brownsville, Haywood County, Tenn., May 9, 1849; attended J.I. Hall's School near Covington, Tenn., and was graduated from the Virginia Military Institute at Lexington as senior captain July 4, 1872, and from the law department of Cumberland University, Lebanon, Tenn., in January 1874; was admitted to the bar and commenced practice in Covington, Tenn., in 1878; served in the State senate, 1881-1883; postmaster of Covington, Tenn., from July 1, 1883, to January 1, 1885, when he resigned; elected as a Republican to the Forty-ninth Congress (March 4, 1885-March 3, 1887); unsuccessful candidate for reelection in 1886 to the Fiftieth Congress; moved to Memphis, Tenn., and engaged in the general life insurance business; delegate to the Republican National Convention in 1896; moved to San Antonio, Tex.; died in Ellendale, Shelby County, Tenn., February 19, 1921; interment in Bartlett-Ellendale Cemetery, Shelby County, Tenn.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

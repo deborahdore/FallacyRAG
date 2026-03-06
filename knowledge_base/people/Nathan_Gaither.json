@@ -1,0 +1,24 @@
+{
+    "name": "Nathan Gaither",
+    "birthDate": "1788-09-15",
+    "deathDate": "1862-08-12",
+    "bio": "a Representative from Kentucky; born near Mocksville, Davie County, N.C., September 15, 1788; completed preparatory studies; attended Bardstown College; studied medicine; graduated from Jefferson Medical College and began practice in Columbia, Ky.; served as assistant surgeon in the War of 1812; member of the State house of representatives 1815-1818; elected as a Jacksonian candidate to the Twenty-first and Twenty-second Congresses (March 4, 1829-March 3, 1833); unsuccessful candidate for reelection 1832 to the Twenty-third Congress; delegate to the State constitutional convention in 1849; again a member of the State house of representatives 1855-1857; resumed the practice of medicine; died in Columbia, Ky., August 12, 1862; interment in Columbia Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

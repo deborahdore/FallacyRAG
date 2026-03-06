@@ -1,0 +1,15 @@
+{
+    "name": "James Walkinshaw",
+    "birthDate": "1982-10-22",
+    "deathDate": null,
+    "bio": "a Representative from Virginia; born in Arlington County, Va., October 22, 1982; graduated from Stonewall Jackson High School, Quicksburg, Va., 2001; B.A., New York University, New York, N.Y., 2005; campaign staff; staff, United States Representative Gerald E. (Gerry) Connolly, 2009-2019; member of the Fairfax County, Va., board of supervisors, 2020-2025; member of the Northern Virginia Transportation Commission, 2020-2025; elected as a Democrat to the One Hundred Nineteenth Congress, by special election, to fill the vacancy caused by the death of United States Representative Gerald E. (Gerry) Connolly (September 9, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

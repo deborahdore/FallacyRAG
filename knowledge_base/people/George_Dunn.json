@@ -1,0 +1,24 @@
+{
+    "name": "George Dunn",
+    "birthDate": "1812-12-20",
+    "deathDate": "1857-09-04",
+    "bio": "A Representative from Indiana; born in Washington County, Ky., December 20, 1812; moved to Monroe County, Ind.; completed preparatory studies and attended the Indiana University at Bloomington; moved to Bedford, Lawrence County, Ind., in 1833, where he taught school; studied law; was admitted to the bar in 1835 and commenced practice in Bedford, Ind.; prosecuting attorney of Lawrence County in 1842; elected as a Whig to the Thirtieth Congress (March 4, 1847-March 3, 1849); unsuccessful candidate for reelection in 1848; served in the State senate from 1850 until 1852, when he resigned; elected as an Opposition candidate to the Thirty-fourth Congress (March 4, 1855-March 3, 1857); was not a candidate for renomination in 1856; died in Bedford, Ind., September 4, 1857; interment in Green Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 30th United States Congress",
+            "startDate": "1847-12-06",
+            "endDate": "1849-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "INDIANA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "INDIANA"
+        }
+    ]
+}

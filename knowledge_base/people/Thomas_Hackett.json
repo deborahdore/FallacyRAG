@@ -1,0 +1,16 @@
+{
+    "name": "Thomas Hackett",
+    "birthDate": null,
+    "deathDate": "1851-10-08",
+    "bio": "A Representative from Georgia; born in Georgia, birth date unknown; attended the common schools; solicitor general of the Cherokee circuit, 1841-1843; served in the State senate in 1845; elected as a Democrat to the Thirty-first Congress (March 4, 1849-March 3, 1851); died in Marietta, Ga., October 8, 1851.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 31st United States Congress",
+            "startDate": "1849-03-05",
+            "endDate": "1851-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

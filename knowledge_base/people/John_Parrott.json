@@ -1,0 +1,39 @@
+{
+    "name": "John Parrott",
+    "birthDate": "1767-08-08",
+    "deathDate": "1836-07-09",
+    "bio": "A Representative and a Senator from New Hampshire; born in Portsmouth, N.H., August 8, 1767; attended the common schools; member, State house of representatives 1809-1814; held various local offices; unsuccessful candidate for election in 1812 to the Thirteenth Congress; elected to the Fifteenth Congress (March 4, 1817-March 3, 1819); elected as a Democratic Republican (later Adams-Clay Republican) to the United States Senate and served from March 4, 1819, to March 3, 1825; postmaster of Portsmouth, N.H., 1826; member, State senate 1830-1831; died in Greenland, Rockingham County, N.H., July 9, 1836; interment in the family burying ground on the Parrott estate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NEW HAMPSHIRE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "NEW HAMPSHIRE"
+        }
+    ]
+}

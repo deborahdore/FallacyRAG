@@ -1,0 +1,48 @@
+{
+    "name": "Richard Lankford",
+    "birthDate": "1914",
+    "deathDate": "2003",
+    "bio": "A Representative from Maryland; born in Wilmington, New Castle County, Del., July 22, 1914; attended private schools in Baltimore, Md., and Alexandria, Va.; B.S., University of Virginia, Charlottesville, Va., 1937; LL.B., University of Maryland, Baltimore, Md., 1940; lawyer, private practice; engaged in active management of tobacco and cattle farms; United States Naval Reserve, 1942-1946; member of the Maryland house of delegates, 1948-1954; unsuccessful Democratic candidate for election to the Eighty-third Congress in 1952; member of Maryland Legislative Council, 1953; delegate, Democratic National Convention, 1956; elected as a Democrat to the Eighty-fourth and to the four succeeding Congresses (January 3, 1955-January 3, 1965); was not a candidate for renomination to the Eighty-ninth Congress in 1964; died on September 22, 2003, Easton, Md.; interment in Saint James Episcopal Church Cemetery, Lothian, Anne Arundel County, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

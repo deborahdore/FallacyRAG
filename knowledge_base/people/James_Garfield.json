@@ -1,0 +1,88 @@
+{
+    "name": "James Garfield",
+    "birthDate": "1831-11-19",
+    "deathDate": "1881-09-19",
+    "bio": "A Representative from Ohio and 20th President of the United States; born in Orange, Cuyahoga County, Ohio, November 19, 1831; attended district school; driver and helmsman on the Ohio Canal; entered Geauga Seminary, Chester, Ohio, in March 1849; attended the Western Reserve Eclectic Institute (now Hiram College), Hiram, Ohio, 1851-1854; graduated from Williams College, Williamstown, Mass., 1858; teacher; professor of ancient languages and literature at the Western Reserve Eclectic Institute, Hiram, Ohio; principal of the Western Reserve Eclectic Institute, Hiram, Ohio, 1857-1861; member of the Ohio state senate 1859; lawyer, private practice; Union Army, Ohio Volunteer Infantry 1861-1863; major general; elected as a Republican to the Thirty-eighth and to the eight succeeding Congresses and served until his resignation on November 8, 1880 (March 4, 1863-November 8, 1880); chair, Committee on Military Affairs (Fortieth Congress); chair, Committee on Banking and Currency (Forty-first Congress); chair, Committee on Appropriations (Forty-second and Forty-third Congresses); member of the Electoral Commission created by act of Congress approved January 29, 1877, to decide the contests in various States in the presidential election of 1876; elected to the United States Senate on January 13, 1880, for the term beginning March 4, 1881, but declined to accept having been elected President of the United States on November 2, 1880; elected the twentieth President of the United States in 1880 and served from March 4, 1881, until his death on September 19, 1881, in Elberon, N.J., from the effects of an assassin's attack on July 2, 1881, in Washington, D.C.; lay in state in the Rotunda of the U.S. Capitol, September 21-23, 1881; interment in Lake View Cemetery, Cleveland, Ohio.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 42nd United States Congress",
+            "startDate": "1871-03-04",
+            "endDate": "1873-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 43rd United States Congress",
+            "startDate": "1873-03-04",
+            "endDate": "1875-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "President",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "UNITED STATES"
+        }
+    ]
+}

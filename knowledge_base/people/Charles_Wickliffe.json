@@ -1,0 +1,56 @@
+{
+    "name": "Charles Wickliffe",
+    "birthDate": "1788-06-08",
+    "deathDate": "1869-10-31",
+    "bio": "a Representative from Kentucky; born near Springfield, Washington County, Ky., June 8, 1788; completed preparatory studies; studied law; was admitted to the bar in 1809 and commenced practice in Bardstown; served in the War of 1812; was aide to General Winlock; member of the Kentucky state house of representatives in 1812 and 1813; again entered the Army as aide to General Caldwell; again a member of the Kentucky state house of representatives in 1822, 1823, and 1833-1835, and served as speaker in 1834; elected as a Jackson Republican to the Eighteenth Congress; reelected as a Jacksonian candidate to the Nineteenth and to the three succeeding Congresses (March 4, 1823-March 3, 1833); chairman, Committee on Public Lands (Twenty-first and Twenty-second Congresses); was not a candidate for renomination; one of the managers appointed by the House of Representatives in 1830 to conduct the impeachment proceedings against James H. Peck, United States judge for the district of Missouri; Lieutenant Governor in 1836; became Governor upon the death of Governor Clark and served from October 5, 1839, to September 1840; Postmaster General from October 13, 1841, to March 6, 1845; sent on a secret mission by President Polk to the Republic of Texas in 1845; member of the State constitutional convention in 1849; member of the peace conference held at Washington, D.C., in 1861 in an effort to devise means to prevent the impending war; elected as a Unionist to the Thirty-seventh Congress (March 4, 1861-March 3, 1863); did not seek renomination; unsuccessful candidate for Governor in 1863; delegate to the Democratic National Convention in 1864; died near Ilchester, Md., October 31, 1869; interment in Bardstown Cemetery, Bardstown, Ky.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "KENTUCKY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Unionist",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

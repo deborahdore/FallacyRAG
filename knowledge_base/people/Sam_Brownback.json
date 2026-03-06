@@ -1,0 +1,80 @@
+{
+    "name": "Sam Brownback",
+    "birthDate": "1956",
+    "deathDate": null,
+    "bio": "A Representative and a Senator from Kansas; born in Garnett, Kans., September 12, 1956; grew up on his family's farm near Parker, Kans., and graduated from Prairie View High School, Linn County, Kans.; graduated from Kansas State University, Manhattan, Kans., in 1979; received law degree from University of Kansas, Lawrence, in 1982; administrator, broadcaster, teacher, attorney and author; Kansas Secretary of Agriculture 1986-1993; White House Fellow detailed to the Office of the U.S. Trade Representative 1990-1991; elected as a Republican to the One Hundred Fourth Congress and began serving January 3, 1995; not a candidate for reelection to the United States House of Representatives in 1996, but was elected to the United States Senate in a special election on November 5, 1996, to the unexpired portion of the term ending January 3, 1999, left vacant by the resignation of Robert Dole; resigned from the House of Representatives on November 27, 1996, retroactive to November 7, 1996, when his Senate service began; reelected in 1998 and again in 2004, and served from November 7, 1996, to January 3, 2011; was not a candidate for reelection to the Senate in 2010; governor of Kansas 2011-2018.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

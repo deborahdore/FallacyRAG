@@ -1,0 +1,63 @@
+{
+    "name": "Kevin Cramer",
+    "birthDate": "1961",
+    "deathDate": null,
+    "bio": "A Senator and a Representative from North Dakota; born in Rolla, Rolette County, N.Dak., January 21, 1961; graduated from Kindred High School, Kindred, N.Dak., 1979; B.A., Concordia College, Moorhead, Minn., 1983; M.A., University of Mary, Bismarck, N.Dak., 2003; chairman, North Dakota Republican Party, 1991-1993; North Dakota state tourism director, 1993-1997; unsuccessful candidate for the United States House of Representatives in 1996; North Dakota state economic development and finance director, 1997-2000; unsuccessful candidate for the United States House of Representatives in 1998; North Dakota public service commissioner, 2003-2012; elected as a Republican to the One Hundred Thirteenth and to the two succeeding Congresses (January 3, 2013-January 3, 2019); was not a candidate for reelection to the House of Representatives but was elected as a Republican to the United States Senate in 2018; reelected in 2024 for the term ending January 3, 2031.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NORTH DAKOTA"
+        }
+    ]
+}

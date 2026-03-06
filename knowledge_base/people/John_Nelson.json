@@ -1,0 +1,56 @@
+{
+    "name": "John Nelson",
+    "birthDate": "1874-07-12",
+    "deathDate": "1955-04-11",
+    "bio": "A Representative from Maine; born in China, Kennebec County, Maine, July 12, 1874; attended the common and high schools of Waterville, Maine; was graduated from Friends School, Providence, R.I., in 1894, from Colby College, Waterville, Maine, in 1898, and from the law department of the University of Maine at Orono in 1904; was admitted to the bar in 1904 and commenced practice in Waterville, Maine; moved to Augusta, Maine, in 1913 and continued the practice of his chosen profession; elected as a Republican to the Sixty-seventh Congress, by special election, to fill the vacancy caused by the resignation of United States Representative John A. Peters, and reelected to the five succeeding Congresses (March 20, 1922-March 3, 1933); unsuccessful candidate for reelection in 1932 to the Seventy-third Congress; trustee of Colby College 1926-1931; also served as trustee of Monmouth (Maine) Academy; practiced law until his retirement in 1946; died on April 11, 1955, in Augusta, Maine; interment in Pine Grove Cemetery, Waterville, Maine.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MAINE"
+        }
+    ]
+}

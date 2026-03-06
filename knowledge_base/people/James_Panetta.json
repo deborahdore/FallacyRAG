@@ -1,0 +1,47 @@
+{
+    "name": "James Panetta",
+    "birthDate": "1969-10-01",
+    "deathDate": null,
+    "bio": "a Representative from California; born in Washington, D.C., October 1, 1969; graduated from Carmel High School, Carmel, Calif., 1987; A.A., Monterey Peninsula College, Monterey, Calif., 1989; B.A. University of California, Davis, Calif., 1991; J.D., Santa Clara University, Santa Clara, Calif., 1996; United States Navy Reserve, 2003-2011, Afghanistan War, 2007-2008; clerk, United States Department of State, 1992; ordinary seaman, National Oceanic and Atmospheric Administration, NOAA Ranier, 1992; Alameda County, Calif., deputy district attorney, 1996-2010; Monterey County, Calif., deputy district attorney, 2010-2016; Monterey County, Calif., central Democratic committee vice chairman, 2012-2016; elected as a Democrat to the One Hundred Fifteenth and to the four succeeding Congresses (January 3, 2017-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

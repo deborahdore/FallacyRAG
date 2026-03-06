@@ -1,0 +1,56 @@
+{
+    "name": "John Blair",
+    "birthDate": "1790-09-13",
+    "deathDate": "1863-07-09",
+    "bio": "a Representative from Tennessee; born at Blairs Mill, near Jonesborough (now Jonesboro), Washington County, Tenn., September 13, 1790; attended Martain Academy, and was graduated from Washington (Tenn.) College in 1809; studied law; was admitted to the bar in 1813 and practiced; member of the State house of representatives 1815-1817; served in the State senate 1817-1821; elected as a Jackson Republican to the Eighteenth Congress; reelected as a Jacksonian candidate to the Nineteenth and to the four succeeding Congresses (March 4, 1823-March 3, 1835); chairman, Committee on Expenditures in the Department of State (Twentieth Congress); unsuccessful candidate for reelection in 1834 to the Twenty-fourth Congress; retired to private life; again a member of the State house of representatives, in 1849 and 1850; resumed the practice of law; died in Jonesboro, Tenn., July 9, 1863; interment in the Old Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 23rd United States Congress",
+            "startDate": "1833-12-02",
+            "endDate": "1835-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

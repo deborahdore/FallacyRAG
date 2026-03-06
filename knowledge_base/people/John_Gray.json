@@ -1,0 +1,16 @@
+{
+    "name": "John Gray",
+    "birthDate": "1783",
+    "deathDate": "1823-05-18",
+    "bio": "a Representative from Virginia; born in Southampton County, Va., in 1783; pursued an academic course; member of the Virginia state house of delegates, 1804-1806 and 1821-1823; elected as a Democratic Republican to the Sixteenth Congress to fill the vacancy caused by the resignation of James Johnson (August 28, 1820-March 3, 1821); unsuccessful candidate in 1820 for reelection to the Seventeenth Congress; died May 18, 1823.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

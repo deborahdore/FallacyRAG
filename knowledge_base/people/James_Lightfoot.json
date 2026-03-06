@@ -1,0 +1,56 @@
+{
+    "name": "James Lightfoot",
+    "birthDate": "1938",
+    "deathDate": null,
+    "bio": "A Representative from Iowa; born in Sioux City, Iowa, September 27, 1938; raised on a farm near Farragut, Iowa; graduated from Farragut High School, 1956; served in the United States Army and Army Reserve, 1956-1964; managed a farm equipment plant in Corsicana, Tex., 1970-1976; served on Corsicana City Commission, 1974-1976; radio broadcaster and farm editor in Shenandoah, Iowa; elected as a Republican to the Ninety-ninth and to the five succeeding Congresses (January 3, 1985-January 3, 1997); was not a candidate in 1996 for reelection to the United States House of Representatives, but was an unsuccessful candidate for election to the United States Senate; unsuccessful candidate for governor in 1998.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "IOWA"
+        }
+    ]
+}

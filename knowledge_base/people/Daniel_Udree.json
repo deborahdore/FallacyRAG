@@ -1,0 +1,40 @@
+{
+    "name": "Daniel Udree",
+    "birthDate": "1751-08-05",
+    "deathDate": "1828-07-15",
+    "bio": "a Representative from Pennsylvania; born in Philadelphia, Pa., August 5, 1751; attended the common schools; moved to Berks County and engaged in mercantile pursuits; served in the Revolutionary War; member of the Pennsylvania state house of representatives, 1799-1805; elected as a Democratic Republican to the Thirteenth Congress to fill the vacancy caused by the resignation of John M. Hyneman and served from October 12, 1813, to March 3, 1815; unsuccessful candidate for reelection in 1814 to the Fourteenth Congress; elected as a Democratic Republican to the Sixteenth Congress to fill the vacancy caused by the resignation of Joseph Hiester and served from December 26, 1820, to March 3, 1821; elected as a Jackson Republican to the Eighteenth Congress; subsequently elected as a Democratic Republican to the Seventeenth Congress to fill the vacancy caused by the death of Ludwig Worman and served from December 10, 1822, to March 3, 1825; was not a candidate for renomination in 1824; resumed mercantile pursuits; died in Reading, Pa., July 15, 1828; interment in Oley Cemetery, Oley, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

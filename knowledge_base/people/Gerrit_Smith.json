@@ -1,0 +1,16 @@
+{
+    "name": "Gerrit Smith",
+    "birthDate": "1797-03-06",
+    "deathDate": "1874-12-28",
+    "bio": "A Representative from New York; born in Utica, N.Y., March 6, 1797; moved to Peterboro in 1806; attended an academy in Clinton, N.Y.; was graduated from Hamilton College, Clinton, N.Y., in 1818; studied law; engaged in the management of a large estate which he inherited; delegate to the State conventions in 1824 and 1828; unsuccessful Liberty Party candidate for governor in 1840; unsuccessful presidential candidate in 1848; was admitted to the bar in 1853 and commenced practice in Peterboro, N.Y.; elected as a Free Soiler to the Thirty-third Congress, until his resignation on August 7, 1854 (March 4, 1853-August 7, 1854); resumed the practice of his profession, and was a publicist and philanthropist; he revived the Anti-Dramshop Party, but was a delegate to the Republican National Convention in 1872 and supported Grant; died in New York City December 28, 1874; interment in Peterboro Cemetery, Peterboro, Madison County, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Free Soil",
+            "represents": "NEW YORK"
+        }
+    ]
+}

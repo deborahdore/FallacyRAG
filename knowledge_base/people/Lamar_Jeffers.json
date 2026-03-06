@@ -1,0 +1,64 @@
+{
+    "name": "Lamar Jeffers",
+    "birthDate": "1888-04-16",
+    "deathDate": "1983-06-01",
+    "bio": "a Representative from Alabama; born in Anniston, Calhoun County, Ala., April 16, 1888; attended the public schools and the Alabama Presbyterian College at Anniston; served with the Alabama National Guard, 1904-1914; clerk of the circuit court of Calhoun County, taking office in January 1917; resigned that office in May 1917 and entered the U.S. Army, serving with the Eighty-second Division in France; was awarded the Distinguished Service Cross by the United States Government; promoted to rank of major of infantry; elected as a Democrat to the Sixty-seventh Congress to fill the vacancy caused by the death of Fred L. Blackmon; reelected to the Sixty-eighth and to the five succeeding Congresses and served from June 7, 1921, to January 3, 1935; chairman, Committee on Civil Service (Seventy-second and Seventy-third Congresses); unsuccessful candidate for renomination in 1934; resided in Daytona Beach, Fla., until his death there on June 1, 1983; interment at Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 72nd United States Congress",
+            "startDate": "1931-12-07",
+            "endDate": "1933-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ALABAMA"
+        }
+    ]
+}

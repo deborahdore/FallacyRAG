@@ -1,0 +1,16 @@
+{
+    "name": "Henry Vail",
+    "birthDate": "1782",
+    "deathDate": "1853-06-25",
+    "bio": "A Representative from New York; born near Milbrook, Dutchess County, N.Y., in 1782; received a limited schooling; engaged in the retail mercantile business 1806-1815 and in wholesale mercantile pursuits 1815-1832; elected as a Democrat to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); unsuccessful candidate for reelection in 1838 to the Twenty-sixth Congress; resumed his former business pursuits in Troy, Rensselaer County, N.Y., and died there June 25, 1853; interment in Oakwood Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

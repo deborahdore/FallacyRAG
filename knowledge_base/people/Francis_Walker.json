@@ -1,0 +1,16 @@
+{
+    "name": "Francis Walker",
+    "birthDate": "1764-06-22",
+    "deathDate": "1806-03",
+    "bio": "A Representative from Virginia; born at ``Castle Hill,'' near Cobham, Albemarle County, Va., June 22, 1764; magistrate of Albemarle County; colonel of the Eighty-eighth Regiment, Virginia Militia; member of the state house of delegates 1788-1791 and 1797-1801; elected to the Third Congress (March 4, 1793-March 3, 1795); died at ``Castle Hill,'' near Cobham, Va., in March 1806; interment in the family cemetery at ``Castle Hill.''",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Anti-Administration",
+            "represents": "VIRGINIA"
+        }
+    ]
+}

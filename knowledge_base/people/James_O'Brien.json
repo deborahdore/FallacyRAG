@@ -1,0 +1,16 @@
+{
+    "name": "James O'Brien",
+    "birthDate": "1860-07-15",
+    "deathDate": "1924-09-02",
+    "bio": "A Representative from New York; born in Jamaica, Long Island, N.Y., July 15, 1860; attended the public schools and was graduated from Browne's Business College, Brooklyn, N.Y.; commenced work as a machinist and became an engineer; established a scale and overhead tramway business in New York City; member of the State senate in 1911 and 1912; delegate to the Democratic National Conventions in 1908, 1912, and 1916; elected as a Democrat to the Sixty-third Congress (March 4, 1913-March 3, 1915); unsuccessful candidate for reelection in 1914 to the Sixty-fourth Congress; resumed his former manufacturing pursuits; died in Brooklyn, N.Y., September 2, 1924; interment in Holy Cross Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

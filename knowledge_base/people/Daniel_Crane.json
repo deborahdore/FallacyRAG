@@ -1,0 +1,32 @@
+{
+    "name": "Daniel Crane",
+    "birthDate": "1936-01-10",
+    "deathDate": "2019-05-28",
+    "bio": "<p>a Representative from Illinois; born in Chicago, Cook County, Ill., January 10, 1936; attended the public schools of Chicago; A.B., Hillsdale College, Hillsdale, Mich., 1958; D.D.S., Indiana University, Indianapolis, Ind., 1963; graduate work, University of Michigan, 1964-1965; dentist; United States Army, captain, 1967-1970; elected as a Republican to the Ninety-sixth and to the two succeeding Congresses (January 3, 1979-January 3, 1985); censured by the U.S. House of Representatives on July 20, 1983, for personal misconduct with a House Page; unsuccessful candidate for reelection to the Ninety-ninth Congress in 1984; resumed the practice of dentistry; died on May 28, 2019, in Danville, Ill; interment at Rose Hill Cemetery, Hillsboro, Ind.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

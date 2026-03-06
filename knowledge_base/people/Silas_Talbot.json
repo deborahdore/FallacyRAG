@@ -1,0 +1,16 @@
+{
+    "name": "Silas Talbot",
+    "birthDate": "1751-01-11",
+    "deathDate": "1813-09-21",
+    "bio": "A Representative from New York; born in Dighton, Bristol County, Mass., January 11, 1751; completed preparatory studies; went to sea on a coasting vessel; engaged in mercantile pursuits in Providence, R.I.; served in the Revolutionary War, lieutenant and captain; promoted to the rank of major, October 10, 1777, and to lieutenant colonel October 29, 1778; commissioned captain in the Continental Navy September 17, 1779; captured by the British in November 1780 and imprisoned in England until 1781, when he was exchanged and sent to Cherbourg, France; returned to America and resided in Philadelphia, Pa.; moved to Albany, N.Y., and engaged in agricultural pursuits; member of the New York state assembly, 1792 and 1793; elected as a Pro-Administration candidate to the Third Congress (March 4, 1793-March 3, 1795); again commissioned by President John Adams, May 11, 1798, a captain in the United States Navy; resigned September 21, 1801; died on June 30, 1813, in New York City, N.Y.; interment in Trinity Churchyard, New York, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 3rd United States Congress",
+            "startDate": "1793-03-04",
+            "endDate": "1795-03-03",
+            "partyAffiliation": "Pro-Administration",
+            "represents": "NEW YORK"
+        }
+    ]
+}

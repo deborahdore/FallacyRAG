@@ -1,0 +1,64 @@
+{
+    "name": "Carleton King",
+    "birthDate": "1904-06-15",
+    "deathDate": "1977-11-19",
+    "bio": "A Representative from New York; born in Saratoga Springs, N.Y., June 15, 1904; attended the public schools; graduated from Union University, Albany Law School 1926; was admitted to the bar and entered the practice of law in Saratoga Springs, N.Y., in 1926; acting city judge, Saratoga Springs, 1936-1941; assistant district attorney Saratoga County, 1942-1950, and district attorney, Saratoga County, 1950-1961; elected as a Republican to the Eighty-seventh Congress; reelected to the six succeeding Congresses and served from January 3, 1961, until his resignation December 31, 1974; unsuccessful candidate for reelection in 1974 to the Ninety-fourth Congress; resumed the practice of law in Saratoga Springs; died in Bradenton, Fla., November 19, 1977; cremated; ashes scattered in the Gulf of Mexico near Bradenton.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

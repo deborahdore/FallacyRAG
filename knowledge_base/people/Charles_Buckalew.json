@@ -1,0 +1,48 @@
+{
+    "name": "Charles Buckalew",
+    "birthDate": "1821-12-28",
+    "deathDate": "1899-05-19",
+    "bio": "A Senator and a Representative from Pennsylvania; born in Fishing Creek Township, Columbia County, Pa., December 28, 1821; graduated from Harford Academy, Susquehanna County, Pa.; studied law; admitted to the bar in 1843 and commenced practice in Bloomsburg, Pa., in 1844; prosecuting attorney for Columbia County 1845-1847; member, State senate 1850-1853; commissioner to exchange ratifications of a treaty with Paraguay in 1854; chairman of the Democratic State committee in 1857; member, State senate 1857-1858; appointed one of the commissioners to revise the penal code of the State in 1857; Minister Resident to the Republic of Ecuador 1858-1861; elected as a Democrat to the United States Senate and served from March 4, 1863, to March 3, 1869; member, State senate 1869; unsuccessful candidate for Governor in 1872; delegate to the constitutional convention of 1873; elected as a Democrat to the Fiftieth and Fifty-first Congresses (March 4, 1887-March 3, 1891); resumed the practice of his profession in Bloomsburg, Columbia County, Pa., where he died on May 19, 1899; interment in Rosemont Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

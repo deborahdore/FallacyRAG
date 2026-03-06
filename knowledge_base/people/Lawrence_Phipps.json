@@ -1,0 +1,56 @@
+{
+    "name": "Lawrence Phipps",
+    "birthDate": "1862",
+    "deathDate": "1958",
+    "bio": "A Senator from Colorado; born in Amityville, Pa., August 30, 1862; moved with his parents to Pittsburgh, Pa., in 1867; attended the common schools; entered the employ of the Carnegie Steel Co., advancing from clerk to first vice president; retired from active participation in the steel business in 1901; moved to Denver, Colo., and engaged in the investment business; donor of the Agnes Memorial Sanatorium in Denver; president of the Colorado Taxpayers' Protective League in 1913; chairman of the mountain division in the Red Cross campaign in 1917; member of the Colorado council of defense in 1917; elected as a Republican to the United States Senate in 1918; reelected in 1924, and served from March 4, 1919, to March 3, 1931; was not a candidate for reelection in 1930; chairman, Committee on Expenditures in the Department of State (Sixty-sixth Congress), Committee on Education and Labor (Sixty-eighth and Sixty-ninth Congresses), Committee on Irrigation and Reclamation (Sixty-ninth and Seventieth Congresses), Committee on the Post Office and Post Roads (Seventy-first Congress); engaged in railroad and electric power investments; died in Santa Monica, Calif., March 1, 1958; interment in Fairmount Mausoleum, Denver, Colo.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 68th United States Congress",
+            "startDate": "1923-12-03",
+            "endDate": "1925-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 69th United States Congress",
+            "startDate": "1925-03-04",
+            "endDate": "1927-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 70th United States Congress",
+            "startDate": "1927-12-05",
+            "endDate": "1929-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 71st United States Congress",
+            "startDate": "1929-03-04",
+            "endDate": "1931-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "COLORADO"
+        }
+    ]
+}

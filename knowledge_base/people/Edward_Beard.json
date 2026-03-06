@@ -1,0 +1,32 @@
+{
+    "name": "Edward Beard",
+    "birthDate": "1940-01-20",
+    "deathDate": "2021-01-11",
+    "bio": "a Representative from Rhode Island; born in Providence, Providence County, R.I., January 20, 1940; attended Assumption Elementary School and Hope High School, Providence, R.I; Rhode Island Army National Guard, 1960-1966, where he completed high school as well as a college-level course in agriculture; worked as painter; member of the Rhode Island state house of representatives, 1972-1974; delegate, Democratic National Convention, 1976; elected as a Democrat to the Ninety-fourth and to the two succeeding Congresses (January 3, 1975-January 3, 1981); unsuccessful candidate for reelection to the Ninety-seventh Congress in 1980; owned and operated a tavern; director of elderly affairs, City of Providence, R.I., 1986-2002; unsuccessful candidate for nomination to the One Hundred Second Congress in 1990; died on January 11, 2021, in Providence, R.I.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "RHODE ISLAND"
+        }
+    ]
+}

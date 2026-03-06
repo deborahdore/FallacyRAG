@@ -1,0 +1,80 @@
+{
+    "name": "Elihu Washburne",
+    "birthDate": "1816-09-23",
+    "deathDate": "1887-10-23",
+    "bio": "A Representative from Illinois; born in Livermore, Androscoggin County, Maine, September 23, 1816; attended the common schools; printer's apprentice; assistant editor of the Kennebec Journal, Augusta; studied law at Kents' Hill Seminary in 1836 and at Harvard Law School in 1839; was admitted to the bar in 1840; moved to Galena, Jo Daviess County, Ill., in 1840 and commenced the practice of law; delegate to the Whig National Conventions in 1844 and 1852; unsuccessful candidate for election in 1848 to the Thirty-first Congress; elected as a Whig to the Thirty-third Congress, reelected as an Opposition candidate to the Thirty-fourth Congress, and as a Republican to the Thirty-fifth and six succeeding Congresses and served from March 4, 1853, to March 6, 1869, when he resigned; chairman, Committee on Commerce (Thirty-fourth and Thirty-sixth through Fortieth Congresses), Committee on Appropriations (Fortieth Congress); appointed as Secretary of State in the Cabinet of President Grant, but resigned a few days afterward to accept a diplomatic mission to France; upon the declaration of the Franco-Prussian War he protected with the American flag the Paris legations of the various German states; remained in Paris during the siege and was the only foreign minister who continued at his post during the days of the Commune; protected not only Germans but all the foreigners left by their ministers; served as Minister until 1877, when he returned and settled in Chicago, Ill.; engaged in literary pursuits; died in Chicago, Ill., October 23, 1887; interment in Greenwood Cemetery, Galena, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Opposition",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 38th United States Congress",
+            "startDate": "1863-03-04",
+            "endDate": "1865-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 39th United States Congress",
+            "startDate": "1865-03-04",
+            "endDate": "1867-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 41st United States Congress",
+            "startDate": "1869-03-04",
+            "endDate": "1871-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

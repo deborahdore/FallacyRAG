@@ -1,0 +1,23 @@
+{
+    "name": "Andy Ogles",
+    "birthDate": "1971-06-18",
+    "deathDate": null,
+    "bio": "a Representative from Tennessee; born in Nashville, Davidson County, Tenn., June 18, 1971; graduated from Franklin High School, Franklin, Tenn., 1990; B.S., Middle Tennessee State University, Murfreesboro, Tenn., 2007; business owner; nonprofit executive; professional advocate; unsuccessful candidate for nomination to the One Hundred Eighth Congress in 2002; campaign staff, presidential campaign of Newton Leroy Gingrich, 2012; Mayor of Maury County, Tenn., 2018-2022; elected as a Republican to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

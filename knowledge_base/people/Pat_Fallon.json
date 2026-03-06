@@ -1,0 +1,31 @@
+{
+    "name": "Pat Fallon",
+    "birthDate": "1967-12-19",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Pittsfield, Berkshire County, Mass., December 19, 1967; graduated from Pittsfield High School, Pittsfield, Mass., 1986; attended the University of Massachusetts, Amherst, Mass.; B.A., University of Notre Dame, Notre Dame, Ind., 1990; United States Air Force, 1990-1994; entrepreneur; business executive; member of the Frisco, Tex., city council, 2009-2012, mayor pro tem, 2011-2012; member of the Texas state house of representatives, 2013-2019; member of the Texas state senate, 2019-2021; Delegate, Republican National Convention, 2016; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

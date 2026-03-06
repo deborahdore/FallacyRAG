@@ -1,0 +1,72 @@
+{
+    "name": "Joseph Graff",
+    "birthDate": "1854-07-01",
+    "deathDate": "1921-11-10",
+    "bio": "A Representative from Illinois; born in Terre Haute, Vigo County, Ind., July 1, 1854; was graduated from the Terre Haute High School, and attended Wabash College, Crawfordsville, Ind., one year; moved to Delavan, Ill., in 1873 and engaged in mercantile pursuits; studied law; was admitted to the bar in 1879 and commenced practice in Delavan, Ill.; moved to Pekin, Ill., and continued the practice of law; elected as an inspector of the Pekin public schools in 1891 and served as president of the board of education; delegate to the Republican National Convention in 1892; elected as a Republican to the Fifty-fourth and to the seven succeeding Congresses (March 4, 1895-March 3, 1911); chairman, Committee on Claims (Fifty-sixth through Fifty-eighth Congresses); unsuccessful candidate for reelection in 1910 to the Sixty-second Congress; continued the practice of law in Peoria, Ill., where he had moved in 1899; also engaged in banking; died in Peoria, Ill., November 10, 1921; interment in Glendale Cemetery, Washington, Tazewell County, Ill.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

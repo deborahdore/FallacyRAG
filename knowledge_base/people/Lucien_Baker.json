@@ -1,0 +1,32 @@
+{
+    "name": "Lucien Baker",
+    "birthDate": "1846",
+    "deathDate": "1907",
+    "bio": "(Brother of John Harris Baker), a Senator from Kansas; born near Cleveland, Fulton County, Ohio, June 8, 1846; moved with his parents to Morenci, Mich.; attended the public schools and graduated from Adrian College, Michigan, and from the law department of the University of Michigan at Ann Arbor; admitted to the bar in 1868 and commenced practice in Leavenworth, Kans., in 1869; city attorney of Leavenworth 1872-1874; member of the State senate 1893-1895; elected as a Republican to the United States Senate and served from March 4, 1895, to March 3, 1901; unsuccessful candidate for renomination; chairman, Committee on Civil Service and Retrenchment (Fifty-sixth Congress); resumed the practice of law in Leavenworth, Kans., where he died on June 21, 1907; interment in Mount Muncie Cemetery.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

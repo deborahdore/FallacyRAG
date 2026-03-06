@@ -1,0 +1,24 @@
+{
+    "name": "James Reynolds",
+    "birthDate": "1779",
+    "deathDate": "1851-06-10",
+    "bio": "A Representative from Tennessee; born in County Antrim, Ireland, in 1779; attended the common schools; immigrated to the United States and settled in Clarksville, Tenn.; studied law; was admitted to the bar in 1804 and practiced; elected as a Democratic Republican to the Fourteenth Congress (March 4, 1815-March 3, 1817); elected as a Jackson Republican to the Eighteenth Congress (March 4, 1823-March 3, 1825); resumed the practice of law; died in Clarksville, Tenn., June 10, 1851; interment in the City Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "TENNESSEE"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "TENNESSEE"
+        }
+    ]
+}

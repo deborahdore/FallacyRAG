@@ -1,0 +1,40 @@
+{
+    "name": "Matthew Gaetz",
+    "birthDate": "1982-05-07",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Hollywood, Broward County, Fla., May 7, 1982; graduated from Niceville High School, Niceville, Fla., 2000; B.S., Florida State University, Tallahassee, Fla., 2003; J.D., William &amp; Mary Law School, Williamsburg, VA, 2007; lawyer, private practice; member of the Florida state house of representatives, 2010-2016; elected as a Republican to the One Hundred Fifteenth and to the three succeeding Congresses until his resignation on November 13, 2024 (January 3, 2017-November 13, 2024); reelected to the One Hundred Nineteenth Congress, but declined his seat.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

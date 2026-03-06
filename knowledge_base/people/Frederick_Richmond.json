@@ -1,0 +1,40 @@
+{
+    "name": "Frederick Richmond",
+    "birthDate": "1923-11-15",
+    "deathDate": "2019-12-28",
+    "bio": "<p>A Representative from New York; born in Boston, Suffolk County, Mass., November 15, 1923; attended Mattapan Elementary School, Boston, Mass.; was graduated from Roxbury Memorial High School, Roxbury, Mass., 1940; B.A., Boston University, 1945;&nbsp; United States Navy, 1943-1945; pursued a career in business; served as deputy finance chairman, Democratic National Committee, 1958-1960; budget director, New York State Council on the Arts, 1965-1975; New York City human rights commissioner, 1964-1970; New York City taxi and limousine commissioner, 1970-1972; New York City councilman, 1973-1974; delegate, Democratic National Convention, 1964; elected as a Democrat to the Ninety-fourth and to the three succeeding Congresses, and served from January 3, 1975, until his resignation on August 25, 1982; died on December 28, 2019, in Manhattan, N.Y.</p>",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

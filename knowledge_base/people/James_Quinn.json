@@ -1,0 +1,24 @@
+{
+    "name": "James Quinn",
+    "birthDate": "1875-09-08",
+    "deathDate": "1960-11-12",
+    "bio": "A Representative from Pennsylvania; born in Emlenton, Venango County, Pa., September 8, 1875; moved to Braddock, Allegheny County, Pa., with his parents in 1880 and attended St. Thomas School; employed as a newspaper reporter 1891-1896; became owner and publisher of the Braddock (Pa.) Journal in 1896; member of the State house of representatives 1933-1935; elected as a Democrat to the Seventy-fourth and Seventy-fifth Congresses (January 3, 1935-January 3, 1939); unsuccessful candidate for reelection in 1938 to the Seventy-sixth Congress; resumed the newspaper publishing business; died in Braddock, Pa., November 12, 1960; interment in Braddock Catholic Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

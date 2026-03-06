@@ -1,0 +1,48 @@
+{
+    "name": "Ebenezer Seaver",
+    "birthDate": "1763-07-05",
+    "deathDate": "1844-03-01",
+    "bio": "a Representative from Massachusetts; born in Roxbury, Mass., July 5, 1763; graduated from Harvard University in 1784; engaged in agricultural pursuits; member of the Massachusetts state house of representatives 1794-1802; elected as a Democratic Republican to the Eighth and to the four succeeding Congresses (March 4, 1803-March 3, 1813); unsuccessful candidate for reelection in 1812 to the Thirteenth Congress; member of the Massachusetts state constitutional convention in 1820; again a member of the Massachusetts state house of representatives in 1822, 1823, and 1826; died in Roxbury, Mass., March 1, 1844; interment at Forest Hills Cemetery, Boston, Mass.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

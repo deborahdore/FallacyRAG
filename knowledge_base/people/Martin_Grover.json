@@ -1,0 +1,16 @@
+{
+    "name": "Martin Grover",
+    "birthDate": "1811-10-20",
+    "deathDate": "1875-08-23",
+    "bio": "A Representative from New York; born in Hartwick, Otsego County, N.Y., October 20, 1811; attended the common schools; studied law; was admitted to the bar and commenced practice in Angelica, N.Y.; elected as a Democrat to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); elected justice of the supreme court of New York in November 1857 and reelected in 1859; elected judge of the court of appeals in 1867; after the reorganization of the court of appeals in 1869 was elected an associate judge in 1870 for a term of fourteen years and served until his death in Angelica, Allegany County, N.Y., August 23, 1875; interment in Angelica Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

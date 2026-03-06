@@ -1,0 +1,16 @@
+{
+    "name": "Steven Kuykendall",
+    "birthDate": "1947-01-27",
+    "deathDate": "2021-01-22",
+    "bio": "a Representative from California; born in McAlester, Pittsburg County, Okla., January 27, 1947; attended Exeter Academy; B.S., Oklahoma City University, Oklahoma City, Okla., 1968; M.B.A., San Diego State University, San Diego, Calif., 1974; United States Marine Corps, 1968-1973; elected as councilman and Mayor of Rancho Palos Verdes, Calif.; member of the California state assembly, 1994-1998; elected as a Republican to the One Hundred Sixth Congress (January 3, 1999-January 3, 2001); unsuccessful candidate for reelection to the One Hundred Seventh Congress in 2000; unsuccessful candidate for nomination to the One Hundred Thirteenth Congress in 2012; died on January 22, 2021, in Long Beach, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

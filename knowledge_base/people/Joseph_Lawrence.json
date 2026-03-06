@@ -1,0 +1,32 @@
+{
+    "name": "Joseph Lawrence",
+    "birthDate": "1786",
+    "deathDate": "1842-04-17",
+    "bio": "a Representative from Pennsylvania; born near Hunterstown, Adams County, Pa., in 1786; attended the common schools; engaged in agricultural pursuits; member of the state house of representatives 1818-1824 and served as speaker 1820-1822; elected as an Adams candidate to the Nineteenth and Twentieth Congresses (March 4, 1825-March 3, 1829); unsuccessful candidate for reelection in 1828 to the Twenty-first Congress; again a member of the state house of representatives 1834-1836; state treasurer in 1837; unsuccessful candidate for election in 1838 to the Twenty-sixth Congress; elected as a Whig to the Twenty-seventh Congress and served from March 4, 1841, until his death in Washington, D.C., April 17, 1842; chairman, Committee on Roads and Canals (Twenty-seventh Congress); interment in the Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

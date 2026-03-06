@@ -1,0 +1,31 @@
+{
+    "name": "Gouverneur Morris",
+    "birthDate": "1752-01-31",
+    "deathDate": "1816-11-06",
+    "bio": "A Delegate and a Senator from New York; born in Morrisania (now a part of New York City), N.Y., January 31, 1752; instructed by private tutors; graduated from King's College (now Columbia University), New York, in 1768; studied law; admitted to the colonial bar in 1771 and commenced practice in New York City; delegate to the New York provincial congress, 1775-1777; lieutenant colonel in the New York militia, 1776; member of the committee to prepare a form of government for the State of New York in 1776; member of the first New York state council of safety in 1777; member of the New York state assembly, 1777-1778; Delegate to the Confederation Congress, 1778 and 1779; signed the Articles of Confederation in 1778; moved to Philadelphia in 1779; appointed assistant superintendent of finance, 1781-1785; delegate to the Federal Constitutional Convention in 1787; signed the U.S. Constitution; returned to live in New York in 1788; went to Europe on business in 1789; Minister Plenipotentiary to France, 1792-1794; returned to the United States in 1798; elected in 1800 as a Federalist to the United States Senate to fill the vacancy caused by the resignation of James Watson and served from April 3, 1800, to March 3, 1803; unsuccessful candidate for reelection in 1802; chairman of the Erie Canal Commission 1810-1813; author on legal and political subjects; died on November 6, 1816, in Morrisania, N.Y.; interment in St. Anne's Episcopal Churchyard, Bronx, N.Y.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Delegate",
+            "congressAffiliation": "The Confederation Congress",
+            "startDate": "1781-03-01",
+            "endDate": "1789-03-02",
+            "represents": "NEW YORK"
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "name": "Robert Hayne",
+    "birthDate": "1791",
+    "deathDate": "1839",
+    "bio": "a Senator from South Carolina; born on Pon Pon plantation, St. Paul's Parish, Colleton District, S.C., November 10, 1791; attended private schools in Charleston; studied law; admitted to the bar in 1812 and commenced practice in Charleston, S.C.; served in the War of 1812, becoming captain of the Charleston Cadet Riflemen in 1814; appointed quartermaster general of the State in December 1814; member, State house of representatives 1814-1818, and served as speaker in 1818; State attorney general 1818-1822; elected to the United States Senate in 1822; reelected in 1828 as a Jacksonian and served from March 4, 1823, to December 13, 1832, when he resigned to become Governor; participated in January and February 1830 in a notable exchange with Senator Daniel Webster of Massachusetts upon the principles of the Constitution, the authority of the general government, and the rights of the States; chairman, Committee on Naval Affairs (Nineteenth through Twenty-second Congresses); member of the South Carolina nullification convention in 1832; Governor of South Carolina 1832-1834; mayor of Charleston 1835-1837; promoter and president of the Louisville, Cincinnati &amp; Charleston Railroad 1836-1839; died in Asheville, N.C., September 24, 1839; interment in St. Michael's Churchyard, Charleston, S.C.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Jackson Republican",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "SOUTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Nullifier",
+            "represents": "SOUTH CAROLINA"
+        }
+    ]
+}

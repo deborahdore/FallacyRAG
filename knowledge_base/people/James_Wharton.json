@@ -1,0 +1,64 @@
+{
+    "name": "James Wharton",
+    "birthDate": "1899",
+    "deathDate": "1990",
+    "bio": "A Representative from New York; born in Binghamton, Broome County, N.Y., October 4, 1899; attended the public schools of Richmondville, N.Y.; was graduated from Union University and from Albany Law School; during the First World War served with the United States Army; was admitted to the bar in 1923; employed with the Travelers Insurance Co., 1920-1929; commenced the private practice of law in 1929 at Richmondville, N.Y.; owns and operates a farm; district attorney of Schoharie County, N.Y., 1932-1941; elected surrogate, county judge, and judge of children's court of Schoharie County 1941-1951; elected as a Republican to the Eighty-second and to the six succeeding Congresses (January 3, 1951-January 3, 1965); was an unsuccessful candidate for reelection in 1964 to the Eighty-ninth Congress; engaged in real estate development, was a resident of Summit, N.Y., until his death there on January 19, 1990.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

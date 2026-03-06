@@ -1,0 +1,16 @@
+{
+    "name": "Bradley Granger",
+    "birthDate": "1825-03-12",
+    "deathDate": "1882-11-04",
+    "bio": "A Representative from Michigan; born in Lowville, Lewis County, N.Y., March 12, 1825; attended the public schools; studied law; was admitted to the bar in 1847 and commenced practice in Tecumseh, Mich.; moved to Ann Arbor, Mich., and resumed practice; elected as a Republican to the Thirty-seventh Congress (March 4, 1861-March 3, 1863); engaged in the practice of law until his death in Ann Arbor, Mich., November 4, 1882; interment in Forest Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 37th United States Congress",
+            "startDate": "1861-03-04",
+            "endDate": "1863-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

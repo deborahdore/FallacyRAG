@@ -1,0 +1,16 @@
+{
+    "name": "Henry Kimball",
+    "birthDate": "1878-08-27",
+    "deathDate": "1935-10-19",
+    "bio": "A Representative from Michigan; born in Orland, Steuben County, Ind., August 27, 1878; attended the common and high schools of Orland; was graduated from Hillsdale (Mich.) College; served as principal of Orland High School; attended the literary and law departments of the University of Michigan at Ann Arbor, graduating in law in 1904; commenced practice in Orland, Ind.; moved to Rosebud, Nev., in 1907 and continued the practice of law; employed as a traveling auditor in 1908 for a firm in San Francisco, Calif.; moved to Portland, Oreg., in 1909 and to Kalamazoo, Mich., in 1917, where he continued the practice of law; elected as a Republican to the Seventy-fourth Congress and served from January 3, 1935, until his death in Kalamazoo, Mich., October 19, 1935; remains were cremated and the ashes interred in Green Lawn Cemetery, Orland, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

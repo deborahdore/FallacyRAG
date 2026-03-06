@@ -1,0 +1,24 @@
+{
+    "name": "Thomas Cornell",
+    "birthDate": "1814-01-27",
+    "deathDate": "1890-03-30",
+    "bio": "A Representative from New York; born in White Plains, N.Y., January 27, 1814; attended the public schools; engaged in the steamboat transportation business between Rondout and New York City in 1843, and also in the railroad business and banking; commissioned major in the New York Militia during the Civil War; elected as a Republican to the Fortieth Congress (March 4, 1867-March 3, 1869); unsuccessful candidate for reelection in 1868 to the Forty-first Congress; again elected to the Forty-seventh Congress (March 4, 1881-March 3, 1883); was not a candidate for renomination in 1882 to the Forty-eighth Congress; resumed the transportation business and banking in Kingston, N.Y.; delegate to the Republican National Convention in 1884; died in Kingston, N.Y., March 30, 1890; interment in Montrepose Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 40th United States Congress",
+            "startDate": "1867-03-04",
+            "endDate": "1869-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

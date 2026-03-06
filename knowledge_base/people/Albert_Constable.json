@@ -1,0 +1,16 @@
+{
+    "name": "Albert Constable",
+    "birthDate": "1805-06-03",
+    "deathDate": "1855-08-22",
+    "bio": "a Representative from Maryland; born near Charlestown, Md., June 3, 1805; studied law; was admitted to the bar in 1829 and settled in Bel Air, Harford County, Md.; moved to Baltimore and practiced law; later moved to Perryville, Cecil County, Md.; elected as a Democrat to the Twenty-ninth Congress (March 4, 1845-March 3, 1847); judge of the circuit court of Maryland in 1851; died in Camden, N.J., August 22, 1855; interment at Green Mount Cemetery, Baltimore, Md.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 29th United States Congress",
+            "startDate": "1845-03-04",
+            "endDate": "1847-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MARYLAND"
+        }
+    ]
+}

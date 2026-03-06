@@ -1,0 +1,16 @@
+{
+    "name": "Alfred Marshall",
+    "birthDate": "1797",
+    "deathDate": "1868-10-02",
+    "bio": "A Representative from Maine; born in New Hampshire about 1797; member of the State house of representatives in 1827, 1828, 1834, and 1835; served as a general in the State militia; elected as a Democrat to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); collector at Belfast, Maine, 1846-1849; engaged in mercantile pursuits and the hotel business; died in China, Kennebec County, Maine, October 2, 1868; interment in Village Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MAINE"
+        }
+    ]
+}

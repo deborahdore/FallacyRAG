@@ -1,0 +1,31 @@
+{
+    "name": "Ronny Jackson",
+    "birthDate": "1967-05-04",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Levelland, Hockley County, Tex., May 4, 1967; graduated from Levelland High School, Levelland, Tex., 1985; A.S., South Plains College, Levelland, Tex., 1988; B.S., Texas Agricultural and Mechanical University, Galveston, Tex., 1991; M.D., University of Texas Medical Branch, Galveston, Tex., 1995; United States Navy Reserve, 1991-1995; United States Navy, 1995-2019, rear admiral; physician, White House Medical Unit, 2006-2018; Physician to the President, 2013-2018; Assistant to the President and Chief Medical Advisor, Executive Office of the President, Donald J. Trump, 2019; elected as a Republican to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "TEXAS"
+        }
+    ]
+}

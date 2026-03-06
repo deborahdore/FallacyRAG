@@ -1,0 +1,24 @@
+{
+    "name": "John McKeon",
+    "birthDate": "1808-03-29",
+    "deathDate": "1883-11-22",
+    "bio": "a Representative from New York; born in Albany, N.Y., March 29, 1808; attended private schools and was graduated from the law department of Columbia College (later Columbia University), New York City, in 1828; was admitted to the bar the same year and practiced in New York City; a member of the State assembly 1832-1834; elected as a Jacksonian candidate to the Twenty-fourth Congress (March 4, 1835-March 3, 1837); unsuccessful candidate for reelection in 1836 to the Twenty-fifth Congress; elected as a Democrat to the Twenty-seventh Congress (March 4, 1841-March 3, 1843); unsuccessful candidate for reelection in 1842 to the Twenty-eighth Congress; district attorney for New York County 1846-1850; appointed by President Pierce as United States district attorney for the southern district of New York and served from July 10, 1854, to January 7, 1858; again district attorney for New York County from November 1881 until his death in New York City November 22, 1883; interment in family vault under St. Patrick's Cathedral on Mott Street.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 24th United States Congress",
+            "startDate": "1835-12-07",
+            "endDate": "1837-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

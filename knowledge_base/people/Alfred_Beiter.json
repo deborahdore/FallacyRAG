@@ -1,0 +1,40 @@
+{
+    "name": "Alfred Beiter",
+    "birthDate": "1894-07-07",
+    "deathDate": "1974-03-11",
+    "bio": "A Representative from New York; born in Clarence, Erie County, N.Y., July 7, 1894; attended elementary schools, Williamsville (N.Y.) High School, and Niagara University, Niagara Falls, N.Y.; moved to Williamsville, N.Y., and engaged in the general merchandising business from 1915 to 1929; supervisor of the town of Amherst, N.Y., 1930-1934; elected as a Democrat to the Seventy-third and to the two succeeding Congresses (March 4, 1933-January 3, 1939); chairman, Committee on War Claims (Seventy-fifth Congress); unsuccessful candidate for reelection in 1938 to the Seventy-sixth Congress; assistant to the Secretary of the Interior in 1939 and 1940; elected to the Seventy-seventh Congress (January 3, 1941-January 3, 1943); unsuccessful candidate for reelection in 1942 to the Seventy-eight Congress; owned and operated a hatchery and feed business in Buffalo, N.Y., 1944-1948; president of the National Customs Service Association 1949-1961; Deputy Commissioner of Customs, Treasury Department, Washington, D.C., 1961-1964; retired and resided in Boca Raton, Fla., where he died March 11, 1974; interment in Boca Raton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 73rd United States Congress",
+            "startDate": "1933-03-04",
+            "endDate": "1935-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 74th United States Congress",
+            "startDate": "1935-01-03",
+            "endDate": "1937-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

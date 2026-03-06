@@ -1,0 +1,24 @@
+{
+    "name": "Christopher Morgan",
+    "birthDate": "1808-06-04",
+    "deathDate": "1877-04-03",
+    "bio": "A Representative from New York; born in Aurora, N.Y., June 4, 1808; pursued classical studies and was graduated from Yale College in 1830; studied law; was admitted to the bar and commenced practice in Aurora, Cayuga County, N.Y.; elected as a Whig to the Twenty-sixth and Twenty-seventh Congresses (March 4, 1839-March 3, 1843); unsuccessful candidate for reelection in 1842 to the Twenty-eighth Congress; moved to Auburn, N.Y., in 1843 and continued the practice of his profession; secretary of state of New York 1847-1851; superintendent of the New York public schools 1848-1852; served as mayor of Auburn in 1860 and 1862; trustee of the State lunatic asylum in Utica, N.Y.; died in Auburn, N.Y., April 3, 1877; interment in Fort Hill Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 26th United States Congress",
+            "startDate": "1839-12-02",
+            "endDate": "1841-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 27th United States Congress",
+            "startDate": "1841-03-04",
+            "endDate": "1843-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "NEW YORK"
+        }
+    ]
+}

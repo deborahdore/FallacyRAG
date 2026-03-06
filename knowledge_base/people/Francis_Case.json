@@ -1,0 +1,112 @@
+{
+    "name": "Francis Case",
+    "birthDate": "1896-12-09",
+    "deathDate": "1962-06-22",
+    "bio": "A Representative and a Senator from South Dakota; born in Everly, Clay County, Iowa, December 9, 1896; moved with his parents to Sturgis, S.Dak., in 1909; attended the public schools; graduated from Dakota Wesleyan University, Mitchell, S.Dak., in 1918, and from Northwestern University, Evanston, Ill., in 1920; during the First World War served as a private in the United States Marine Corps in 1918; served in both the United States Army and the United States Marine Corps Reserves; assistant editor, Epworth Herald, Chicago, Ill., 1920-1922; telegraph editor and editorial writer on the Rapid City (S.Dak.) Daily Journal 1922-1925; editor and publisher of the Hot Springs (S.Dak.) Star 1925-1931; editor and publisher of the Custer (S.Dak.) Chronicle 1931-1946; member of the State regents of education 1931-1933; unsuccessful candidate for election in 1934 to the Seventy-fourth Congress; elected as a Republican to the Seventy-fifth and to the six succeeding Congresses (January 3, 1937-January 3, 1951); elected to the United States Senate in 1950; reelected in 1956 and served from January 3, 1951, until his death in the naval hospital at Bethesda, Md., June 22, 1962; chairman, Committee on District of Columbia (Eighty-third Congress); interment in Mountain View Cemetery, Rapid City, S.Dak.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 75th United States Congress",
+            "startDate": "1937-01-03",
+            "endDate": "1939-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 76th United States Congress",
+            "startDate": "1939-01-03",
+            "endDate": "1941-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 77th United States Congress",
+            "startDate": "1941-01-03",
+            "endDate": "1943-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "SOUTH DAKOTA"
+        }
+    ]
+}

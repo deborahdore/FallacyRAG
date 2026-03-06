@@ -1,0 +1,80 @@
+{
+    "name": "Jesse Jackson",
+    "birthDate": "1965-03-11",
+    "deathDate": null,
+    "bio": "a Representative from Illinois; born in Greenville, Pickens County, S.C., March 11, 1965; B.S., North Carolina Agricultural &amp; Technical State University, Greensboro, N.C., 1987; M.A., Chicago Theological Seminary, Chicago, Ill., 1989; J.D., University of Illinois College of Law, Chicago, Ill., 1993; secretary, Democratic National Committee's Black Caucus; national field director, National Rainbow Coalition, 1993-1995; member, Rainbow/PUSH Coalition; radio show host; elected as a Democrat to the One Hundred Fourth Congress, to fill the vacancy created by the resignation of United States Representative Mel Reynolds, reelected to the eight succeeding Congresses until his resignation on November 21, 2012 (December 12, 1995-November 21, 2012); reelected to the One Hundred Thirteenth Congress, but declined his seat; convicted on August 14, 2013, of conspiracy to commit false statement, mail fraud, and wire fraud; sentenced to federal prison.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 104th United States Congress",
+            "startDate": "1995-01-03",
+            "endDate": "1997-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 105th United States Congress",
+            "startDate": "1997-01-03",
+            "endDate": "1999-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 106th United States Congress",
+            "startDate": "1999-01-03",
+            "endDate": "2001-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 107th United States Congress",
+            "startDate": "2001-01-03",
+            "endDate": "2003-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 108th United States Congress",
+            "startDate": "2003-01-03",
+            "endDate": "2005-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 109th United States Congress",
+            "startDate": "2005-01-03",
+            "endDate": "2007-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 110th United States Congress",
+            "startDate": "2007-01-03",
+            "endDate": "2009-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "ILLINOIS"
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+{
+    "name": "Marilyn Strickland",
+    "birthDate": "1962-09-25",
+    "deathDate": null,
+    "bio": "a Representative from Washington; born in Seoul, South Korea, September 25, 1962; graduated from Mount Tahoma High School, Tacoma, Wash., 1980; B.A., University of Washington, Seattle, Wash., 1984; M.B.A., Clark Atlanta University, Atlanta, Ga., 1992; marketing executive; member of the Tacoma, Wash., city council, 2008-2009; Mayor of Tacoma, Wash., 2010-2017; president and CEO, Seattle (Wash.) Metropolitan Chamber of Commerce, 2018-2019; elected as a Democrat to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

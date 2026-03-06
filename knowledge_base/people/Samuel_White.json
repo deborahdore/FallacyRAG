@@ -1,0 +1,56 @@
+{
+    "name": "Samuel White",
+    "birthDate": "1770",
+    "deathDate": "1809",
+    "bio": "A Senator from Delaware; born near Dover, Mispillion Hundred, Kent County, Del., in December 1770; attended Cokesbury College, Maryland; studied law; admitted to the bar in 1793 and commenced practice in Dover, Del.; served two years as a captain in the United States Army; adjutant general of Delaware in 1803; appointed in 1801 and subsequently elected as a Federalist to the United States Senate to fill the vacancy caused by the resignation of Henry Latimer; reelected in 1803 and 1809 and served from February 28, 1801, until his death in Wilmington, Del., November 4, 1809; interment in the Old Swede Churchyard.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 6th United States Congress",
+            "startDate": "1799-12-02",
+            "endDate": "1801-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 7th United States Congress",
+            "startDate": "1801-03-04",
+            "endDate": "1803-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 8th United States Congress",
+            "startDate": "1803-10-17",
+            "endDate": "1805-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 9th United States Congress",
+            "startDate": "1805-12-02",
+            "endDate": "1807-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 10th United States Congress",
+            "startDate": "1807-10-26",
+            "endDate": "1809-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 11th United States Congress",
+            "startDate": "1809-03-04",
+            "endDate": "1811-03-03",
+            "partyAffiliation": "Federalist",
+            "represents": "DELAWARE"
+        }
+    ]
+}

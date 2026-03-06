@@ -1,0 +1,48 @@
+{
+    "name": "Edward Koch",
+    "birthDate": "1924-12-12",
+    "deathDate": "2013-02-01",
+    "bio": "A Representative from New York; born in the Bronx, N.Y., December 12, 1924; studied at City College of New York; LL.B., New York University Law School, 1948; combat infantryman with rank of sergeant, 1943-1946; admitted to the bar in 1949 and commenced practice in New York City; elected Democratic district leader of Greenwich Village, 1963-1965; delegate to New York state convention, 1964; elected to New York City Council, 1966; elected as a Democrat to the Ninety-first and to the four succeeding Congresses and served from January 3, 1969, until his resignation December 31, 1977, to become mayor of New York City for the term commencing January 1, 1978; reelected mayor in 1981 and 1985; died on February 1, 2013, in New York City, N.Y.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW YORK"
+        }
+    ]
+}

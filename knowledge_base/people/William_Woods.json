@@ -1,0 +1,16 @@
+{
+    "name": "William Woods",
+    "birthDate": "1790",
+    "deathDate": "1837-08-07",
+    "bio": "a Representative from New York; born in Washington County, N.Y., in 1790; received a limited schooling; moved to Bath, Steuben County, N.Y., in 1813; studied law; was admitted to the bar and practiced in Bath, N.Y.; member of the State assembly 1823-1825; elected as an Adams-Clay Republican to the Eighteenth Congress to fill the vacancy caused by the resignation of William B. Rochester and served from November 3, 1823, to March 3, 1825; resumed the practice of his profession; surrogate of Steuben County 1827-1835; died in Bath, N.Y., August 7, 1837; interment in Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Adams-Clay Republican",
+            "represents": "NEW YORK"
+        }
+    ]
+}

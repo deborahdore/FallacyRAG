@@ -1,0 +1,15 @@
+{
+    "name": "Julie Johnson",
+    "birthDate": "1966-05-02",
+    "deathDate": null,
+    "bio": "a Representative from Texas; born in Kansas City, Wyandotte County, Kans., May 2, 1966; graduated from Auburn High School, Auburn, Ala., 1984; B.A., University of Texas at Austin, Austin, Tex., 1987; J.D., University of Houston, Houston Tex., 1991; lawyer, private practice; member of the Texas state house of representatives, 2019-2025; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

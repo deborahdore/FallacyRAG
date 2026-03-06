@@ -1,0 +1,48 @@
+{
+    "name": "Lowell Stockman",
+    "birthDate": "1901-04-12",
+    "deathDate": "1962-08-09",
+    "bio": "a Representative from Oregon; born on a farm near Helix, Umatilla County, Oreg., April 12, 1901; attended the public schools at Pendleton, Oreg.; was graduated from Oregon State University at Corvallis in 1922; engaged in agricultural pursuits in 1922; member of the Pendleton School Board and the Oregon Liquor Control Commission; elected as a Republican to the Seventy-eighth and to the four succeeding Congresses (January 3, 1943-January 3, 1953); was not a candidate for renomination in 1952; resumed farming until 1959; member of the Theodore Roosevelt Centennial Commission, 1956-1959; vice president of Oregon Fiber Products, Inc., and treasurer of Pilot Rock Lumber Co.; moved to Bellevue, Wash., in 1959 and operated a trailer court until his death August 9, 1962; remains cremated; ashes interred on University of Washington property near Pack Forest, Wash.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 78th United States Congress",
+            "startDate": "1943-01-03",
+            "endDate": "1945-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 79th United States Congress",
+            "startDate": "1945-01-03",
+            "endDate": "1947-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 80th United States Congress",
+            "startDate": "1947-01-03",
+            "endDate": "1949-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 81st United States Congress",
+            "startDate": "1949-01-03",
+            "endDate": "1951-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 82nd United States Congress",
+            "startDate": "1951-01-03",
+            "endDate": "1953-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "OREGON"
+        }
+    ]
+}

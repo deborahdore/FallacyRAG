@@ -1,0 +1,24 @@
+{
+    "name": "William Damrell",
+    "birthDate": "1809-11-29",
+    "deathDate": "1860-05-17",
+    "bio": "A Representative from Massachusetts; born in Portsmouth, N.H., November 29, 1809; attended the public schools; learned the art of printing and became the proprietor of a large printing establishment in Boston; elected as an American to the Thirty-fourth Congress and as a Republican to the Thirty-fifth Congress (March 4, 1855-March 3, 1859); suffered a paralytic stroke before the expiration of his term; was not a candidate for renomination in 1858; resumed business activities; died in Dedham, Norfolk County, Mass., May 17, 1860; interment in Forest Hills Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "American",
+            "represents": "MASSACHUSETTS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "MASSACHUSETTS"
+        }
+    ]
+}

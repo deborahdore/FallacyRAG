@@ -1,0 +1,112 @@
+{
+    "name": "Frank Thompson",
+    "birthDate": "1918-07-26",
+    "deathDate": "1989-07-22",
+    "bio": "a Representative from New Jersey; born in Trenton, Mercer County, N.J., July 26, 1918; attended parochial and public schools and Wake Forest College, Winston-Salem, N.C., 1941; graduated from Wake Forest Law School, Winston-Salem, N.C.; United States Navy, 1941-1948; received three combat decorations for action at Iwo Jima and Okinawa; commanded the United States Naval Reserve Battalion 4-22 and completed a seventeen-month tour of active duty, from August 1950 to January 1952, on the staff of the commander, Eastern Sea Frontier, and released from active duty January 1, 1952; was admitted to the bar in 1948 and commenced the practice of law in Trenton, N.J.; member of the New Jersey state assembly, 1950-1954, serving as assistant minority leader in 1950 and minority leader in 1954; elected as a Democrat to the Eighty-fourth Congress; reelected to the twelve succeeding Congresses and served from January 3, 1955, until his resignation December 29, 1980 (January 3, 1955-December 29, 1980); chairman, Joint Committee on Printing (Ninety-fourth and Ninety-sixth Congresses), Committee on House Administration (Ninety-fourth, Ninety-fifth, and Ninety-sixth Congresses); unsuccessful candidate for reelection to the Ninety-seventh Congress in 1980; convicted on December 3, 1980, of bribery, conspiracy, and accepting an unlawful gratuity; sentenced to federal prison and was fined; was a resident of Alexandria, Va., until his death in Baltimore, Md., on July 22, 1989; interment in Arlington National Cemetery, Arlington, Va.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 91st United States Congress",
+            "startDate": "1969-01-03",
+            "endDate": "1971-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 92nd United States Congress",
+            "startDate": "1971-01-03",
+            "endDate": "1973-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 93rd United States Congress",
+            "startDate": "1973-01-03",
+            "endDate": "1975-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 94th United States Congress",
+            "startDate": "1975-01-03",
+            "endDate": "1977-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 95th United States Congress",
+            "startDate": "1977-01-03",
+            "endDate": "1979-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW JERSEY"
+        }
+    ]
+}

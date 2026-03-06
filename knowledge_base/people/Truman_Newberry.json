@@ -1,0 +1,24 @@
+{
+    "name": "Truman Newberry",
+    "birthDate": "1864",
+    "deathDate": "1945",
+    "bio": "(Son of John Stoughton Newberry), a Senator from Michigan; born in Detroit, Mich., November 5, 1864; attended public and private schools; graduated from Yale College in 1885; superintendent of construction, paymaster, general freight and passenger agent, and eventually manager of the Detroit, Bay City &amp; Alpena Railway 1885-1887; president and treasurer of the Detroit Steel &amp; Spring Co. 1887-1901; engaged in various other manufacturing activities; organizer of the Michigan State Naval Brigade; served in the Navy during the Spanish-American War; Assistant Secretary of the Navy 1905-1908; Secretary of the Navy in the Cabinet of President Theodore Roosevelt 1908-1909; lieutenant commander United States Navy Fleet Reserve in 1917 and assistant to the commandant third naval district of New York until 1919; elected as a Republican to the United States Senate and served from March 4, 1919, until his resignation on November 18, 1922; indicted with 134 others in 1919 on charges of conspiracy in violation of the Federal Corrupt Practices Act; subsequently convicted in 1921 of election \"irregularities\"; the conviction was later reversed by the Supreme Court, and, following an investigation, the Senate declared Newberry entitled to his seat but expressed disapproval of the sum spent on his election; in the face of a new movement to unseat him, Newberry resigned from the Senate on November 18, 1922; engaged in manufacturing; died in Grosse Pointe, Mich., October 3, 1945; interment in Elmwood Cemetery, Detroit, Mich.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 66th United States Congress",
+            "startDate": "1919-05-19",
+            "endDate": "1921-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 67th United States Congress",
+            "startDate": "1921-03-04",
+            "endDate": "1923-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "MICHIGAN"
+        }
+    ]
+}

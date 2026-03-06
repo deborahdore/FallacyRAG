@@ -1,0 +1,48 @@
+{
+    "name": "William Creighton",
+    "birthDate": "1778-10-29",
+    "deathDate": "1851-10-01",
+    "bio": "A Representative from Ohio; born in Berkeley County, Va., October 29, 1778; was graduated from Dickinson College, Carlisle, Pa.; studied law; was admitted to the bar in 1798 and commenced practice in Chillicothe, Ohio; Ohio secretary of state, 1803-1808; member of the Ohio state house of representatives, 1810; elected as a Democratic Republican to the Thirteenth Congress to fill the vacancy caused by the resignation of Duncan McArthur, and reelected to the succeeding Congress (May 4, 1813-March 3, 1817); unsuccessful candidate for election in 1815 to the United States Senate; president of the branch bank of the United States at Chillicothe; elected as an Adams candidate to the Twentieth Congress and served from March 4, 1827, until his resignation in 1828; was appointed during the recess of Congress and nominated by President John Quincy Adams on December 11, 1828, as a United States judge of the district court, but the Senate on February 16, 1829, passed a resolution that it was ``not expedient to fill the vacancy at the present session of Congress''; elected as an Anti-Jacksonian candidate to the Twenty-first and to the succeeding Congress (March 4, 1829-March 3, 1833); was not a candidate for renomination in 1832; resumed the practice of law; died in Chillicothe, Ross County, Ohio, October 1, 1851; interment in Grand View Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Adams",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "OHIO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 22nd United States Congress",
+            "startDate": "1831-12-05",
+            "endDate": "1833-03-02",
+            "partyAffiliation": "Anti-Jacksonian",
+            "represents": "OHIO"
+        }
+    ]
+}

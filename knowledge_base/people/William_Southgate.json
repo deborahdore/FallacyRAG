@@ -1,0 +1,16 @@
+{
+    "name": "William Southgate",
+    "birthDate": "1800-11-27",
+    "deathDate": "1849-12-26",
+    "bio": "A Representative from Kentucky; born in Newport, Campbell County, Ky., November 27, 1800; educated in private schools and by private tutors; was graduated from Transylvania College, Lexington, Ky.; moved to Covington, Kenton County, Ky.; studied law; was admitted to the bar in 1821 and commenced practice in Lexington, Ky.; prosecuting attorney 1825-1827; member of the State house of representatives in 1827, 1832, and 1836; elected as a Whig to the Twenty-fifth Congress (March 4, 1837-March 3, 1839); resumed the practice of law; died in Covington, Ky., December 26, 1849; interment in Linden Grove Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 25th United States Congress",
+            "startDate": "1837-03-04",
+            "endDate": "1839-03-03",
+            "partyAffiliation": "Whig",
+            "represents": "KENTUCKY"
+        }
+    ]
+}

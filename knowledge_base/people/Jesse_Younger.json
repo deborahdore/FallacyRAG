@@ -1,0 +1,72 @@
+{
+    "name": "Jesse Younger",
+    "birthDate": "1893",
+    "deathDate": "1967",
+    "bio": "A Representative from California; born in Albany, Linn County, Oreg., April 11, 1893; moved to Kirkland, Wash., in 1904; attended the public schools; graduated from the University of Washington at Seattle in 1915 and served as graduate manager of athletics until 1917; during the First World War was called into Federal service in August 1917 with the Washington National Guard; served overseas for ten months with the Forty-eighth Coast Artillery Corps, and discharged as a captain in June 1919; officer and president of loan companies in Seattle, 1920-1934; appraiser with the Home Owners Loan Corporation, the Home Loan Bank Board, and Chief of the Savings and Loan Division of the Federal Home Loan Bank Board 1934-1937; moved to San Mateo, Calif., in 1937; executive vice president of Citizens Federal Savings &amp; Loan Association in San Francisco 1937-1952; elected as a Republican to the Eighty-third and to the seven succeeding Congresses and served from January 3, 1953, until his death in Washington, D.C., on June 20, 1967; interment in Cypress Lawn Memorial Park, Colma, Calif.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 83rd United States Congress",
+            "startDate": "1953-01-03",
+            "endDate": "1955-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 84th United States Congress",
+            "startDate": "1955-01-03",
+            "endDate": "1957-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 85th United States Congress",
+            "startDate": "1957-01-03",
+            "endDate": "1959-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 86th United States Congress",
+            "startDate": "1959-01-03",
+            "endDate": "1961-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 87th United States Congress",
+            "startDate": "1961-01-03",
+            "endDate": "1963-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 88th United States Congress",
+            "startDate": "1963-01-03",
+            "endDate": "1965-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 89th United States Congress",
+            "startDate": "1965-01-03",
+            "endDate": "1967-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 90th United States Congress",
+            "startDate": "1967-01-03",
+            "endDate": "1969-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

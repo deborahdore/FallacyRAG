@@ -1,0 +1,23 @@
+{
+    "name": "Gabriel Vasquez",
+    "birthDate": "1984-08-03",
+    "deathDate": null,
+    "bio": "a Representative from New Mexico; born in El Paso, El Paso County, Texas, August 3, 1984; graduated from Montwood High School, El Paso, Texas; B.A., New Mexico State University, Las Cruces, N. Mex., 2008; newspaper editor; nonprofit executive; executive director, Hispanic Chamber of Commerce, Las Cruces, N. Mex., 2011; staff, United States Senator Martin Heinrich of New Mexico, 2013-2015; member of the Las Cruces, N. Mex., city council, 2017-2021; elected as a Democrat to the One Hundred Eighteenth and to the succeeding Congress (January 3, 2023-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "NEW MEXICO"
+        }
+    ]
+}

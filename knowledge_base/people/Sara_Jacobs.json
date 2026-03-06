@@ -1,0 +1,31 @@
+{
+    "name": "Sara Jacobs",
+    "birthDate": "1989-02-01",
+    "deathDate": null,
+    "bio": "a Representative from California; born in San Diego, San Diego County, Calif., February 1, 1989; graduated from Torrey Pines High School, San Diego, Calif.; B.A., Columbia University, New York, N.Y., 2011; M.I.A., Columbia University, New York, N.Y., 2012; staff, United Nations, 2012-2014; staff, United States Department of State, 2014-2015; presidential campaign aide; nonprofit executive; unsuccessful candidate for nomination to the One Hundred Sixteenth Congress in 2018; elected as a Democrat to the One Hundred Seventeenth and to the two succeeding Congresses (January 3, 2021-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}

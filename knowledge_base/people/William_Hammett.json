@@ -1,0 +1,16 @@
+{
+    "name": "William Hammett",
+    "birthDate": "1799-03-25",
+    "deathDate": "1861-06-09",
+    "bio": "a Representative from Mississippi; born March 25, 1799, in Dunmaway County Cork, Ireland; studied theology and medicine; elected Chaplain of the House of Representatives to the Twenty-second Congress (December 12, 1832- March 2, 1833); chaplain of the University of Virginia, Charlottesville, Va., 1833-1834; chaplain of the Virginia state house of delegates; moved to Princeton, Miss.; elected as a Democrat to the Twenty-eighth Congress (March 4, 1843-March 3, 1845); died June 9, 1861, in Washington County, Miss.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 28th United States Congress",
+            "startDate": "1843-12-04",
+            "endDate": "1845-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSISSIPPI"
+        }
+    ]
+}

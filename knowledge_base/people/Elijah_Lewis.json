@@ -1,0 +1,56 @@
+{
+    "name": "Elijah Lewis",
+    "birthDate": "1854-03-27",
+    "deathDate": "1920-12-10",
+    "bio": "A Representative from Georgia; born in Coney, Dooly County, Ga., March 27, 1854; attended the common schools of Dooly and Macon Counties, Spalding Seminary, Spalding, Ga., and a business school in Macon, Ga.; moved to Montezuma, Macon County, Ga., in 1871 and engaged in banking and mercantile pursuits; member of the State senate in 1894 and 1895; elected as a Democrat to the Fifty-fifth and to the five succeeding Congresses (March 4, 1897-March 3, 1909); unsuccessful candidate for renomination in 1908 to the Sixty-first Congress; engaged in his former business activities until his death in Montezuma, Ga., on December 10, 1920; interment in Felton Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "GEORGIA"
+        }
+    ]
+}

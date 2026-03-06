@@ -1,0 +1,79 @@
+{
+    "name": "Michael Bennet",
+    "birthDate": "1964",
+    "deathDate": null,
+    "bio": "A Senator from Colorado; born in New Delhi, India, November 28, 1964; B.A., Wesleyan University, Middletown, Conn., 1987; J.D., Yale Law School, 1993, editor-in-chief of the Yale Law Journal; counsel to U.S. deputy attorney general 1995-1997; special assistant U.S. attorney, Conn., 1997; managing director, Anschutz Investment Co. 1997-2003; chief of staff to mayor of Denver, Colo., 2003-2005; superintendent, Denver Public Schools 2005-2009; appointed January 21, 2009, to the United States Senate for the term ending January 3, 2011, to fill the vacancy caused by the resignation of Kenneth L. Salazar; took the oath of office on January 22, 2009; elected as a Democrat to the U.S. Senate in 2010; reelected in 2016, and again in 2022 for the term ending January 3, 2029; chair, Democratic Senatorial Campaign Committee (2013-2014); was an unsuccessful candidate for the Democratic presidential nomination in 2020.",
+    "jobs": [
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 111th United States Congress",
+            "startDate": "2009-01-03",
+            "endDate": "2011-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 117th United States Congress",
+            "startDate": "2021-01-03",
+            "endDate": "2023-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 118th United States Congress",
+            "startDate": "2023-01-03",
+            "endDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "COLORADO"
+        }
+    ]
+}

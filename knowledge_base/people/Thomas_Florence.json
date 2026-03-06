@@ -1,0 +1,48 @@
+{
+    "name": "Thomas Florence",
+    "birthDate": "1812-01-26",
+    "deathDate": "1875-07-03",
+    "bio": "A Representative from Pennsylvania; born in Philadelphia, Pa., January 26, 1812; attended the public schools; learned the hatter's trade and engaged in that business in 1833; engaged in the newspaper business; unsuccessful Democratic candidate for election in 1846 to the Thirtieth Congress and in 1848 to the Thirty-first Congress; elected as a Democrat to the Thirty-second and to the four succeeding Congresses (March 4, 1851-March 3, 1861); after leaving Congress edited and published the Constitutional Union in Washington, D.C., and subsequently became the proprietor of the Sunday Gazette; unsuccessful candidate in his old district for election in 1868 to the Forty-first Congress and in 1874 to the Forty-fourth Congress; died in Washington, D.C., July 3, 1875; interment in Lawnview Cemetery, Rockledge, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 32nd United States Congress",
+            "startDate": "1851-03-04",
+            "endDate": "1853-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 33rd United States Congress",
+            "startDate": "1853-03-04",
+            "endDate": "1855-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 34th United States Congress",
+            "startDate": "1855-12-03",
+            "endDate": "1857-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 35th United States Congress",
+            "startDate": "1857-03-04",
+            "endDate": "1859-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 36th United States Congress",
+            "startDate": "1859-03-04",
+            "endDate": "1861-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

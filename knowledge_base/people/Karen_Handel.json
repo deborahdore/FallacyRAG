@@ -1,0 +1,16 @@
+{
+    "name": "Karen Handel",
+    "birthDate": "1962-04-18",
+    "deathDate": null,
+    "bio": "a Representative from Georgia; born in Washington, District of Columbia, April 18, 1962; graduated from Frederick Douglass High School, Upper Marlboro, Md., 1980; attended Prince George&rsquo;s County Community College, Largo, Md.; attended University of Maryland University College, Adelphi, Md.; business executive; staff, Governor Sonny Perdue of Georgia, 2002-2003; chairwoman, Fulton County (Ga.) commission, 2003-2006; Secretary of State of Georgia, 2007-2009; unsuccessful candidate for nomination for Governor of Georgia in 2010; unsuccessful candidate for nomination to the United States Senate in 2014; elected as a Republican to the One Hundred Fifteenth Congress, by special election, to fill the vacancy caused by the resignation of United States Representative Tom Price (June 20, 2017-January 3, 2019); unsuccessful candidate for reelection to the One Hundred Sixteenth Congress in 2018; unsuccessful candidate for election to the One Hundred Seventeenth Congress in 2020.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "GEORGIA"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Richard Nugent",
+    "birthDate": "1951",
+    "deathDate": null,
+    "bio": "A Representative from Florida; born in Evergreen Park, Cook County, Illinois, on May 26, 1951; B.A., Saint Leo College, Saint Leo, Fla., 1990; M.P.A., Troy State University, Troy, Ala., 1995; Illinois Air National Guard, 1969-1975; deputy sheriff, Hernando County, Fla.; sheriff of Hernando County, Fla., 2000-2010; elected as a Republican to the One Hundred Twelfth and to the two succeeding Congresses (January 3, 2011-January 3, 2017); was not a candidate for reelection to the One Hundred Fifteenth Congress in 2016.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 112th United States Congress",
+            "startDate": "2011-01-03",
+            "endDate": "2013-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "FLORIDA"
+        }
+    ]
+}

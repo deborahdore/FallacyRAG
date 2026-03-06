@@ -1,0 +1,96 @@
+{
+    "name": "David Culberson",
+    "birthDate": "1830-09-29",
+    "deathDate": "1900-05-07",
+    "bio": "A Representative from Texas; born in Troup County, Ga., September 29, 1830; pursued preparatory studies in Brownwood College, La Grange, Ga.; studied law; was admitted to the bar in 1851 and commenced practice in Dadeville, Ala.; moved to Texas in 1856; settled in Jefferson, Marion County, in 1861 and continued the practice of law; member of the State house of representatives in 1859; during the Civil War entered the Confederate Army as a private; promoted to the rank of colonel of the Eighteenth Texas Infantry; assigned to duty in 1864 as adjutant general of the State of Texas with the rank of colonel; again a member of the State house of representatives in 1864; elected to the State senate in 1873 and served until his resignation, having been elected to Congress; elected as a Democrat to the Forty-fourth and to the ten succeeding Congresses (March 4, 1875-March 3, 1897); chairman, Committee on the Judiciary (Fiftieth, Fifty-second, and Fifty-third Congresses); declined to be a candidate for renomination in 1896; appointed by President McKinley on June 21, 1897, as one of the commissioners to codify the laws of the United States and served in this capacity until his death in Jefferson, Tex., May 7, 1900; interment in Oaklawn Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 44th United States Congress",
+            "startDate": "1875-03-05",
+            "endDate": "1877-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 45th United States Congress",
+            "startDate": "1877-03-05",
+            "endDate": "1879-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 46th United States Congress",
+            "startDate": "1879-03-18",
+            "endDate": "1881-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 47th United States Congress",
+            "startDate": "1881-03-04",
+            "endDate": "1883-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 48th United States Congress",
+            "startDate": "1883-12-03",
+            "endDate": "1885-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 49th United States Congress",
+            "startDate": "1885-03-04",
+            "endDate": "1887-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 50th United States Congress",
+            "startDate": "1887-12-05",
+            "endDate": "1889-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 51st United States Congress",
+            "startDate": "1889-03-04",
+            "endDate": "1891-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 52nd United States Congress",
+            "startDate": "1891-12-07",
+            "endDate": "1893-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Democrat",
+            "represents": "TEXAS"
+        }
+    ]
+}

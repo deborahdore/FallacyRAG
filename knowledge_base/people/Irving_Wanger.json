@@ -1,0 +1,80 @@
+{
+    "name": "Irving Wanger",
+    "birthDate": "1852-03-05",
+    "deathDate": "1940-01-14",
+    "bio": "A Representative from Pennsylvania; born in North Coventry, Chester County, Pa., March 5, 1852; attended the public schools of North Coventry and Pottstown, and Hill School in Pottstown; deputy prothonotary of Chester County in 1871; commenced the study of law at Norristown in 1872; deputy prothonotary of Montgomery County 1873-1875; was admitted to the bar December 18, 1875, and commenced the practice of law in Norristown, Pa.; elected burgess of Norristown in 1878; delegate to the Republican National Convention in 1880; elected district attorney of Montgomery County in 1880 and again in 1886; served as chairman of the Montgomery County Republican committee in 1889; unsuccessful candidate for election in 1890 to the Fifty-second Congress; elected as a Republican to the Fifty-third and to the eight succeeding Congresses (March 4, 1893-March 3, 1911); chairman, Committee on Expenditures in the Post Office Department (Fifty-fifth through Sixty-first Congresses); unsuccessful candidate for reelection in 1910 to the Sixty-second Congress; lived for a short time in Wilmington, Del.; resumed the practice of his profession in Media and Norristown, Pa., in 1920; died in Norristown, Pa., January 14, 1940; interment in Mount Zion Cemetery, Pottstown, Pa.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 53rd United States Congress",
+            "startDate": "1893-03-04",
+            "endDate": "1895-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 54th United States Congress",
+            "startDate": "1895-12-02",
+            "endDate": "1897-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 55th United States Congress",
+            "startDate": "1897-03-15",
+            "endDate": "1899-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 56th United States Congress",
+            "startDate": "1899-12-04",
+            "endDate": "1901-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 57th United States Congress",
+            "startDate": "1901-03-04",
+            "endDate": "1903-03-03",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "PENNSYLVANIA"
+        }
+    ]
+}

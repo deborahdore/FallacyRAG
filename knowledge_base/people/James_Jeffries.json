@@ -1,0 +1,24 @@
+{
+    "name": "James Jeffries",
+    "birthDate": "1925",
+    "deathDate": "1997",
+    "bio": "A Representative from Kansas; born in Detroit, Wayne County, Mich., June 1, 1925; attended the public schools; graduated, Cranbrook Academy, Bloomfield Hills, 1943; attended Michigan State University, Lansing, 1947; served in United States Army Air Corps, 1943-1945; investment counselor, corporate director, 1956-1979; delegate to Kansas State Republican convention, 1978; elected as a Republican to the Ninety-sixth and to the Ninety-seventh Congresses (January 3, 1979-January 3, 1983); was not a candidate for reelection in 1982 to the Ninety-eighth Congress; died on August 22, 1997, in Tucson, Ariz.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 96th United States Congress",
+            "startDate": "1979-01-03",
+            "endDate": "1981-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 97th United States Congress",
+            "startDate": "1981-01-03",
+            "endDate": "1983-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "KANSAS"
+        }
+    ]
+}

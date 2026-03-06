@@ -1,0 +1,64 @@
+{
+    "name": "William Humphrey",
+    "birthDate": "1862-03-31",
+    "deathDate": "1934-02-14",
+    "bio": "A Representative from Washington; born near Alamo, Montgomery County, Ind., March 31, 1862; attended the common schools; was graduated from Wabash College, Crawfordsville, Ind., in 1887; studied law; was admitted to the bar in 1887 and commenced practice in Crawfordsville; moved to Seattle, Wash., in 1893 and continued the practice of law; corporation counsel of the city of Seattle 1898-1902; elected as a Republican to the Fifty-eighth and to the six succeeding Congresses (March 4, 1903-March 3, 1917); did not seek renomination in 1916, having become a Senatorial aspirant; resumed the practice of law in Seattle; appointed February 25, 1925, by President Coolidge as a member of the Federal Trade Commission and served until September 1933; died in Washington, D.C., February 14, 1934; interment in Oak Hill Cemetery, Crawfordsville, Ind.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 58th United States Congress",
+            "startDate": "1903-03-05",
+            "endDate": "1905-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 59th United States Congress",
+            "startDate": "1905-03-04",
+            "endDate": "1907-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 60th United States Congress",
+            "startDate": "1907-12-02",
+            "endDate": "1909-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 61st United States Congress",
+            "startDate": "1909-03-04",
+            "endDate": "1911-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 62nd United States Congress",
+            "startDate": "1911-04-04",
+            "endDate": "1913-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 63rd United States Congress",
+            "startDate": "1913-03-04",
+            "endDate": "1915-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 64th United States Congress",
+            "startDate": "1915-12-06",
+            "endDate": "1917-03-04",
+            "partyAffiliation": "Republican",
+            "represents": "WASHINGTON"
+        }
+    ]
+}

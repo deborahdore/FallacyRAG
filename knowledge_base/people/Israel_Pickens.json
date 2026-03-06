@@ -1,0 +1,40 @@
+{
+    "name": "Israel Pickens",
+    "birthDate": "1780-01-30",
+    "deathDate": "1827-04-24",
+    "bio": "a Representative from North Carolina and a Senator from Alabama; born near Concord, Mecklenburg (now Cabarrus) County, N.C., January 30, 1780; moved to Burke County, N.C.; received instruction from private teachers and graduated from Jefferson College, Canonsburg, Pa., in 1802; studied law; admitted to the bar and practiced; member, North Carolina State senate 1808-1809; elected as a Democratic Republican from North Carolina to the Twelfth, Thirteenth, and Fourteenth Congresses (March 4, 1811-March 3, 1817); register of the land office of Mississippi Territory (which included the present State of Alabama) 1817-1821; Governor of Alabama 1821-1825; appointed to the United States Senate from Alabama to fill the vacancy caused by the death of Henry Chambers and served from February 17, 1826, to November 27, 1826, when a successor was elected; was not a candidate for election to the vacancy; declined an appointment as judge of the United States Court for the District of Alabama in 1826; died near Matanzas, Cuba, on April 24, 1827; interment in the family cemetery near Greensboro, Hale County, Ala.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 12th United States Congress",
+            "startDate": "1811-11-04",
+            "endDate": "1813-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "NORTH CAROLINA"
+        },
+        {
+            "role": "Senator",
+            "congressAffiliation": "The 19th United States Congress",
+            "startDate": "1825-03-04",
+            "endDate": "1827-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "ALABAMA"
+        }
+    ]
+}

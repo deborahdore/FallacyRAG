@@ -1,0 +1,15 @@
+{
+    "name": "Sarah McBride",
+    "birthDate": "1990-08-09",
+    "deathDate": null,
+    "bio": "a Representative from Delaware; born in Wilmington, New Castle County, Del., August 9, 1990; graduated from Cab Calloway School of the Arts, Wilmington, Del., 2009; B.A., American University, Washington, D.C., 2013; author; public advocate; member of the Delaware state senate, 2020-2024; elected as a Democrat to the One Hundred Nineteenth Congress (January 3, 2025-present).",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 119th United States Congress",
+            "startDate": "2025-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "DELAWARE"
+        }
+    ]
+}

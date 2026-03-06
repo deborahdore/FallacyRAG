@@ -1,0 +1,82 @@
+{
+    "name": "Philip Barbour",
+    "birthDate": "1783-05-25",
+    "deathDate": "1841-02-25",
+    "bio": "a Representative from Virginia; born at \"Frascati,\" near Gordonsville, Orange County, Va., May 25, 1783; attended common and private schools; graduated from the college of William and Mary, Williamsburg, Va., in 1799; studied law; was admitted to the bar in 1800 and commenced practice in Bardstown, Ky.; returned to Virginia in 1801 and practiced law in Gordonsville, Orange County; member of the Virginia state house of delegates, 1812-1814; elected as a Democratic Republican to the Thirteenth Congress to fill the vacancy caused by the death of John Dawson, and reelected as a Democratic Republican to the Fourteenth through the Seventeenth Congresses, reelected as a Crawford Republican to the Eighteenth Congress and served from June 1814, to March 3, 1825; Speaker of the House (Seventeenth Congress); was not a candidate for renomination in 1824; offered the professorship of law in the University of Virginia in 1825, but declined; appointed a judge of the general court of Virginia and served for two years, resigning in 1827; elected as a Jacksonian candidate to the Twentieth Congress and to the succeeding Congress and served from March 4, 1827, until his resignation on October 15, 1830; chair, Committee on the Judiciary (Twentieth Congress); president of the Virginia constitutional convention in 1829; appointed by President Jackson, June 1, 1830, judge of the United States Circuit Court for the Eastern District of Virginia, declining the chancellorship and the post of attorney general; refused nominations for judge of the court of appeals, for Governor, and for United States Senator; appointed Associate Justice of the United States Supreme Court and served from March 15, 1836, until his death in Washington, D.C., February 25, 1841; interment in Congressional Cemetery.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 13th United States Congress",
+            "startDate": "1813-05-24",
+            "endDate": "1815-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 14th United States Congress",
+            "startDate": "1815-12-04",
+            "endDate": "1817-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 15th United States Congress",
+            "startDate": "1817-03-04",
+            "endDate": "1819-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 16th United States Congress",
+            "startDate": "1819-12-06",
+            "endDate": "1821-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Speaker Of The House",
+            "congressAffiliation": "The 17th United States Congress",
+            "startDate": "1821-12-03",
+            "endDate": "1823-03-03",
+            "partyAffiliation": "Democratic Republican"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 18th United States Congress",
+            "startDate": "1823-12-01",
+            "endDate": "1825-03-03",
+            "partyAffiliation": "Crawford Republican",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 20th United States Congress",
+            "startDate": "1827-12-03",
+            "endDate": "1829-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 21st United States Congress",
+            "startDate": "1829-03-04",
+            "endDate": "1831-03-03",
+            "partyAffiliation": "Jacksonian",
+            "represents": "VIRGINIA"
+        },
+        {
+            "role": "Supreme Court Justice"
+        }
+    ]
+}

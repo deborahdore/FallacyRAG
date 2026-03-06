@@ -1,0 +1,56 @@
+{
+    "name": "Alan Wheat",
+    "birthDate": "1951",
+    "deathDate": null,
+    "bio": "A Representative from Missouri; born in San Antonio, Bexar County, Tex., October 16, 1951; attended elementary schools in Wichita, Kans., and in Seville, Spain; graduated from Airline High School, Bossier City, La., 1968; B.A., Grinnell College, Grinnell, Iowa, 1972; economist; legislative aide to county executive, Jackson County, Mo.; elected, Missouri general assembly, 1977-1982; delegate, Missouri State Democratic convention, 1978; elected as a Democrat to the Ninety-eighth and to the five succeeding Congresses (January 3, 1983-January 3, 1995); was not a candidate for reelection in 1994, but was an unsuccessful candidate for election to the United States Senate.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 98th United States Congress",
+            "startDate": "1983-01-03",
+            "endDate": "1985-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 99th United States Congress",
+            "startDate": "1985-01-03",
+            "endDate": "1987-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 100th United States Congress",
+            "startDate": "1987-01-03",
+            "endDate": "1989-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 101st United States Congress",
+            "startDate": "1989-01-03",
+            "endDate": "1991-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 102nd United States Congress",
+            "startDate": "1991-01-03",
+            "endDate": "1993-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 103rd United States Congress",
+            "startDate": "1993-01-03",
+            "endDate": "1995-01-03",
+            "partyAffiliation": "Democrat",
+            "represents": "MISSOURI"
+        }
+    ]
+}

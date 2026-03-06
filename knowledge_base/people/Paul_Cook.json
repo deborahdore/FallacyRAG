@@ -1,0 +1,40 @@
+{
+    "name": "Paul Cook",
+    "birthDate": "1943",
+    "deathDate": null,
+    "bio": "A Representative from California; born in Meriden, New Haven County, Conn., March 3, 1943; B.S., Southern Connecticut State University, New Haven, Conn., 1966; M.P.A., California State University, San Bernardino, Calif., 1996; M.A., University of California, Riverside, Calif., 2000; United States Marine Corps, 1966-1992; professor; member of the Yucca Valley, Calif. town council, 1998-2006; Mayor of Yucca Valley, Calif.; member of the California state assembly, 2006-2012; elected as a Republican to the One Hundred Thirteenth and to the three succeeding Congresses until his resignation on December 7, 2020 (January 3, 2013-December 7, 2020); was not a candidate for reelection to the One Hundred Seventeenth Congress in 2020; member of the San Bernadino, Calif. county board of supervisors, 2020-present.",
+    "jobs": [
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 113th United States Congress",
+            "startDate": "2013-01-03",
+            "endDate": "2015-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 114th United States Congress",
+            "startDate": "2015-01-03",
+            "endDate": "2017-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 115th United States Congress",
+            "startDate": "2017-01-03",
+            "endDate": "2019-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        },
+        {
+            "role": "Representative",
+            "congressAffiliation": "The 116th United States Congress",
+            "startDate": "2019-01-03",
+            "endDate": "2021-01-03",
+            "partyAffiliation": "Republican",
+            "represents": "CALIFORNIA"
+        }
+    ]
+}
