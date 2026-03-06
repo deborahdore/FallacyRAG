@@ -128,5 +128,5 @@ if __name__ == "__main__":
     output_path = Path("knowledge_base/geography/")
     output_path.mkdir(parents=True, exist_ok=True)
 
-    # extract_US(output_path)
     extract_NER_entities(output_path)
+    extract_US(output_path)

@@ -1,0 +1,28 @@
+{
+    "title": "Commonwealth of the Northern Mariana Islands",
+    "level": "State",
+    "geoID": "040XX00US69",
+    "short description": "",
+    "description": "Commonwealth of the Northern Mariana Islands has a land area of 182.4 square miles and a water area of 1,793.2 square miles.",
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within Commonwealth of the Northern Mariana Islands",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "69100",
+                "value": "3769",
+                "name": "Rota Municipality, Commonwealth of the Northern Mariana Islands"
+            },
+            {
+                "geoCode": "69110",
+                "value": "290614",
+                "name": "Saipan Municipality, Commonwealth of the Northern Mariana Islands"
+            },
+            {
+                "geoCode": "69120",
+                "value": "7595",
+                "name": "Tinian Municipality, Commonwealth of the Northern Mariana Islands"
+            }
+        ]
+    }
+}

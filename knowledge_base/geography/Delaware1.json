@@ -1,0 +1,1122 @@
+{
+    "title": "Delaware",
+    "level": "State",
+    "geoID": "040XX00US10",
+    "short description": "Delaware has a land area of 1,948.5 square miles and a water area of 540.2 square miles. It is the 49th largest state by area.",
+    "description": "Delaware has a land area of 1,948.5 square miles and a water area of 540.2 square miles. It is the 49th largest state by area. Delaware is bordered by New Jersey, Maryland, and Pennsylvania.",
+    "Class of Worker": {
+        "title": "Class of Worker in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Employee of private company workers",
+                "value": "63.6",
+                "moe": "1.5"
+            },
+            {
+                "description": "Self-employed in own incorporated business workers",
+                "value": "4.4",
+                "moe": "0.5"
+            },
+            {
+                "description": "Private not-for-profit wage and salary workers",
+                "value": "11.1",
+                "moe": "1.0"
+            },
+            {
+                "description": "Local, state, and federal government workers",
+                "value": "16.0",
+                "moe": "1.1"
+            },
+            {
+                "description": "Self-employed in own not incorporated business workers and unpaid family workers",
+                "value": "4.9",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Veterans": {
+        "title": "Veterans by Sex in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "86.9",
+                "moe": "2.7"
+            },
+            {
+                "description": "Female",
+                "value": "13.1",
+                "moe": "2.7"
+            }
+        ]
+    },
+    "Children": {
+        "title": "Children Under 18 by Age Range in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 5 years",
+                "value": "5.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "5 to 14 years",
+                "value": "11.4",
+                "moe": "0.1"
+            },
+            {
+                "description": "15 to 17 years",
+                "value": "3.7",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Two or More Races": {
+        "title": "Two or More Races for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "15807",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "43699",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "17012",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Redistricting": {
+        "title": "Total Population for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "181851",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "570719",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "237378",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "School Enrollment": {
+        "title": "School Enrollment (Population 3 Years and Over Enrolled in School) in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Nursery school, preschool",
+                "value": "5.8",
+                "moe": "1.1"
+            },
+            {
+                "description": "Kindergarten to 12th grade",
+                "value": "65.0",
+                "moe": "1.3"
+            },
+            {
+                "description": "College, undergraduate",
+                "value": "23.0",
+                "moe": "1.2"
+            },
+            {
+                "description": "Graduate, professional school",
+                "value": "6.2",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Older Population": {
+        "title": "Older Population by Age in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "65 to 74 years",
+                "value": "12.9",
+                "moe": "0.1"
+            },
+            {
+                "description": "75 to 84 years",
+                "value": "6.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "85 years and over",
+                "value": "2.1",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Employment and Labor Force Status": {
+        "title": "Employment Rate in Delaware",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "58.5",
+                "moe": "0.7"
+            },
+            {
+                "description": "2015",
+                "value": "58.5",
+                "moe": "0.7"
+            },
+            {
+                "description": "2016",
+                "value": "57.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2017",
+                "value": "55.8",
+                "moe": "0.9"
+            },
+            {
+                "description": "2018",
+                "value": "58.2",
+                "moe": "0.8"
+            },
+            {
+                "description": "2019",
+                "value": "58.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "2021",
+                "value": "56.2",
+                "moe": "0.7"
+            },
+            {
+                "description": "2022",
+                "value": "59.7",
+                "moe": "0.9"
+            },
+            {
+                "description": "2023",
+                "value": "59.6",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Residential Mobility": {
+        "title": "Residential Mobility in the Last Year in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Moved within the same county",
+                "value": "5.7",
+                "moe": "0.7"
+            },
+            {
+                "description": "Moved from different county, same state",
+                "value": "1.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "Moved from a different state",
+                "value": "3.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "Moved from abroad",
+                "value": "0.6",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within Delaware",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "2683797",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "20176420",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "3404366",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Age and Sex": {
+        "title": "Population by Age Range in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Median Age",
+                "value": "42.1",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Income and Earnings": {
+        "title": "Median Income by Types of Families in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Families",
+                "value": "105622",
+                "moe": "3527"
+            },
+            {
+                "description": "Married-couple families",
+                "value": "123300",
+                "moe": "3179"
+            },
+            {
+                "description": "Nonfamily households",
+                "value": "51848",
+                "moe": "1800"
+            }
+        ]
+    },
+    "Work Experience": {
+        "title": "Mean Usual Hours Worked for Workers by Sex in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "40.1",
+                "moe": "0.4"
+            },
+            {
+                "description": "Female",
+                "value": "36.3",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Commuting": {
+        "title": "Means of Transportation to Work (Workers 16 Years and Over) in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Drove alone",
+                "value": "72.2",
+                "moe": "1.4"
+            },
+            {
+                "description": "Carpool",
+                "value": "8.4",
+                "moe": "1.0"
+            },
+            {
+                "description": "Public transportation",
+                "value": "2.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "Walked",
+                "value": "2.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "Bicycle",
+                "value": "0.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Taxicab, motorcycle, or other means",
+                "value": "1.5",
+                "moe": "0.3"
+            },
+            {
+                "description": "Worked from home",
+                "value": "12.9",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Marital Status and Marital History": {
+        "title": "Marital Status by Sex in Delaware",
+        "source": "2023 ACS 1-Year Estimates Subject Tables",
+        "stats": [
+            {
+                "description": "Married, not separated | Male",
+                "value": "51.9",
+                "moe": "1.3"
+            },
+            {
+                "description": "Married, not separated | Female",
+                "value": "46.1",
+                "moe": "1.7"
+            },
+            {
+                "description": "Widowed | Male",
+                "value": "3.0",
+                "moe": "0.4"
+            },
+            {
+                "description": "Widowed | Female",
+                "value": "8.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "Divorced | Male",
+                "value": "8.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "Divorced | Female",
+                "value": "12.5",
+                "moe": "1.0"
+            },
+            {
+                "description": "Separated | Male",
+                "value": "0.9",
+                "moe": "0.3"
+            },
+            {
+                "description": "Separated | Female",
+                "value": "1.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "Never Married | Male",
+                "value": "35.3",
+                "moe": "1.1"
+            },
+            {
+                "description": "Never Married | Female",
+                "value": "31.3",
+                "moe": "1.1"
+            }
+        ]
+    },
+    "Educational Attainment": {
+        "title": "Education Attainment (Population 25 Years and Older) in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "High school or equivalent degree",
+                "value": "29.0",
+                "moe": "1.1"
+            },
+            {
+                "description": "Some college, no degree",
+                "value": "18.7",
+                "moe": "0.9"
+            },
+            {
+                "description": "Associate's degree",
+                "value": "8.2",
+                "moe": "0.6"
+            },
+            {
+                "description": "Bachelor's degree",
+                "value": "20.0",
+                "moe": "0.9"
+            },
+            {
+                "description": "Graduate or professional degree",
+                "value": "16.0",
+                "moe": "0.8"
+            }
+        ]
+    },
+    "Disability": {
+        "title": "Types of Disabilities in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Hearing difficulty",
+                "value": "3.8",
+                "moe": "0.3"
+            },
+            {
+                "description": "Vision difficulty",
+                "value": "2.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "Cognitive difficulty",
+                "value": "5.7",
+                "moe": "0.6"
+            },
+            {
+                "description": "Ambulatory difficulty",
+                "value": "7.0",
+                "moe": "0.6"
+            },
+            {
+                "description": "Self-care difficulty",
+                "value": "2.3",
+                "moe": "0.3"
+            },
+            {
+                "description": "Independent living difficulty",
+                "value": "6.2",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Housing Units": {
+        "title": "Housing Occupancy in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Occupied housing units",
+                "value": "412304",
+                "moe": "3893"
+            },
+            {
+                "description": "Vacant housing units",
+                "value": "64111",
+                "moe": "3905"
+            }
+        ]
+    },
+    "Native and Foreign-Born": {
+        "title": "Foreign-Born Population in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Naturalized U.S. citizen",
+                "value": "52.5",
+                "moe": "4.0"
+            },
+            {
+                "description": "Not a U.S. citizen",
+                "value": "47.5",
+                "moe": "4.0"
+            }
+        ]
+    },
+    "Language Spoken at Home": {
+        "title": "Types of Language Spoken at Home in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "English only",
+                "value": "83.8",
+                "moe": "0.9"
+            },
+            {
+                "description": "Spanish",
+                "value": "8.0",
+                "moe": "0.5"
+            },
+            {
+                "description": "Other Indo-European languages",
+                "value": "4.2",
+                "moe": "0.6"
+            },
+            {
+                "description": "Asian and Pacific Islander languages",
+                "value": "2.5",
+                "moe": "0.3"
+            },
+            {
+                "description": "Other languages",
+                "value": "1.5",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Financial Characteristics": {
+        "title": "Occupied Units Paying Rent in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $500",
+                "value": "7.1",
+                "moe": "1.8"
+            },
+            {
+                "description": "$500 to $999",
+                "value": "12.9",
+                "moe": "2.2"
+            },
+            {
+                "description": "$1,000 to $1,499",
+                "value": "28.1",
+                "moe": "3.0"
+            },
+            {
+                "description": "$1,500 to $1,999",
+                "value": "32.8",
+                "moe": "3.2"
+            },
+            {
+                "description": "$2,000 to $2,499",
+                "value": "13.3",
+                "moe": "2.4"
+            },
+            {
+                "description": "$2,500 to $2,999",
+                "value": "4.4",
+                "moe": "1.1"
+            },
+            {
+                "description": "$3,000 or more",
+                "value": "1.5",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Occupancy Characteristics": {
+        "title": "Owner Occupied Housing Units by Types of Households in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family",
+                "value": "172527",
+                "moe": "5293"
+            },
+            {
+                "description": "Male householder, no spouse present",
+                "value": "12833",
+                "moe": "2447"
+            },
+            {
+                "description": "Female householder, no spouse present",
+                "value": "32536",
+                "moe": "2800"
+            }
+        ]
+    },
+    "Physical Characteristics": {
+        "title": "Bedrooms in Occupied Housing Units in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "No bedroom",
+                "value": "0.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "One bedroom",
+                "value": "7.3",
+                "moe": "0.8"
+            },
+            {
+                "description": "2 or 3 bedrooms",
+                "value": "65.3",
+                "moe": "1.3"
+            },
+            {
+                "description": "4 or more bedrooms",
+                "value": "26.7",
+                "moe": "1.0"
+            }
+        ]
+    },
+    "Poverty": {
+        "title": "Poverty by Age in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 18 years",
+                "value": "12.6",
+                "moe": "3.2"
+            },
+            {
+                "description": "18 to 64 years",
+                "value": "8.5",
+                "moe": "0.9"
+            },
+            {
+                "description": "65 years and over",
+                "value": "9.8",
+                "moe": "1.2"
+            }
+        ]
+    },
+    "Families and Household Characteristics": {
+        "title": "Total Households by Type of Households in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family household",
+                "value": "47.6",
+                "moe": "1.4"
+            },
+            {
+                "description": "Male householder, no spouse/partner present, family household",
+                "value": "16.7",
+                "moe": "1.0"
+            },
+            {
+                "description": "Female householder, no spouse/partner present, family household",
+                "value": "28.6",
+                "moe": "1.1"
+            }
+        ]
+    },
+    "Black or African American": {
+        "title": "Black or African American alone for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "46998",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "146544",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "25357",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "American Indian and Alaska Native": {
+        "title": "American Indian and Alaska Native alone for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "1149",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "2156",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "1843",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Some Other Race": {
+        "title": "Some Other Race alone for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "5658",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "28714",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "14137",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Vacancy": {
+        "title": "Vacancy Rate in Delaware",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "16.2",
+                "moe": "0.9"
+            },
+            {
+                "description": "2015",
+                "value": "16.4",
+                "moe": "0.9"
+            },
+            {
+                "description": "2016",
+                "value": "17.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2017",
+                "value": "17.3",
+                "moe": "1.0"
+            },
+            {
+                "description": "2018",
+                "value": "16.2",
+                "moe": "0.9"
+            },
+            {
+                "description": "2019",
+                "value": "15.2",
+                "moe": "0.8"
+            },
+            {
+                "description": "2021",
+                "value": "13.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2022",
+                "value": "13.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2023",
+                "value": "12.6",
+                "moe": "0.8"
+            }
+        ]
+    },
+    "Industry": {
+        "title": "Industry for the Civilian Employed Population 16 Years and Over in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Educational services, and health care and social assistance",
+                "value": "27.3",
+                "moe": "1.2"
+            },
+            {
+                "description": "Professional, scientific, and management, and administrative and waste management services",
+                "value": "11.8",
+                "moe": "0.9"
+            },
+            {
+                "description": "Retail trade",
+                "value": "10.3",
+                "moe": "0.8"
+            },
+            {
+                "description": "Finance and insurance, and real estate and rental and leasing",
+                "value": "9.3",
+                "moe": "0.8"
+            },
+            {
+                "description": "Arts, entertainment, and recreation, and accommodation and food services",
+                "value": "9.0",
+                "moe": "0.7"
+            },
+            {
+                "description": "Manufacturing",
+                "value": "7.6",
+                "moe": "0.7"
+            },
+            {
+                "description": "Construction",
+                "value": "6.7",
+                "moe": "0.8"
+            },
+            {
+                "description": "Transportation and warehousing, and utilities",
+                "value": "5.4",
+                "moe": "0.6"
+            },
+            {
+                "description": "Public administration",
+                "value": "4.7",
+                "moe": "0.7"
+            },
+            {
+                "description": "Other services, except public administration",
+                "value": "3.8",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Not Hispanic or Latino": {
+        "title": "White alone, not Hispanic or Latino for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "104845",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "303265",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "171741",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Fertility": {
+        "title": "Women with Births in the Past 12 Months in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "15 to 19 years",
+                "value": "0",
+                "moe": "208"
+            },
+            {
+                "description": "20 to 34 years",
+                "value": "7670",
+                "moe": "1636"
+            },
+            {
+                "description": "35 to 50 years",
+                "value": "3955",
+                "moe": "1196"
+            }
+        ]
+    },
+    "Homeownership Rate": {
+        "title": "Housing Value in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $50,000",
+                "value": "5.3",
+                "moe": "0.7"
+            },
+            {
+                "description": "$50,000 to $99,999",
+                "value": "1.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "$100,000 to $149,999",
+                "value": "2.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "$150,000 to $199,999",
+                "value": "4.6",
+                "moe": "0.6"
+            },
+            {
+                "description": "$200,000 to $299,999",
+                "value": "19.0",
+                "moe": "1.4"
+            },
+            {
+                "description": "$300,000 to $499,999",
+                "value": "39.9",
+                "moe": "1.5"
+            },
+            {
+                "description": "$500,000 to $999,999",
+                "value": "24.3",
+                "moe": "1.1"
+            },
+            {
+                "description": "$1,000,000 or more",
+                "value": "3.1",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Health Insurance": {
+        "title": "Population Without Health Insurance Coverage in Delaware",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "7.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "2015",
+                "value": "5.9",
+                "moe": "0.6"
+            },
+            {
+                "description": "2016",
+                "value": "5.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "2017",
+                "value": "5.4",
+                "moe": "0.6"
+            },
+            {
+                "description": "2018",
+                "value": "5.7",
+                "moe": "0.7"
+            },
+            {
+                "description": "2019",
+                "value": "6.6",
+                "moe": "0.6"
+            },
+            {
+                "description": "2021",
+                "value": "5.7",
+                "moe": "0.6"
+            },
+            {
+                "description": "2022",
+                "value": "5.6",
+                "moe": "0.6"
+            },
+            {
+                "description": "2023",
+                "value": "6.5",
+                "moe": "0.8"
+            }
+        ]
+    },
+    "Asian": {
+        "title": "Asian alone for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "4429",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "35200",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "3070",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Hispanic or Latino": {
+        "title": "Hispanic or Latino (of any race) for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "13981",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "63516",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "26793",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "White": {
+        "title": "White alone for All Counties within Delaware",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "10001",
+                "value": "107685",
+                "name": "Kent County, Delaware"
+            },
+            {
+                "geoCode": "10003",
+                "value": "314231",
+                "name": "New Castle County, Delaware"
+            },
+            {
+                "geoCode": "10005",
+                "value": "175847",
+                "name": "Sussex County, Delaware"
+            }
+        ]
+    },
+    "Occupation": {
+        "title": "Occupation for the Civilian Employed Population 16 Years and Over in Delaware",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Management, business, science and arts occupations",
+                "value": "227842",
+                "moe": "7270"
+            },
+            {
+                "description": "Sales and office occupations",
+                "value": "96721",
+                "moe": "5316"
+            },
+            {
+                "description": "Service occupations",
+                "value": "85703",
+                "moe": "5622"
+            },
+            {
+                "description": "Production, transportation, and material moving occupations",
+                "value": "55779",
+                "moe": "4567"
+            },
+            {
+                "description": "Natural resources, construction, and maintenance occupations",
+                "value": "42304",
+                "moe": "4271"
+            }
+        ]
+    },
+    "wiki_Etymology": "Delaware was named after its location on the Delaware Bay, which in turn derived its name from Thomas West, 3rd Baron De La Warr (1577–1618), the first governor of the Colony of Virginia . The Delaware people, a name used by Europeans for Lenape people Indigenous to the Delaware Valley, also derive their name from the same source. The name de La Warr was derived from Sussex and is of Anglo -French origin. It came probably from a Norman lieu-dit La Guerre . This toponymic likely derived from Latin ager , the Breton gwern or from the Late Latin varectum ( fallow ). The toponyms Gara, Gare, Gaire, (the sound [ä] often mutated in [æ] ) also appear in historical texts cited by Lucien Musset , where the word ga(i)ra means gore . It could also be linked with a patronymic from the Old Norse verr .",
+    "wiki_History": "Before Delaware was settled by European colonists, the present-day state was home to the Eastern Algonquian tribes known as the Unami Lenape , or Delaware, who lived mostly along the coast, and the Nanticoke who occupied much of the southern Delmarva Peninsula . John Smith also showed two Iroquoian tribes, the Kuskarawock and Tockwogh , living north of the Nanticoke—they may have held small portions of land in the western part of the state before migrating across the Chesapeake Bay. The Kuskarawocks were most likely the Tuscarora . The Unami Lenape in the Delaware Valley were closely related to Munsee Lenape tribes along the Hudson River . They had a settled hunting and agricultural society, and they rapidly became middlemen in an increasingly frantic fur trade with their ancient enemy, the Minqua or Susquehannock . With the loss of their lands on the Delaware River and the destruction of the Minqua by the Iroquois of the Five Nations in the 1670s, the remnants of the Lenape who wished to remain identified as such left the region and moved over the Allegheny Mountains by the mid-18th century. Generally, those who did not relocate out of the state of Delaware were baptized, became Christian and were grouped together with other persons of color in official records and in the minds of their non-Native American neighbors. [ citation needed ] The Dutch were the first Europeans to settle in present-day Delaware in the middle region by establishing a trading post at Zwaanendael , near the site of Lewes in 1631. Within a year, all the settlers were killed in a dispute with Native American tribes living in the area. In 1638, New Sweden , a Swedish trading post and colony, was established at Fort Christina (now in Wilmington ) by Peter Minuit at the head of a group of Swedes, Finns and Dutch. The colony of New Sweden lasted 17 years. In 1651, the Dutch, reinvigorated by the leadership of Peter Stuyvesant , established a fort at present-day New Castle and, in 1655, they conquered the New Sweden colony, annexing it into the Dutch New Netherland . Only nine years later, in 1664, the Dutch were conquered by a fleet of English ships by Sir Robert Carr under the direction of James, the Duke of York . Fighting off a prior claim by Cecil Calvert, 2nd Baron Baltimore , Proprietor of Maryland , the Duke passed his somewhat dubious ownership on to William Penn in 1682. Penn strongly desired access to the sea for his Pennsylvania province and leased what then came to be known as the \"Lower Counties on the Delaware\" from the Duke. Penn established representative government and briefly combined his two possessions under one General Assembly in 1682. However, by 1704 the province of Pennsylvania had grown so large their representatives wanted to make decisions without the assent of the Lower Counties, and the two groups of representatives began meeting on their own, one at Philadelphia , and the other at New Castle. Penn and his heirs remained proprietors of both and always appointed the same person Governor for their province of Pennsylvania and their territory of the Lower Counties. The fact that Delaware and Pennsylvania shared the same governor was not unique; from 1703 to 1738, New York and New Jersey shared a governor. Massachusetts and New Hampshire also shared a governor for some time. Dependent in early years on indentured labor, Delaware imported more slaves as the number of English immigrants decreased with better economic conditions in England. The colony became a slave society and cultivated tobacco as a cash crop, although English immigrants continued to arrive. Like the other middle colonies, the Lower Counties on the Delaware initially showed little enthusiasm for a break with Britain . The citizenry had a good relationship with the Proprietary government, and generally were allowed more independence of action in their Colonial Assembly than in other colonies. Merchants at the port of Wilmington had trading ties with the British. New Castle lawyer Thomas McKean denounced the Stamp Act in the strongest terms, and Kent County native John Dickinson became the \"Penman of the Revolution\". Anticipating the Declaration of Independence, Patriot leaders Thomas McKean and Caesar Rodney convinced the Colonial Assembly to declare itself separated from British and Pennsylvania rule on June 15, 1776. The person best representing Delaware's majority, George Read , could not bring himself to vote for a Declaration of Independence. Only the dramatic overnight ride of Caesar Rodney gave the delegation the votes needed to cast Delaware's vote for independence. Initially led by John Haslet , Delaware provided one of the premier regiments in the Continental Army , known as the \"Delaware Blues\" and nicknamed the \" Blue Hen's Chicks \". In August 1777 General Sir William Howe led a British army through Delaware on his way to a victory at the Battle of Brandywine and capture of the city of Philadelphia. The only real engagement on Delaware soil was the Battle of Cooch's Bridge , fought on September 3, 1777, at Cooch's Bridge in New Castle County, although there was a minor Loyalist rebellion in 1778. Following the Battle of Brandywine, Wilmington was occupied by the British, and State President John McKinly was taken prisoner. The British remained in control of the Delaware River for much of the rest of the war, disrupting commerce and providing encouragement to an active Loyalist portion of the population, particularly in Sussex County. Because the British promised slaves of rebels freedom for fighting with them, escaped slaves flocked north to join their lines. Following the American Revolution , statesmen from Delaware were among the leading proponents of a strong central United States with equal representation for each state. Many colonial settlers came to Delaware from Maryland and Virginia , where the population had been increasing rapidly. The economies of these colonies were chiefly based on labor-intensive tobacco and increasingly dependent on African slaves because of a decline in working class immigrants from England. Most of the English colonists had arrived as indentured servants (contracted for a fixed period to pay for their passage), and in the early years the line between servant and slave was fluid. [ citation needed ] Most of the free African-American families in Delaware before the Revolution had migrated from Maryland to find more affordable land. They were descendants chiefly of relationships or marriages between white servant women and enslaved, servant or free African or African-American men. Under slavery law, children took the social status of their mothers, so children born to white women were free, regardless of their paternity, just as children born to enslaved women were born into slavery. As the flow of indentured laborers to the colony decreased with improving economic conditions in England, more slaves were imported for labor and the caste lines hardened. By the end of the colonial period, the number of enslaved people in Delaware began to decline. Shifts in the agriculture economy from tobacco to mixed farming resulted in less need for slaves' labor. In addition local Methodists and Quakers encouraged slaveholders to free their slaves following the American Revolution, and many did so in a surge of individual manumissions for idealistic reasons. By 1810, three-quarters of all blacks in Delaware were free. When John Dickinson freed his slaves in 1777, he was Delaware's largest slave owner with 37 slaves. In 1840, Delaware's population was 78,085 of whom 2,605 were slaves. By 1860, the largest slaveholder owned 16 slaves. Although attempts to abolish slavery failed by narrow margins in the legislature, in practical terms the state had mostly ended the practice. By the 1860 census on the verge of the Civil War , 91.7% of the black population were free; 1,798 were slaves, as compared to 19,829 \"free colored persons\". An independent black denomination was chartered in 1813 by freed slave Peter Spencer as the \" Union Church of Africans \". This followed the 1793 establishment in Philadelphia of the African Methodist Episcopal Church by Richard Allen , which had ties to the Methodist Episcopal Church until 1816. Spencer built a church in Wilmington for the new denomination. This was renamed as the African Union First Colored Methodist Protestant Church and Connection , more commonly known as the A.U.M.P. Church . In 1814, Spencer called for the first annual gathering, known as the Big August Quarterly , which continues to draw members of this denomination and their descendants together in a religious and cultural festival. Delaware voted against secession on January 3, 1861, and so remained in the Union. While most Delaware citizens who fought in the war served in the regiments of the state, some served in companies on the Confederate side in Maryland and Virginia Regiments. Delaware is notable for being the only slave state from which no Confederate regiments or militia groups were assembled. [ citation needed ] Delaware essentially freed the few slaves who were still in bondage shortly after the Civil War [ further explanation needed ] but rejected the 13th , 14th , and 15th Amendments to the Constitution; the 13th Amendment was rejected on February 8, 1865, the 14th Amendment was rejected on February 8, 1867, and the 15th Amendment was rejected on March 18, 1869. Delaware officially ratified the 13th, 14th, and 15th amendments on February 12, 1901, decades after they had already come into force. During the Reconstruction Era that followed the Civil War , Democratic Redeemer governments led by the South's Bourbon aristocracy continued to dominate the region and imposed explicitly white supremacist regimes in the former slave states. The Delaware legislature declared Black people to be second-class citizens in 1866, and restricted their voting rights despite the 15th Amendment, ensuring continued Democratic success in the state throughout most of the 19th century. Fearful that the 1875 Civil Rights Act passed by Congress might establish racial equality, Delaware legislators passed Jim Crow laws that mandated segregation in public facilities. The state's educational system was segregated by operation of law. Delaware's segregation was written into the state constitution, which, while providing at Article X, Section 2, that \"no distinction shall be made on account of race or color\", nonetheless required that \"separate schools for white and colored children shall be maintained.\" Beginning in the late 19th century, the Wilmington area grew into a manufacturing center. Investment in manufacturing in the city grew from $5.5 million in 1860 to $44 million in 1900. The most notable manufacturer in the state was the chemical company DuPont , which to this day is heavily credited with making the state what it is today in many ways. Because of Wilmington's growth, local politicians from the city and New Castle County pressured the state government to adopt a new constitution providing the north with more representation. However, the subsequent 1897 constitution did not proportionally represent the north and continued to give the southern counties disproportionate influence. As manufacturing expanded, businesses became major players in state affairs and funders of politicians through families such as the Du Ponts. Republican John Addicks attempted to buy a US Senate seat multiple times in a rivalry with the Du Ponts until the passage of the 17th Amendment . The allegiance of industries with the Republican party allowed them to gain control of the state's governorship throughout most of the 20th century. The GOP ensured black people could vote because of their general support for Republicans and thus undid restrictions on Black suffrage. Delaware benefited greatly from World War I because of the state's large gunpowder industry. DuPont, the most dominant business in the state by WWI, produced an estimated 40% of all gunpowder used by the Allies during the war. It produced nylon in the state after the war and began investments into General Motors . Additionally, the company invested heavily in the expansion of public schools in the state and colleges such as the University of Delaware in the 1910s and 1920s. This included primary and secondary schools for Black people and women. Delaware suffered less during the Great Depression than other states, but the depression spurred further migration from the rural south to urban areas. Like in World War I, the state enjoyed a big stimulus to its gunpowder and shipyard industries in World War II. New job opportunities during and after the war in the Wilmington area coaxed Black people from the southern counties to move to the city. The proportion of blacks constituting the city's population rose from 15% in 1950 to over 50% by 1980. The surge of Black migrants to the north sparked white flight , in which middle class whites moved from the city to suburban areas, leading to de facto segregation of Northern Delaware's society. In the 1940s and 1950s, Delaware attempted to integrate its schools, although the last segregated school in the state did not close until 1970. The University of Delaware admitted its first black student in 1948, and local courts ruled that primary schools had to be integrated. Delaware's integration efforts partially inspired the US Supreme Court's decision in Brown v. Board of Education , which found racial segregation in United States public schools to be unconstitutional. The result of the Brown ruling was that Delaware became fully integrated, albeit with time and much effort. In October 1954, the city of Milford became the scene of one of the country's first pro-segregation boycotts after eleven Black students were enrolled in the previously all-white Milford High School . Mass protests continued in Milford; the school board eventually ceded to the protestors, expelling the Black students. The ensuing unrest, which included cross burnings , rallies, and pro-segregation demonstrations, contributed to desegregation in most of Southern Delaware being delayed for another ten years. Sussex County did not start closing or integrating its segregated schools until 1965, 11 years after the Brown ruling. Throughout the state, integration only encouraged more white flight, and poor economic conditions for the black population led to some violence during the 1960s. Riots broke out in Wilmington in 1967 and again in 1968 in response to the assassination of Martin Luther King Jr , after which the National Guard occupied the city for nine months to prevent further violence. Since WWII, the state has been generally economically prosperous and enjoyed relatively high per capita income because of its location between major cities like Philadelphia, New York, and Washington, DC. Its population grew rapidly, particularly in the suburbs in the north where New Castle county became an extension of the Philadelphia metropolitan area . Americans, including migrants from Puerto Rico, and immigrants from Latin America flocked to the state. By 1990, only 50% of Delaware's population consisted of natives to the state.",
+    "wiki_Native_Americans": "Before Delaware was settled by European colonists, the present-day state was home to the Eastern Algonquian tribes known as the Unami Lenape , or Delaware, who lived mostly along the coast, and the Nanticoke who occupied much of the southern Delmarva Peninsula . John Smith also showed two Iroquoian tribes, the Kuskarawock and Tockwogh , living north of the Nanticoke—they may have held small portions of land in the western part of the state before migrating across the Chesapeake Bay. The Kuskarawocks were most likely the Tuscarora . The Unami Lenape in the Delaware Valley were closely related to Munsee Lenape tribes along the Hudson River . They had a settled hunting and agricultural society, and they rapidly became middlemen in an increasingly frantic fur trade with their ancient enemy, the Minqua or Susquehannock . With the loss of their lands on the Delaware River and the destruction of the Minqua by the Iroquois of the Five Nations in the 1670s, the remnants of the Lenape who wished to remain identified as such left the region and moved over the Allegheny Mountains by the mid-18th century. Generally, those who did not relocate out of the state of Delaware were baptized, became Christian and were grouped together with other persons of color in official records and in the minds of their non-Native American neighbors. [ citation needed ]",
+    "wiki_Colonial_Delaware": "The Dutch were the first Europeans to settle in present-day Delaware in the middle region by establishing a trading post at Zwaanendael , near the site of Lewes in 1631. Within a year, all the settlers were killed in a dispute with Native American tribes living in the area. In 1638, New Sweden , a Swedish trading post and colony, was established at Fort Christina (now in Wilmington ) by Peter Minuit at the head of a group of Swedes, Finns and Dutch. The colony of New Sweden lasted 17 years. In 1651, the Dutch, reinvigorated by the leadership of Peter Stuyvesant , established a fort at present-day New Castle and, in 1655, they conquered the New Sweden colony, annexing it into the Dutch New Netherland . Only nine years later, in 1664, the Dutch were conquered by a fleet of English ships by Sir Robert Carr under the direction of James, the Duke of York . Fighting off a prior claim by Cecil Calvert, 2nd Baron Baltimore , Proprietor of Maryland , the Duke passed his somewhat dubious ownership on to William Penn in 1682. Penn strongly desired access to the sea for his Pennsylvania province and leased what then came to be known as the \"Lower Counties on the Delaware\" from the Duke. Penn established representative government and briefly combined his two possessions under one General Assembly in 1682. However, by 1704 the province of Pennsylvania had grown so large their representatives wanted to make decisions without the assent of the Lower Counties, and the two groups of representatives began meeting on their own, one at Philadelphia , and the other at New Castle. Penn and his heirs remained proprietors of both and always appointed the same person Governor for their province of Pennsylvania and their territory of the Lower Counties. The fact that Delaware and Pennsylvania shared the same governor was not unique; from 1703 to 1738, New York and New Jersey shared a governor. Massachusetts and New Hampshire also shared a governor for some time. Dependent in early years on indentured labor, Delaware imported more slaves as the number of English immigrants decreased with better economic conditions in England. The colony became a slave society and cultivated tobacco as a cash crop, although English immigrants continued to arrive.",
+    "wiki_American_Revolution": "Like the other middle colonies, the Lower Counties on the Delaware initially showed little enthusiasm for a break with Britain . The citizenry had a good relationship with the Proprietary government, and generally were allowed more independence of action in their Colonial Assembly than in other colonies. Merchants at the port of Wilmington had trading ties with the British. New Castle lawyer Thomas McKean denounced the Stamp Act in the strongest terms, and Kent County native John Dickinson became the \"Penman of the Revolution\". Anticipating the Declaration of Independence, Patriot leaders Thomas McKean and Caesar Rodney convinced the Colonial Assembly to declare itself separated from British and Pennsylvania rule on June 15, 1776. The person best representing Delaware's majority, George Read , could not bring himself to vote for a Declaration of Independence. Only the dramatic overnight ride of Caesar Rodney gave the delegation the votes needed to cast Delaware's vote for independence. Initially led by John Haslet , Delaware provided one of the premier regiments in the Continental Army , known as the \"Delaware Blues\" and nicknamed the \" Blue Hen's Chicks \". In August 1777 General Sir William Howe led a British army through Delaware on his way to a victory at the Battle of Brandywine and capture of the city of Philadelphia. The only real engagement on Delaware soil was the Battle of Cooch's Bridge , fought on September 3, 1777, at Cooch's Bridge in New Castle County, although there was a minor Loyalist rebellion in 1778. Following the Battle of Brandywine, Wilmington was occupied by the British, and State President John McKinly was taken prisoner. The British remained in control of the Delaware River for much of the rest of the war, disrupting commerce and providing encouragement to an active Loyalist portion of the population, particularly in Sussex County. Because the British promised slaves of rebels freedom for fighting with them, escaped slaves flocked north to join their lines. Following the American Revolution , statesmen from Delaware were among the leading proponents of a strong central United States with equal representation for each state.",
+    "wiki_Slavery_and_race": "Many colonial settlers came to Delaware from Maryland and Virginia , where the population had been increasing rapidly. The economies of these colonies were chiefly based on labor-intensive tobacco and increasingly dependent on African slaves because of a decline in working class immigrants from England. Most of the English colonists had arrived as indentured servants (contracted for a fixed period to pay for their passage), and in the early years the line between servant and slave was fluid. [ citation needed ] Most of the free African-American families in Delaware before the Revolution had migrated from Maryland to find more affordable land. They were descendants chiefly of relationships or marriages between white servant women and enslaved, servant or free African or African-American men. Under slavery law, children took the social status of their mothers, so children born to white women were free, regardless of their paternity, just as children born to enslaved women were born into slavery. As the flow of indentured laborers to the colony decreased with improving economic conditions in England, more slaves were imported for labor and the caste lines hardened. By the end of the colonial period, the number of enslaved people in Delaware began to decline. Shifts in the agriculture economy from tobacco to mixed farming resulted in less need for slaves' labor. In addition local Methodists and Quakers encouraged slaveholders to free their slaves following the American Revolution, and many did so in a surge of individual manumissions for idealistic reasons. By 1810, three-quarters of all blacks in Delaware were free. When John Dickinson freed his slaves in 1777, he was Delaware's largest slave owner with 37 slaves. In 1840, Delaware's population was 78,085 of whom 2,605 were slaves. By 1860, the largest slaveholder owned 16 slaves. Although attempts to abolish slavery failed by narrow margins in the legislature, in practical terms the state had mostly ended the practice. By the 1860 census on the verge of the Civil War , 91.7% of the black population were free; 1,798 were slaves, as compared to 19,829 \"free colored persons\". An independent black denomination was chartered in 1813 by freed slave Peter Spencer as the \" Union Church of Africans \". This followed the 1793 establishment in Philadelphia of the African Methodist Episcopal Church by Richard Allen , which had ties to the Methodist Episcopal Church until 1816. Spencer built a church in Wilmington for the new denomination. This was renamed as the African Union First Colored Methodist Protestant Church and Connection , more commonly known as the A.U.M.P. Church . In 1814, Spencer called for the first annual gathering, known as the Big August Quarterly , which continues to draw members of this denomination and their descendants together in a religious and cultural festival. Delaware voted against secession on January 3, 1861, and so remained in the Union. While most Delaware citizens who fought in the war served in the regiments of the state, some served in companies on the Confederate side in Maryland and Virginia Regiments. Delaware is notable for being the only slave state from which no Confederate regiments or militia groups were assembled. [ citation needed ] Delaware essentially freed the few slaves who were still in bondage shortly after the Civil War [ further explanation needed ] but rejected the 13th , 14th , and 15th Amendments to the Constitution; the 13th Amendment was rejected on February 8, 1865, the 14th Amendment was rejected on February 8, 1867, and the 15th Amendment was rejected on March 18, 1869. Delaware officially ratified the 13th, 14th, and 15th amendments on February 12, 1901, decades after they had already come into force.",
+    "wiki_Reconstruction_and_industrialization": "During the Reconstruction Era that followed the Civil War , Democratic Redeemer governments led by the South's Bourbon aristocracy continued to dominate the region and imposed explicitly white supremacist regimes in the former slave states. The Delaware legislature declared Black people to be second-class citizens in 1866, and restricted their voting rights despite the 15th Amendment, ensuring continued Democratic success in the state throughout most of the 19th century. Fearful that the 1875 Civil Rights Act passed by Congress might establish racial equality, Delaware legislators passed Jim Crow laws that mandated segregation in public facilities. The state's educational system was segregated by operation of law. Delaware's segregation was written into the state constitution, which, while providing at Article X, Section 2, that \"no distinction shall be made on account of race or color\", nonetheless required that \"separate schools for white and colored children shall be maintained.\" Beginning in the late 19th century, the Wilmington area grew into a manufacturing center. Investment in manufacturing in the city grew from $5.5 million in 1860 to $44 million in 1900. The most notable manufacturer in the state was the chemical company DuPont , which to this day is heavily credited with making the state what it is today in many ways. Because of Wilmington's growth, local politicians from the city and New Castle County pressured the state government to adopt a new constitution providing the north with more representation. However, the subsequent 1897 constitution did not proportionally represent the north and continued to give the southern counties disproportionate influence. As manufacturing expanded, businesses became major players in state affairs and funders of politicians through families such as the Du Ponts. Republican John Addicks attempted to buy a US Senate seat multiple times in a rivalry with the Du Ponts until the passage of the 17th Amendment . The allegiance of industries with the Republican party allowed them to gain control of the state's governorship throughout most of the 20th century. The GOP ensured black people could vote because of their general support for Republicans and thus undid restrictions on Black suffrage. Delaware benefited greatly from World War I because of the state's large gunpowder industry. DuPont, the most dominant business in the state by WWI, produced an estimated 40% of all gunpowder used by the Allies during the war. It produced nylon in the state after the war and began investments into General Motors . Additionally, the company invested heavily in the expansion of public schools in the state and colleges such as the University of Delaware in the 1910s and 1920s. This included primary and secondary schools for Black people and women. Delaware suffered less during the Great Depression than other states, but the depression spurred further migration from the rural south to urban areas.",
+    "wiki_World_War_II_to_present": "Like in World War I, the state enjoyed a big stimulus to its gunpowder and shipyard industries in World War II. New job opportunities during and after the war in the Wilmington area coaxed Black people from the southern counties to move to the city. The proportion of blacks constituting the city's population rose from 15% in 1950 to over 50% by 1980. The surge of Black migrants to the north sparked white flight , in which middle class whites moved from the city to suburban areas, leading to de facto segregation of Northern Delaware's society. In the 1940s and 1950s, Delaware attempted to integrate its schools, although the last segregated school in the state did not close until 1970. The University of Delaware admitted its first black student in 1948, and local courts ruled that primary schools had to be integrated. Delaware's integration efforts partially inspired the US Supreme Court's decision in Brown v. Board of Education , which found racial segregation in United States public schools to be unconstitutional. The result of the Brown ruling was that Delaware became fully integrated, albeit with time and much effort. In October 1954, the city of Milford became the scene of one of the country's first pro-segregation boycotts after eleven Black students were enrolled in the previously all-white Milford High School . Mass protests continued in Milford; the school board eventually ceded to the protestors, expelling the Black students. The ensuing unrest, which included cross burnings , rallies, and pro-segregation demonstrations, contributed to desegregation in most of Southern Delaware being delayed for another ten years. Sussex County did not start closing or integrating its segregated schools until 1965, 11 years after the Brown ruling. Throughout the state, integration only encouraged more white flight, and poor economic conditions for the black population led to some violence during the 1960s. Riots broke out in Wilmington in 1967 and again in 1968 in response to the assassination of Martin Luther King Jr , after which the National Guard occupied the city for nine months to prevent further violence. Since WWII, the state has been generally economically prosperous and enjoyed relatively high per capita income because of its location between major cities like Philadelphia, New York, and Washington, DC. Its population grew rapidly, particularly in the suburbs in the north where New Castle county became an extension of the Philadelphia metropolitan area . Americans, including migrants from Puerto Rico, and immigrants from Latin America flocked to the state. By 1990, only 50% of Delaware's population consisted of natives to the state.",
+    "wiki_Geography": "Delaware is 96 miles (154 km) long and ranges from 9 to 35 miles (14 to 56 km) across, with a land area of 1,982 square miles (5,130 km 2 ) and a total area of 2,489 square miles (6,450 km 2 ), making it the second-smallest state by either metric in the United States after Rhode Island . Delaware is bounded to the north by Pennsylvania ; to the east by the Delaware River , Delaware Bay , New Jersey , and the Atlantic Ocean; and to the west and south by Maryland . Small portions of Delaware are also situated on the eastern side of the Delaware River sharing land boundaries with New Jersey. The state of Delaware, together with the Eastern Shore counties of Maryland and two counties of Virginia , form the Delmarva Peninsula , which stretches down the Mid-Atlantic Coast. The definition of the northern boundary of the state is unusual. Most of the boundary between Delaware and Pennsylvania was originally defined by an arc extending 12 miles (19.3 km) from the cupola of the courthouse in the city of New Castle . This boundary is often referred to as the Twelve-Mile Circle . Although the Twelve-Mile Circle is often claimed to be the only territorial boundary in the U.S. that is a true arc , the Mexican boundary with Texas includes several arcs, and many cities in the South (such as Plains, Georgia ) also have circular boundaries. This border extends all the way east to the low-tide mark on the New Jersey shore, then continues south along the shoreline until it again reaches the 12-mile (19 km) arc in the south; then the boundary continues in a more conventional way in the middle of the main channel ( thalweg ) of the Delaware River. On the west, Delaware and Maryland are mostly separated by a line running from the midpoint of the Transpeninsular Line , going slightly west of due north up to its tangent point on the Twelve-Mile Circle . The border follows the Circle for a short distance and then continues in a straight line due north until reaching the southern border of Pennsylvania. The Wedge of land between the northwest part of the arc and the Maryland border was claimed by both Delaware and Pennsylvania until 1921, when Delaware's claim was confirmed. Delaware is on a level plain, with the lowest mean elevation of any state in the nation. Its highest elevation, located at Ebright Azimuth , near Concord High School , is less than 450 feet (140 m) above sea level. The northernmost part of the state is part of the Piedmont Plateau with hills and rolling surfaces. The Atlantic Seaboard fall line approximately follows the Robert Kirkwood Highway between Newark and Wilmington ; south of this road is the Atlantic Coastal Plain with flat, sandy, and, in some parts, swampy ground. A ridge about 75 to 80 feet (23 to 24 m) high extends along the western boundary of the state and separates the watersheds that feed Delaware River and Bay to the east and the Chesapeake Bay to the west. Since almost all of Delaware is a part of the Atlantic coastal plain , the effects of the ocean moderate its climate. The state lies in the humid subtropical climate (Köppen Cfa ) zone. Despite its small size (roughly 100 miles (160 km) from its northernmost to southernmost points), there is significant variation in mean temperature and amount of snowfall between Sussex County and New Castle County. Moderated by the Atlantic Ocean and Delaware Bay , the southern portion of the state has a milder climate and a longer growing season than the northern portion of the state. Summers are long, hot, and humid in Delaware, often with intense (but brief) late day thundershowers. Delaware averages 2,300 hrs of sunshine annually (higher than the USA average). Winters are modestly cool to cold in northern Delaware, and cool to mild in southern Delaware. The normal seasonal snowfall ranges from about 20.0 inches in Wilmington to only 10.0 inches in Lewes. In many winters no snow will fall in coastal Delaware. Northern Delaware falls into USDA Garden Zone 7a, while southern and coastal areas fall into USDA zone 7b and 8a. The milder climate in southern Delaware allows for subtropical flora such as the windmill palm , needle palm , and dwarf palmetto . Delaware's all-time record high of 110 °F (43 °C) was recorded at Millsboro on July 21, 1930. The all-time record low of −17 °F (−27 °C) was also recorded at Millsboro, on January 17, 1893. The hardiness zones are 7B and 8A at the Delaware Beaches . The transitional climate of Delaware supports a wide variety of vegetation. In the northern third of the state are found Northeastern coastal forests and mixed oak forests typical of the northeastern United States. In the southern two-thirds of the state are found Middle Atlantic coastal forests . Trap Pond State Park , along with areas in other parts of Sussex County, for example, support the northernmost stands of bald cypress trees in North America. Delaware provides government subsidy support for the clean-up of property \"lightly contaminated\" by hazardous waste , the proceeds for which come from a tax on wholesale petroleum sales. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Topography": "Delaware is on a level plain, with the lowest mean elevation of any state in the nation. Its highest elevation, located at Ebright Azimuth , near Concord High School , is less than 450 feet (140 m) above sea level. The northernmost part of the state is part of the Piedmont Plateau with hills and rolling surfaces. The Atlantic Seaboard fall line approximately follows the Robert Kirkwood Highway between Newark and Wilmington ; south of this road is the Atlantic Coastal Plain with flat, sandy, and, in some parts, swampy ground. A ridge about 75 to 80 feet (23 to 24 m) high extends along the western boundary of the state and separates the watersheds that feed Delaware River and Bay to the east and the Chesapeake Bay to the west.",
+    "wiki_Climate": "Since almost all of Delaware is a part of the Atlantic coastal plain , the effects of the ocean moderate its climate. The state lies in the humid subtropical climate (Köppen Cfa ) zone. Despite its small size (roughly 100 miles (160 km) from its northernmost to southernmost points), there is significant variation in mean temperature and amount of snowfall between Sussex County and New Castle County. Moderated by the Atlantic Ocean and Delaware Bay , the southern portion of the state has a milder climate and a longer growing season than the northern portion of the state. Summers are long, hot, and humid in Delaware, often with intense (but brief) late day thundershowers. Delaware averages 2,300 hrs of sunshine annually (higher than the USA average). Winters are modestly cool to cold in northern Delaware, and cool to mild in southern Delaware. The normal seasonal snowfall ranges from about 20.0 inches in Wilmington to only 10.0 inches in Lewes. In many winters no snow will fall in coastal Delaware. Northern Delaware falls into USDA Garden Zone 7a, while southern and coastal areas fall into USDA zone 7b and 8a. The milder climate in southern Delaware allows for subtropical flora such as the windmill palm , needle palm , and dwarf palmetto . Delaware's all-time record high of 110 °F (43 °C) was recorded at Millsboro on July 21, 1930. The all-time record low of −17 °F (−27 °C) was also recorded at Millsboro, on January 17, 1893. The hardiness zones are 7B and 8A at the Delaware Beaches .",
+    "wiki_Environment": "The transitional climate of Delaware supports a wide variety of vegetation. In the northern third of the state are found Northeastern coastal forests and mixed oak forests typical of the northeastern United States. In the southern two-thirds of the state are found Middle Atlantic coastal forests . Trap Pond State Park , along with areas in other parts of Sussex County, for example, support the northernmost stands of bald cypress trees in North America.",
+    "wiki_Environmental_management": "Delaware provides government subsidy support for the clean-up of property \"lightly contaminated\" by hazardous waste , the proceeds for which come from a tax on wholesale petroleum sales.",
+    "wiki_Municipalities": "Wilmington is the state's most populous city (70,635) and its economic hub. It is located within commuting distance of both Philadelphia and Baltimore. Dover is the state capital and the second most populous city (38,079). The table below lists the ten largest municipalities in the state based on the 2020 United States census .",
+    "wiki_Unincorporated_places": "The table below lists the ten largest municipalities in the state based on the 2020 United States census .",
+    "wiki_Demographics": "The United States Census Bureau determined that the population of Delaware was 989,948 on April 1, 2020, an increase from the 2010 census figure of 897,934. Delaware's history as a border state has led it to exhibit characteristics of both the Northern and the Southern regions of the United States. Generally, the rural Southern (or \"Slower Lower\") regions of Delaware below the Chesapeake and Delaware Canal embody a Southern culture , while densely populated Northern Delaware above the canal—particularly Wilmington, a part of the Philadelphia metropolitan area —has more in common with that of the Northeast and the North . The U.S. Census Bureau designates Delaware as one of the South Atlantic States , but it is commonly associated with the Mid-Atlantic States or northeastern United States by other federal agencies, the media, and some residents. Delaware is the sixth most densely populated state, with a population density of 442.6 people per square mile, 356.4 per square mile more than the national average, and ranking 45th in population. Delaware is one of five U.S. states ( Maine , Vermont , West Virginia , Wyoming ) that do not have a single city with a population over 100,000 as of the 2010 census. The center of population of Delaware is in New Castle County, in the town of Townsend . According to HUD 's 2022 Annual Homeless Assessment Report , there were an estimated 2,369 homeless people in Delaware. According to the 2010 United States census, the racial composition of the state was 68.9% White American (65.3% Non-Hispanic White , 3.6% White Hispanic), 21.4% Black or African American, 0.5% American Indian and Alaska Native , 3.2% Asian American, 0.0% Native Hawaiian and other Pacific Islander , 3.4% some other race, and 2.7% of multiracial origin . People of Hispanic or Latino origin, of any race, made up 8.2% of the population. The 2022 American Community Survey estimated the state had a racial and ethnic makeup of 60.6% non-Hispanic whites, 23.6% Black or African American, 0.7% American Indian or Alaska Native, 4.2% Asian, 0.1% Pacific Islander, 2.9% multiracial, and 10.1% Hispanic or Latin American of any race. In the Native American community, the state has a Native American group, called in their own language Lenape , which was influential in the colonial period of the United States and is today headquartered in Cheswold, Kent County, Delaware. A band of the Nanticoke tribe of American Indians today resides in Sussex County and is headquartered in Millsboro, Sussex County, Delaware. Delaware's population mainly consisted of people from the British Isles, African slaves, Germans and a few remaining Native Americans during the colonial era. Irish, Germans, Italians, Poles, and Russian Jewish immigrants were attracted by the industries in the Wilmington area. In the late 20th century a Puerto Rican community formed in Wilmington. Guatemalan people migrated to Sussex county to work in Delaware's poultry industry. A group of Native Americans in Delaware of mixed ethnicity, the Moors , live in Cheswold. The descendants of the Nanticoke people live around Millsboro. There is also a small numbers of Asians in New Castle county who work as scientific and engineering professionals. The top countries of origin for Delaware's immigrants in 2018 were Mexico , India , Guatemala , China , and Jamaica . Note: Births in table do not add up because Hispanics are counted both by their ethnicity and by their race, giving a higher overall number. In 2000, 91% of Delaware residents of age 5 and older spoke only English at home; 5% spoke Spanish. French was the third most spoken language, used by 0.7% of the population, followed by Chinese (0.5%) and German (0.5%). Legislation has been proposed in both the House and the Senate in Delaware to designate English as the official language . Neither bill was passed in the legislature. A 2012 Gallup poll found that Delaware's proportion of lesbian, gay, bisexual, and transgender adults stood at 3.4% of the population. This constitutes a total LGBT adult population estimate of 23,698 people. The number of same-sex couple households in 2010 stood at 2,646. This grew by 41.65% from a decade earlier. [ not specific enough to verify ] On July 1, 2013, same-sex marriage was legalized, and all civil unions were converted into marriages. [ better source needed ] The predominant religion practiced in Delaware is Christianity . A 2014 estimate by the Pew Research Center found that members of Protestant churches accounted for almost half of the population, though the Roman Catholic Church was the largest single denomination in the state. By 2020, the Public Religion Research Institute determined 61% of the population was Christian. In 2022, the Public Religion Research Institute's survey revealed 60% were Christian, followed by Jews (3%), Hindus (1%), and New Agers (1%). The Association of Religion Data Archives reported in 2010 that the three largest Christian denominational groups in Delaware by number of adherents are the Catholic Church at 182,532 adherents, the United Methodist Church with 53,656 members reported, and non-denominational evangelical Protestants , who numbered 22,973. In 2020, the Association of Religion Data Archives reported the largest Christian denominations were the Catholic Church with 197,094; non-denominational Protestants with 49,392, and United Methodists with 39,959. The Roman Catholic Diocese of Wilmington and the Episcopal Diocese of Delaware oversee the parishes within their denominations. The A.U.M.P. Church , the oldest African-American denomination in the nation, was founded in Wilmington. It still has a substantial presence in the state. Reflecting new immigrant populations, an Islamic mosque has been built in the Ogletown area, and a Hindu temple in Hockessin . Delaware is home to an Amish community which resides west of Dover in Kent County , consisting of nine church districts and about 1,650 people. The Amish first settled in Kent County in 1915. In recent years, increasing development has led to the decline in the number of Amish living in the community. A 2012 survey of religious attitudes in the United States found that 34% of Delaware residents considered themselves \"moderately religious\", 33% \"very religious\", and 33% as \"non-religious\". At the 2014 Pew Research survey, 23% of the population were irreligious; the 2020 Public Religion Research Institute's survey determined 31% of the population were irreligious. In 2022, the same study showed 33% of the population as irreligious. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Race_and_ethnicity": "According to the 2010 United States census, the racial composition of the state was 68.9% White American (65.3% Non-Hispanic White , 3.6% White Hispanic), 21.4% Black or African American, 0.5% American Indian and Alaska Native , 3.2% Asian American, 0.0% Native Hawaiian and other Pacific Islander , 3.4% some other race, and 2.7% of multiracial origin . People of Hispanic or Latino origin, of any race, made up 8.2% of the population. The 2022 American Community Survey estimated the state had a racial and ethnic makeup of 60.6% non-Hispanic whites, 23.6% Black or African American, 0.7% American Indian or Alaska Native, 4.2% Asian, 0.1% Pacific Islander, 2.9% multiracial, and 10.1% Hispanic or Latin American of any race. In the Native American community, the state has a Native American group, called in their own language Lenape , which was influential in the colonial period of the United States and is today headquartered in Cheswold, Kent County, Delaware. A band of the Nanticoke tribe of American Indians today resides in Sussex County and is headquartered in Millsboro, Sussex County, Delaware. Delaware's population mainly consisted of people from the British Isles, African slaves, Germans and a few remaining Native Americans during the colonial era. Irish, Germans, Italians, Poles, and Russian Jewish immigrants were attracted by the industries in the Wilmington area. In the late 20th century a Puerto Rican community formed in Wilmington. Guatemalan people migrated to Sussex county to work in Delaware's poultry industry. A group of Native Americans in Delaware of mixed ethnicity, the Moors , live in Cheswold. The descendants of the Nanticoke people live around Millsboro. There is also a small numbers of Asians in New Castle county who work as scientific and engineering professionals. The top countries of origin for Delaware's immigrants in 2018 were Mexico , India , Guatemala , China , and Jamaica .",
+    "wiki_Birth_data": "Note: Births in table do not add up because Hispanics are counted both by their ethnicity and by their race, giving a higher overall number.",
+    "wiki_Languages": "In 2000, 91% of Delaware residents of age 5 and older spoke only English at home; 5% spoke Spanish. French was the third most spoken language, used by 0.7% of the population, followed by Chinese (0.5%) and German (0.5%). Legislation has been proposed in both the House and the Senate in Delaware to designate English as the official language . Neither bill was passed in the legislature.",
+    "wiki_Sexual_orientation": "A 2012 Gallup poll found that Delaware's proportion of lesbian, gay, bisexual, and transgender adults stood at 3.4% of the population. This constitutes a total LGBT adult population estimate of 23,698 people. The number of same-sex couple households in 2010 stood at 2,646. This grew by 41.65% from a decade earlier. [ not specific enough to verify ] On July 1, 2013, same-sex marriage was legalized, and all civil unions were converted into marriages. [ better source needed ]",
+    "wiki_Religion": "The predominant religion practiced in Delaware is Christianity . A 2014 estimate by the Pew Research Center found that members of Protestant churches accounted for almost half of the population, though the Roman Catholic Church was the largest single denomination in the state. By 2020, the Public Religion Research Institute determined 61% of the population was Christian. In 2022, the Public Religion Research Institute's survey revealed 60% were Christian, followed by Jews (3%), Hindus (1%), and New Agers (1%). The Association of Religion Data Archives reported in 2010 that the three largest Christian denominational groups in Delaware by number of adherents are the Catholic Church at 182,532 adherents, the United Methodist Church with 53,656 members reported, and non-denominational evangelical Protestants , who numbered 22,973. In 2020, the Association of Religion Data Archives reported the largest Christian denominations were the Catholic Church with 197,094; non-denominational Protestants with 49,392, and United Methodists with 39,959. The Roman Catholic Diocese of Wilmington and the Episcopal Diocese of Delaware oversee the parishes within their denominations. The A.U.M.P. Church , the oldest African-American denomination in the nation, was founded in Wilmington. It still has a substantial presence in the state. Reflecting new immigrant populations, an Islamic mosque has been built in the Ogletown area, and a Hindu temple in Hockessin . Delaware is home to an Amish community which resides west of Dover in Kent County , consisting of nine church districts and about 1,650 people. The Amish first settled in Kent County in 1915. In recent years, increasing development has led to the decline in the number of Amish living in the community. A 2012 survey of religious attitudes in the United States found that 34% of Delaware residents considered themselves \"moderately religious\", 33% \"very religious\", and 33% as \"non-religious\". At the 2014 Pew Research survey, 23% of the population were irreligious; the 2020 Public Religion Research Institute's survey determined 31% of the population were irreligious. In 2022, the same study showed 33% of the population as irreligious. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Economy": "According to a 2020 study by Kiplinger, Delaware had the 17th most millionaires per capita in the United States; altogether, there were 25,937 such individuals. The median income for Delaware households as of 2020 was $64,805. Delaware's agricultural output consists of poultry, nursery stock, soybeans , dairy products and corn . As of May 2025 [update] , the state's unemployment rate was 4.0%. The state's largest employers are: [ citation needed ] In 2025, 98.7% of the businesses in the state were small businesses and employed 50.6% of the state's work force. Since the mid-2000s, Delaware has seen the departure of the state's automotive manufacturing industry ( General Motors Wilmington Assembly and Chrysler Newark Assembly ), the corporate buyout of a major bank holding company ( MBNA ), the departure of the state's steel industry ( Evraz Claymont Steel ), the bankruptcy of a fiber mill ( National Vulcanized Fiber ), and the diminishing presence of AstraZeneca in Wilmington. In late 2015, DuPont announced that 1,700 employees, nearly a third of its footprint in Delaware, would be laid off in early 2016. The merger of E.I. du Pont de Nemours & Co. and Dow Chemical Company into DowDuPont took place on September 1, 2017. More than half of all U.S. publicly traded companies, and 63% of the Fortune 500 , are incorporated in Delaware. The state's attractiveness as a corporate haven is largely because of its business-friendly corporation law . Franchise taxes on Delaware corporations supply about a fifth of the state's revenue. Although \"USA (Delaware)\" ranked as the world's most opaque jurisdiction on the Tax Justice Network 's 2009 Financial Secrecy Index, the same group's 2011 Index ranks the U.S. fifth and does not specify Delaware. In Delaware, there are more than a million registered corporations. Delaware ranked 4th for most businesses formed in 2025, with 327,103. Title 4, chapter 7 of the Delaware Code stipulates that alcoholic liquor be sold only in specifically licensed establishments, and only between 9:00 a.m. and 1:00 a.m. Until 2003, Delaware was among the several states enforcing blue laws and banned the sale of liquor on Sunday.",
+    "wiki_Affluence": "According to a 2020 study by Kiplinger, Delaware had the 17th most millionaires per capita in the United States; altogether, there were 25,937 such individuals. The median income for Delaware households as of 2020 was $64,805.",
+    "wiki_Agriculture": "Delaware's agricultural output consists of poultry, nursery stock, soybeans , dairy products and corn .",
+    "wiki_Industries": "As of May 2025 [update] , the state's unemployment rate was 4.0%. The state's largest employers are: [ citation needed ] In 2025, 98.7% of the businesses in the state were small businesses and employed 50.6% of the state's work force. Since the mid-2000s, Delaware has seen the departure of the state's automotive manufacturing industry ( General Motors Wilmington Assembly and Chrysler Newark Assembly ), the corporate buyout of a major bank holding company ( MBNA ), the departure of the state's steel industry ( Evraz Claymont Steel ), the bankruptcy of a fiber mill ( National Vulcanized Fiber ), and the diminishing presence of AstraZeneca in Wilmington. In late 2015, DuPont announced that 1,700 employees, nearly a third of its footprint in Delaware, would be laid off in early 2016. The merger of E.I. du Pont de Nemours & Co. and Dow Chemical Company into DowDuPont took place on September 1, 2017.",
+    "wiki_Industrial_decline": "Since the mid-2000s, Delaware has seen the departure of the state's automotive manufacturing industry ( General Motors Wilmington Assembly and Chrysler Newark Assembly ), the corporate buyout of a major bank holding company ( MBNA ), the departure of the state's steel industry ( Evraz Claymont Steel ), the bankruptcy of a fiber mill ( National Vulcanized Fiber ), and the diminishing presence of AstraZeneca in Wilmington. In late 2015, DuPont announced that 1,700 employees, nearly a third of its footprint in Delaware, would be laid off in early 2016. The merger of E.I. du Pont de Nemours & Co. and Dow Chemical Company into DowDuPont took place on September 1, 2017.",
+    "wiki_Incorporation_in_Delaware": "More than half of all U.S. publicly traded companies, and 63% of the Fortune 500 , are incorporated in Delaware. The state's attractiveness as a corporate haven is largely because of its business-friendly corporation law . Franchise taxes on Delaware corporations supply about a fifth of the state's revenue. Although \"USA (Delaware)\" ranked as the world's most opaque jurisdiction on the Tax Justice Network 's 2009 Financial Secrecy Index, the same group's 2011 Index ranks the U.S. fifth and does not specify Delaware. In Delaware, there are more than a million registered corporations. Delaware ranked 4th for most businesses formed in 2025, with 327,103.",
+    "wiki_Food_and_drink": "Title 4, chapter 7 of the Delaware Code stipulates that alcoholic liquor be sold only in specifically licensed establishments, and only between 9:00 a.m. and 1:00 a.m. Until 2003, Delaware was among the several states enforcing blue laws and banned the sale of liquor on Sunday.",
+    "wiki_Newspapers": "Two daily newspapers are based in Delaware, the Delaware State News , based in Dover and covering the two southern counties, and The News Journal covering Wilmington and northern Delaware. The state is also served by several weekly, monthly and online publications .",
+    "wiki_Television": "No standalone television stations are based solely in Delaware. The northern part of the state is served by network stations in Philadelphia and the southern part by network stations in Salisbury, Maryland . Philadelphia's ABC affiliate, WPVI-TV , maintains a news bureau in downtown Wilmington. Salisbury's CBS affiliate, WBOC-TV , maintains bureaus in Dover and Milton. Three Philadelphia-market stations— PBS member WHYY-TV , Ion affiliate WPPX , and MeTV affiliate WDPN-TV —all have Wilmington as their city of license , but maintain transmitters at the market antenna farm in Roxborough, Philadelphia and do not produce any Delaware-centric programming.",
+    "wiki_Radio": "There are a numerous radio stations licensed in Delaware. WDDE 91.1 FM, WDEL 1150AM , WHGE -LP 95.3 FM, WILM 1450 AM, WVCW 99.5 , WMPH 91.7 FM, WSTW 93.7 FM, WTMC 1380 AM and WWTX 1290AM are licensed from Wilmington. WRDX 92.9 FM is licensed from Smyrna. WDOV 1410AM, WDSD 94.7 FM and WRTX 91.7 FM are licensed from Dover.",
+    "wiki_Tourism": "Delaware is home to First State National Historical Park , a National Park Service unit composed of historic sites across the state including the New Castle Court House, Green, and Sheriff's House , Dover Green , Beaver Valley, Fort Christina , Old Swedes' Church , John Dickinson Plantation , and the Ryves Holt House . Delaware has several museums , wildlife refuges , parks , houses , lighthouses , and other historic places . Rehoboth Beach , together with the towns of Lewes , Dewey Beach , Bethany Beach , South Bethany , and Fenwick Island , comprise Delaware's beach resorts . Rehoboth Beach often bills itself as \"The Nation's Summer Capital\" because it is a frequent summer vacation destination for Washington, D.C., residents as well as visitors from Maryland, Virginia, and in lesser numbers, Pennsylvania. Vacationers are drawn for many reasons, including the town's charm, artistic appeal, nightlife, and tax-free shopping. According to SeaGrant Delaware, the Delaware beaches generate $6.9 billion annually and over $711 million in tax revenue. Delaware is home to several festivals, fairs, and events. Some of the more notable festivals are the Riverfest held in Seaford , the World Championship Punkin Chunkin formerly held at various locations throughout the state since 1986, the Rehoboth Beach Chocolate Festival, the Bethany Beach Jazz Funeral to mark the end of summer, the Apple Scrapple Festival held in Bridgeville , the Clifford Brown Jazz Festival in Wilmington, the Rehoboth Beach Jazz Festival, the Sea Witch Halloween Festival and Parade in Rehoboth Beach, the Rehoboth Beach Independent Film Festival, the Nanticoke Indian Pow Wow in Oak Orchard , Firefly Music Festival , and the Return Day Parade held after every election in Georgetown . In 2015, tourism in Delaware generated $3.1 billion, which makes up five percent of the state's GDP. Delaware saw 8.5 million visitors in 2015, with the tourism industry employing 41,730 people, making it the 4th largest private employer in the state. Major origin markets for Delaware tourists include Philadelphia, Baltimore , New York City, Washington, D.C., and Harrisburg , with 97% of tourists arriving to the state by car and 75% of tourists coming from a distance of 200 miles (320 km) or less. Delaware is also home to two large sporting venues. Dover Motor Speedway is a race track in Dover, and Frawley Stadium in Wilmington is the home of the Wilmington Blue Rocks , a Minor League Baseball team that is currently affiliated with the Washington Nationals.",
+    "wiki_Education": "In the early 1920s, Pierre S. du Pont served as president of the state board of education. At the time, state law prohibited money raised from white taxpayers from being used to support the state's schools for black children. Appalled by the condition of the black schools, du Pont donated four million dollars to construct 86 new school buildings. Delaware was the origin of Belton v. Gebhart (1952), one of the four cases which were combined into Brown v. Board of Education , the Supreme Court of the United States decision that led to the end of officially segregated public schools. Significantly, Belton was the only case in which the state court found for the plaintiffs, thereby ruling that segregation is unconstitutional. Unlike many states, Delaware's educational system is centralized in a state Superintendent of Education, with local school boards retaining control over taxation and some curriculum decisions. This centralized system, combined with the small size of the state, likely contributed to Delaware becoming the first state, after completion of a three-year, $30 million program ending in 1999, to wire every K-12 classroom in the state to the Internet. As of 2011 [update] , the Delaware Department of Education had authorized the founding of 25 charter schools in the state, one of them being all-girls . In 2010, Delaware had the largest percentage of students attending private schools of places within the United States. All teachers in the State's public school districts are unionized. As of January 2012 [update] , none of the State's charter schools are members of a teachers union . One of the State's teachers' unions is Delaware State Education Association (DSEA).",
+    "wiki_Transportation": "The transportation system in Delaware is under the governance and supervision of the Delaware Department of Transportation (DelDOT). Funding for DelDOT projects is drawn, in part, from the Delaware Transportation Trust Fund, established in 1987 to help stabilize transportation funding; the availability of the Trust led to a gradual separation of DelDOT operations from other Delaware state operations. DelDOT manages programs such as a Delaware Adopt-a-Highway program, major road route snow removal, traffic control infrastructure (signs and signals), toll road management, Delaware Division of Motor Vehicles , the Delaware Transit Corporation (branded as \" DART First State \", the state government public transportation organization), and others. In 2009, DelDOT maintained 13,507 lane-miles, totaling 89 percent of the state's public roadway system, the rest being under the supervision of individual municipalities. This far exceeds the national average (20 percent) for state department of transportation maintenance responsibility. One major branch of the U.S. Interstate Highway System , Interstate 95 (I-95), crosses Delaware southwest-to-northeast across New Castle County. Two Auxiliary Interstate Highway routes are also located in the state. Interstate 495 (I-495) is an eastern bypass of Wilmington. Interstate 295 (I-295) is a bypass of Philadelphia which begins south of Wilmington. In addition to Interstate highways, there are six U.S. highways that serve Delaware: U.S. 9 , U.S. 13 , U.S. 40 , U.S. 113 , U.S. 202 , and U.S. 301 . There are also several state highways that cross the state of Delaware; a few of them include DE 1 , DE 9 , and DE 404 . U.S. 13 and DE 1 are primary north–south highways connecting Wilmington and Pennsylvania with Maryland, with DE 1 serving as the main route between Wilmington and the Delaware beaches . DE 9 is a north–south highway connecting Dover and Wilmington via a scenic route along the Delaware Bay . U.S. 40 is a primary east–west route, connecting Maryland with New Jersey. DE 404 is another primary east–west highway connecting the Chesapeake Bay Bridge in Maryland with the Delaware beaches. The state also operates three toll highways, the Delaware Turnpike, which is I-95, between Maryland and New Castle; the Korean War Veterans Memorial Highway, which is DE 1, between Wilmington and Dover; and the U.S. 301 toll road between the Maryland border and DE 1 in New Castle County. A bicycle route, Delaware Bicycle Route 1 , spans the north–south length of the state from the Maryland border in Fenwick Island to the Pennsylvania border north of Montchanin . It is the first of several signed bike routes planned in Delaware. Delaware has about 875 bridges, 95 percent of which are under the supervision of DelDOT. About 30 percent of all Delaware bridges were built before 1950, and about 60 percent of the number are included in the National Bridge Inventory . [ citation needed ] Some bridges not under DelDOT supervision includes the four bridges on the Chesapeake and Delaware Canal, which are under the jurisdiction of the U.S. Army Corps of Engineers , and the Delaware Memorial Bridge , which is under the bi-state Delaware River and Bay Authority . It has been noted that the tar and chip composition of secondary roads in Sussex County makes them more prone to deterioration than are the asphalt roadways in almost the rest of the state. Among these roads, Sussex (county road) 236 is among the most problematic. Three ferries operate in the state of Delaware: Amtrak has two stations in Delaware along the Northeast Corridor ; the relatively quiet Newark Rail Station in Newark , and the busier Wilmington Station in Wilmington . The Northeast Corridor is also served by SEPTA 's Wilmington/Newark Line , part of SEPTA Regional Rail , which serves Claymont , Wilmington, Churchmans Crossing , and Newark. Two Class I railroads , Norfolk Southern and CSX , provide freight rail service in northern New Castle County. Norfolk Southern provides freight service along the Northeast Corridor and to industrial areas in Edgemoor , New Castle , and Delaware City . CSX's Philadelphia Subdivision passes through northern New Castle County parallel to the Amtrak Northeast Corridor. Multiple short-line railroads provide freight service in Delaware. The Delmarva Central Railroad operates the most trackage of the short-line railroads, running from an interchange with Norfolk Southern in Porter south through Dover , Harrington , and Seaford to Delmar , with another line running from Harrington to Frankford and branches from Ellendale to Milton and from Georgetown to Gravel Hill . The Delmarva Central Railroad connects with the Maryland and Delaware Railroad , which serves local customers in Sussex County. CSX connects with the freight/ heritage operation, the Wilmington and Western Railroad , based in Wilmington and the East Penn Railroad , which operates a line from Wilmington to Coatesville, Pennsylvania . The last north–south passenger trains through the main part of Delaware was the Pennsylvania Railroad 's local Wilmington-Delmar train in 1965. This was a successor to the Del-Mar-Va Express and Cavalier , which had run from Philadelphia through the state's interior, to the end of the Delmarva Peninsula until the mid-1950s. The DART First State public transportation system was named \"Most Outstanding Public Transportation System\" in 2003 by the American Public Transportation Association . Coverage of the system is broad within northern New Castle County with close association to major highways in Kent and Sussex counties. The system includes bus, subsidized passenger rail operated by Philadelphia transit agency SEPTA, and subsidized taxi and paratransit modes. The paratransit system, consisting of a statewide door-to-door bus service for the elderly and disabled, has been described by a Delaware state report as \"the most generous paratransit system in the United States\". As of 2012 [update] , fees for the paratransit service have not changed since 1988. As of 2023 [update] , Delaware is served exclusively by Avelo Airlines out of Wilmington Airport , launching five routes to Florida on February 1. This put an end to an eight-month period during which Delaware had no scheduled air service, one of several since 1991. Various airlines had served Wilmington Airport, the latest departure being Frontier Airlines in June 2022. Delaware is centrally situated in the Northeast megalopolis region of cities along I-95 . Therefore, Delaware commercial airline passengers most frequently use Philadelphia International Airport (PHL), Baltimore-Washington International Thurgood Marshall Airport (BWI) and Washington Dulles International Airport (IAD) for domestic and international transit. Residents of Sussex County will also use Wicomico Regional Airport (SBY), as it is located less than 10 miles (16 km) from the Delaware border. Atlantic City International Airport (ACY), Newark Liberty International Airport (EWR), and Ronald Reagan Washington National Airport (DCA) are also within a 100-mile (160 km) radius of New Castle County. Other general aviation airports in Delaware include Summit Airport near Middletown , Delaware Airpark near Cheswold , and Delaware Coastal Airport near Georgetown . Dover Air Force Base , one of the largest in the country, is home to the 436th Airlift Wing and the 512th Airlift Wing . In addition to its other responsibilities in the Air Mobility Command , it serves as the entry point and mortuary for U.S. military personnel (and some civilians) who die overseas.",
+    "wiki_Roads": "One major branch of the U.S. Interstate Highway System , Interstate 95 (I-95), crosses Delaware southwest-to-northeast across New Castle County. Two Auxiliary Interstate Highway routes are also located in the state. Interstate 495 (I-495) is an eastern bypass of Wilmington. Interstate 295 (I-295) is a bypass of Philadelphia which begins south of Wilmington. In addition to Interstate highways, there are six U.S. highways that serve Delaware: U.S. 9 , U.S. 13 , U.S. 40 , U.S. 113 , U.S. 202 , and U.S. 301 . There are also several state highways that cross the state of Delaware; a few of them include DE 1 , DE 9 , and DE 404 . U.S. 13 and DE 1 are primary north–south highways connecting Wilmington and Pennsylvania with Maryland, with DE 1 serving as the main route between Wilmington and the Delaware beaches . DE 9 is a north–south highway connecting Dover and Wilmington via a scenic route along the Delaware Bay . U.S. 40 is a primary east–west route, connecting Maryland with New Jersey. DE 404 is another primary east–west highway connecting the Chesapeake Bay Bridge in Maryland with the Delaware beaches. The state also operates three toll highways, the Delaware Turnpike, which is I-95, between Maryland and New Castle; the Korean War Veterans Memorial Highway, which is DE 1, between Wilmington and Dover; and the U.S. 301 toll road between the Maryland border and DE 1 in New Castle County. A bicycle route, Delaware Bicycle Route 1 , spans the north–south length of the state from the Maryland border in Fenwick Island to the Pennsylvania border north of Montchanin . It is the first of several signed bike routes planned in Delaware. Delaware has about 875 bridges, 95 percent of which are under the supervision of DelDOT. About 30 percent of all Delaware bridges were built before 1950, and about 60 percent of the number are included in the National Bridge Inventory . [ citation needed ] Some bridges not under DelDOT supervision includes the four bridges on the Chesapeake and Delaware Canal, which are under the jurisdiction of the U.S. Army Corps of Engineers , and the Delaware Memorial Bridge , which is under the bi-state Delaware River and Bay Authority . It has been noted that the tar and chip composition of secondary roads in Sussex County makes them more prone to deterioration than are the asphalt roadways in almost the rest of the state. Among these roads, Sussex (county road) 236 is among the most problematic.",
+    "wiki_Ferries": "Three ferries operate in the state of Delaware:",
+    "wiki_Rail_and_bus": "Amtrak has two stations in Delaware along the Northeast Corridor ; the relatively quiet Newark Rail Station in Newark , and the busier Wilmington Station in Wilmington . The Northeast Corridor is also served by SEPTA 's Wilmington/Newark Line , part of SEPTA Regional Rail , which serves Claymont , Wilmington, Churchmans Crossing , and Newark. Two Class I railroads , Norfolk Southern and CSX , provide freight rail service in northern New Castle County. Norfolk Southern provides freight service along the Northeast Corridor and to industrial areas in Edgemoor , New Castle , and Delaware City . CSX's Philadelphia Subdivision passes through northern New Castle County parallel to the Amtrak Northeast Corridor. Multiple short-line railroads provide freight service in Delaware. The Delmarva Central Railroad operates the most trackage of the short-line railroads, running from an interchange with Norfolk Southern in Porter south through Dover , Harrington , and Seaford to Delmar , with another line running from Harrington to Frankford and branches from Ellendale to Milton and from Georgetown to Gravel Hill . The Delmarva Central Railroad connects with the Maryland and Delaware Railroad , which serves local customers in Sussex County. CSX connects with the freight/ heritage operation, the Wilmington and Western Railroad , based in Wilmington and the East Penn Railroad , which operates a line from Wilmington to Coatesville, Pennsylvania . The last north–south passenger trains through the main part of Delaware was the Pennsylvania Railroad 's local Wilmington-Delmar train in 1965. This was a successor to the Del-Mar-Va Express and Cavalier , which had run from Philadelphia through the state's interior, to the end of the Delmarva Peninsula until the mid-1950s. The DART First State public transportation system was named \"Most Outstanding Public Transportation System\" in 2003 by the American Public Transportation Association . Coverage of the system is broad within northern New Castle County with close association to major highways in Kent and Sussex counties. The system includes bus, subsidized passenger rail operated by Philadelphia transit agency SEPTA, and subsidized taxi and paratransit modes. The paratransit system, consisting of a statewide door-to-door bus service for the elderly and disabled, has been described by a Delaware state report as \"the most generous paratransit system in the United States\". As of 2012 [update] , fees for the paratransit service have not changed since 1988.",
+    "wiki_Air": "As of 2023 [update] , Delaware is served exclusively by Avelo Airlines out of Wilmington Airport , launching five routes to Florida on February 1. This put an end to an eight-month period during which Delaware had no scheduled air service, one of several since 1991. Various airlines had served Wilmington Airport, the latest departure being Frontier Airlines in June 2022. Delaware is centrally situated in the Northeast megalopolis region of cities along I-95 . Therefore, Delaware commercial airline passengers most frequently use Philadelphia International Airport (PHL), Baltimore-Washington International Thurgood Marshall Airport (BWI) and Washington Dulles International Airport (IAD) for domestic and international transit. Residents of Sussex County will also use Wicomico Regional Airport (SBY), as it is located less than 10 miles (16 km) from the Delaware border. Atlantic City International Airport (ACY), Newark Liberty International Airport (EWR), and Ronald Reagan Washington National Airport (DCA) are also within a 100-mile (160 km) radius of New Castle County. Other general aviation airports in Delaware include Summit Airport near Middletown , Delaware Airpark near Cheswold , and Delaware Coastal Airport near Georgetown . Dover Air Force Base , one of the largest in the country, is home to the 436th Airlift Wing and the 512th Airlift Wing . In addition to its other responsibilities in the Air Mobility Command , it serves as the entry point and mortuary for U.S. military personnel (and some civilians) who die overseas.",
+    "wiki_Law_and_government": "Delaware's fourth and current constitution, adopted in 1897, provides for executive, judicial and legislative branches. The Delaware General Assembly consists of a House of Representatives with 41 members and a Senate with 21 members. It sits in Dover, the state capital. Representatives are elected to two-year terms, while senators are elected to four-year terms. The Senate confirms judicial and other nominees appointed by the governor. Delaware's U.S. Senators are Lisa Blunt Rochester (Democrat) and Chris Coons (Democrat). Delaware's single U.S. Representative is Sarah McBride (Democrat). The Delaware Constitution establishes a number of courts: Minor non-constitutional courts include the Justice of the Peace Courts and Aldermen's Courts. Significantly, Delaware has one of the few remaining Courts of Chancery in the nation, which has jurisdiction over equity cases, the vast majority of which are corporate disputes, many relating to mergers and acquisitions . The Court of Chancery and the Delaware Supreme Court have developed a worldwide reputation for rendering concise opinions concerning corporate law which generally (but not always) grant broad discretion to corporate boards of directors and officers. In addition, the Delaware General Corporation Law , which forms the basis of the Courts' opinions, is widely regarded as giving great flexibility to corporations to manage their affairs. For these reasons, Delaware is considered to have the most business-friendly legal system in the United States; therefore a great number of companies are incorporated in Delaware , including 60% of the companies listed on the New York Stock Exchange . Delaware was the last U.S. state to use judicial corporal punishment , in 1952. The executive branch is headed by the Governor of Delaware . The current governor is Matt Meyer (Democrat), who took office January 21, 2025. The lieutenant governor is Kyle Evans Gay . The governor presents a \" State of the State \" speech to a joint session of the Delaware legislature annually. The executive branch also consists of the Attorney General of Delaware currently held by Kathy Jennings , the State Treasurer currently held by Colleen Davis , the Auditor of Accounts currently held by Lydia York and the Insurance Commissioner currently held by Trinidad Navarro . Delaware is subdivided into three counties ; from north to south they are New Castle , Kent and Sussex . This is the fewest among all states. Each county elects its own legislative body (known in New Castle and Sussex counties as County Council , and in Kent County as Levy Court ), which deal primarily in zoning and development issues. Most functions which are handled on a county-by-county basis in other states—such as court and law enforcement—have been centralized in Delaware, leading to a significant concentration of power in the Delaware state government. The counties were historically divided into hundreds , which were used as tax reporting and voting districts until the 1960s, but now serve no administrative role, their only current official legal use being in real estate title descriptions. The Democratic Party holds a plurality of registrations in Delaware. Currently, Democrats hold all positions of authority in Delaware, as well as majorities in the state Senate and House. The Democrats have held the governorship since 1993, having won the last seven gubernatorial elections. Democrats presently hold all the nine statewide elected offices, while the Republicans last won any statewide offices in 2014, State Auditor and State Treasurer . During the First and Second Party Systems , Delaware was a stronghold for the Federalist and Whig Parties, respectively. After a relatively brief adherence to the Democratic Solid South following the US Civil War , Delaware became a Republican-leaning state from 1896 through 1948 , voting for losing Republicans Charles Evans Hughes in 1916 , Herbert Hoover in 1932 , and Thomas Dewey in 1948. During the second half of the 20th century, Delaware was a bellwether state, voting for the winner of every presidential election from 1952 through 1996 . Delaware's bellwether status came to an end when Delaware voted for Al Gore in 2000 by 13%. Subsequent elections have continued to demonstrate Delaware's current strong Democratic lean: John Kerry carried the First State by 8% in 2004 ; Barack Obama carried it by 25% and by 19% in his two elections of 2008 and 2012 ; and Hillary Clinton carried it by 11% as she lost the Electoral College in 2016 . In 2020, Delaware native (and Barack Obama's former vice president and running mate) Joe Biden headed the Democratic ticket; he carried his home state by just shy of 19% en route to a national 4.5% win. The dominant factor in Delaware's political shift has been the strong Democratic trend in heavily urbanized New Castle County , home to 55% of Delaware's population. New Castle County has not voted Republican in a presidential election since 1988 , and has given Democrats over 60% of its vote in every election from 2004 on. In 1992, 2000, 2004, and 2016, the Republican presidential candidate carried both Kent and Sussex but lost by double digits each time in New Castle County, which was a large enough margin to tip the state to the Democrats. New Castle County also elects a substantial majority of the state legislature; 27 of the 41 state house districts and 14 of the 21 state senate districts are based in New Castle County. In a 2020 study, Delaware was ranked as the 18th hardest state for citizens to vote in. Each of the 50 states of the United States has passed some form of freedom of information legislation, which provides a mechanism for the general public to request information of the government. In 2011 Delaware passed legislation placing a 15 business day time limit on addressing freedom-of-information requests, to either produce information or an explanation of why such information would take longer than this time to produce. A bill aimed at restricting Freedom of Information Act requests, Senate Bill 155, was discussed in committee. Tax is collected by the Delaware Division of Revenue . Delaware has six different income tax brackets, ranging from 2.2% to 5.95%. The state does not assess sales tax on consumers. The state does, however, impose a tax on the gross receipts of most businesses. Business and occupational license tax rates range from 0.096% to 1.92%, depending on the category of business activity. Delaware does not assess a state-level tax on real or personal property. Real estate is subject to county property taxes , school district property taxes, vocational school district taxes, and, if located within an incorporated area, municipal property taxes. Gambling provides significant revenue to the state. For instance, the casino at Delaware Park Racetrack provided more than $100 million to the state in 2010. In June 2018, Delaware became the first U.S. state to legalize sports betting following the Supreme Court ruling to overturn the Professional and Amateur Sports Protection Act of 1992 (PASPA).",
+    "wiki_Legislative_branch": "The Delaware General Assembly consists of a House of Representatives with 41 members and a Senate with 21 members. It sits in Dover, the state capital. Representatives are elected to two-year terms, while senators are elected to four-year terms. The Senate confirms judicial and other nominees appointed by the governor. Delaware's U.S. Senators are Lisa Blunt Rochester (Democrat) and Chris Coons (Democrat). Delaware's single U.S. Representative is Sarah McBride (Democrat).",
+    "wiki_Judicial_branch": "The Delaware Constitution establishes a number of courts: Minor non-constitutional courts include the Justice of the Peace Courts and Aldermen's Courts. Significantly, Delaware has one of the few remaining Courts of Chancery in the nation, which has jurisdiction over equity cases, the vast majority of which are corporate disputes, many relating to mergers and acquisitions . The Court of Chancery and the Delaware Supreme Court have developed a worldwide reputation for rendering concise opinions concerning corporate law which generally (but not always) grant broad discretion to corporate boards of directors and officers. In addition, the Delaware General Corporation Law , which forms the basis of the Courts' opinions, is widely regarded as giving great flexibility to corporations to manage their affairs. For these reasons, Delaware is considered to have the most business-friendly legal system in the United States; therefore a great number of companies are incorporated in Delaware , including 60% of the companies listed on the New York Stock Exchange . Delaware was the last U.S. state to use judicial corporal punishment , in 1952.",
+    "wiki_Executive_branch": "The executive branch is headed by the Governor of Delaware . The current governor is Matt Meyer (Democrat), who took office January 21, 2025. The lieutenant governor is Kyle Evans Gay . The governor presents a \" State of the State \" speech to a joint session of the Delaware legislature annually. The executive branch also consists of the Attorney General of Delaware currently held by Kathy Jennings , the State Treasurer currently held by Colleen Davis , the Auditor of Accounts currently held by Lydia York and the Insurance Commissioner currently held by Trinidad Navarro .",
+    "wiki_Counties_2": "Delaware is subdivided into three counties ; from north to south they are New Castle , Kent and Sussex . This is the fewest among all states. Each county elects its own legislative body (known in New Castle and Sussex counties as County Council , and in Kent County as Levy Court ), which deal primarily in zoning and development issues. Most functions which are handled on a county-by-county basis in other states—such as court and law enforcement—have been centralized in Delaware, leading to a significant concentration of power in the Delaware state government. The counties were historically divided into hundreds , which were used as tax reporting and voting districts until the 1960s, but now serve no administrative role, their only current official legal use being in real estate title descriptions.",
+    "wiki_Politics": "The Democratic Party holds a plurality of registrations in Delaware. Currently, Democrats hold all positions of authority in Delaware, as well as majorities in the state Senate and House. The Democrats have held the governorship since 1993, having won the last seven gubernatorial elections. Democrats presently hold all the nine statewide elected offices, while the Republicans last won any statewide offices in 2014, State Auditor and State Treasurer . During the First and Second Party Systems , Delaware was a stronghold for the Federalist and Whig Parties, respectively. After a relatively brief adherence to the Democratic Solid South following the US Civil War , Delaware became a Republican-leaning state from 1896 through 1948 , voting for losing Republicans Charles Evans Hughes in 1916 , Herbert Hoover in 1932 , and Thomas Dewey in 1948. During the second half of the 20th century, Delaware was a bellwether state, voting for the winner of every presidential election from 1952 through 1996 . Delaware's bellwether status came to an end when Delaware voted for Al Gore in 2000 by 13%. Subsequent elections have continued to demonstrate Delaware's current strong Democratic lean: John Kerry carried the First State by 8% in 2004 ; Barack Obama carried it by 25% and by 19% in his two elections of 2008 and 2012 ; and Hillary Clinton carried it by 11% as she lost the Electoral College in 2016 . In 2020, Delaware native (and Barack Obama's former vice president and running mate) Joe Biden headed the Democratic ticket; he carried his home state by just shy of 19% en route to a national 4.5% win. The dominant factor in Delaware's political shift has been the strong Democratic trend in heavily urbanized New Castle County , home to 55% of Delaware's population. New Castle County has not voted Republican in a presidential election since 1988 , and has given Democrats over 60% of its vote in every election from 2004 on. In 1992, 2000, 2004, and 2016, the Republican presidential candidate carried both Kent and Sussex but lost by double digits each time in New Castle County, which was a large enough margin to tip the state to the Democrats. New Castle County also elects a substantial majority of the state legislature; 27 of the 41 state house districts and 14 of the 21 state senate districts are based in New Castle County. In a 2020 study, Delaware was ranked as the 18th hardest state for citizens to vote in.",
+    "wiki_Freedom_of_information": "Each of the 50 states of the United States has passed some form of freedom of information legislation, which provides a mechanism for the general public to request information of the government. In 2011 Delaware passed legislation placing a 15 business day time limit on addressing freedom-of-information requests, to either produce information or an explanation of why such information would take longer than this time to produce. A bill aimed at restricting Freedom of Information Act requests, Senate Bill 155, was discussed in committee.",
+    "wiki_Taxation": "Tax is collected by the Delaware Division of Revenue . Delaware has six different income tax brackets, ranging from 2.2% to 5.95%. The state does not assess sales tax on consumers. The state does, however, impose a tax on the gross receipts of most businesses. Business and occupational license tax rates range from 0.096% to 1.92%, depending on the category of business activity. Delaware does not assess a state-level tax on real or personal property. Real estate is subject to county property taxes , school district property taxes, vocational school district taxes, and, if located within an incorporated area, municipal property taxes. Gambling provides significant revenue to the state. For instance, the casino at Delaware Park Racetrack provided more than $100 million to the state in 2010. In June 2018, Delaware became the first U.S. state to legalize sports betting following the Supreme Court ruling to overturn the Professional and Amateur Sports Protection Act of 1992 (PASPA).",
+    "wiki_Culture": "As Delaware has no franchises in the major American professional sports leagues, many Delawareans follow either Philadelphia or Baltimore teams. In the WNBA , the Washington Mystics enjoy a major following due to the presence of Wilmington native and University of Delaware product Elena Delle Donne . The University of Delaware's football team has a large following throughout the state, with the Delaware State University and Wesley College teams also enjoying a smaller degree of support. Delaware is home to Dover Motor Speedway and Bally's Dover . Dover Motor Speedway, also known as the Monster Mile , is one of only 10 tracks in the nation to have hosted 100 or more NASCAR Cup Series races. Bally's Dover is a popular harness racing facility. It is the only co-located horse- and car-racing facility in the nation, with the Bally's Dover track located inside the Dover Motor Speedway track. Delaware is represented in rugby by the Delaware Black Foxes, a 2015 expansion club. Delaware has been home to two professional wrestling outfits: Combat Zone Wrestling (CZW) and its Tournament of Death , and ECWA with its annual Super 8 Tournament . Delaware's official state sport is bicycling .",
+    "wiki_Sports": "As Delaware has no franchises in the major American professional sports leagues, many Delawareans follow either Philadelphia or Baltimore teams. In the WNBA , the Washington Mystics enjoy a major following due to the presence of Wilmington native and University of Delaware product Elena Delle Donne . The University of Delaware's football team has a large following throughout the state, with the Delaware State University and Wesley College teams also enjoying a smaller degree of support. Delaware is home to Dover Motor Speedway and Bally's Dover . Dover Motor Speedway, also known as the Monster Mile , is one of only 10 tracks in the nation to have hosted 100 or more NASCAR Cup Series races. Bally's Dover is a popular harness racing facility. It is the only co-located horse- and car-racing facility in the nation, with the Bally's Dover track located inside the Dover Motor Speedway track. Delaware is represented in rugby by the Delaware Black Foxes, a 2015 expansion club. Delaware has been home to two professional wrestling outfits: Combat Zone Wrestling (CZW) and its Tournament of Death , and ECWA with its annual Super 8 Tournament . Delaware's official state sport is bicycling .",
+    "wiki_Foreign_affairs": "Delaware has had a foreign sister state in Japan, named Miyagi Prefecture . These two have shared relations since 1997, and have had exchange programs available for students that were briefly paused in wake of the earthquake and the tsunami that ensued in the prefecture during March 2011.",
+    "wiki_Sister_state": "Delaware has had a foreign sister state in Japan, named Miyagi Prefecture . These two have shared relations since 1997, and have had exchange programs available for students that were briefly paused in wake of the earthquake and the tsunami that ensued in the prefecture during March 2011.",
+    "wiki_Delawareans": "Prominent Delawareans include the du Pont family of politicians and businesspersons, and the 46th president of the United States Joe Biden . Biden's family moved to Delaware during his childhood, and he later represented Delaware for 36 years in the United States Senate from 1973 to 2009, before becoming 47th vice president of the United States from 2009 to 2017.",
+    "wiki_General": "39°00′N 75°24′W ﻿ / ﻿ 39.0°N 75.4°W ﻿ / 39.0; -75.4 ﻿ ( State of Delaware )"
+}

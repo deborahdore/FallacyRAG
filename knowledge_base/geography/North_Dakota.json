@@ -1,0 +1,3610 @@
+{
+    "title": "North Dakota",
+    "level": "State",
+    "geoID": "040XX00US38",
+    "short description": "North Dakota has a land area of 68,994.3 square miles and a water area of 1,704.6 square miles. It is the 17th largest state by area.",
+    "description": "North Dakota has a land area of 68,994.3 square miles and a water area of 1,704.6 square miles. It is the 17th largest state by area. North Dakota is bordered by South Dakota, Montana, and Minnesota.",
+    "Class of Worker": {
+        "title": "Class of Worker in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Employee of private company workers",
+                "value": "59.8",
+                "moe": "1.4"
+            },
+            {
+                "description": "Self-employed in own incorporated business workers",
+                "value": "4.0",
+                "moe": "0.6"
+            },
+            {
+                "description": "Private not-for-profit wage and salary workers",
+                "value": "11.0",
+                "moe": "0.9"
+            },
+            {
+                "description": "Local, state, and federal government workers",
+                "value": "17.5",
+                "moe": "1.0"
+            },
+            {
+                "description": "Self-employed in own not incorporated business workers and unpaid family workers",
+                "value": "7.7",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Veterans": {
+        "title": "Veterans by Sex in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "92.0",
+                "moe": "1.7"
+            },
+            {
+                "description": "Female",
+                "value": "8.0",
+                "moe": "1.7"
+            }
+        ]
+    },
+    "Children": {
+        "title": "Children Under 18 by Age Range in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 5 years",
+                "value": "5.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "5 to 14 years",
+                "value": "13.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "15 to 17 years",
+                "value": "3.7",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Two or More Races": {
+        "title": "Two or More Races for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "83",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "394",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "170",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "19",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "293",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "105",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "54",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "4285",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "9478",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "131",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "207",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "79",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "263",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "133",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "87",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "112",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "91",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "4679",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "68",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "68",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "88",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "64",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "85",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "66",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "208",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "74",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "1069",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "435",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "366",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "1629",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "798",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "87",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "72",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "404",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "120",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "664",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "169",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "93",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "638",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "523",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "158",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "48",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "155",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "21",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "1863",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "47",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "783",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "77",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "360",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "799",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "5518",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "123",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "3537",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Redistricting": {
+        "title": "Total Population for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "2200",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "10853",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "5964",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "945",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "6379",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "2993",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "2201",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "98458",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "184525",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "3704",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "4999",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "2195",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "4095",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "2347",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "3301",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "3397",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "1736",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "73170",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "2301",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "2306",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "2489",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "2394",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "4093",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "1876",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "5345",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "2530",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "14704",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "9771",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "8350",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "33291",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "9809",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "3015",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "1877",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "6844",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "3990",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "11605",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "5703",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "2282",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "16529",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "12187",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "3862",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "1265",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "3898",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "706",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "33646",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "1798",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "21593",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "2162",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "7997",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "10563",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "69919",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "3982",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "40950",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "School Enrollment": {
+        "title": "School Enrollment (Population 3 Years and Over Enrolled in School) in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Nursery school, preschool",
+                "value": "4.8",
+                "moe": "0.8"
+            },
+            {
+                "description": "Kindergarten to 12th grade",
+                "value": "64.8",
+                "moe": "1.5"
+            },
+            {
+                "description": "College, undergraduate",
+                "value": "24.2",
+                "moe": "1.3"
+            },
+            {
+                "description": "Graduate, professional school",
+                "value": "6.2",
+                "moe": "1.0"
+            }
+        ]
+    },
+    "Older Population": {
+        "title": "Older Population by Age in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "65 to 74 years",
+                "value": "10.1",
+                "moe": "0.2"
+            },
+            {
+                "description": "75 to 84 years",
+                "value": "5.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "85 years and over",
+                "value": "2.2",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Employment and Labor Force Status": {
+        "title": "Employment Rate in North Dakota",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "66.5",
+                "moe": "0.8"
+            },
+            {
+                "description": "2015",
+                "value": "67.1",
+                "moe": "0.7"
+            },
+            {
+                "description": "2016",
+                "value": "67.9",
+                "moe": "0.8"
+            },
+            {
+                "description": "2017",
+                "value": "67.9",
+                "moe": "0.7"
+            },
+            {
+                "description": "2018",
+                "value": "66.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2019",
+                "value": "67.3",
+                "moe": "0.8"
+            },
+            {
+                "description": "2021",
+                "value": "64.6",
+                "moe": "1.0"
+            },
+            {
+                "description": "2022",
+                "value": "66.1",
+                "moe": "0.9"
+            },
+            {
+                "description": "2023",
+                "value": "65.9",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Residential Mobility": {
+        "title": "Residential Mobility in the Last Year in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Moved within the same county",
+                "value": "6.9",
+                "moe": "0.9"
+            },
+            {
+                "description": "Moved from different county, same state",
+                "value": "3.0",
+                "moe": "0.5"
+            },
+            {
+                "description": "Moved from a different state",
+                "value": "3.5",
+                "moe": "0.5"
+            },
+            {
+                "description": "Moved from abroad",
+                "value": "0.7",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within North Dakota",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "31596",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "132934",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "32267",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "23370",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "75536",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "51777",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "1320843",
+                "name": "Williams County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "50013",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "15892",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "2420003",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "6196135",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "51963",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "58963",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "22832",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "159236",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "18585",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "27227",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "60780",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "14655",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "1479601",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "15910",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "21425",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "21373",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "23282",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "38717",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "12842",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "60570",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "30208",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "494260",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "170593",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "263638",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "557806",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "234366",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "28552",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "53719",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "128644",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "52590",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "190340",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "59753",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "19545",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "275730",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "91801",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "120074",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "4325",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "16582",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "2616",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "732071",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "24140",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "403961",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "21154",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "129872",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "148699",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "1293027",
+                "name": "Ward County, North Dakota"
+            }
+        ]
+    },
+    "Age and Sex": {
+        "title": "Population by Age Range in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Median Age",
+                "value": "36.7",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Income and Earnings": {
+        "title": "Median Income by Types of Families in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Families",
+                "value": "103393",
+                "moe": "3049"
+            },
+            {
+                "description": "Married-couple families",
+                "value": "118577",
+                "moe": "3008"
+            },
+            {
+                "description": "Nonfamily households",
+                "value": "48273",
+                "moe": "1838"
+            }
+        ]
+    },
+    "Work Experience": {
+        "title": "Mean Usual Hours Worked for Workers by Sex in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "42.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "Female",
+                "value": "36.4",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Commuting": {
+        "title": "Means of Transportation to Work (Workers 16 Years and Over) in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Drove alone",
+                "value": "76.7",
+                "moe": "1.3"
+            },
+            {
+                "description": "Carpool",
+                "value": "10.2",
+                "moe": "0.8"
+            },
+            {
+                "description": "Public transportation",
+                "value": "0.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "Walked",
+                "value": "3.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "Bicycle",
+                "value": "0.3",
+                "moe": "0.1"
+            },
+            {
+                "description": "Taxicab, motorcycle, or other means",
+                "value": "1.5",
+                "moe": "0.4"
+            },
+            {
+                "description": "Worked from home",
+                "value": "7.1",
+                "moe": "0.7"
+            }
+        ]
+    },
+    "Marital Status and Marital History": {
+        "title": "Marital Status by Sex in North Dakota",
+        "source": "2023 ACS 1-Year Estimates Subject Tables",
+        "stats": [
+            {
+                "description": "Married, not separated | Male",
+                "value": "50.3",
+                "moe": "1.7"
+            },
+            {
+                "description": "Married, not separated | Female",
+                "value": "51.5",
+                "moe": "1.9"
+            },
+            {
+                "description": "Widowed | Male",
+                "value": "2.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "Widowed | Female",
+                "value": "8.1",
+                "moe": "0.6"
+            },
+            {
+                "description": "Divorced | Male",
+                "value": "9.1",
+                "moe": "1.0"
+            },
+            {
+                "description": "Divorced | Female",
+                "value": "10.5",
+                "moe": "1.0"
+            },
+            {
+                "description": "Separated | Male",
+                "value": "0.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "Separated | Female",
+                "value": "0.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "Never Married | Male",
+                "value": "37.6",
+                "moe": "1.4"
+            },
+            {
+                "description": "Never Married | Female",
+                "value": "29.2",
+                "moe": "1.2"
+            }
+        ]
+    },
+    "Educational Attainment": {
+        "title": "Education Attainment (Population 25 Years and Older) in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "High school or equivalent degree",
+                "value": "24.3",
+                "moe": "1.1"
+            },
+            {
+                "description": "Some college, no degree",
+                "value": "21.7",
+                "moe": "1.0"
+            },
+            {
+                "description": "Associate's degree",
+                "value": "14.2",
+                "moe": "0.9"
+            },
+            {
+                "description": "Bachelor's degree",
+                "value": "23.5",
+                "moe": "0.9"
+            },
+            {
+                "description": "Graduate or professional degree",
+                "value": "10.5",
+                "moe": "0.8"
+            }
+        ]
+    },
+    "Disability": {
+        "title": "Types of Disabilities in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Hearing difficulty",
+                "value": "3.6",
+                "moe": "0.3"
+            },
+            {
+                "description": "Vision difficulty",
+                "value": "1.9",
+                "moe": "0.3"
+            },
+            {
+                "description": "Cognitive difficulty",
+                "value": "5.6",
+                "moe": "0.5"
+            },
+            {
+                "description": "Ambulatory difficulty",
+                "value": "5.4",
+                "moe": "0.4"
+            },
+            {
+                "description": "Self-care difficulty",
+                "value": "1.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Independent living difficulty",
+                "value": "5.0",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Housing Units": {
+        "title": "Housing Occupancy in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Occupied housing units",
+                "value": "349705",
+                "moe": "2892"
+            },
+            {
+                "description": "Vacant housing units",
+                "value": "31289",
+                "moe": "3073"
+            }
+        ]
+    },
+    "Native and Foreign-Born": {
+        "title": "Foreign-Born Population in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Naturalized U.S. citizen",
+                "value": "36.0",
+                "moe": "6.0"
+            },
+            {
+                "description": "Not a U.S. citizen",
+                "value": "64.0",
+                "moe": "6.0"
+            }
+        ]
+    },
+    "Language Spoken at Home": {
+        "title": "Types of Language Spoken at Home in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "English only",
+                "value": "93.0",
+                "moe": "0.8"
+            },
+            {
+                "description": "Spanish",
+                "value": "2.8",
+                "moe": "0.4"
+            },
+            {
+                "description": "Other Indo-European languages",
+                "value": "1.8",
+                "moe": "0.5"
+            },
+            {
+                "description": "Asian and Pacific Islander languages",
+                "value": "1.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "Other languages",
+                "value": "1.2",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Financial Characteristics": {
+        "title": "Occupied Units Paying Rent in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $500",
+                "value": "10.0",
+                "moe": "1.6"
+            },
+            {
+                "description": "$500 to $999",
+                "value": "41.8",
+                "moe": "2.4"
+            },
+            {
+                "description": "$1,000 to $1,499",
+                "value": "33.3",
+                "moe": "2.7"
+            },
+            {
+                "description": "$1,500 to $1,999",
+                "value": "10.2",
+                "moe": "1.7"
+            },
+            {
+                "description": "$2,000 to $2,499",
+                "value": "3.6",
+                "moe": "1.0"
+            },
+            {
+                "description": "$2,500 to $2,999",
+                "value": "0.5",
+                "moe": "0.4"
+            },
+            {
+                "description": "$3,000 or more",
+                "value": "0.7",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Occupancy Characteristics": {
+        "title": "Owner Occupied Housing Units by Types of Households in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family",
+                "value": "129801",
+                "moe": "4308"
+            },
+            {
+                "description": "Male householder, no spouse present",
+                "value": "8526",
+                "moe": "1511"
+            },
+            {
+                "description": "Female householder, no spouse present",
+                "value": "13482",
+                "moe": "1644"
+            }
+        ]
+    },
+    "Physical Characteristics": {
+        "title": "Bedrooms in Occupied Housing Units in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "No bedroom",
+                "value": "2.5",
+                "moe": "0.6"
+            },
+            {
+                "description": "One bedroom",
+                "value": "9.5",
+                "moe": "0.9"
+            },
+            {
+                "description": "2 or 3 bedrooms",
+                "value": "57.6",
+                "moe": "1.4"
+            },
+            {
+                "description": "4 or more bedrooms",
+                "value": "30.4",
+                "moe": "1.4"
+            }
+        ]
+    },
+    "Poverty": {
+        "title": "Poverty by Age in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 18 years",
+                "value": "12.8",
+                "moe": "2.4"
+            },
+            {
+                "description": "18 to 64 years",
+                "value": "10.8",
+                "moe": "1.0"
+            },
+            {
+                "description": "65 years and over",
+                "value": "9.9",
+                "moe": "1.3"
+            }
+        ]
+    },
+    "Families and Household Characteristics": {
+        "title": "Total Households by Type of Households in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family household",
+                "value": "45.4",
+                "moe": "1.5"
+            },
+            {
+                "description": "Male householder, no spouse/partner present, family household",
+                "value": "23.3",
+                "moe": "1.1"
+            },
+            {
+                "description": "Female householder, no spouse/partner present, family household",
+                "value": "23.6",
+                "moe": "1.1"
+            }
+        ]
+    },
+    "Black or African American": {
+        "title": "Black or African American alone for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "13",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "186",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "7",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "4",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "31",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "0",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "13",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "2283",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "12963",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "3",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "28",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "23",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "25",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "5",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "0",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "8",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "5",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "3065",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "10",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "8",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "5",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "3",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "14",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "2",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "11",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "7",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "218",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "32",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "42",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "466",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "113",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "6",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "3",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "29",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "38",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "73",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "38",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "5",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "155",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "17",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "50",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "2",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "3",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "3",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "1050",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "3",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "456",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "2",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "48",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "71",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "3024",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "18",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "2096",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "American Indian and Alaska Native": {
+        "title": "American Indian and Alaska Native alone for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "14",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "103",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "3216",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "5",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "217",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "37",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "25",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "4257",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "2614",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "28",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "28",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "19",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "457",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "65",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "13",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "20",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "12",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "1810",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "34",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "12",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "45",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "12",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "26",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "14",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "27",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "7",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "1894",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "808",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "200",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "1323",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "2840",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "26",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "24",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "135",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "146",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "1276",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "18",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "15",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "467",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "9278",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "13",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "11",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "3332",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "2",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "469",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "7",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "301",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "71",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "74",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "145",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "1706",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "17",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "1199",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Some Other Race": {
+        "title": "Some Other Race alone for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "11",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "73",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "20",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "0",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "41",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "38",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "15",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "1114",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "1994",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "22",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "78",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "5",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "40",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "33",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "10",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "30",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "6",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "1006",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "2",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "6",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "10",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "29",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "32",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "16",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "26",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "29",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "709",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "36",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "75",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "508",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "244",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "23",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "13",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "76",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "27",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "72",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "53",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "7",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "244",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "17",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "28",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "5",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "5",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "0",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "928",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "5",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "190",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "14",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "83",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "416",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "1380",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "11",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "1527",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Vacancy": {
+        "title": "Vacancy Rate in North Dakota",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "12.9",
+                "moe": "1.0"
+            },
+            {
+                "description": "2015",
+                "value": "13.6",
+                "moe": "1.0"
+            },
+            {
+                "description": "2016",
+                "value": "14.5",
+                "moe": "0.9"
+            },
+            {
+                "description": "2017",
+                "value": "15.6",
+                "moe": "0.9"
+            },
+            {
+                "description": "2018",
+                "value": "15.4",
+                "moe": "1.2"
+            },
+            {
+                "description": "2019",
+                "value": "14.9",
+                "moe": "1.0"
+            },
+            {
+                "description": "2021",
+                "value": "13.9",
+                "moe": "1.1"
+            },
+            {
+                "description": "2022",
+                "value": "12.2",
+                "moe": "1.0"
+            },
+            {
+                "description": "2023",
+                "value": "10.6",
+                "moe": "1.0"
+            }
+        ]
+    },
+    "Industry": {
+        "title": "Industry for the Civilian Employed Population 16 Years and Over in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Educational services, and health care and social assistance",
+                "value": "25.4",
+                "moe": "1.2"
+            },
+            {
+                "description": "Retail trade",
+                "value": "11.5",
+                "moe": "1.1"
+            },
+            {
+                "description": "Agriculture, forestry, fishing and hunting, and mining",
+                "value": "8.5",
+                "moe": "0.7"
+            },
+            {
+                "description": "Professional, scientific, and management, and administrative and waste management services",
+                "value": "7.8",
+                "moe": "0.8"
+            },
+            {
+                "description": "Arts, entertainment, and recreation, and accommodation and food services",
+                "value": "7.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "Manufacturing",
+                "value": "7.4",
+                "moe": "0.7"
+            },
+            {
+                "description": "Construction",
+                "value": "7.0",
+                "moe": "0.7"
+            },
+            {
+                "description": "Transportation and warehousing, and utilities",
+                "value": "5.7",
+                "moe": "0.7"
+            },
+            {
+                "description": "Finance and insurance, and real estate and rental and leasing",
+                "value": "5.3",
+                "moe": "0.7"
+            },
+            {
+                "description": "Public administration",
+                "value": "5.0",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Not Hispanic or Latino": {
+        "title": "White alone, not Hispanic or Latino for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "2028",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "9964",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "2532",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "902",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "5688",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "2760",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "2049",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "84349",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "149442",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "3485",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "4572",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "2024",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "3241",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "2102",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "3162",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "3199",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "1600",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "58755",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "2169",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "2200",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "2319",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "2271",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "3897",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "1773",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "5024",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "2375",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "10268",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "8372",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "7571",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "28796",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "5539",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "2844",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "1755",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "6096",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "3611",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "9354",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "5363",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "2146",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "14703",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "2298",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "3570",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "1191",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "401",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "679",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "28307",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "1721",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "19504",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "1984",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "7311",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "8676",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "55673",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "3784",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "30761",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Fertility": {
+        "title": "Women with Births in the Past 12 Months in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "15 to 19 years",
+                "value": "156",
+                "moe": "151"
+            },
+            {
+                "description": "20 to 34 years",
+                "value": "8921",
+                "moe": "1414"
+            },
+            {
+                "description": "35 to 50 years",
+                "value": "2071",
+                "moe": "894"
+            }
+        ]
+    },
+    "Homeownership Rate": {
+        "title": "Housing Value in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $50,000",
+                "value": "7.0",
+                "moe": "0.6"
+            },
+            {
+                "description": "$50,000 to $99,999",
+                "value": "7.5",
+                "moe": "0.7"
+            },
+            {
+                "description": "$100,000 to $149,999",
+                "value": "8.1",
+                "moe": "0.9"
+            },
+            {
+                "description": "$150,000 to $199,999",
+                "value": "10.2",
+                "moe": "1.0"
+            },
+            {
+                "description": "$200,000 to $299,999",
+                "value": "25.7",
+                "moe": "1.5"
+            },
+            {
+                "description": "$300,000 to $499,999",
+                "value": "28.5",
+                "moe": "1.5"
+            },
+            {
+                "description": "$500,000 to $999,999",
+                "value": "11.2",
+                "moe": "1.0"
+            },
+            {
+                "description": "$1,000,000 or more",
+                "value": "1.8",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Health Insurance": {
+        "title": "Population Without Health Insurance Coverage in North Dakota",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "7.9",
+                "moe": "0.7"
+            },
+            {
+                "description": "2015",
+                "value": "7.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "2016",
+                "value": "7.0",
+                "moe": "0.6"
+            },
+            {
+                "description": "2017",
+                "value": "7.5",
+                "moe": "0.6"
+            },
+            {
+                "description": "2018",
+                "value": "7.3",
+                "moe": "0.6"
+            },
+            {
+                "description": "2019",
+                "value": "6.9",
+                "moe": "0.7"
+            },
+            {
+                "description": "2021",
+                "value": "7.9",
+                "moe": "0.7"
+            },
+            {
+                "description": "2022",
+                "value": "6.4",
+                "moe": "0.7"
+            },
+            {
+                "description": "2023",
+                "value": "4.5",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Asian": {
+        "title": "Asian alone for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "39",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "69",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "7",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "6",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "42",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "17",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "12",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "1054",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "6068",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "16",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "30",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "11",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "33",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "2",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "12",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "15",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "1",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "2495",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "11",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "7",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "7",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "2",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "9",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "0",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "13",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "23",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "171",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "48",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "44",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "175",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "105",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "9",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "5",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "27",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "17",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "72",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "25",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "1",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "128",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "25",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "14",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "8",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "2",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "0",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "356",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "0",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "137",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "10",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "18",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "47",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "1120",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "12",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "636",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Hispanic or Latino": {
+        "title": "Hispanic or Latino (of any race) for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "36",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "185",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "89",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "22",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "141",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "129",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "59",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "3084",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "6182",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "45",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "199",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "53",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "107",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "77",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "35",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "66",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "48",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "3657",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "26",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "24",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "34",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "52",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "88",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "35",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "98",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "53",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "1532",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "148",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "218",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "1312",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "768",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "69",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "28",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "243",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "72",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "274",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "129",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "37",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "574",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "137",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "91",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "10",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "63",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "8",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "2274",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "36",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "593",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "34",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "297",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "1316",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "4590",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "38",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "3897",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "White": {
+        "title": "White alone for All Counties within North Dakota",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "38001",
+                "value": "2039",
+                "name": "Adams County, North Dakota"
+            },
+            {
+                "geoCode": "38003",
+                "value": "10025",
+                "name": "Barnes County, North Dakota"
+            },
+            {
+                "geoCode": "38005",
+                "value": "2542",
+                "name": "Benson County, North Dakota"
+            },
+            {
+                "geoCode": "38007",
+                "value": "911",
+                "name": "Billings County, North Dakota"
+            },
+            {
+                "geoCode": "38009",
+                "value": "5754",
+                "name": "Bottineau County, North Dakota"
+            },
+            {
+                "geoCode": "38011",
+                "value": "2793",
+                "name": "Bowman County, North Dakota"
+            },
+            {
+                "geoCode": "38013",
+                "value": "2082",
+                "name": "Burke County, North Dakota"
+            },
+            {
+                "geoCode": "38015",
+                "value": "85148",
+                "name": "Burleigh County, North Dakota"
+            },
+            {
+                "geoCode": "38017",
+                "value": "151307",
+                "name": "Cass County, North Dakota"
+            },
+            {
+                "geoCode": "38019",
+                "value": "3504",
+                "name": "Cavalier County, North Dakota"
+            },
+            {
+                "geoCode": "38021",
+                "value": "4628",
+                "name": "Dickey County, North Dakota"
+            },
+            {
+                "geoCode": "38023",
+                "value": "2054",
+                "name": "Divide County, North Dakota"
+            },
+            {
+                "geoCode": "38025",
+                "value": "3277",
+                "name": "Dunn County, North Dakota"
+            },
+            {
+                "geoCode": "38027",
+                "value": "2109",
+                "name": "Eddy County, North Dakota"
+            },
+            {
+                "geoCode": "38029",
+                "value": "3179",
+                "name": "Emmons County, North Dakota"
+            },
+            {
+                "geoCode": "38031",
+                "value": "3212",
+                "name": "Foster County, North Dakota"
+            },
+            {
+                "geoCode": "38033",
+                "value": "1620",
+                "name": "Golden Valley County, North Dakota"
+            },
+            {
+                "geoCode": "38035",
+                "value": "60056",
+                "name": "Grand Forks County, North Dakota"
+            },
+            {
+                "geoCode": "38037",
+                "value": "2176",
+                "name": "Grant County, North Dakota"
+            },
+            {
+                "geoCode": "38039",
+                "value": "2205",
+                "name": "Griggs County, North Dakota"
+            },
+            {
+                "geoCode": "38041",
+                "value": "2327",
+                "name": "Hettinger County, North Dakota"
+            },
+            {
+                "geoCode": "38043",
+                "value": "2278",
+                "name": "Kidder County, North Dakota"
+            },
+            {
+                "geoCode": "38045",
+                "value": "3923",
+                "name": "LaMoure County, North Dakota"
+            },
+            {
+                "geoCode": "38047",
+                "value": "1778",
+                "name": "Logan County, North Dakota"
+            },
+            {
+                "geoCode": "38049",
+                "value": "5054",
+                "name": "McHenry County, North Dakota"
+            },
+            {
+                "geoCode": "38051",
+                "value": "2390",
+                "name": "McIntosh County, North Dakota"
+            },
+            {
+                "geoCode": "38053",
+                "value": "10638",
+                "name": "McKenzie County, North Dakota"
+            },
+            {
+                "geoCode": "38055",
+                "value": "8405",
+                "name": "McLean County, North Dakota"
+            },
+            {
+                "geoCode": "38057",
+                "value": "7622",
+                "name": "Mercer County, North Dakota"
+            },
+            {
+                "geoCode": "38059",
+                "value": "29150",
+                "name": "Morton County, North Dakota"
+            },
+            {
+                "geoCode": "38061",
+                "value": "5706",
+                "name": "Mountrail County, North Dakota"
+            },
+            {
+                "geoCode": "38063",
+                "value": "2863",
+                "name": "Nelson County, North Dakota"
+            },
+            {
+                "geoCode": "38065",
+                "value": "1757",
+                "name": "Oliver County, North Dakota"
+            },
+            {
+                "geoCode": "38067",
+                "value": "6173",
+                "name": "Pembina County, North Dakota"
+            },
+            {
+                "geoCode": "38069",
+                "value": "3637",
+                "name": "Pierce County, North Dakota"
+            },
+            {
+                "geoCode": "38071",
+                "value": "9438",
+                "name": "Ramsey County, North Dakota"
+            },
+            {
+                "geoCode": "38073",
+                "value": "5400",
+                "name": "Ransom County, North Dakota"
+            },
+            {
+                "geoCode": "38075",
+                "value": "2161",
+                "name": "Renville County, North Dakota"
+            },
+            {
+                "geoCode": "38077",
+                "value": "14874",
+                "name": "Richland County, North Dakota"
+            },
+            {
+                "geoCode": "38079",
+                "value": "2319",
+                "name": "Rolette County, North Dakota"
+            },
+            {
+                "geoCode": "38081",
+                "value": "3599",
+                "name": "Sargent County, North Dakota"
+            },
+            {
+                "geoCode": "38083",
+                "value": "1191",
+                "name": "Sheridan County, North Dakota"
+            },
+            {
+                "geoCode": "38085",
+                "value": "401",
+                "name": "Sioux County, North Dakota"
+            },
+            {
+                "geoCode": "38087",
+                "value": "680",
+                "name": "Slope County, North Dakota"
+            },
+            {
+                "geoCode": "38089",
+                "value": "28924",
+                "name": "Stark County, North Dakota"
+            },
+            {
+                "geoCode": "38091",
+                "value": "1732",
+                "name": "Steele County, North Dakota"
+            },
+            {
+                "geoCode": "38093",
+                "value": "19722",
+                "name": "Stutsman County, North Dakota"
+            },
+            {
+                "geoCode": "38095",
+                "value": "1987",
+                "name": "Towner County, North Dakota"
+            },
+            {
+                "geoCode": "38097",
+                "value": "7410",
+                "name": "Traill County, North Dakota"
+            },
+            {
+                "geoCode": "38099",
+                "value": "9085",
+                "name": "Walsh County, North Dakota"
+            },
+            {
+                "geoCode": "38101",
+                "value": "57038",
+                "name": "Ward County, North Dakota"
+            },
+            {
+                "geoCode": "38103",
+                "value": "3801",
+                "name": "Wells County, North Dakota"
+            },
+            {
+                "geoCode": "38105",
+                "value": "31854",
+                "name": "Williams County, North Dakota"
+            }
+        ]
+    },
+    "Occupation": {
+        "title": "Occupation for the Civilian Employed Population 16 Years and Over in North Dakota",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Management, business, science and arts occupations",
+                "value": "173457",
+                "moe": "5980"
+            },
+            {
+                "description": "Sales and office occupations",
+                "value": "77855",
+                "moe": "4287"
+            },
+            {
+                "description": "Service occupations",
+                "value": "67774",
+                "moe": "3895"
+            },
+            {
+                "description": "Production, transportation, and material moving occupations",
+                "value": "55023",
+                "moe": "4134"
+            },
+            {
+                "description": "Natural resources, construction, and maintenance occupations",
+                "value": "45063",
+                "moe": "3978"
+            }
+        ]
+    },
+    "wiki_History": "Native American people lived in what is now North Dakota for thousands of years before the arrival of Europeans. The known tribes included the Mandan people (from around the 11th century), while the first Hidatsa group arrived a few hundred years later. They both assembled in villages on tributaries of the Missouri River in what would become west-central North Dakota. Crow Indians traveled the plains from the west to visit and trade with the related Hidatsas after the split between them, probably in the 17th century. Later came divisions of the Sioux : the Lakota , the Santee and the Yanktonai . The Assiniboine and the Plains Cree undertook southward journeys to the village Indians, either for trade or for war. The Shoshone Indians in present-day Wyoming and Montana may have carried out attacks on Indian enemies as far east as the Missouri. A group of Cheyennes lived in a village of earth lodges at the lower Sheyenne River ( Biesterfeldt Site ) for decades in the 18th century. Due to attacks by Crees, Assiniboines and Chippewas armed with firearms [ clarification needed ] , they left the area around 1780 and crossed Missouri some time after. A band of the few Sotaio Indians lived east of Missouri River and met the uprooted Cheyennes before the end of the century. They soon followed the Cheyennes across Missouri and lived among them south of Cannonball River . Eventually, the Cheyenne and the Sutaio became one tribe and turned into mounted buffalo hunters with ranges mainly outside North Dakota. Before the middle of the 19th century, the Arikara entered the future state from the south and joined the Mandan and Hidatsa. With time, a number of Indians entered into treaties with the United States. Many of the treaties defined the territory of a specific tribe. The first European to reach the area was the French-Canadian trader Pierre Gaultier, sieur de La Vérendrye , who led an exploration and trading party to the Mandan villages in 1738 guided by Assiniboine Indians. From 1762 to 1800, the region formed part of Spanish Louisiana , part of New Spain, administered from Mexico City. On October 1, 1800, the Third Treaty of San Ildefonso was signed, and the territory of Spanish Louisiana was transferred to France as part of French Louisiana , which was later sold to the United States in the Louisiana Purchase . The northeastern portion of the state, corresponding to the Red River Valley and the drainage basin to the Hudson Bay was, at the time, part of Rupert's Land , a British North American territory. It remained under control of the Hudson's Bay Company until the Anglo-American Convention of 1818 , which set the border between it and the United States to the 49th parallel . European Americans settled in Dakota Territory only sparsely until the late 19th century, when railroads opened up the region. With the advantage of grants of land, they vigorously marketed their properties, extolling the region as ideal for agriculture. Differences between the northern and southern part caused resentments between the settlers. The northern part was seen by the more populated southern part as somewhat disreputable, \"too much controlled by the wild folks, cattle ranchers, fur traders\" and too frequently the site of conflict with the indigenous population. The northern part was generally content with remaining a territory. However, following the territorial capital being moved from Yankton in the southern part to Bismarck, the southern part began to call for division. Finally, at the 1887 territorial election, the voters approved splitting the territory into two. The division was done by the seventh standard parallel. Other account(s) state that the real reason for the split was a political lure for four Republican senators instead of two from the Republican dominated Dakota Territory and in their push to split the territory, Republican congressmen also ignored the uncomfortable fact that much of the land in the anticipated state of South Dakota belonged to the Sioux. Congress passed an omnibus bill for statehood for North Dakota, South Dakota , Montana , and Washington , titled the Enabling Act of 1889 , on February 22, 1889, during the administration of President Grover Cleveland . His successor, Benjamin Harrison , signed the proclamations formally admitting North Dakota and South Dakota to the Union on November 2, 1889. There was a rivalry between the two new states over which one would be admitted first. So Harrison directed Secretary of State James G. Blaine to shuffle the papers and obscure from him which he was signing first to keep both the states happy and to avoid showing favor to either state. The actual order went unrecorded, thus no one knows which of the Dakotas was admitted first. However, since North Dakota alphabetically appears before South Dakota , its proclamation was published first in the Statutes At Large. Unrest among wheat farmers, especially among Norwegian immigrants , led to a populist political movement centered in the Non Partisan League (\"NPL\") around the time of World War I . The NPL ran candidates on the Republican ticket (but merged into the Democratic Party after World War II ). It tried to insulate North Dakota from the power of out-of-state banks and corporations. In addition to founding the state-owned Bank of North Dakota and North Dakota Mill and Elevator (both still in existence), the NPL established a state-owned railroad line (later sold to the Soo Line Railroad ). Anti-corporate laws virtually prohibited a corporation or bank from owning title to land zoned as farmland. These laws, still in force today, after having been upheld by state and federal courts, make it almost impossible to foreclose on farmland, as even after foreclosure, the property title cannot be held by a bank or mortgage company. Furthermore, the Bank of North Dakota, having powers similar to a Federal Reserve branch bank, exercised its power to limit the issuance of subprime mortgages and their collateralization in the form of derivative instruments, and so prevented a collapse of housing prices within the state in the wake of 2008's financial crisis. The original North Dakota State Capitol in Bismarck burned to the ground on December 28, 1930. It was replaced by a limestone -faced art-deco skyscraper that still stands today. A round of federal investment and construction projects began in the 1950s, including the Garrison Dam and the Minot and Grand Forks Air Force bases. Western North Dakota saw a boom in oil exploration in the late 1970s and early 1980s, as rising petroleum prices made development profitable. This boom came to an end after petroleum prices declined. In 2010, the state had lower rates of unemployment than the national average, and increased job and population growth. Much of the growth has been based on development of the Bakken oil fields in the western part of the state. Estimates as to the remaining amount of oil in the area vary, with some estimating over 100 years' worth. For decades, North Dakota's annual murder and violent crime rates were regularly the lowest in the United States. In recent years, however, while still below the national average, crime has risen sharply. In 2016, the violent crime rate was three times higher than in 2004, with the rise occurring mostly in the late 2000s, coinciding with the oil boom era. This happened at a time when the national violent crime rate declined slightly. Workers in the oil boom towns have been blamed for much of the increase.",
+    "wiki_Pre-colonial_history": "Native American people lived in what is now North Dakota for thousands of years before the arrival of Europeans. The known tribes included the Mandan people (from around the 11th century), while the first Hidatsa group arrived a few hundred years later. They both assembled in villages on tributaries of the Missouri River in what would become west-central North Dakota. Crow Indians traveled the plains from the west to visit and trade with the related Hidatsas after the split between them, probably in the 17th century. Later came divisions of the Sioux : the Lakota , the Santee and the Yanktonai . The Assiniboine and the Plains Cree undertook southward journeys to the village Indians, either for trade or for war. The Shoshone Indians in present-day Wyoming and Montana may have carried out attacks on Indian enemies as far east as the Missouri. A group of Cheyennes lived in a village of earth lodges at the lower Sheyenne River ( Biesterfeldt Site ) for decades in the 18th century. Due to attacks by Crees, Assiniboines and Chippewas armed with firearms [ clarification needed ] , they left the area around 1780 and crossed Missouri some time after. A band of the few Sotaio Indians lived east of Missouri River and met the uprooted Cheyennes before the end of the century. They soon followed the Cheyennes across Missouri and lived among them south of Cannonball River . Eventually, the Cheyenne and the Sutaio became one tribe and turned into mounted buffalo hunters with ranges mainly outside North Dakota. Before the middle of the 19th century, the Arikara entered the future state from the south and joined the Mandan and Hidatsa. With time, a number of Indians entered into treaties with the United States. Many of the treaties defined the territory of a specific tribe.",
+    "wiki_European_exploration_and_colonization": "The first European to reach the area was the French-Canadian trader Pierre Gaultier, sieur de La Vérendrye , who led an exploration and trading party to the Mandan villages in 1738 guided by Assiniboine Indians. From 1762 to 1800, the region formed part of Spanish Louisiana , part of New Spain, administered from Mexico City. On October 1, 1800, the Third Treaty of San Ildefonso was signed, and the territory of Spanish Louisiana was transferred to France as part of French Louisiana , which was later sold to the United States in the Louisiana Purchase . The northeastern portion of the state, corresponding to the Red River Valley and the drainage basin to the Hudson Bay was, at the time, part of Rupert's Land , a British North American territory. It remained under control of the Hudson's Bay Company until the Anglo-American Convention of 1818 , which set the border between it and the United States to the 49th parallel .",
+    "wiki_Settlement_and_statehood": "European Americans settled in Dakota Territory only sparsely until the late 19th century, when railroads opened up the region. With the advantage of grants of land, they vigorously marketed their properties, extolling the region as ideal for agriculture. Differences between the northern and southern part caused resentments between the settlers. The northern part was seen by the more populated southern part as somewhat disreputable, \"too much controlled by the wild folks, cattle ranchers, fur traders\" and too frequently the site of conflict with the indigenous population. The northern part was generally content with remaining a territory. However, following the territorial capital being moved from Yankton in the southern part to Bismarck, the southern part began to call for division. Finally, at the 1887 territorial election, the voters approved splitting the territory into two. The division was done by the seventh standard parallel. Other account(s) state that the real reason for the split was a political lure for four Republican senators instead of two from the Republican dominated Dakota Territory and in their push to split the territory, Republican congressmen also ignored the uncomfortable fact that much of the land in the anticipated state of South Dakota belonged to the Sioux. Congress passed an omnibus bill for statehood for North Dakota, South Dakota , Montana , and Washington , titled the Enabling Act of 1889 , on February 22, 1889, during the administration of President Grover Cleveland . His successor, Benjamin Harrison , signed the proclamations formally admitting North Dakota and South Dakota to the Union on November 2, 1889. There was a rivalry between the two new states over which one would be admitted first. So Harrison directed Secretary of State James G. Blaine to shuffle the papers and obscure from him which he was signing first to keep both the states happy and to avoid showing favor to either state. The actual order went unrecorded, thus no one knows which of the Dakotas was admitted first. However, since North Dakota alphabetically appears before South Dakota , its proclamation was published first in the Statutes At Large.",
+    "wiki_20th_century": "Unrest among wheat farmers, especially among Norwegian immigrants , led to a populist political movement centered in the Non Partisan League (\"NPL\") around the time of World War I . The NPL ran candidates on the Republican ticket (but merged into the Democratic Party after World War II ). It tried to insulate North Dakota from the power of out-of-state banks and corporations. In addition to founding the state-owned Bank of North Dakota and North Dakota Mill and Elevator (both still in existence), the NPL established a state-owned railroad line (later sold to the Soo Line Railroad ). Anti-corporate laws virtually prohibited a corporation or bank from owning title to land zoned as farmland. These laws, still in force today, after having been upheld by state and federal courts, make it almost impossible to foreclose on farmland, as even after foreclosure, the property title cannot be held by a bank or mortgage company. Furthermore, the Bank of North Dakota, having powers similar to a Federal Reserve branch bank, exercised its power to limit the issuance of subprime mortgages and their collateralization in the form of derivative instruments, and so prevented a collapse of housing prices within the state in the wake of 2008's financial crisis. The original North Dakota State Capitol in Bismarck burned to the ground on December 28, 1930. It was replaced by a limestone -faced art-deco skyscraper that still stands today. A round of federal investment and construction projects began in the 1950s, including the Garrison Dam and the Minot and Grand Forks Air Force bases. Western North Dakota saw a boom in oil exploration in the late 1970s and early 1980s, as rising petroleum prices made development profitable. This boom came to an end after petroleum prices declined.",
+    "wiki_21st_century": "In 2010, the state had lower rates of unemployment than the national average, and increased job and population growth. Much of the growth has been based on development of the Bakken oil fields in the western part of the state. Estimates as to the remaining amount of oil in the area vary, with some estimating over 100 years' worth. For decades, North Dakota's annual murder and violent crime rates were regularly the lowest in the United States. In recent years, however, while still below the national average, crime has risen sharply. In 2016, the violent crime rate was three times higher than in 2004, with the rise occurring mostly in the late 2000s, coinciding with the oil boom era. This happened at a time when the national violent crime rate declined slightly. Workers in the oil boom towns have been blamed for much of the increase.",
+    "wiki_Geography": "North Dakota is located in the Upper Midwest region of the United States. It lies at the center of the North American continent and borders Canada to the north. The geographic center of North America is near the town of Rugby . Bismarck is the capital of North Dakota, and Fargo is the most populous city. North Dakota is in the U.S. region known as the Great Plains . The state shares the Red River of the North with Minnesota to the east. South Dakota is to the south, Montana is to the west, and the Canadian provinces of Saskatchewan and Manitoba are to the north. North Dakota is near the middle of North America with a stone marker in Rugby, North Dakota marking the \"Geographic Center of the North American Continent\". With an area of 70,762 square miles (183,273 km 2 ), 69,001 square miles (178,712 km 2 ) of which is land, North Dakota is the 19th largest state. The western half of the state consists of the hilly Great Plains as well as the northern part of the Badlands , which are to the west of the Missouri River . The state's high point, White Butte at 3,506 feet (1,069 m), and Theodore Roosevelt National Park are in the Badlands. The region is abundant in fossil fuels including natural gas , crude oil and lignite coal. The Missouri River forms Lake Sakakawea , the third largest artificial lake in the United States, behind the Garrison Dam . The central region of N.D. is divided into the Drift Prairie and the Missouri Plateau . The eastern part of N.D. consists of the flat Red River Valley , the bottom of glacial Lake Agassiz . Its fertile soil, drained by the meandering Red River flowing northward into Lake Winnipeg , supports a large agriculture industry. Devils Lake , the largest natural lake in the state, is also found in the east. Most of N.D. is covered in grassland ; crops cover most of eastern North Dakota but become increasingly sparse in the center and farther west. Natural trees in North Dakota are found usually where there is good drainage, such as the ravines and valley near the Pembina Gorge and Killdeer Mountains , the Turtle Mountains , the hills around Devils Lake, in the dunes area of McHenry County in central North Dakota, and along the Sheyenne Valley slopes and the Sheyenne delta. This diverse terrain supports nearly 2,000 species of plants. Soil is North Dakota's most precious resource. It is the base of the state's great agricultural wealth. North Dakota also has enormous mineral resources. These mineral resources include billions of tons of lignite coal. In addition, North Dakota has large oil reserves. Petroleum was discovered in the state in 1951 and quickly became one of North Dakota's most valuable mineral resources. In the early 2000s, the emergence of hydraulic fracturing technologies enabled mining companies to extract huge amounts of oil from the Bakken shale rock formation in the western part of the state. North Dakota public lands 5 national parks (National Park Service properties may be intended) [ clarification needed ] , 5 state forests, 63 national wildlife refuges, 3 national grassland, and 13 state parks plus there are state trust land, bureau of land management, waterfowl production areas, bureau of reclamation, bureau of land management, U.S. Army Corps of Engineers, state wildlife management areas North Dakota wildlife Currently there are 36 Level I species, 44 Level II species, and 35 Level III species. List of birds of North Dakota The basic NDGFD list contains 420 confirmed and extant species, two extinct species. Three additional species have been added from the North Dakota Bird Records Committee (NDBRC) review list with some additions from Avibase . The combined lists contain 420 species. Of them, 194 and a subspecies are on the review list (see below). The NDGFD list considers 44 species to be accidental, and eight species have been introduced to North America. List of mammals of North Dakota 87 species are known to live in the state. This includes mammals that are currently extirpated or locally extinct in North Dakota such as the gray wolf , swift fox , caribou and grizzly bear . List of insects of North Dakota 1,126 Species known in North Dakota List of fish of North Dakota 98 Species are currently known in North Dakota List of reptiles and amphibians of North Dakota 16 Species of Reptiles and 12 Amphibians have been found in the state. List of crustaceans/mussels of North Dakota Three species of crawfish are found in North Dakota: Devil, Calico, and Virile North Dakota is home to three freshwater shrimp species ( gammarus , hyalella and mysis ). The latter is an introduced species stocked in Lake Sakakawea in the early 1970s to add to the forage base. Cvancara's Aquatic Mussels of North Dakota from 1983. He documented 13 species of what are generally referred to as clams in the state along with 13 species of pill clams, which are very small clams, in the order of a few millimeters in length. He also documented 22 species of snails in N.D. North Dakota has a continental climate with warm summers and cold winters. The temperature differences are significant because of its far inland position and being roughly equal distance from the North Pole and the Equator. °F (°C) °F (°C) On February 21, 1918, Granville, North Dakota experienced a record-breaking 83 °F temperature increase over a 12-hour period, from a low of -33 °F to a high of 50 °F. Another weather record set in Langdon in the winter of 1935–36, with the temperature staying below 0 °F (−17.8 °C) for 41 consecutive days, January 11 though February 20. This is a record for any location in the contiguous United States. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Climate": "North Dakota has a continental climate with warm summers and cold winters. The temperature differences are significant because of its far inland position and being roughly equal distance from the North Pole and the Equator. °F (°C) °F (°C) On February 21, 1918, Granville, North Dakota experienced a record-breaking 83 °F temperature increase over a 12-hour period, from a low of -33 °F to a high of 50 °F. Another weather record set in Langdon in the winter of 1935–36, with the temperature staying below 0 °F (−17.8 °C) for 41 consecutive days, January 11 though February 20. This is a record for any location in the contiguous United States. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Demographics": "At the 2023 estimate North Dakota's population was 783,926 on July 1, 2023, a 0.62% increase since the 2020 United States census . North Dakota is the fourth least-populous state in the country; only Alaska , Vermont , and Wyoming have fewer residents. From fewer than 2,000 people in 1870, North Dakota's population grew to near 680,000 by 1930. Growth then slowed, and the population fluctuated slightly over the next seven decades, hitting a low of 617,761 in the 1970 census, with 642,200 in the 2000 census. In the 21st Century North Dakota has experienced significant growth reaching a record population of 783,926 in 2023. Except for Native Americans , the North Dakota population has a lesser percentage of minorities than in the nation as a whole. As of 2011, 20.7% of North Dakota's population younger than age 1 were minorities. The center of population of North Dakota is in Wells County , near Sykeston . According to HUD 's 2023 Annual Homeless Assessment Report , there were an estimated 784 homeless people in North Dakota. Note: Births in table don't add up, because Hispanics are counted both by their ethnicity and by their race, giving a higher overall number . Since 2016, data for births of White Hispanic origin are not collected, but included in one Hispanic group; persons of Hispanic origin may be of any race. From the 1930s until the end of the 20th century, North Dakota's population gradually declined, interrupted by a couple of brief increases. Young adults with university degrees were particularly likely to leave the state. With the advancing process of mechanization of agricultural practices, and environmental conditions requiring larger landholdings for successful agriculture, subsistence farming proved to be too risky for families. Many people moved to urban areas for jobs. Since the late 20th century, one of the major causes of migration from North Dakota is the lack of skilled jobs for college graduates. Expansion of economic development programs has been urged to create skilled and high-tech jobs, but the effectiveness of such programs has been open to debate. During the first decade of the 21st century, the population increased in large part because of jobs in the oil industry related to development of unconventional tight oil (shale oil) fields. Elsewhere, the Native American population has increased as some reservations have attracted people back from urban areas. According to the 2010 census , the racial and ethnic composition of North Dakota was 88.7% non-Hispanic white , 5.4% Native American , 1.2% Black or African American , 1.0% Asian , 0.1% Pacific Islander , 0.5% some other race, and 0.2% from two or more races . At the 2019 American Community Survey , North Dakota's racial and ethnic makeup was 83.6% non-Hispanic white, 2.9% Black or African American, 5.0% Native American and Alaska Native, 1.4% Asian, 0.4% Native Hawaiian or other Pacific Islander, 0.1% some other race, 2.7% multiracial, and 4.0% Hispanic or Latin American of any race. North Dakota is one of the top resettlement locations for refugees proportionally. According to the U.S. Office of Refugee Resettlement, in 2013–2014 \"more than 68 refugees\" per 100,000 North Dakotans were settled in the state. In fiscal year 2014, 582 refugees settled in the state. Fargo Mayor Mahoney said North Dakota accepting the most refugees per capita should be celebrated given the benefits they bring to the state. In 2015, Lutheran Social Services of North Dakota, the state's only resettlement agency, was \"awarded $458,090 in federal funding to improve refugee services\". 29.8% of immigrants in North Dakota are from Africa leading to a rapid increase in the black proportion of the population in recent decades from 0.6% in 2000 to 3.9% in 2020. Immigration from outside the United States resulted in a net increase of 3,323 people, and migration within the country produced a net loss of 21,110 people. Of the residents of North Dakota in 2009, 69.8% were born in North Dakota, 27.2% were born in a different state, 0.6% were born in Puerto Rico, U.S. Island areas, or born abroad to American parent(s), and 2.4% were born in another country. The age and gender distributions approximate the national average. In 2019, 4.1% were foreign-born residents. The Philippines , Bhutan , Nepal , Canada and Liberia are the top countries of origin for North Dakota's immigrants. The five federally recognized tribes in North Dakota are Mandan, Hidatsa, & Arikara Nation (Three Affiliated Tribes), the Spirit Lake Nation, the Standing Rock Sioux Tribe, the Turtle Mountain Band of Chippewa Indians and the Sisseton-Wahpeton Oyate Nation. In 2010, 94.86% (584,496) of North Dakotans over 5 years old spoke English as their primary language . 5.14% (31,684) of North Dakotans spoke a language other than English. 1.39% (8,593) spoke German , 1.37% (8,432) spoke Spanish , and 0.30% (1,847) spoke Norwegian . Other languages spoken included Serbo-Croatian (0.19%), Chinese and Japanese (both 0.15%), and Native American languages and French (both 0.13%). In 2000, 2.5% of the population spoke German in addition to English, reflecting early 20th century immigration. In 1940, 56.18% (355,400) of North Dakotans spoke English, 20.34% (128,700) spoke German, 12.85% (81,300) spoke Norwegian, 1.99% (12,600) spoke Swedish , and 8.64% (54,640) spoke some other language. The Pew Research Center determined 77% of the adult population was Christian in 2014. In contrast with many southern U.S. states, mainline Protestantism was the largest form of Protestantism practiced (28%). The largest mainline Protestant denomination in North Dakota was the Evangelical Lutheran Church in America , and the United Methodist Church was the second largest. Evangelical Protestants, forming the second largest Protestant branch (22%), were also dominated by Lutherans; the Lutheran Church–Missouri Synod was the largest Evangelical denomination. Among the Christian population of North Dakota, the Roman Catholic Church was the single largest Christian denomination. According to the Public Religion Research Institute in 2020, 75% of the adult population were Christian, with mainline Protestantism remaining the majority and evangelical Protestantism at 18% of the population. In 2022, the Public Religion Research Institute determined 80% of the population were Christian. Per the Pew Research Center in 2014, non-Christian religions accounted for 3% of the adult population, with Islam being the largest non-Christian religion. Other faiths such as Unitarians and New Agers collectively made up 1% of the practicing population. At the 2014 survey, 20% were unaffiliated with any religion, and 2% of North Dakotans were atheist; 13% of the population practiced nothing in particular. The 2020 Public Religion Research Institute's survey determined 22% were unaffiliated with any religion, and 12% in 2022. The largest church bodies by number of adherents in 2010 were the Roman Catholic Church with 167,349; the Evangelical Lutheran Church in America with 163,209; and the Lutheran Church–Missouri Synod with 22,003. In 2006, North Dakota had the most churches per capita of any state. Additionally, North Dakota had the highest percentage of church-going population of any state in 2006. By 2020, the Association of Religion Data Archives numbered 164,843, remaining the largest Christian body by attendance; it had an adherence rate of 211.58 per 1,000 people. A 2001 survey indicated 35% of North Dakota's population was Lutheran , and 30% was Catholic. Other religious groups represented were Methodists (7%), Baptists (6%), the Assemblies of God (3%), Presbyterians (1.27%), and Jehovah's Witnesses (1%). Christians with unstated or other denominational affiliations, including other Protestants and the Church of Jesus Christ of Latter-day Saints (LDS Church), totaled 3%, bringing the total Christian population to 86%. There were an estimated 920 Muslims and 730 Jews in the state in 2000. Three percent of respondents answered \"no religion\" on the survey, and 6% declined to answer.",
+    "wiki_Population": "At the 2023 estimate North Dakota's population was 783,926 on July 1, 2023, a 0.62% increase since the 2020 United States census . North Dakota is the fourth least-populous state in the country; only Alaska , Vermont , and Wyoming have fewer residents. From fewer than 2,000 people in 1870, North Dakota's population grew to near 680,000 by 1930. Growth then slowed, and the population fluctuated slightly over the next seven decades, hitting a low of 617,761 in the 1970 census, with 642,200 in the 2000 census. In the 21st Century North Dakota has experienced significant growth reaching a record population of 783,926 in 2023. Except for Native Americans , the North Dakota population has a lesser percentage of minorities than in the nation as a whole. As of 2011, 20.7% of North Dakota's population younger than age 1 were minorities. The center of population of North Dakota is in Wells County , near Sykeston . According to HUD 's 2023 Annual Homeless Assessment Report , there were an estimated 784 homeless people in North Dakota.",
+    "wiki_Race_and_ethnicity": "Note: Births in table don't add up, because Hispanics are counted both by their ethnicity and by their race, giving a higher overall number . Since 2016, data for births of White Hispanic origin are not collected, but included in one Hispanic group; persons of Hispanic origin may be of any race. From the 1930s until the end of the 20th century, North Dakota's population gradually declined, interrupted by a couple of brief increases. Young adults with university degrees were particularly likely to leave the state. With the advancing process of mechanization of agricultural practices, and environmental conditions requiring larger landholdings for successful agriculture, subsistence farming proved to be too risky for families. Many people moved to urban areas for jobs. Since the late 20th century, one of the major causes of migration from North Dakota is the lack of skilled jobs for college graduates. Expansion of economic development programs has been urged to create skilled and high-tech jobs, but the effectiveness of such programs has been open to debate. During the first decade of the 21st century, the population increased in large part because of jobs in the oil industry related to development of unconventional tight oil (shale oil) fields. Elsewhere, the Native American population has increased as some reservations have attracted people back from urban areas. According to the 2010 census , the racial and ethnic composition of North Dakota was 88.7% non-Hispanic white , 5.4% Native American , 1.2% Black or African American , 1.0% Asian , 0.1% Pacific Islander , 0.5% some other race, and 0.2% from two or more races . At the 2019 American Community Survey , North Dakota's racial and ethnic makeup was 83.6% non-Hispanic white, 2.9% Black or African American, 5.0% Native American and Alaska Native, 1.4% Asian, 0.4% Native Hawaiian or other Pacific Islander, 0.1% some other race, 2.7% multiracial, and 4.0% Hispanic or Latin American of any race. North Dakota is one of the top resettlement locations for refugees proportionally. According to the U.S. Office of Refugee Resettlement, in 2013–2014 \"more than 68 refugees\" per 100,000 North Dakotans were settled in the state. In fiscal year 2014, 582 refugees settled in the state. Fargo Mayor Mahoney said North Dakota accepting the most refugees per capita should be celebrated given the benefits they bring to the state. In 2015, Lutheran Social Services of North Dakota, the state's only resettlement agency, was \"awarded $458,090 in federal funding to improve refugee services\". 29.8% of immigrants in North Dakota are from Africa leading to a rapid increase in the black proportion of the population in recent decades from 0.6% in 2000 to 3.9% in 2020. Immigration from outside the United States resulted in a net increase of 3,323 people, and migration within the country produced a net loss of 21,110 people. Of the residents of North Dakota in 2009, 69.8% were born in North Dakota, 27.2% were born in a different state, 0.6% were born in Puerto Rico, U.S. Island areas, or born abroad to American parent(s), and 2.4% were born in another country. The age and gender distributions approximate the national average. In 2019, 4.1% were foreign-born residents. The Philippines , Bhutan , Nepal , Canada and Liberia are the top countries of origin for North Dakota's immigrants.",
+    "wiki_Native_American_tribes": "The five federally recognized tribes in North Dakota are Mandan, Hidatsa, & Arikara Nation (Three Affiliated Tribes), the Spirit Lake Nation, the Standing Rock Sioux Tribe, the Turtle Mountain Band of Chippewa Indians and the Sisseton-Wahpeton Oyate Nation.",
+    "wiki_Languages": "In 2010, 94.86% (584,496) of North Dakotans over 5 years old spoke English as their primary language . 5.14% (31,684) of North Dakotans spoke a language other than English. 1.39% (8,593) spoke German , 1.37% (8,432) spoke Spanish , and 0.30% (1,847) spoke Norwegian . Other languages spoken included Serbo-Croatian (0.19%), Chinese and Japanese (both 0.15%), and Native American languages and French (both 0.13%). In 2000, 2.5% of the population spoke German in addition to English, reflecting early 20th century immigration. In 1940, 56.18% (355,400) of North Dakotans spoke English, 20.34% (128,700) spoke German, 12.85% (81,300) spoke Norwegian, 1.99% (12,600) spoke Swedish , and 8.64% (54,640) spoke some other language.",
+    "wiki_Religion": "The Pew Research Center determined 77% of the adult population was Christian in 2014. In contrast with many southern U.S. states, mainline Protestantism was the largest form of Protestantism practiced (28%). The largest mainline Protestant denomination in North Dakota was the Evangelical Lutheran Church in America , and the United Methodist Church was the second largest. Evangelical Protestants, forming the second largest Protestant branch (22%), were also dominated by Lutherans; the Lutheran Church–Missouri Synod was the largest Evangelical denomination. Among the Christian population of North Dakota, the Roman Catholic Church was the single largest Christian denomination. According to the Public Religion Research Institute in 2020, 75% of the adult population were Christian, with mainline Protestantism remaining the majority and evangelical Protestantism at 18% of the population. In 2022, the Public Religion Research Institute determined 80% of the population were Christian. Per the Pew Research Center in 2014, non-Christian religions accounted for 3% of the adult population, with Islam being the largest non-Christian religion. Other faiths such as Unitarians and New Agers collectively made up 1% of the practicing population. At the 2014 survey, 20% were unaffiliated with any religion, and 2% of North Dakotans were atheist; 13% of the population practiced nothing in particular. The 2020 Public Religion Research Institute's survey determined 22% were unaffiliated with any religion, and 12% in 2022. The largest church bodies by number of adherents in 2010 were the Roman Catholic Church with 167,349; the Evangelical Lutheran Church in America with 163,209; and the Lutheran Church–Missouri Synod with 22,003. In 2006, North Dakota had the most churches per capita of any state. Additionally, North Dakota had the highest percentage of church-going population of any state in 2006. By 2020, the Association of Religion Data Archives numbered 164,843, remaining the largest Christian body by attendance; it had an adherence rate of 211.58 per 1,000 people. A 2001 survey indicated 35% of North Dakota's population was Lutheran , and 30% was Catholic. Other religious groups represented were Methodists (7%), Baptists (6%), the Assemblies of God (3%), Presbyterians (1.27%), and Jehovah's Witnesses (1%). Christians with unstated or other denominational affiliations, including other Protestants and the Church of Jesus Christ of Latter-day Saints (LDS Church), totaled 3%, bringing the total Christian population to 86%. There were an estimated 920 Muslims and 730 Jews in the state in 2000. Three percent of respondents answered \"no religion\" on the survey, and 6% declined to answer.",
+    "wiki_Economy": "Agriculture is North Dakota's largest industry, although petroleum, food processing , and technology are also major industries. Its growth rate is about 4.1%. According to the U.S. Bureau of Economic Analysis the economy of North Dakota had a gross domestic product of $55.180 billion in the second quarter of 2018. The per capita income for the state was $34,256, when measured from 2013 to 2017 by the United States Department of Commerce. The three-year median household income from 2013 to 2017 was $61,285. In 2025, 98.8% of businesses in North Dakota were small businesses , and employed 57.6% of the state's work force. According to Gallup data, North Dakota led the U.S. in job creation in 2013 and has done so since 2009. The state has a Job Creation Index score of 40, nearly 10 points ahead of its nearest competitors. North Dakota has added 56,600 private-sector jobs since 2011, creating an annual growth rate of 7.32 percent. According to statistics released in December 2020, by the Bureau of Economic Analysis , North Dakota had the highest rate of annual growth in personal consumption expenditures of all 50 states, from 2009 to 2018. During this time period, annual nominal personal income growth averaged 6% per year, compared to the U.S. average of 4.4%. North Dakota's personal income growth is tied to various private business sectors such as agriculture, energy development, and construction. North Dakota also had the highest growth in personal expenditures on housing and utilities of all states, reflecting the sharply increased demand for housing in the 2010s. Just over 21% of North Dakota's total 2013 gross domestic product (GDP) of $49.77 billion comes from natural resources and mining. North Dakota is the only state with a state-owned bank, the Bank of North Dakota in Bismarck , and a state-owned flour mill , the North Dakota Mill and Elevator in Grand Forks . These were established by the NPL before World War II. As of 2012, Fargo is home to the second-largest campus of Microsoft with 1,700 employees, and Amazon.com employs several hundred in Grand Forks. As of May 2025 [update] , the state's unemployment rate was 2.5%. With the exception of a five-month period in 2020, the unemployment rate remained below five percent each month since 1987. At end of 2010, the state per capita income was ranked 17th in the nation, the biggest increase of any state in a decade from rank 38th. The reduction in the unemployment rate and growth in per capita income is attributable to the oil boom in the state. Due to a combination of oil-related development and investing in technology and service industries, North Dakota has had a budget surplus every year since the 2008 market crash. Since 1976, the highest that North Dakota's unemployment rate has reached is just 6.2%, recorded in 1983. Every U.S. state except neighboring South Dakota has had a higher unemployment rate during that period. North Dakota's earliest industries were fur trading and agriculture. Although less than 10% of the population is employed in the agricultural sector, it remains a major part of the state's economy. With industrial-scale farming, it ranks 9th in the nation in the value of crops and 18th in total value of agricultural products sold. Large farms generate the most crops. The share of people in the state employed in agriculture is comparatively high: as of 2008 [update] , only two to three percent of the population of the United States is directly employed in agriculture. North Dakota has about 90% of its land area in farms with 27,500,000 acres (111,000 km 2 ) of cropland, the third-largest amount in the nation. Between 2002 and 2007, total cropland increased by about a million acres (4,000 km 2 ); North Dakota was the only state showing an increase. Over the same period, 1,800,000 acres (7,300 km 2 ) were shifted into soybean and corn monoculture production, the largest such shift in the United States. Agriculturalists are concerned about too much monoculture, as it makes the economy at risk from insect or crop diseases affecting a major crop. In addition, this development has adversely affected habitats of wildlife and birds, and the balance of the ecosystem. The state is the largest producer in the U.S. of many cereal grains, including barley (36% of U.S. crop), durum wheat (58%), hard red spring wheat (48%), oats (17%), and combined wheat of all types (15%). It is the second leading producer of buckwheat (20%). As of 2007 [update] , corn became the state's largest crop produced, although it is only 2% of total U.S. production. The Corn Belt extends to North Dakota but is more on the edge of the region instead of in its center. Corn yields are high in the southeast part of the state and smaller in other parts of the state. Most of the cereal grains are grown for livestock feed . The state is the leading producer of many oilseeds, including 92% of the U.S. canola crop, 94% of flax seed, 53% of sunflower seeds , 18% of safflower seeds, and 62% of mustard seed . Canola is suited to the cold winters and it matures fast. Processing of canola for oil production produces canola meal as a by-product. The by-product is a high-protein animal feed. Soybeans are also an increasingly important crop, with 400,000 acres (1,600 km 2 ) additional planted between 2002 and 2007. Soybeans are a major crop in the eastern part of the state, and cultivation is common in the southeast part of the state. Soybeans were not grown at all in North Dakota in the 1940s, but the crop has become especially common since 1998. In North Dakota soybeans have to mature fast, because of the comparatively short growing season . Soybeans are grown for livestock feed. North Dakota is the second leading producer of sugarbeets , which are grown mostly in the Red River Valley . The state is also the largest producer of honey, dry edible peas and beans, lentils , and the third-largest producer of potatoes. North Dakota's Top Agricultural Commodities (according to the USDA as of 2011 [update] ) The energy industry is a major contributor to the economy. North Dakota has both coal and oil reserves. On average, the state's production of oil production grew at average annual rate of 48.4% from 2009 to 2018. During these years, oil production increased each year from 2009 to 2015, with 2016 marked by a slight decline and a return to growth since. As of 2006 , Shale gas was produced and Lignite coal reserves in Western North Dakota were used to generate about 90% of the electricity consumed, and electricity was also exported to nearby states. In 2009, North Dakota had the second largest lignite coal production in the U.S. Lignite coal is the lowest grade coal (latent high moisture content and low energy density). There are larger and higher grade coal reserves ( anthracite , bituminous coal and subbituminous coal ) in other U.S. states. Oil was discovered near Tioga in 1951, generating 53 million barrels (8,400,000 m 3 ) of oil a year by 1984. Recoverable oil reserves have jumped dramatically recently. The oil reserves of the Bakken Formation may hold up to 400 billion barrels (6.4 × 10 10 m 3 ) of oil, 25 times larger than the reserves in the Arctic National Wildlife Refuge . A report issued in April 2008 by the U.S. Geological Survey estimated the oil recoverable by current technology in the Bakken formation is two orders of magnitude less, in the range of 3 billion barrels (480 × 10 ^ 6 m 3 ) to 4.3 billion barrels (680 × 10 ^ 6 m 3 ), with a mean of 3.65 billion barrels (580 × 10 ^ 6 m 3 ). The northwestern part of the state has been the center of the North Dakota oil boom . The Williston , Tioga , Stanley and Minot - Burlington communities are having rapid growth that strains housing and local services. As of 30 November 2022 [update] , the state is the 2nd-largest oil producer in the U.S., with an average of 1,097,716 barrels (174,522.9 m 3 ) per day while producing 3,029,032 thousand cubic feet (85,772,600 m 3 ) per day of natural gas for a total of 1,619,963 barrels (257,553.5 m 3 ) of oil equivalent ( BOE ). The Great Plains region, which includes the state of North Dakota, has been referred to as \"the Saudi Arabia of wind energy \". There, wind speeds seldom go below 10 miles per hour (16 km/h). [ citation needed ] North Dakota is considered the least visited state, owing, in part, to its not having a major tourist attraction. Nonetheless, tourism is North Dakota's third largest industry, contributing more than $3 billion into the state's economy annually. Outdoor attractions such as the 144-mile (232 km) Maah Daah Hey Trail and activities such as fishing and hunting attract visitors. The state is known for the Lewis & Clark Trail and being the winter camp of the Corps of Discovery. Areas popular with visitors include Theodore Roosevelt National Park in the western part of the state. In 2024, the park received 732,000 recreational visitors. Regular events in the state that attract tourists include Norsk Høstfest in Minot , billed (as of 2006) as North America's largest Scandinavian festival; the Medora Musical ; and the North Dakota State Fair . The state also receives a significant number of visitors from the neighboring Canadian provinces of Manitoba and Saskatchewan, particularly when the exchange rate is favorable. International tourists have also come to visit the Oscar-Zero Missile Alert Facility . North Dakota has one level-I trauma center , six level-II trauma centers, 44 hospitals , 52 rural health clinics , and 80 nursing homes . Major provider networks include Sanford , St. Alexius , Trinity , and Altru . Blue Cross Blue Shield of North Dakota is the largest medical insurer in the state. North Dakota expanded Medicaid in 2014, and its health insurance exchange is the federal site, HealthCare.gov . North Dakota law requires pharmacies, other than hospital dispensaries and pre-existing stores, to be majority-owned by pharmacists. Voters rejected a proposal to change the law in 2014.",
+    "wiki_Agriculture": "North Dakota's earliest industries were fur trading and agriculture. Although less than 10% of the population is employed in the agricultural sector, it remains a major part of the state's economy. With industrial-scale farming, it ranks 9th in the nation in the value of crops and 18th in total value of agricultural products sold. Large farms generate the most crops. The share of people in the state employed in agriculture is comparatively high: as of 2008 [update] , only two to three percent of the population of the United States is directly employed in agriculture. North Dakota has about 90% of its land area in farms with 27,500,000 acres (111,000 km 2 ) of cropland, the third-largest amount in the nation. Between 2002 and 2007, total cropland increased by about a million acres (4,000 km 2 ); North Dakota was the only state showing an increase. Over the same period, 1,800,000 acres (7,300 km 2 ) were shifted into soybean and corn monoculture production, the largest such shift in the United States. Agriculturalists are concerned about too much monoculture, as it makes the economy at risk from insect or crop diseases affecting a major crop. In addition, this development has adversely affected habitats of wildlife and birds, and the balance of the ecosystem. The state is the largest producer in the U.S. of many cereal grains, including barley (36% of U.S. crop), durum wheat (58%), hard red spring wheat (48%), oats (17%), and combined wheat of all types (15%). It is the second leading producer of buckwheat (20%). As of 2007 [update] , corn became the state's largest crop produced, although it is only 2% of total U.S. production. The Corn Belt extends to North Dakota but is more on the edge of the region instead of in its center. Corn yields are high in the southeast part of the state and smaller in other parts of the state. Most of the cereal grains are grown for livestock feed . The state is the leading producer of many oilseeds, including 92% of the U.S. canola crop, 94% of flax seed, 53% of sunflower seeds , 18% of safflower seeds, and 62% of mustard seed . Canola is suited to the cold winters and it matures fast. Processing of canola for oil production produces canola meal as a by-product. The by-product is a high-protein animal feed. Soybeans are also an increasingly important crop, with 400,000 acres (1,600 km 2 ) additional planted between 2002 and 2007. Soybeans are a major crop in the eastern part of the state, and cultivation is common in the southeast part of the state. Soybeans were not grown at all in North Dakota in the 1940s, but the crop has become especially common since 1998. In North Dakota soybeans have to mature fast, because of the comparatively short growing season . Soybeans are grown for livestock feed. North Dakota is the second leading producer of sugarbeets , which are grown mostly in the Red River Valley . The state is also the largest producer of honey, dry edible peas and beans, lentils , and the third-largest producer of potatoes. North Dakota's Top Agricultural Commodities (according to the USDA as of 2011 [update] )",
+    "wiki_Energy": "The energy industry is a major contributor to the economy. North Dakota has both coal and oil reserves. On average, the state's production of oil production grew at average annual rate of 48.4% from 2009 to 2018. During these years, oil production increased each year from 2009 to 2015, with 2016 marked by a slight decline and a return to growth since. As of 2006 , Shale gas was produced and Lignite coal reserves in Western North Dakota were used to generate about 90% of the electricity consumed, and electricity was also exported to nearby states. In 2009, North Dakota had the second largest lignite coal production in the U.S. Lignite coal is the lowest grade coal (latent high moisture content and low energy density). There are larger and higher grade coal reserves ( anthracite , bituminous coal and subbituminous coal ) in other U.S. states. Oil was discovered near Tioga in 1951, generating 53 million barrels (8,400,000 m 3 ) of oil a year by 1984. Recoverable oil reserves have jumped dramatically recently. The oil reserves of the Bakken Formation may hold up to 400 billion barrels (6.4 × 10 10 m 3 ) of oil, 25 times larger than the reserves in the Arctic National Wildlife Refuge . A report issued in April 2008 by the U.S. Geological Survey estimated the oil recoverable by current technology in the Bakken formation is two orders of magnitude less, in the range of 3 billion barrels (480 × 10 ^ 6 m 3 ) to 4.3 billion barrels (680 × 10 ^ 6 m 3 ), with a mean of 3.65 billion barrels (580 × 10 ^ 6 m 3 ). The northwestern part of the state has been the center of the North Dakota oil boom . The Williston , Tioga , Stanley and Minot - Burlington communities are having rapid growth that strains housing and local services. As of 30 November 2022 [update] , the state is the 2nd-largest oil producer in the U.S., with an average of 1,097,716 barrels (174,522.9 m 3 ) per day while producing 3,029,032 thousand cubic feet (85,772,600 m 3 ) per day of natural gas for a total of 1,619,963 barrels (257,553.5 m 3 ) of oil equivalent ( BOE ). The Great Plains region, which includes the state of North Dakota, has been referred to as \"the Saudi Arabia of wind energy \". There, wind speeds seldom go below 10 miles per hour (16 km/h). [ citation needed ]",
+    "wiki_Tourism": "North Dakota is considered the least visited state, owing, in part, to its not having a major tourist attraction. Nonetheless, tourism is North Dakota's third largest industry, contributing more than $3 billion into the state's economy annually. Outdoor attractions such as the 144-mile (232 km) Maah Daah Hey Trail and activities such as fishing and hunting attract visitors. The state is known for the Lewis & Clark Trail and being the winter camp of the Corps of Discovery. Areas popular with visitors include Theodore Roosevelt National Park in the western part of the state. In 2024, the park received 732,000 recreational visitors. Regular events in the state that attract tourists include Norsk Høstfest in Minot , billed (as of 2006) as North America's largest Scandinavian festival; the Medora Musical ; and the North Dakota State Fair . The state also receives a significant number of visitors from the neighboring Canadian provinces of Manitoba and Saskatchewan, particularly when the exchange rate is favorable. International tourists have also come to visit the Oscar-Zero Missile Alert Facility .",
+    "wiki_Health_care": "North Dakota has one level-I trauma center , six level-II trauma centers, 44 hospitals , 52 rural health clinics , and 80 nursing homes . Major provider networks include Sanford , St. Alexius , Trinity , and Altru . Blue Cross Blue Shield of North Dakota is the largest medical insurer in the state. North Dakota expanded Medicaid in 2014, and its health insurance exchange is the federal site, HealthCare.gov . North Dakota law requires pharmacies, other than hospital dispensaries and pre-existing stores, to be majority-owned by pharmacists. Voters rejected a proposal to change the law in 2014.",
+    "wiki_Culture": "In the 21st century, North Dakota has an increasing population of Native Americans, who as of 2025 made up 5.3% of the population. By the early 19th century the territory was dominated by Siouan-speaking peoples, whose territory stretched west from the Great Lakes area. The word \"Dakota\" is a Sioux (Lakota/Dakota) word meaning \"allies\" or \"friends\". The primary historic tribal nations in or around North Dakota, are the Lakota and the Dakota (\" The Great Sioux Nation \" or \"Oceti Sakowin\", meaning the seven council fires), the Blackfoot , the Cheyenne , the Chippewa (known as Ojibwe in Canada), and the Mandan . There are six Indian reservations in North Dakota-- Spirit Lake Reservation , Standing Rock Sioux Reservation , Sisseton Wahpeton Oyate , Fort Berthold Indian Reservation , Turtle Mountain Indian Reservation , and The Mandan, Hidatsa, and Arikara Nation . Social gatherings known as \" powwows \" (or wacipis in Lakota/Dakota) continue to be an important part of Native American culture and are held regularly throughout the state. Throughout Native American history, powwows were held, usually in the spring, to rejoice at the beginning of new life and the end of the winter cold. These events brought Native American tribes together for singing and dancing and allowed them to meet with old friends and acquaintances, as well as to make new ones. Many powwows also held religious significance for some tribes. Today, powwows are still a part of the Native American culture and are attended by Natives and non-Natives alike. In North Dakota, the United Tribes International Powwow held each September in the capital of Bismarck , is one of the largest powwows in the United States. A pow wow is an occasion for parades and Native American dancers in regalia, with many dancing styles presented. It is traditional for male dancers to wear regalia decorated with beads, quills, and eagle feathers; male grass dancers wear colorful fringe regalia, and male fancy dancers wear brightly colored feathers. Female dancers dance much more subtly than male dancers. Fancy female dancers wear cloth, beaded moccasins, and jewelry, while the jingle dress dancer wears a dress made of metal cones. Inter-tribal dances during the powwow, allow everyone (even spectators) to take part in the dancing. Around 1870 many European immigrants from Norway settled in North Dakota's northeastern corner, especially near the Red River. Icelanders also arrived from Canada. Pembina was a town of many Norwegians when it was founded; they worked on family farms. They started Lutheran churches and schools, greatly outnumbering other denominations in the area. This group has unique foods such as lefse and lutefisk . The continent's largest Scandinavian event, Norsk Høstfest , is celebrated each September in Minot's North Dakota State Fair Center , a local attraction featuring art, architecture, and cultural artifacts from all five Nordic countries. The Icelandic State Park in Pembina County and an annual Icelandic festival reflect immigrants from that country, who are also descended from Scandinavians. Old World folk customs have persisted for decades in North Dakota, with the revival of techniques in weaving, silver crafting, and wood carving. Traditional turf-roof houses are displayed in parks; this style originated in Iceland. A stave church is a landmark in Minot. Norwegian-Americans constitute nearly one-third or 32.3% of Minot's total population and 30.8% of North Dakota's total population. Some months after she had become empress of the Russian Empire in 1762, Catherine the Great invited Ethnic Germans to migrate to Russia. Many came, settled for several generations and became Russia Germans . They grew dissatisfied in the nineteenth century [ when? ] because of economic problems and because of the revocation of religious freedoms for Mennonites and Hutterites , in particular after in 1871, the exemption from military service in the Imperial Russian Army was revocated. Most Mennonites and Hutterites migrated to America in the late 1870s . By 1900, about 100,000 had immigrated to the U.S., settling primarily in North Dakota, South Dakota, Kansas , and Nebraska . The south-central part of North Dakota became known as \"the German-Russian triangle\". By 1910, about 60,000 ethnic Germans from Russia lived in Central North Dakota. These individuals were Lutherans, Mennonites, Hutterites and Roman Catholics who had kept most of their German customs of the time when their ancestors immigrated to Russia. They were committed to agriculture. Traditional iron cemetery grave markers were a famous art form practiced by ethnic Germans. North Dakota's major fine art museums and venues include the Chester Fritz Auditorium , Empire Arts Center , the Fargo Theatre , North Dakota Museum of Art , and the Plains Art Museum . The Bismarck-Mandan Symphony Orchestra , Fargo-Moorhead Symphony Orchestra , Greater Grand Forks Symphony Orchestra , Minot Symphony Orchestra and Great Plains Harmony Chorus are full-time professional and semi-professional musical ensembles who perform concerts and offer educational programs to their communities. North Dakotan musicians of many genres include blues guitarist Jonny Lang , country music singer Lynn Anderson , jazz and traditional pop singer and songwriter Peggy Lee , big band leader Lawrence Welk , and pop singer Bobby Vee . Hollywood and TV star Angie Dickinson was born in Kulm and moved to Burbank, California as a ten-year-old. Ed Schultz was known around the country as the host of progressive talk radio show, The Ed Schultz Show , and The Ed Show on MSNBC . Shadoe Stevens hosted American Top 40 from 1988 to 1995. Josh Duhamel is an Emmy Award -winning actor known for his roles in All My Children and Las Vegas . Nicole Linkletter and CariDee English were winning contestants of Cycles 5 and 7 , respectively, of America's Next Top Model . Kellan Lutz has appeared in movies such as Stick It , Accepted , Prom Night , and Twilight . Bismarck was home of the Dakota Wizards of the NBA Development League and the Bismarck Bucks of the Indoor Football League . North Dakota has two NCAA Division I teams, the North Dakota Fighting Hawks and North Dakota State Bison , and three Division II teams, the Mary Marauders , Minot State Beavers and Jamestown Jimmies . Fargo is home to the USHL ice hockey team the Fargo Force . Fargo is also the home of the Fargo-Moorhead RedHawks of the American Association . The North Dakota High School Activities Association features more than 25,000 participants. Outdoor activities such as hunting and fishing are hobbies for many North Dakotans. Ice fishing , skiing , and snowmobiling are also popular during the winter months. Residents of North Dakota may own or visit a cabin along a lake. Popular sport fish include walleye , perch , and northern pike . The western terminus of the North Country National Scenic Trail is on Lake Sakakawea , where it abuts the Lewis and Clark Trail.",
+    "wiki_Native_American_First_Nations": "In the 21st century, North Dakota has an increasing population of Native Americans, who as of 2025 made up 5.3% of the population. By the early 19th century the territory was dominated by Siouan-speaking peoples, whose territory stretched west from the Great Lakes area. The word \"Dakota\" is a Sioux (Lakota/Dakota) word meaning \"allies\" or \"friends\". The primary historic tribal nations in or around North Dakota, are the Lakota and the Dakota (\" The Great Sioux Nation \" or \"Oceti Sakowin\", meaning the seven council fires), the Blackfoot , the Cheyenne , the Chippewa (known as Ojibwe in Canada), and the Mandan . There are six Indian reservations in North Dakota-- Spirit Lake Reservation , Standing Rock Sioux Reservation , Sisseton Wahpeton Oyate , Fort Berthold Indian Reservation , Turtle Mountain Indian Reservation , and The Mandan, Hidatsa, and Arikara Nation .",
+    "wiki_Pow_wows": "Social gatherings known as \" powwows \" (or wacipis in Lakota/Dakota) continue to be an important part of Native American culture and are held regularly throughout the state. Throughout Native American history, powwows were held, usually in the spring, to rejoice at the beginning of new life and the end of the winter cold. These events brought Native American tribes together for singing and dancing and allowed them to meet with old friends and acquaintances, as well as to make new ones. Many powwows also held religious significance for some tribes. Today, powwows are still a part of the Native American culture and are attended by Natives and non-Natives alike. In North Dakota, the United Tribes International Powwow held each September in the capital of Bismarck , is one of the largest powwows in the United States. A pow wow is an occasion for parades and Native American dancers in regalia, with many dancing styles presented. It is traditional for male dancers to wear regalia decorated with beads, quills, and eagle feathers; male grass dancers wear colorful fringe regalia, and male fancy dancers wear brightly colored feathers. Female dancers dance much more subtly than male dancers. Fancy female dancers wear cloth, beaded moccasins, and jewelry, while the jingle dress dancer wears a dress made of metal cones. Inter-tribal dances during the powwow, allow everyone (even spectators) to take part in the dancing.",
+    "wiki_Norwegian_and_Icelandic_influences": "Around 1870 many European immigrants from Norway settled in North Dakota's northeastern corner, especially near the Red River. Icelanders also arrived from Canada. Pembina was a town of many Norwegians when it was founded; they worked on family farms. They started Lutheran churches and schools, greatly outnumbering other denominations in the area. This group has unique foods such as lefse and lutefisk . The continent's largest Scandinavian event, Norsk Høstfest , is celebrated each September in Minot's North Dakota State Fair Center , a local attraction featuring art, architecture, and cultural artifacts from all five Nordic countries. The Icelandic State Park in Pembina County and an annual Icelandic festival reflect immigrants from that country, who are also descended from Scandinavians. Old World folk customs have persisted for decades in North Dakota, with the revival of techniques in weaving, silver crafting, and wood carving. Traditional turf-roof houses are displayed in parks; this style originated in Iceland. A stave church is a landmark in Minot. Norwegian-Americans constitute nearly one-third or 32.3% of Minot's total population and 30.8% of North Dakota's total population.",
+    "wiki_Germans_from_Russia": "Some months after she had become empress of the Russian Empire in 1762, Catherine the Great invited Ethnic Germans to migrate to Russia. Many came, settled for several generations and became Russia Germans . They grew dissatisfied in the nineteenth century [ when? ] because of economic problems and because of the revocation of religious freedoms for Mennonites and Hutterites , in particular after in 1871, the exemption from military service in the Imperial Russian Army was revocated. Most Mennonites and Hutterites migrated to America in the late 1870s . By 1900, about 100,000 had immigrated to the U.S., settling primarily in North Dakota, South Dakota, Kansas , and Nebraska . The south-central part of North Dakota became known as \"the German-Russian triangle\". By 1910, about 60,000 ethnic Germans from Russia lived in Central North Dakota. These individuals were Lutherans, Mennonites, Hutterites and Roman Catholics who had kept most of their German customs of the time when their ancestors immigrated to Russia. They were committed to agriculture. Traditional iron cemetery grave markers were a famous art form practiced by ethnic Germans.",
+    "wiki_Fine_and_performing_arts": "North Dakota's major fine art museums and venues include the Chester Fritz Auditorium , Empire Arts Center , the Fargo Theatre , North Dakota Museum of Art , and the Plains Art Museum . The Bismarck-Mandan Symphony Orchestra , Fargo-Moorhead Symphony Orchestra , Greater Grand Forks Symphony Orchestra , Minot Symphony Orchestra and Great Plains Harmony Chorus are full-time professional and semi-professional musical ensembles who perform concerts and offer educational programs to their communities.",
+    "wiki_Entertainment": "North Dakotan musicians of many genres include blues guitarist Jonny Lang , country music singer Lynn Anderson , jazz and traditional pop singer and songwriter Peggy Lee , big band leader Lawrence Welk , and pop singer Bobby Vee . Hollywood and TV star Angie Dickinson was born in Kulm and moved to Burbank, California as a ten-year-old. Ed Schultz was known around the country as the host of progressive talk radio show, The Ed Schultz Show , and The Ed Show on MSNBC . Shadoe Stevens hosted American Top 40 from 1988 to 1995. Josh Duhamel is an Emmy Award -winning actor known for his roles in All My Children and Las Vegas . Nicole Linkletter and CariDee English were winning contestants of Cycles 5 and 7 , respectively, of America's Next Top Model . Kellan Lutz has appeared in movies such as Stick It , Accepted , Prom Night , and Twilight .",
+    "wiki_Sports": "Bismarck was home of the Dakota Wizards of the NBA Development League and the Bismarck Bucks of the Indoor Football League . North Dakota has two NCAA Division I teams, the North Dakota Fighting Hawks and North Dakota State Bison , and three Division II teams, the Mary Marauders , Minot State Beavers and Jamestown Jimmies . Fargo is home to the USHL ice hockey team the Fargo Force . Fargo is also the home of the Fargo-Moorhead RedHawks of the American Association . The North Dakota High School Activities Association features more than 25,000 participants. Outdoor activities such as hunting and fishing are hobbies for many North Dakotans. Ice fishing , skiing , and snowmobiling are also popular during the winter months. Residents of North Dakota may own or visit a cabin along a lake. Popular sport fish include walleye , perch , and northern pike . The western terminus of the North Country National Scenic Trail is on Lake Sakakawea , where it abuts the Lewis and Clark Trail.",
+    "wiki_Education": "The state has 11 public colleges and universities, five Tribal colleges and universities , and four private schools. The largest institutions are North Dakota State University and the University of North Dakota . The higher education system consists of the following institutions: North Dakota University System (public institutions): Tribal institutions: Private institutions: There were 142 schools in North Dakota cities and 4,722 one room schools in the state in 1917. The urban schools had 36,008 students, and 83,167 students attended the one room schools. 1,889 of the one room schools closed between 1929 and 1954. In 1954 North Dakotan cities had 513 schools while 2,447 one room schools were in the state. At that time the urban schools had 94,019 students while the one room schools had 25,212 students. The Nation's Report Card ranks North Dakota fifteenth in the country in K-12 education based on standardized test scores.",
+    "wiki_Higher_education": "The state has 11 public colleges and universities, five Tribal colleges and universities , and four private schools. The largest institutions are North Dakota State University and the University of North Dakota . The higher education system consists of the following institutions: North Dakota University System (public institutions): Tribal institutions: Private institutions:",
+    "wiki_Primary_and_secondary_education": "There were 142 schools in North Dakota cities and 4,722 one room schools in the state in 1917. The urban schools had 36,008 students, and 83,167 students attended the one room schools. 1,889 of the one room schools closed between 1929 and 1954. In 1954 North Dakotan cities had 513 schools while 2,447 one room schools were in the state. At that time the urban schools had 94,019 students while the one room schools had 25,212 students. The Nation's Report Card ranks North Dakota fifteenth in the country in K-12 education based on standardized test scores.",
+    "wiki_Emergency_services": "The North Dakota Department of Emergency Services provides 24/7 communication and coordination for more than 50 agencies. In addition, \"it administers federal disaster recovery programs and the Homeland Security Grant Program\". In 2011, the Department selected Geo-Comm, Inc. \"for the Statewide Seamless Base Map Project\", which will facilitate \"identifying locations 9–1–1 callers\" and route emergency calls based on locations. In 1993 the state adopted the Burkle addressing system numbering rural roads and buildings to aid in the delivery of emergency services.",
+    "wiki_Transportation": "Transportation in North Dakota is overseen by the North Dakota Department of Transportation . The major Interstate highways are Interstate 29 and Interstate 94 , with I-29 and I-94 meeting at Fargo , with I-29 oriented north to south along the eastern edge of the state, and I-94 bisecting the state from east to west between Minnesota and Montana. A unique feature of the North Dakota Interstate Highway system is virtually all of it is paved in concrete, not blacktop , because of the extreme weather conditions it must endure. BNSF and the Canadian Pacific Railway operate the state's largest rail systems. Many branch lines formerly used by BNSF and Canadian Pacific Railway are now operated by the Dakota, Missouri Valley and Western Railroad and the Red River Valley and Western Railroad . North Dakota's principal airports are the Hector International Airport (FAR) in Fargo, Grand Forks International Airport (GFK), Bismarck Municipal Airport (BIS), Minot International Airport (MOT) and Williston Basin International Airport (XWA) in Williston. Amtrak 's Empire Builder runs through North Dakota, making stops at Fargo (2:13 am westbound, 3:35 am eastbound), Grand Forks (4:52 am westbound, 12:57 am eastbound), Minot (around 9 am westbound and around 9:30 pm eastbound), and four other stations. It is the descendant of the famous line of the same name run by the Great Northern Railway , which was built by the tycoon James J. Hill and ran from St. Paul to Seattle . Intercity bus service is provided by Greyhound and Jefferson Lines . Public transit in North Dakota includes daily fixed-route bus systems in Fargo , Bismarck-Mandan , Grand Forks , and Minot , paratransit service in 57 communities, along with multi-county rural transit systems.",
+    "wiki_Law_and_government": "As with the federal government of the United States, political power in North Dakota state government is divided into three branches: executive, legislative, and judicial. The Constitution of North Dakota and the North Dakota Century Code form the formal law of the state; the North Dakota Administrative Code incorporates additional rules and policies of state agencies. In a 2020 study, North Dakota was ranked as the 8th easiest state for citizens to vote in. The executive branch is headed by the elected governor . The 34th and current governor is Kelly Armstrong , a Republican who took office December 15, 2024, after his predecessor, Doug Burgum did not seek reelection and was subsequently nominated to be United States Secretary of the Interior . Armstrong previously served as a member of the North Dakota Senate , chair of the North Dakota Republican Party , and most recently as a member of the United States House of Representatives . The current Lieutenant Governor of North Dakota is Michelle Strinden , who is also the President of the Senate . The offices of governor and lieutenant governor have four-year terms, which are next up for election in 2028. The governor has a cabinet consisting of appointed leaders of various state government agencies, called commissioners. The other elected constitutional offices are secretary of state , attorney general , state auditor , state insurance commissioner and state treasurer . The North Dakota Legislative Assembly is a bicameral body consisting of the Senate and the House of Representatives . The state has 47 districts, each with one senator and two representatives. Both senators and representatives are elected to four-year terms. The state's legal code is named the North Dakota Century Code . North Dakota's court system has four levels, one of which is dormant. Municipal courts serve the cities. Decisions from municipal courts are generally appealable to district court. Most cases start in the district courts , which are courts of general jurisdiction. There are 42 district court judges in seven judicial districts. Appeals from final district court decisions are made to the North Dakota Supreme Court . An intermediate court of appeals was provided for by statute in 1987, but the North Dakota Court of Appeals has only heard 65 cases since its inception. The North Dakota Court of Appeals is essentially dormant, but capable of meeting if the North Dakota Supreme Court's case load necessitates the reestablishment of intermediate review. Historically, North Dakota was populated by the Mandan , Hidatsa , Lakota , and Ojibwe , and later by the Sanish and Métis . Today, five federally recognized tribes within the boundaries of North Dakota have independent, sovereign relationships with the federal government and territorial reservations: North Dakota's United States senators are John Hoeven ( R ) and Kevin Cramer (R). The state has one at-large congressional district represented by Representative Julie Fedorchak ( R ). Federal court cases are heard in the United States District Court for the District of North Dakota , which holds court in Bismarck , Fargo , Grand Forks , and Minot . Appeals are heard by the Eighth Circuit Court of Appeals based in St. Louis, Missouri . MIT 's Election Performance Index ranked North Dakota #1 in overall election administration policy and performance in the 2018, 2014, 2012, 2010, and 2008 elections. The major political parties in North Dakota are the Democratic-NPL and the Republican Party . As of 2007 [update] , the Constitution Party and the Libertarian Party are also organized parties in the state. At the state level, the governorship has been held by the Republican Party since 1992, along with a majority of the state legislature and statewide officers. Dem-NPL showings were strong in the 2000 governor's race, and in the 2006 legislative elections, but the League has not had a major breakthrough since the administration of former state governor George Sinner . The Republican Party presidential candidate usually carries the state by a considerable margin; in 2024 , Donald Trump won nearly 67% of the vote. Of all the Democratic presidential candidates since 1892, only Grover Cleveland ( 1892 , one of three votes), Woodrow Wilson ( 1912 and 1916 ), Franklin D. Roosevelt ( 1932 and 1936 ), and Lyndon B. Johnson ( 1964 ) received Electoral College votes from North Dakota. On the other hand, Dem-NPL candidates for North Dakota's federal Senate and House seats won every election between 1982 and 2008, and the state's federal delegation was entirely Democratic from 1987 to 2011. However, both of the current U.S. senators, John Hoeven and Kevin Cramer , are Republicans, as is the sole House member, Julie Fedorchak . A six-week abortion ban is active in North Dakota. North Dakota has a slightly progressive income tax structure; the five brackets of state income tax rates are 1.1%, 2.04%, 2.27%, 2.64%, and 2.90% as of 2017. In 2005 North Dakota ranked 22nd highest by per capita state taxes. The sales tax in North Dakota is 6% for most items. The state allows municipalities to institute local sales taxes and special local taxes, such as the 1.75% supplemental sales tax in Grand Forks. Excise taxes are levied on the purchase price or market value of aircraft registered in North Dakota. The state imposes a use tax on items purchased elsewhere but used within North Dakota. Owners of real property in North Dakota pay property tax to their county, municipality, school district, and special taxing districts. The Tax Foundation ranks North Dakota as the state with the 20th most \"business friendly\" tax climate in the nation. Tax Freedom Day arrives on April 1, 10 days earlier than the national Tax Freedom Day. In 2006, North Dakota was the state with the lowest number of returns filed by taxpayers with an adjusted gross income of over $1M—only 333.",
+    "wiki_Executive": "The executive branch is headed by the elected governor . The 34th and current governor is Kelly Armstrong , a Republican who took office December 15, 2024, after his predecessor, Doug Burgum did not seek reelection and was subsequently nominated to be United States Secretary of the Interior . Armstrong previously served as a member of the North Dakota Senate , chair of the North Dakota Republican Party , and most recently as a member of the United States House of Representatives . The current Lieutenant Governor of North Dakota is Michelle Strinden , who is also the President of the Senate . The offices of governor and lieutenant governor have four-year terms, which are next up for election in 2028. The governor has a cabinet consisting of appointed leaders of various state government agencies, called commissioners. The other elected constitutional offices are secretary of state , attorney general , state auditor , state insurance commissioner and state treasurer .",
+    "wiki_Legislative": "The North Dakota Legislative Assembly is a bicameral body consisting of the Senate and the House of Representatives . The state has 47 districts, each with one senator and two representatives. Both senators and representatives are elected to four-year terms. The state's legal code is named the North Dakota Century Code .",
+    "wiki_Judicial": "North Dakota's court system has four levels, one of which is dormant. Municipal courts serve the cities. Decisions from municipal courts are generally appealable to district court. Most cases start in the district courts , which are courts of general jurisdiction. There are 42 district court judges in seven judicial districts. Appeals from final district court decisions are made to the North Dakota Supreme Court . An intermediate court of appeals was provided for by statute in 1987, but the North Dakota Court of Appeals has only heard 65 cases since its inception. The North Dakota Court of Appeals is essentially dormant, but capable of meeting if the North Dakota Supreme Court's case load necessitates the reestablishment of intermediate review.",
+    "wiki_Indian_tribes_and_reservations": "Historically, North Dakota was populated by the Mandan , Hidatsa , Lakota , and Ojibwe , and later by the Sanish and Métis . Today, five federally recognized tribes within the boundaries of North Dakota have independent, sovereign relationships with the federal government and territorial reservations:",
+    "wiki_Federal": "North Dakota's United States senators are John Hoeven ( R ) and Kevin Cramer (R). The state has one at-large congressional district represented by Representative Julie Fedorchak ( R ). Federal court cases are heard in the United States District Court for the District of North Dakota , which holds court in Bismarck , Fargo , Grand Forks , and Minot . Appeals are heard by the Eighth Circuit Court of Appeals based in St. Louis, Missouri .",
+    "wiki_Politics": "MIT 's Election Performance Index ranked North Dakota #1 in overall election administration policy and performance in the 2018, 2014, 2012, 2010, and 2008 elections. The major political parties in North Dakota are the Democratic-NPL and the Republican Party . As of 2007 [update] , the Constitution Party and the Libertarian Party are also organized parties in the state. At the state level, the governorship has been held by the Republican Party since 1992, along with a majority of the state legislature and statewide officers. Dem-NPL showings were strong in the 2000 governor's race, and in the 2006 legislative elections, but the League has not had a major breakthrough since the administration of former state governor George Sinner . The Republican Party presidential candidate usually carries the state by a considerable margin; in 2024 , Donald Trump won nearly 67% of the vote. Of all the Democratic presidential candidates since 1892, only Grover Cleveland ( 1892 , one of three votes), Woodrow Wilson ( 1912 and 1916 ), Franklin D. Roosevelt ( 1932 and 1936 ), and Lyndon B. Johnson ( 1964 ) received Electoral College votes from North Dakota. On the other hand, Dem-NPL candidates for North Dakota's federal Senate and House seats won every election between 1982 and 2008, and the state's federal delegation was entirely Democratic from 1987 to 2011. However, both of the current U.S. senators, John Hoeven and Kevin Cramer , are Republicans, as is the sole House member, Julie Fedorchak . A six-week abortion ban is active in North Dakota.",
+    "wiki_State_taxes": "North Dakota has a slightly progressive income tax structure; the five brackets of state income tax rates are 1.1%, 2.04%, 2.27%, 2.64%, and 2.90% as of 2017. In 2005 North Dakota ranked 22nd highest by per capita state taxes. The sales tax in North Dakota is 6% for most items. The state allows municipalities to institute local sales taxes and special local taxes, such as the 1.75% supplemental sales tax in Grand Forks. Excise taxes are levied on the purchase price or market value of aircraft registered in North Dakota. The state imposes a use tax on items purchased elsewhere but used within North Dakota. Owners of real property in North Dakota pay property tax to their county, municipality, school district, and special taxing districts. The Tax Foundation ranks North Dakota as the state with the 20th most \"business friendly\" tax climate in the nation. Tax Freedom Day arrives on April 1, 10 days earlier than the national Tax Freedom Day. In 2006, North Dakota was the state with the lowest number of returns filed by taxpayers with an adjusted gross income of over $1M—only 333."
+}

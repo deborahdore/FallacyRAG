@@ -1,0 +1,2755 @@
+{
+    "title": "Oregon",
+    "level": "State",
+    "geoID": "040XX00US41",
+    "short description": "Oregon has a land area of 95,996.8 square miles and a water area of 2,381.8 square miles. It is the 10th largest state by area.",
+    "description": "Oregon has a land area of 95,996.8 square miles and a water area of 2,381.8 square miles. It is the 10th largest state by area. Oregon is bordered by Idaho, Washington, California, and Nevada.",
+    "Class of Worker": {
+        "title": "Class of Worker in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Employee of private company workers",
+                "value": "63.4",
+                "moe": "0.7"
+            },
+            {
+                "description": "Self-employed in own incorporated business workers",
+                "value": "4.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "Private not-for-profit wage and salary workers",
+                "value": "10.9",
+                "moe": "0.4"
+            },
+            {
+                "description": "Local, state, and federal government workers",
+                "value": "14.8",
+                "moe": "0.5"
+            },
+            {
+                "description": "Self-employed in own not incorporated business workers and unpaid family workers",
+                "value": "6.8",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Veterans": {
+        "title": "Veterans by Sex in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "90.8",
+                "moe": "0.9"
+            },
+            {
+                "description": "Female",
+                "value": "9.2",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Children": {
+        "title": "Children Under 18 by Age Range in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 5 years",
+                "value": "4.6",
+                "moe": "0.1"
+            },
+            {
+                "description": "5 to 14 years",
+                "value": "11.0",
+                "moe": "0.1"
+            },
+            {
+                "description": "15 to 17 years",
+                "value": "3.7",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Two or More Races": {
+        "title": "Two or More Races for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "1033",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "8892",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "40543",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "3595",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "4582",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "5793",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "2016",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "2115",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "17260",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "9305",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "145",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "530",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "526",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "3710",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "24558",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "2411",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "8052",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "6919",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "903",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "38792",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "4884",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "12014",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "3244",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "42557",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "1672",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "88414",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "9316",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "156",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "2617",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "9457",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "2054",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "469",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "2997",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "70506",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "120",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "11182",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Redistricting": {
+        "title": "Total Population for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "16668",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "95184",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "421401",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "41072",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "52589",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "64929",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "24738",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "23446",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "198253",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "111201",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "1995",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "7233",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "7495",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "23977",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "223259",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "24502",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "88090",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "69413",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "8160",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "382971",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "50395",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "128610",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "31571",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "345920",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "12186",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "815428",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "87433",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "1870",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "27390",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "80075",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "26196",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "7391",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "26670",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "600372",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "1451",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "107722",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "School Enrollment": {
+        "title": "School Enrollment (Population 3 Years and Over Enrolled in School) in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Nursery school, preschool",
+                "value": "5.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "Kindergarten to 12th grade",
+                "value": "67.6",
+                "moe": "0.8"
+            },
+            {
+                "description": "College, undergraduate",
+                "value": "21.9",
+                "moe": "0.8"
+            },
+            {
+                "description": "Graduate, professional school",
+                "value": "4.8",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Older Population": {
+        "title": "Older Population by Age in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "65 to 74 years",
+                "value": "11.6",
+                "moe": "0.1"
+            },
+            {
+                "description": "75 to 84 years",
+                "value": "6.3",
+                "moe": "0.1"
+            },
+            {
+                "description": "85 years and over",
+                "value": "2.0",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Employment and Labor Force Status": {
+        "title": "Employment Rate in Oregon",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "56.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "2015",
+                "value": "57.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "2016",
+                "value": "58.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "2017",
+                "value": "59.1",
+                "moe": "0.4"
+            },
+            {
+                "description": "2018",
+                "value": "59.4",
+                "moe": "0.4"
+            },
+            {
+                "description": "2019",
+                "value": "59.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "2021",
+                "value": "57.6",
+                "moe": "0.5"
+            },
+            {
+                "description": "2022",
+                "value": "59.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "2023",
+                "value": "59.9",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Residential Mobility": {
+        "title": "Residential Mobility in the Last Year in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Moved within the same county",
+                "value": "6.8",
+                "moe": "0.4"
+            },
+            {
+                "description": "Moved from different county, same state",
+                "value": "2.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "Moved from a different state",
+                "value": "2.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Moved from abroad",
+                "value": "0.6",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within Oregon",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "180948",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "1752718",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "8508228",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "24282",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "63453",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "61764",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "198101",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "168705",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "21391",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "339912",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "86833",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "342966",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "4768",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "1355498",
+                "name": "Yamhill County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "342210",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "22290721",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "659298",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "390857",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "816254",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "279320",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "222475",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "3855749",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "1564355",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "457120",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "3928002",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "993106",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "785977",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "59404",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "6148659",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "570286",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "1825281",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "326697",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "5324687",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "27249214",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "683682",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "1096714",
+                "name": "Umatilla County, Oregon"
+            }
+        ]
+    },
+    "Age and Sex": {
+        "title": "Population by Age Range in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Median Age",
+                "value": "40.8",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Income and Earnings": {
+        "title": "Median Income by Types of Families in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Families",
+                "value": "104569",
+                "moe": "1507"
+            },
+            {
+                "description": "Married-couple families",
+                "value": "120342",
+                "moe": "2121"
+            },
+            {
+                "description": "Nonfamily households",
+                "value": "51041",
+                "moe": "1083"
+            }
+        ]
+    },
+    "Work Experience": {
+        "title": "Mean Usual Hours Worked for Workers by Sex in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "39.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "Female",
+                "value": "35.3",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Commuting": {
+        "title": "Means of Transportation to Work (Workers 16 Years and Over) in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Drove alone",
+                "value": "65.2",
+                "moe": "0.7"
+            },
+            {
+                "description": "Carpool",
+                "value": "9.2",
+                "moe": "0.4"
+            },
+            {
+                "description": "Public transportation",
+                "value": "2.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "Walked",
+                "value": "3.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "Bicycle",
+                "value": "1.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "Taxicab, motorcycle, or other means",
+                "value": "1.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "Worked from home",
+                "value": "17.1",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Marital Status and Marital History": {
+        "title": "Marital Status by Sex in Oregon",
+        "source": "2023 ACS 1-Year Estimates Subject Tables",
+        "stats": [
+            {
+                "description": "Married, not separated | Male",
+                "value": "50.0",
+                "moe": "0.8"
+            },
+            {
+                "description": "Married, not separated | Female",
+                "value": "47.4",
+                "moe": "0.7"
+            },
+            {
+                "description": "Widowed | Male",
+                "value": "2.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "Widowed | Female",
+                "value": "7.6",
+                "moe": "0.3"
+            },
+            {
+                "description": "Divorced | Male",
+                "value": "10.4",
+                "moe": "0.5"
+            },
+            {
+                "description": "Divorced | Female",
+                "value": "14.2",
+                "moe": "0.4"
+            },
+            {
+                "description": "Separated | Male",
+                "value": "1.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "Separated | Female",
+                "value": "1.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "Never Married | Male",
+                "value": "35.8",
+                "moe": "0.5"
+            },
+            {
+                "description": "Never Married | Female",
+                "value": "29.6",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Educational Attainment": {
+        "title": "Education Attainment (Population 25 Years and Older) in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "High school or equivalent degree",
+                "value": "22.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "Some college, no degree",
+                "value": "22.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "Associate's degree",
+                "value": "9.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "Bachelor's degree",
+                "value": "22.9",
+                "moe": "0.4"
+            },
+            {
+                "description": "Graduate or professional degree",
+                "value": "14.9",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Disability": {
+        "title": "Types of Disabilities in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Hearing difficulty",
+                "value": "4.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Vision difficulty",
+                "value": "2.5",
+                "moe": "0.1"
+            },
+            {
+                "description": "Cognitive difficulty",
+                "value": "7.6",
+                "moe": "0.3"
+            },
+            {
+                "description": "Ambulatory difficulty",
+                "value": "6.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "Self-care difficulty",
+                "value": "2.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Independent living difficulty",
+                "value": "7.2",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Housing Units": {
+        "title": "Housing Occupancy in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Occupied housing units",
+                "value": "1744270",
+                "moe": "7249"
+            },
+            {
+                "description": "Vacant housing units",
+                "value": "152581",
+                "moe": "7292"
+            }
+        ]
+    },
+    "Native and Foreign-Born": {
+        "title": "Foreign-Born Population in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Naturalized U.S. citizen",
+                "value": "51.1",
+                "moe": "1.8"
+            },
+            {
+                "description": "Not a U.S. citizen",
+                "value": "48.9",
+                "moe": "1.8"
+            }
+        ]
+    },
+    "Language Spoken at Home": {
+        "title": "Types of Language Spoken at Home in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "English only",
+                "value": "84.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "Spanish",
+                "value": "9.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "Other Indo-European languages",
+                "value": "2.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "Asian and Pacific Islander languages",
+                "value": "2.9",
+                "moe": "0.1"
+            },
+            {
+                "description": "Other languages",
+                "value": "0.6",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Financial Characteristics": {
+        "title": "Occupied Units Paying Rent in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $500",
+                "value": "4.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "$500 to $999",
+                "value": "12.6",
+                "moe": "0.8"
+            },
+            {
+                "description": "$1,000 to $1,499",
+                "value": "27.2",
+                "moe": "1.0"
+            },
+            {
+                "description": "$1,500 to $1,999",
+                "value": "30.4",
+                "moe": "1.1"
+            },
+            {
+                "description": "$2,000 to $2,499",
+                "value": "14.5",
+                "moe": "0.8"
+            },
+            {
+                "description": "$2,500 to $2,999",
+                "value": "6.3",
+                "moe": "0.6"
+            },
+            {
+                "description": "$3,000 or more",
+                "value": "4.7",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Occupancy Characteristics": {
+        "title": "Owner Occupied Housing Units by Types of Households in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family",
+                "value": "656337",
+                "moe": "10579"
+            },
+            {
+                "description": "Male householder, no spouse present",
+                "value": "46804",
+                "moe": "3950"
+            },
+            {
+                "description": "Female householder, no spouse present",
+                "value": "84934",
+                "moe": "4722"
+            }
+        ]
+    },
+    "Physical Characteristics": {
+        "title": "Bedrooms in Occupied Housing Units in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "No bedroom",
+                "value": "3.6",
+                "moe": "0.3"
+            },
+            {
+                "description": "One bedroom",
+                "value": "10.1",
+                "moe": "0.4"
+            },
+            {
+                "description": "2 or 3 bedrooms",
+                "value": "66.7",
+                "moe": "0.7"
+            },
+            {
+                "description": "4 or more bedrooms",
+                "value": "19.7",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Poverty": {
+        "title": "Poverty by Age in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 18 years",
+                "value": "13.0",
+                "moe": "1.1"
+            },
+            {
+                "description": "18 to 64 years",
+                "value": "11.7",
+                "moe": "0.5"
+            },
+            {
+                "description": "65 years and over",
+                "value": "10.8",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Families and Household Characteristics": {
+        "title": "Total Households by Type of Households in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family household",
+                "value": "46.8",
+                "moe": "0.6"
+            },
+            {
+                "description": "Male householder, no spouse/partner present, family household",
+                "value": "18.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "Female householder, no spouse/partner present, family household",
+                "value": "25.8",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Black or African American": {
+        "title": "Black or African American alone for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "77",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "1002",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "4554",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "226",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "323",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "289",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "80",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "84",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "887",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "400",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "4",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "13",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "8",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "53",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "1734",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "145",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "415",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "562",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "49",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "4660",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "199",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "681",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "465",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "4161",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "58",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "45370",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "735",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "0",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "79",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "701",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "161",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "9",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "133",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "13437",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "1",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "900",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "American Indian and Alaska Native": {
+        "title": "American Indian and Alaska Native alone for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "186",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "819",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "3510",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "431",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "733",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "1493",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "317",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "541",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "1563",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "1950",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "29",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "65",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "246",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "274",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "2781",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "3323",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "1071",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "2998",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "131",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "4674",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "1795",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "1727",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "539",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "6836",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "167",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "9906",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "1912",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "19",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "307",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "3082",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "242",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "60",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "1119",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "6179",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "26",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "1942",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Some Other Race": {
+        "title": "Some Other Race alone for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "349",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "3139",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "16123",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "1627",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "1004",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "1549",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "832",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "542",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "6653",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "2103",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "27",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "69",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "113",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "3130",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "11739",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "2458",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "2194",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "3532",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "322",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "15016",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "2140",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "4716",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "5255",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "47723",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "2779",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "48057",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "5061",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "41",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "1399",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "12503",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "462",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "145",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "2153",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "52212",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "24",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "8240",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Vacancy": {
+        "title": "Vacancy Rate in Oregon",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "9.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "2015",
+                "value": "9.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "2016",
+                "value": "9.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "2017",
+                "value": "9.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "2018",
+                "value": "8.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "2019",
+                "value": "8.8",
+                "moe": "0.5"
+            },
+            {
+                "description": "2021",
+                "value": "7.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "2022",
+                "value": "7.2",
+                "moe": "0.4"
+            },
+            {
+                "description": "2023",
+                "value": "6.8",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Industry": {
+        "title": "Industry for the Civilian Employed Population 16 Years and Over in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Educational services, and health care and social assistance",
+                "value": "24.3",
+                "moe": "0.6"
+            },
+            {
+                "description": "Professional, scientific, and management, and administrative and waste management services",
+                "value": "11.9",
+                "moe": "0.4"
+            },
+            {
+                "description": "Retail trade",
+                "value": "11.6",
+                "moe": "0.5"
+            },
+            {
+                "description": "Manufacturing",
+                "value": "10.4",
+                "moe": "0.4"
+            },
+            {
+                "description": "Arts, entertainment, and recreation, and accommodation and food services",
+                "value": "8.9",
+                "moe": "0.4"
+            },
+            {
+                "description": "Construction",
+                "value": "7.0",
+                "moe": "0.4"
+            },
+            {
+                "description": "Finance and insurance, and real estate and rental and leasing",
+                "value": "5.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "Other services, except public administration",
+                "value": "5.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "Transportation and warehousing, and utilities",
+                "value": "4.8",
+                "moe": "0.3"
+            },
+            {
+                "description": "Public administration",
+                "value": "4.7",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Not Hispanic or Latino": {
+        "title": "White alone, not Hispanic or Latino for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "14664",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "72209",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "325361",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "33526",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "44228",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "53538",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "20874",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "19428",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "164595",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "93525",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "1747",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "6430",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "6435",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "14935",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "170232",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "15005",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "72730",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "51919",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "6508",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "298507",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "39498",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "104118",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "18975",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "213650",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "6600",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "535623",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "64719",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "1610",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "22000",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "49753",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "22075",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "6598",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "18703",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "365232",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "1256",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "79352",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Fertility": {
+        "title": "Women with Births in the Past 12 Months in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "15 to 19 years",
+                "value": "536",
+                "moe": "484"
+            },
+            {
+                "description": "20 to 34 years",
+                "value": "30841",
+                "moe": "3444"
+            },
+            {
+                "description": "35 to 50 years",
+                "value": "12401",
+                "moe": "2005"
+            }
+        ]
+    },
+    "Homeownership Rate": {
+        "title": "Housing Value in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $50,000",
+                "value": "3.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "$50,000 to $99,999",
+                "value": "2.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "$100,000 to $149,999",
+                "value": "2.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "$150,000 to $199,999",
+                "value": "2.0",
+                "moe": "0.2"
+            },
+            {
+                "description": "$200,000 to $299,999",
+                "value": "7.3",
+                "moe": "0.4"
+            },
+            {
+                "description": "$300,000 to $499,999",
+                "value": "33.9",
+                "moe": "0.8"
+            },
+            {
+                "description": "$500,000 to $999,999",
+                "value": "41.8",
+                "moe": "0.7"
+            },
+            {
+                "description": "$1,000,000 or more",
+                "value": "7.7",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Health Insurance": {
+        "title": "Population Without Health Insurance Coverage in Oregon",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "9.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "2015",
+                "value": "7.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "2016",
+                "value": "6.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "2017",
+                "value": "6.8",
+                "moe": "0.3"
+            },
+            {
+                "description": "2018",
+                "value": "7.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "2019",
+                "value": "7.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "2021",
+                "value": "6.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "2022",
+                "value": "6.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "2023",
+                "value": "5.5",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Asian": {
+        "title": "Asian alone for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "66",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "6428",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "20699",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "564",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "583",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "747",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "114",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "214",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "2481",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "1231",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "9",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "23",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "36",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "392",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "3387",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "149",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "886",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "786",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "54",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "9620",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "658",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "1477",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "396",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "7501",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "33",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "62022",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "1774",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "8",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "283",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "720",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "220",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "31",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "252",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "69106",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "9",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "1579",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Hispanic or Latino": {
+        "title": "Hispanic or Latino (of any race) for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "809",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "8524",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "40342",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "3848",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "3070",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "4292",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "1803",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "1674",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "17237",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "6654",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "107",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "283",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "394",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "7148",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "30399",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "5002",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "7037",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "8772",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "802",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "37780",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "4851",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "12571",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "10320",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "95740",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "4988",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "103753",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "12730",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "119",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "2946",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "22622",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "1347",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "257",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "5017",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "107642",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "84",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "17793",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "White": {
+        "title": "White alone for All Counties within Oregon",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "41001",
+                "value": "14936",
+                "name": "Baker County, Oregon"
+            },
+            {
+                "geoCode": "41003",
+                "value": "74612",
+                "name": "Benton County, Oregon"
+            },
+            {
+                "geoCode": "41005",
+                "value": "334855",
+                "name": "Clackamas County, Oregon"
+            },
+            {
+                "geoCode": "41007",
+                "value": "34525",
+                "name": "Clatsop County, Oregon"
+            },
+            {
+                "geoCode": "41009",
+                "value": "45243",
+                "name": "Columbia County, Oregon"
+            },
+            {
+                "geoCode": "41011",
+                "value": "54930",
+                "name": "Coos County, Oregon"
+            },
+            {
+                "geoCode": "41013",
+                "value": "21349",
+                "name": "Crook County, Oregon"
+            },
+            {
+                "geoCode": "41015",
+                "value": "19925",
+                "name": "Curry County, Oregon"
+            },
+            {
+                "geoCode": "41017",
+                "value": "169137",
+                "name": "Deschutes County, Oregon"
+            },
+            {
+                "geoCode": "41019",
+                "value": "96048",
+                "name": "Douglas County, Oregon"
+            },
+            {
+                "geoCode": "41021",
+                "value": "1770",
+                "name": "Gilliam County, Oregon"
+            },
+            {
+                "geoCode": "41023",
+                "value": "6523",
+                "name": "Grant County, Oregon"
+            },
+            {
+                "geoCode": "41025",
+                "value": "6566",
+                "name": "Harney County, Oregon"
+            },
+            {
+                "geoCode": "41027",
+                "value": "16381",
+                "name": "Hood River County, Oregon"
+            },
+            {
+                "geoCode": "41029",
+                "value": "178193",
+                "name": "Jackson County, Oregon"
+            },
+            {
+                "geoCode": "41031",
+                "value": "15992",
+                "name": "Jefferson County, Oregon"
+            },
+            {
+                "geoCode": "41033",
+                "value": "75344",
+                "name": "Josephine County, Oregon"
+            },
+            {
+                "geoCode": "41035",
+                "value": "54494",
+                "name": "Klamath County, Oregon"
+            },
+            {
+                "geoCode": "41037",
+                "value": "6691",
+                "name": "Lake County, Oregon"
+            },
+            {
+                "geoCode": "41039",
+                "value": "309194",
+                "name": "Lane County, Oregon"
+            },
+            {
+                "geoCode": "41041",
+                "value": "40624",
+                "name": "Lincoln County, Oregon"
+            },
+            {
+                "geoCode": "41043",
+                "value": "107700",
+                "name": "Linn County, Oregon"
+            },
+            {
+                "geoCode": "41045",
+                "value": "21619",
+                "name": "Malheur County, Oregon"
+            },
+            {
+                "geoCode": "41047",
+                "value": "233321",
+                "name": "Marion County, Oregon"
+            },
+            {
+                "geoCode": "41049",
+                "value": "7472",
+                "name": "Morrow County, Oregon"
+            },
+            {
+                "geoCode": "41051",
+                "value": "556202",
+                "name": "Multnomah County, Oregon"
+            },
+            {
+                "geoCode": "41053",
+                "value": "68274",
+                "name": "Polk County, Oregon"
+            },
+            {
+                "geoCode": "41055",
+                "value": "1643",
+                "name": "Sherman County, Oregon"
+            },
+            {
+                "geoCode": "41057",
+                "value": "22620",
+                "name": "Tillamook County, Oregon"
+            },
+            {
+                "geoCode": "41059",
+                "value": "53461",
+                "name": "Umatilla County, Oregon"
+            },
+            {
+                "geoCode": "41061",
+                "value": "22565",
+                "name": "Union County, Oregon"
+            },
+            {
+                "geoCode": "41063",
+                "value": "6673",
+                "name": "Wallowa County, Oregon"
+            },
+            {
+                "geoCode": "41065",
+                "value": "19821",
+                "name": "Wasco County, Oregon"
+            },
+            {
+                "geoCode": "41067",
+                "value": "385455",
+                "name": "Washington County, Oregon"
+            },
+            {
+                "geoCode": "41069",
+                "value": "1271",
+                "name": "Wheeler County, Oregon"
+            },
+            {
+                "geoCode": "41071",
+                "value": "83667",
+                "name": "Yamhill County, Oregon"
+            }
+        ]
+    },
+    "Occupation": {
+        "title": "Occupation for the Civilian Employed Population 16 Years and Over in Oregon",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Management, business, science and arts occupations",
+                "value": "941592",
+                "moe": "15438"
+            },
+            {
+                "description": "Sales and office occupations",
+                "value": "397651",
+                "moe": "11639"
+            },
+            {
+                "description": "Service occupations",
+                "value": "360097",
+                "moe": "10776"
+            },
+            {
+                "description": "Production, transportation, and material moving occupations",
+                "value": "237039",
+                "moe": "9045"
+            },
+            {
+                "description": "Natural resources, construction, and maintenance occupations",
+                "value": "187264",
+                "moe": "7807"
+            }
+        ]
+    },
+    "wiki_Etymology": "The origin of the state's name is uncertain. The earliest geographical designation \"orejón\" (meaning \"one with big ears\") comes from the Spanish historical chronicle Relación de la Alta y Baja California (1598), written by Rodrigo Montezuma of New Spain ; here it refers to the region of the Columbia River as it was encountered by the first Spanish scouts. The \" j \" in the Spanish phrase \" El Orejón \" was eventually corrupted into a \"g\" under this theory of the name's origin. Another possible source is the Spanish word orégano , referring to the plant with that name that grows in the southern part of the region, [ citation needed ] or that the area around the Columbia River was named after a stream in Spain called \"Arroyo del Oregón\", located in the province of Ciudad Real . [ citation needed ] Another early use of the name, spelled Ouragon , was by Major Robert Rogers in a 1765 petition to the Kingdom of Great Britain . The term referred to the then-mythical River of the West (the Columbia River). By 1778, the spelling had shifted to Oregon . Rogers wrote: ... from the Great Lakes towards the Head of the Mississippi, and from thence to the River called by the Indians Ouragon ... One suggestion is that this name comes from the French word ouragan (\"windstorm\" or \"hurricane\"), which was applied to the River of the West based on Native American tales of powerful Chinook winds on the lower Columbia River, or perhaps from first-hand French experience with the Chinook winds of the Great Plains . At the time, the River of the West was thought to rise in western Minnesota and flow west through the Great Plains. Another suggestion comes from Joaquin Miller , who wrote in Sunset magazine in 1904: The name, Oregon, is rounded down phonetically, from Ouve água —Oragua, Or-a-gon, Oregon—given probably by the same Portuguese navigator that named the Farallones after his first officer, and it literally, in a large way, means cascades: \"Hear the waters.\" You should steam up the Columbia and hear and feel the waters falling out of the clouds of Mount Hood to understand entirely the full meaning of the name Ouve a água , Oregon. Yet another account, endorsed as the \"most plausible explanation\" in the book Oregon Geographic Names , was advanced by George R. Stewart in a 1944 article in American Speech . According to Stewart, the name came from an engraver's error in a French map published in the early 18th century, on which the Ouisiconsink (Wisconsin) River was spelled \" Ouaricon-sint \", broken on two lines with the -sint below, so there appeared to be a river flowing to the west named \" Ouaricon \". According to the Oregon Tourism Commission , present-day Oregonians / ˌ ɒr ɪ ˈ ɡ oʊ n i ə n z / pronounce the state's name as \"or-uh-gun, never or-ee-gone\". After being drafted by the Detroit Lions in 2002, former Oregon Ducks quarterback Joey Harrington distributed \"Orygun\" stickers to members of the media as a reminder of how to pronounce the name of his home state. The stickers are sold by the University of Oregon Bookstore .",
+    "wiki_History": "While there is considerable evidence that Paleo-Indians inhabited the region, the oldest evidence of habitation in Oregon was found at Fort Rock Cave and the Paisley Caves in Lake County . Archaeologist Luther Cressman dated material from Fort Rock to 13,200 years ago, and there is evidence supporting inhabitants in the region at least 15,000 years ago. By 8000 BC, there were settlements throughout the state, with populations concentrated along the lower Columbia River, in the western valleys, and around coastal estuaries. During the prehistoric period , the Willamette Valley region was flooded after the collapse of glacial dams from then Lake Missoula , located in what would later become Montana . These massive floods occurred during the last glacial period and filled the valley with 300 to 400 feet (91 to 122 m) of water. By the 16th century, Oregon was home to many Native American groups, including the Chinook , Coquille (Ko-Kwell), Bannock , Kalapuya , Klamath , Klickitat , Molala , Nez Perce , Shasta , Takelma , Umatilla , and Umpqua . The first Europeans to visit Oregon were Spanish explorers led by Juan Rodríguez Cabrillo , who sighted southern Oregon off the Pacific coast in 1543. Sailing from Central America on the Golden Hind in 1579 in search of the Strait of Anian during his circumnavigation of the Earth , the English explorer and privateer Sir Francis Drake briefly anchored at South Cove, Cape Arago , just south of Coos Bay , before sailing for what is now California. Martín de Aguilar , continuing separately from Sebastián Vizcaíno 's scouting of California, reached as far north as Cape Blanco and possibly to Coos Bay in 1603. Exploration continued routinely in 1774, starting with the expedition of the frigate Santiago by Juan José Pérez Hernández , and the coast of Oregon became a valuable trade route to Asia. In 1778, British captain James Cook also explored the coast. French Canadians , Scots , Métis , and other continental natives (e.g. Iroquois ) trappers arrived in the late 18th and early 19th centuries, soon to be followed by Catholic clergy. Some traveled as members of the Lewis and Clark and Astor Expeditions. Few stayed permanently such as Étienne Lussier, often referred to as the first \"European\" farmer in the state of Oregon. Evidence of the French Canadian presence can be found in numerous names of French origin such as Malheur Lake , the Malheur , Grande Ronde , and Deschutes Rivers , and the city of La Grande . Furthermore, many of the early pioneers first came out West with the North West Company and the Hudson's Bay Company before heading South of the Columbia for better farmland as the fur trade declined. French Prairie by the Willamette River and French Settlement by the Umpqua River are known as early mixed ancestry settlements. The Lewis and Clark Expedition traveled through northern Oregon also in search of the Northwest Passage . They built their winter fort in 1805–1806 at Fort Clatsop , near the mouth of the Columbia River, staying at the encampment from December until March. British explorer David Thompson also conducted overland exploration. In 1811, while working for the North West Company, Thompson became the first European to navigate the entire Columbia River. Stopping on the way, at the junction of the Snake River, he posted a claim to the region for Great Britain and the North West Company. Upon returning to Montreal , he publicized the abundance of fur-bearing animals in the area. Also in 1811, New Yorker John Jacob Astor financed the establishment of Fort Astoria at the mouth of the Columbia River as a western outpost to his Pacific Fur Company ; this was the first permanent European settlement in Oregon. In the War of 1812 , the British gained control of all Pacific Fur Company posts. The Treaty of 1818 established joint British and American occupancy of the region west of the Rocky Mountains to the Pacific Ocean. By the 1820s and 1830s, the Hudson's Bay Company dominated the Pacific Northwest from its Columbia District headquarters at Fort Vancouver (built in 1825 by the district's chief factor, John McLoughlin , across the Columbia from present-day Portland ). In 1841, the expert trapper and entrepreneur Ewing Young died leaving considerable wealth and no apparent heir, and no system to probate his estate. A meeting followed Young's funeral, at which a probate government was proposed. Doctor Ira Babcock of Jason Lee 's Methodist Mission was elected supreme judge. Babcock chaired two meetings in 1842 at Champoeg , (halfway between Lee's mission and Oregon City ), to discuss wolves and other animals of contemporary concern. These meetings were precursors to an all-citizen meeting in 1843, which instituted a provisional government headed by an executive committee made up of David Hill , Alanson Beers , and Joseph Gale . This government was the first acting public government of the Oregon Country before annexation by the government of the United States. It was succeeded by a Second Executive Committee, made up of Peter G. Stewart , Osborne Russell , and William J. Bailey , and this committee was itself succeeded by George Abernethy , who was the first and only Governor of Oregon under the provisional government. Also in 1841, Sir George Simpson , governor of the Hudson's Bay Company, reversed the Hudson's Bay Company's long-standing policy of discouraging settlement because it interfered with the lucrative fur trade. He directed that some 200 Red River Colony settlers be relocated to HBC farms near Fort Vancouver, (the James Sinclair expedition), in an attempt to hold Columbia District. Starting in 1842–1843, the Oregon Trail brought many new American settlers to the Oregon Country. Oregon's boundaries were disputed for a time, contributing to tensions between the U.K. and the U.S., but the border was defined peacefully in the 1846 Oregon Treaty . The border between the U.S. and British North America was set at the 49th parallel . The Oregon Territory was officially organized on August 13, 1848. Settlement increased with the Donation Land Claim Act of 1850 and the forced relocation of the native population to Indian reservations in Oregon . The first Oregon proposition for a railroad in Oregon was made in 1850 by H. M. Knighton, the original owner of the townsite of St. Helens . Knighton asserted that this would fulfill his township's belief that it should be the supreme metropolitan seaport in that area upon the Columbia River, as opposed to Portland. He suggested building a railroad in 1851 from St. Helens, through the Cornelius pass and across Washington County to the city of Lafayette, which was at the time the big town of the Willamette Valley. In December 1844, Oregon passed its first black exclusion law , which prohibited African Americans from entering the territory while simultaneously prohibiting slavery . Slave owners who brought their slaves with them were given three years before they were forced to free them. Any African Americans in the region after the law was passed were forced to leave, and those who did not comply were arrested and beaten. They received no less than twenty and no more than thirty-nine stripes across the back if they still did not leave. This process could be repeated every six months. Slavery played a major part in Oregon's history and even influenced its path to statehood. The territory's request for statehood was delayed several times, as members of Congress argued among themselves whether the territory should be admitted as a \"free\" or \"slave\" state. Eventually politicians from the South agreed to allow Oregon to enter as a \"free\" state, in exchange for opening slavery to the Southwestern U.S. Oregon was admitted to the Union on February 14, 1859, though no one in Oregon knew it until March 15. Founded as a refuge from disputes over slavery, Oregon had a \"whites only\" clause in its original state Constitution. At the outbreak of the American Civil War , regular U.S. troops were withdrawn and sent east to aid the Union . Volunteer cavalry recruited in California were sent north to Oregon to keep peace and protect the populace. The First Oregon Cavalry served until June 1865. Beginning in the 1880s, the growth of railroads expanded the state's lumber , wheat , and other agricultural markets, and the rapid growth of its cities. Due to the abundance of timber and waterway access via the Willamette River, Portland became a major force in the lumber industry of the Pacific Northwest , and quickly became the state's largest city. It would earn the nickname \"Stumptown\", and would later become recognized as one of the most dangerous port cities in the United States due to racketeering and illegal activities at the turn of the 20th century. In 1902, Oregon introduced direct legislation by the state's citizens through initiatives and referendums , known as the Oregon System . On May 5, 1945, six civilians were killed by a Japanese balloon bomb that exploded on Gearhart Mountain near Bly . They remained the only people on American soil whose deaths were attributed to an enemy balloon bomb explosion during World War II . The bombing site is now located in the Mitchell Recreation Area . Industrial expansion began in earnest following the 1933–1937 construction of the Bonneville Dam on the Columbia River. Hydroelectric power , food, and lumber provided by Oregon helped fuel the development of the West, although the periodic fluctuations in the U.S. building industry have hurt the state's economy on multiple occasions. Portland, in particular, experienced a population boom between 1900 and 1930, tripling in size; the arrival of World War II also provided the northwest region of the state with an industrial boom, where Liberty ships and aircraft carriers were constructed. During the 1970s, the Pacific Northwest was particularly affected by the 1973 oil crisis , with Oregon suffering a substantial shortage. In 1971, the Oregon Beverage Container Act of 1971, popularly called the Bottle Bill, became the first law of its kind in the United States. The Bottle Bill system in Oregon was created to control litter. In practice, the system promotes recycling, not reusing, and the collected containers are generally destroyed and made into new containers. Ten states currently have similar laws. In 1994, Oregon became the first U.S. state to legalize physician-assisted suicide through the Oregon Death with Dignity Act . A measure to legalize recreational use of marijuana in Oregon was approved on November 4, 2014, making Oregon only the second state at the time to have legalized gay marriage , physician-assisted suicide, and recreational marijuana. Self service gasoline was banned in Oregon from 1951 until August 2023. Although self-serve is now allowed in Oregon, gas stations are not required to offer it and many currently do not. New Jersey is the only state remaining where self serve gas stations are not allowed.",
+    "wiki_Earliest_inhabitants": "While there is considerable evidence that Paleo-Indians inhabited the region, the oldest evidence of habitation in Oregon was found at Fort Rock Cave and the Paisley Caves in Lake County . Archaeologist Luther Cressman dated material from Fort Rock to 13,200 years ago, and there is evidence supporting inhabitants in the region at least 15,000 years ago. By 8000 BC, there were settlements throughout the state, with populations concentrated along the lower Columbia River, in the western valleys, and around coastal estuaries. During the prehistoric period , the Willamette Valley region was flooded after the collapse of glacial dams from then Lake Missoula , located in what would later become Montana . These massive floods occurred during the last glacial period and filled the valley with 300 to 400 feet (91 to 122 m) of water. By the 16th century, Oregon was home to many Native American groups, including the Chinook , Coquille (Ko-Kwell), Bannock , Kalapuya , Klamath , Klickitat , Molala , Nez Perce , Shasta , Takelma , Umatilla , and Umpqua .",
+    "wiki_European_and_pioneer_settlement": "The first Europeans to visit Oregon were Spanish explorers led by Juan Rodríguez Cabrillo , who sighted southern Oregon off the Pacific coast in 1543. Sailing from Central America on the Golden Hind in 1579 in search of the Strait of Anian during his circumnavigation of the Earth , the English explorer and privateer Sir Francis Drake briefly anchored at South Cove, Cape Arago , just south of Coos Bay , before sailing for what is now California. Martín de Aguilar , continuing separately from Sebastián Vizcaíno 's scouting of California, reached as far north as Cape Blanco and possibly to Coos Bay in 1603. Exploration continued routinely in 1774, starting with the expedition of the frigate Santiago by Juan José Pérez Hernández , and the coast of Oregon became a valuable trade route to Asia. In 1778, British captain James Cook also explored the coast. French Canadians , Scots , Métis , and other continental natives (e.g. Iroquois ) trappers arrived in the late 18th and early 19th centuries, soon to be followed by Catholic clergy. Some traveled as members of the Lewis and Clark and Astor Expeditions. Few stayed permanently such as Étienne Lussier, often referred to as the first \"European\" farmer in the state of Oregon. Evidence of the French Canadian presence can be found in numerous names of French origin such as Malheur Lake , the Malheur , Grande Ronde , and Deschutes Rivers , and the city of La Grande . Furthermore, many of the early pioneers first came out West with the North West Company and the Hudson's Bay Company before heading South of the Columbia for better farmland as the fur trade declined. French Prairie by the Willamette River and French Settlement by the Umpqua River are known as early mixed ancestry settlements. The Lewis and Clark Expedition traveled through northern Oregon also in search of the Northwest Passage . They built their winter fort in 1805–1806 at Fort Clatsop , near the mouth of the Columbia River, staying at the encampment from December until March. British explorer David Thompson also conducted overland exploration. In 1811, while working for the North West Company, Thompson became the first European to navigate the entire Columbia River. Stopping on the way, at the junction of the Snake River, he posted a claim to the region for Great Britain and the North West Company. Upon returning to Montreal , he publicized the abundance of fur-bearing animals in the area. Also in 1811, New Yorker John Jacob Astor financed the establishment of Fort Astoria at the mouth of the Columbia River as a western outpost to his Pacific Fur Company ; this was the first permanent European settlement in Oregon. In the War of 1812 , the British gained control of all Pacific Fur Company posts. The Treaty of 1818 established joint British and American occupancy of the region west of the Rocky Mountains to the Pacific Ocean. By the 1820s and 1830s, the Hudson's Bay Company dominated the Pacific Northwest from its Columbia District headquarters at Fort Vancouver (built in 1825 by the district's chief factor, John McLoughlin , across the Columbia from present-day Portland ). In 1841, the expert trapper and entrepreneur Ewing Young died leaving considerable wealth and no apparent heir, and no system to probate his estate. A meeting followed Young's funeral, at which a probate government was proposed. Doctor Ira Babcock of Jason Lee 's Methodist Mission was elected supreme judge. Babcock chaired two meetings in 1842 at Champoeg , (halfway between Lee's mission and Oregon City ), to discuss wolves and other animals of contemporary concern. These meetings were precursors to an all-citizen meeting in 1843, which instituted a provisional government headed by an executive committee made up of David Hill , Alanson Beers , and Joseph Gale . This government was the first acting public government of the Oregon Country before annexation by the government of the United States. It was succeeded by a Second Executive Committee, made up of Peter G. Stewart , Osborne Russell , and William J. Bailey , and this committee was itself succeeded by George Abernethy , who was the first and only Governor of Oregon under the provisional government. Also in 1841, Sir George Simpson , governor of the Hudson's Bay Company, reversed the Hudson's Bay Company's long-standing policy of discouraging settlement because it interfered with the lucrative fur trade. He directed that some 200 Red River Colony settlers be relocated to HBC farms near Fort Vancouver, (the James Sinclair expedition), in an attempt to hold Columbia District. Starting in 1842–1843, the Oregon Trail brought many new American settlers to the Oregon Country. Oregon's boundaries were disputed for a time, contributing to tensions between the U.K. and the U.S., but the border was defined peacefully in the 1846 Oregon Treaty . The border between the U.S. and British North America was set at the 49th parallel . The Oregon Territory was officially organized on August 13, 1848. Settlement increased with the Donation Land Claim Act of 1850 and the forced relocation of the native population to Indian reservations in Oregon . The first Oregon proposition for a railroad in Oregon was made in 1850 by H. M. Knighton, the original owner of the townsite of St. Helens . Knighton asserted that this would fulfill his township's belief that it should be the supreme metropolitan seaport in that area upon the Columbia River, as opposed to Portland. He suggested building a railroad in 1851 from St. Helens, through the Cornelius pass and across Washington County to the city of Lafayette, which was at the time the big town of the Willamette Valley.",
+    "wiki_Black_exclusion_laws": "In December 1844, Oregon passed its first black exclusion law , which prohibited African Americans from entering the territory while simultaneously prohibiting slavery . Slave owners who brought their slaves with them were given three years before they were forced to free them. Any African Americans in the region after the law was passed were forced to leave, and those who did not comply were arrested and beaten. They received no less than twenty and no more than thirty-nine stripes across the back if they still did not leave. This process could be repeated every six months.",
+    "wiki_Statehood": "Slavery played a major part in Oregon's history and even influenced its path to statehood. The territory's request for statehood was delayed several times, as members of Congress argued among themselves whether the territory should be admitted as a \"free\" or \"slave\" state. Eventually politicians from the South agreed to allow Oregon to enter as a \"free\" state, in exchange for opening slavery to the Southwestern U.S. Oregon was admitted to the Union on February 14, 1859, though no one in Oregon knew it until March 15. Founded as a refuge from disputes over slavery, Oregon had a \"whites only\" clause in its original state Constitution. At the outbreak of the American Civil War , regular U.S. troops were withdrawn and sent east to aid the Union . Volunteer cavalry recruited in California were sent north to Oregon to keep peace and protect the populace. The First Oregon Cavalry served until June 1865.",
+    "wiki_Post-Reconstruction": "Beginning in the 1880s, the growth of railroads expanded the state's lumber , wheat , and other agricultural markets, and the rapid growth of its cities. Due to the abundance of timber and waterway access via the Willamette River, Portland became a major force in the lumber industry of the Pacific Northwest , and quickly became the state's largest city. It would earn the nickname \"Stumptown\", and would later become recognized as one of the most dangerous port cities in the United States due to racketeering and illegal activities at the turn of the 20th century. In 1902, Oregon introduced direct legislation by the state's citizens through initiatives and referendums , known as the Oregon System . On May 5, 1945, six civilians were killed by a Japanese balloon bomb that exploded on Gearhart Mountain near Bly . They remained the only people on American soil whose deaths were attributed to an enemy balloon bomb explosion during World War II . The bombing site is now located in the Mitchell Recreation Area . Industrial expansion began in earnest following the 1933–1937 construction of the Bonneville Dam on the Columbia River. Hydroelectric power , food, and lumber provided by Oregon helped fuel the development of the West, although the periodic fluctuations in the U.S. building industry have hurt the state's economy on multiple occasions. Portland, in particular, experienced a population boom between 1900 and 1930, tripling in size; the arrival of World War II also provided the northwest region of the state with an industrial boom, where Liberty ships and aircraft carriers were constructed. During the 1970s, the Pacific Northwest was particularly affected by the 1973 oil crisis , with Oregon suffering a substantial shortage. In 1971, the Oregon Beverage Container Act of 1971, popularly called the Bottle Bill, became the first law of its kind in the United States. The Bottle Bill system in Oregon was created to control litter. In practice, the system promotes recycling, not reusing, and the collected containers are generally destroyed and made into new containers. Ten states currently have similar laws. In 1994, Oregon became the first U.S. state to legalize physician-assisted suicide through the Oregon Death with Dignity Act . A measure to legalize recreational use of marijuana in Oregon was approved on November 4, 2014, making Oregon only the second state at the time to have legalized gay marriage , physician-assisted suicide, and recreational marijuana.",
+    "wiki_Gasoline_pump_law": "Self service gasoline was banned in Oregon from 1951 until August 2023. Although self-serve is now allowed in Oregon, gas stations are not required to offer it and many currently do not. New Jersey is the only state remaining where self serve gas stations are not allowed.",
+    "wiki_Geography": "Oregon is 295 miles (475 km) north to south at longest distance, and 395 miles (636 km) east to west. With an area of 98,381 square miles (254,810 km 2 ), Oregon is slightly larger than the United Kingdom . It is the ninth largest state in the U.S. Oregon's highest point is the summit of Mount Hood, at 11,249 feet (3,429 m), and its lowest point is the sea level of the Pacific Ocean along the Oregon Coast. Oregon's mean elevation is 3,300 feet (1,006 m). Crater Lake National Park , the state's only national park, is the site of the deepest lake in the U.S. at 1,943 feet (592 m). Oregon claims the D River as the shortest river in the world, though the state of Montana makes the same claim of its Roe River . Oregon is split into eight geographical regions. In Western Oregon : Oregon Coast (west of the Coast Range ), the Willamette Valley, Rogue Valley , Cascade Range and Klamath Mountains ; and in Central and Eastern Oregon : the Columbia Plateau , the High Desert , and the Blue Mountains . Oregon lies in two time zones . Most of Malheur County is in the Mountain Time Zone , while the rest of the state lies in the Pacific Time Zone . Western Oregon's mountainous regions, home to three of the most prominent mountain peaks of the U.S. including Mount Hood, were formed by the volcanic activity of the Juan de Fuca Plate , a tectonic plate that poses a continued threat of volcanic activity and earthquakes in the region. The most recent major activity was the 1700 Cascadia earthquake . Washington 's Mount St. Helens erupted in 1980 , an event visible from northern Oregon and affecting some areas there. The Columbia River, which forms much of Oregon's northern border, also played a major role in the region's geological evolution, as well as its economic and cultural development. The Columbia is one of North America's largest rivers, and one of two rivers to cut through the Cascades (the Klamath River in southern Oregon is the other). About 15,000 years ago, the Columbia repeatedly flooded much of Oregon during the Missoula Floods ; the modern fertility of the Willamette Valley is largely the result. Plentiful salmon made parts of the river, such as Celilo Falls , hubs of economic activity for thousands of years. Today, Oregon's landscape varies from rain forest in the Coast Range to barren desert in the southeast, which still meets the technical definition of a frontier . Oregon's geographical center is further west than any of the other 48 contiguous states (although the westernmost point of the lower 48 states is in Washington). Central Oregon 's geographical features range from high desert and volcanic rock formations resulting from lava beds . The Oregon Badlands Wilderness is in this region of the state. Typical of a western state, Oregon is home to a unique and diverse array of wildlife. Roughly 60 percent of the state is covered in forest, while the areas west of the Cascades are more densely populated by forest, making up around 80 percent of the landscape. Some 60 percent of Oregon's forests are within federal land. Oregon is the top timber producer of the lower 48 states. Moose have not always inhabited the state but came to Oregon in the 1960s; the Wallowa Valley herd numbered about 60 as of 2013 [update] . Gray wolves were extirpated from Oregon around 1930 but have since found their way back; most reside in northeast Oregon, with two packs living in the south-central part. Although their existence in Oregon is unconfirmed, reports of grizzly bears still turn up, and it is probable some still move into eastern Oregon from Idaho. Oregon is home to what is considered the largest single organism in the world, an Armillaria solidipes fungus beneath the Malheur National Forest of eastern Oregon. Oregon has several National Park System sites , including Crater Lake National Park in the southern part of the Cascades, John Day Fossil Beds National Monument east of the Cascades, Lewis and Clark National Historical Park on the north coast, and Oregon Caves National Monument near the south coast. [ citation needed ] Other areas that were considered for potential national park status in the 20th century include the southern Oregon Coast, Mount Hood, and Hells Canyon to the east. Most of Oregon has a generally mild climate, though there is significant variation given the variety of landscapes across the state. The state's western region (west of the Cascade Range ) has an oceanic climate , populated by dense evergreen mixed forests. Western Oregon's climate is heavily influenced by the Pacific Ocean; the western third of Oregon is very wet in the winter, moderately to very wet during the spring and fall, and dry during the summer. The relative humidity of Western Oregon is high except during summer days, which are semi-dry to semi-humid; Eastern Oregon typically sees low humidity year-round. The state's southwestern portion, particularly the Rogue Valley , has a Mediterranean climate with drier and sunnier winters and hotter summers, similar to Northern California . Oregon's northeastern portion has a steppe climate , and its high terrain regions have a subarctic climate . Like Western Europe , Oregon, and the Pacific Northwest in general, is considered warm for its latitude, and the state has far milder winters at a given elevation than comparable latitudes elsewhere in North America, such as the Upper Midwest , Ontario , Quebec and New England . However, the state ranks fifth for coolest summer temperatures of any state in the country, after Maine, Idaho, Wyoming, and Alaska. The eastern two thirds of Oregon, which largely comprise high desert , have cold, snowy winters and very dry summers. Much of the east is semiarid to arid like the rest of the Great Basin , though the Blue Mountains are wet enough to support extensive forests. Most of Oregon receives significant snowfall, but the Willamette Valley, where 60 percent of the population lives, has considerably milder winters for its latitude and typically sees only light snowfall. Oregon's highest recorded temperature is 119 °F (48 °C), which was set at Prineville on July 29, 1898, and tied at Pendleton on August 10, 1898, and Pelton Dam on June 29, 2021. The lowest recorded temperature is −54 °F (−48 °C) at Seneca on February 10, 1933. Oregon's population is largely concentrated in the Willamette Valley, which stretches from Eugene in the south (home of the University of Oregon ) through Corvallis (home of Oregon State University ) and Salem (the capital) to Portland (Oregon's largest city). Astoria , at the mouth of the Columbia River, was the first permanent English-speaking settlement west of the Rockies in what is now the U.S. Oregon City , at the end of the Oregon Trail, was the Oregon Territory's first incorporated city, and was its first capital from 1848 until 1852, when the capital was moved to Salem. Bend , near the geographic center of the state, is one of the ten fastest-growing metropolitan areas in the U.S. [ better source needed ] In southern Oregon, Medford is a rapidly growing metro area and is home to the Rogue Valley International–Medford Airport , the state's third-busiest airport. To the south, near the California border, is the city of Ashland . Eastern Oregon is sparsely populated, but is home to Hermiston , which with a population of 18,000 is the largest and fastest-growing city in the region.",
+    "wiki_Geology_and_terrain": "Western Oregon's mountainous regions, home to three of the most prominent mountain peaks of the U.S. including Mount Hood, were formed by the volcanic activity of the Juan de Fuca Plate , a tectonic plate that poses a continued threat of volcanic activity and earthquakes in the region. The most recent major activity was the 1700 Cascadia earthquake . Washington 's Mount St. Helens erupted in 1980 , an event visible from northern Oregon and affecting some areas there. The Columbia River, which forms much of Oregon's northern border, also played a major role in the region's geological evolution, as well as its economic and cultural development. The Columbia is one of North America's largest rivers, and one of two rivers to cut through the Cascades (the Klamath River in southern Oregon is the other). About 15,000 years ago, the Columbia repeatedly flooded much of Oregon during the Missoula Floods ; the modern fertility of the Willamette Valley is largely the result. Plentiful salmon made parts of the river, such as Celilo Falls , hubs of economic activity for thousands of years. Today, Oregon's landscape varies from rain forest in the Coast Range to barren desert in the southeast, which still meets the technical definition of a frontier . Oregon's geographical center is further west than any of the other 48 contiguous states (although the westernmost point of the lower 48 states is in Washington). Central Oregon 's geographical features range from high desert and volcanic rock formations resulting from lava beds . The Oregon Badlands Wilderness is in this region of the state.",
+    "wiki_Flora_and_fauna": "Typical of a western state, Oregon is home to a unique and diverse array of wildlife. Roughly 60 percent of the state is covered in forest, while the areas west of the Cascades are more densely populated by forest, making up around 80 percent of the landscape. Some 60 percent of Oregon's forests are within federal land. Oregon is the top timber producer of the lower 48 states. Moose have not always inhabited the state but came to Oregon in the 1960s; the Wallowa Valley herd numbered about 60 as of 2013 [update] . Gray wolves were extirpated from Oregon around 1930 but have since found their way back; most reside in northeast Oregon, with two packs living in the south-central part. Although their existence in Oregon is unconfirmed, reports of grizzly bears still turn up, and it is probable some still move into eastern Oregon from Idaho. Oregon is home to what is considered the largest single organism in the world, an Armillaria solidipes fungus beneath the Malheur National Forest of eastern Oregon. Oregon has several National Park System sites , including Crater Lake National Park in the southern part of the Cascades, John Day Fossil Beds National Monument east of the Cascades, Lewis and Clark National Historical Park on the north coast, and Oregon Caves National Monument near the south coast. [ citation needed ] Other areas that were considered for potential national park status in the 20th century include the southern Oregon Coast, Mount Hood, and Hells Canyon to the east.",
+    "wiki_Climate": "Most of Oregon has a generally mild climate, though there is significant variation given the variety of landscapes across the state. The state's western region (west of the Cascade Range ) has an oceanic climate , populated by dense evergreen mixed forests. Western Oregon's climate is heavily influenced by the Pacific Ocean; the western third of Oregon is very wet in the winter, moderately to very wet during the spring and fall, and dry during the summer. The relative humidity of Western Oregon is high except during summer days, which are semi-dry to semi-humid; Eastern Oregon typically sees low humidity year-round. The state's southwestern portion, particularly the Rogue Valley , has a Mediterranean climate with drier and sunnier winters and hotter summers, similar to Northern California . Oregon's northeastern portion has a steppe climate , and its high terrain regions have a subarctic climate . Like Western Europe , Oregon, and the Pacific Northwest in general, is considered warm for its latitude, and the state has far milder winters at a given elevation than comparable latitudes elsewhere in North America, such as the Upper Midwest , Ontario , Quebec and New England . However, the state ranks fifth for coolest summer temperatures of any state in the country, after Maine, Idaho, Wyoming, and Alaska. The eastern two thirds of Oregon, which largely comprise high desert , have cold, snowy winters and very dry summers. Much of the east is semiarid to arid like the rest of the Great Basin , though the Blue Mountains are wet enough to support extensive forests. Most of Oregon receives significant snowfall, but the Willamette Valley, where 60 percent of the population lives, has considerably milder winters for its latitude and typically sees only light snowfall. Oregon's highest recorded temperature is 119 °F (48 °C), which was set at Prineville on July 29, 1898, and tied at Pendleton on August 10, 1898, and Pelton Dam on June 29, 2021. The lowest recorded temperature is −54 °F (−48 °C) at Seneca on February 10, 1933.",
+    "wiki_Cities_and_towns": "Oregon's population is largely concentrated in the Willamette Valley, which stretches from Eugene in the south (home of the University of Oregon ) through Corvallis (home of Oregon State University ) and Salem (the capital) to Portland (Oregon's largest city). Astoria , at the mouth of the Columbia River, was the first permanent English-speaking settlement west of the Rockies in what is now the U.S. Oregon City , at the end of the Oregon Trail, was the Oregon Territory's first incorporated city, and was its first capital from 1848 until 1852, when the capital was moved to Salem. Bend , near the geographic center of the state, is one of the ten fastest-growing metropolitan areas in the U.S. [ better source needed ] In southern Oregon, Medford is a rapidly growing metro area and is home to the Rogue Valley International–Medford Airport , the state's third-busiest airport. To the south, near the California border, is the city of Ashland . Eastern Oregon is sparsely populated, but is home to Hermiston , which with a population of 18,000 is the largest and fastest-growing city in the region.",
+    "wiki_Demographics": "The 2020 U.S. census determined that the population of Oregon was 4,237,256 in 2020, a 10.60% increase over the 2010 census . Oregon was the nation's \"Top Moving Destination\" in 2014, with two families moving into the state for every one moving out (66.4% to 33.6%). Oregon was also the top moving destination in 2013, and the second-most popular destination in 2010 through 2012. As of the 2020 census, the population of Oregon was 4,237,256. The gender makeup of the state was 49.5% male and 50.5% female. 20.5% of the population were under the age of 18; 60.8% were between the ages of 18 and 64; and 18.8% were 65 years of age or older. According to the U.S. Department of Housing and Urban Development 's 2022 Annual Homeless Assessment Report , there were an estimated 17,959 homeless people in Oregon. According to the 2020 census, 13.9% of Oregon's population was of Hispanic or Latino origin (of any race) and 71.7% non-Hispanic White , 2.0% African American , 1.5% Native American , 4.6% Asian , 1.5% Pacific Islander , and 10.5% two or more races. According to the 2016 American Community Survey , 12.4% of Oregon's population were of Hispanic or Latino origin (of any race): Mexican (10.4%), Puerto Rican (0.3%), Cuban (0.1%), and other Hispanic or Latino origin (1.5%). The five largest ancestry groups for White Oregonians were: German (19.1%), Irish (11.7%), English (11.3%), American (5.3%), and Norwegian (3.8%). The state's most populous ethnic group, non-Hispanic Whites , decreased from 95.8% of the total population in 1970 to 71.7% in 2020, though it increased in absolute numbers. As of 2011 [update] , 38.7% of Oregon's children under one year of age belonged to minority groups , meaning they had at least one parent who was not a non-Hispanic White. Of the state's total population, 22.6% was under the age 18, and 77.4% were 18 or older. The center of population of Oregon is located in Linn County , in the city of Lyons . Around 60% of Oregon's population resides within the Portland metropolitan area . As of 2009 [update] , Oregon's population comprised 361,393 foreign-born residents. Of the foreign-born residents, the three largest groups are originally from countries in: Latin America (47.8%), Asia (27.4%), and Europe (16.5%). Mexico , Vietnam , China , India , and the Philippines were the top countries of origin for Oregon's immigrants in 2018. The Roma first reached Oregon in the 1890s. There is a substantial Roma population in Willamette Valley and around Portland. Oregon has frequently been cited by statistical agencies for having a smaller percentage of religious communities than other U.S. states. According to a 2009 Gallup poll , Oregon was paired with Vermont as the two \"least religious\" states in the U.S. In the same 2009 Gallup poll, 69% of Oregonians identified themselves as being Christian . The largest Christian denominations in Oregon by number of adherents in 2010 were the Roman Catholic Church with 398,738; The Church of Jesus Christ of Latter-day Saints with 147,965; and the Assemblies of God with 45,492. Oregon also contains the largest community of Russian Old Believers to be found in the U.S. Judaism is the largest non-Christian religion in Oregon with more than 50,000 adherents, 47,000 of whom live in the Portland area. Recently, new kosher food and Jewish educational offerings have led to a rapid increase in Portland's Orthodox Jewish population. The Northwest Tibetan Cultural Association is headquartered in Portland. There are an estimated 6,000 to 10,000 Muslims in Oregon, most of whom live in and around Portland. Most of the remainder of the population had no religious affiliation; the 2008 American Religious Identification Survey placed Oregon as tied with Nevada in fifth place of U.S. states having the highest percentage of residents identifying themselves as \"non-religious\", at 24 percent. Secular organizations include the Center for Inquiry , the Humanists of Greater Portland, and the United States Atheists. During much of the 1990s, a group of conservative Christians formed the Oregon Citizens Alliance , and unsuccessfully tried to pass legislation to prevent \"gay sensitivity training\" in public schools and legal benefits for homosexual couples. Projections from the U.S. Census Bureau show Oregon's population increasing to 4,833,918 by 2030, an increase of 41.3% compared to the state's population of 3,421,399 in 2000. The state's own projections forecast a total population of 5,425,408 in 2040. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Population": "The 2020 U.S. census determined that the population of Oregon was 4,237,256 in 2020, a 10.60% increase over the 2010 census . Oregon was the nation's \"Top Moving Destination\" in 2014, with two families moving into the state for every one moving out (66.4% to 33.6%). Oregon was also the top moving destination in 2013, and the second-most popular destination in 2010 through 2012. As of the 2020 census, the population of Oregon was 4,237,256. The gender makeup of the state was 49.5% male and 50.5% female. 20.5% of the population were under the age of 18; 60.8% were between the ages of 18 and 64; and 18.8% were 65 years of age or older. According to the U.S. Department of Housing and Urban Development 's 2022 Annual Homeless Assessment Report , there were an estimated 17,959 homeless people in Oregon. According to the 2020 census, 13.9% of Oregon's population was of Hispanic or Latino origin (of any race) and 71.7% non-Hispanic White , 2.0% African American , 1.5% Native American , 4.6% Asian , 1.5% Pacific Islander , and 10.5% two or more races. According to the 2016 American Community Survey , 12.4% of Oregon's population were of Hispanic or Latino origin (of any race): Mexican (10.4%), Puerto Rican (0.3%), Cuban (0.1%), and other Hispanic or Latino origin (1.5%). The five largest ancestry groups for White Oregonians were: German (19.1%), Irish (11.7%), English (11.3%), American (5.3%), and Norwegian (3.8%). The state's most populous ethnic group, non-Hispanic Whites , decreased from 95.8% of the total population in 1970 to 71.7% in 2020, though it increased in absolute numbers. As of 2011 [update] , 38.7% of Oregon's children under one year of age belonged to minority groups , meaning they had at least one parent who was not a non-Hispanic White. Of the state's total population, 22.6% was under the age 18, and 77.4% were 18 or older. The center of population of Oregon is located in Linn County , in the city of Lyons . Around 60% of Oregon's population resides within the Portland metropolitan area . As of 2009 [update] , Oregon's population comprised 361,393 foreign-born residents. Of the foreign-born residents, the three largest groups are originally from countries in: Latin America (47.8%), Asia (27.4%), and Europe (16.5%). Mexico , Vietnam , China , India , and the Philippines were the top countries of origin for Oregon's immigrants in 2018. The Roma first reached Oregon in the 1890s. There is a substantial Roma population in Willamette Valley and around Portland.",
+    "wiki_Religious_and_secular_communities": "Oregon has frequently been cited by statistical agencies for having a smaller percentage of religious communities than other U.S. states. According to a 2009 Gallup poll , Oregon was paired with Vermont as the two \"least religious\" states in the U.S. In the same 2009 Gallup poll, 69% of Oregonians identified themselves as being Christian . The largest Christian denominations in Oregon by number of adherents in 2010 were the Roman Catholic Church with 398,738; The Church of Jesus Christ of Latter-day Saints with 147,965; and the Assemblies of God with 45,492. Oregon also contains the largest community of Russian Old Believers to be found in the U.S. Judaism is the largest non-Christian religion in Oregon with more than 50,000 adherents, 47,000 of whom live in the Portland area. Recently, new kosher food and Jewish educational offerings have led to a rapid increase in Portland's Orthodox Jewish population. The Northwest Tibetan Cultural Association is headquartered in Portland. There are an estimated 6,000 to 10,000 Muslims in Oregon, most of whom live in and around Portland. Most of the remainder of the population had no religious affiliation; the 2008 American Religious Identification Survey placed Oregon as tied with Nevada in fifth place of U.S. states having the highest percentage of residents identifying themselves as \"non-religious\", at 24 percent. Secular organizations include the Center for Inquiry , the Humanists of Greater Portland, and the United States Atheists. During much of the 1990s, a group of conservative Christians formed the Oregon Citizens Alliance , and unsuccessfully tried to pass legislation to prevent \"gay sensitivity training\" in public schools and legal benefits for homosexual couples. Cite error: There are tags or {{efn}} templates on this page, but the references will not show without a {{reflist|group=lower-alpha}} template or {{notelist}} template (see the help page ).",
+    "wiki_Future_projections": "Projections from the U.S. Census Bureau show Oregon's population increasing to 4,833,918 by 2030, an increase of 41.3% compared to the state's population of 3,421,399 in 2000. The state's own projections forecast a total population of 5,425,408 in 2040.",
+    "wiki_Economy": "As of 2015 [update] , Oregon ranks as the 17th highest in median household income at $60,834. The gross domestic product (GDP) of Oregon in 2013 was $219.6 billion, a 2.7% increase from 2012; Oregon is the 25th wealthiest state by GDP. In 2003, Oregon was 28th in the U.S. by GDP. The state's per capita personal income (PCPI) in 2013 was $39,848, a 1.5% increase from 2012. Oregon ranks 33rd in the U.S. by PCPI, compared to 31st in 2003. The national PCPI in 2013 was $44,765. In 2025, small businesses made up 99.4% of the businesses in the state, and employed 53.4% of its work force. Oregon's unemployment rate was 4.8% in May 2025, while the U.S. unemployment rate was 4.2 that month. In August, 2013, Oregon had the third largest amount of food stamp users in the nation (21% of the population). [ needs update ] Oregon's diverse landscapes provide ideal environments for various types of farming. Land in the Willamette Valley owes its fertility to the Missoula Floods , which deposited lake sediment from Glacial Lake Missoula in western Montana onto the valley floor. In 2016, the Willamette Valley region produced over 100 million pounds (45 kt) of blueberries . The industry is governed and represented by the Oregon Department of Agriculture . Oregon is also one of four major world hazelnut ( Corylus avellana ) growing regions, and produces 95% of the domestic hazelnuts in the United States. While the history of wine production in Oregon can be traced to before Prohibition , it became a significant industry beginning in the 1970s. In 2005, Oregon ranked third among U.S. states with 303 wineries. Due to regional similarities in climate and soil , the grapes planted in Oregon are often the same varieties found in the French regions of Alsace and Burgundy . In 2014, 71 wineries opened in the state. The total is currently 676, which represents a growth of 12% over 2013. In the southern Oregon coast, commercially cultivated cranberries account for about 7 percent of U.S. production, and the cranberry ranks 23rd among Oregon's top 50 agricultural commodities. Cranberry cultivation in Oregon uses about 27,000 acres (110 square kilometers) in southern Coos and northern Curry counties, centered around the coastal city of Bandon . In the northeastern region of the state, particularly around Pendleton , both irrigated and dry land wheat is grown. Oregon farmers and ranchers also produce cattle , sheep , dairy products, eggs and poultry . Caneberries ( Rubus ) are farmed here. Stamen blight ( Hapalosphaeria deformans ) is significant here and throughout the PNW . Here it especially hinders commercial dewberries . Phytophthora ramorum was first discovered in the 1990s on the California Central Coast and was quickly found here as well. P. ramorum is of economic concern due to its infestation of Rubus and Vaccinium spp. (including cranberry and blueberry ). Peach es grown in the Willamette Valley are mostly sold directly and do not enter the more distant markets. OSU Extension recommended several peach and nectarine cultivars for Willamette. Approximately 1.3 million acres of agricultural land in Oregon is owned by foreigners, with nearly half being held by Canadians . Vast forests have historically made Oregon one of the nation's major timber -producing and logging states, but forest fires (such as the Tillamook Burn ), over-harvesting, and lawsuits over the proper management of the extensive federal forest holdings have reduced the timber produced. Between 1989 and 2011, the amount of timber harvested from federal lands in Oregon dropped about 90%, although harvest levels on private land have remained relatively constant. Even the shift in recent years towards finished goods such as paper and building materials has not slowed the decline of the timber industry in the state. The effects of this decline have included Weyerhaeuser 's acquisition of Portland-based Willamette Industries in January 2002, the relocation of Louisiana-Pacific 's corporate headquarters from Portland to Nashville , and the decline of former lumber company towns such as Gilchrist . Despite these changes, Oregon still leads the U.S. in softwood lumber production; in 2011, 4,134 million board feet (9,760,000 m 3 ) was produced in Oregon, compared with 3,685 million board feet (8,700,000 m 3 ) in Washington, 1,914 million board feet (4,520,000 m 3 ) in Georgia , and 1,708 million board feet (4,030,000 m 3 ) in Mississippi . The slowing of the timber and lumber industry has caused high unemployment rates in rural areas. Oregon has one of the largest salmon -fishing industries in the world, although ocean fisheries have reduced the river fisheries in recent years. Because of the abundance of waterways in the state, it is also a major producer of hydroelectric energy. On June 30, 2022, an emerald ash borer infestation was found in Forest Grove ; the first for Western North America . Tourism is also a strong industry in the state. Tourism is centered on the state's natural features – mountains, forests, waterfalls, rivers, beaches and lakes, including Crater Lake National Park , Multnomah Falls , the Painted Hills , the Deschutes River, and the Oregon Caves . Mount Hood and Mount Bachelor also draw visitors year-round for skiing and other snow activities. Portland is home to the Oregon Museum of Science and Industry , the Portland Art Museum , and the Oregon Zoo , which is the oldest zoo west of the Mississippi River . The International Rose Test Garden is another prominent attraction in the city. Portland has also been named the best city in the world for street food by several publications, including the U.S. News & World Report and CNN . Oregon is home to many breweries , and Portland has the largest number of breweries of any city in the world. The state's coastal region produces significant tourism as well. The Oregon Coast Aquarium comprises 23 acres (9.3 ha) along Yaquina Bay in Newport , and was also home to Keiko the orca whale. It has been noted as one of the top ten aquariums in North America. Fort Clatsop in Warrenton features a replica of Lewis and Clark 's encampment at the mouth of the Columbia River in 1805. The Sea Lion Caves in Florence are the largest system of sea caverns in the U.S., and also attract many visitors. In Southern Oregon, the Oregon Shakespeare Festival , held in Ashland , is also a tourist draw, as is the Oregon Vortex and the Wolf Creek Inn State Heritage Site , a historic inn where Jack London wrote his 1913 novel Valley of the Moon . Oregon has also historically been a popular region for film shoots due to its diverse landscapes, as well as its proximity to Hollywood . Movies filmed in Oregon include: Animal House , Free Willy , The General , The Goonies , Kindergarten Cop , One Flew Over the Cuckoo's Nest , and Stand By Me . Oregon native Matt Groening , creator of The Simpsons , has incorporated many references from his hometown of Portland into the TV series. Additionally, several television shows have been filmed throughout the state including Portlandia , Grimm , Bates Motel , and Leverage . The Oregon Film Museum is located in the old Clatsop County Jail in Astoria . Additionally, the last remaining Blockbuster store is located in Bend. High technology industries located in Silicon Forest have been a major employer since the 1970s. Tektronix was the largest private employer in Oregon until the late 1980s. Intel 's creation and expansion of several facilities in eastern Washington County continued the growth that Tektronix had started. Intel, the state's largest for-profit private employer, operates four large facilities, with Ronler Acres, Jones Farm and Hawthorn Farm all located in Hillsboro . The spinoffs and startups that were produced by these two companies led to the establishment of the so-called Silicon Forest. The recession and dot-com bust of 2001 hit the region hard; many high technology employers reduced the number of their employees or went out of business. Open Source Development Labs made news in 2004 when they hired Linus Torvalds , developer of the Linux kernel . In 2010, biotechnology giant Genentech opened a $400 million facility in Hillsboro to expand its production capabilities. Oregon is home to several large datacenters that take advantage of cheap power and a climate conducive to reducing cooling costs. Google operates a large datacenter in The Dalles , and Facebook built a large datacenter near Prineville in 2010. Amazon opened a datacenter near Boardman in 2011, and a fulfillment center in Troutdale in 2018. Oregon is also the home of large corporations in other industries. The world headquarters of Nike is located near Beaverton . Medford is home to Harry and David , which sells gift items under several brands. Medford is also home to the national headquarters of Lithia Motors . Portland is home to one of the West's largest trade book publishing houses, Graphic Arts Center Publishing . Oregon is also home to Mentor Graphics Corporation , a world leader in electronic design automation located in Wilsonville and employs roughly 4,500 people worldwide. Adidas Corporations American Headquarters is located in Portland and employs roughly 900 full-time workers at its Portland campus. Nike, located in Beaverton, employs roughly 5,000 full-time employees at its 200-acre (81 ha) campus. Nike's Beaverton campus is continuously ranked as a top employer in the Portland area-along with competitor Adidas. Intel Corporation employs 22,000 in Oregon with the majority of these employees located at the company's Hillsboro campus located about 30 minutes west of Portland. Intel has been a top employer in Oregon since 1974. The U.S. Federal Government and Providence Health systems are the top employers in Oregon with roughly 12,000 federal workers and 14,000 Providence Health workers. Two companies headquartered in Oregon are in the Fortune 500 : Nike, Inc. , at 88 and Lithia Motors at 140. Oregon's biennial state budget, $2.6 billion in 2017, comprises General Funds , Federal Funds , Lottery Funds, and Other Funds. Oregon is one of only five states that have no sales tax . Oregon voters have been resolute in their opposition to a sales tax, voting proposals down each of the nine times they have been presented. The last vote, for 1993's Measure 1, was defeated by a 75–25% margin. The state also has a minimum corporate tax of only $150 a year, amounting to 5.6% of the General Fund in the 2005–07 biennium; data about which businesses pay the minimum is not available to the public. [ better source needed ] As a result, the state relies on property and income taxes for its revenue. Oregon has the fifth highest personal income tax in the nation. According to the U.S. Census Bureau, Oregon ranked 41st out of the 50 states in taxes per capita in 2005 with an average amount paid of 1,791.45. A few local governments levy sales taxes on services: the city of Ashland, for example, collects a 5% sales tax on prepared food. The City of Portland imposes an Arts Education and Access Income Tax on residents over 18—a flat tax of $35 collected from individuals earning $1,000 or more per year and residing in a household with an annual income exceeding the federal poverty level. The tax funds Portland school teachers, and art focused non-profit organizations in Portland. The State of Oregon also allows transit districts to levy an income tax on employers and the self-employed. The State currently collects the tax for TriMet and the Lane Transit District . Oregon is one of six states with a revenue limit. The \" kicker law \" stipulates that when income tax collections exceed state economists' estimates by two percent or more, any excess must be returned to taxpayers. Since the enactment of the law in 1979, refunds have been issued for seven of the eleven biennia. In 2000, Ballot Measure 86 converted the \"kicker\" law from statute to the Oregon Constitution , and changed some of its provisions. Federal payments to county governments that were granted to replace timber revenue when logging in National Forests was restricted in the 1990s, have been under threat of suspension for several years. This issue dominates the future revenue of rural counties, which have come to rely on the payments in providing essential services. 55% of state revenues are spent on public education, 23% on human services (child protective services, Medicaid, and senior services), 17% on public safety, and 5% on other services. Oregon has had a $15 bicycle tax for each new bicycles over $200 since 2018. Oregon is the only state in the nation with a bicycle excise tax. For health insurance, as of 2018 Cambia Health Solutions has the highest market share at 21%, followed by Providence Health . In the Portland region, Kaiser Permanente leads. Providence and Kaiser are vertically integrated delivery systems which operate hospitals and offer insurance plans. Aside from Providence and Kaiser, hospital systems which are primarily Oregon-based include Legacy Health mostly covering Portland, Samaritan Health Services with five hospitals in various areas across the state, and Tuality Healthcare in the western Portland metropolitan area. In Southern Oregon , Asante runs several hospitals, including Rogue Regional Medical Center . Some hospitals are operated by multi-state organizations such as PeaceHealth and CommonSpirit Health . Some hospitals such Salem Hospital operate independently of larger systems. Oregon Health & Science University is a Portland-based medical school that operates two hospitals and clinics. The Oregon Health Plan is the state's Medicaid managed care plan, and it is known for innovations. The Portland area is a mature managed care and two-thirds of Medicare enrollees are in Medicare Advantage plans.",
+    "wiki_Agriculture": "Oregon's diverse landscapes provide ideal environments for various types of farming. Land in the Willamette Valley owes its fertility to the Missoula Floods , which deposited lake sediment from Glacial Lake Missoula in western Montana onto the valley floor. In 2016, the Willamette Valley region produced over 100 million pounds (45 kt) of blueberries . The industry is governed and represented by the Oregon Department of Agriculture . Oregon is also one of four major world hazelnut ( Corylus avellana ) growing regions, and produces 95% of the domestic hazelnuts in the United States. While the history of wine production in Oregon can be traced to before Prohibition , it became a significant industry beginning in the 1970s. In 2005, Oregon ranked third among U.S. states with 303 wineries. Due to regional similarities in climate and soil , the grapes planted in Oregon are often the same varieties found in the French regions of Alsace and Burgundy . In 2014, 71 wineries opened in the state. The total is currently 676, which represents a growth of 12% over 2013. In the southern Oregon coast, commercially cultivated cranberries account for about 7 percent of U.S. production, and the cranberry ranks 23rd among Oregon's top 50 agricultural commodities. Cranberry cultivation in Oregon uses about 27,000 acres (110 square kilometers) in southern Coos and northern Curry counties, centered around the coastal city of Bandon . In the northeastern region of the state, particularly around Pendleton , both irrigated and dry land wheat is grown. Oregon farmers and ranchers also produce cattle , sheep , dairy products, eggs and poultry . Caneberries ( Rubus ) are farmed here. Stamen blight ( Hapalosphaeria deformans ) is significant here and throughout the PNW . Here it especially hinders commercial dewberries . Phytophthora ramorum was first discovered in the 1990s on the California Central Coast and was quickly found here as well. P. ramorum is of economic concern due to its infestation of Rubus and Vaccinium spp. (including cranberry and blueberry ). Peach es grown in the Willamette Valley are mostly sold directly and do not enter the more distant markets. OSU Extension recommended several peach and nectarine cultivars for Willamette. Approximately 1.3 million acres of agricultural land in Oregon is owned by foreigners, with nearly half being held by Canadians .",
+    "wiki_Forestry_and_fisheries": "Vast forests have historically made Oregon one of the nation's major timber -producing and logging states, but forest fires (such as the Tillamook Burn ), over-harvesting, and lawsuits over the proper management of the extensive federal forest holdings have reduced the timber produced. Between 1989 and 2011, the amount of timber harvested from federal lands in Oregon dropped about 90%, although harvest levels on private land have remained relatively constant. Even the shift in recent years towards finished goods such as paper and building materials has not slowed the decline of the timber industry in the state. The effects of this decline have included Weyerhaeuser 's acquisition of Portland-based Willamette Industries in January 2002, the relocation of Louisiana-Pacific 's corporate headquarters from Portland to Nashville , and the decline of former lumber company towns such as Gilchrist . Despite these changes, Oregon still leads the U.S. in softwood lumber production; in 2011, 4,134 million board feet (9,760,000 m 3 ) was produced in Oregon, compared with 3,685 million board feet (8,700,000 m 3 ) in Washington, 1,914 million board feet (4,520,000 m 3 ) in Georgia , and 1,708 million board feet (4,030,000 m 3 ) in Mississippi . The slowing of the timber and lumber industry has caused high unemployment rates in rural areas. Oregon has one of the largest salmon -fishing industries in the world, although ocean fisheries have reduced the river fisheries in recent years. Because of the abundance of waterways in the state, it is also a major producer of hydroelectric energy. On June 30, 2022, an emerald ash borer infestation was found in Forest Grove ; the first for Western North America .",
+    "wiki_Tourism_and_entertainment": "Tourism is also a strong industry in the state. Tourism is centered on the state's natural features – mountains, forests, waterfalls, rivers, beaches and lakes, including Crater Lake National Park , Multnomah Falls , the Painted Hills , the Deschutes River, and the Oregon Caves . Mount Hood and Mount Bachelor also draw visitors year-round for skiing and other snow activities. Portland is home to the Oregon Museum of Science and Industry , the Portland Art Museum , and the Oregon Zoo , which is the oldest zoo west of the Mississippi River . The International Rose Test Garden is another prominent attraction in the city. Portland has also been named the best city in the world for street food by several publications, including the U.S. News & World Report and CNN . Oregon is home to many breweries , and Portland has the largest number of breweries of any city in the world. The state's coastal region produces significant tourism as well. The Oregon Coast Aquarium comprises 23 acres (9.3 ha) along Yaquina Bay in Newport , and was also home to Keiko the orca whale. It has been noted as one of the top ten aquariums in North America. Fort Clatsop in Warrenton features a replica of Lewis and Clark 's encampment at the mouth of the Columbia River in 1805. The Sea Lion Caves in Florence are the largest system of sea caverns in the U.S., and also attract many visitors. In Southern Oregon, the Oregon Shakespeare Festival , held in Ashland , is also a tourist draw, as is the Oregon Vortex and the Wolf Creek Inn State Heritage Site , a historic inn where Jack London wrote his 1913 novel Valley of the Moon . Oregon has also historically been a popular region for film shoots due to its diverse landscapes, as well as its proximity to Hollywood . Movies filmed in Oregon include: Animal House , Free Willy , The General , The Goonies , Kindergarten Cop , One Flew Over the Cuckoo's Nest , and Stand By Me . Oregon native Matt Groening , creator of The Simpsons , has incorporated many references from his hometown of Portland into the TV series. Additionally, several television shows have been filmed throughout the state including Portlandia , Grimm , Bates Motel , and Leverage . The Oregon Film Museum is located in the old Clatsop County Jail in Astoria . Additionally, the last remaining Blockbuster store is located in Bend.",
+    "wiki_Technology": "High technology industries located in Silicon Forest have been a major employer since the 1970s. Tektronix was the largest private employer in Oregon until the late 1980s. Intel 's creation and expansion of several facilities in eastern Washington County continued the growth that Tektronix had started. Intel, the state's largest for-profit private employer, operates four large facilities, with Ronler Acres, Jones Farm and Hawthorn Farm all located in Hillsboro . The spinoffs and startups that were produced by these two companies led to the establishment of the so-called Silicon Forest. The recession and dot-com bust of 2001 hit the region hard; many high technology employers reduced the number of their employees or went out of business. Open Source Development Labs made news in 2004 when they hired Linus Torvalds , developer of the Linux kernel . In 2010, biotechnology giant Genentech opened a $400 million facility in Hillsboro to expand its production capabilities. Oregon is home to several large datacenters that take advantage of cheap power and a climate conducive to reducing cooling costs. Google operates a large datacenter in The Dalles , and Facebook built a large datacenter near Prineville in 2010. Amazon opened a datacenter near Boardman in 2011, and a fulfillment center in Troutdale in 2018.",
+    "wiki_Corporate_headquarters": "Oregon is also the home of large corporations in other industries. The world headquarters of Nike is located near Beaverton . Medford is home to Harry and David , which sells gift items under several brands. Medford is also home to the national headquarters of Lithia Motors . Portland is home to one of the West's largest trade book publishing houses, Graphic Arts Center Publishing . Oregon is also home to Mentor Graphics Corporation , a world leader in electronic design automation located in Wilsonville and employs roughly 4,500 people worldwide. Adidas Corporations American Headquarters is located in Portland and employs roughly 900 full-time workers at its Portland campus. Nike, located in Beaverton, employs roughly 5,000 full-time employees at its 200-acre (81 ha) campus. Nike's Beaverton campus is continuously ranked as a top employer in the Portland area-along with competitor Adidas. Intel Corporation employs 22,000 in Oregon with the majority of these employees located at the company's Hillsboro campus located about 30 minutes west of Portland. Intel has been a top employer in Oregon since 1974. The U.S. Federal Government and Providence Health systems are the top employers in Oregon with roughly 12,000 federal workers and 14,000 Providence Health workers. Two companies headquartered in Oregon are in the Fortune 500 : Nike, Inc. , at 88 and Lithia Motors at 140.",
+    "wiki_Taxes_and_budgets": "Oregon's biennial state budget, $2.6 billion in 2017, comprises General Funds , Federal Funds , Lottery Funds, and Other Funds. Oregon is one of only five states that have no sales tax . Oregon voters have been resolute in their opposition to a sales tax, voting proposals down each of the nine times they have been presented. The last vote, for 1993's Measure 1, was defeated by a 75–25% margin. The state also has a minimum corporate tax of only $150 a year, amounting to 5.6% of the General Fund in the 2005–07 biennium; data about which businesses pay the minimum is not available to the public. [ better source needed ] As a result, the state relies on property and income taxes for its revenue. Oregon has the fifth highest personal income tax in the nation. According to the U.S. Census Bureau, Oregon ranked 41st out of the 50 states in taxes per capita in 2005 with an average amount paid of 1,791.45. A few local governments levy sales taxes on services: the city of Ashland, for example, collects a 5% sales tax on prepared food. The City of Portland imposes an Arts Education and Access Income Tax on residents over 18—a flat tax of $35 collected from individuals earning $1,000 or more per year and residing in a household with an annual income exceeding the federal poverty level. The tax funds Portland school teachers, and art focused non-profit organizations in Portland. The State of Oregon also allows transit districts to levy an income tax on employers and the self-employed. The State currently collects the tax for TriMet and the Lane Transit District . Oregon is one of six states with a revenue limit. The \" kicker law \" stipulates that when income tax collections exceed state economists' estimates by two percent or more, any excess must be returned to taxpayers. Since the enactment of the law in 1979, refunds have been issued for seven of the eleven biennia. In 2000, Ballot Measure 86 converted the \"kicker\" law from statute to the Oregon Constitution , and changed some of its provisions. Federal payments to county governments that were granted to replace timber revenue when logging in National Forests was restricted in the 1990s, have been under threat of suspension for several years. This issue dominates the future revenue of rural counties, which have come to rely on the payments in providing essential services. 55% of state revenues are spent on public education, 23% on human services (child protective services, Medicaid, and senior services), 17% on public safety, and 5% on other services. Oregon has had a $15 bicycle tax for each new bicycles over $200 since 2018. Oregon is the only state in the nation with a bicycle excise tax.",
+    "wiki_Healthcare": "For health insurance, as of 2018 Cambia Health Solutions has the highest market share at 21%, followed by Providence Health . In the Portland region, Kaiser Permanente leads. Providence and Kaiser are vertically integrated delivery systems which operate hospitals and offer insurance plans. Aside from Providence and Kaiser, hospital systems which are primarily Oregon-based include Legacy Health mostly covering Portland, Samaritan Health Services with five hospitals in various areas across the state, and Tuality Healthcare in the western Portland metropolitan area. In Southern Oregon , Asante runs several hospitals, including Rogue Regional Medical Center . Some hospitals are operated by multi-state organizations such as PeaceHealth and CommonSpirit Health . Some hospitals such Salem Hospital operate independently of larger systems. Oregon Health & Science University is a Portland-based medical school that operates two hospitals and clinics. The Oregon Health Plan is the state's Medicaid managed care plan, and it is known for innovations. The Portland area is a mature managed care and two-thirds of Medicare enrollees are in Medicare Advantage plans.",
+    "wiki_Education": "In the 2013–2014 school year, the state had 567,000 students in public schools. There were 197 public school districts, served by 19 education service districts . In 2016, the largest school districts in the state were: Portland Public Schools , comprising 47,323 students; Salem-Keizer School District , comprising 40,565 students; Beaverton School District , comprising 39,625 students; Hillsboro School District , comprising 21,118 students; and North Clackamas School District , comprising 17,053 students. Approximately 90.5% of Oregon high school students graduate, improving on the national average of 88.3% as measured from the 2010 U.S. census . On May 8, 2019, educators across the state protested to demand smaller class sizes, hiring more support staff, such as school counselors, librarians, and nurses, and the restoration of art, music, and physical education classes. The protests caused two dozen school districts to close, which equals to about 600 schools across the state. Especially since the 1990 passage of Measure 5, which set limits on property tax levels, Oregon has struggled to fund higher education. Since then, Oregon has cut its higher education budget and now ranks 46th in the country in state spending per student. However, 2007 legislation funded the university system far beyond the governor's requested budget though still capping tuition increases at 3% per year. Oregon supports a total of seven public universities and one affiliate. It is home to three public research universities: The University of Oregon (UO) in Eugene and Oregon State University (OSU) in Corvallis , both classified as research universities with very high research activity, and Portland State University which is classified as a research university with high research activity. UO is the state's highest nationally ranked and most selective public university by U.S. News & World Report and Forbes . OSU is the state's only land-grant university, has the state's largest enrollment for fall 2014, and is the state's highest ranking university according to Academic Ranking of World Universities , Washington Monthly , and QS World University Rankings . OSU receives more annual funding for research than all other public higher education institutions in Oregon combined. The state's urban Portland State University has Oregon's second largest enrollment. The state has three regional universities: Western Oregon University in Monmouth , Southern Oregon University in Ashland, and Eastern Oregon University in La Grande . The Oregon Institute of Technology has its campus in Klamath Falls . The quasi-public Oregon Health & Science University (OHSU) includes medical, dental, and nursing schools, and graduate programs in biomedical sciences in Portland and a science and engineering school in Hillsboro. The state also supports 17 community colleges . Oregon is home to a wide variety of private colleges, the majority of which are located in the Portland area. The University of Portland , a Catholic university, is affiliated with the Congregation of Holy Cross . Reed College , a rigorous liberal arts college in Portland, was ranked by Forbes as the 52nd best college in the country in 2015. Other private institutions in Portland include Lewis & Clark College ; Multnomah University ; Portland Bible College ; Warner Pacific College ; Cascade College ; the National University of Natural Medicine ; and Western Seminary , a theological graduate school. Pacific University is in the Portland suburb of Forest Grove . There are also private colleges further south in the Willamette Valley. McMinnville is home to Linfield College , while nearby Newberg is home to George Fox University . Salem is home to two private schools: Willamette University (the state's oldest, established during the provisional period) and Corban University . Also located near Salem is Mount Angel Seminary , one of America's largest Roman Catholic seminaries. The state's second medical school, the College of Osteopathic Medicine of the Pacific, Northwest , is located in Lebanon. Eugene is home to three private colleges: Bushnell University , New Hope Christian College , and Gutenberg College .",
+    "wiki_Elementary,_middle,_and_high_school": "In the 2013–2014 school year, the state had 567,000 students in public schools. There were 197 public school districts, served by 19 education service districts . In 2016, the largest school districts in the state were: Portland Public Schools , comprising 47,323 students; Salem-Keizer School District , comprising 40,565 students; Beaverton School District , comprising 39,625 students; Hillsboro School District , comprising 21,118 students; and North Clackamas School District , comprising 17,053 students. Approximately 90.5% of Oregon high school students graduate, improving on the national average of 88.3% as measured from the 2010 U.S. census . On May 8, 2019, educators across the state protested to demand smaller class sizes, hiring more support staff, such as school counselors, librarians, and nurses, and the restoration of art, music, and physical education classes. The protests caused two dozen school districts to close, which equals to about 600 schools across the state.",
+    "wiki_Colleges_and_universities": "Especially since the 1990 passage of Measure 5, which set limits on property tax levels, Oregon has struggled to fund higher education. Since then, Oregon has cut its higher education budget and now ranks 46th in the country in state spending per student. However, 2007 legislation funded the university system far beyond the governor's requested budget though still capping tuition increases at 3% per year. Oregon supports a total of seven public universities and one affiliate. It is home to three public research universities: The University of Oregon (UO) in Eugene and Oregon State University (OSU) in Corvallis , both classified as research universities with very high research activity, and Portland State University which is classified as a research university with high research activity. UO is the state's highest nationally ranked and most selective public university by U.S. News & World Report and Forbes . OSU is the state's only land-grant university, has the state's largest enrollment for fall 2014, and is the state's highest ranking university according to Academic Ranking of World Universities , Washington Monthly , and QS World University Rankings . OSU receives more annual funding for research than all other public higher education institutions in Oregon combined. The state's urban Portland State University has Oregon's second largest enrollment. The state has three regional universities: Western Oregon University in Monmouth , Southern Oregon University in Ashland, and Eastern Oregon University in La Grande . The Oregon Institute of Technology has its campus in Klamath Falls . The quasi-public Oregon Health & Science University (OHSU) includes medical, dental, and nursing schools, and graduate programs in biomedical sciences in Portland and a science and engineering school in Hillsboro. The state also supports 17 community colleges . Oregon is home to a wide variety of private colleges, the majority of which are located in the Portland area. The University of Portland , a Catholic university, is affiliated with the Congregation of Holy Cross . Reed College , a rigorous liberal arts college in Portland, was ranked by Forbes as the 52nd best college in the country in 2015. Other private institutions in Portland include Lewis & Clark College ; Multnomah University ; Portland Bible College ; Warner Pacific College ; Cascade College ; the National University of Natural Medicine ; and Western Seminary , a theological graduate school. Pacific University is in the Portland suburb of Forest Grove . There are also private colleges further south in the Willamette Valley. McMinnville is home to Linfield College , while nearby Newberg is home to George Fox University . Salem is home to two private schools: Willamette University (the state's oldest, established during the provisional period) and Corban University . Also located near Salem is Mount Angel Seminary , one of America's largest Roman Catholic seminaries. The state's second medical school, the College of Osteopathic Medicine of the Pacific, Northwest , is located in Lebanon. Eugene is home to three private colleges: Bushnell University , New Hope Christian College , and Gutenberg College .",
+    "wiki_Law_and_government": "A writer in the Oregon Country book A Pacific Republic , written in 1839, predicted the territory was to become an independent republic. Four years later, in 1843, settlers of the Willamette Valley voted in majority for a republican form of government. The Oregon Country functioned in this way until August 13, 1848, when Oregon was annexed by the U.S. and a territorial government was established. Oregon maintained a territorial government until February 14, 1859, when it was granted statehood . Oregon state government has a separation of powers similar to the federal government , with three branches: Governors in Oregon serve four-year terms and are limited to two consecutive terms, but an unlimited number of total terms. Oregon has no lieutenant governor ; in case the office of governor is vacated, Article V, Section 8a of the Oregon Constitution specifies that the Secretary of State is first in line for succession. The other statewide officers are Treasurer , Attorney General , and Labor Commissioner . The biennial Oregon Legislative Assembly consists of a thirty-member Senate and a sixty-member House . A debate over whether to move to annual sessions is a long-standing battle in Oregon politics, but the voters have resisted the move from citizen legislators to professional lawmakers. Because Oregon's state budget is written in two-year increments and, there being no sales tax, state revenue is based largely on income taxes, it is often significantly over or under budget. Recent legislatures have had to be called into special sessions repeatedly to address revenue shortfalls resulting from economic downturns, bringing to a head the need for more frequent legislative sessions. Oregon Initiative 71, passed in 2010, mandates the legislature to begin meeting every year, for 160 days in odd-numbered years, and 35 days in even-numbered years. The state supreme court has seven elected justices, currently including the only two openly gay state supreme court justices in the nation. They choose one of their own to serve a six-year term as Chief Justice. Oregon's constitution provides for ballot initiatives voted upon by the electorate in general. In the 2002 general election, Oregon voters approved a ballot measure to increase the state minimum wage automatically each year according to inflationary changes, which are measured by the consumer price index (CPI). In the 2004 general election, Oregon voters passed ballot measures banning same-sex marriage and restricting land use regulation . In the 2006 general election , voters restricted the use of eminent domain and extended the state's discount prescription drug coverage. In the 2020 general election, Oregon voters approved a ballot measure decriminalizing the possession of small quantities of street drugs such as cocaine and heroin, becoming the first state in the country to do so after the drugs were originally made illegal. The initiative has been described as a mixed success after three years of implementation, and calls for change arose. Drug overdose deaths continued to rise, in line with other states. Funds allocated to treatment and other services have apparently not increased the success of these alternate outcomes. In 2024, Governor Kotek signed a bill reversing the decriminalization component of the ballot measure while also expanding funding for drug treatment. In 2020 the state also approved a ballot measure to create a legal means of administering psilocybin for medicinal use, making it the first state in the country to legalize the drug. Like all U.S. states, Oregon is represented by two senators . Following the 1980 census , Oregon had five congressional districts . After Oregon was admitted to the Union, it began with a single member in the House of Representatives ( La Fayette Grover , who served in the 35th U.S. Congress for less than a month). Congressional apportionment increased the size of the delegation following the censuses of 1890 , 1910 , 1940 , and 1980. Following the 2020 census , Oregon gained a sixth congressional seat. It was filled in the 2022 Congressional Elections . A detailed list of the past and present Congressional delegations from Oregon is available. The U.S. District Court for the District of Oregon hears federal cases in the state. The court has courthouses in Portland , Eugene , Medford, and Pendleton. Also in Portland is the federal bankruptcy court, with a second branch in Eugene. Oregon (among other western states and territories) is in the 9th Court of Appeals . One of the court's meeting places is at the Pioneer Courthouse in downtown Portland, a National Historic Landmark built in 1869. Political opinions in Oregon are geographically split by the Cascade Range , with Western Oregon being more liberal and Eastern Oregon being conservative . In a 2008 analysis of the 2004 presidential election, a political analyst found that according to the application of a Likert scale , Oregon boasted both the most liberal Kerry voters and the most conservative Bush voters, making it the most politically polarized state in the country. The base of Democratic support is largely concentrated in the urban centers of the Willamette Valley. The eastern two-thirds of the state beyond the Cascade Mountains typically votes Republican; in 2000 and 2004 , George W. Bush carried every county east of the Cascades. However, the region's sparse population means the more populous counties in the Willamette Valley usually outweigh the eastern counties in statewide elections. In 2008, for instance, Republican Senate incumbent Gordon H. Smith lost his bid for a third term, even though he carried all but eight counties . His Democratic challenger, Jeff Merkley, won Multnomah County by 142,000 votes, more than double the overall margin of victory. Oregonians have voted for the Democratic presidential candidate in every election since 1988. In 2004 and 2006, Democrats won control of the State Senate, and then the House. Since 2023, Oregon has been represented by four Democrats and two Republicans in the U.S. House of Representatives . Since 2009, the state has had two Democratic U.S. senators, Ron Wyden and Jeff Merkley . Oregon voters have elected Democratic governors in every election since 1986, most recently electing Tina Kotek over Republican Christine Drazan and Independent Betsy Johnson in the 2022 gubernatorial election. During Oregon's history, it has adopted many electoral reforms proposed during the Progressive Era , through the efforts of William S. U'Ren and his Direct Legislation League . Under his leadership, the state overwhelmingly approved a ballot measure in 1902 that created the initiative and referendum for citizens to introduce or approve proposed laws or amendments to the state constitution directly, making Oregon the first state to adopt such a system. Today, roughly half of U.S. states do so. In following years, the primary election to select party candidates was adopted in 1904, and in 1908 the Oregon Constitution was amended to include recall of public officials. More recent amendments include the nation's first doctor-assisted suicide law, called the Death with Dignity Act (which was challenged, unsuccessfully, in 2005 by the Bush administration in a case heard by the U.S. Supreme Court ), legalization of medical cannabis , and among the nation's strongest anti-urban sprawl and pro-environment laws. [ citation needed ] More recently, 2004's Measure 37 reflects a backlash against such land-use laws. However, a further ballot measure in 2007, Measure 49 , curtailed many of the provisions of 37. Of the measures placed on the ballot since 1902, the people have passed 99 of the 288 initiatives and 25 of the 61 referendums on the ballot, though not all of them survived challenges in courts (see Pierce v. Society of Sisters , for an example). During the same period, the legislature has referred 363 measures to the people, of which 206 have passed. Oregon pioneered the American use of postal voting , beginning with experimentation approved by the Oregon Legislative Assembly in 1981 and culminating with a 1998 ballot measure mandating that all counties conduct elections by mail. It remains one of just two states, the other being Washington, where voting by mail is the only method of voting. In 1994, Oregon adopted the Oregon Health Plan , which made health care available to most of its citizens without private health insurance. Oregon is the only state that does not have a mechanism to impeach executive officeholders, including the governor. Removing an executive office holder would require a recall election. It is one of four states that requires two-thirds of members of the House and Senate be present to establish a quorum. It is one of a minority of states that does not have a lieutenant governor. The Secretary of State is the first in line of succession to replace the governor in event of a vacancy. This last occurred in 2015, when Gov. John Kitzhaber resigned amid allegation of influence peddling and Secretary of State Kate Brown became governor. Brown won a special election in 2016 to retain the position, and won a full four-year term in 2018. In the U.S. Electoral College , Oregon cast seven votes through the 2020 presidential election. Under apportionment of Congress under the 2020 U.S. census, Oregon added a sixth congressional seat. Under the Electoral College formula of votes equaling the number of U.S. House seats plus the two U.S. Senators, Oregon cast eight votes in the 2024 election. Oregon has supported Democratic candidates in the last ten elections. Democratic incumbent Barack Obama won the state by a margin of twelve percentage points, with over 54% of the popular vote in 2012. In the 2016 election, Hillary Clinton won Oregon by 11 percentage points. Joe Biden won Oregon by 16 percentage points in the 2020 election , and Kamala Harris won Oregon by 14 percentage points in the 2024 election In a 2020 study, Oregon was ranked as the easiest state for citizens to vote in. Oregon retains the death penalty , though there is currently a gubernatorial hold on executions.",
+    "wiki_Structure": "Oregon state government has a separation of powers similar to the federal government , with three branches: Governors in Oregon serve four-year terms and are limited to two consecutive terms, but an unlimited number of total terms. Oregon has no lieutenant governor ; in case the office of governor is vacated, Article V, Section 8a of the Oregon Constitution specifies that the Secretary of State is first in line for succession. The other statewide officers are Treasurer , Attorney General , and Labor Commissioner . The biennial Oregon Legislative Assembly consists of a thirty-member Senate and a sixty-member House . A debate over whether to move to annual sessions is a long-standing battle in Oregon politics, but the voters have resisted the move from citizen legislators to professional lawmakers. Because Oregon's state budget is written in two-year increments and, there being no sales tax, state revenue is based largely on income taxes, it is often significantly over or under budget. Recent legislatures have had to be called into special sessions repeatedly to address revenue shortfalls resulting from economic downturns, bringing to a head the need for more frequent legislative sessions. Oregon Initiative 71, passed in 2010, mandates the legislature to begin meeting every year, for 160 days in odd-numbered years, and 35 days in even-numbered years. The state supreme court has seven elected justices, currently including the only two openly gay state supreme court justices in the nation. They choose one of their own to serve a six-year term as Chief Justice.",
+    "wiki_Ballot_measures": "Oregon's constitution provides for ballot initiatives voted upon by the electorate in general. In the 2002 general election, Oregon voters approved a ballot measure to increase the state minimum wage automatically each year according to inflationary changes, which are measured by the consumer price index (CPI). In the 2004 general election, Oregon voters passed ballot measures banning same-sex marriage and restricting land use regulation . In the 2006 general election , voters restricted the use of eminent domain and extended the state's discount prescription drug coverage. In the 2020 general election, Oregon voters approved a ballot measure decriminalizing the possession of small quantities of street drugs such as cocaine and heroin, becoming the first state in the country to do so after the drugs were originally made illegal. The initiative has been described as a mixed success after three years of implementation, and calls for change arose. Drug overdose deaths continued to rise, in line with other states. Funds allocated to treatment and other services have apparently not increased the success of these alternate outcomes. In 2024, Governor Kotek signed a bill reversing the decriminalization component of the ballot measure while also expanding funding for drug treatment. In 2020 the state also approved a ballot measure to create a legal means of administering psilocybin for medicinal use, making it the first state in the country to legalize the drug.",
+    "wiki_Federal_representation": "Like all U.S. states, Oregon is represented by two senators . Following the 1980 census , Oregon had five congressional districts . After Oregon was admitted to the Union, it began with a single member in the House of Representatives ( La Fayette Grover , who served in the 35th U.S. Congress for less than a month). Congressional apportionment increased the size of the delegation following the censuses of 1890 , 1910 , 1940 , and 1980. Following the 2020 census , Oregon gained a sixth congressional seat. It was filled in the 2022 Congressional Elections . A detailed list of the past and present Congressional delegations from Oregon is available. The U.S. District Court for the District of Oregon hears federal cases in the state. The court has courthouses in Portland , Eugene , Medford, and Pendleton. Also in Portland is the federal bankruptcy court, with a second branch in Eugene. Oregon (among other western states and territories) is in the 9th Court of Appeals . One of the court's meeting places is at the Pioneer Courthouse in downtown Portland, a National Historic Landmark built in 1869.",
+    "wiki_Politics": "Political opinions in Oregon are geographically split by the Cascade Range , with Western Oregon being more liberal and Eastern Oregon being conservative . In a 2008 analysis of the 2004 presidential election, a political analyst found that according to the application of a Likert scale , Oregon boasted both the most liberal Kerry voters and the most conservative Bush voters, making it the most politically polarized state in the country. The base of Democratic support is largely concentrated in the urban centers of the Willamette Valley. The eastern two-thirds of the state beyond the Cascade Mountains typically votes Republican; in 2000 and 2004 , George W. Bush carried every county east of the Cascades. However, the region's sparse population means the more populous counties in the Willamette Valley usually outweigh the eastern counties in statewide elections. In 2008, for instance, Republican Senate incumbent Gordon H. Smith lost his bid for a third term, even though he carried all but eight counties . His Democratic challenger, Jeff Merkley, won Multnomah County by 142,000 votes, more than double the overall margin of victory. Oregonians have voted for the Democratic presidential candidate in every election since 1988. In 2004 and 2006, Democrats won control of the State Senate, and then the House. Since 2023, Oregon has been represented by four Democrats and two Republicans in the U.S. House of Representatives . Since 2009, the state has had two Democratic U.S. senators, Ron Wyden and Jeff Merkley . Oregon voters have elected Democratic governors in every election since 1986, most recently electing Tina Kotek over Republican Christine Drazan and Independent Betsy Johnson in the 2022 gubernatorial election. During Oregon's history, it has adopted many electoral reforms proposed during the Progressive Era , through the efforts of William S. U'Ren and his Direct Legislation League . Under his leadership, the state overwhelmingly approved a ballot measure in 1902 that created the initiative and referendum for citizens to introduce or approve proposed laws or amendments to the state constitution directly, making Oregon the first state to adopt such a system. Today, roughly half of U.S. states do so. In following years, the primary election to select party candidates was adopted in 1904, and in 1908 the Oregon Constitution was amended to include recall of public officials. More recent amendments include the nation's first doctor-assisted suicide law, called the Death with Dignity Act (which was challenged, unsuccessfully, in 2005 by the Bush administration in a case heard by the U.S. Supreme Court ), legalization of medical cannabis , and among the nation's strongest anti-urban sprawl and pro-environment laws. [ citation needed ] More recently, 2004's Measure 37 reflects a backlash against such land-use laws. However, a further ballot measure in 2007, Measure 49 , curtailed many of the provisions of 37. Of the measures placed on the ballot since 1902, the people have passed 99 of the 288 initiatives and 25 of the 61 referendums on the ballot, though not all of them survived challenges in courts (see Pierce v. Society of Sisters , for an example). During the same period, the legislature has referred 363 measures to the people, of which 206 have passed. Oregon pioneered the American use of postal voting , beginning with experimentation approved by the Oregon Legislative Assembly in 1981 and culminating with a 1998 ballot measure mandating that all counties conduct elections by mail. It remains one of just two states, the other being Washington, where voting by mail is the only method of voting. In 1994, Oregon adopted the Oregon Health Plan , which made health care available to most of its citizens without private health insurance. Oregon is the only state that does not have a mechanism to impeach executive officeholders, including the governor. Removing an executive office holder would require a recall election. It is one of four states that requires two-thirds of members of the House and Senate be present to establish a quorum. It is one of a minority of states that does not have a lieutenant governor. The Secretary of State is the first in line of succession to replace the governor in event of a vacancy. This last occurred in 2015, when Gov. John Kitzhaber resigned amid allegation of influence peddling and Secretary of State Kate Brown became governor. Brown won a special election in 2016 to retain the position, and won a full four-year term in 2018. In the U.S. Electoral College , Oregon cast seven votes through the 2020 presidential election. Under apportionment of Congress under the 2020 U.S. census, Oregon added a sixth congressional seat. Under the Electoral College formula of votes equaling the number of U.S. House seats plus the two U.S. Senators, Oregon cast eight votes in the 2024 election. Oregon has supported Democratic candidates in the last ten elections. Democratic incumbent Barack Obama won the state by a margin of twelve percentage points, with over 54% of the popular vote in 2012. In the 2016 election, Hillary Clinton won Oregon by 11 percentage points. Joe Biden won Oregon by 16 percentage points in the 2020 election , and Kamala Harris won Oregon by 14 percentage points in the 2024 election In a 2020 study, Oregon was ranked as the easiest state for citizens to vote in. Oregon retains the death penalty , though there is currently a gubernatorial hold on executions.",
+    "wiki_Sports": "Oregon is home to three major professional sports teams: the Portland Trail Blazers of the NBA , the Portland Thorns FC of the NWSL and the Portland Timbers of MLS . In 2026, a fourth major professional team, the Portland Fire of the WBNA , will begin play in the state. Until 2011, the only major professional sports team in Oregon was the Portland Trail Blazers of the National Basketball Association. From the 1970s to the 1990s, the Blazers were one of the most successful teams in the NBA in terms of both win–loss record and attendance, including winning the 1977 NBA Finals behind star Bill Walton and reaching the 1992 NBA Finals with star Clyde Drexler . In the early 21st century, the team's popularity declined due to personnel and financial issues (an era when the team was derisively referred to as the Jail Blazers ), but it was revived after the departure of controversial players and the acquisition of new stars such as Brandon Roy , LaMarcus Aldridge , and Damian Lillard . The Blazers play in the Moda Center in Portland's Lloyd District, which also is home to the Portland Winterhawks of the junior Western Hockey League . The Portland Timbers play at Providence Park , just west of downtown Portland. The Timbers have a strong following, with the team regularly selling out its games. The Timbers repurposed the formerly multi-use stadium into a soccer-specific stadium in fall 2010, increasing the seating in the process. The Timbers operate Portland Thorns FC, a women's soccer team that has played in the National Women's Soccer League since the league's first season in 2013. The Thorns, who also play at Providence Park, have won three league championships: in the inaugural 2013 season , in 2017 , and in 2022 . The team has been by far the NWSL's attendance leader in each of the league's seasons. Eugene and Hillsboro have minor-league baseball teams: the Eugene Emeralds and the Hillsboro Hops both play in the High-A Northwest League . Portland has had minor-league baseball teams in the past, including the Portland Beavers and Portland Rockies , who played most recently at Providence Park when it was known as PGE Park. Salem also previously had a Class A Short Season Northwest League team, the Salem-Keizer Volcanoes that was not included in the 2021 Minor League Baseball reorganization . The Volcanoes ownership later formed the amateur Mavericks Independent Baseball League , which is fully based in Salem. The Oregon State Beavers and the University of Oregon Ducks football teams of the Pac-12 Conference meet annually in the Oregon–Oregon State football rivalry . Both schools have had recent success in other sports as well: Oregon State won back-to-back college baseball championships in 2006 and 2007, winning a third in 2018; and the University of Oregon won back-to-back NCAA men's cross country championships in 2007 and 2008.",
+    "wiki_Maps_and_geology": "44°N 121°W ﻿ / ﻿ 44°N 121°W ﻿ / 44; -121 ﻿ ( State of Oregon )"
+}

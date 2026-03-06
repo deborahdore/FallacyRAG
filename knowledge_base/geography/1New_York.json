@@ -1,0 +1,4021 @@
+{
+    "title": "New York",
+    "level": "State",
+    "geoID": "040XX00US36",
+    "short description": "New York has a land area of 47,123.4 square miles and a water area of 7,435.1 square miles. It is the 30th largest state by area.",
+    "description": "New York has a land area of 47,123.4 square miles and a water area of 7,435.1 square miles. It is the 30th largest state by area. New York is bordered by New Jersey, Massachusetts, Vermont, Connecticut, Pennsylvania, and Rhode Island.",
+    "Class of Worker": {
+        "title": "Class of Worker in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Employee of private company workers",
+                "value": "61.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "Self-employed in own incorporated business workers",
+                "value": "4.3",
+                "moe": "0.1"
+            },
+            {
+                "description": "Private not-for-profit wage and salary workers",
+                "value": "12.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Local, state, and federal government workers",
+                "value": "16.1",
+                "moe": "0.2"
+            },
+            {
+                "description": "Self-employed in own not incorporated business workers and unpaid family workers",
+                "value": "5.8",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Veterans": {
+        "title": "Veterans by Sex in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "91.1",
+                "moe": "0.7"
+            },
+            {
+                "description": "Female",
+                "value": "8.9",
+                "moe": "0.7"
+            }
+        ]
+    },
+    "Children": {
+        "title": "Children Under 18 by Age Range in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 5 years",
+                "value": "5.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "5 to 14 years",
+                "value": "11.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "15 to 17 years",
+                "value": "3.5",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Two or More Races": {
+        "title": "Two or More Races for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "21772",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "1915",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "192173",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "13338",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "4013",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "4539",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "9144",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "5736",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "2593",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "4345",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "4256",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "2672",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "2475",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "25824",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "51816",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "1978",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "1856",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "3319",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "3133",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "3449",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "242",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "3239",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "8278",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "237299",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "1024",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "3398",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "3719",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "54084",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "4453",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "117311",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "175441",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "12364",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "13521",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "32687",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "6597",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "40500",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "2437",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "6264",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "3128",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "9447",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "243364",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "12126",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "38820",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "27300",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "4563",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "14581",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "15159",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "1696",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "795",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "1775",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "4618",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "147212",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "7558",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "2575",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "8699",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "15918",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "3606",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "3199",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "5813",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "109790",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "1570",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "947",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Redistricting": {
+        "title": "Total Population for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "314848",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "46456",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "1472654",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "198683",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "77042",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "76248",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "127657",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "84148",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "47220",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "79843",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "61570",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "46809",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "44308",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "295911",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "954236",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "37381",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "47555",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "53324",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "58388",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "47931",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "5107",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "60139",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "116721",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "2736074",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "26582",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "61834",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "68016",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "759443",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "49532",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "1395774",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "1694251",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "212666",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "232125",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "476516",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "112458",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "401310",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "40343",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "117525",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "58524",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "97668",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "2405464",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "161130",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "495747",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "338329",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "108505",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "235509",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "158061",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "29714",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "17898",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "33814",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "93584",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "1525920",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "78624",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "48455",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "105740",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "181851",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "65737",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "61302",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "91283",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "1004457",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "40531",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "24774",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "School Enrollment": {
+        "title": "School Enrollment (Population 3 Years and Over Enrolled in School) in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Nursery school, preschool",
+                "value": "6.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Kindergarten to 12th grade",
+                "value": "64.1",
+                "moe": "0.4"
+            },
+            {
+                "description": "College, undergraduate",
+                "value": "22.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "Graduate, professional school",
+                "value": "7.2",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Older Population": {
+        "title": "Older Population by Age in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "65 to 74 years",
+                "value": "10.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "75 to 84 years",
+                "value": "6.0",
+                "moe": "0.1"
+            },
+            {
+                "description": "85 years and over",
+                "value": "2.2",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Employment and Labor Force Status": {
+        "title": "Employment Rate in New York",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "58.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "2015",
+                "value": "59.0",
+                "moe": "0.2"
+            },
+            {
+                "description": "2016",
+                "value": "59.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "2017",
+                "value": "59.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "2018",
+                "value": "59.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "2019",
+                "value": "60.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "2021",
+                "value": "56.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "2022",
+                "value": "59.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "2023",
+                "value": "59.7",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Residential Mobility": {
+        "title": "Residential Mobility in the Last Year in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Moved within the same county",
+                "value": "4.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "Moved from different county, same state",
+                "value": "2.3",
+                "moe": "0.1"
+            },
+            {
+                "description": "Moved from a different state",
+                "value": "1.5",
+                "moe": "0.1"
+            },
+            {
+                "description": "Moved from abroad",
+                "value": "0.9",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within New York",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "10441500",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "364077",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "14301490",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "3220656",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "817052",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "792852",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "1596644",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "1289393",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "703087",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "1072544",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "706428",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "561358",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "591830",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "5294405",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "21658802",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "462398",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "423338",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "584621",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "719874",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "413033",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "44787",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "470453",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "1231804",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "31581110",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "207898",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "553957",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "713605",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "33967683",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "17906689",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "699116",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "304080571",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "2373066",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "3971450",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "11459934",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "2581880",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "5726178",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "304368",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "1097733",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "849060",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "1141107",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "31323548",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "2614682",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "369546",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "191596",
+                "name": "Yates County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "1267636",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "5311165",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "6369842",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "4026856",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "3049053",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "215934",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "166248",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "371017",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "1310949",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "37007200",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "843856",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "601760",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "2277985",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "1835984",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "1504975",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "475342",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "919030",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "29023563",
+                "name": "Westchester County, New York"
+            }
+        ]
+    },
+    "Age and Sex": {
+        "title": "Population by Age Range in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Median Age",
+                "value": "40.1",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Income and Earnings": {
+        "title": "Median Income by Types of Families in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Families",
+                "value": "106073",
+                "moe": "1018"
+            },
+            {
+                "description": "Married-couple families",
+                "value": "130648",
+                "moe": "1059"
+            },
+            {
+                "description": "Nonfamily households",
+                "value": "53817",
+                "moe": "1032"
+            }
+        ]
+    },
+    "Work Experience": {
+        "title": "Mean Usual Hours Worked for Workers by Sex in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "39.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "Female",
+                "value": "35.8",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Commuting": {
+        "title": "Means of Transportation to Work (Workers 16 Years and Over) in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Drove alone",
+                "value": "48.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "Carpool",
+                "value": "6.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "Public transportation",
+                "value": "24.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "Walked",
+                "value": "5.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Bicycle",
+                "value": "0.9",
+                "moe": "0.1"
+            },
+            {
+                "description": "Taxicab, motorcycle, or other means",
+                "value": "2.0",
+                "moe": "0.1"
+            },
+            {
+                "description": "Worked from home",
+                "value": "11.8",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Marital Status and Marital History": {
+        "title": "Marital Status by Sex in New York",
+        "source": "2023 ACS 1-Year Estimates Subject Tables",
+        "stats": [
+            {
+                "description": "Married, not separated | Male",
+                "value": "47.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "Married, not separated | Female",
+                "value": "42.3",
+                "moe": "0.3"
+            },
+            {
+                "description": "Widowed | Male",
+                "value": "2.5",
+                "moe": "0.1"
+            },
+            {
+                "description": "Widowed | Female",
+                "value": "8.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Divorced | Male",
+                "value": "7.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Divorced | Female",
+                "value": "10.1",
+                "moe": "0.2"
+            },
+            {
+                "description": "Separated | Male",
+                "value": "1.8",
+                "moe": "0.1"
+            },
+            {
+                "description": "Separated | Female",
+                "value": "2.5",
+                "moe": "0.1"
+            },
+            {
+                "description": "Never Married | Male",
+                "value": "40.7",
+                "moe": "0.3"
+            },
+            {
+                "description": "Never Married | Female",
+                "value": "36.6",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Educational Attainment": {
+        "title": "Education Attainment (Population 25 Years and Older) in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "High school or equivalent degree",
+                "value": "24.0",
+                "moe": "0.2"
+            },
+            {
+                "description": "Some college, no degree",
+                "value": "14.1",
+                "moe": "0.2"
+            },
+            {
+                "description": "Associate's degree",
+                "value": "8.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "Bachelor's degree",
+                "value": "22.8",
+                "moe": "0.2"
+            },
+            {
+                "description": "Graduate or professional degree",
+                "value": "18.4",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Disability": {
+        "title": "Types of Disabilities in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Hearing difficulty",
+                "value": "3.1",
+                "moe": "0.1"
+            },
+            {
+                "description": "Vision difficulty",
+                "value": "2.6",
+                "moe": "0.1"
+            },
+            {
+                "description": "Cognitive difficulty",
+                "value": "5.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "Ambulatory difficulty",
+                "value": "7.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "Self-care difficulty",
+                "value": "3.1",
+                "moe": "0.1"
+            },
+            {
+                "description": "Independent living difficulty",
+                "value": "6.8",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Housing Units": {
+        "title": "Housing Occupancy in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Occupied housing units",
+                "value": "7828074",
+                "moe": "18401"
+            },
+            {
+                "description": "Vacant housing units",
+                "value": "848837",
+                "moe": "18526"
+            }
+        ]
+    },
+    "Native and Foreign-Born": {
+        "title": "Foreign-Born Population in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Naturalized U.S. citizen",
+                "value": "59.4",
+                "moe": "0.5"
+            },
+            {
+                "description": "Not a U.S. citizen",
+                "value": "40.6",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Language Spoken at Home": {
+        "title": "Types of Language Spoken at Home in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "English only",
+                "value": "68.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "Spanish",
+                "value": "15.0",
+                "moe": "0.1"
+            },
+            {
+                "description": "Other Indo-European languages",
+                "value": "9.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "Asian and Pacific Islander languages",
+                "value": "5.4",
+                "moe": "0.1"
+            },
+            {
+                "description": "Other languages",
+                "value": "2.0",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Financial Characteristics": {
+        "title": "Occupied Units Paying Rent in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $500",
+                "value": "7.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "$500 to $999",
+                "value": "14.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "$1,000 to $1,499",
+                "value": "22.2",
+                "moe": "0.4"
+            },
+            {
+                "description": "$1,500 to $1,999",
+                "value": "20.1",
+                "moe": "0.5"
+            },
+            {
+                "description": "$2,000 to $2,499",
+                "value": "13.4",
+                "moe": "0.4"
+            },
+            {
+                "description": "$2,500 to $2,999",
+                "value": "7.9",
+                "moe": "0.3"
+            },
+            {
+                "description": "$3,000 or more",
+                "value": "14.0",
+                "moe": "0.4"
+            }
+        ]
+    },
+    "Occupancy Characteristics": {
+        "title": "Owner Occupied Housing Units by Types of Households in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family",
+                "value": "2391112",
+                "moe": "20882"
+            },
+            {
+                "description": "Male householder, no spouse present",
+                "value": "209371",
+                "moe": "6661"
+            },
+            {
+                "description": "Female householder, no spouse present",
+                "value": "430215",
+                "moe": "11640"
+            }
+        ]
+    },
+    "Physical Characteristics": {
+        "title": "Bedrooms in Occupied Housing Units in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "No bedroom",
+                "value": "5.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "One bedroom",
+                "value": "18.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "2 or 3 bedrooms",
+                "value": "57.8",
+                "moe": "0.3"
+            },
+            {
+                "description": "4 or more bedrooms",
+                "value": "18.4",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Poverty": {
+        "title": "Poverty by Age in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 18 years",
+                "value": "17.9",
+                "moe": "0.6"
+            },
+            {
+                "description": "18 to 64 years",
+                "value": "12.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "65 years and over",
+                "value": "14.0",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Families and Household Characteristics": {
+        "title": "Total Households by Type of Households in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family household",
+                "value": "42.0",
+                "moe": "0.3"
+            },
+            {
+                "description": "Male householder, no spouse/partner present, family household",
+                "value": "19.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "Female householder, no spouse/partner present, family household",
+                "value": "31.4",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Black or African American": {
+        "title": "Black or African American alone for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "43206",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "829",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "487118",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "12684",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "1043",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "2910",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "3354",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "5315",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "357",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "3060",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "2557",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "895",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "1072",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "32289",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "134795",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "676",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "1848",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "1068",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "1441",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "2370",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "31",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "759",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "6707",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "772050",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "109",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "1191",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "1120",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "118879",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "1267",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "153274",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "229361",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "16740",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "16184",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "56947",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "2662",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "45543",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "1951",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "1584",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "1286",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "2828",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "403077",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "12872",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "52039",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "35542",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "3074",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "4047",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "17322",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "305",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "101",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "1414",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "1469",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "114294",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "6814",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "452",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "4597",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "11063",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "799",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "1715",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "2562",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "141094",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "1999",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "161",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "American Indian and Alaska Native": {
+        "title": "American Indian and Alaska Native alone for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "845",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "91",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "21539",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "556",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "2706",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "310",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "673",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "240",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "126",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "285",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "188",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "124",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "145",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "1312",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "5594",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "78",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "4141",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "121",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "419",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "161",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "14",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "108",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "594",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "20598",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "57",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "145",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "466",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "2094",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "159",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "6219",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "9969",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "2428",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "692",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "3364",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "265",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "2949",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "223",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "508",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "121",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "425",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "30513",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "441",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "3599",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "1716",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "1194",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "438",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "1125",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "83",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "50",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "162",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "234",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "9188",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "418",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "75",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "353",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "829",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "170",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "174",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "263",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "7466",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "98",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "49",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Some Other Race": {
+        "title": "Some Other Race alone for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "8873",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "678",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "493052",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "3975",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "571",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "1033",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "4278",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "947",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "353",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "1010",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "1584",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "825",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "651",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "18380",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "21804",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "306",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "483",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "688",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "1421",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "948",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "22",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "382",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "2341",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "302186",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "184",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "995",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "517",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "30359",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "2935",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "137138",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "208086",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "2807",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "5967",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "9913",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "2647",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "52023",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "922",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "1003",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "748",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "7312",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "444686",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "3062",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "46257",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "38086",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "1005",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "2603",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "8463",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "304",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "93",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "454",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "665",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "166174",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "6168",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "399",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "2855",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "8390",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "497",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "703",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "1667",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "146911",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "594",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "250",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Vacancy": {
+        "title": "Vacancy Rate in New York",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "11.1",
+                "moe": "0.2"
+            },
+            {
+                "description": "2015",
+                "value": "11.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "2016",
+                "value": "12.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "2017",
+                "value": "12.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "2018",
+                "value": "11.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "2019",
+                "value": "11.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "2021",
+                "value": "10.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "2022",
+                "value": "9.5",
+                "moe": "0.2"
+            },
+            {
+                "description": "2023",
+                "value": "9.5",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Industry": {
+        "title": "Industry for the Civilian Employed Population 16 Years and Over in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Educational services, and health care and social assistance",
+                "value": "29.2",
+                "moe": "0.3"
+            },
+            {
+                "description": "Professional, scientific, and management, and administrative and waste management services",
+                "value": "14.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "Retail trade",
+                "value": "9.2",
+                "moe": "0.2"
+            },
+            {
+                "description": "Arts, entertainment, and recreation, and accommodation and food services",
+                "value": "8.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "Finance and insurance, and real estate and rental and leasing",
+                "value": "7.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "Transportation and warehousing, and utilities",
+                "value": "5.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "Construction",
+                "value": "5.6",
+                "moe": "0.2"
+            },
+            {
+                "description": "Manufacturing",
+                "value": "5.6",
+                "moe": "0.1"
+            },
+            {
+                "description": "Other services, except public administration",
+                "value": "4.9",
+                "moe": "0.1"
+            },
+            {
+                "description": "Public administration",
+                "value": "4.7",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Not Hispanic or Latino": {
+        "title": "White alone, not Hispanic or Latino for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "210895",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "42327",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "130796",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "156173",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "67554",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "66313",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "106063",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "69559",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "43153",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "69251",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "50795",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "40801",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "38821",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "198495",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "678236",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "33714",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "38559",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "47051",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "50960",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "39494",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "4769",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "54653",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "92755",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "968427",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "24942",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "54611",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "60965",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "506153",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "38237",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "779454",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "793294",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "173691",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "180984",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "347290",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "97397",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "231848",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "34037",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "105710",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "51490",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "71942",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "549358",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "124600",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "277981",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "206113",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "96556",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "203781",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "104878",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "26658",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "16618",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "29273",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "84338",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "967330",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "52691",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "44195",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "76737",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "136695",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "59299",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "54605",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "79230",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "497684",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "35579",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "23049",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Fertility": {
+        "title": "Women with Births in the Past 12 Months in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "15 to 19 years",
+                "value": "2559",
+                "moe": "1198"
+            },
+            {
+                "description": "20 to 34 years",
+                "value": "129678",
+                "moe": "7563"
+            },
+            {
+                "description": "35 to 50 years",
+                "value": "87409",
+                "moe": "5196"
+            }
+        ]
+    },
+    "Homeownership Rate": {
+        "title": "Housing Value in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $50,000",
+                "value": "3.9",
+                "moe": "0.2"
+            },
+            {
+                "description": "$50,000 to $99,999",
+                "value": "4.8",
+                "moe": "0.1"
+            },
+            {
+                "description": "$100,000 to $149,999",
+                "value": "5.7",
+                "moe": "0.2"
+            },
+            {
+                "description": "$150,000 to $199,999",
+                "value": "7.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "$200,000 to $299,999",
+                "value": "13.4",
+                "moe": "0.2"
+            },
+            {
+                "description": "$300,000 to $499,999",
+                "value": "19.4",
+                "moe": "0.3"
+            },
+            {
+                "description": "$500,000 to $999,999",
+                "value": "32.1",
+                "moe": "0.3"
+            },
+            {
+                "description": "$1,000,000 or more",
+                "value": "13.4",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Health Insurance": {
+        "title": "Population Without Health Insurance Coverage in New York",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "8.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "2015",
+                "value": "7.1",
+                "moe": "0.1"
+            },
+            {
+                "description": "2016",
+                "value": "6.1",
+                "moe": "0.1"
+            },
+            {
+                "description": "2017",
+                "value": "5.7",
+                "moe": "0.1"
+            },
+            {
+                "description": "2018",
+                "value": "5.4",
+                "moe": "0.1"
+            },
+            {
+                "description": "2019",
+                "value": "5.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "2021",
+                "value": "5.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "2022",
+                "value": "4.9",
+                "moe": "0.1"
+            },
+            {
+                "description": "2023",
+                "value": "4.8",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Asian": {
+        "title": "Asian alone for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "24473",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "379",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "69559",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "9372",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "567",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "385",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "818",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "1432",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "245",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "975",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "1431",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "1028",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "489",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "10781",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "46384",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "229",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "191",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "349",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "416",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "506",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "12",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "370",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "2248",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "373680",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "76",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "657",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "679",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "32630",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "489",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "164201",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "221995",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "2459",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "10626",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "20235",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "1383",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "12025",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "154",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "871",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "827",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "2225",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "660631",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "5776",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "59279",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "20685",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "1105",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "7494",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "8354",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "211",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "108",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "269",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "1633",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "65779",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "1597",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "379",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "10532",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "3860",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "753",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "326",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "487",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "65707",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "218",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "93",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Hispanic or Latino": {
+        "title": "Hispanic or Latino (of any race) for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "21595",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "965",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "806463",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "10285",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "1615",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "2636",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "11769",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "2938",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "1117",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "2856",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "3542",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "1658",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "1985",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "42224",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "59658",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "978",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "1387",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "2134",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "2752",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "3109",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "100",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "1530",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "7990",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "516426",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "460",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "2721",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "1673",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "72745",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "7312",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "256425",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "402640",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "7818",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "15191",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "26572",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "6113",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "89744",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "2087",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "3616",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "2392",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "17760",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "667861",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "9482",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "96960",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "66451",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "2832",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "8667",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "12505",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "1075",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "329",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "1367",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "1718",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "332959",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "14007",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "1117",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "7077",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "21119",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "1752",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "1761",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "4514",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "269334",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "1490",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "674",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "White": {
+        "title": "White alone for All Counties within New York",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "36001",
+                "value": "215496",
+                "name": "Albany County, New York"
+            },
+            {
+                "geoCode": "36003",
+                "value": "42555",
+                "name": "Allegany County, New York"
+            },
+            {
+                "geoCode": "36005",
+                "value": "207573",
+                "name": "Bronx County, New York"
+            },
+            {
+                "geoCode": "36007",
+                "value": "158674",
+                "name": "Broome County, New York"
+            },
+            {
+                "geoCode": "36009",
+                "value": "68128",
+                "name": "Cattaraugus County, New York"
+            },
+            {
+                "geoCode": "36011",
+                "value": "67017",
+                "name": "Cayuga County, New York"
+            },
+            {
+                "geoCode": "36013",
+                "value": "109333",
+                "name": "Chautauqua County, New York"
+            },
+            {
+                "geoCode": "36015",
+                "value": "70463",
+                "name": "Chemung County, New York"
+            },
+            {
+                "geoCode": "36017",
+                "value": "43531",
+                "name": "Chenango County, New York"
+            },
+            {
+                "geoCode": "36019",
+                "value": "70142",
+                "name": "Clinton County, New York"
+            },
+            {
+                "geoCode": "36021",
+                "value": "51533",
+                "name": "Columbia County, New York"
+            },
+            {
+                "geoCode": "36023",
+                "value": "41250",
+                "name": "Cortland County, New York"
+            },
+            {
+                "geoCode": "36025",
+                "value": "39466",
+                "name": "Delaware County, New York"
+            },
+            {
+                "geoCode": "36027",
+                "value": "207251",
+                "name": "Dutchess County, New York"
+            },
+            {
+                "geoCode": "36029",
+                "value": "693563",
+                "name": "Erie County, New York"
+            },
+            {
+                "geoCode": "36031",
+                "value": "34102",
+                "name": "Essex County, New York"
+            },
+            {
+                "geoCode": "36033",
+                "value": "39036",
+                "name": "Franklin County, New York"
+            },
+            {
+                "geoCode": "36035",
+                "value": "47775",
+                "name": "Fulton County, New York"
+            },
+            {
+                "geoCode": "36037",
+                "value": "51541",
+                "name": "Genesee County, New York"
+            },
+            {
+                "geoCode": "36039",
+                "value": "40490",
+                "name": "Greene County, New York"
+            },
+            {
+                "geoCode": "36041",
+                "value": "4785",
+                "name": "Hamilton County, New York"
+            },
+            {
+                "geoCode": "36043",
+                "value": "55246",
+                "name": "Herkimer County, New York"
+            },
+            {
+                "geoCode": "36045",
+                "value": "96244",
+                "name": "Jefferson County, New York"
+            },
+            {
+                "geoCode": "36047",
+                "value": "1028774",
+                "name": "Kings County, New York"
+            },
+            {
+                "geoCode": "36049",
+                "value": "25121",
+                "name": "Lewis County, New York"
+            },
+            {
+                "geoCode": "36051",
+                "value": "55442",
+                "name": "Livingston County, New York"
+            },
+            {
+                "geoCode": "36053",
+                "value": "61504",
+                "name": "Madison County, New York"
+            },
+            {
+                "geoCode": "36055",
+                "value": "521127",
+                "name": "Monroe County, New York"
+            },
+            {
+                "geoCode": "36057",
+                "value": "40209",
+                "name": "Montgomery County, New York"
+            },
+            {
+                "geoCode": "36059",
+                "value": "817196",
+                "name": "Nassau County, New York"
+            },
+            {
+                "geoCode": "36061",
+                "value": "847604",
+                "name": "New York County, New York"
+            },
+            {
+                "geoCode": "36063",
+                "value": "175821",
+                "name": "Niagara County, New York"
+            },
+            {
+                "geoCode": "36065",
+                "value": "185042",
+                "name": "Oneida County, New York"
+            },
+            {
+                "geoCode": "36067",
+                "value": "353232",
+                "name": "Onondaga County, New York"
+            },
+            {
+                "geoCode": "36069",
+                "value": "98880",
+                "name": "Ontario County, New York"
+            },
+            {
+                "geoCode": "36071",
+                "value": "248085",
+                "name": "Orange County, New York"
+            },
+            {
+                "geoCode": "36073",
+                "value": "34643",
+                "name": "Orleans County, New York"
+            },
+            {
+                "geoCode": "36075",
+                "value": "107264",
+                "name": "Oswego County, New York"
+            },
+            {
+                "geoCode": "36077",
+                "value": "52403",
+                "name": "Otsego County, New York"
+            },
+            {
+                "geoCode": "36079",
+                "value": "75406",
+                "name": "Putnam County, New York"
+            },
+            {
+                "geoCode": "36081",
+                "value": "621475",
+                "name": "Queens County, New York"
+            },
+            {
+                "geoCode": "36083",
+                "value": "126828",
+                "name": "Rensselaer County, New York"
+            },
+            {
+                "geoCode": "36085",
+                "value": "295519",
+                "name": "Richmond County, New York"
+            },
+            {
+                "geoCode": "36087",
+                "value": "214890",
+                "name": "Rockland County, New York"
+            },
+            {
+                "geoCode": "36089",
+                "value": "97530",
+                "name": "St. Lawrence County, New York"
+            },
+            {
+                "geoCode": "36091",
+                "value": "206278",
+                "name": "Saratoga County, New York"
+            },
+            {
+                "geoCode": "36093",
+                "value": "107493",
+                "name": "Schenectady County, New York"
+            },
+            {
+                "geoCode": "36095",
+                "value": "27112",
+                "name": "Schoharie County, New York"
+            },
+            {
+                "geoCode": "36097",
+                "value": "16750",
+                "name": "Schuyler County, New York"
+            },
+            {
+                "geoCode": "36099",
+                "value": "29737",
+                "name": "Seneca County, New York"
+            },
+            {
+                "geoCode": "36101",
+                "value": "84953",
+                "name": "Steuben County, New York"
+            },
+            {
+                "geoCode": "36103",
+                "value": "1022846",
+                "name": "Suffolk County, New York"
+            },
+            {
+                "geoCode": "36105",
+                "value": "56040",
+                "name": "Sullivan County, New York"
+            },
+            {
+                "geoCode": "36107",
+                "value": "44557",
+                "name": "Tioga County, New York"
+            },
+            {
+                "geoCode": "36109",
+                "value": "78657",
+                "name": "Tompkins County, New York"
+            },
+            {
+                "geoCode": "36111",
+                "value": "141728",
+                "name": "Ulster County, New York"
+            },
+            {
+                "geoCode": "36113",
+                "value": "59911",
+                "name": "Warren County, New York"
+            },
+            {
+                "geoCode": "36115",
+                "value": "55162",
+                "name": "Washington County, New York"
+            },
+            {
+                "geoCode": "36117",
+                "value": "80476",
+                "name": "Wayne County, New York"
+            },
+            {
+                "geoCode": "36119",
+                "value": "533150",
+                "name": "Westchester County, New York"
+            },
+            {
+                "geoCode": "36121",
+                "value": "36046",
+                "name": "Wyoming County, New York"
+            },
+            {
+                "geoCode": "36123",
+                "value": "23264",
+                "name": "Yates County, New York"
+            }
+        ]
+    },
+    "Occupation": {
+        "title": "Occupation for the Civilian Employed Population 16 Years and Over in New York",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Management, business, science and arts occupations",
+                "value": "4572462",
+                "moe": "35348"
+            },
+            {
+                "description": "Service occupations",
+                "value": "1837975",
+                "moe": "24980"
+            },
+            {
+                "description": "Sales and office occupations",
+                "value": "1765345",
+                "moe": "24152"
+            },
+            {
+                "description": "Production, transportation, and material moving occupations",
+                "value": "925600",
+                "moe": "18529"
+            },
+            {
+                "description": "Natural resources, construction, and maintenance occupations",
+                "value": "635830",
+                "moe": "15987"
+            }
+        ]
+    },
+    "wiki_Ships": "Many ships have been named after the city or state of New York. See:"
+}

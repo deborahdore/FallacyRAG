@@ -1,0 +1,970 @@
+{
+    "title": "District of Columbia",
+    "level": "State",
+    "geoID": "040XX00US11",
+    "short description": "District of Columbia has a land area of 61.1 square miles and a water area of 7.2 square miles. It is the 51st largest state by area.",
+    "description": "District of Columbia has a land area of 61.1 square miles and a water area of 7.2 square miles. It is the 51st largest state by area. District of Columbia is bordered by Virginia and Maryland.",
+    "Class of Worker": {
+        "title": "Class of Worker in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Employee of private company workers",
+                "value": "46.5",
+                "moe": "1.7"
+            },
+            {
+                "description": "Self-employed in own incorporated business workers",
+                "value": "3.3",
+                "moe": "0.6"
+            },
+            {
+                "description": "Private not-for-profit wage and salary workers",
+                "value": "20.4",
+                "moe": "1.3"
+            },
+            {
+                "description": "Local, state, and federal government workers",
+                "value": "25.6",
+                "moe": "1.6"
+            },
+            {
+                "description": "Self-employed in own not incorporated business workers and unpaid family workers",
+                "value": "4.3",
+                "moe": "0.6"
+            }
+        ]
+    },
+    "Veterans": {
+        "title": "Veterans by Sex in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "86.0",
+                "moe": "5.0"
+            },
+            {
+                "description": "Female",
+                "value": "14.0",
+                "moe": "5.0"
+            }
+        ]
+    },
+    "Children": {
+        "title": "Children Under 18 by Age Range in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 5 years",
+                "value": "5.6",
+                "moe": "0.1"
+            },
+            {
+                "description": "5 to 14 years",
+                "value": "10.3",
+                "moe": "0.1"
+            },
+            {
+                "description": "15 to 17 years",
+                "value": "2.6",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Two or More Races": {
+        "title": "Two or More Races for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "56077",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Redistricting": {
+        "title": "Total Population for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "689545",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "School Enrollment": {
+        "title": "School Enrollment (Population 3 Years and Over Enrolled in School) in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Nursery school, preschool",
+                "value": "9.2",
+                "moe": "1.6"
+            },
+            {
+                "description": "Kindergarten to 12th grade",
+                "value": "54.1",
+                "moe": "1.9"
+            },
+            {
+                "description": "College, undergraduate",
+                "value": "22.9",
+                "moe": "1.6"
+            },
+            {
+                "description": "Graduate, professional school",
+                "value": "13.9",
+                "moe": "1.4"
+            }
+        ]
+    },
+    "Older Population": {
+        "title": "Older Population by Age in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "65 to 74 years",
+                "value": "7.2",
+                "moe": "0.1"
+            },
+            {
+                "description": "75 to 84 years",
+                "value": "4.3",
+                "moe": "0.2"
+            },
+            {
+                "description": "85 years and over",
+                "value": "1.3",
+                "moe": "0.2"
+            }
+        ]
+    },
+    "Employment and Labor Force Status": {
+        "title": "Employment Rate in District of Columbia",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "62.3",
+                "moe": "1.0"
+            },
+            {
+                "description": "2015",
+                "value": "64.0",
+                "moe": "0.9"
+            },
+            {
+                "description": "2016",
+                "value": "64.0",
+                "moe": "1.0"
+            },
+            {
+                "description": "2017",
+                "value": "65.3",
+                "moe": "1.0"
+            },
+            {
+                "description": "2018",
+                "value": "65.0",
+                "moe": "1.0"
+            },
+            {
+                "description": "2019",
+                "value": "66.0",
+                "moe": "1.0"
+            },
+            {
+                "description": "2021",
+                "value": "64.2",
+                "moe": "1.1"
+            },
+            {
+                "description": "2022",
+                "value": "67.2",
+                "moe": "1.3"
+            },
+            {
+                "description": "2023",
+                "value": "68.2",
+                "moe": "1.3"
+            }
+        ]
+    },
+    "Residential Mobility": {
+        "title": "Residential Mobility in the Last Year in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Moved within the same county",
+                "value": "10.9",
+                "moe": "1.4"
+            },
+            {
+                "description": "Moved from different county, same state",
+                "value": "0.0",
+                "moe": "0.1"
+            },
+            {
+                "description": "Moved from a different state",
+                "value": "7.7",
+                "moe": "0.8"
+            },
+            {
+                "description": "Moved from abroad",
+                "value": "1.3",
+                "moe": "0.3"
+            }
+        ]
+    },
+    "Expenses and Expenditures": {
+        "title": "Annual Payroll for All Counties within District of Columbia",
+        "source": "2021 ECNSVY Business Patterns County Business Patterns",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "48858672",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Age and Sex": {
+        "title": "Population by Age Range in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Median Age",
+                "value": "34.9",
+                "moe": "0.1"
+            }
+        ]
+    },
+    "Income and Earnings": {
+        "title": "Median Income by Types of Families in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Families",
+                "value": "151049",
+                "moe": "8673"
+            },
+            {
+                "description": "Married-couple families",
+                "value": "228926",
+                "moe": "19265"
+            },
+            {
+                "description": "Nonfamily households",
+                "value": "91309",
+                "moe": "4345"
+            }
+        ]
+    },
+    "Work Experience": {
+        "title": "Mean Usual Hours Worked for Workers by Sex in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Male",
+                "value": "41.4",
+                "moe": "0.6"
+            },
+            {
+                "description": "Female",
+                "value": "38.4",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Commuting": {
+        "title": "Means of Transportation to Work (Workers 16 Years and Over) in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Drove alone",
+                "value": "29.3",
+                "moe": "1.6"
+            },
+            {
+                "description": "Carpool",
+                "value": "4.1",
+                "moe": "0.8"
+            },
+            {
+                "description": "Public transportation",
+                "value": "26.6",
+                "moe": "1.6"
+            },
+            {
+                "description": "Walked",
+                "value": "10.7",
+                "moe": "1.2"
+            },
+            {
+                "description": "Bicycle",
+                "value": "4.0",
+                "moe": "0.6"
+            },
+            {
+                "description": "Taxicab, motorcycle, or other means",
+                "value": "2.4",
+                "moe": "0.5"
+            },
+            {
+                "description": "Worked from home",
+                "value": "22.9",
+                "moe": "1.2"
+            }
+        ]
+    },
+    "Marital Status and Marital History": {
+        "title": "Marital Status by Sex in District of Columbia",
+        "source": "2023 ACS 1-Year Estimates Subject Tables",
+        "stats": [
+            {
+                "description": "Married, not separated | Male",
+                "value": "36.4",
+                "moe": "2.1"
+            },
+            {
+                "description": "Married, not separated | Female",
+                "value": "28.9",
+                "moe": "1.5"
+            },
+            {
+                "description": "Widowed | Male",
+                "value": "1.6",
+                "moe": "0.4"
+            },
+            {
+                "description": "Widowed | Female",
+                "value": "5.2",
+                "moe": "0.6"
+            },
+            {
+                "description": "Divorced | Male",
+                "value": "6.1",
+                "moe": "0.8"
+            },
+            {
+                "description": "Divorced | Female",
+                "value": "9.9",
+                "moe": "1.2"
+            },
+            {
+                "description": "Separated | Male",
+                "value": "1.7",
+                "moe": "0.6"
+            },
+            {
+                "description": "Separated | Female",
+                "value": "1.4",
+                "moe": "0.5"
+            },
+            {
+                "description": "Never Married | Male",
+                "value": "54.2",
+                "moe": "1.9"
+            },
+            {
+                "description": "Never Married | Female",
+                "value": "54.6",
+                "moe": "1.5"
+            }
+        ]
+    },
+    "Educational Attainment": {
+        "title": "Education Attainment (Population 25 Years and Older) in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "High school or equivalent degree",
+                "value": "14.3",
+                "moe": "1.2"
+            },
+            {
+                "description": "Some college, no degree",
+                "value": "10.2",
+                "moe": "1.1"
+            },
+            {
+                "description": "Associate's degree",
+                "value": "2.0",
+                "moe": "0.5"
+            },
+            {
+                "description": "Bachelor's degree",
+                "value": "27.1",
+                "moe": "1.3"
+            },
+            {
+                "description": "Graduate or professional degree",
+                "value": "38.3",
+                "moe": "1.4"
+            }
+        ]
+    },
+    "Disability": {
+        "title": "Types of Disabilities in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Hearing difficulty",
+                "value": "2.0",
+                "moe": "0.4"
+            },
+            {
+                "description": "Vision difficulty",
+                "value": "2.5",
+                "moe": "0.4"
+            },
+            {
+                "description": "Cognitive difficulty",
+                "value": "7.2",
+                "moe": "0.8"
+            },
+            {
+                "description": "Ambulatory difficulty",
+                "value": "5.7",
+                "moe": "0.8"
+            },
+            {
+                "description": "Self-care difficulty",
+                "value": "2.3",
+                "moe": "0.5"
+            },
+            {
+                "description": "Independent living difficulty",
+                "value": "5.1",
+                "moe": "0.7"
+            }
+        ]
+    },
+    "Housing Units": {
+        "title": "Housing Occupancy in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Occupied housing units",
+                "value": "329687",
+                "moe": "4510"
+            },
+            {
+                "description": "Vacant housing units",
+                "value": "39013",
+                "moe": "4510"
+            }
+        ]
+    },
+    "Native and Foreign-Born": {
+        "title": "Foreign-Born Population in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Naturalized U.S. citizen",
+                "value": "44.1",
+                "moe": "3.3"
+            },
+            {
+                "description": "Not a U.S. citizen",
+                "value": "55.9",
+                "moe": "3.3"
+            }
+        ]
+    },
+    "Language Spoken at Home": {
+        "title": "Types of Language Spoken at Home in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "English only",
+                "value": "78.7",
+                "moe": "1.3"
+            },
+            {
+                "description": "Spanish",
+                "value": "9.3",
+                "moe": "0.7"
+            },
+            {
+                "description": "Other Indo-European languages",
+                "value": "5.2",
+                "moe": "0.7"
+            },
+            {
+                "description": "Asian and Pacific Islander languages",
+                "value": "3.0",
+                "moe": "0.4"
+            },
+            {
+                "description": "Other languages",
+                "value": "3.8",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Financial Characteristics": {
+        "title": "Occupied Units Paying Rent in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $500",
+                "value": "7.6",
+                "moe": "1.3"
+            },
+            {
+                "description": "$500 to $999",
+                "value": "6.7",
+                "moe": "1.6"
+            },
+            {
+                "description": "$1,000 to $1,499",
+                "value": "17.3",
+                "moe": "2.0"
+            },
+            {
+                "description": "$1,500 to $1,999",
+                "value": "21.4",
+                "moe": "2.2"
+            },
+            {
+                "description": "$2,000 to $2,499",
+                "value": "17.4",
+                "moe": "1.8"
+            },
+            {
+                "description": "$2,500 to $2,999",
+                "value": "11.0",
+                "moe": "1.3"
+            },
+            {
+                "description": "$3,000 or more",
+                "value": "18.6",
+                "moe": "1.6"
+            }
+        ]
+    },
+    "Occupancy Characteristics": {
+        "title": "Owner Occupied Housing Units by Types of Households in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family",
+                "value": "55831",
+                "moe": "3166"
+            },
+            {
+                "description": "Male householder, no spouse present",
+                "value": "4144",
+                "moe": "1222"
+            },
+            {
+                "description": "Female householder, no spouse present",
+                "value": "13929",
+                "moe": "2248"
+            }
+        ]
+    },
+    "Physical Characteristics": {
+        "title": "Bedrooms in Occupied Housing Units in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "No bedroom",
+                "value": "13.4",
+                "moe": "1.5"
+            },
+            {
+                "description": "One bedroom",
+                "value": "29.6",
+                "moe": "1.6"
+            },
+            {
+                "description": "2 or 3 bedrooms",
+                "value": "44.6",
+                "moe": "1.9"
+            },
+            {
+                "description": "4 or more bedrooms",
+                "value": "12.5",
+                "moe": "0.9"
+            }
+        ]
+    },
+    "Poverty": {
+        "title": "Poverty by Age in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Under 18 years",
+                "value": "28.3",
+                "moe": "5.5"
+            },
+            {
+                "description": "18 to 64 years",
+                "value": "14.0",
+                "moe": "1.2"
+            },
+            {
+                "description": "65 years and over",
+                "value": "18.2",
+                "moe": "2.7"
+            }
+        ]
+    },
+    "Families and Household Characteristics": {
+        "title": "Total Households by Type of Households in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Married-couple family household",
+                "value": "25.0",
+                "moe": "1.3"
+            },
+            {
+                "description": "Male householder, no spouse/partner present, family household",
+                "value": "24.8",
+                "moe": "1.3"
+            },
+            {
+                "description": "Female householder, no spouse/partner present, family household",
+                "value": "42.1",
+                "moe": "1.3"
+            }
+        ]
+    },
+    "Black or African American": {
+        "title": "Black or African American alone for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "285810",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "American Indian and Alaska Native": {
+        "title": "American Indian and Alaska Native alone for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "3193",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Some Other Race": {
+        "title": "Some Other Race alone for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "37294",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Vacancy": {
+        "title": "Vacancy Rate in District of Columbia",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "9.4",
+                "moe": "1.1"
+            },
+            {
+                "description": "2015",
+                "value": "9.0",
+                "moe": "1.0"
+            },
+            {
+                "description": "2016",
+                "value": "10.3",
+                "moe": "1.0"
+            },
+            {
+                "description": "2017",
+                "value": "10.6",
+                "moe": "1.1"
+            },
+            {
+                "description": "2018",
+                "value": "10.0",
+                "moe": "0.9"
+            },
+            {
+                "description": "2019",
+                "value": "9.7",
+                "moe": "1.2"
+            },
+            {
+                "description": "2021",
+                "value": "10.6",
+                "moe": "1.0"
+            },
+            {
+                "description": "2022",
+                "value": "9.4",
+                "moe": "1.0"
+            },
+            {
+                "description": "2023",
+                "value": "8.8",
+                "moe": "1.0"
+            }
+        ]
+    },
+    "Industry": {
+        "title": "Industry for the Civilian Employed Population 16 Years and Over in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Professional, scientific, and management, and administrative and waste management services",
+                "value": "24.8",
+                "moe": "1.4"
+            },
+            {
+                "description": "Public administration",
+                "value": "18.3",
+                "moe": "1.4"
+            },
+            {
+                "description": "Educational services, and health care and social assistance",
+                "value": "18.1",
+                "moe": "1.3"
+            },
+            {
+                "description": "Other services, except public administration",
+                "value": "10.4",
+                "moe": "1.0"
+            },
+            {
+                "description": "Arts, entertainment, and recreation, and accommodation and food services",
+                "value": "7.7",
+                "moe": "1.0"
+            },
+            {
+                "description": "Finance and insurance, and real estate and rental and leasing",
+                "value": "5.4",
+                "moe": "0.7"
+            },
+            {
+                "description": "Retail trade",
+                "value": "4.5",
+                "moe": "0.8"
+            },
+            {
+                "description": "Information",
+                "value": "4.2",
+                "moe": "0.6"
+            },
+            {
+                "description": "Transportation and warehousing, and utilities",
+                "value": "2.2",
+                "moe": "0.5"
+            },
+            {
+                "description": "Construction",
+                "value": "1.9",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Not Hispanic or Latino": {
+        "title": "White alone, not Hispanic or Latino for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "261771",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Fertility": {
+        "title": "Women with Births in the Past 12 Months in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "15 to 19 years",
+                "value": "40",
+                "moe": "80"
+            },
+            {
+                "description": "20 to 34 years",
+                "value": "3470",
+                "moe": "1275"
+            },
+            {
+                "description": "35 to 50 years",
+                "value": "4779",
+                "moe": "1462"
+            }
+        ]
+    },
+    "Homeownership Rate": {
+        "title": "Housing Value in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Less than $50,000",
+                "value": "1.7",
+                "moe": "0.6"
+            },
+            {
+                "description": "$50,000 to $99,999",
+                "value": "0.7",
+                "moe": "0.4"
+            },
+            {
+                "description": "$100,000 to $149,999",
+                "value": "1.4",
+                "moe": "0.8"
+            },
+            {
+                "description": "$150,000 to $199,999",
+                "value": "0.6",
+                "moe": "0.3"
+            },
+            {
+                "description": "$200,000 to $299,999",
+                "value": "3.7",
+                "moe": "1.2"
+            },
+            {
+                "description": "$300,000 to $499,999",
+                "value": "19.9",
+                "moe": "1.8"
+            },
+            {
+                "description": "$500,000 to $999,999",
+                "value": "42.2",
+                "moe": "2.0"
+            },
+            {
+                "description": "$1,000,000 or more",
+                "value": "29.9",
+                "moe": "2.1"
+            }
+        ]
+    },
+    "Health Insurance": {
+        "title": "Population Without Health Insurance Coverage in District of Columbia",
+        "source": "2023 ACS 1-Year Estimates Data Profiles",
+        "stats": [
+            {
+                "description": "2014",
+                "value": "5.3",
+                "moe": "0.7"
+            },
+            {
+                "description": "2015",
+                "value": "3.8",
+                "moe": "0.6"
+            },
+            {
+                "description": "2016",
+                "value": "3.9",
+                "moe": "0.6"
+            },
+            {
+                "description": "2017",
+                "value": "3.8",
+                "moe": "0.6"
+            },
+            {
+                "description": "2018",
+                "value": "3.2",
+                "moe": "0.5"
+            },
+            {
+                "description": "2019",
+                "value": "3.5",
+                "moe": "0.6"
+            },
+            {
+                "description": "2021",
+                "value": "3.7",
+                "moe": "0.6"
+            },
+            {
+                "description": "2022",
+                "value": "2.9",
+                "moe": "0.5"
+            },
+            {
+                "description": "2023",
+                "value": "2.7",
+                "moe": "0.5"
+            }
+        ]
+    },
+    "Asian": {
+        "title": "Asian alone for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "33545",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Hispanic or Latino": {
+        "title": "Hispanic or Latino (of any race) for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "77652",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "White": {
+        "title": "White alone for All Counties within District of Columbia",
+        "source": "2020 DEC Redistricting Data (PL 94-171)",
+        "stats": [
+            {
+                "geoCode": "11001",
+                "value": "273194",
+                "name": "District of Columbia, District of Columbia"
+            }
+        ]
+    },
+    "Occupation": {
+        "title": "Occupation for the Civilian Employed Population 16 Years and Over in District of Columbia",
+        "source": "2024 American Community Survey 1-Year Estimates",
+        "stats": [
+            {
+                "description": "Management, business, science and arts occupations",
+                "value": "276591",
+                "moe": "6615"
+            },
+            {
+                "description": "Sales and office occupations",
+                "value": "46289",
+                "moe": "4189"
+            },
+            {
+                "description": "Service occupations",
+                "value": "45919",
+                "moe": "5159"
+            },
+            {
+                "description": "Production, transportation, and material moving occupations",
+                "value": "14732",
+                "moe": "2788"
+            },
+            {
+                "description": "Natural resources, construction, and maintenance occupations",
+                "value": "5485",
+                "moe": "1575"
+            }
+        ]
+    }
+}
