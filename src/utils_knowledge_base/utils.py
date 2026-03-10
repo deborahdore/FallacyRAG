@@ -1,5 +1,6 @@
 import logging
 import re
+import string
 import time
 import unicodedata
 from typing import Optional
@@ -26,9 +27,11 @@ RETRY_BACKOFF = 2.0
 BROWSER_TIMEOUT_MS = 30_000  # 30 s per page navigation
 
 
-def safe_filename(title: str) -> str:
+def safe_filename(x: str) -> str:
     """Convert a title to a safe filename slug."""
-    return re.sub(r"\s+", "_", title)
+    x = re.sub(f"[{re.escape(string.punctuation)}]", "", x).strip()
+    x = re.sub(r"\s+", "_", x)
+    return x.strip()
 
 
 def fetch_wikipedia_sections(page: str) -> dict:
@@ -85,7 +88,7 @@ def fetch_wikipedia_sections(page: str) -> dict:
             p.get_text(" ", strip=True) for p in soup.find_all("p") if p.get_text(strip=True)
         )
         if paragraphs:
-            result[f"wiki_{section['anchor']}"] = clean_text(paragraphs)
+            result[section['anchor']] = clean_text(paragraphs)
 
     return result
 
@@ -116,5 +119,3 @@ def clean_text(content) -> str:
     text = re.sub(r" {2,}", " ", text)
     text = unicodedata.normalize("NFKD", text).encode("ascii", errors="ignore").decode("ascii")
     return text.strip()
-
-

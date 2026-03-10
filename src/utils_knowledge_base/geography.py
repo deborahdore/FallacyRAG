@@ -37,34 +37,8 @@ def fetch_census_topics(geo_id: str, meta: dict) -> dict:
             continue
         viz = response.get("vizData", {})
         if viz and viz.get("stats"):
-            data[topic] = {"title": viz["title"], "source": viz["source"], "stats": viz["stats"]}
+            data['topic'] = f"The {viz['title']} with source {viz['source']} shows that {viz['stats']}"
     return data
-
-
-# ======================== PIPELINE ======================== #
-
-def process_state(state: dict, path: Path) -> None:
-    """Fetch Census + Wikipedia data for a single state and save to disk."""
-    geo_id = state["facets"]["geography"][0]
-
-    meta = get_from_url(f"{CENSUS_BASE}/profile/metadata", params={"g": geo_id, "includeHighlights": "false"})
-    if meta is None:
-        log.warning("No metadata for %s (%s)", state["title"], geo_id)
-        return
-
-    record = {
-        "title": state["title"],
-        "level": state["level"],
-        "geoID": geo_id,
-        "short description": clean_text(state.get("teaser", "")),
-        "description": clean_text(meta.get("header", {}).get("description", "")),
-        **fetch_census_topics(geo_id, meta),
-        **fetch_wikipedia_sections(state["title"]),
-    }
-
-    filename = path / f"{safe_filename(record['title'])}.json"
-    filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
-    log.info("Saved %s", filename)
 
 
 # ======================== MAIN ======================== #
@@ -81,7 +55,44 @@ def extract_US(path: Path) -> None:
 
     for state in tqdm(profiles, desc="US states"):
         try:
-            process_state(state, path)
+            geo_id = state["facets"]["geography"][0]
+
+            meta = get_from_url(f"{CENSUS_BASE}/profile/metadata", params={"g": geo_id, "includeHighlights": "false"})
+            if meta is None:
+                log.warning("No metadata for %s (%s)", state["title"], geo_id)
+                return
+
+            n = 1
+            record = {"id": safe_filename(state["title"])}
+            record[f"paragraph_{n}"] = clean_text(state.get("teaser", ""))
+            record[f"source_{n}"] = "UNITED STATES CENSUS BUREAU"
+            record[f"source_url_{n}"] = f"https://data.census.gov/profile/{state['title']}?g={geo_id}"
+            n += 1
+
+            record[f"paragraph_{n}"] = clean_text(meta.get("header", {}).get("description", ""))
+            record[f"source_{n}"] = "UNITED STATES CENSUS BUREAU"
+            record[f"source_url_{n}"] = f"https://data.census.gov/profile/{state['title']}?g={geo_id}"
+            n += 1
+
+            census_data = fetch_census_topics(geo_id, meta)
+            for data in census_data.items():
+                title, text = data[0], data[1]
+                record[f"paragraph_{n}"] = title + ": " + text
+                record[f"source_{n}"] = "UNITED STATES CENSUS BUREAU"
+                record[f"source_url_{n}"] = f"https://data.census.gov/profile/{state['title']}?g={geo_id}"
+                n += 1
+
+            wiki_data = fetch_wikipedia_sections(state["title"])
+            for section in wiki_data.items():
+                title, text = section[0], section[1]
+                record[f"paragraph_{n}"] = title + ": " + clean_text(text)
+                record[f"source_{n}"] = "Wikipedia webpage for {}".format(state["title"])
+                record[f"source_url_{n}"] = f"https://en.wikipedia.org/wiki/{record['id']}"
+                n += 1
+
+            filename = path / f"{record['id']}.json"
+            filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
+            log.info("Saved %s", filename)
         except Exception:
             log.exception("Unexpected error processing %s", state.get("title"))
 
@@ -100,8 +111,16 @@ def extract_NER_entities(path: Path, source_file: str = "./notebooks/topic_resul
             if not sections:
                 log.warning("No Wikipedia content found for %s", entity)
                 continue
-            record = {"title": entity, "source": "Wikipedia", **sections}
-            filename = path / f"{safe_filename(record['title'])}.json"
+            record = {
+                "id": safe_filename(entity),
+            }
+            for idx, section in enumerate(sections.items()):
+                title, text = section[0], section[1]
+                record[f"paragraph_{idx + 1}"] = title + ": " + text
+                record[f"source_{idx + 1}"] = "Wikipedia's Web Page for {}".format(entity)
+                record[f"source_url_{idx + 1}"] = "https://en.wikipedia.org/wiki/" + record['id']
+
+            filename = path / "{}.json".format(record['id'])
             filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
             log.info("Saved %s", filename)
         except Exception:

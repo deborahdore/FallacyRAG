@@ -98,7 +98,7 @@ def parse_job(job: dict) -> dict:
     return record
 
 
-def parse_congressman(raw: dict) -> dict | None:
+def parse_congressman(raw: dict, source: str):
     """Build a clean congressman record from a raw bioguide API response."""
     data = raw.get("data")
     if not data:
@@ -106,32 +106,31 @@ def parse_congressman(raw: dict) -> dict | None:
 
     given = data.get("givenName", "").strip()
     family = data.get("familyName", "").strip()
-    if not given and not family:
-        log.warning("Bioguide record missing name: %s", data)
-        return None
-
+    name = given + " " + family
+    n = 1
     record: dict = {
-        "name": f"{given} {family}".strip(),
-        "birthDate": data.get("birthDate"),
-        "deathDate": data.get("deathDate"),
-        "bio": data.get("profileText", ""),
+        "id": safe_filename(name.strip()),
+        f"paragraph_{n}": f" {name} is {data.get('profileText', '')}".strip(),
+        f"source_{n}": "Official Biographical Directory of the United States Congress",
+        f"source_url_{n}": source
     }
 
-    jobs = []
     for job_entry in data.get("jobPositions", []):
         try:
-            jobs.append(parse_job(job_entry))
+            job = parse_job(job_entry)
+            n += 1
+            record[
+                f'paragraph_{n}'] = f"{name} worked as {job['role']} for {job['represents']} in {job['congressAffiliation']} from {job['startDate']} to {job['endDate']}."
+            record[f'source_{n}'] = source
         except Exception as e:
             log.warning("Could not parse job for %s: %s", record["name"], e)
-    if jobs:
-        record["jobs"] = jobs
 
-    return record
+    return record, name, n + 1
 
 
 # ======================== MAIN ======================== #
 
-def extract_congress(path: Path, csv_path: str) -> None:
+def extract_congress(path: Path, csv_path: str = "./data/HSall_members.csv") -> None:
     """Fetch and save bioguide data for all congress members in the CSV."""
     ids: list[str] = pd.read_csv(os.path.expanduser(csv_path))["bioguide_id"].dropna().unique().tolist()
     log.info("Processing %d unique congress members", len(ids))
@@ -139,13 +138,21 @@ def extract_congress(path: Path, csv_path: str) -> None:
     ok = err = 0
     for bid in tqdm(ids, desc="Congress members"):
         raw = simulate_browser(BIOGUIDE_URL.format(id=bid))
-        record = parse_congressman(raw) if raw else None
+        record, name, last_paragraph = parse_congressman(raw, source=BIOGUIDE_URL.format(id=bid)) if raw else None
+        wiki = fetch_wikipedia_sections(name) if name else None
+        for section in wiki.items():
+            title, text = section[0], section[1]
+            record[f"paragraph_{last_paragraph}"] = title + ": " + text
+            record[f"source_{last_paragraph}"] = "Wikipedia's Web Page for {}".format(name)
+            record[f"source_url_{last_paragraph}"] = "https://en.wikipedia.org/wiki/" + safe_filename(name)
+            last_paragraph += 1
+
         if record is None:
             log.warning("Skipping bioguide ID %s", bid)
             err += 1
             continue
 
-        filename = path / f"{safe_filename(record['name'])}.json"
+        filename = path / f"{record['id']}.json"
         filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
         log.info("Saved %s", filename)
         ok += 1
@@ -160,16 +167,27 @@ def extract_wiki_people(path: Path, source_file: str = NER_SOURCE) -> None:
 
     ok = err = 0
     for name in tqdm(people, desc="NER people"):
+        name = safe_filename(name)
+        record = {
+            "id": name,
+        }
+        filename = path / f"{record['id']}.json"
+        if filename.exists():
+            continue
+
         sections = fetch_wikipedia_sections(name)
+
         if not sections:
             log.warning("No Wikipedia content for %s", name)
             err += 1
             continue
+        for idx, section in enumerate(sections.items()):
+            title, text = section[0], section[1]
+            record[f"paragraph_{idx + 1}"] = title + ": " + text
+            record[f"source_{idx + 1}"] = "Wikipedia's Web Page for {}".format(name)
+            record[f"source_url_{idx + 1}"] = "https://en.wikipedia.org/wiki/" + safe_filename(name)
 
-        filename = path / f"{safe_filename(name)}.json"
-        if filename.exists():
-            filename = path / f"{safe_filename(name)}_1.json"
-        filename.write_text(json.dumps({"name": name, **sections}, indent=4, ensure_ascii=False), encoding="utf-8")
+        filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
         log.info("Saved %s", filename)
         ok += 1
 

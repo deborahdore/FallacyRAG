@@ -1,6 +1,5 @@
 import json
 import logging
-import os
 from pathlib import Path
 
 import rootutils
@@ -19,15 +18,24 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 
-def extract_gov_manual(path: Path) -> None:
+def extract_gov_manual(path: Path,
+                       url: str = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml") -> None:
     """Fetch and save the US Government Manual as plain text."""
-    URL = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml"
-    response = get_from_url(URL, return_json=False)
+    response = get_from_url(url, return_json=False)
     if response is None:
         raise FileNotFoundError("US GOV MANUAL NOT FOUND.")
 
-    filename = path / "US_government_manual.txt"
-    filename.write_text(clean_text(BeautifulSoup(response, "xml").text), encoding="utf-8")
+    id = "GOVMAN-2025-01-13"
+    record = {
+        "id": id,
+        "text": clean_text(BeautifulSoup(response, "xml").text),
+        "xml": BeautifulSoup(response, "xml").prettify(),
+        "source": "U.S. Government Information Official US Government Manual",
+        "source_url": url
+    }
+
+    filename = path / "{}.json".format(id)
+    filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
     log.info("Saved %s", filename)
 
 
@@ -50,24 +58,32 @@ def extract_from_govinfo(main_url: str, path: Path) -> None:
             if response is None:
                 continue
 
-            filename = path / f"{bill_id}.txt"
-            filename.write_text(clean_text(BeautifulSoup(response, "xml").text), encoding="utf-8")
+            filename = path / "{}.json".format(bill_id)
+            record = {
+                "id": bill_id,
+                "text": clean_text(BeautifulSoup(response, "xml").text),
+                "xml": BeautifulSoup(response, "xml").prettify(),
+                "source": "U.S. Government Information Official WebSite",
+                "source_url": f"https://www.govinfo.govwww.govinfo.gov/content/pkg/{bill_id}/html/{bill_id}.htm",
+            }
+            filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
             log.info("Saved %s", filename)
 
 
 def extract_universal_declaration(path: Path) -> None:
     """OCR the locally downloaded UDHR PDF and save as JSON."""
     pdf_path = Path("./data/udhr.pdf")
-    out_file = path / "dec_human_rights.json"
+    out_file = path / "udhr.json"
 
     text = "\n".join(
         pytesseract.image_to_string(page)
-        for page in convert_from_path(pdf_path, dpi=600)
+        for page in convert_from_path(pdf_path, dpi=800)
     )
     record = {
-        "title": "Universal Declaration of Human Rights",
-        "source": "https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf",
+        "id": "udhr",
         "text": clean_text(text),
+        "source": "Official Universal Declaration of Human Rights",
+        "source_url": "https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf",
     }
     out_file.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
     log.info("Saved %s", out_file)

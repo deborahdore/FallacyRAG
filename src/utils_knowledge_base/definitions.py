@@ -12,9 +12,9 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 from src.utils_knowledge_base.utils import clean_text, log, fetch_wikipedia_sections
 
 
-def extract_from_pdf(url, file_name, out_path, dpi: int = 600):
+def extract_from_pdf(url, id, source, out_path, dpi: int = 800):
     out_path = Path(out_path)
-    out_file = out_path / f"{file_name}.json"
+    out_file = out_path / f"{id}.json"
 
     with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
         tmp_path = Path(tmp.name)
@@ -31,10 +31,12 @@ def extract_from_pdf(url, file_name, out_path, dpi: int = 600):
         )
 
         record = {
-            "title": file_name,
-            "source": url,
+            "id": id,
+            "source": source,
+            "source_url": url,
             "text": clean_text(text),
         }
+
         out_file.write_text(
             json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8"
         )
@@ -51,10 +53,15 @@ def extract_from_pdf(url, file_name, out_path, dpi: int = 600):
 
 def extract_fallacy_def(argument, out_path):
     record = {
-        "title": argument,
-        **fetch_wikipedia_sections(argument),
+        "id": argument,
     }
+    sections = fetch_wikipedia_sections(argument)
+    for idx, section in enumerate(sections.items()):
+        title, text = section[0], section[1]
+        record[f"paragraph_{idx + 1}"] = title + ": " + clean_text(text)
+        record[f"source_{idx + 1}"] = "Wikipedia webpage for {}".format(argument)
+        record[f"source_url_{idx + 1}"] = f"https://en.wikipedia.org/wiki/{argument}"
 
-    filename = out_path / "fallacies.json"
+    filename = out_path / f"{argument}.json"
     filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
     log.info("Saved %s", filename)
