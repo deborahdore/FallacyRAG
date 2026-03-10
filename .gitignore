@@ -154,3 +154,6 @@ dmypy.json
 **/wandb
 *.DS_Store
 /.idea/
+
+/knowledge_base/
+./knowledge_base/

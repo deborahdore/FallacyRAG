@@ -8,16 +8,14 @@ from pathlib import Path
 
 import pandas as pd
 import rootutils
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from script.utils import safe_filename, fetch_wikipedia_sections
+from script.utils import safe_filename, fetch_wikipedia_sections, simulate_browser
 
 BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
 NER_SOURCE = "./notebooks/topic_results.json"
-BROWSER_TIMEOUT_MS = 30_000  # 30 s per page navigation
 
 logging.basicConfig(
     level=logging.INFO,
@@ -45,35 +43,6 @@ STATE_ABBR2NAME: dict[str, str] = {
     "WA": "WASHINGTON", "AK": "ALASKA", "HI": "HAWAII",
     "US": "UNITED STATES",
 }
-
-
-def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict | None:
-    """Fetch a JSON endpoint via a headless Chromium browser.
-    Returns the parsed dict, or None on any failure.
-    """
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        try:
-            context = browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
-                )
-            )
-            page = context.new_page()
-            page.set_default_timeout(timeout_ms)
-            page.goto(url, wait_until="networkidle")
-            text = page.evaluate("() => document.body.innerText")
-            return json.loads(text)
-        except PlaywrightTimeout:
-            log.warning("Timeout fetching %s", url)
-        except json.JSONDecodeError as e:
-            log.warning("JSON parse error for %s: %s", url, e)
-        except Exception as e:
-            log.warning("Browser error for %s: %s", url, e)
-        finally:
-            browser.close()
-    return None
 
 
 def parse_job(job: dict) -> dict:
