@@ -3,14 +3,14 @@ import logging
 import os
 from pathlib import Path
 
-import pytesseract
 import rootutils
 from bs4 import BeautifulSoup
 from pdf2image import convert_from_path
+from pytesseract import pytesseract
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from script.utils import get_from_url, clean_text
+from src.utils_knowledge_base.utils import get_from_url, clean_text
 
 logging.basicConfig(
     level=logging.INFO,
@@ -19,45 +19,58 @@ logging.basicConfig(
 log = logging.getLogger(__name__)
 
 
-def extract_gov_manual(path):
+def extract_gov_manual(path: Path) -> None:
+    """Fetch and save the US Government Manual as plain text."""
     URL = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml"
     response = get_from_url(URL, return_json=False)
     if response is None:
         raise FileNotFoundError("US GOV MANUAL NOT FOUND.")
 
-    manual = BeautifulSoup(response, "xml").text
     filename = path / "US_government_manual.txt"
-    filename.write_text(clean_text(manual), encoding="utf-8")
+    filename.write_text(clean_text(BeautifulSoup(response, "xml").text), encoding="utf-8")
     log.info("Saved %s", filename)
 
 
-def extract_from_govinfo(main_url, path):
-    # This url contains the links to each year
-    bills_response = get_from_url(main_url, return_json=False)
-    assert bills_response is not None
+def extract_from_govinfo(main_url: str, path: Path) -> None:
+    """Crawl a govinfo sitemap and save each bill as plain text."""
+    root = get_from_url(main_url, return_json=False)
+    assert root is not None
 
-    bills_response = BeautifulSoup(bills_response, "xml")
-    locations = bills_response.find_all("loc")
-    for location in locations:
-        # This url retrieves the links for each bill of a certain year
-        year_response = get_from_url(location.text, return_json=False)
-        if year_response is None: continue
+    for year_loc in BeautifulSoup(root, "xml").find_all("loc"):
+        year_response = get_from_url(year_loc.text, return_json=False)
+        if year_response is None:
+            continue
 
-        year_response = BeautifulSoup(year_response, "xml")
+        for bill_loc in BeautifulSoup(year_response, "xml").find_all("loc"):
+            bill_id = bill_loc.text.split("/")[-1]
+            response = get_from_url(
+                f"https://www.govinfo.gov/content/pkg/{bill_id}/html/{bill_id}.htm",
+                return_json=False,
+            )
+            if response is None:
+                continue
 
-        bill_locations = year_response.find_all("loc")
-        for bill in bill_locations:
-            id = bill.text.split("/")[-1]
-            #  now we retrieve the bill
-            response = get_from_url(f"https://www.govinfo.gov/content/pkg/{id}/html/{id}.htm", return_json=False)
-            if response is None: continue
-
-            response = BeautifulSoup(response, "xml").text
-
-            filename = path / f"{id}.txt"
-            filename.write_text(clean_text(response), encoding="utf-8")
+            filename = path / f"{bill_id}.txt"
+            filename.write_text(clean_text(BeautifulSoup(response, "xml").text), encoding="utf-8")
             log.info("Saved %s", filename)
 
+
+def extract_universal_declaration(path: Path) -> None:
+    """OCR the locally downloaded UDHR PDF and save as JSON."""
+    pdf_path = Path("./data/udhr.pdf")
+    out_file = path / "dec_human_rights.json"
+
+    text = "\n".join(
+        pytesseract.image_to_string(page)
+        for page in convert_from_path(pdf_path, dpi=600)
+    )
+    record = {
+        "title": "Universal Declaration of Human Rights",
+        "source": "https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf",
+        "text": clean_text(text),
+    }
+    out_file.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
+    log.info("Saved %s", out_file)
 
 # def extract_international_law(out_path: Path, volume_range: range = range(1, 3198), dpi: int = 200):
 #     base_url = "https://treaties.un.org/doc/Publication/UNTS/Volume%20{id}/v{id}.pdf"
@@ -101,39 +114,3 @@ def extract_from_govinfo(main_url, path):
 #             tmp_path.unlink(missing_ok=True)
 #
 #     log.info("Done.")
-
-def extract_universal_declaration(out_path):
-    # Download -> "https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf"
-    out_path = Path(out_path)
-
-    out_file = out_path / "dec_human_rights.json"
-
-    try:
-        pages = convert_from_path(os.path.expanduser("~/Downloads/udhr.pdf"), dpi=600)
-        text = "\n".join(
-            pytesseract.image_to_string(page)
-            for page in pages
-        )
-
-        record = {
-            "title": "Universal Declaration of Human Rights",
-            "source": "https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf",
-            "text": clean_text(text),
-        }
-        out_file.write_text(
-            json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8"
-        )
-        log.info("Saved %s", out_file)
-
-    finally:
-        os.remove(os.path.expanduser("~/Downloads/udhr.pdf"))
-
-
-if __name__ == '__main__':
-    output_path = Path("knowledge_base/bills/")
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    # extract_gov_manual(output_path)
-    # extract_from_govinfo("https://www.govinfo.gov/sitemap/BILLS_sitemap_index.xml", output_path)
-    # extract_from_govinfo("https://www.govinfo.gov/sitemap/PLAW_sitemap_index.xml", output_path)
-    extract_universal_declaration(output_path)

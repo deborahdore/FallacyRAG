@@ -1,4 +1,3 @@
-import json
 import logging
 import re
 import time
@@ -7,15 +6,14 @@ from typing import Optional
 
 import requests
 from bs4 import BeautifulSoup
-from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 log = logging.getLogger(__name__)
+
 SKIP_WIKI_SECTIONS = {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}
-MAX_RETRIES = 3
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
                   "(KHTML, like Gecko) Chrome/122.0 Safari/537.36",
@@ -23,7 +21,9 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
     "Connection": "keep-alive",
 }
+MAX_RETRIES = 3
 RETRY_BACKOFF = 2.0
+BROWSER_TIMEOUT_MS = 30_000  # 30 s per page navigation
 
 
 def safe_filename(title: str) -> str:
@@ -118,33 +118,3 @@ def clean_text(content) -> str:
     return text.strip()
 
 
-BROWSER_TIMEOUT_MS = 30_000  # 30 s per page navigation
-
-
-def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict | None:
-    """Fetch a JSON endpoint via a headless Chromium browser.
-    Returns the parsed dict, or None on any failure.
-    """
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        try:
-            context = browser.new_context(
-                user_agent=(
-                    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
-                )
-            )
-            page = context.new_page()
-            page.set_default_timeout(timeout_ms)
-            page.goto(url, wait_until="networkidle")
-            text = page.evaluate("() => document.body.innerText")
-            return json.loads(text)
-        except PlaywrightTimeout:
-            log.warning("Timeout fetching %s", url)
-        except json.JSONDecodeError as e:
-            log.warning("JSON parse error for %s: %s", url, e)
-        except Exception as e:
-            log.warning("Browser error for %s: %s", url, e)
-        finally:
-            browser.close()
-    return None

@@ -8,20 +8,21 @@ from pathlib import Path
 
 import pandas as pd
 import rootutils
+from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from script.utils import safe_filename, fetch_wikipedia_sections, simulate_browser
-
-BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
-NER_SOURCE = "./notebooks/topic_results.json"
+from src.utils_knowledge_base.utils import safe_filename, fetch_wikipedia_sections, BROWSER_TIMEOUT_MS
 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 log = logging.getLogger(__name__)
+
+BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
+NER_SOURCE = "./notebooks/topic_results.json"
 
 STATE_ABBR2NAME: dict[str, str] = {
     "CT": "CONNECTICUT", "ME": "MAINE", "MA": "MASSACHUSETTS",
@@ -44,6 +45,34 @@ STATE_ABBR2NAME: dict[str, str] = {
     "US": "UNITED STATES",
 }
 
+
+# ======================== BROWSER ======================== #
+
+def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict | None:
+    """Fetch a JSON endpoint via a headless Chromium browser."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        try:
+            context = browser.new_context(user_agent=(
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+            ))
+            page = context.new_page()
+            page.set_default_timeout(timeout_ms)
+            page.goto(url, wait_until="networkidle")
+            return json.loads(page.evaluate("() => document.body.innerText"))
+        except PlaywrightTimeout:
+            log.warning("Timeout fetching %s", url)
+        except json.JSONDecodeError as e:
+            log.warning("JSON parse error for %s: %s", url, e)
+        except Exception as e:
+            log.warning("Browser error for %s: %s", url, e)
+        finally:
+            browser.close()
+    return None
+
+
+# ======================== PARSING ======================== #
 
 def parse_job(job: dict) -> dict:
     """Extract a structured job record from a raw bioguide jobPosition entry."""
@@ -70,9 +99,7 @@ def parse_job(job: dict) -> dict:
 
 
 def parse_congressman(raw: dict) -> dict | None:
-    """Build a clean congressman record from a raw bioguide API response.
-    Returns None if the response is missing required fields.
-    """
+    """Build a clean congressman record from a raw bioguide API response."""
     data = raw.get("data")
     if not data:
         return None
@@ -96,46 +123,13 @@ def parse_congressman(raw: dict) -> dict | None:
             jobs.append(parse_job(job_entry))
         except Exception as e:
             log.warning("Could not parse job for %s: %s", record["name"], e)
-
     if jobs:
         record["jobs"] = jobs
 
     return record
 
 
-def process_congressman(bioguide_id: str, path: Path) -> bool:
-    """Fetch, parse, and save one congressman. Returns True on success."""
-    raw = simulate_browser(BIOGUIDE_URL.format(id=bioguide_id))
-    if raw is None:
-        log.warning("No data for bioguide ID %s", bioguide_id)
-        return False
-
-    record = parse_congressman(raw)
-    if record is None:
-        log.warning("Could not parse record for bioguide ID %s", bioguide_id)
-        return False
-
-    filename = path / f"{safe_filename(record['name'])}.json"
-    filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
-    log.info("Saved %s", filename)
-    return True
-
-
-def process_wiki_person(name: str, path: Path) -> bool:
-    """Fetch Wikipedia sections for a named person and save. Returns True on success."""
-    sections = fetch_wikipedia_sections(name)
-    if not sections:
-        log.warning("No Wikipedia content for %s", name)
-        return False
-
-    record = {"name": name, **sections}
-    filename = path / f"{safe_filename(name)}.json"
-    if os.path.isfile(filename):
-        filename = path / f"{safe_filename(name)}_1.json"
-    filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
-    log.info("Saved %s", filename)
-    return True
-
+# ======================== MAIN ======================== #
 
 def extract_congress(path: Path, csv_path: str) -> None:
     """Fetch and save bioguide data for all congress members in the CSV."""
@@ -144,10 +138,17 @@ def extract_congress(path: Path, csv_path: str) -> None:
 
     ok = err = 0
     for bid in tqdm(ids, desc="Congress members"):
-        if process_congressman(bid, path):
-            ok += 1
-        else:
+        raw = simulate_browser(BIOGUIDE_URL.format(id=bid))
+        record = parse_congressman(raw) if raw else None
+        if record is None:
+            log.warning("Skipping bioguide ID %s", bid)
             err += 1
+            continue
+
+        filename = path / f"{safe_filename(record['name'])}.json"
+        filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
+        log.info("Saved %s", filename)
+        ok += 1
 
     log.info("Congress: %d saved, %d failed", ok, err)
 
@@ -159,16 +160,17 @@ def extract_wiki_people(path: Path, source_file: str = NER_SOURCE) -> None:
 
     ok = err = 0
     for name in tqdm(people, desc="NER people"):
-        if process_wiki_person(name, path):
-            ok += 1
-        else:
+        sections = fetch_wikipedia_sections(name)
+        if not sections:
+            log.warning("No Wikipedia content for %s", name)
             err += 1
+            continue
+
+        filename = path / f"{safe_filename(name)}.json"
+        if filename.exists():
+            filename = path / f"{safe_filename(name)}_1.json"
+        filename.write_text(json.dumps({"name": name, **sections}, indent=4, ensure_ascii=False), encoding="utf-8")
+        log.info("Saved %s", filename)
+        ok += 1
+
     log.info("NER people: %d saved, %d failed", ok, err)
-
-
-if __name__ == "__main__":
-    output_path = Path("./knowledge_base/people/")
-    output_path.mkdir(parents=True, exist_ok=True)
-
-    extract_congress(output_path, csv_path="./data/HSall_members.csv")
-    extract_wiki_people(output_path)
