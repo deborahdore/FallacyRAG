@@ -88,6 +88,7 @@ def extract_universal_declaration(path: Path) -> None:
     out_file.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
     log.info("Saved %s", out_file)
 
+
 # def extract_international_law(out_path: Path, volume_range: range = range(1, 3198), dpi: int = 200):
 #     base_url = "https://treaties.un.org/doc/Publication/UNTS/Volume%20{id}/v{id}.pdf"
 #     out_path = Path(out_path)
@@ -130,3 +131,12 @@ def extract_universal_declaration(path: Path) -> None:
 #             tmp_path.unlink(missing_ok=True)
 #
 #     log.info("Done.")
+
+def bills_and_laws():
+    path = Path("knowledge_base/bills/")
+    path.mkdir(parents=True, exist_ok=True)
+
+    extract_gov_manual(path)
+    extract_from_govinfo("https://www.govinfo.gov/sitemap/BILLS_sitemap_index.xml", path)
+    extract_from_govinfo("https://www.govinfo.gov/sitemap/PLAW_sitemap_index.xml", path)
+    extract_universal_declaration(path)

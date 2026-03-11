@@ -119,11 +119,16 @@ def parse_congressman(raw: dict, source: str):
         try:
             job = parse_job(job_entry)
             n += 1
+            role = job.get("role", "")
+            represents = job.get("represents", "")
+            congressAffiliation = job.get("congressAffiliation", "")
+            startDate = job.get("startDate", "")
+            endDate = job.get("endDate", "")
             record[
-                f'paragraph_{n}'] = f"{name} worked as {job['role']} for {job['represents']} in {job['congressAffiliation']} from {job['startDate']} to {job['endDate']}."
+                f'paragraph_{n}'] = f"{name} worked as {role} for {represents} in {congressAffiliation} from {startDate} to {endDate}."
             record[f'source_{n}'] = source
         except Exception as e:
-            log.warning("Could not parse job for %s: %s", record["name"], e)
+            log.warning("Could not parse job for %s: %s", name, e)
 
     return record, name, n + 1
 
@@ -192,3 +197,10 @@ def extract_wiki_people(path: Path, source_file: str = NER_SOURCE) -> None:
         ok += 1
 
     log.info("NER people: %d saved, %d failed", ok, err)
+
+def people():
+    path = Path("./knowledge_base/people/")
+    path.mkdir(parents=True, exist_ok=True)
+
+    extract_congress(path)
+    extract_wiki_people(path)

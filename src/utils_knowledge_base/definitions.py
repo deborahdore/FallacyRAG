@@ -65,3 +65,18 @@ def extract_fallacy_def(argument, out_path):
     filename = out_path / f"{argument}.json"
     filename.write_text(json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
     log.info("Saved %s", filename)
+
+
+def definitions():
+    path = Path("./knowledge_base/definitions/")
+    path.mkdir(parents=True, exist_ok=True)
+
+    extract_from_pdf(url="https://www.ijcai.org/proceedings/2022/0575.pdf",
+                     id="goffredo2022fallacious",
+                     source="Fallacious argument classification in political debates",
+                     out_path=path)
+    extract_from_pdf(url="https://aclanthology.org/2023.emnlp-main.684.pdf",
+                     id="goffredo2023argument",
+                     source="Argument-based Detection and Classification of Fallacies in Political Debates",
+                     out_path=path)
+    extract_fallacy_def("Fallacy", path)

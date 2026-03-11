@@ -125,3 +125,10 @@ def extract_NER_entities(path: Path, source_file: str = "./notebooks/topic_resul
             log.info("Saved %s", filename)
         except Exception:
             log.exception("Unexpected error processing %s", entity)
+
+def geography():
+    path = Path("./knowledge_base/geography/")
+    path.mkdir(parents=True, exist_ok=True)
+
+    extract_NER_entities(path)
+    extract_US(path)
