@@ -1,6 +1,16 @@
 # From Detection to Explanation: Retrieval-Augmented Generation for Argumentative Fallacies
 
-## Overview
+<!-- TOC -->
+* [From Detection to Explanation: Retrieval-Augmented Generation for Argumentative Fallacies](#from-detection-to-explanation-retrieval-augmented-generation-for-argumentative-fallacies)
+  * [🚀 Overview](#-overview)
+  * [🎯 Tasks](#-tasks)
+  * [⛁ Knowledge Base](#-knowledge-base)
+    * [Knowledge Base Format](#knowledge-base-format)
+      * [Standard Entry](#standard-entry)
+      * [Paragraph-Structured Entry](#paragraph-structured-entry)
+<!-- TOC -->
+
+## 🚀 Overview
 
 **Fallacies** are arguments that rely on faulty or misleading
 reasoning [(Goffredo et al., 2023)](https://aclanthology.org/2023.emnlp-main.684.pdf).
@@ -13,9 +23,7 @@ debates.
 Experiments are conducted using the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains
 transcripts from U.S. political debates.
 
----
-
-# Tasks
+## 🎯 Tasks
 
 The project focuses on three main tasks.
 
@@ -36,9 +44,7 @@ The project focuses on three main tasks.
 - **Fallacy Explanation**: generate a natural language explanation describing **why the argument was classified as a
   fallacy** and **why the reasoning is flawed**.
 
----
-
-# Knowledge Base
+## ⛁ Knowledge Base
 
 To ground the language model, we constructed a **knowledge base of approximately 5GB of political and contextual
 documents**. The corpus combines official government sources with curated background information.
@@ -58,13 +64,11 @@ The knowledge base is organized into four main categories.
   sources ([Goffredo et al., 2023](https://aclanthology.org/2023.emnlp-main.684.pdf), [Goffredo et al., 2022](https://www.ijcai.org/proceedings/2022/0575.pdf)).
   Additional supporting definitions were collected from Wikipedia.
 
----
-
-# Knowledge Base Format
+### Knowledge Base Format
 
 Each entry in the knowledge base is stored as a JSON document.
 
-### Standard Entry
+#### Standard Entry
 
 ```json
 {
@@ -76,7 +80,7 @@ Each entry in the knowledge base is stored as a JSON document.
 }
 ```
 
-### Paragraph-Structured Entry
+#### Paragraph-Structured Entry
 
 When the original document is already divided into paragraphs, the structure preserves this segmentation:
 
