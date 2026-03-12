@@ -67,8 +67,8 @@ def extract_fallacy_def(argument, out_path):
     log.info("Saved %s", filename)
 
 
-def definitions():
-    path = Path("./knowledge_base/definitions/")
+def definitions(knowledge_base_path: str):
+    path = Path(f"{knowledge_base_path}/definitions/")
     path.mkdir(parents=True, exist_ok=True)
 
     extract_from_pdf(url="https://www.ijcai.org/proceedings/2022/0575.pdf",

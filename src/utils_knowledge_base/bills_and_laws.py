@@ -132,8 +132,8 @@ def extract_universal_declaration(path: Path) -> None:
 #
 #     log.info("Done.")
 
-def bills_and_laws():
-    path = Path("knowledge_base/bills/")
+def bills_and_laws(knowledge_base_path: str):
+    path = Path(f"{knowledge_base_path}/bills/")
     path.mkdir(parents=True, exist_ok=True)
 
     extract_gov_manual(path)

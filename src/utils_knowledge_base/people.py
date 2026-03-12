@@ -198,8 +198,9 @@ def extract_wiki_people(path: Path, source_file: str = NER_SOURCE) -> None:
 
     log.info("NER people: %d saved, %d failed", ok, err)
 
-def people():
-    path = Path("./knowledge_base/people/")
+
+def people(knowledge_base_path: str):
+    path = Path(f"{knowledge_base_path}/people/")
     path.mkdir(parents=True, exist_ok=True)
 
     extract_congress(path)
