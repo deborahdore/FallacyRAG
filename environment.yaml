@@ -17,6 +17,7 @@ dependencies:
       - pytesseract
       - pdf2image
       - requests
+      - requests-oauthlib
       - langchain
       - langchain-text-splitters
       - langchain-community
@@ -31,3 +32,4 @@ dependencies:
       - langchain-community
       - jq
       - langchain_core
+      - lxml
