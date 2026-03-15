@@ -276,9 +276,9 @@ def geography(path: Path):
 
 
 def main():
-    # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
+    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
     definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
 
 
