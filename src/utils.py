@@ -1,5 +1,4 @@
 import json
-import os
 import re
 import string
 import time
@@ -10,7 +9,6 @@ import requests
 import rootutils
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
-from requests_oauthlib import OAuth1
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
@@ -175,18 +173,17 @@ def fetch_wikipedia_sections(page: str):
 
     return text
 
-
-def get_request_token():
-    url = f"https://en.wikipedia.org/wiki/Special:OAuth/initiate"
-
-    oauth = OAuth1(
-        os.environ['CONSUMER_KEY'],
-        client_secret=os.environ['CONSUMER_SECRET'],
-        callback_uri="oob"
-    )
-
-    HEADERS = {"User-Agent": "FallacyRAG OAuth Test"}
-    r = requests.get(url, auth=oauth, headers=HEADERS)
-    r.raise_for_status()
-    data = dict(x.split("=") for x in r.text.split("&"))
-    return data["oauth_token"], data["oauth_token_secret"]
+# def get_request_token():
+#     url = f"https://en.wikipedia.org/wiki/Special:OAuth/initiate"
+#
+#     oauth = OAuth1(
+#         os.environ['CONSUMER_KEY'],
+#         client_secret=os.environ['CONSUMER_SECRET'],
+#         callback_uri="oob"
+#     )
+#
+#     HEADERS = {"User-Agent": "FallacyRAG OAuth Test"}
+#     r = requests.get(url, auth=oauth, headers=HEADERS)
+#     r.raise_for_status()
+#     data = dict(x.split("=") for x in r.text.split("&"))
+#     return data["oauth_token"], data["oauth_token_secret"]
