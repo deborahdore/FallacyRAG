@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 import tempfile
 from pathlib import Path
 
@@ -84,6 +85,8 @@ def bills_and_laws(path: Path):
 
             for bill in y_resp.find_all("loc"):
                 b_id = bill.text.split("/")[-1]
+                if b_id + ".json" in os.listdir(path):
+                    continue
                 custom_url = f"https://www.govinfo.gov/content/pkg/{b_id}/html/{b_id}.htm"
                 response = get_request(url=custom_url)
                 if response is None: continue
@@ -153,20 +156,24 @@ def people(path: Path):
     people = []
 
     for bioguide_id in tqdm(congress_members_ids):
-        data = simulate_browser(BIOGUIDE_URL.format(id=bioguide_id)).get("data")
-        if not data: continue
+        try:
+            raw = simulate_browser(BIOGUIDE_URL.format(id=bioguide_id))
+            if not raw: continue
+            data = raw.get("data")
 
-        name = f"{data.get('givenName', '').strip()} {data.get('familyName', '').strip()}"
-        text = f" {name} is {data.get('profileText', '')}".strip()
-        filename = create_and_save_record(path=path,
-                                          id=name,
-                                          text=text,
-                                          source="Official Biographical Directory of the United States Congress",
-                                          url=BIOGUIDE_URL.format(id=bioguide_id)
-                                          )
-        log.info(f"Saved {filename}")
-        people.append(name)
-        del filename, name, text
+            name = f"{data.get('givenName', '').strip()} {data.get('familyName', '').strip()}"
+            text = f" {name} is {data.get('profileText', '')}".strip()
+            filename = create_and_save_record(path=path,
+                                              id=name,
+                                              text=text,
+                                              source="Official Biographical Directory of the United States Congress",
+                                              url=BIOGUIDE_URL.format(id=bioguide_id)
+                                              )
+            log.info(f"Saved {filename}")
+            people.append(name)
+            del filename, name, text
+        except:
+            continue
 
     # =================== people discussed in the debates =================== #
     people.extend(json.loads(Path(TOPIC_RESULTS_PATH).read_text(encoding="utf-8"))["PEOPLE"])
