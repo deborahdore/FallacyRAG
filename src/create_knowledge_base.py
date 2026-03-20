@@ -12,7 +12,7 @@ from pdf2image import convert_from_path
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
-from src.utils import create_and_save_record, get_request, simulate_browser, safe_filename, \
+from src.utils.retrieve_docs import create_and_save_record, get_request, simulate_browser, safe_filename, \
     fetch_wikipedia_sections
 
 logging.basicConfig(

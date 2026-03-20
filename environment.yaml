@@ -33,3 +33,4 @@ dependencies:
       - jq
       - langchain_core
       - lxml
+      - langchain-mistralai
