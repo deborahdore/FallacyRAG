@@ -155,4 +155,7 @@ dmypy.json
 *.DS_Store
 /.idea/
 
-/knowledge_base/
+./knowledge_base/
+./knowledge_base/*
+./chromadb/
+./chromadb/*
