@@ -1,14 +1,20 @@
 import json
+import os
 import re
 import string
 import time
 import unicodedata
+from collections import Counter
 from pathlib import Path
 
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import numpy as np
 import requests
 import rootutils
 from bs4 import BeautifulSoup
 from playwright.sync_api import sync_playwright
+from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
@@ -173,6 +179,7 @@ def fetch_wikipedia_sections(page: str):
 
     return text
 
+
 # def get_request_token():
 #     url = f"https://en.wikipedia.org/wiki/Special:OAuth/initiate"
 #
@@ -187,3 +194,113 @@ def fetch_wikipedia_sections(page: str):
 #     r.raise_for_status()
 #     data = dict(x.split("=") for x in r.text.split("&"))
 #     return data["oauth_token"], data["oauth_token_secret"]
+
+
+def analyze_paragraph_lengths(original_path: str = "./knowledge_base"):
+    counter = Counter()
+    sections = os.listdir(original_path)
+
+    for section in sections:
+        path = os.path.join(original_path, section)
+        if not os.path.isdir(path):
+            continue
+
+        files = os.listdir(path)
+
+        for file in tqdm(files, total=len(files), desc=f"Processing {section}"):
+            file_path = os.path.join(path, file)
+
+            with open(file_path, "r") as f:
+                j = json.load(f)
+
+            paragraphs = j.get("text", "").split("\n\n")
+
+            for para in paragraphs:
+                length = len(para.split())
+                if length > 0:
+                    counter[length] += 1
+
+    lengths = np.array(list(counter.keys()))
+    counts = np.array(list(counter.values()))
+
+    expanded = np.repeat(lengths, counts)
+
+    print("---- Stats ----")
+    print("Min:", expanded.min())
+    print("Max:", expanded.max())
+    print("Mean:", expanded.mean())
+    print("Median (P50):", np.percentile(expanded, 50))
+    print("P75:", np.percentile(expanded, 75))
+    print("P90:", np.percentile(expanded, 90))
+    print("P95:", np.percentile(expanded, 95))
+
+    plot_paragraph_cdf(lengths, counts)
+
+
+def plot_paragraph_cdf(lengths, counts, output_path="./data/paragraph_length_distribution.pdf"):
+    expanded = np.repeat(lengths, counts)
+    sorted_lengths = np.sort(expanded)
+    cdf = np.arange(1, len(sorted_lengths) + 1) / len(sorted_lengths)
+
+    thresholds = [
+        (800, "#4a9e5c", "800 tokens  — {pct:.0f}%"),
+        (1200, "#c47f1a", "1200 tokens — {pct:.0f}%"),
+        (2048, "#c0392b", "2048 tokens — {pct:.0f}%"),
+    ]
+
+    fig, ax = plt.subplots(figsize=(9, 5))
+    fig.patch.set_facecolor("#fafafa")
+    ax.set_facecolor("#fafafa")
+
+    ax.plot(sorted_lengths, cdf, color="#2166ac", linewidth=2, zorder=3)
+    ax.fill_between(sorted_lengths, cdf, alpha=0.08, color="#2166ac")
+
+    for x, color, label_fmt in thresholds:
+        pct = float(np.searchsorted(sorted_lengths, x)) / len(sorted_lengths) * 100
+        ax.axvline(x, color=color, linewidth=1.4, linestyle="--", zorder=2)
+        ax.text(
+            x * 1.07, 0.04 + thresholds.index((x, color, label_fmt)) * 0.07,
+            label_fmt.format(pct=pct),
+            color=color, fontsize=9, va="bottom",
+        )
+
+    percentiles = [50, 75, 90, 95]
+    pct_values = np.percentile(expanded, percentiles)
+    for p, v in zip(percentiles, pct_values):
+        ax.annotate(
+            f"P{p}\n{v:.0f}",
+            xy=(v, p / 100),
+            xytext=(v * 1.5, p / 100 - 0.08),
+            fontsize=8, color="#555",
+            arrowprops=dict(arrowstyle="-", color="#aaa", lw=0.8),
+            ha="left",
+        )
+
+    ax.set_xscale("log")
+    ax.xaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{int(x):,}"))
+    ax.yaxis.set_major_formatter(ticker.PercentFormatter(xmax=1))
+
+    ax.set_xlabel("Token length (log scale)", fontsize=11)
+    ax.set_ylabel("Cumulative proportion", fontsize=11)
+    ax.set_title("CDF of paragraph lengths", fontsize=13, fontweight="normal", pad=12)
+
+    ax.set_xlim(left=max(1, sorted_lengths.min() * 0.8))
+    ax.set_ylim(0, 1.05)
+    ax.grid(True, which="major", linestyle="--", linewidth=0.5, alpha=0.5)
+    ax.grid(True, which="minor", linestyle=":", linewidth=0.3, alpha=0.3)
+
+    for spine in ["top", "right"]:
+        ax.spines[spine].set_visible(False)
+
+    stats_text = (
+        f"n={len(expanded):,}  |  "
+        f"median={np.median(expanded):.0f}  |  "
+        f"P90={np.percentile(expanded, 90):.0f}  |  "
+        f"P95={np.percentile(expanded, 95):.0f}  |  "
+        f"max={expanded.max():.0f}"
+    )
+    fig.text(0.5, 0.01, stats_text, ha="center", fontsize=8, color="#888")
+
+    plt.tight_layout(rect=[0, 0.03, 1, 1])
+    plt.savefig(output_path, dpi=150, bbox_inches="tight")
+    plt.show()

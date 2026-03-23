@@ -3,8 +3,10 @@ import logging
 from pathlib import Path
 
 import rootutils
+import tiktoken
 import torch
 from langchain_chroma import Chroma
+from langchain_cohere import CohereEmbeddings
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_google_vertexai import VertexAIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
@@ -35,6 +37,14 @@ EMBEDDING_MODELS = {
         model_name="sentence-transformers/all-mpnet-base-v2",
         model_kwargs=model_kwargs
     ),
+    "ddore14/RooseBERT-cont-cased": lambda: HuggingFaceEmbeddings(
+        model_name="ddore14/RooseBERT-cont-cased",
+        model_kwargs=model_kwargs
+    ),
+    "ddore14/RooseBERT-cont-uncased": lambda: HuggingFaceEmbeddings(
+        model_name="ddore14/RooseBERT-cont-uncased",
+        model_kwargs=model_kwargs
+    ),
     "BAAI/bge-large-en-v1.5": lambda: HuggingFaceBgeEmbeddings(
         model_name="BAAI/bge-large-en-v1.5",
         model_kwargs=model_kwargs, encode_kwargs=encode_kwargs
@@ -43,6 +53,7 @@ EMBEDDING_MODELS = {
     "text-embedding-005": lambda: VertexAIEmbeddings(model="text-embedding-005"),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
     "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
+    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
 }
 
 
@@ -50,9 +61,7 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int):
     log.info(f"Loading {embedding_model} as embedding model.")
 
     log.info(f"Loading Vector database.")
-    persist_directory_path = (PERSIST_DIRECTORY +
-                              embedding_model.replace("/", "-") +
-                              f"/overlap={chunk_overlap}-size={chunk_size}")
+    persist_directory_path = PERSIST_DIRECTORY + embedding_model.replace("/", "-")
     Path(persist_directory_path).mkdir(parents=True, exist_ok=True)
 
     embedding_model = EMBEDDING_MODELS.get(embedding_model)
@@ -71,10 +80,16 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int):
     docs = loader.load()
 
     log.info(f"Splitting documents. \n Chunk overlap: {chunk_overlap} | Chunk size: {chunk_size}")
+    tokenizer = tiktoken.get_encoding("cl100k_base")
+
+    def token_length(text: str) -> int:
+        return len(tokenizer.encode(text))
+
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=chunk_size,
         chunk_overlap=chunk_overlap,
         add_start_index=True,
+        length_function=token_length
     )
 
     all_splits = text_splitter.split_documents(docs)
@@ -97,18 +112,18 @@ if __name__ == '__main__':
         choices=EMBEDDING_MODELS.keys(),
         help="Embedding model used to encode documents. Must match the model used at retrieval time.",
     )
-    parser.add_argument(
-        "--chunk-overlap",
-        type=int,
-        default=50,
-        help="Number of characters overlapping between consecutive chunks. Higher values preserve more context across chunk boundaries.",
-    )
+    # parser.add_argument(
+    #     "--chunk-overlap",
+    #     type=int,
+    #     default=80,
+    #     help="Number of characters overlapping between consecutive chunks. Higher values preserve more context across chunk boundaries.",
+    # )
     parser.add_argument(
         "--chunk-size",
         type=int,
-        default=2048,
+        default=800,
         help="Maximum number of characters per chunk. Larger chunks retain more context but may exceed model token limits.",
     )
     args = parser.parse_args()
 
-    main(args.embeddings_model, args.chunk_size, args.chunk_overlap)
+    main(args.embeddings_model, args.chunk_size, args.chunk_size * 0.1)

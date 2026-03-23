@@ -5,6 +5,7 @@ from pathlib import Path
 import rootutils
 import torch
 from langchain_chroma import Chroma
+from langchain_cohere import CohereEmbeddings
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.retrievers import BM25Retriever
 from langchain_google_vertexai import VertexAIEmbeddings
@@ -42,6 +43,7 @@ EMBEDDING_MODELS = {
     "text-embedding-005": lambda: VertexAIEmbeddings(model="text-embedding-005"),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
     "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
+    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
 }
 
 SEARCH_TYPES = {
