@@ -34,6 +34,7 @@ class FallacyLoader(BaseLoader):
                 text = data.get("text", "")
                 source = data.get("source", "")
                 url = data.get("url", "")
+                year = data.get("year", 1900)
 
                 documents.append(
                     Document(
@@ -42,6 +43,7 @@ class FallacyLoader(BaseLoader):
                             "id": entity_id,
                             "source": source,
                             "url": url,
+                            "year": year
                         },
                     )
                 )
