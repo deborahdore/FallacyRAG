@@ -37,14 +37,6 @@ EMBEDDING_MODELS = {
         model_name="sentence-transformers/all-mpnet-base-v2",
         model_kwargs=model_kwargs
     ),
-    "ddore14/RooseBERT-cont-cased": lambda: HuggingFaceEmbeddings(
-        model_name="ddore14/RooseBERT-cont-cased",
-        model_kwargs=model_kwargs
-    ),
-    "ddore14/RooseBERT-cont-uncased": lambda: HuggingFaceEmbeddings(
-        model_name="ddore14/RooseBERT-cont-uncased",
-        model_kwargs=model_kwargs
-    ),
     "BAAI/bge-large-en-v1.5": lambda: HuggingFaceBgeEmbeddings(
         model_name="BAAI/bge-large-en-v1.5",
         model_kwargs=model_kwargs, encode_kwargs=encode_kwargs
@@ -112,18 +104,19 @@ if __name__ == '__main__':
         choices=EMBEDDING_MODELS.keys(),
         help="Embedding model used to encode documents. Must match the model used at retrieval time.",
     )
-    # parser.add_argument(
-    #     "--chunk-overlap",
-    #     type=int,
-    #     default=80,
-    #     help="Number of characters overlapping between consecutive chunks. Higher values preserve more context across chunk boundaries.",
-    # )
     parser.add_argument(
         "--chunk-size",
         type=int,
         default=800,
         help="Maximum number of characters per chunk. Larger chunks retain more context but may exceed model token limits.",
     )
+    parser.add_argument(
+        "--chunk-overlap",
+        type=int,
+        default=None,
+        help="Number of characters overlapping between consecutive chunks. Higher values preserve more context across chunk boundaries.",
+    )
     args = parser.parse_args()
-
-    main(args.embeddings_model, args.chunk_size, args.chunk_size * 0.1)
+    main(args.embeddings_model,
+         args.chunk_size,
+         args.chunk_size * 0.1 if args.chunk_overlap is None else args.chunk_overlap)

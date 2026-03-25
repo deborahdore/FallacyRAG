@@ -5,15 +5,10 @@ from pathlib import Path
 import rootutils
 import torch
 from langchain_chroma import Chroma
-from langchain_cohere import CohereEmbeddings
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.retrievers import BM25Retriever
-from langchain_google_vertexai import VertexAIEmbeddings
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_mistralai import MistralAIEmbeddings
-from langchain_ollama import OllamaEmbeddings
-from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+from src.create_persistent_db import EMBEDDING_MODELS
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.fallacy_loader import FallacyLoader
@@ -29,22 +24,6 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
 encode_kwargs = {"normalize_embeddings": True}
-
-EMBEDDING_MODELS = {
-    "sentence-transformers/all-mpnet-base-v2": lambda: HuggingFaceEmbeddings(
-        model_name="sentence-transformers/all-mpnet-base-v2",
-        model_kwargs=model_kwargs
-    ),
-    "BAAI/bge-large-en-v1.5": lambda: HuggingFaceBgeEmbeddings(
-        model_name="BAAI/bge-large-en-v1.5",
-        model_kwargs=model_kwargs, encode_kwargs=encode_kwargs
-    ),
-    "text-embedding-3-large": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
-    "text-embedding-005": lambda: VertexAIEmbeddings(model="text-embedding-005"),
-    "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
-    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-}
 
 SEARCH_TYPES = {
     "similarity": {

@@ -67,7 +67,8 @@ def bills_and_laws(path: Path):
         id=id,
         text=text,
         source="Official Universal Declaration of Human Rights",
-        url="https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf"
+        url="https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf",
+        year=1948
     )
 
     log.info(f"Saved {filename}")
@@ -96,7 +97,8 @@ def bills_and_laws(path: Path):
                                                   text=response.text,
                                                   source="U.S. Government Information Official WebSite",
                                                   url=custom_url,
-                                                  xml=response.prettify())
+                                                  xml=response.prettify(),
+                                                  year=int(year.text.split("_")[1]))
                 log.info(f"Saved {filename}")
 
     del filename, response, custom_url

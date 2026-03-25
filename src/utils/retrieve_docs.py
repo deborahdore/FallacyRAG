@@ -22,7 +22,13 @@ BROWSER_TIMEOUT_MS = 30000
 SKIP_WIKI_SECTIONS = {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}
 
 
-def create_and_save_record(path: Path, id: str, text: str, source: str, url: str, xml: str = None):
+def create_and_save_record(path: Path,
+                           id: str,
+                           text: str,
+                           source: str,
+                           url: str,
+                           xml: str = None,
+                           year: int = 1900):
     text = unicodedata.normalize("NFKD", text).encode("ascii", errors="ignore").decode("ascii")
     if len(id.split()) > 1:
         id = safe_filename(id)
@@ -31,6 +37,7 @@ def create_and_save_record(path: Path, id: str, text: str, source: str, url: str
         "text": text,
         "source": source,
         "url": url,
+        "year": year
     }
     if xml is not None:
         record["xml"] = xml
