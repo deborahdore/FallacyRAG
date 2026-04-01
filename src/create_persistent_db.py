@@ -37,15 +37,19 @@ EMBEDDING_MODELS = {
         model_name="sentence-transformers/all-mpnet-base-v2",
         model_kwargs=model_kwargs
     ),
+    "ddore14/Sentence-RooseBERT": lambda: HuggingFaceEmbeddings(
+        model_name="ddore14/Sentence-RooseBERT",
+        model_kwargs=model_kwargs
+    ),
     "BAAI/bge-large-en-v1.5": lambda: HuggingFaceBgeEmbeddings(
         model_name="BAAI/bge-large-en-v1.5",
         model_kwargs=model_kwargs, encode_kwargs=encode_kwargs
     ),
-    "text-embedding-3-large": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
     "text-embedding-005": lambda: VertexAIEmbeddings(model="text-embedding-005"),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
+    "text-embedding-3-large": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
     "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
-    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
+    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0")
 }
 
 
@@ -119,4 +123,4 @@ if __name__ == '__main__':
     args = parser.parse_args()
     main(args.embeddings_model,
          args.chunk_size,
-         args.chunk_size * 0.1 if args.chunk_overlap is None else args.chunk_overlap)
+         int(args.chunk_size * 0.1) if args.chunk_overlap is None else args.chunk_overlap)
