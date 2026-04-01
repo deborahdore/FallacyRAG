@@ -28,10 +28,10 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base"
 GOV_MANUAL_URL = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml"
 BILLS_URL = "https://www.govinfo.gov/sitemap/BILLS_sitemap_index.xml"
 PLAWS_URL = "https://www.govinfo.gov/sitemap/PLAW_sitemap_index.xml"
-UDHR_PATH = "./data/udhr.pdf"
+UDHR_PATH = "./misc/udhr.pdf"
 
 TOPIC_RESULTS_PATH = "./notebooks/topic_results.json"
-CONGRESS_MEMBERS_PATH = "./data/HSall_members.csv"
+CONGRESS_MEMBERS_PATH = "./misc/HSall_members.csv"
 BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
 
 CENSUS_BASE = "https://data.census.gov/api"
