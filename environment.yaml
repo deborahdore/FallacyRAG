@@ -38,3 +38,6 @@ dependencies:
       - langchain-mistralai
       - langchain-cohere
       - tiktoken
+      - datasets
+      - evaluate
+      - "accelerate>=1.1.0"
