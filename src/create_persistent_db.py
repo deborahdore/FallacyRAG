@@ -14,6 +14,7 @@ from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.fallacy_loader import FallacyLoader
@@ -53,7 +54,7 @@ EMBEDDING_MODELS = {
 }
 
 
-def main(embedding_model: str, chunk_size: int, chunk_overlap: int):
+def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: int = 50):
     log.info(f"Loading {embedding_model} as embedding model.")
 
     log.info(f"Loading Vector database.")
@@ -91,7 +92,9 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int):
     all_splits = text_splitter.split_documents(docs)
 
     log.info(f"Adding documents to database.")
-    vector_store.add_documents(documents=all_splits)
+    for i in tqdm(range(0, len(all_splits), batch_size)):
+        batch = all_splits[i:i + batch_size]
+        vector_store.add_documents(documents=batch)
 
     log.info("Indexing completed.")
 
@@ -120,7 +123,14 @@ if __name__ == '__main__':
         default=None,
         help="Number of characters overlapping between consecutive chunks. Higher values preserve more context across chunk boundaries.",
     )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=50,
+        help="Dimensionality of batches to add to the vector DB.",
+    )
     args = parser.parse_args()
-    main(args.embeddings_model,
-         args.chunk_size,
-         int(args.chunk_size * 0.1) if args.chunk_overlap is None else args.chunk_overlap)
+    main(embedding_model=args.embeddings_model,
+         chunk_size=args.chunk_size,
+         chunk_overlap=int(args.chunk_size * 0.1) if args.chunk_overlap is None else args.chunk_overlap,
+         batch_size=args.batch_size)
