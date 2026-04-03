@@ -126,7 +126,7 @@ if __name__ == '__main__':
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=50,
+        default=150,
         help="Dimensionality of batches to add to the vector DB.",
     )
     args = parser.parse_args()

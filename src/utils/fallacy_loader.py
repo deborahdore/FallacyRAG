@@ -43,7 +43,8 @@ class FallacyLoader(BaseLoader):
                             "id": entity_id,
                             "source": source,
                             "url": url,
-                            "year": year
+                            "year": year,
+                            "category": directory
                         },
                     )
                 )
