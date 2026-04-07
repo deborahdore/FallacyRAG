@@ -1,5 +1,6 @@
 import argparse
 import logging
+import os.path
 from pathlib import Path
 
 import rootutils
@@ -53,6 +54,7 @@ SEARCH_TYPES = {
 
 
 def load_vector_store(embeddings_model: str, persist_directory_path: str) -> Chroma:
+    persist_directory_path = os.path.join(persist_directory_path, embeddings_model.replace("/", "-"))
     if not Path(persist_directory_path).exists():
         raise FileNotFoundError(
             f"No vector store found at '{persist_directory_path}'. "
@@ -69,7 +71,7 @@ def load_vector_store(embeddings_model: str, persist_directory_path: str) -> Chr
     )
 
 
-def load_bm25_retriever(args) -> BM25Retriever:
+def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25Retriever:
     """Build a BM25Retriever directly from the source documents."""
     log.info("Loading documents for BM25 (no vector store used).")
     loader = FallacyLoader(
@@ -79,14 +81,14 @@ def load_bm25_retriever(args) -> BM25Retriever:
     docs = loader.load()
 
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=args.chunk_size,
-        chunk_overlap=args.chunk_overlap,
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
         add_start_index=True,
     )
     all_splits = text_splitter.split_documents(docs)
 
     log.info(f"Building BM25 index over {len(all_splits)} chunks.")
-    return BM25Retriever.from_documents(all_splits, k=args.top_k)
+    return BM25Retriever.from_documents(all_splits, k=top_k)
 
 
 def main(args):
@@ -94,7 +96,7 @@ def main(args):
     log.info(f"Search type: {args.search_type} — {search_config['description']}")
 
     if args.search_type == "bm25":
-        retriever = load_bm25_retriever(args)
+        retriever = load_bm25_retriever(args.chunk_size, args.chunk_overlap, args.top_k)
     else:
         vector_store = load_vector_store(args.embeddings_model, args.persist_directory_path)
         search_kwargs = search_config["search_kwargs"](args)
@@ -114,7 +116,7 @@ if __name__ == "__main__":
                         choices=EMBEDDING_MODELS.keys(),
                         help="Embedding model used to encode documents. Ignored when --search-type is bm25.")
     parser.add_argument("--persist_directory_path", type=str,
-                        default="./chromadb/sentence-transformers-all-mpnet-base-v2",
+                        default="./chromadb",
                         help="Path to the persistent directory of ChromaDB")
     parser.add_argument("--search-type", type=str, default="similarity", choices=SEARCH_TYPES.keys(),
                         help=(
