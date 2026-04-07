@@ -31,6 +31,7 @@ import logging
 import os
 import sys
 from dataclasses import dataclass, field
+from types import SimpleNamespace
 from typing import Optional
 
 import datasets
@@ -69,10 +70,6 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)],
 )
 
-
-# ---------------------------------------------------------------------------
-# Argument dataclasses
-# ---------------------------------------------------------------------------
 
 @dataclass
 class ModelArguments:
@@ -190,7 +187,7 @@ class DataTrainingArguments:
         metadata={"help": f"Retrieval strategy. One of: {list(SEARCH_TYPES.keys())}."},
     )
     embeddings_model: str = field(
-        default="google-bert/bert-base-uncased",
+        default="sentence-transformers/all-mpnet-base-v2",
         metadata={"help": "Encoder for dense retrieval embeddings."},
     )
     persist_directory_path: str = field(
@@ -239,33 +236,26 @@ class DataTrainingArguments:
             self.max_seq_length = 512
 
 
-# ---------------------------------------------------------------------------
-# Retrieval helpers
-# ---------------------------------------------------------------------------
-
-def search_knowledge_base(
-        query: str,
-        *,
-        search_type: str,
-        embeddings_model: str,
-        chunk_size: int,
-        chunk_overlap: int,
-        top_k: int,
-        persist_directory_path: str,
-) -> list[str]:
+def search_knowledge_base(query: str, *,
+                          search_type: str,
+                          embeddings_model: str,
+                          chunk_size: int,
+                          chunk_overlap: int,
+                          top_k: int,
+                          persist_directory_path: str,
+                          ) -> list[str]:
     """Return a list of raw document strings for *query*."""
     if search_type == "bm25":
         retriever = load_bm25_retriever(chunk_size, chunk_overlap, top_k)
     else:
         search_config = SEARCH_TYPES[search_type]
         vector_store = load_vector_store(embeddings_model, persist_directory_path)
-        search_kwargs = search_config["search_kwargs"]({"top_k": top_k})
+        search_kwargs = search_config["search_kwargs"](SimpleNamespace(top_k=top_k))
         retriever = vector_store.as_retriever(
             search_type=search_type, search_kwargs=search_kwargs
         )
 
     docs = retriever.invoke(query)
-    # LangChain documents expose .page_content; plain strings pass through.
     return [d.page_content if hasattr(d, "page_content") else str(d) for d in docs]
 
 
@@ -274,12 +264,17 @@ def summarize_docs(docs: list[str], summarization_model: str) -> list[str]:
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
     summaries: list[str] = []
 
-    LOCAL_MODELS = {
-        "meta-llama/Llama-3.1-8B-Instruct",
-        "mistralai/Mistral-7B-Instruct-v0.3",
-    }
-
-    if summarization_model in LOCAL_MODELS:
+    if summarization_model == "gpt-4o-mini":
+        from openai import OpenAI
+        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+        for doc in docs:
+            response = client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=[{"role": "user", "content": prompt_template.format(doc)}],
+                max_tokens=256,
+            )
+            summaries.append(response.choices[0].message.content.strip())
+    else:
         _tokenizer = AutoTokenizer.from_pretrained(summarization_model)
         _model = AutoModelForCausalLM.from_pretrained(
             summarization_model,
@@ -294,24 +289,6 @@ def summarize_docs(docs: list[str], summarization_model: str) -> list[str]:
             )
             output = pipe(formatted, max_new_tokens=256, do_sample=False, return_full_text=False)
             summaries.append(output[0]["generated_text"].strip())
-
-    elif summarization_model == "gpt-4o-mini":
-        from openai import OpenAI
-        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-        for doc in docs:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{"role": "user", "content": prompt_template.format(doc)}],
-                max_tokens=256,
-            )
-            summaries.append(response.choices[0].message.content.strip())
-
-    else:
-        raise ValueError(
-            f"Unknown summarization model '{summarization_model}'. "
-            "Choose from: 'meta-llama/Llama-3.1-8B-Instruct', "
-            "'mistralai/Mistral-7B-Instruct-v0.3', 'gpt-4o-mini'."
-        )
 
     return summaries
 
@@ -338,141 +315,12 @@ def build_rag_context(
 
     if not passages:
         return ""
-
+    #  TODO CHECK that summarization model works
     if summarization_model:
         passages = summarize_docs(passages, summarization_model)
 
     return " [SEP] ".join(passages)
 
-
-def make_tokenize_fn(
-        tokenizer,
-        text_column_name: str,
-        label_column_name: str,
-        label_to_id: dict,
-        b_to_i_label: list[int],
-        padding,
-        data_args: DataTrainingArguments,
-):
-    """
-    Return a batched map-function that:
-      1. Tokenizes the word-level phrase.
-      2. Optionally retrieves and appends context tokens (RAG).
-      3. Aligns BIO labels with sub-word tokens, masking context with –100.
-    """
-
-    def tokenize_and_align_labels(examples):
-        phrase_texts = [" ".join(toks) for toks in examples[text_column_name]]
-
-        phrase_tokenised = tokenizer(
-            examples[text_column_name],
-            padding=False,
-            truncation=True,
-            max_length=data_args.max_seq_length,
-            is_split_into_words=True,
-            add_special_tokens=True,
-        )
-
-        all_input_ids: list[list[int]] = []
-        all_attention_masks: list[list[int]] = []
-        all_token_type_ids: list[list[int]] = []
-        all_labels: list[list[int]] = []
-
-        for i, word_labels in enumerate(examples[label_column_name]):
-            word_ids = phrase_tokenised.word_ids(batch_index=i)
-            phrase_input_ids = phrase_tokenised["input_ids"][i]
-
-            phrase_label_ids: list[int] = []
-            prev_word_idx = None
-            for word_idx in word_ids:
-                if word_idx is None:
-                    phrase_label_ids.append(-100)
-                elif word_idx != prev_word_idx:
-                    phrase_label_ids.append(label_to_id[word_labels[word_idx]])
-                else:
-                    if data_args.label_all_tokens:
-                        phrase_label_ids.append(
-                            b_to_i_label[label_to_id[word_labels[word_idx]]]
-                        )
-                    else:
-                        phrase_label_ids.append(-100)
-                prev_word_idx = word_idx
-
-            if data_args.use_rag:
-                context_str = build_rag_context(
-                    phrase_texts[i],
-                    data_args=data_args,
-                    summarization_model=data_args.summarization_model,
-                )
-
-                if context_str:
-                    # Budget: total budget minus what the phrase already uses.
-                    phrase_len = len(phrase_input_ids)
-                    budget = min(
-                        data_args.context_budget,
-                        data_args.max_seq_length - phrase_len - 1,  # –1 for final [SEP]
-                    )
-
-                    if budget > 0:
-                        ctx_enc = tokenizer(
-                            context_str,
-                            add_special_tokens=False,
-                            truncation=True,
-                            max_length=budget,
-                        )
-                        ctx_ids = ctx_enc["input_ids"]
-
-                        # Remove the trailing [SEP] from the phrase, append
-                        # context, then re-add [SEP].
-                        # phrase_input_ids = [CLS] t1 … tn [SEP]
-                        sep_id = tokenizer.sep_token_id
-                        combined_ids = (
-                                phrase_input_ids[:-1]  # drop trailing [SEP]
-                                + [sep_id]  # [SEP] between phrase and context
-                                + ctx_ids
-                                + [sep_id]  # final [SEP]
-                        )
-                        # Context tokens all get –100; phrase labels unchanged.
-                        ctx_label_mask = [-100] * (len(ctx_ids) + 2)  # +2 for the two extra [SEP]s
-                        combined_labels = phrase_label_ids[:-1] + ctx_label_mask
-
-                        # Token type ids: 0 for phrase, 1 for context.
-                        phrase_type_ids = [0] * len(phrase_input_ids[:-1])
-                        ctx_type_ids = [1] * (len(ctx_ids) + 2)
-                        combined_type_ids = phrase_type_ids + ctx_type_ids
-
-                        combined_attention = [1] * len(combined_ids)
-
-                        all_input_ids.append(combined_ids)
-                        all_attention_masks.append(combined_attention)
-                        all_token_type_ids.append(combined_type_ids)
-                        all_labels.append(combined_labels)
-                        continue  # skip the non-RAG path below
-
-            # ── Non-RAG path (or empty context) ──────────────────────────
-            all_input_ids.append(phrase_input_ids)
-            all_attention_masks.append(phrase_tokenised["attention_mask"][i])
-            if "token_type_ids" in phrase_tokenised:
-                all_token_type_ids.append(phrase_tokenised["token_type_ids"][i])
-            else:
-                all_token_type_ids.append([0] * len(phrase_input_ids))
-            all_labels.append(phrase_label_ids)
-
-        result = {
-            "input_ids": all_input_ids,
-            "attention_mask": all_attention_masks,
-            "token_type_ids": all_token_type_ids,
-            "labels": all_labels,
-            "text": phrase_texts,
-        }
-        return result
-
-    return tokenize_and_align_labels
-
-
-# ---------------------------------------------------------------------------
-# Metrics
-# ---------------------------------------------------------------------------
 
 def make_compute_metrics(label_list: list[str], eval_do_concat_batches: bool):
     def flatten(xss):
@@ -632,17 +480,107 @@ def main():
         for idx, lbl in enumerate(label_list)
     ]
 
-    padding = "max_length" if data_args.pad_to_max_length else False
+    def tokenize_and_align_labels(examples):
+        phrase_texts = [" ".join(toks) for toks in examples[text_column_name]]
 
-    tokenize_fn = make_tokenize_fn(
-        tokenizer=tokenizer,
-        text_column_name=text_column_name,
-        label_column_name=label_column_name,
-        label_to_id=label_to_id,
-        b_to_i_label=b_to_i_label,
-        padding=padding,
-        data_args=data_args,
-    )
+        phrase_tokenised = tokenizer(
+            examples[text_column_name],
+            padding="max_length" if data_args.pad_to_max_length else False,
+            truncation=True,
+            max_length=data_args.max_seq_length,
+            is_split_into_words=True,
+            add_special_tokens=True,
+        )
+
+        all_input_ids: list[list[int]] = []
+        all_attention_masks: list[list[int]] = []
+        all_token_type_ids: list[list[int]] = []
+        all_labels: list[list[int]] = []
+
+        for i, word_labels in enumerate(examples[label_column_name]):
+            word_ids = phrase_tokenised.word_ids(batch_index=i)
+            phrase_input_ids = phrase_tokenised["input_ids"][i]
+
+            phrase_label_ids: list[int] = []
+            prev_word_idx = None
+            for word_idx in word_ids:
+                if word_idx is None:
+                    phrase_label_ids.append(-100)
+                elif word_idx != prev_word_idx:
+                    phrase_label_ids.append(label_to_id[word_labels[word_idx]])
+                else:
+                    if data_args.label_all_tokens:
+                        phrase_label_ids.append(
+                            b_to_i_label[label_to_id[word_labels[word_idx]]]
+                        )
+                    else:
+                        phrase_label_ids.append(-100)
+                prev_word_idx = word_idx
+
+            if data_args.use_rag:
+                context_str = build_rag_context(
+                    phrase_texts[i],
+                    data_args=data_args,
+                    summarization_model=data_args.summarization_model,
+                )
+
+                if context_str:
+                    # Budget: total budget minus what the phrase already uses.
+                    phrase_len = len(phrase_input_ids)
+                    budget = min(
+                        data_args.context_budget,
+                        data_args.max_seq_length - phrase_len - 1,  # –1 for final [SEP]
+                    )
+
+                    if budget > 0:
+                        ctx_enc = tokenizer(
+                            context_str,
+                            add_special_tokens=False,
+                            truncation=True,
+                            max_length=budget,
+                        )
+                        ctx_ids = ctx_enc["input_ids"]
+
+                        # Remove the trailing [SEP] from the phrase, append context, then re-add [SEP]. example phrase_input_ids = [CLS] t1 … tn [SEP]
+                        sep_id = tokenizer.sep_token_id
+                        combined_ids = (
+                                phrase_input_ids[:-1]  # drop trailing [SEP]
+                                + [sep_id]  # [SEP] between phrase and context
+                                + ctx_ids
+                                + [sep_id]  # final [SEP]
+                        )
+                        # Context tokens all get –100; phrase labels unchanged.
+                        ctx_label_mask = [-100] * (len(ctx_ids) + 2)  # +2 for the two extra [SEP]s
+                        combined_labels = phrase_label_ids[:-1] + ctx_label_mask
+
+                        # Token type ids: 0 for phrase, 1 for context.
+                        phrase_type_ids = [0] * len(phrase_input_ids[:-1])
+                        ctx_type_ids = [1] * (len(ctx_ids) + 2)
+                        combined_type_ids = phrase_type_ids + ctx_type_ids
+
+                        combined_attention = [1] * len(combined_ids)
+
+                        all_input_ids.append(combined_ids)
+                        all_attention_masks.append(combined_attention)
+                        all_token_type_ids.append(combined_type_ids)
+                        all_labels.append(combined_labels)
+            else:  # Non-RAG path
+                all_input_ids.append(phrase_input_ids)
+                all_attention_masks.append(phrase_tokenised["attention_mask"][i])
+                if "token_type_ids" in phrase_tokenised:
+                    all_token_type_ids.append(phrase_tokenised["token_type_ids"][i])
+                else:
+                    all_token_type_ids.append([0] * len(phrase_input_ids))
+                all_labels.append(phrase_label_ids)
+
+        result = {
+            "input_ids": all_input_ids,
+            "attention_mask": all_attention_masks,
+            "token_type_ids": all_token_type_ids,
+            "labels": all_labels,
+            "text": phrase_texts,
+        }
+        return result
 
     map_kwargs = dict(
         batched=True,
@@ -659,7 +597,11 @@ def main():
         if data_args.max_train_samples is not None:
             train_dataset = train_dataset.select(range(min(len(train_dataset), data_args.max_train_samples)))
         with training_args.main_process_first(desc="train tokenisation"):
-            train_dataset = train_dataset.map(tokenize_fn, desc="Tokenising train", **map_kwargs)
+            # TODO -- remove the following 2 lines of code
+            sample = dict(raw_datasets["train"][:2])  # grab 2 examples
+            result = tokenize_and_align_labels(sample)
+
+            train_dataset = train_dataset.map(tokenize_and_align_labels, desc="Tokenising train", **map_kwargs)
 
     if training_args.do_eval:
         if "validation" not in raw_datasets:
@@ -668,7 +610,7 @@ def main():
         if data_args.max_eval_samples is not None:
             eval_dataset = eval_dataset.select(range(min(len(eval_dataset), data_args.max_eval_samples)))
         with training_args.main_process_first(desc="validation tokenisation"):
-            eval_dataset = eval_dataset.map(tokenize_fn, desc="Tokenising validation", **map_kwargs)
+            eval_dataset = eval_dataset.map(tokenize_and_align_labels, desc="Tokenising validation", **map_kwargs)
 
     if training_args.do_predict:
         if "test" not in raw_datasets:
@@ -677,12 +619,9 @@ def main():
         if data_args.max_predict_samples is not None:
             predict_dataset = predict_dataset.select(range(min(len(predict_dataset), data_args.max_predict_samples)))
         with training_args.main_process_first(desc="test tokenisation"):
-            predict_dataset = predict_dataset.map(tokenize_fn, desc="Tokenising test", **map_kwargs)
+            predict_dataset = predict_dataset.map(tokenize_and_align_labels, desc="Tokenising test", **map_kwargs)
 
-    data_collator = DataCollatorForTokenClassification(
-        tokenizer,
-        pad_to_multiple_of=8 if training_args.fp16 else None,
-    )
+    data_collator = DataCollatorForTokenClassification(tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None)
 
     trainer = Trainer(
         model=model,
