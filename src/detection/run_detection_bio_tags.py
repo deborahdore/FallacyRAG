@@ -55,8 +55,7 @@ from transformers.utils.versions import require_version
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from perform_retrieval import SEARCH_TYPES
-from utils import build_rag_context, make_compute_metrics
+from src.detection.utils import SEARCH_TYPES, build_rag_context, make_compute_metrics
 
 check_min_version("4.57.0.dev0")
 require_version("datasets>=1.8.0")
