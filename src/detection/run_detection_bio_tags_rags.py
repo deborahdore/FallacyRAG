@@ -70,6 +70,9 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)],
 )
 
+summarization_tokenizer = None
+summarization_model = None
+
 
 @dataclass
 class ModelArguments:
@@ -259,7 +262,7 @@ def search_knowledge_base(query: str, *,
     return [d.page_content if hasattr(d, "page_content") else str(d) for d in docs]
 
 
-def summarize_docs(docs: list[str], summarization_model: str) -> list[str]:
+def summarize_docs(docs: list[str], summarization_model_name: str) -> list[str]:
     """Summarise each retrieved passage with the chosen model."""
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
     summaries: list[str] = []
@@ -275,16 +278,21 @@ def summarize_docs(docs: list[str], summarization_model: str) -> list[str]:
             )
             summaries.append(response.choices[0].message.content.strip())
     else:
-        _tokenizer = AutoTokenizer.from_pretrained(summarization_model)
-        _model = AutoModelForCausalLM.from_pretrained(
-            summarization_model,
-            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-            device_map="auto",
-        )
-        pipe = pipeline("text-generation", model=_model, tokenizer=_tokenizer)
+        global summarization_model
+        global summarization_tokenizer
+
+        if summarization_tokenizer is None:
+            summarization_tokenizer = AutoTokenizer.from_pretrained(summarization_model_name)
+        if summarization_model is None:
+            summarization_model = AutoModelForCausalLM.from_pretrained(
+                summarization_model_name,
+                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                device_map="auto",
+            )
+        pipe = pipeline("text-generation", model=summarization_model, tokenizer=summarization_tokenizer)
         for doc in docs:
             messages = [{"role": "user", "content": prompt_template.format(doc)}]
-            formatted = _tokenizer.apply_chat_template(
+            formatted = summarization_tokenizer.apply_chat_template(
                 messages, tokenize=False, add_generation_prompt=True
             )
             output = pipe(formatted, max_new_tokens=256, do_sample=False, return_full_text=False)
@@ -315,7 +323,7 @@ def build_rag_context(
 
     if not passages:
         return ""
-    #  TODO CHECK that summarization model works
+
     if summarization_model:
         passages = summarize_docs(passages, summarization_model)
 
@@ -597,10 +605,6 @@ def main():
         if data_args.max_train_samples is not None:
             train_dataset = train_dataset.select(range(min(len(train_dataset), data_args.max_train_samples)))
         with training_args.main_process_first(desc="train tokenisation"):
-            # TODO -- remove the following 2 lines of code
-            sample = dict(raw_datasets["train"][:2])  # grab 2 examples
-            result = tokenize_and_align_labels(sample)
-
             train_dataset = train_dataset.map(tokenize_and_align_labels, desc="Tokenising train", **map_kwargs)
 
     if training_args.do_eval:
