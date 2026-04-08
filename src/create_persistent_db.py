@@ -1,5 +1,6 @@
 import argparse
 import logging
+import uuid
 from pathlib import Path
 
 import rootutils
@@ -29,13 +30,18 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 Path(PERSIST_DIRECTORY).mkdir(parents=True, exist_ok=True)
 
-# GPU configuration
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
 model_kwargs = {"device": DEVICE}
 encode_kwargs = {
     "batch_size": 2048,
-    "normalize_embeddings": True,
+    "normalize_embeddings": True
+}
+
+LOCAL_HF_MODELS = {
+    "sentence-transformers/all-mpnet-base-v2",
+    "ddore14/Sentence-RooseBERT",
+    "BAAI/bge-large-en-v1.5",
 }
 
 EMBEDDING_MODELS = {
@@ -62,6 +68,36 @@ EMBEDDING_MODELS = {
 }
 
 
+def _apply_gpu_optimizations(embedding_function, embedding_model: str):
+    """
+    Apply FP16 and torch.compile to local HuggingFace models on CUDA.
+    FP16 halves memory usage and roughly doubles throughput on tensor cores.
+    torch.compile fuses ops for an additional ~20-30% speedup.
+    """
+    if DEVICE != "cuda" or embedding_model not in LOCAL_HF_MODELS:
+        return
+
+    client = getattr(embedding_function, "client", None)
+    if client is None:
+        log.warning("Could not access embedding model client for GPU optimizations.")
+        return
+
+    # FP16: ~2x throughput on modern NVIDIA GPUs via tensor cores
+    try:
+        client.half()
+        log.info("Applied FP16 (half precision) to embedding model")
+    except Exception as e:
+        log.warning(f"FP16 conversion failed: {e}")
+
+    # torch.compile: graph-level fusion (PyTorch >= 2.0)
+    # "reduce-overhead" minimises Python dispatcher overhead — best for one long encode pass
+    try:
+        embedding_function.client = torch.compile(client, mode="reduce-overhead")
+        log.info("Applied torch.compile(mode='reduce-overhead') to embedding model")
+    except Exception as e:
+        log.warning(f"torch.compile not available or failed: {e}")
+
+
 def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: int):
     torch.set_grad_enabled(False)
 
@@ -69,6 +105,7 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
         torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.benchmark = True
 
+    log.info(f"Using device: {DEVICE}")
     log.info(f"Loading embedding model: {embedding_model}")
 
     persist_directory_path = PERSIST_DIRECTORY + embedding_model.replace("/", "-")
@@ -79,6 +116,9 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
         return
 
     embedding_function = EMBEDDING_MODELS[embedding_model]()
+
+    # Apply FP16 + torch.compile for local HuggingFace models on GPU
+    _apply_gpu_optimizations(embedding_function, embedding_model)
 
     vector_store = Chroma(
         collection_name="FallacyRAG",
@@ -111,9 +151,28 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
 
     log.info("Indexing into Chroma")
 
-    for i in tqdm(range(0, len(splits), batch_size)):
-        batch = splits[i: i + batch_size]
-        vector_store.add_documents(batch)
+    if embedding_model in LOCAL_HF_MODELS and DEVICE == "cuda":
+        log.info("Pre-computing all embeddings on GPU...")
+        texts = [doc.page_content for doc in splits]
+        all_embeddings = embedding_function.embed_documents(texts)
+
+        log.info("Inserting pre-computed embeddings into Chroma...")
+
+        texts = [doc.page_content for doc in splits]
+        metadatas = [doc.metadata for doc in splits]
+        ids = [str(uuid.uuid4()) for _ in splits]
+
+        for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):
+            vector_store._collection.add(
+                embeddings=all_embeddings[i: i + batch_size],
+                documents=texts[i: i + batch_size],
+                metadatas=metadatas[i: i + batch_size],
+                ids=ids[i: i + batch_size],
+            )
+    else:
+        for i in tqdm(range(0, len(splits), batch_size), desc="Indexing"):
+            batch = splits[i: i + batch_size]
+            vector_store.add_documents(batch)
 
     log.info("Indexing completed")
 
@@ -149,7 +208,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=1024,
+        default=526,
         help="Number of chunks indexed per batch",
     )
 
