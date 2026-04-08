@@ -67,34 +67,12 @@ The knowledge base is organized into four main categories.
 ### Knowledge Base Format
 
 Each entry in the knowledge base is stored as a JSON document.
-
-#### Standard Entry
-
 ```json
 {
   "id": "",
   "text": "",
   "xml": "[when available]",
   "source": "",
-  "source_url": ""
+  "url": ""
 }
 ```
-
-#### Paragraph-Structured Entry
-
-When the original document is already divided into paragraphs, the structure preserves this segmentation:
-
-```json
-{
-  "id": "",
-  "paragraph_n": "",
-  "source_n": "",
-  "source_url_n": "",
-  "paragraph_n+1": "",
-  "source_n+1": "",
-  "source_url_n+1": ""
-}
-```
-
-Each paragraph retains its corresponding source and reference URL to enable traceability during retrieval and
-explanation generation.
