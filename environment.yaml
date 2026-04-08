@@ -8,6 +8,7 @@ dependencies:
   - pandas
   - seaborn
   - matplotlib
+  - scikit-learn
   - pip:
       - torch
       - torchvision

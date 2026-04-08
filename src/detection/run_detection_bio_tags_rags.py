@@ -31,34 +31,31 @@ import logging
 import os
 import sys
 from dataclasses import dataclass, field
-from types import SimpleNamespace
 from typing import Optional
 
 import datasets
 import numpy as np
 import rootutils
-import torch
 import transformers
 from datasets import ClassLabel, load_dataset
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
 from transformers import (
     AutoConfig,
-    AutoModelForCausalLM,
+    AutoModelForTokenClassification,
     AutoTokenizer,
     DataCollatorForTokenClassification,
     HfArgumentParser,
     PreTrainedConfig,
     Trainer,
     TrainingArguments,
-    pipeline,
-    set_seed, AutoModelForTokenClassification,
+    set_seed,
 )
 from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from perform_retrieval import SEARCH_TYPES, load_bm25_retriever, load_vector_store
+from perform_retrieval import SEARCH_TYPES
+from utils import build_rag_context, make_compute_metrics
 
 check_min_version("4.57.0.dev0")
 require_version("datasets>=1.8.0")
@@ -69,9 +66,6 @@ logging.basicConfig(
     datefmt="%m/%d/%Y %H:%M:%S",
     handlers=[logging.StreamHandler(sys.stdout)],
 )
-
-summarization_tokenizer = None
-summarization_model = None
 
 
 @dataclass
@@ -230,139 +224,21 @@ class DataTrainingArguments:
             raise ValueError("Provide either --dataset_name or --train_file / --validation_file.")
         for attr in ("train_file", "validation_file"):
             path = getattr(self, attr)
-            if path is not None:
-                ext = path.rsplit(".", 1)[-1]
-                if ext not in ("csv", "json"):
-                    raise ValueError(f"{attr} must be a .csv or .json file.")
+            if path is not None and path.rsplit(".", 1)[-1] not in ("csv", "json"):
+                raise ValueError(f"{attr} must be a .csv or .json file.")
         self.task_name = self.task_name.lower()
         if self.max_seq_length is None:
             self.max_seq_length = 512
 
 
-def search_knowledge_base(query: str, *,
-                          search_type: str,
-                          embeddings_model: str,
-                          chunk_size: int,
-                          chunk_overlap: int,
-                          top_k: int,
-                          persist_directory_path: str,
-                          ) -> list[str]:
-    """Return a list of raw document strings for *query*."""
-    if search_type == "bm25":
-        retriever = load_bm25_retriever(chunk_size, chunk_overlap, top_k)
-    else:
-        search_config = SEARCH_TYPES[search_type]
-        vector_store = load_vector_store(embeddings_model, persist_directory_path)
-        search_kwargs = search_config["search_kwargs"](SimpleNamespace(top_k=top_k))
-        retriever = vector_store.as_retriever(
-            search_type=search_type, search_kwargs=search_kwargs
-        )
-
-    docs = retriever.invoke(query)
-    return [d.page_content if hasattr(d, "page_content") else str(d) for d in docs]
-
-
-def summarize_docs(docs: list[str], summarization_model_name: str) -> list[str]:
-    """Summarise each retrieved passage with the chosen model."""
-    prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
-    summaries: list[str] = []
-
-    if summarization_model == "gpt-4o-mini":
-        from openai import OpenAI
-        client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
-        for doc in docs:
-            response = client.chat.completions.create(
-                model="gpt-4o-mini",
-                messages=[{"role": "user", "content": prompt_template.format(doc)}],
-                max_tokens=256,
-            )
-            summaries.append(response.choices[0].message.content.strip())
-    else:
-        global summarization_model
-        global summarization_tokenizer
-
-        if summarization_tokenizer is None:
-            summarization_tokenizer = AutoTokenizer.from_pretrained(summarization_model_name)
-        if summarization_model is None:
-            summarization_model = AutoModelForCausalLM.from_pretrained(
-                summarization_model_name,
-                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                device_map="auto",
-            )
-        pipe = pipeline("text-generation", model=summarization_model, tokenizer=summarization_tokenizer)
-        for doc in docs:
-            messages = [{"role": "user", "content": prompt_template.format(doc)}]
-            formatted = summarization_tokenizer.apply_chat_template(
-                messages, tokenize=False, add_generation_prompt=True
-            )
-            output = pipe(formatted, max_new_tokens=256, do_sample=False, return_full_text=False)
-            summaries.append(output[0]["generated_text"].strip())
-
-    return summaries
-
-
-def build_rag_context(
-        phrase_text: str,
-        *,
-        data_args: DataTrainingArguments,
-        summarization_model: Optional[str],
-) -> str:
-    """
-    Retrieve and (optionally) summarise documents for *phrase_text*.
-    Returns a single string that will be appended after the phrase [SEP].
-    """
-    passages = search_knowledge_base(
-        phrase_text,
-        search_type=data_args.search_type,
-        embeddings_model=data_args.embeddings_model,
-        chunk_size=data_args.chunk_size,
-        chunk_overlap=data_args.chunk_overlap,
-        top_k=data_args.top_k,
-        persist_directory_path=data_args.persist_directory_path,
-    )
-
-    if not passages:
-        return ""
-
-    if summarization_model:
-        passages = summarize_docs(passages, summarization_model)
-
-    return " [SEP] ".join(passages)
-
-
-def make_compute_metrics(label_list: list[str], eval_do_concat_batches: bool):
-    def flatten(xss):
-        return [x for xs in xss for x in xs]
-
-    def compute_metrics(p):
-        predictions, labels = p
-
-        if not eval_do_concat_batches:
-            predictions = np.hstack(predictions)
-            labels = np.hstack(labels)
-
-        predictions = np.argmax(predictions, axis=2)
-
-        true_predictions = [
-            [label_list[pred] for pred, lbl in zip(row_pred, row_lbl) if lbl != -100]
-            for row_pred, row_lbl in zip(predictions, labels)
-        ]
-        true_labels = [
-            [label_list[lbl] for pred, lbl in zip(row_pred, row_lbl) if lbl != -100]
-            for row_pred, row_lbl in zip(predictions, labels)
-        ]
-
-        flat_preds = flatten(true_predictions)
-        flat_labels = flatten(true_labels)
-
-        return {
-            "accuracy": accuracy_score(y_true=flat_labels, y_pred=flat_preds),
-            "precision": precision_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
-            "recall": recall_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
-            "f1_macro": f1_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
-        }
-
-    return compute_metrics
+def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwargs):
+    """Optionally slice a split and tokenize it."""
+    ds = raw_datasets[split_name]
+    #  TODO FOR DEBUG
+    tokenize_fn(next(iter(raw_datasets['test'])))
+    if max_samples is not None:
+        ds = ds.select(range(min(len(ds), max_samples)))
+    return ds.map(tokenize_fn, desc=f"Tokenising {split_name}", **map_kwargs)
 
 
 def main():
@@ -374,7 +250,7 @@ def main():
     else:
         model_args, data_args, training_args = parser.parse_args_into_dataclasses()
 
-    # ── Logging setup ─────────────────────────────────────────────────────
+    # ── Logging ───────────────────────────────────────────────────────────
     transformers.utils.logging.set_verbosity_info()
     log_level = training_args.get_process_log_level()
     logger.setLevel(log_level)
@@ -390,7 +266,6 @@ def main():
         f"fp16: {training_args.fp16}"
     )
     logger.info(f"Training/evaluation parameters {training_args}")
-
     set_seed(training_args.seed)
 
     data_files = {
@@ -409,15 +284,12 @@ def main():
     text_column_name = data_args.text_column_name
     label_column_name = data_args.label_column_name
 
-    def get_label_list(labels):
-        return sorted({lbl for seq in labels for lbl in seq})
-
     labels_are_int = isinstance(features[label_column_name].feature, ClassLabel)
     if labels_are_int:
         label_list = features[label_column_name].feature.names
         label_to_id = {i: i for i in range(len(label_list))}
     else:
-        label_list = get_label_list(raw_datasets["train"][label_column_name])
+        label_list = sorted({lbl for seq in raw_datasets["train"][label_column_name] for lbl in seq})
         label_to_id = {l: i for i, l in enumerate(label_list)}
 
     num_labels = len(label_list)
@@ -509,6 +381,7 @@ def main():
             word_ids = phrase_tokenised.word_ids(batch_index=i)
             phrase_input_ids = phrase_tokenised["input_ids"][i]
 
+            # Align BIO labels to sub-word tokens.
             phrase_label_ids: list[int] = []
             prev_word_idx = None
             for word_idx in word_ids:
@@ -517,78 +390,65 @@ def main():
                 elif word_idx != prev_word_idx:
                     phrase_label_ids.append(label_to_id[word_labels[word_idx]])
                 else:
-                    if data_args.label_all_tokens:
-                        phrase_label_ids.append(
-                            b_to_i_label[label_to_id[word_labels[word_idx]]]
-                        )
-                    else:
-                        phrase_label_ids.append(-100)
+                    phrase_label_ids.append(
+                        b_to_i_label[label_to_id[word_labels[word_idx]]]
+                        if data_args.label_all_tokens else -100
+                    )
                 prev_word_idx = word_idx
 
+            # Try to build a RAG-augmented input; fall back to the plain phrase
+            # if nothing was retrieved or the token budget is exhausted.
+            use_rag_for_example = False
             if data_args.use_rag:
                 context_str = build_rag_context(
                     phrase_texts[i],
                     data_args=data_args,
                     summarization_model=data_args.summarization_model,
                 )
+                budget = min(
+                    data_args.context_budget,
+                    data_args.max_seq_length - len(phrase_input_ids) - 1,  # –1 for final [SEP]
+                )
 
-                if context_str:
-                    # Budget: total budget minus what the phrase already uses.
-                    phrase_len = len(phrase_input_ids)
-                    budget = min(
-                        data_args.context_budget,
-                        data_args.max_seq_length - phrase_len - 1,  # –1 for final [SEP]
-                    )
+                if context_str and budget > 0:
+                    ctx_ids = tokenizer(
+                        context_str,
+                        add_special_tokens=False,
+                        truncation=True,
+                        max_length=budget,
+                    )["input_ids"]
 
-                    if budget > 0:
-                        ctx_enc = tokenizer(
-                            context_str,
-                            add_special_tokens=False,
-                            truncation=True,
-                            max_length=budget,
-                        )
-                        ctx_ids = ctx_enc["input_ids"]
+                    sep_id = tokenizer.sep_token_id
+                    # [CLS] phrase… [SEP] context… [SEP]
+                    combined_ids = phrase_input_ids[:-1] + [sep_id] + ctx_ids + [sep_id]
+                    combined_labels = phrase_label_ids[:-1] + [-100] * (len(ctx_ids) + 2)
+                    combined_types = [0] * len(phrase_input_ids[:-1]) + [1] * (len(ctx_ids) + 2)
+                    combined_attn = [1] * len(combined_ids)
 
-                        # Remove the trailing [SEP] from the phrase, append context, then re-add [SEP]. example phrase_input_ids = [CLS] t1 … tn [SEP]
-                        sep_id = tokenizer.sep_token_id
-                        combined_ids = (
-                                phrase_input_ids[:-1]  # drop trailing [SEP]
-                                + [sep_id]  # [SEP] between phrase and context
-                                + ctx_ids
-                                + [sep_id]  # final [SEP]
-                        )
-                        # Context tokens all get –100; phrase labels unchanged.
-                        ctx_label_mask = [-100] * (len(ctx_ids) + 2)  # +2 for the two extra [SEP]s
-                        combined_labels = phrase_label_ids[:-1] + ctx_label_mask
+                    all_input_ids.append(combined_ids)
+                    all_attention_masks.append(combined_attn)
+                    all_token_type_ids.append(combined_types)
+                    all_labels.append(combined_labels)
+                    use_rag_for_example = True
 
-                        # Token type ids: 0 for phrase, 1 for context.
-                        phrase_type_ids = [0] * len(phrase_input_ids[:-1])
-                        ctx_type_ids = [1] * (len(ctx_ids) + 2)
-                        combined_type_ids = phrase_type_ids + ctx_type_ids
-
-                        combined_attention = [1] * len(combined_ids)
-
-                        all_input_ids.append(combined_ids)
-                        all_attention_masks.append(combined_attention)
-                        all_token_type_ids.append(combined_type_ids)
-                        all_labels.append(combined_labels)
-            else:  # Non-RAG path
+            if not use_rag_for_example:
+                # Plain phrase (no RAG, or RAG produced nothing useful).
                 all_input_ids.append(phrase_input_ids)
                 all_attention_masks.append(phrase_tokenised["attention_mask"][i])
-                if "token_type_ids" in phrase_tokenised:
-                    all_token_type_ids.append(phrase_tokenised["token_type_ids"][i])
-                else:
-                    all_token_type_ids.append([0] * len(phrase_input_ids))
+                all_token_type_ids.append(
+                    phrase_tokenised["token_type_ids"][i]
+                    if "token_type_ids" in phrase_tokenised
+                    else [0] * len(phrase_input_ids)
+                )
                 all_labels.append(phrase_label_ids)
 
-        result = {
+        return {
             "input_ids": all_input_ids,
             "attention_mask": all_attention_masks,
             "token_type_ids": all_token_type_ids,
             "labels": all_labels,
             "text": phrase_texts,
         }
-        return result
 
     map_kwargs = dict(
         batched=True,
@@ -596,36 +456,30 @@ def main():
         load_from_cache_file=not data_args.overwrite_cache,
     )
 
-    train_dataset = eval_dataset = predict_dataset = None
+    split_configs = [
+        (training_args.do_train, "train", data_args.max_train_samples, "--do_train"),
+        (training_args.do_eval, "validation", data_args.max_eval_samples, "--do_eval"),
+        (training_args.do_predict, "test", data_args.max_predict_samples, "--do_predict"),
+    ]
 
-    if training_args.do_train:
-        if "train" not in raw_datasets:
-            raise ValueError("--do_train requires a train split.")
-        train_dataset = raw_datasets["train"]
-        if data_args.max_train_samples is not None:
-            train_dataset = train_dataset.select(range(min(len(train_dataset), data_args.max_train_samples)))
-        with training_args.main_process_first(desc="train tokenisation"):
-            train_dataset = train_dataset.map(tokenize_and_align_labels, desc="Tokenising train", **map_kwargs)
+    prepared = {}
+    for do_split, split_name, max_samples, flag in split_configs:
+        if do_split:
+            if split_name not in raw_datasets:
+                raise ValueError(f"{flag} requires a {split_name} split.")
+            with training_args.main_process_first(desc=f"{split_name} tokenisation"):
+                prepared[split_name] = _prepare_split(
+                    raw_datasets, split_name, max_samples, tokenize_and_align_labels, map_kwargs
+                )
 
-    if training_args.do_eval:
-        if "validation" not in raw_datasets:
-            raise ValueError("--do_eval requires a validation split.")
-        eval_dataset = raw_datasets["validation"]
-        if data_args.max_eval_samples is not None:
-            eval_dataset = eval_dataset.select(range(min(len(eval_dataset), data_args.max_eval_samples)))
-        with training_args.main_process_first(desc="validation tokenisation"):
-            eval_dataset = eval_dataset.map(tokenize_and_align_labels, desc="Tokenising validation", **map_kwargs)
+    train_dataset = prepared.get("train")
+    eval_dataset = prepared.get("validation")
+    predict_dataset = prepared.get("test")
 
-    if training_args.do_predict:
-        if "test" not in raw_datasets:
-            raise ValueError("--do_predict requires a test split.")
-        predict_dataset = raw_datasets["test"]
-        if data_args.max_predict_samples is not None:
-            predict_dataset = predict_dataset.select(range(min(len(predict_dataset), data_args.max_predict_samples)))
-        with training_args.main_process_first(desc="test tokenisation"):
-            predict_dataset = predict_dataset.map(tokenize_and_align_labels, desc="Tokenising test", **map_kwargs)
-
-    data_collator = DataCollatorForTokenClassification(tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None)
+    # ── Trainer ───────────────────────────────────────────────────────────
+    data_collator = DataCollatorForTokenClassification(
+        tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None
+    )
 
     trainer = Trainer(
         model=model,
@@ -634,15 +488,12 @@ def main():
         eval_dataset=eval_dataset,
         processing_class=tokenizer,
         data_collator=data_collator,
-        compute_metrics=make_compute_metrics(
-            label_list, training_args.eval_do_concat_batches
-        ),
+        compute_metrics=make_compute_metrics(label_list, training_args.eval_do_concat_batches),
     )
 
     # ── Training ──────────────────────────────────────────────────────────
     if training_args.do_train:
-        checkpoint = training_args.resume_from_checkpoint or None
-        train_result = trainer.train(resume_from_checkpoint=checkpoint)
+        train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
         metrics = train_result.metrics
         metrics["train_samples"] = len(train_dataset)
         trainer.save_model()
@@ -679,19 +530,19 @@ def main():
             logger.info(f"Predictions saved to {output_path}")
 
     # ── Model card / Hub push ─────────────────────────────────────────────
-    kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "token-classification"}
+    hub_kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "token-classification"}
     if data_args.dataset_name is not None:
-        kwargs["dataset_tags"] = data_args.dataset_name
+        hub_kwargs["dataset_tags"] = data_args.dataset_name
         if data_args.dataset_config_name is not None:
-            kwargs["dataset_args"] = data_args.dataset_config_name
-            kwargs["dataset"] = f"{data_args.dataset_name} {data_args.dataset_config_name}"
+            hub_kwargs["dataset_args"] = data_args.dataset_config_name
+            hub_kwargs["dataset"] = f"{data_args.dataset_name} {data_args.dataset_config_name}"
         else:
-            kwargs["dataset"] = data_args.dataset_name
+            hub_kwargs["dataset"] = data_args.dataset_name
 
     if training_args.push_to_hub:
-        trainer.push_to_hub(**kwargs)
+        trainer.push_to_hub(**hub_kwargs)
     else:
-        trainer.create_model_card(**kwargs)
+        trainer.create_model_card(**hub_kwargs)
 
 
 if __name__ == "__main__":
