@@ -65,6 +65,7 @@ SEARCH_TYPES = {
     },
 }
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
+
 encode_kwargs = {
     "batch_size": 2048,
     "normalize_embeddings": True,
