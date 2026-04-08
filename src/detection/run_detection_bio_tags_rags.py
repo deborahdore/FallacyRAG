@@ -31,13 +31,14 @@ import logging
 import os
 import sys
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Optional
 
 import datasets
 import numpy as np
 import rootutils
 import transformers
-from datasets import ClassLabel, load_dataset
+from datasets import ClassLabel, load_dataset, load_from_disk
 from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
@@ -143,7 +144,7 @@ class DataTrainingArguments:
         metadata={"help": "Column containing BIO label sequences."},
     )
     overwrite_cache: bool = field(
-        default=True,
+        default=False,
         metadata={"help": "Overwrite cached tokenised datasets."},
     )
     preprocessing_num_workers: Optional[int] = field(
@@ -455,28 +456,41 @@ def main():
     )
 
     split_configs = [
-        (training_args.do_train, "train", data_args.max_train_samples, "--do_train"),
-        (training_args.do_eval, "validation", data_args.max_eval_samples, "--do_eval"),
-        (training_args.do_predict, "test", data_args.max_predict_samples, "--do_predict"),
+        (training_args.do_train, "train", data_args.max_train_samples, "--do_train", data_args.train_file),
+        (training_args.do_eval, "validation", data_args.max_eval_samples, "--do_eval", data_args.validation_file),
+        (training_args.do_predict, "test", data_args.max_predict_samples, "--do_predict", data_args.test_file),
     ]
 
+    cache_subdir = "cached_rag" if data_args.use_rag else "cached"
+
     prepared = {}
-    for do_split, split_name, max_samples, flag in split_configs:
-        if do_split:
-            if split_name not in raw_datasets:
-                raise ValueError(f"{flag} requires a {split_name} split.")
+    for do_split, split_name, max_samples, flag, split_file in split_configs:
+        if not do_split:
+            continue
+        if split_name not in raw_datasets:
+            raise ValueError(f"{flag} requires a {split_name} split.")
+
+        cache_path = Path(split_file).parent / cache_subdir / split_name
+
+        if not data_args.overwrite_cache and cache_path.exists():
+            logger.info(f"Loading tokenised {split_name} split from cache: {cache_path}")
+            prepared[split_name] = load_from_disk(str(cache_path))
+        else:
             with training_args.main_process_first(desc=f"{split_name} tokenisation"):
-                prepared[split_name] = _prepare_split(
-                    raw_datasets, split_name, max_samples, tokenize_and_align_labels, map_kwargs
-                )
+                prepared[split_name] = _prepare_split(raw_datasets,
+                                                      split_name,
+                                                      max_samples,
+                                                      tokenize_and_align_labels,
+                                                      map_kwargs)
+                logger.info(f"Saving tokenised {split_name} split to cache: {cache_path}")
+                cache_path.mkdir(parents=True, exist_ok=True)
+                prepared[split_name].save_to_disk(str(cache_path))
 
     train_dataset = prepared.get("train")
     eval_dataset = prepared.get("validation")
     predict_dataset = prepared.get("test")
 
-    data_collator = DataCollatorForTokenClassification(
-        tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None
-    )
+    data_collator = DataCollatorForTokenClassification(tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None)
 
     trainer = Trainer(
         model=model,
