@@ -60,6 +60,7 @@ SEARCH_TYPES = {
 }
 
 _PIPELINE_CACHE: dict[str, pipeline] = {}
+_VECTOR_STORE_CACHE: dict[tuple[str, str], Chroma] = {}
 
 
 # ── Retrieval ─────────────────────────────────────────────────────────────────
@@ -113,7 +114,10 @@ def search_knowledge_base(
         retriever = load_bm25_retriever(chunk_size, chunk_overlap, top_k)
     else:
         search_config = SEARCH_TYPES[search_type]
-        vector_store = load_vector_store(embeddings_model, persist_directory_path)
+        cache_key = (embeddings_model, persist_directory_path)
+        if cache_key not in _VECTOR_STORE_CACHE:
+            _VECTOR_STORE_CACHE[cache_key] = load_vector_store(embeddings_model, persist_directory_path)
+        vector_store = _VECTOR_STORE_CACHE[cache_key]
         search_kwargs = search_config["search_kwargs"](SimpleNamespace(top_k=top_k))
         retriever = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
 

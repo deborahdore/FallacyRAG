@@ -234,8 +234,6 @@ class DataTrainingArguments:
 def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwargs):
     """Optionally slice a split and tokenize it."""
     ds = raw_datasets[split_name]
-    #  TODO FOR DEBUG
-    tokenize_fn(next(iter(raw_datasets['test'])))
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
     return ds.map(tokenize_fn, desc=f"Tokenising {split_name}", **map_kwargs)
@@ -476,7 +474,6 @@ def main():
     eval_dataset = prepared.get("validation")
     predict_dataset = prepared.get("test")
 
-    # ── Trainer ───────────────────────────────────────────────────────────
     data_collator = DataCollatorForTokenClassification(
         tokenizer, pad_to_multiple_of=8 if training_args.fp16 else None
     )
