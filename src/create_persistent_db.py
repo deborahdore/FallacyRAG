@@ -152,22 +152,25 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
     log.info("Indexing into Chroma")
 
     if embedding_model in LOCAL_HF_MODELS and DEVICE == "cuda":
-        log.info("Pre-computing all embeddings on GPU...")
         texts = [doc.page_content for doc in splits]
-        all_embeddings = embedding_function.embed_documents(texts)
-
-        log.info("Inserting pre-computed embeddings into Chroma...")
-
-        texts = [doc.page_content for doc in splits]
-        metadatas = [doc.metadata for doc in splits]
-        ids = [str(uuid.uuid4()) for _ in splits]
+        all_metadatas = [doc.metadata for doc in splits]
+        all_ids = [str(uuid.uuid4()) for _ in splits]
 
         for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):
+            log.info("Pre-computing embeddings on GPU...")
+            batch_texts = texts[i: i + batch_size]
+            all_embeddings = embedding_function.embed_documents(batch_texts)
+
+            log.info("Inserting pre-computed embeddings into Chroma...")
+
+            metadata = all_metadatas[i: i + batch_size]
+            ids = all_ids[i: i + batch_size]
+
             vector_store._collection.add(
-                embeddings=all_embeddings[i: i + batch_size],
-                documents=texts[i: i + batch_size],
-                metadatas=metadatas[i: i + batch_size],
-                ids=ids[i: i + batch_size],
+                embeddings=all_embeddings,
+                documents=batch_texts,
+                metadatas=metadata,
+                ids=ids,
             )
     else:
         for i in tqdm(range(0, len(splits), batch_size), desc="Indexing"):
