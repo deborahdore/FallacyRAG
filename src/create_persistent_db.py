@@ -146,36 +146,35 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
         length_function=len,
     )
 
-    splits = text_splitter.split_documents(docs)
-    log.info(f"Generated {len(splits)} chunks")
-
-    log.info("Indexing into Chroma")
-
     if embedding_model in LOCAL_HF_MODELS and DEVICE == "cuda":
-        texts = [doc.page_content for doc in splits]
-        all_metadatas = [doc.metadata for doc in splits]
-        all_ids = [str(uuid.uuid4()) for _ in splits]
+        for i in tqdm(range(0, len(docs), batch_size), desc="Adding to Chroma"):
+            splits = text_splitter.split_documents(docs[i: i + batch_size])
+            if not splits:
+                continue
+            log.info(f"Generated {len(splits)} chunks")
 
-        for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):
+            texts = [doc.page_content for doc in splits]
+
             log.info("Pre-computing embeddings on GPU...")
-            batch_texts = texts[i: i + batch_size]
-            all_embeddings = embedding_function.embed_documents(batch_texts)
+            all_embeddings = embedding_function.embed_documents(texts)
 
             log.info("Inserting pre-computed embeddings into Chroma...")
 
-            metadata = all_metadatas[i: i + batch_size]
-            ids = all_ids[i: i + batch_size]
+            metadata = [doc.metadata for doc in splits]
+            ids = [str(uuid.uuid4()) for _ in splits]
 
             vector_store._collection.add(
                 embeddings=all_embeddings,
-                documents=batch_texts,
+                documents=texts,
                 metadatas=metadata,
                 ids=ids,
             )
     else:
-        for i in tqdm(range(0, len(splits), batch_size), desc="Indexing"):
-            batch = splits[i: i + batch_size]
-            vector_store.add_documents(batch)
+        for i in tqdm(range(0, len(docs), batch_size), desc="Indexing"):
+            splits = text_splitter.split_documents(docs[i: i + batch_size])
+            if not splits:
+                continue
+            vector_store.add_documents(splits)
 
     log.info("Indexing completed")
 
@@ -211,7 +210,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=526,
+        default=512,
         help="Number of chunks indexed per batch",
     )
 
