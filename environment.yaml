@@ -42,3 +42,4 @@ dependencies:
       - datasets
       - evaluate
       - "accelerate>=1.1.0"
+      - sentence-transformers
