@@ -7,7 +7,6 @@ import torch
 from langchain_chroma import Chroma
 from langchain_cohere import CohereEmbeddings
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
-from langchain_google_vertexai import VertexAIEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
@@ -59,11 +58,10 @@ EMBEDDING_MODELS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    "text-embedding-005": lambda: VertexAIEmbeddings(model="text-embedding-005"),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    "text-embedding-3-large": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
     "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
+    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
+    "text-embedding-3-small": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
 }
 
 
