@@ -1,6 +1,5 @@
 import argparse
 import logging
-import uuid
 from pathlib import Path
 
 import rootutils
@@ -146,35 +145,10 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
         length_function=len,
     )
 
-    if embedding_model in LOCAL_HF_MODELS and DEVICE == "cuda":
-        for i in tqdm(range(0, len(docs), batch_size), desc="Adding to Chroma"):
-            splits = text_splitter.split_documents(docs[i: i + batch_size])
-            if not splits:
-                continue
-            log.info(f"Generated {len(splits)} chunks")
+    splits = text_splitter.split_documents(docs)
 
-            texts = [doc.page_content for doc in splits]
-
-            log.info("Pre-computing embeddings on GPU...")
-            all_embeddings = embedding_function.embed_documents(texts)
-
-            log.info("Inserting pre-computed embeddings into Chroma...")
-
-            metadata = [doc.metadata for doc in splits]
-            ids = [str(uuid.uuid4()) for _ in splits]
-
-            vector_store._collection.add(
-                embeddings=all_embeddings,
-                documents=texts,
-                metadatas=metadata,
-                ids=ids,
-            )
-    else:
-        for i in tqdm(range(0, len(docs), batch_size), desc="Indexing"):
-            splits = text_splitter.split_documents(docs[i: i + batch_size])
-            if not splits:
-                continue
-            vector_store.add_documents(splits)
+    for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):
+        vector_store.add_documents(splits[i: i + batch_size])
 
     log.info("Indexing completed")
 
@@ -210,7 +184,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--batch-size",
         type=int,
-        default=512,
+        default=32,
         help="Number of chunks indexed per batch",
     )
 
