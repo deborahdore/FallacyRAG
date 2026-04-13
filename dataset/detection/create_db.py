@@ -36,6 +36,9 @@ logging.basicConfig(
 )
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
+_vector_store_cache: dict[tuple[str, str], Chroma] = {}
+_pipeline_cache: dict[str, pipeline] = {}
+
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
 encode_kwargs = {"batch_size": 2048, "normalize_embeddings": True}
 
@@ -190,15 +193,18 @@ def search_knowledge_base(query: str,
         chunks = splitter.split_documents(docs)
         retriever = BM25Retriever.from_documents(chunks, k=top_k)
     else:
-        # TODO cache vector store
         chromadb_path = os.path.join(chromadb_path, retriever.replace("/", "-"))
         assert os.path.exists(chromadb_path)
 
-        vector_store = Chroma(
-            collection_name="FallacyRAG",
-            embedding_function=EMBEDDING_MODELS[retriever](),
-            persist_directory=chromadb_path,
-        )
+        cache_key = (retriever, chromadb_path)
+        if cache_key not in _vector_store_cache:
+            logger.info(f"Loading vector store for {retriever} from {chromadb_path}")
+            _vector_store_cache[cache_key] = Chroma(
+                collection_name="FallacyRAG",
+                embedding_function=EMBEDDING_MODELS[retriever](),
+                persist_directory=chromadb_path,
+            )
+        vector_store = _vector_store_cache[cache_key]
         search_kwargs = SEARCH_TYPES[search_type]["search_kwargs"](SimpleNamespace(top_k=top_k))
         retriever = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
 
@@ -236,14 +242,16 @@ def summarize_docs(docs: list[str], model_name: str) -> list[str]:
             )
             summaries.append(response.choices[0].message.content.strip())
     else:
-        #  TODO cache summarization model
-        tokenizer = AutoTokenizer.from_pretrained(model_name)
-        model = AutoModelForCausalLM.from_pretrained(
-            model_name,
-            torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-            device_map="auto",
-        )
-        pipe = pipeline("text-generation", model=model, tokenizer=tokenizer)
+        if model_name not in _pipeline_cache:
+            logger.info(f"Loading summarization model {model_name}")
+            tokenizer = AutoTokenizer.from_pretrained(model_name)
+            model = AutoModelForCausalLM.from_pretrained(
+                model_name,
+                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
+                device_map="auto",
+            )
+            _pipeline_cache[model_name] = pipeline("text-generation", model=model, tokenizer=tokenizer)
+        pipe = _pipeline_cache[model_name]
 
         for doc in docs:
             messages = [{"role": "user", "content": prompt_template.format(doc)}]
