@@ -9,7 +9,7 @@ from langchain_chroma import Chroma
 from langchain_community.retrievers import BM25Retriever
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from src.create_persistent_db import EMBEDDING_MODELS
+from src.create_persistent_db import RETRIEVERS
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.fallacy_loader import FallacyLoader
@@ -53,15 +53,15 @@ SEARCH_TYPES = {
 }
 
 
-def load_vector_store(embeddings_model: str, persist_directory_path: str) -> Chroma:
-    persist_directory_path = os.path.join(persist_directory_path, embeddings_model.replace("/", "-"))
+def load_vector_store(retriever: str, persist_directory_path: str) -> Chroma:
+    persist_directory_path = os.path.join(persist_directory_path, retriever.replace("/", "-"))
     if not Path(persist_directory_path).exists():
         raise FileNotFoundError(
             f"No vector store found at '{persist_directory_path}'. "
             f"Run the indexing script first with the same model and chunk settings."
         )
 
-    embedding_fn = EMBEDDING_MODELS.get(embeddings_model)
+    embedding_fn = RETRIEVERS.get(retriever)
 
     log.info(f"Loading vector store from: {persist_directory_path}")
     return Chroma(
@@ -98,7 +98,7 @@ def main(args):
     if args.search_type == "bm25":
         retriever = load_bm25_retriever(args.chunk_size, args.chunk_overlap, args.top_k)
     else:
-        vector_store = load_vector_store(args.embeddings_model, args.persist_directory_path)
+        vector_store = load_vector_store(args.retriever, args.persist_directory_path)
         search_kwargs = search_config["search_kwargs"](args)
         log.info(f"Search kwargs: {search_kwargs}")
         retriever = vector_store.as_retriever(search_type=args.search_type, search_kwargs=search_kwargs)
@@ -112,8 +112,8 @@ if __name__ == "__main__":
         description="Retrieve documents from a Chroma vector store.",
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument("--query", type=str, required=True, help="Natural-language query to search for.")
-    parser.add_argument("--embeddings-model", type=str, default="sentence-transformers/all-mpnet-base-v2",
-                        choices=EMBEDDING_MODELS.keys(),
+    parser.add_argument("--retriever", type=str, default="sentence-transformers/all-mpnet-base-v2",
+                        choices=RETRIEVERS.keys(),
                         help="Embedding model used to encode documents. Ignored when --search-type is bm25.")
     parser.add_argument("--persist_directory_path", type=str,
                         default="./chromadb",
