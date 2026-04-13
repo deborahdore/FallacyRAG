@@ -42,7 +42,7 @@ LOCAL_HF_MODELS = {
     "BAAI/bge-large-en-v1.5",
 }
 
-EMBEDDING_MODELS = {
+RETRIEVERS = {
     "sentence-transformers/all-mpnet-base-v2": lambda: HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-mpnet-base-v2",
         model_kwargs=model_kwargs,
@@ -65,13 +65,13 @@ EMBEDDING_MODELS = {
 }
 
 
-def _apply_gpu_optimizations(embedding_function, embedding_model: str):
+def _apply_gpu_optimizations(embedding_function, retriever: str):
     """
     Apply FP16 and torch.compile to local HuggingFace models on CUDA.
     FP16 halves memory usage and roughly doubles throughput on tensor cores.
     torch.compile fuses ops for an additional ~20-30% speedup.
     """
-    if DEVICE != "cuda" or embedding_model not in LOCAL_HF_MODELS:
+    if DEVICE != "cuda" or retriever not in LOCAL_HF_MODELS:
         return
 
     client = getattr(embedding_function, "client", None)
@@ -95,7 +95,7 @@ def _apply_gpu_optimizations(embedding_function, embedding_model: str):
         log.warning(f"torch.compile not available or failed: {e}")
 
 
-def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: int):
+def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
     torch.set_grad_enabled(False)
 
     if DEVICE == "cuda":
@@ -103,19 +103,19 @@ def main(embedding_model: str, chunk_size: int, chunk_overlap: int, batch_size: 
         torch.backends.cudnn.benchmark = True
 
     log.info(f"Using device: {DEVICE}")
-    log.info(f"Loading embedding model: {embedding_model}")
+    log.info(f"Loading embedding model: {retriever}")
 
-    persist_directory_path = PERSIST_DIRECTORY + embedding_model.replace("/", "-")
+    persist_directory_path = PERSIST_DIRECTORY + retriever.replace("/", "-")
     Path(persist_directory_path).mkdir(parents=True, exist_ok=True)
 
     if any(Path(persist_directory_path).iterdir()):
         log.info("Vector database already exists. Skipping indexing.")
         return
 
-    embedding_function = EMBEDDING_MODELS[embedding_model]()
+    embedding_function = RETRIEVERS[retriever]()
 
     # Apply FP16 + torch.compile for local HuggingFace models on GPU
-    _apply_gpu_optimizations(embedding_function, embedding_model)
+    _apply_gpu_optimizations(embedding_function, retriever)
 
     vector_store = Chroma(
         collection_name="FallacyRAG",
@@ -158,10 +158,10 @@ if __name__ == "__main__":
     )
 
     parser.add_argument(
-        "--embeddings-model",
+        "--retriever",
         type=str,
         default="sentence-transformers/all-mpnet-base-v2",
-        choices=EMBEDDING_MODELS.keys(),
+        choices=RETRIEVERS.keys(),
         help="Embedding model used to encode documents",
     )
 
@@ -195,7 +195,7 @@ if __name__ == "__main__":
     )
 
     main(
-        embedding_model=args.embeddings_model,
+        retriever=args.retriever,
         chunk_size=args.chunk_size,
         chunk_overlap=overlap,
         batch_size=args.batch_size,
