@@ -31,14 +31,15 @@ import logging
 import os
 import sys
 from dataclasses import dataclass, field
-from pathlib import Path
+from itertools import chain
 from typing import Optional
 
 import datasets
 import numpy as np
 import rootutils
 import transformers
-from datasets import ClassLabel, load_dataset, load_from_disk
+from datasets import ClassLabel, load_dataset
+from sklearn.metrics import f1_score, recall_score, precision_score, accuracy_score
 from transformers import (
     AutoConfig,
     AutoModelForTokenClassification,
@@ -54,8 +55,6 @@ from transformers.utils import check_min_version
 from transformers.utils.versions import require_version
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
-
-from src.detection.utils import SEARCH_TYPES, build_rag_context, make_compute_metrics
 
 check_min_version("4.57.0.dev0")
 require_version("datasets>=1.8.0")
@@ -123,27 +122,32 @@ class DataTrainingArguments:
         metadata={"help": "Configuration name for the dataset."},
     )
     train_file: Optional[str] = field(
-        default="./dataset/detection/bio_tags/train.json",
-        metadata={"help": "Training data file (CSV or JSON)."},
+        default="./dataset/detection/train.json",
+        metadata={"help": "Training data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     validation_file: Optional[str] = field(
-        default="./dataset/detection/bio_tags/dev.json",
-        metadata={"help": "Validation data file (CSV or JSON)."},
+        default="./dataset/detection/dev.json",
+        metadata={"help": "Validation data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     test_file: Optional[str] = field(
-        default="./dataset/detection/bio_tags/test.json",
-        metadata={"help": "Test / prediction data file (CSV or JSON)."},
+        default="./dataset/detection/test.json",
+        metadata={
+            "help": "Test / prediction data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     text_column_name: Optional[str] = field(
         default="tokens",
         metadata={"help": "Column containing the pre-tokenised words."},
+    )
+    context_column_name: Optional[str] = field(
+        default="context",
+        metadata={"help": "Column containing the context tokens."},
     )
     label_column_name: Optional[str] = field(
         default="ner_tags",
         metadata={"help": "Column containing BIO label sequences."},
     )
     overwrite_cache: bool = field(
-        default=False,
+        default=True,
         metadata={"help": "Overwrite cached tokenised datasets."},
     )
     preprocessing_num_workers: Optional[int] = field(
@@ -177,46 +181,7 @@ class DataTrainingArguments:
     # ── RAG-specific ──────────────────────────────────────────────────────
     use_rag: bool = field(
         default=False,
-        metadata={"help": "Augment BERT input with retrieved knowledge-base context."},
-    )
-    search_type: str = field(
-        default="similarity",
-        metadata={"help": f"Retrieval strategy. One of: {list(SEARCH_TYPES.keys())}."},
-    )
-    embeddings_model: str = field(
-        default="sentence-transformers/all-mpnet-base-v2",
-        metadata={"help": "Encoder for dense retrieval embeddings."},
-    )
-    persist_directory_path: str = field(
-        default="./chromadb",
-        metadata={"help": "ChromaDB persistence directory for dense search."},
-    )
-    chunk_size: int = field(
-        default=800,
-        metadata={"help": "Document chunk size for BM25 retriever."},
-    )
-    chunk_overlap: int = field(
-        default=80,
-        metadata={"help": "Chunk overlap for BM25 retriever."},
-    )
-    top_k: int = field(
-        default=3,
-        metadata={"help": "Number of documents to retrieve per example."},
-    )
-    summarization_model: Optional[str] = field(
-        default=None,
-        metadata={
-            "help": (
-                "LLM used to summarise retrieved passages before appending to BERT input. "
-                "Supported: 'meta-llama/Llama-3.1-8B-Instruct', "
-                "'mistralai/Mistral-7B-Instruct-v0.3', 'gpt-4o-mini'. "
-                "If None, passages are appended verbatim (truncated to fit the budget)."
-            )
-        },
-    )
-    context_budget: int = field(
-        default=128,
-        metadata={"help": "Maximum tokens reserved for retrieved context (per example)."},
+        metadata={"help": "Read the pre-built 'context' field from the dataset and append it to each BERT input."},
     )
 
     def __post_init__(self):
@@ -229,6 +194,45 @@ class DataTrainingArguments:
         self.task_name = self.task_name.lower()
         if self.max_seq_length is None:
             self.max_seq_length = 512
+        # Convenience: if --use_rag is set and the default no_rag paths are still in place,
+        # automatically redirect to the rag/ subdirectory.
+        if self.use_rag:
+            for attr in ("train_file", "validation_file", "test_file"):
+                path = getattr(self, attr)
+                if path is not None and "/no_rag/" in path:
+                    setattr(self, attr, path.replace("/no_rag/", "/rag/"))
+
+
+def make_compute_metrics(label_list: list[str], eval_do_concat_batches: bool):
+    """Return a compute_metrics function for token classification."""
+
+    def compute_metrics(p):
+        predictions, labels = p
+
+        if not eval_do_concat_batches:
+            predictions = np.hstack(predictions)
+            labels = np.hstack(labels)
+
+        predictions = np.argmax(predictions, axis=2)
+
+        # Filter out padding (-100) and flatten in one pass per tensor.
+        flat_preds = list(chain.from_iterable(
+            [label_list[pred] for pred, lbl in zip(row_pred, row_lbl) if lbl != -100]
+            for row_pred, row_lbl in zip(predictions, labels)
+        ))
+        flat_labels = list(chain.from_iterable(
+            [label_list[lbl] for pred, lbl in zip(row_pred, row_lbl) if lbl != -100]
+            for row_pred, row_lbl in zip(predictions, labels)
+        ))
+
+        return {
+            "accuracy": accuracy_score(y_true=flat_labels, y_pred=flat_preds),
+            "precision": precision_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
+            "recall": recall_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
+            "f1_macro": f1_score(y_true=flat_labels, y_pred=flat_preds, average="macro", zero_division=0),
+        }
+
+    return compute_metrics
 
 
 def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwargs):
@@ -236,6 +240,9 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
     ds = raw_datasets[split_name]
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
+    #  FOR DEBUG:
+    # debug_batch = ds[:2]
+    # debug_result = tokenize_fn(debug_batch)  # noqa: F841  ← set breakpoint here
     return ds.map(tokenize_fn, desc=f"Tokenising {split_name}", **map_kwargs)
 
 
@@ -280,6 +287,7 @@ def main():
     )
     text_column_name = data_args.text_column_name
     label_column_name = data_args.label_column_name
+    context_column_name = data_args.context_column_name
 
     labels_are_int = isinstance(features[label_column_name].feature, ClassLabel)
     if labels_are_int:
@@ -346,8 +354,9 @@ def main():
                 f"  dataset: {sorted(label_list)}"
             )
 
-    model.config.label2id = {l: i for i, l in enumerate(sorted(label_list))}
-    model.config.id2label = dict(enumerate(label_list))
+    sorted_label_list = sorted(label_list)
+    model.config.label2id = {l: i for i, l in enumerate(sorted_label_list)}
+    model.config.id2label = dict(enumerate(sorted_label_list))
 
     # B-Xxx → I-Xxx map for sub-word token propagation.
     b_to_i_label = [
@@ -358,8 +367,6 @@ def main():
     ]
 
     def tokenize_and_align_labels(examples):
-        phrase_texts = [" ".join(toks) for toks in examples[text_column_name]]
-
         phrase_tokenised = tokenizer(
             examples[text_column_name],
             padding="max_length" if data_args.pad_to_max_length else False,
@@ -394,35 +401,22 @@ def main():
                 prev_word_idx = word_idx
 
             if data_args.use_rag:
-                context_str = build_rag_context(
-                    phrase_texts[i],
-                    data_args=data_args,
-                    summarization_model=data_args.summarization_model,
-                )
-                budget = min(
-                    data_args.context_budget,
-                    data_args.max_seq_length - len(phrase_input_ids) - 1,  # –1 for final [SEP]
-                )
+                context_str = examples[context_column_name][i]
+                ctx_ids = tokenizer(context_str, add_special_tokens=False, truncation=True,
+                                    max_length=data_args.max_seq_length - len(phrase_input_ids) - 1)["input_ids"]
 
-                if context_str and budget > 0:
-                    ctx_ids = tokenizer(
-                        context_str,
-                        add_special_tokens=False,
-                        truncation=True,
-                        max_length=budget,
-                    )["input_ids"]
+                sep_id = tokenizer.sep_token_id
+                # Layout: [CLS] phrase… [SEP] context… [SEP]
+                # Segment 0 = phrase, Segment 1 = context (standard BERT pair encoding).
+                combined_ids = phrase_input_ids[:-1] + [sep_id] + ctx_ids + [sep_id]
+                combined_labels = phrase_label_ids[:-1] + [-100] * (len(ctx_ids) + 2)
+                combined_types = [0] * len(phrase_input_ids[:-1]) + [1] * (len(ctx_ids) + 2)
+                combined_attn = [1] * len(combined_ids)
 
-                    sep_id = tokenizer.sep_token_id
-                    # [CLS] phrase… [SEP] context… [SEP]
-                    combined_ids = phrase_input_ids[:-1] + [sep_id] + ctx_ids + [sep_id]
-                    combined_labels = phrase_label_ids[:-1] + [-100] * (len(ctx_ids) + 2)
-                    combined_types = [0] * len(phrase_input_ids[:-1]) + [1] * (len(ctx_ids) + 2)
-                    combined_attn = [1] * len(combined_ids)
-
-                    all_input_ids.append(combined_ids)
-                    all_attention_masks.append(combined_attn)
-                    all_token_type_ids.append(combined_types)
-                    all_labels.append(combined_labels)
+                all_input_ids.append(combined_ids)
+                all_attention_masks.append(combined_attn)
+                all_token_type_ids.append(combined_types)
+                all_labels.append(combined_labels)
             else:
                 all_input_ids.append(phrase_input_ids)
                 all_attention_masks.append(phrase_tokenised["attention_mask"][i])
@@ -438,7 +432,6 @@ def main():
             "attention_mask": all_attention_masks,
             "token_type_ids": all_token_type_ids,
             "labels": all_labels,
-            "text": phrase_texts,
         }
 
     map_kwargs = dict(
@@ -453,30 +446,18 @@ def main():
         (training_args.do_predict, "test", data_args.max_predict_samples, "--do_predict", data_args.test_file),
     ]
 
-    cache_subdir = "cached_rag" if data_args.use_rag else "cached"
-
     prepared = {}
     for do_split, split_name, max_samples, flag, split_file in split_configs:
         if not do_split:
             continue
         if split_name not in raw_datasets:
             raise ValueError(f"{flag} requires a {split_name} split.")
-
-        cache_path = Path(split_file).parent / cache_subdir / split_name
-
-        if not data_args.overwrite_cache and cache_path.exists():
-            logger.info(f"Loading tokenised {split_name} split from cache: {cache_path}")
-            prepared[split_name] = load_from_disk(str(cache_path))
-        else:
-            with training_args.main_process_first(desc=f"{split_name} tokenisation"):
-                prepared[split_name] = _prepare_split(raw_datasets,
-                                                      split_name,
-                                                      max_samples,
-                                                      tokenize_and_align_labels,
-                                                      map_kwargs)
-                logger.info(f"Saving tokenised {split_name} split to cache: {cache_path}")
-                cache_path.mkdir(parents=True, exist_ok=True)
-                prepared[split_name].save_to_disk(str(cache_path))
+        with training_args.main_process_first(desc=f"{split_name} tokenisation"):
+            prepared[split_name] = _prepare_split(raw_datasets,
+                                                  split_name,
+                                                  max_samples,
+                                                  tokenize_and_align_labels,
+                                                  map_kwargs)
 
     train_dataset = prepared.get("train")
     eval_dataset = prepared.get("validation")
