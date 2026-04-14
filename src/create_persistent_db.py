@@ -10,7 +10,6 @@ from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
-from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 
@@ -60,8 +59,7 @@ RETRIEVERS = {
     ),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
     "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
-    "text-embedding-3-small": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
+    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed")
 }
 
 
