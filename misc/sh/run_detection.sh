@@ -25,6 +25,7 @@ MODELS=("google-bert/bert-base-uncased"
         "ddore14/RooseBERT-cont-cased"
         "ddore14/RooseBERT-scr-uncased"
         "ddore14/RooseBERT-scr-cased"
+        "ddore14/DeRooseBERTa"
         "answerdotai/ModernBERT-base"
         )
 BATCH_SIZES=(8 16 32)
@@ -35,17 +36,19 @@ for model in "${MODELS[@]}"; do
     for lr in "${LEARNING_RATES[@]}"; do
 
       run_name="${model##*/}-batch=$batch-lr=$lr"
+      output_dir="output/$run_name/"
+
       python src/detection/run_detection_bio_tags.py \
                 --model_name_or_path "$model" \
-                --cache_dir "cache/" \
+                --cache_dir "$output_dir/cache/" \
                 --task_name "ner" \
-                --train_file "dataset/detection/bio_tags/train.json" \
-                --validation_file "dataset/detection/bio_tags/dev.json" \
-                --test_file "dataset/detection/bio_tags/test.json" \
+                --train_file "dataset/detection/dev.json" \
+                --validation_file "dataset/detection/dev.json" \
+                --test_file "dataset/detection/test.json" \
                 --text_column_name "tokens" \
                 --label_column_name "ner_tags" \
                 --preprocessing_num_workers 8 \
-                --output_dir "./output/$run_name" \
+                --output_dir "$output_dir" \
                 --per_device_train_batch_size "$batch" \
                 --num_train_epochs 15 \
                 --learning_rate "$lr" \
