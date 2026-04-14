@@ -21,6 +21,7 @@ from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
 from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
@@ -60,7 +61,6 @@ EMBEDDING_MODELS = {
     ),
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
     "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    "text-embedding-3-small": lambda: OpenAIEmbeddings(model="text-embedding-3-large"),
     "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
 }
 
@@ -113,17 +113,15 @@ def convert(tag: str) -> str:
     raise ValueError(f"Unknown tag: {tag}")
 
 
-def main(
-        persist_directory_path: str = "./chromadb",
-        retriever: str = None,
-        search_type: str = "similarity",
-        chunk_size: int = 800,
-        chunk_overlap: int = 80,
-        top_k: int = 3,
-        summarization_model: str | None = None,
-):
+def main(persist_directory_path: str = "./chromadb",
+         retriever: str = None,
+         search_type: str = "similarity",
+         chunk_size: int = 800,
+         chunk_overlap: int = 80,
+         top_k: int = 3,
+         summarization_model: str | None = None,
+         model_max_tokens: int = 512):
     path = f"dataset/detection"
-
     if retriever:
         retriever_name = retriever.replace("/", "-")
         path = f"dataset/detection/{retriever_name}"
@@ -143,7 +141,8 @@ def main(
         dataset = []
         df = pd.read_csv(f"dataset/{split}.csv")
 
-        for idx, (text, raw_tags) in enumerate(zip(df["Context"], df["bio_tags"])):
+        for idx, (text, raw_tags) in tqdm(enumerate(zip(df["Context"], df["bio_tags"])), total=len(df),
+                                          desc=f"Processing {split} dataset."):
             tokens = normalize_text(text).split()
             ner_tags = [convert(t) for t in ast.literal_eval(raw_tags)]
 
@@ -157,9 +156,15 @@ def main(
                     top_k=top_k,
                     chromadb_path=persist_directory_path,
                 )
-                if passages and summarization_model:
-                    passages = summarize_docs(passages, summarization_model)
+                # if passages and summarization_model:
+                #     passages = summarize_docs(passages, summarization_model)
+
+                #  Summarise paragraphs together instead of summarising single passages
+                concat_passages = " ".join(passages)
+                passages = summarize_docs(concat_passages, summarization_model, model_max_tokens - len(tokens))
+
                 rag_context = " [SEP] ".join(passages)
+                rag_context = normalize_text(rag_context).split()
 
                 dataset.append({"id": idx,
                                 "tokens": tokens,
@@ -225,7 +230,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25
     return BM25Retriever.from_documents(chunks, k=top_k)
 
 
-def summarize_docs(docs: list[str], model_name: str) -> list[str]:
+def summarize_docs(docs: list[str], model_name: str, max_tokens: int) -> list[str]:
     """Summarize each passage with the given model. Returns one summary per doc."""
 
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
@@ -238,7 +243,7 @@ def summarize_docs(docs: list[str], model_name: str) -> list[str]:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt_template.format(doc)}],
-                max_tokens=256,
+                max_tokens=max_tokens,
             )
             summaries.append(response.choices[0].message.content.strip())
     else:
@@ -256,7 +261,7 @@ def summarize_docs(docs: list[str], model_name: str) -> list[str]:
         for doc in docs:
             messages = [{"role": "user", "content": prompt_template.format(doc)}]
             formatted = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-            output = pipe(formatted, max_new_tokens=256, do_sample=False, return_full_text=False)
+            output = pipe(formatted, max_new_tokens=max_tokens, do_sample=False, return_full_text=False)
             summaries.append(output[0]["generated_text"].strip())
 
     return summaries
