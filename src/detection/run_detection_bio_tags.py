@@ -67,6 +67,7 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
+
 @dataclass
 class ModelArguments:
     """Arguments for the encoder model / tokenizer / config."""
@@ -401,8 +402,14 @@ def main():
                 prev_word_idx = word_idx
 
             if data_args.use_rag:
-                context_str = examples[context_column_name][i]
-                ctx_ids = tokenizer(context_str, add_special_tokens=False, truncation=True,
+                context_raw = examples[context_column_name][i]
+                if isinstance(context_raw, list):
+                    context_str = " ".join(str(s) for s in context_raw)
+                else:
+                    context_str = context_raw
+                ctx_ids = tokenizer(context_str,
+                                    add_special_tokens=False,
+                                    truncation=True,
                                     max_length=data_args.max_seq_length - len(phrase_input_ids) - 1)["input_ids"]
 
                 sep_id = tokenizer.sep_token_id
