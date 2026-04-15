@@ -19,7 +19,6 @@ from langchain_community.retrievers import BM25Retriever
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
-from langchain_openai import OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
@@ -35,6 +34,7 @@ logging.basicConfig(
     handlers=[logging.StreamHandler(sys.stdout)],
     level=logging.INFO
 )
+logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
@@ -141,7 +141,8 @@ def main(persist_directory_path: str = "./chromadb",
         dataset = []
         df = pd.read_csv(f"dataset/{split}.csv")
 
-        for idx, (text, raw_tags) in tqdm(enumerate(zip(df["Context"], df["bio_tags"])), total=len(df),
+        for idx, (text, raw_tags) in tqdm(enumerate(zip(df["Context"], df["bio_tags"])),
+                                          total=len(df),
                                           desc=f"Processing {split} dataset."):
             tokens = normalize_text(text).split()
             ner_tags = [convert(t) for t in ast.literal_eval(raw_tags)]
@@ -160,8 +161,8 @@ def main(persist_directory_path: str = "./chromadb",
                 #     passages = summarize_docs(passages, summarization_model)
 
                 #  Summarise paragraphs together instead of summarising single passages
-                concat_passages = " ".join(passages)
-                passages = summarize_docs(concat_passages, summarization_model, model_max_tokens - len(tokens))
+                if summarization_model:
+                    passages = summarize_docs(" ".join(passages), summarization_model)
 
                 rag_context = " [SEP] ".join(passages)
                 rag_context = normalize_text(rag_context).split()
@@ -230,7 +231,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25
     return BM25Retriever.from_documents(chunks, k=top_k)
 
 
-def summarize_docs(docs: list[str], model_name: str, max_tokens: int) -> list[str]:
+def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> list[str]:
     """Summarize each passage with the given model. Returns one summary per doc."""
 
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
@@ -273,7 +274,7 @@ if __name__ == "__main__":
         "--retriever",
         default=None,
         choices=list(EMBEDDING_MODELS),
-        help="Embedding model for vector search (default: sentence-transformers/all-mpnet-base-v2).",
+        help="Embedding model for vector search.",
     )
     parser.add_argument(
         "--summarization-model",
