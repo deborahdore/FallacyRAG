@@ -65,7 +65,7 @@ logging.basicConfig(
     datefmt="%m/%d/%Y %H:%M:%S",
     handlers=[logging.StreamHandler(sys.stdout)],
 )
-
+logging.getLogger("httpx").setLevel(logging.WARNING)
 
 @dataclass
 class ModelArguments:
