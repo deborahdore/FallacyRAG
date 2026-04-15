@@ -32,22 +32,22 @@ MODELS=("google-bert/bert-base-uncased"
 BATCH_SIZES=(8 16 32)
 LEARNING_RATES=(2e-5 3e-5 5e-5 2e-4 3e-4 5e-4 2e-3 3e-3 5e-3)
 EPOCHS=(2 3 4)
+RAG_MODEL="sentence-transformers-all-mpnet-base-v2"
 
 for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do
     for lr in "${LEARNING_RATES[@]}"; do
       for epoch in "${EPOCHS[@]}"; do
-
         run_name="${model##*/}-epochs=$epoch-batch=$batch-lr=$lr"
-        output_dir="output/$run_name/"
+        output_dir="output_rag_$RAG_MODEL/$run_name/"
 
         python src/detection/run_detection_bio_tags.py \
                   --model_name_or_path "$model" \
                   --cache_dir "$output_dir/cache/" \
                   --task_name "ner" \
-                  --train_file "dataset/detection/dev.json" \
-                  --validation_file "dataset/detection/dev.json" \
-                  --test_file "dataset/detection/test.json" \
+                  --train_file "dataset/detection/$RAG_MODEL/dev.json" \
+                  --validation_file "dataset/detection/$RAG_MODEL/dev.json" \
+                  --test_file "dataset/detection/$RAG_MODEL/test.json" \
                   --text_column_name "tokens" \
                   --label_column_name "ner_tags" \
                   --preprocessing_num_workers 8 \

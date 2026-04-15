@@ -39,7 +39,7 @@ for model in "${MODELS[@]}"; do
       for epoch in "${EPOCHS[@]}"; do
 
         run_name="${model##*/}-epochs=$epoch-batch=$batch-lr=$lr"
-        output_dir="output/$run_name/"
+        output_dir="output_no_rag/$run_name/"
 
         python src/detection/run_detection_bio_tags.py \
                   --model_name_or_path "$model" \
