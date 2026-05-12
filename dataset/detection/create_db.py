@@ -2,13 +2,19 @@ from __future__ import annotations
 
 import argparse
 import ast
-import json
 import logging
 import os
 import re
 import sys
 import unicodedata
 from types import SimpleNamespace
+
+import nltk
+import spacy
+from sklearn.model_selection import train_test_split
+
+nlp = spacy.load("en_core_web_sm")
+nltk.download("punkt_tab", quiet=True)
 
 import pandas as pd
 import rootutils
@@ -94,90 +100,13 @@ SEARCH_TYPES = {
 def normalize_text(text):
     text = unicodedata.normalize("NFKD", text)
     text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
+    text = re.sub(r"\n", " ", text)
     text = re.sub(r"[“”]", '"', text)  # double quotes
-    text = re.sub(r"[–—]", "-", text)  # dashes
+    text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"\s+", " ", text).strip()
-
+    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"(\1).(\2)", text).strip()
     return text
-
-
-def convert(tag: str) -> str:
-    """Normalize a BIO tag to a binary fallacy label (B-Fallacy, I-Fallacy, or O)."""
-    if tag == "O":
-        return "O"
-    if tag.startswith("B-"):
-        return "B-Fallacy"
-    if tag.startswith("I-"):
-        return "I-Fallacy"
-    raise ValueError(f"Unknown tag: {tag}")
-
-
-def main(persist_directory_path: str = "./chromadb",
-         retriever: str = None,
-         search_type: str = "similarity",
-         chunk_size: int = 800,
-         chunk_overlap: int = 80,
-         top_k: int = 3,
-         summarization_model: str | None = None,
-         model_max_tokens: int = 512):
-    path = f"dataset/detection"
-    if retriever:
-        retriever_name = retriever.replace("/", "-")
-        path = f"dataset/detection/{retriever_name}"
-        if summarization_model:
-            path = f"dataset/detection/bio_tags/rag/{retriever_name}/{summarization_model}"
-            logger.info(
-                f"Generating dataset with RAG Context with {retriever} as retriever and {summarization_model} as summarization model.")
-        else:
-            logger.info(
-                f"Generating dataset with RAG Context with {retriever} as retriever and NO summarization model.")
-    else:
-        logger.info("Generating dataset without RAG Context.")
-
-    os.makedirs(path, exist_ok=True)
-
-    for split in ["train", "dev", "test"]:
-        dataset = []
-        df = pd.read_csv(f"dataset/{split}.csv")
-
-        for idx, (text, raw_tags) in tqdm(enumerate(zip(df["Context"], df["bio_tags"])),
-                                          total=len(df),
-                                          desc=f"Processing {split} dataset."):
-            tokens = normalize_text(text).split()
-            ner_tags = [convert(t) for t in ast.literal_eval(raw_tags)]
-
-            if retriever:
-                passages = search_knowledge_base(
-                    text,
-                    search_type=search_type,
-                    retriever=retriever,
-                    chunk_size=chunk_size,
-                    chunk_overlap=chunk_overlap,
-                    top_k=top_k,
-                    chromadb_path=persist_directory_path,
-                )
-                # if passages and summarization_model:
-                #     passages = summarize_docs(passages, summarization_model)
-
-                #  Summarise paragraphs together instead of summarising single passages
-                if summarization_model:
-                    passages = summarize_docs(" ".join(passages), summarization_model)
-
-                rag_context = " [SEP] ".join(passages)
-                rag_context = normalize_text(rag_context).split()
-
-                dataset.append({"id": idx,
-                                "tokens": tokens,
-                                "ner_tags": ner_tags,
-                                "context": rag_context})
-            else:
-                dataset.append({"id": idx,
-                                "tokens": tokens,
-                                "ner_tags": ner_tags})
-
-        with open(f"{path}/{split}.json", "w") as f:
-            json.dump(dataset, f, indent=4)
 
 
 def search_knowledge_base(query: str,
@@ -268,6 +197,100 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
     return summaries
 
 
+def main(persist_directory_path: str = "./chromadb",
+         retriever: str = None,
+         search_type: str = "similarity",
+         chunk_size: int = 800,
+         chunk_overlap: int = 80,
+         top_k: int = 3,
+         summarization_model: str | None = None,
+         path: str = "dataset/detection"):
+
+    dataset = []
+    for split in ["train", "dev", "test"]:
+        df = pd.read_csv(f"dataset/{split}.csv")
+        for idx, row in tqdm(df.iterrows(), total=len(df), desc=f"Processing {split} dataset."):
+            text = row["speech_turn"]
+
+            # Parse label lists
+            fallacy_labels = ast.literal_eval(row["fallacy_labels"])
+            component_labels = ast.literal_eval(row["components_labels"])
+
+            assert len(text) == len(fallacy_labels)
+
+            doc = nlp(text)
+
+            for sent in doc.sents:
+                start = sent.start_char
+                end = sent.end_char
+
+                flabels = list(set(label for label in fallacy_labels[start:end] if label != 'O'))
+                flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
+
+                clabels = list(set(label for label in component_labels[start:end] if label != 'O'))
+                clabels = clabels[0] if clabels and clabels[0] is not None else "NoComponent"
+
+                item = {
+                    "text": f"{text} [SEP] {sent}",
+                    "fallacy_label": flabels,
+                    "component_label": clabels,
+                    "speaker": row["speaker"],
+                    "year": row["year"],
+                    "sentence": text[start:end],
+                    "speech_turn": text,
+                }
+
+                dataset.append(item)
+
+    df = pd.DataFrame(dataset)
+    df = df.dropna(how="all").drop_duplicates().reset_index(drop=True)
+
+    no_fallacy_df = df[df["fallacy_label"] == "NoFallacy"]
+    with_fallacy_df = df[df["fallacy_label"] != "NoFallacy"]
+
+    no_fallacy_downsampled = no_fallacy_df.sample(n=len(with_fallacy_df), random_state=42)
+
+    df_balanced = pd.concat([no_fallacy_downsampled, with_fallacy_df]).sample(frac=1, random_state=42).reset_index(
+        drop=True)
+
+    if retriever:
+        copy_dataset = []
+        for _, row in df_balanced.iterrows():
+            copy_row = row.copy()
+            speech_turn = row['speech_turn']
+
+            passages = search_knowledge_base(
+                speech_turn,
+                search_type=search_type,
+                retriever=retriever,
+                chunk_size=chunk_size,
+                chunk_overlap=chunk_overlap,
+                top_k=top_k,
+                chromadb_path=persist_directory_path,
+            )
+            if passages and summarization_model:
+                #  Summarise single paragraphs
+                #  passages = summarize_docs(passages, summarization_model)
+
+                #  Summarise paragraphs together instead of summarising single passages
+                passages = summarize_docs(" ".join(passages), summarization_model)
+
+            rag_context = " [SEP] ".join(passages)
+            rag_context = normalize_text(rag_context)
+            copy_row['rag_context'] = rag_context
+            copy_dataset.append(copy_row)
+
+        df_balanced = pd.DataFrame(copy_dataset).reset_index(drop=True)
+
+    train_df, test_df = train_test_split(df_balanced, test_size=0.8, random_state=42,
+                                         stratify=df_balanced["fallacy_label"])
+    test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
+
+    train_df.to_csv(f"{path}/train.csv", index=False)
+    test_df.to_csv(f"{path}/test.csv", index=False)
+    dev_df.to_csv(f"{path}/dev.csv", index=False)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Build BIO-tag datasets with and without RAG context.")
     parser.add_argument(
@@ -317,6 +340,22 @@ if __name__ == "__main__":
         help="Number of passages to retrieve per query (default: 3).",
     )
     args = parser.parse_args()
+
+    path = f"dataset/detection"
+    if args.retriever:
+        retriever_name = args.retriever.replace("/", "-")
+        path = f"dataset/detection/{retriever_name}"
+        if args.summarization_model:
+            path = f"dataset/detection/bio_tags/rag/{retriever_name}/{args.summarization_model}"
+            logger.info(
+                f"Generating dataset with RAG Context with {args.retriever} as retriever and {args.summarization_model} as summarization model.")
+        else:
+            logger.info(
+                f"Generating dataset with RAG Context with {args.retriever} as retriever and NO summarization model.")
+    else:
+        logger.info("Generating dataset without RAG Context.")
+
+    os.makedirs(path, exist_ok=True)
 
     main(
         search_type=args.search_type,
