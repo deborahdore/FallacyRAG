@@ -1,13 +1,15 @@
 # From Detection to Explanation: Retrieval-Augmented Generation for Argumentative Fallacies
 
 <!-- TOC -->
+
 * [From Detection to Explanation: Retrieval-Augmented Generation for Argumentative Fallacies](#from-detection-to-explanation-retrieval-augmented-generation-for-argumentative-fallacies)
-  * [🚀 Overview](#-overview)
-  * [🎯 Tasks](#-tasks)
-  * [⛁ Knowledge Base](#-knowledge-base)
-    * [Knowledge Base Format](#knowledge-base-format)
-      * [Standard Entry](#standard-entry)
-      * [Paragraph-Structured Entry](#paragraph-structured-entry)
+    * [🚀 Overview](#-overview)
+    * [🎯 Tasks](#-tasks)
+    * [⛁ Knowledge Base](#-knowledge-base)
+        * [Knowledge Base Format](#knowledge-base-format)
+            * [Standard Entry](#standard-entry)
+            * [Paragraph-Structured Entry](#paragraph-structured-entry)
+
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -67,6 +69,7 @@ The knowledge base is organized into four main categories.
 ### Knowledge Base Format
 
 Each entry in the knowledge base is stored as a JSON document.
+
 ```json
 {
   "id": "",

@@ -105,7 +105,7 @@ def normalize_text(text):
     text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"\s+", " ", text).strip()
-    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"(\1).(\2)", text).strip()
+    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text).strip()
     return text
 
 
@@ -115,35 +115,40 @@ def search_knowledge_base(query: str,
                           chunk_size: int,
                           chunk_overlap: int,
                           top_k: int,
-                          chromadb_path: str):
+                          chromadb_path: str,
+                          fetch_k: int = 20,
+                          lambda_mult: float = 0.5,
+                          score_threshold: float = 0.5):
     """Return a list of passage strings relevant to *query*."""
 
     if search_type == "bm25":
-        loader = FallacyLoader(source_path=KNOWLEDGE_BASE_PATH,
-                               directories=["people", "bills", "definitions", "geography"])
-        splitter = RecursiveCharacterTextSplitter(chunk_size=chunk_size,
-                                                  chunk_overlap=chunk_overlap,
-                                                  add_start_index=True)
-        docs = loader.load()
-        chunks = splitter.split_documents(docs)
-        retriever = BM25Retriever.from_documents(chunks, k=top_k)
+        bm25 = load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=top_k)
+        docs = bm25.invoke(query)
     else:
-        chromadb_path = os.path.join(chromadb_path, retriever.replace("/", "-"))
-        assert os.path.exists(chromadb_path)
+        store_path = os.path.join(chromadb_path, retriever.replace("/", "-"))
+        if not os.path.exists(store_path):
+            raise FileNotFoundError(f"Chroma store not found at {store_path!r}. Run create_persistent_db.py first.")
 
-        cache_key = (retriever, chromadb_path)
+        cache_key = (retriever, store_path)
         if cache_key not in _vector_store_cache:
-            logger.info(f"Loading vector store for {retriever} from {chromadb_path}")
+            logger.info(f"Loading vector store for {retriever} from {store_path}")
             _vector_store_cache[cache_key] = Chroma(
                 collection_name="FallacyRAG",
                 embedding_function=EMBEDDING_MODELS[retriever](),
-                persist_directory=chromadb_path,
+                persist_directory=store_path,
             )
         vector_store = _vector_store_cache[cache_key]
-        search_kwargs = SEARCH_TYPES[search_type]["search_kwargs"](SimpleNamespace(top_k=top_k))
-        retriever = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
+        search_kwargs = SEARCH_TYPES[search_type]["search_kwargs"](
+            SimpleNamespace(
+                top_k=top_k,
+                fetch_k=fetch_k,
+                lambda_mult=lambda_mult,
+                score_threshold=score_threshold,
+            )
+        )
+        ret = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
+        docs = ret.invoke(query)
 
-    docs = retriever.invoke(query)
     return [d.page_content if hasattr(d, "page_content") else str(d) for d in docs]
 
 
@@ -203,9 +208,11 @@ def main(persist_directory_path: str = "./chromadb",
          chunk_size: int = 800,
          chunk_overlap: int = 80,
          top_k: int = 3,
+         fetch_k: int = 20,
+         lambda_mult: float = 0.5,
+         score_threshold: float = 0.5,
          summarization_model: str | None = None,
          path: str = "dataset/detection"):
-
     dataset = []
     for split in ["train", "dev", "test"]:
         df = pd.read_csv(f"dataset/{split}.csv")
@@ -216,7 +223,12 @@ def main(persist_directory_path: str = "./chromadb",
             fallacy_labels = ast.literal_eval(row["fallacy_labels"])
             component_labels = ast.literal_eval(row["components_labels"])
 
-            assert len(text) == len(fallacy_labels)
+            if len(text) != len(fallacy_labels):
+                logger.warning(
+                    f"Row {idx} ({split}): text length {len(text)} != "
+                    f"fallacy_labels length {len(fallacy_labels)} — skipping."
+                )
+                continue
 
             doc = nlp(text)
 
@@ -243,7 +255,8 @@ def main(persist_directory_path: str = "./chromadb",
                 dataset.append(item)
 
     df = pd.DataFrame(dataset)
-    df = df.dropna(how="all").drop_duplicates().reset_index(drop=True)
+    df = df.replace({"nan": None})
+    df = df.dropna().drop_duplicates().reset_index(drop=True)
 
     no_fallacy_df = df[df["fallacy_label"] == "NoFallacy"]
     with_fallacy_df = df[df["fallacy_label"] != "NoFallacy"]
@@ -255,7 +268,7 @@ def main(persist_directory_path: str = "./chromadb",
 
     if retriever:
         copy_dataset = []
-        for _, row in df_balanced.iterrows():
+        for _, row in tqdm(df_balanced.iterrows(), total=len(df_balanced), desc="Enriching with RAG context"):
             copy_row = row.copy()
             speech_turn = row['speech_turn']
 
@@ -267,13 +280,16 @@ def main(persist_directory_path: str = "./chromadb",
                 chunk_overlap=chunk_overlap,
                 top_k=top_k,
                 chromadb_path=persist_directory_path,
+                fetch_k=fetch_k,
+                lambda_mult=lambda_mult,
+                score_threshold=score_threshold,
             )
             if passages and summarization_model:
                 #  Summarise single paragraphs
                 #  passages = summarize_docs(passages, summarization_model)
 
                 #  Summarise paragraphs together instead of summarising single passages
-                passages = summarize_docs(" ".join(passages), summarization_model)
+                passages = summarize_docs([" ".join(passages)], summarization_model)
 
             rag_context = " [SEP] ".join(passages)
             rag_context = normalize_text(rag_context)
@@ -289,6 +305,36 @@ def main(persist_directory_path: str = "./chromadb",
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)
     dev_df.to_csv(f"{path}/dev.csv", index=False)
+
+    _print_dataset_statistics(train_df, test_df, dev_df)
+
+
+def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame, dev_df: pd.DataFrame) -> None:
+    """Print size and label distribution statistics for each dataset split."""
+    splits = {"train": train_df, "dev": dev_df, "test": test_df}
+
+    logger.info("=" * 60)
+    logger.info("DATASET STATISTICS")
+    logger.info("=" * 60)
+
+    for name, df in splits.items():
+        logger.info(f"\n--- {name.upper()} ({len(df):,} samples) ---")
+
+        logger.info("  Fallacy label distribution:")
+        fallacy_counts = df["fallacy_label"].value_counts()
+        fallacy_pct = df["fallacy_label"].value_counts(normalize=True) * 100
+        for label in fallacy_counts.index:
+            logger.info(f"    {label:<30s} {fallacy_counts[label]:>6,}  ({fallacy_pct[label]:.1f}%)")
+
+        logger.info("  Component label distribution:")
+        component_counts = df["component_label"].value_counts()
+        component_pct = df["component_label"].value_counts(normalize=True) * 100
+        for label in component_counts.index:
+            logger.info(f"    {label:<30s} {component_counts[label]:>6,}  ({component_pct[label]:.1f}%)")
+
+    total = sum(len(df) for df in splits.values())
+    logger.info(f"\nTotal samples across all splits: {total:,}")
+    logger.info("=" * 60)
 
 
 if __name__ == "__main__":
@@ -339,6 +385,24 @@ if __name__ == "__main__":
         default=3,
         help="Number of passages to retrieve per query (default: 3).",
     )
+    parser.add_argument(
+        "--fetch-k",
+        type=int,
+        default=20,
+        help="Candidate pool size for MMR retrieval (default: 20).",
+    )
+    parser.add_argument(
+        "--lambda-mult",
+        type=float,
+        default=0.5,
+        help="MMR diversity factor between 0 (max diversity) and 1 (max relevance) (default: 0.5).",
+    )
+    parser.add_argument(
+        "--score-threshold",
+        type=float,
+        default=0.5,
+        help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).",
+    )
     args = parser.parse_args()
 
     path = f"dataset/detection"
@@ -364,5 +428,9 @@ if __name__ == "__main__":
         chunk_size=args.chunk_size,
         chunk_overlap=args.chunk_overlap,
         top_k=args.top_k,
+        fetch_k=args.fetch_k,
+        lambda_mult=args.lambda_mult,
+        score_threshold=args.score_threshold,
         summarization_model=args.summarization_model,
+        path=path,
     )
