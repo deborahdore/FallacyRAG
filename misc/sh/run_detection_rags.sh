@@ -1,6 +1,6 @@
 #!/bin/bash
-#SBATCH --job-name=fallacy_detection_rags
-#SBATCH --output=logs/fallacy_detection_rags.out
+#SBATCH --job-name=fallacy_detection_rag
+#SBATCH --output=logs/fallacy_detection_rag.out
 #SBATCH --cpus-per-task=16
 #SBATCH --time=36:00:00
 #SBATCH --account=marianne
@@ -38,26 +38,27 @@ for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do
     for lr in "${LEARNING_RATES[@]}"; do
       for epoch in "${EPOCHS[@]}"; do
+
         run_name="${model##*/}-epochs=$epoch-batch=$batch-lr=$lr"
         output_dir="output_rag_$RAG_MODEL/$run_name/"
 
-        python src/detection/run_detection_bio_tags.py \
+        python src/detection/run_detection.py \
                   --model_name_or_path "$model" \
                   --cache_dir "$output_dir/cache/" \
-                  --task_name "ner" \
-                  --train_file "dataset/detection/$RAG_MODEL/dev.json" \
-                  --validation_file "dataset/detection/$RAG_MODEL/dev.json" \
-                  --test_file "dataset/detection/$RAG_MODEL/test.json" \
-                  --text_column_name "tokens" \
-                  --label_column_name "ner_tags" \
+                  --train_file "dataset/detection/$RAG_MODEL/train.csv" \
+                  --validation_file "dataset/detection/$RAG_MODEL/dev.csv" \
+                  --test_file "dataset/detection/$RAG_MODEL/test.csv" \
+                  --text_column_name "sentence" \
+                  --label_column_name "fallacy_label" \
+                  --context_column_name "context" \
                   --preprocessing_num_workers 8 \
-                  --output_dir $output_dir \
+                  --output_dir "$output_dir" \
                   --per_device_train_batch_size "$batch" \
                   --per_device_eval_batch_size "$batch" \
                   --num_train_epochs "$epoch" \
                   --learning_rate "$lr" \
                   --logging_steps 1000 \
-                  --run_name $run_name \
+                  --run_name "$run_name" \
                   --eval_strategy "epoch" \
                   --eval_on_start True \
                   --save_strategy "epoch" \
@@ -70,8 +71,7 @@ for model in "${MODELS[@]}"; do
                   --do_train True \
                   --do_eval True \
                   --do_predict True \
-                  --use_rag True \
-                  --context_column_name "context"
+                  --use_rag True
       done
     done
   done

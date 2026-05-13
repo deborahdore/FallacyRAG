@@ -237,7 +237,8 @@ def main(persist_directory_path: str = "./chromadb",
                 end = sent.end_char
 
                 flabels = list(set(label for label in fallacy_labels[start:end] if label != 'O'))
-                flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
+                # flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
+                flabels = "Fallacy" if flabels and flabels[0] is not None else "NoFallacy"
 
                 clabels = list(set(label for label in component_labels[start:end] if label != 'O'))
                 clabels = clabels[0] if clabels and clabels[0] is not None else "NoComponent"

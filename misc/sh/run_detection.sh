@@ -26,8 +26,8 @@ MODELS=("google-bert/bert-base-uncased"
         "ddore14/RooseBERT-scr-uncased"
         "ddore14/RooseBERT-scr-cased"
         "ddore14/DeRooseBERTa"
-        "answerdotai/ModernBERT-base"
         "allenai/longformer-base-4096"
+        "answerdotai/ModernBERT-base"
         )
 BATCH_SIZES=(8 16 32)
 LEARNING_RATES=(2e-5 3e-5 5e-5 2e-4 3e-4 5e-4 2e-3 3e-3 5e-3)
@@ -41,35 +41,35 @@ for model in "${MODELS[@]}"; do
         run_name="${model##*/}-epochs=$epoch-batch=$batch-lr=$lr"
         output_dir="output_no_rag/$run_name/"
 
-        python src/detection/run_detection_bio_tags.py \
-                  --model_name_or_path "$model" \
-                  --cache_dir "$output_dir/cache/" \
-                  --task_name "ner" \
-                  --train_file "dataset/detection/dev.json" \
-                  --validation_file "dataset/detection/dev.json" \
-                  --test_file "dataset/detection/test.json" \
-                  --text_column_name "tokens" \
-                  --label_column_name "ner_tags" \
-                  --preprocessing_num_workers 8 \
-                  --output_dir $output_dir \
-                  --per_device_train_batch_size "$batch" \
-                  --per_device_eval_batch_size "$batch" \
-                  --num_train_epochs "$epoch" \
-                  --learning_rate "$lr" \
-                  --logging_steps 1000 \
-                  --run_name $run_name \
-                  --eval_strategy "epoch" \
-                  --eval_on_start True \
-                  --save_strategy "epoch" \
-                  --save_total_limit 1 \
-                  --seed 42 \
-                  --data_seed 42 \
-                  --dataloader_num_workers 8 \
-                  --dataloader_prefetch_factor 2 \
-                  --remove_unused_columns True \
-                  --do_train True \
-                  --do_eval True \
-                  --do_predict True
+        python src/detection/run_detection.py \
+          --model_name_or_path "$model" \
+          --cache_dir "$output_dir/cache/" \
+          --train_file "dataset/detection/train.csv" \
+          --validation_file "dataset/detection/dev.csv" \
+          --test_file "dataset/detection/test.csv" \
+          --text_column_name "sentence" \
+          --speech_turn_column_name "speech_turn" \
+          --label_column_name "fallacy_label" \
+          --preprocessing_num_workers 8 \
+          --output_dir $output_dir \
+          --per_device_train_batch_size "$batch" \
+          --per_device_eval_batch_size "$batch" \
+          --num_train_epochs "$epoch" \
+          --learning_rate "$lr" \
+          --logging_steps 1000 \
+          --run_name $run_name \
+          --eval_strategy "epoch" \
+          --eval_on_start True \
+          --save_strategy "epoch" \
+          --save_total_limit 1 \
+          --seed 42 \
+          --data_seed 42 \
+          --dataloader_num_workers 8 \
+          --dataloader_prefetch_factor 2 \
+          --remove_unused_columns True \
+          --do_train True \
+          --do_eval True \
+          --do_predict True
       done
     done
   done
