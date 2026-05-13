@@ -137,7 +137,7 @@ class DataTrainingArguments:
             "help": "Test / prediction data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     text_column_name: Optional[str] = field(
-        default="text",
+        default="sentence",
         metadata={"help": "Column containing the input sentence text."},
     )
     speech_turn_column_name: Optional[str] = field(
