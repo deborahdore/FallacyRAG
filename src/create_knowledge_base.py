@@ -13,7 +13,7 @@ from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.retrieve_docs import create_and_save_record, get_request, simulate_browser, safe_filename, \
-    fetch_wikipedia_sections
+    fetch_wikipedia_sections, post_request, get_item_ids
 
 logging.basicConfig(
     level=logging.INFO,
@@ -28,19 +28,55 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base"
 GOV_MANUAL_URL = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml"
 BILLS_URL = "https://www.govinfo.gov/sitemap/BILLS_sitemap_index.xml"
 PLAWS_URL = "https://www.govinfo.gov/sitemap/PLAW_sitemap_index.xml"
+GOVINFO_URL = f"https://api.govinfo.gov/search"
 UDHR_PATH = "./misc/udhr.pdf"
 
 TOPIC_RESULTS_PATH = "./notebooks/topic_results.json"
+TOPIC_WITH_YEAR_RESULTS_PATH = "./notebooks/topic_results_with_year.json"
 CONGRESS_MEMBERS_PATH = "./misc/HSall_members.csv"
 BIOGUIDE_URL = "https://bioguide.congress.gov/search/bio/{id}.json"
 
 CENSUS_BASE = "https://data.census.gov/api"
+
+CHRONICLING_AMERICA_SEARCH_URL = "https://www.loc.gov/newspapers/"
+CHRONICLING_AMERICA_MIN_YEAR = 1770
+CHRONICLING_AMERICA_MAX_YEAR = 1963
 
 
 # ============================================ #
 
 def bills_and_laws(path: Path):
     path.mkdir(parents=True, exist_ok=True)
+
+    # =================== get bills and laws =================== #
+    for topic, _ in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
+        res = post_request(url=GOVINFO_URL,
+                           params={"api_key": os.environ["GOVINFO_API_KEY"]},
+                           json_obj={"query": topic, "pageSize": 15, "offsetMark": "*"},
+                           return_json=True)
+        for result in res["results"]:
+            pkg_id = result["packageId"]
+            gran_id = result.get("granuleId", pkg_id)
+            year = int(result.get("dateIssued", "1900-01-01")[:4])
+
+            download_url = f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm"
+            content = get_request(
+                url=download_url,
+                params={"api_key": os.environ["GOVINFO_API_KEY"]},
+                return_json=False
+            )
+
+            filename = create_and_save_record(
+                path=path,
+                id=gran_id,
+                text=content.get_text(separator="\n", strip=True),
+                source="U.S. Government Information Official Website",
+                url=download_url,
+                xml=content.prettify(),
+                year=year
+            )
+            log.info(f"Saved {filename}")
+    del filename
 
     # =================== get government manual =================== #
     id = "GOVMAN-2025-01-13"
@@ -76,32 +112,32 @@ def bills_and_laws(path: Path):
     del id, filename, text
 
     # =================== get bills and laws =================== #
-    for url in [BILLS_URL, PLAWS_URL]:
-        root = get_request(url=url)
-        assert root is not None
-
-        for year in root.find_all("loc"):
-            y_resp = get_request(url=year.text)
-            if y_resp is None: continue
-
-            for bill in y_resp.find_all("loc"):
-                b_id = bill.text.split("/")[-1]
-                if b_id + ".json" in os.listdir(path):
-                    continue
-                custom_url = f"https://www.govinfo.gov/content/pkg/{b_id}/html/{b_id}.htm"
-                response = get_request(url=custom_url)
-                if response is None: continue
-
-                filename = create_and_save_record(path=path,
-                                                  id=b_id,
-                                                  text=response.text,
-                                                  source="U.S. Government Information Official WebSite",
-                                                  url=custom_url,
-                                                  xml=response.prettify(),
-                                                  year=int(year.text.split("_")[1]))
-                log.info(f"Saved {filename}")
-
-    del filename, response, custom_url
+    # for url in [BILLS_URL, PLAWS_URL]:
+    #     root = get_request(url=url)
+    #     assert root is not None
+    #
+    #     for year in root.find_all("loc"):
+    #         y_resp = get_request(url=year.text)
+    #         if y_resp is None: continue
+    #
+    #         for bill in y_resp.find_all("loc"):
+    #             b_id = bill.text.split("/")[-1]
+    #             if b_id + ".json" in os.listdir(path):
+    #                 continue
+    #             custom_url = f"https://www.govinfo.gov/content/pkg/{b_id}/html/{b_id}.htm"
+    #             response = get_request(url=custom_url)
+    #             if response is None: continue
+    #
+    #             filename = create_and_save_record(path=path,
+    #                                               id=b_id,
+    #                                               text=response.text,
+    #                                               source="U.S. Government Information Official WebSite",
+    #                                               url=custom_url,
+    #                                               xml=response.prettify(),
+    #                                               year=int(year.text.split("_")[1]))
+    #             log.info(f"Saved {filename}")
+    #
+    # del filename, response, custom_url
 
 
 def definitions(path: Path):
@@ -284,11 +320,58 @@ def geography(path: Path):
         log.info("Saved %s", filename)
 
 
+def newspapers(path: Path):
+    path.mkdir(parents=True, exist_ok=True)
+    searchURL = 'https://www.loc.gov/collections/chronicling-america/?dl=page&ops=PHRASE&qs={query}&searchType=advanced&start_date=1950-01-01&fo=json'
+    fileExtension = 'pdf'
+    saveTo = os.path.join(path, "tmp_output")
+    for topic, _ in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
+        url = searchURL.format(query=topic.replace(" ", "+"))
+        ids_list = get_item_ids(url, items=[])
+        new_ids = []
+        for id in ids_list:
+            if not id.endswith('&fo=json'):
+                id += '&fo=json'
+            new_ids.append(id)
+
+        for item in new_ids:
+            call = requests.get(item)
+            if call.status_code == 200:
+                data = call.json()
+                page = data['page']
+                for page in page:
+                    if 'url' in page:
+                        page_url = page['url']
+                        if page_url.endswith(fileExtension):
+                            print(page_url)
+
+        # Get the page URLs
+        page_urls = []
+        for item in new_ids:
+            call = requests.get(item)
+            if call.status_code == 200:
+                data = call.json()
+                page = data['page']
+                for page in page:
+                    if 'url' in page:
+                        page_url = page['url']
+                        if page_url.endswith(fileExtension):
+                            page_urls.append(page_url)
+
+        for page_url in page_urls:
+            filename = page_url.split('/')[-1]
+            response = requests.get(page_url)
+            file_path = os.path.join(saveTo, filename)
+            with open(file_path, 'wb') as f:
+                f.write(response.content)
+
+
 def main():
-    bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
-    definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
+    # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
+    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    # definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
+    newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
 
 
 if __name__ == "__main__":

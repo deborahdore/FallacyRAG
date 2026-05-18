@@ -58,6 +58,19 @@ def get_request(url: str, params: dict | None = None, return_json: bool = False)
     return BeautifulSoup(r.text, "xml")
 
 
+def post_request(url: str, params: dict | None = None, json_obj: dict = None, return_json: bool = False):
+    response = requests.post(
+        url,
+        params=params,
+        json=json_obj,
+        timeout=30
+    )
+    response.raise_for_status()
+    if return_json:
+        return response.json()
+    return BeautifulSoup(response.text, "xml")
+
+
 def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS):
     """Fetch a JSON endpoint via a headless Chromium browser."""
     with sync_playwright() as p:
@@ -311,3 +324,46 @@ def plot_paragraph_cdf(lengths, counts, output_path="./data/paragraph_length_dis
     plt.tight_layout(rect=[0, 0.03, 1, 1])
     plt.savefig(output_path, dpi=150, bbox_inches="tight")
     plt.show()
+
+
+def get_item_ids(url, items, conditional='True'):
+    # Check that the query URL is not an item or resource link.
+    exclude = ["loc.gov/item", "loc.gov/resource"]
+    if any(string in url for string in exclude):
+        raise NameError('Your URL points directly to an item or '
+                        'resource page (you can tell because "item" '
+                        'or "resource" is in the URL). Please use '
+                        'a search URL instead. For example, instead '
+                        'of \"https://www.loc.gov/item/2009581123/\", '
+                        'try \"https://www.loc.gov/maps/?q=2009581123\". ')
+
+    # request pages of 100 results at a time
+    params = {"fo": "json", "c": 1, "at": "results,pagination"}
+    call = requests.get(url, params=params)
+    # Check that the API request was successful
+    if (call.status_code == 200) & ('json' in call.headers.get('content-type')):
+        data = call.json()
+        results = data['results']
+        for result in results:
+            # Filter out anything that's a colletion or web page
+            filter_out = ("collection" in result.get("original_format")) \
+                         or ("web page" in result.get("original_format")) \
+                         or (eval(conditional) == False)
+            if not filter_out:
+                # Get the link to the item record
+                if result.get("id"):
+                    item = result.get("id")
+                    # Filter out links to Catalog or other platforms
+                    if item.startswith("http://www.loc.gov/resource"):
+                        resource = item  # Assign item to resource
+                        items.append(resource)
+                    if item.startswith("http://www.loc.gov/item"):
+                        items.append(item)
+        # Repeat the loop on the next page, unless we're on the last page.
+        if data["pagination"]["next"] is not None:
+            next_url = data["pagination"]["next"]
+            get_item_ids(next_url, items, conditional)
+
+        return items
+    else:
+        print('There was a problem. Try running the cell again, or check your searchURL.')
