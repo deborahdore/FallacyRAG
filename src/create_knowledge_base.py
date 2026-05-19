@@ -1,9 +1,13 @@
 import json
 import logging
 import os
+import re
 import tempfile
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
+import easyocr
+import numpy as np
 import pandas as pd
 import pytesseract
 import requests
@@ -324,53 +328,124 @@ def newspapers(path: Path):
     path.mkdir(parents=True, exist_ok=True)
     searchURL = 'https://www.loc.gov/collections/chronicling-america/?dl=page&ops=PHRASE&qs={query}&searchType=advanced&start_date=1950-01-01&fo=json'
     fileExtension = 'pdf'
-    saveTo = os.path.join(path, "tmp_output")
-    for topic, _ in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
+    saveTo = path / "tmp_output"
+    saveTo.mkdir(parents=True, exist_ok=True)
+
+    # ---- collect all unique item IDs across every topic ----
+    topics = [topic for topic, _ in
+              json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]][:2]
+    all_item_ids: set[str] = set()
+    for topic in tqdm(topics, desc="Collecting item IDs"):
         url = searchURL.format(query=topic.replace(" ", "+"))
-        ids_list = get_item_ids(url, items=[])
-        new_ids = []
-        for id in ids_list:
-            if not id.endswith('&fo=json'):
-                id += '&fo=json'
-            new_ids.append(id)
+        try:
+            items = get_item_ids(url, items=[])
+            for item_id in items:
+                if not item_id.endswith('&fo=json'):
+                    item_id += '&fo=json'
+                all_item_ids.add(item_id)
+        except Exception as e:
+            continue
 
-        for item in new_ids:
-            call = requests.get(item)
-            if call.status_code == 200:
-                data = call.json()
-                page = data['page']
-                for page in page:
-                    if 'url' in page:
-                        page_url = page['url']
-                        if page_url.endswith(fileExtension):
-                            print(page_url)
+    log.info("Found %d unique item IDs across %d topics", len(all_item_ids), len(topics))
 
-        # Get the page URLs
-        page_urls = []
-        for item in new_ids:
-            call = requests.get(item)
-            if call.status_code == 200:
-                data = call.json()
-                page = data['page']
-                for page in page:
-                    if 'url' in page:
-                        page_url = page['url']
-                        if page_url.endswith(fileExtension):
-                            page_urls.append(page_url)
+    # ---- fetch page URLs from all items in parallel ----
+    def fetch_page_urls(item_url: str, session: requests.Session) -> list[str]:
+        try:
+            r = session.get(item_url, timeout=30)
+            if r.status_code != 200:
+                return []
+            return [
+                page['url']
+                for page in r.json().get('page', [])
+                if 'url' in page and page['url'].endswith(fileExtension)
+            ]
+        except Exception as e:
+            log.warning("Failed to fetch item %s: %s", item_url, e)
+            return []
 
-        for page_url in page_urls:
-            filename = page_url.split('/')[-1]
-            response = requests.get(page_url)
-            file_path = os.path.join(saveTo, filename)
-            with open(file_path, 'wb') as f:
-                f.write(response.content)
+    page_urls: set[str] = set()
+    with requests.Session() as session:
+        with ThreadPoolExecutor(max_workers=10) as executor:
+            futures = {executor.submit(fetch_page_urls, item, session): item for item in all_item_ids}
+            for future in tqdm(as_completed(futures), total=len(futures), desc="Fetching item metadata"):
+                page_urls.update(future.result())
+
+    log.info("Found %d unique PDF page URLs", len(page_urls))
+
+    # ---- download PDFs in parallel, skipping already-downloaded files ----
+    def download_pdf(page_url: str, session: requests.Session) -> None:
+        dest = saveTo / page_url.split('/')[-1]
+        if dest.exists():
+            log.info("Skipping already-downloaded %s", dest.name)
+            return
+        try:
+            r = session.get(page_url, timeout=60)
+            r.raise_for_status()
+            dest.write_bytes(r.content)
+            log.info("Downloaded %s", dest.name)
+        except Exception as e:
+            log.warning("Failed to download %s: %s", page_url, e)
+
+    with requests.Session() as session:
+        with ThreadPoolExecutor(max_workers=5) as executor:
+            futures = {executor.submit(download_pdf, url, session): url for url in page_urls}
+            for _ in tqdm(as_completed(futures), total=len(futures), desc="Downloading PDFs"):
+                pass
+
+    # ---- OCR PDFs from tmp_output and save records to the newspaper folder ----
+    pdf_files = list(saveTo.glob("*.pdf"))
+    log.info("Found %d PDF files to OCR", len(pdf_files))
+
+    reader = easyocr.Reader(['en'], gpu=False)
+
+    for pdf_path in tqdm(pdf_files, desc="OCR-ing PDFs"):
+        try:
+            file_id = safe_filename(pdf_path.stem)
+
+            # Try to extract a 4-digit year from the filename that falls within
+            # the Chronicling America date range.
+            year = CHRONICLING_AMERICA_MIN_YEAR
+            for match in re.finditer(r'(\d{4})', pdf_path.stem):
+                candidate = int(match.group(1))
+                if CHRONICLING_AMERICA_MIN_YEAR <= candidate <= CHRONICLING_AMERICA_MAX_YEAR:
+                    year = candidate
+                    break
+
+            # Convert each PDF page to an image then OCR with EasyOCR.
+            pages = convert_from_path(str(pdf_path), dpi=300)
+            page_texts = []
+            for page_img in pages:
+                results = reader.readtext(np.array(page_img), detail=0, paragraph=True)
+                page_texts.append(" ".join(results))
+
+            text = "\n\n".join(page_texts)
+            if not text.strip():
+                log.warning("No text extracted from %s, skipping", pdf_path.name)
+                continue
+
+            filename = create_and_save_record(
+                path=path,
+                id=file_id,
+                text=text,
+                source="Chronicling America - Library of Congress Historic Newspapers",
+                url=f"https://chroniclingamerica.loc.gov/{pdf_path.stem}",
+                year=year
+            )
+            log.info("Saved %s", filename)
+        except Exception as e:
+            log.error("Error OCR-ing %s: %s", pdf_path.name, e)
+
+    # ---- clean up the temporary PDF folder ----
+    import shutil
+    shutil.rmtree(saveTo, ignore_errors=True)
+    log.info("Removed temporary folder %s", saveTo)
 
 
 def main():
-    # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
-    # definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
+    bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
+    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
     newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
 
 

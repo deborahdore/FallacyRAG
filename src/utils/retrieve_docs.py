@@ -338,14 +338,14 @@ def get_item_ids(url, items, conditional='True'):
                         'try \"https://www.loc.gov/maps/?q=2009581123\". ')
 
     # request pages of 100 results at a time
-    params = {"fo": "json", "c": 1, "at": "results,pagination"}
+    params = {"fo": "json", "c": 5, "at": "results,pagination"}
     call = requests.get(url, params=params)
     # Check that the API request was successful
     if (call.status_code == 200) & ('json' in call.headers.get('content-type')):
         data = call.json()
         results = data['results']
         for result in results:
-            # Filter out anything that's a colletion or web page
+            # Filter out anything that's a collection or web page
             filter_out = ("collection" in result.get("original_format")) \
                          or ("web page" in result.get("original_format")) \
                          or (eval(conditional) == False)
@@ -360,9 +360,9 @@ def get_item_ids(url, items, conditional='True'):
                     if item.startswith("http://www.loc.gov/item"):
                         items.append(item)
         # Repeat the loop on the next page, unless we're on the last page.
-        if data["pagination"]["next"] is not None:
-            next_url = data["pagination"]["next"]
-            get_item_ids(next_url, items, conditional)
+        # if data["pagination"]["next"] is not None:
+        #     next_url = data["pagination"]["next"]
+        #     get_item_ids(next_url, items, conditional)
 
         return items
     else:
