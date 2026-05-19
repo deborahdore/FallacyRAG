@@ -32,7 +32,7 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base"
 GOV_MANUAL_URL = "https://www.govinfo.gov/content/pkg/GOVMAN-2025-01-13/xml/GOVMAN-2025-01-13.xml"
 BILLS_URL = "https://www.govinfo.gov/sitemap/BILLS_sitemap_index.xml"
 PLAWS_URL = "https://www.govinfo.gov/sitemap/PLAW_sitemap_index.xml"
-GOVINFO_URL = f"https://api.govinfo.gov/search"
+GOVINFO_URL = "https://api.govinfo.gov/search"
 UDHR_PATH = "./misc/udhr.pdf"
 
 TOPIC_RESULTS_PATH = "./notebooks/topic_results.json"
@@ -49,38 +49,55 @@ CHRONICLING_AMERICA_MAX_YEAR = 1963
 
 # ============================================ #
 
+def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
+    pkg_id = result["packageId"]
+    gran_id = result.get("granuleId", pkg_id)
+    doc_year = int(result.get("dateIssued", "1900-01-01")[:4])
+
+    download_url = f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm"
+    content = get_request(url=download_url, params=api_params, return_json=False)
+
+    filename = create_and_save_record(
+        path=path,
+        id=gran_id,
+        text=content.get_text(separator="\n", strip=True),
+        source="U.S. Government Information Official Website",
+        url=download_url,
+        xml=content.prettify(),
+        year=doc_year,
+    )
+    log.info("Saved %s", filename)
+    return filename
+
+
 def bills_and_laws(path: Path):
     path.mkdir(parents=True, exist_ok=True)
 
+    # Cache once — avoids repeated env lookups on every request
+    api_params = {"api_key": os.environ["GOVINFO_API_KEY"]}
+
     # =================== get bills and laws =================== #
-    for topic, _ in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
-        res = post_request(url=GOVINFO_URL,
-                           params={"api_key": os.environ["GOVINFO_API_KEY"]},
-                           json_obj={"query": topic, "pageSize": 15, "offsetMark": "*"},
-                           return_json=True)
-        for result in res["results"]:
-            pkg_id = result["packageId"]
-            gran_id = result.get("granuleId", pkg_id)
-            year = int(result.get("dateIssued", "1900-01-01")[:4])
+    for topic, year in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
+        res = post_request(
+            url=GOVINFO_URL,
+            params=api_params,
+            json_obj={
+                "query": topic,
+                "pageSize": 500,
+                "offsetMark": "*",
+                "sorts": [{"field": "string", "sortOrder": "score"}],
+                "facets": {"publishdatehier": list(range(year - 4, year + 1))},
+            },
+            return_json=True,
+        )
 
-            download_url = f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm"
-            content = get_request(
-                url=download_url,
-                params={"api_key": os.environ["GOVINFO_API_KEY"]},
-                return_json=False
-            )
-
-            filename = create_and_save_record(
-                path=path,
-                id=gran_id,
-                text=content.get_text(separator="\n", strip=True),
-                source="U.S. Government Information Official Website",
-                url=download_url,
-                xml=content.prettify(),
-                year=year
-            )
-            log.info(f"Saved {filename}")
-    del filename
+        with ThreadPoolExecutor(max_workers=10) as pool:
+            futures = {
+                pool.submit(_fetch_and_save_result, result, path, api_params): result
+                for result in res["results"]
+            }
+            for fut in as_completed(futures):
+                fut.result()  # re-raises any exception from the worker
 
     # =================== get government manual =================== #
     id = "GOVMAN-2025-01-13"
