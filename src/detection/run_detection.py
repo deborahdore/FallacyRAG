@@ -124,15 +124,15 @@ class DataTrainingArguments:
         metadata={"help": "Configuration name for the dataset."},
     )
     train_file: Optional[str] = field(
-        default="./dataset/detection/train.json",
+        default="./dataset/detection/train.csv",
         metadata={"help": "Training data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     validation_file: Optional[str] = field(
-        default="./dataset/detection/dev.json",
+        default="./dataset/detection/dev.csv",
         metadata={"help": "Validation data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     test_file: Optional[str] = field(
-        default="./dataset/detection/test.json",
+        default="./dataset/detection/test.csv",
         metadata={
             "help": "Test / prediction data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
@@ -149,7 +149,7 @@ class DataTrainingArguments:
         metadata={"help": "Column containing the RAG context text (used when --use_rag is set)."},
     )
     label_column_name: Optional[str] = field(
-        default="label",
+        default="fallacy_label",
         metadata={"help": "Column containing the binary classification label."},
     )
     overwrite_cache: bool = field(
@@ -364,19 +364,8 @@ def main():
         ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
     )
 
-    # Sync label mappings between this run and the model config
-    if training_args.do_train:
-        if model.config.label2id != label_to_id:
-            logger.warning(
-                "The label2id in model config.json differs from this run. "
-                "You can ignore this if you are fine-tuning."
-            )
-        model.config.label2id = label_to_id
-        model.config.id2label = {id: label for label, id in label_to_id.items()}
-    else:
-        logger.info(f"Using label infos from model config: label2id = {model.config.label2id}")
-        label_to_id = model.config.label2id
-        label_list = [model.config.id2label[i] for i in range(len(model.config.id2label))]
+    model.config.label2id = label_to_id
+    model.config.id2label = {id: label for label, id in label_to_id.items()}
 
     # ── Tokenisation ──────────────────────────────────────────────────────
     if data_args.max_seq_length > tokenizer.model_max_length:
@@ -493,18 +482,28 @@ def main():
     # ── Prediction ────────────────────────────────────────────────────────
     if training_args.do_predict:
         logger.info("*** Predict ***")
+        metrics = trainer.evaluate(eval_dataset=predict_dataset, metric_key_prefix="predict")
+        max_predict_samples = (
+            data_args.max_predict_samples if data_args.max_predict_samples is not None else len(predict_dataset)
+        )
+        metrics["predict_samples"] = min(max_predict_samples, len(predict_dataset))
+        trainer.log_metrics("predict", metrics)
+        trainer.save_metrics("predict", metrics)
+
         if "label" in predict_dataset.features:
+            label_column = predict_dataset['label']
             predict_dataset = predict_dataset.remove_columns("label")
         predictions = trainer.predict(predict_dataset, metric_key_prefix="predict").predictions
+
         predictions = np.argmax(predictions, axis=1)
 
         if trainer.is_world_process_zero():
             output_path = os.path.join(training_args.output_dir, "predict_results.txt")
             with open(output_path, "w") as fh:
                 logger.info("***** Predict results *****")
-                fh.write("index\tprediction\n")
-                for index, item in enumerate(predictions):
-                    fh.write(f"{index}\t{label_list[item]}\n")
+                fh.write("index\tprediction\tgold\n")
+                for index, item in enumerate(zip(predictions, np.array(label_column))):
+                    fh.write(f"{index}\t{label_list[item[0]]}\t{label_list[item[1]]}\n")
             logger.info(f"Predictions saved to {output_path}")
 
     # ── Model card / Hub push ─────────────────────────────────────────────

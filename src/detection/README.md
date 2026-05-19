@@ -33,25 +33,25 @@ The `[CLS]` representation is passed to a two-class linear head trained with cro
 
 ### Data
 
-| Argument                      | Default                            | Description                                                                                            |
-|-------------------------------|------------------------------------|--------------------------------------------------------------------------------------------------------|
-| `--dataset_name`              | `None`                             | HuggingFace dataset name (via `datasets` library).                                                     |
-| `--dataset_config_name`       | `None`                             | Configuration name for the dataset.                                                                    |
-| `--train_file`                | `./dataset/detection/train.json`   | Training data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set.                 |
-| `--validation_file`           | `./dataset/detection/dev.json`     | Validation data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set.               |
-| `--test_file`                 | `./dataset/detection/test.json`    | Test / prediction data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set.        |
-| `--text_column_name`          | `sentence`                         | Column containing the input sentence text.                                                             |
-| `--label_column_name`         | `label`                            | Column containing the binary classification label.                                                     |
-| `--context_column_name`       | `context`                          | Column containing the RAG context text (used when `--use_rag` is set).                                 |
-| `--overwrite_cache`           | `True`                             | Overwrite cached tokenised datasets.                                                                   |
-| `--preprocessing_num_workers` | `None`                             | Number of processes for `dataset.map()`.                                                               |
-| `--max_seq_length`            | `512`                              | Maximum total input length after tokenisation.                                                         |
-| `--pad_to_max_length`         | `False`                            | Pad all samples to `max_seq_length` (needed for TPU; otherwise dynamic padding is used).               |
-| `--max_train_samples`         | `None`                             | Truncate training set (for debugging).                                                                 |
-| `--max_eval_samples`          | `None`                             | Truncate evaluation set (for debugging).                                                               |
-| `--max_predict_samples`       | `None`                             | Truncate prediction set (for debugging).                                                               |
-| `--shuffle_train_dataset`     | `False`                            | Shuffle the training dataset before training.                                                          |
-| `--shuffle_seed`              | `42`                               | Random seed used when `--shuffle_train_dataset` is set.                                                |
+| Argument                      | Default                          | Description                                                                                     |
+|-------------------------------|----------------------------------|-------------------------------------------------------------------------------------------------|
+| `--dataset_name`              | `None`                           | HuggingFace dataset name (via `datasets` library).                                              |
+| `--dataset_config_name`       | `None`                           | Configuration name for the dataset.                                                             |
+| `--train_file`                | `./dataset/detection/train.json` | Training data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set.          |
+| `--validation_file`           | `./dataset/detection/dev.json`   | Validation data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set.        |
+| `--test_file`                 | `./dataset/detection/test.json`  | Test / prediction data file (CSV or JSON). Use the `rag/` subdirectory when `--use_rag` is set. |
+| `--text_column_name`          | `sentence`                       | Column containing the input sentence text.                                                      |
+| `--label_column_name`         | `label`                          | Column containing the binary classification label.                                              |
+| `--context_column_name`       | `context`                        | Column containing the RAG context text (used when `--use_rag` is set).                          |
+| `--overwrite_cache`           | `True`                           | Overwrite cached tokenised datasets.                                                            |
+| `--preprocessing_num_workers` | `None`                           | Number of processes for `dataset.map()`.                                                        |
+| `--max_seq_length`            | `512`                            | Maximum total input length after tokenisation.                                                  |
+| `--pad_to_max_length`         | `False`                          | Pad all samples to `max_seq_length` (needed for TPU; otherwise dynamic padding is used).        |
+| `--max_train_samples`         | `None`                           | Truncate training set (for debugging).                                                          |
+| `--max_eval_samples`          | `None`                           | Truncate evaluation set (for debugging).                                                        |
+| `--max_predict_samples`       | `None`                           | Truncate prediction set (for debugging).                                                        |
+| `--shuffle_train_dataset`     | `False`                          | Shuffle the training dataset before training.                                                   |
+| `--shuffle_seed`              | `42`                             | Random seed used when `--shuffle_train_dataset` is set.                                         |
 
 ---
 
@@ -62,7 +62,7 @@ classification. When enabled, the retrieved context is passed as the **second se
 attends over both the sentence and the knowledge-base signal simultaneously.
 
 | Argument                   | Default                                   | Description                                                                                                                                                                                                                                           |
-|----------------------------|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|----------------------------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `--use_rag`                | `False`                                   | Enable RAG: augments BERT input with retrieved knowledge-base context.                                                                                                                                                                                |
 | `--search_type`            | `similarity`                              | Retrieval strategy. One of: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`.                                                                                                                                                                |
 | `--retriever`              | `sentence-transformers/all-mpnet-base-v2` | Encoder used to build dense retrieval embeddings.                                                                                                                                                                                                     |
@@ -103,7 +103,7 @@ attends over both the sentence and the knowledge-base signal simultaneously.
 | `--adam_epsilon`                | `1e-8`              | Epsilon for numerical stability in Adam-based optimizers.                                                                                                                                                                                |
 | `--optim_target_modules`        | `None`              | Target modules for GaLore / APOLLO.                                                                                                                                                                                                      |
 | `--gradient_accumulation_steps` | `1`                 | Gradient accumulation steps. Effective batch = `per_device_train_batch_size × devices × this`.                                                                                                                                           |
-| `--max_grad_norm`               | `1.0`               | Gradient clipping max norm. Set to `0` to disable.                                                                                                                                                                                      |
+| `--max_grad_norm`               | `1.0`               | Gradient clipping max norm. Set to `0` to disable.                                                                                                                                                                                       |
 | `--label_smoothing_factor`      | `0.0`               | Label smoothing. `0` = no smoothing.                                                                                                                                                                                                     |
 | `--resume_from_checkpoint`      | `None`              | Path to a checkpoint folder to resume from.                                                                                                                                                                                              |
 | `--seed`                        | `42`                | Random seed.                                                                                                                                                                                                                             |
@@ -134,20 +134,20 @@ attends over both the sentence and the knowledge-base signal simultaneously.
 
 Metrics reported: **accuracy**, **precision** (macro), **recall** (macro), **f1\_macro**.
 
-| Argument                       | Default | Description                                                                       |
-|--------------------------------|---------|-----------------------------------------------------------------------------------|
-| `--do_eval`                    | `False` | Run evaluation.                                                                   |
-| `--eval_strategy`              | `no`    | When to evaluate: `no`, `steps`, `epoch`.                                         |
-| `--eval_steps`                 | `None`  | Steps between evaluations (when `eval_strategy=steps`).                           |
-| `--eval_delay`                 | `0`     | Epochs / steps to wait before first evaluation.                                   |
-| `--per_device_eval_batch_size` | `8`     | Batch size per device for evaluation.                                             |
-| `--eval_on_start`              | `False` | Run a full evaluation pass before training starts (sanity check).                 |
-| `--eval_accumulation_steps`    | `None`  | Accumulate prediction tensors for N steps before moving to CPU.                   |
-| `--prediction_loss_only`       | `False` | Return only the loss during evaluation.                                           |
-| `--metric_for_best_model`      | `None`  | Metric used with `load_best_model_at_end`.                                        |
-| `--greater_is_better`          | `None`  | Whether higher metric values are better.                                          |
-| `--load_best_model_at_end`     | `False` | Load the best checkpoint at end of training. Requires `eval_strategy` to be set.  |
-| `--do_predict`                 | `False` | Run predictions on the test set and write `predict_results.txt`.                  |
+| Argument                       | Default | Description                                                                      |
+|--------------------------------|---------|----------------------------------------------------------------------------------|
+| `--do_eval`                    | `False` | Run evaluation.                                                                  |
+| `--eval_strategy`              | `no`    | When to evaluate: `no`, `steps`, `epoch`.                                        |
+| `--eval_steps`                 | `None`  | Steps between evaluations (when `eval_strategy=steps`).                          |
+| `--eval_delay`                 | `0`     | Epochs / steps to wait before first evaluation.                                  |
+| `--per_device_eval_batch_size` | `8`     | Batch size per device for evaluation.                                            |
+| `--eval_on_start`              | `False` | Run a full evaluation pass before training starts (sanity check).                |
+| `--eval_accumulation_steps`    | `None`  | Accumulate prediction tensors for N steps before moving to CPU.                  |
+| `--prediction_loss_only`       | `False` | Return only the loss during evaluation.                                          |
+| `--metric_for_best_model`      | `None`  | Metric used with `load_best_model_at_end`.                                       |
+| `--greater_is_better`          | `None`  | Whether higher metric values are better.                                         |
+| `--load_best_model_at_end`     | `False` | Load the best checkpoint at end of training. Requires `eval_strategy` to be set. |
+| `--do_predict`                 | `False` | Run predictions on the test set and write `predict_results.txt`.                 |
 
 ---
 
