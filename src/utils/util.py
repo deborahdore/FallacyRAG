@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json
 import os
 import re
@@ -21,6 +23,15 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 BROWSER_TIMEOUT_MS = 30000
 SKIP_WIKI_SECTIONS = {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}
 
+def normalize_text(text):
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
+    text = re.sub(r"[“”]", '"', text)  # double quotes
+    text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
+    # text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text).strip()
+    return text
 
 def create_and_save_record(path: Path,
                            id: str,
@@ -29,7 +40,8 @@ def create_and_save_record(path: Path,
                            url: str,
                            xml: str = None,
                            year: int = 1900):
-    text = unicodedata.normalize("NFKD", text).encode("ascii", errors="ignore").decode("ascii")
+    text = normalize_text(text)
+
     if len(id.split()) > 1:
         id = safe_filename(id)
     record = {

@@ -16,7 +16,7 @@ from pdf2image import convert_from_path
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
-from src.utils.retrieve_docs import create_and_save_record, get_request, simulate_browser, safe_filename, \
+from src.utils.util import create_and_save_record, get_request, simulate_browser, safe_filename, \
     fetch_wikipedia_sections, post_request, get_item_ids
 
 logging.basicConfig(
@@ -51,22 +51,45 @@ CHRONICLING_AMERICA_MAX_YEAR = 1963
 
 def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
     pkg_id = result["packageId"]
-    gran_id = result.get("granuleId", pkg_id)
-    doc_year = int(result.get("dateIssued", "1900-01-01")[:4])
+    gran_id = result.get("granuleId") or pkg_id
+    id = gran_id.replace(" ", "_")
 
-    download_url = f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm"
-    content = get_request(url=download_url, params=api_params, return_json=False)
+    # Extract year from dateIssued or dateIngested
+    doc_year = None
+    for date_field in ["dateIssued", "dateIngested"]:
+        if result.get(date_field):
+            doc_year = int(result[date_field][:4])
+            break
+
+    # Fetch content with fallback URL
+    content = None
+    urls = [
+        f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm",
+        f"https://api.govinfo.gov/packages/{pkg_id}/granules/{pkg_id}.htm",
+    ]
+    correct_url = urls[0]
+    for url in urls:
+        try:
+            content = get_request(url=url, params=api_params)
+            correct_url = url
+            break
+        except Exception as e:
+            log.debug(f"Failed to fetch from {url}: {e}")
+            continue
+
+    if content is None:
+        log.error(f"Failed to fetch content for package {pkg_id}")
+        raise Exception(f"Could not fetch content for {pkg_id}")
 
     filename = create_and_save_record(
         path=path,
-        id=gran_id,
-        text=content.get_text(separator="\n", strip=True),
+        id=id,
+        text=content.get_text(separator=" ", strip=True),
         source="U.S. Government Information Official Website",
-        url=download_url,
+        url=correct_url,
         xml=content.prettify(),
         year=doc_year,
     )
-    log.info("Saved %s", filename)
     return filename
 
 
@@ -77,7 +100,11 @@ def bills_and_laws(path: Path):
     api_params = {"api_key": os.environ["GOVINFO_API_KEY"]}
 
     # =================== get bills and laws =================== #
-    for topic, year in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]:
+    for topic, year in (
+            (t, int(y))
+            for t, y in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]
+    ):
+        topic = topic.replace("_", " ")
         res = post_request(
             url=GOVINFO_URL,
             params=api_params,
@@ -85,19 +112,26 @@ def bills_and_laws(path: Path):
                 "query": topic,
                 "pageSize": 500,
                 "offsetMark": "*",
-                "sorts": [{"field": "string", "sortOrder": "score"}],
+                "sorts": [
+                    {
+                        "field": "score",
+                        "sortOrder": "DESC"
+                    }
+                ],
                 "facets": {"publishdatehier": list(range(year - 4, year + 1))},
+                "resultLevel": "default"
             },
             return_json=True,
         )
+        log.info("Found %d results for topic %s", len(res["results"]), topic)
 
         with ThreadPoolExecutor(max_workers=10) as pool:
             futures = {
                 pool.submit(_fetch_and_save_result, result, path, api_params): result
                 for result in res["results"]
             }
-            for fut in as_completed(futures):
-                fut.result()  # re-raises any exception from the worker
+        #     for fut in as_completed(futures):
+        #         fut.result()  # re-raises any exception from the worker
 
     # =================== get government manual =================== #
     id = "GOVMAN-2025-01-13"
@@ -350,7 +384,7 @@ def newspapers(path: Path):
 
     # ---- collect all unique item IDs across every topic ----
     topics = [topic for topic, _ in
-              json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]][:2]
+              json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]]
     all_item_ids: set[str] = set()
     for topic in tqdm(topics, desc="Collecting item IDs"):
         url = searchURL.format(query=topic.replace(" ", "+"))
@@ -448,7 +482,7 @@ def newspapers(path: Path):
                 url=f"https://chroniclingamerica.loc.gov/{pdf_path.stem}",
                 year=year
             )
-            log.info("Saved %s", filename)
+            # log.info("Saved %s", filename)
         except Exception as e:
             log.error("Error OCR-ing %s: %s", pdf_path.name, e)
 
@@ -460,10 +494,10 @@ def newspapers(path: Path):
 
 def main():
     bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
-    definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
-    newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
+    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    # definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
+    # newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
 
 
 if __name__ == "__main__":

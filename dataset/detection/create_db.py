@@ -4,14 +4,14 @@ import argparse
 import ast
 import logging
 import os
-import re
 import sys
-import unicodedata
 from types import SimpleNamespace
 
 import nltk
 import spacy
 from sklearn.model_selection import train_test_split
+
+from utils.utils import normalize_text
 
 nlp = spacy.load("en_core_web_sm")
 nltk.download("punkt_tab", quiet=True)
@@ -95,18 +95,6 @@ SEARCH_TYPES = {
         "search_kwargs": lambda args: {"k": args.top_k},
     },
 }
-
-
-def normalize_text(text):
-    text = unicodedata.normalize("NFKD", text)
-    text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
-    text = re.sub(r"\n", " ", text)
-    text = re.sub(r"[“”]", '"', text)  # double quotes
-    text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
-    text = text.encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"\s+", " ", text).strip()
-    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text).strip()
-    return text
 
 
 def search_knowledge_base(query: str,
