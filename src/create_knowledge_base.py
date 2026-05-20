@@ -90,6 +90,7 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
         xml=content.prettify(),
         year=doc_year,
     )
+    log.info(f"Saved {filename}")
     return filename
 
 
@@ -494,10 +495,10 @@ def newspapers(path: Path):
 
 def main():
     bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
-    # definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
-    # newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
+    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
+    newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
 
 
 if __name__ == "__main__":

@@ -71,16 +71,23 @@ def get_request(url: str, params: dict | None = None, return_json: bool = False)
 
 
 def post_request(url: str, params: dict | None = None, json_obj: dict = None, return_json: bool = False):
-    response = requests.post(
-        url,
-        params=params,
-        json=json_obj,
-        timeout=30
-    )
-    response.raise_for_status()
-    if return_json:
-        return response.json()
-    return BeautifulSoup(response.text, "xml")
+    while True:
+        response = requests.post(
+            url,
+            params=params,
+            json=json_obj,
+            timeout=30
+        )
+        if response.status_code == 429:
+            retry_after = response.headers.get("Retry-After", "60")
+            wait = float(retry_after)
+            print(f"Rate limited (429). Retrying after {wait}s...")
+            time.sleep(wait)
+            continue
+        response.raise_for_status()
+        if return_json:
+            return response.json()
+        return BeautifulSoup(response.text, "xml")
 
 
 def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS):
