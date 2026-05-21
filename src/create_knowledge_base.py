@@ -74,11 +74,11 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
             correct_url = url
             break
         except Exception as e:
-            log.debug(f"Failed to fetch from {url}: {e}")
+            # log.debug(f"Failed to fetch from {url}: {e}")
             continue
 
     if content is None:
-        log.error(f"Failed to fetch content for package {pkg_id}")
+        # log.error(f"Failed to fetch content for package {pkg_id}")
         raise Exception(f"Could not fetch content for {pkg_id}")
 
     filename = create_and_save_record(
@@ -90,7 +90,7 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
         xml=content.prettify(),
         year=doc_year,
     )
-    log.info(f"Saved {filename}")
+    # log.info(f"Saved {filename}")
     return filename
 
 
@@ -106,31 +106,32 @@ def bills_and_laws(path: Path):
             for t, y in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]
     ):
         topic = topic.replace("_", " ")
-        res = post_request(
-            url=GOVINFO_URL,
-            params=api_params,
-            json_obj={
-                "query": topic,
-                "pageSize": 500,
-                "offsetMark": "*",
-                "sorts": [
-                    {
-                        "field": "score",
-                        "sortOrder": "DESC"
-                    }
-                ],
-                "facets": {"publishdatehier": list(range(year - 4, year + 1))},
-                "resultLevel": "default"
-            },
-            return_json=True,
-        )
-        log.info("Found %d results for topic %s", len(res["results"]), topic)
+        for y in list(range(year - 4, year + 1)):
+            res = post_request(
+                url=GOVINFO_URL,
+                params=api_params,
+                json_obj={
+                    "query": topic,
+                    "pageSize": 15,
+                    "offsetMark": "*",
+                    "sorts": [
+                        {
+                            "field": "score",
+                            "sortOrder": "DESC"
+                        }
+                    ],
+                    "facets": {"publishdatehier": y},
+                    "resultLevel": "default"
+                },
+                return_json=True,
+            )
+            log.info("Found %d results for topic %s", len(res["results"]), topic)
 
-        with ThreadPoolExecutor(max_workers=10) as pool:
-            futures = {
-                pool.submit(_fetch_and_save_result, result, path, api_params): result
-                for result in res["results"]
-            }
+            with ThreadPoolExecutor(max_workers=10) as pool:
+                futures = {
+                    pool.submit(_fetch_and_save_result, result, path, api_params): result
+                    for result in res["results"]
+                }
         #     for fut in as_completed(futures):
         #         fut.result()  # re-raises any exception from the worker
 
@@ -396,6 +397,7 @@ def newspapers(path: Path):
                     item_id += '&fo=json'
                 all_item_ids.add(item_id)
         except Exception as e:
+            log.error("Failed to get item IDs: %s", e)
             continue
 
     log.info("Found %d unique item IDs across %d topics", len(all_item_ids), len(topics))
@@ -488,9 +490,9 @@ def newspapers(path: Path):
             log.error("Error OCR-ing %s: %s", pdf_path.name, e)
 
     # ---- clean up the temporary PDF folder ----
-    import shutil
-    shutil.rmtree(saveTo, ignore_errors=True)
-    log.info("Removed temporary folder %s", saveTo)
+    # import shutil
+    # shutil.rmtree(saveTo, ignore_errors=True)
+    # log.info("Removed temporary folder %s", saveTo)
 
 
 def main():
