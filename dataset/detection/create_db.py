@@ -10,9 +10,6 @@ from types import SimpleNamespace
 import nltk
 import spacy
 from sklearn.model_selection import train_test_split
-
-from utils.utils import normalize_text
-
 nlp = spacy.load("en_core_web_sm")
 nltk.download("punkt_tab", quiet=True)
 
@@ -32,6 +29,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
 from src.utils.fallacy_loader import FallacyLoader
+from src.utils.util import normalize_text
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -338,10 +336,10 @@ if __name__ == "__main__":
         "--summarization-model",
         default=None,
         choices=[
-            "gpt-4o-mini",
+            "openai/gpt-oss-20b",
             "mistralai/Mistral-7B-Instruct-v0.3",
-            "google/gemma-4-31B-it",
-            "meta-llama/Llama-3.1-8B-Instruct"
+            "meta-llama/Llama-3.1-8B-Instruct",
+            "Qwen/Qwen3.5-9B-Base"
         ],
         help="Optional model name to summarize retrieved passages.",
     )
