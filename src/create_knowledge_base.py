@@ -107,25 +107,29 @@ def bills_and_laws(path: Path):
     ):
         topic = topic.replace("_", " ")
         for y in list(range(year - 4, year + 1)):
-            res = post_request(
-                url=GOVINFO_URL,
-                params=api_params,
-                json_obj={
-                    "query": topic,
-                    "pageSize": 15,
-                    "offsetMark": "*",
-                    "sorts": [
-                        {
-                            "field": "score",
-                            "sortOrder": "DESC"
-                        }
-                    ],
-                    "facets": {"publishdatehier": y},
-                    "resultLevel": "default"
-                },
-                return_json=True,
-            )
-            log.info("Found %d results for topic %s", len(res["results"]), topic)
+            try:
+                res = post_request(
+                    url=GOVINFO_URL,
+                    params=api_params,
+                    json_obj={
+                        "query": topic,
+                        "pageSize": 15,
+                        "offsetMark": "*",
+                        "sorts": [
+                            {
+                                "field": "score",
+                                "sortOrder": "DESC"
+                            }
+                        ],
+                        "facets": {"publishdatehier": y},
+                        "resultLevel": "default"
+                    },
+                    return_json=True,
+                )
+                log.info("Found %d results for topic %s", len(res["results"]), topic)
+            except Exception as e:
+                log.error(e)
+                continue
 
             with ThreadPoolExecutor(max_workers=10) as pool:
                 futures = {
@@ -218,7 +222,7 @@ def definitions(path: Path):
             with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
                 tmp_path = Path(tmp.name)
 
-            response = requests.get(link, timeout=30, stream=True)
+            response = requests.get(link, timeout=120, stream=True)
             response.raise_for_status()
             tmp_path.write_bytes(response.content)
 
@@ -385,8 +389,8 @@ def newspapers(path: Path):
     saveTo.mkdir(parents=True, exist_ok=True)
 
     # ---- collect all unique item IDs across every topic ----
-    topics = [topic for topic, _ in
-              json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]]
+    topics_with_year = Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8")
+    topics = [topic for topic, _ in json.loads(topics_with_year)["TOPICS"]]
     all_item_ids: set[str] = set()
     for topic in tqdm(topics, desc="Collecting item IDs"):
         url = searchURL.format(query=topic.replace(" ", "+"))
@@ -405,7 +409,7 @@ def newspapers(path: Path):
     # ---- fetch page URLs from all items in parallel ----
     def fetch_page_urls(item_url: str, session: requests.Session) -> list[str]:
         try:
-            r = session.get(item_url, timeout=30)
+            r = session.get(item_url, timeout=120)
             if r.status_code != 200:
                 return []
             return [
@@ -433,7 +437,17 @@ def newspapers(path: Path):
             log.info("Skipping already-downloaded %s", dest.name)
             return
         try:
-            r = session.get(page_url, timeout=60)
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+                'Referer': 'https://tile.loc.gov/',
+                'Accept': 'application/pdf',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'DNT': '1',
+                'Connection': 'keep-alive',
+                'Upgrade-Insecure-Requests': '1'
+            }
+            r = session.get(page_url, timeout=120, headers=headers)
             r.raise_for_status()
             dest.write_bytes(r.content)
             log.info("Downloaded %s", dest.name)

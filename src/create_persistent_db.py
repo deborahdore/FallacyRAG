@@ -125,7 +125,7 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
 
     loader = FallacyLoader(
         source_path=KNOWLEDGE_BASE_PATH,
-        directories=["people", "bills", "definitions", "geography"],
+        directories=["bills", "definitions", "geography", "newspapers", "people"],
     )
 
     docs = loader.load()

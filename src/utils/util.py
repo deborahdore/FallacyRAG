@@ -76,7 +76,7 @@ def post_request(url: str, params: dict | None = None, json_obj: dict = None, re
             url,
             params=params,
             json=json_obj,
-            timeout=30
+            timeout=120
         )
         if response.status_code == 429:
             retry_after = response.headers.get("Retry-After", "60")
