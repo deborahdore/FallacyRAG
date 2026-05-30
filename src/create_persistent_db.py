@@ -57,9 +57,9 @@ RETRIEVERS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed")
+    # "llama3": lambda: OllamaEmbeddings(model="llama3"),
+    # "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
+    # "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed")
 }
 
 
@@ -166,14 +166,14 @@ if __name__ == "__main__":
     parser.add_argument(
         "--chunk-size",
         type=int,
-        default=800,
+        default=1000,
         help="Maximum characters per chunk",
     )
 
     parser.add_argument(
         "--chunk-overlap",
         type=int,
-        default=None,
+        default=200,
         help="Character overlap between chunks",
     )
 

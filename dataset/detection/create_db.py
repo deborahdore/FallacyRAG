@@ -191,8 +191,8 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
 def main(persist_directory_path: str = "./chromadb",
          retriever: str = None,
          search_type: str = "similarity",
-         chunk_size: int = 800,
-         chunk_overlap: int = 80,
+         chunk_size: int = 1000,
+         chunk_overlap: int = 200,
          top_k: int = 3,
          fetch_k: int = 20,
          lambda_mult: float = 0.5,
@@ -351,13 +351,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "--chunk-size",
         type=int,
-        default=800,
+        default=1000,
         help="Text splitter chunk size in characters (default: 800).",
     )
     parser.add_argument(
         "--chunk-overlap",
         type=int,
-        default=80,
+        default=200,
         help="Overlap between consecutive chunks in characters (default: 80).",
     )
     parser.add_argument(
@@ -397,7 +397,7 @@ if __name__ == "__main__":
         retriever_name = args.retriever.replace("/", "-")
         path = f"dataset/detection/{retriever_name}"
         if args.summarization_model:
-            path = f"dataset/detection/bio_tags/rag/{retriever_name}/{args.summarization_model}"
+            path = f"dataset/detection/{retriever_name}/{args.summarization_model}"
             logger.info(
                 f"Generating dataset with RAG Context with {args.retriever} as retriever and {args.summarization_model} as summarization model.")
         else:
