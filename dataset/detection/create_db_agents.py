@@ -5,6 +5,7 @@ import ast
 import logging
 import os
 import sys
+from pathlib import Path
 from types import SimpleNamespace
 
 import nltk
@@ -618,17 +619,19 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    path = f"dataset/detection/"
+    path = Path("dataset") / "detection" / "agentic=true"
+    path = str(path)
+
+    path += f"-temporal={str(args.temporal_rag)}"
+
     if args.retriever:
         retriever_name = args.retriever.replace("/", "-")
-        agent_slug = args.agent_model.replace("/", "-").replace(":", "-")
-        path = f"dataset/agents/detection/{retriever_name}/agent_{agent_slug}"
-        logger.info(
-            f"Generating dataset with Agentic RAG — retriever: {args.retriever}, "
-            f"agent model: {args.agent_model}."
-        )
+        path += f"-retriever={retriever_name}"
     else:
-        logger.info("Generating dataset without RAG Context.")
+        path += "-retriever=false"
+
+    path += "-summarizer=false"
+    path = path.lower()
 
     os.makedirs(path, exist_ok=True)
 

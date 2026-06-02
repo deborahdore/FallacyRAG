@@ -5,6 +5,7 @@ import ast
 import logging
 import os
 import sys
+from pathlib import Path
 from types import SimpleNamespace
 
 import nltk
@@ -427,19 +428,23 @@ if __name__ == "__main__":
     if args.search_type == "bm25" and args.retriever != "bm25":
         parser.error("--search-type bm25 requires --retriever bm25")
 
-    path = f"dataset/detection"
+    path = Path("dataset") / "detection" / "agentic=false"
+    path = str(path)
+
+    path += f"-temporal={str(args.temporal_rag)}"
+
     if args.retriever:
         retriever_name = args.retriever.replace("/", "-")
-        path = f"dataset/detection/{retriever_name}"
-        if args.summarization_model:
-            path = f"dataset/detection/{retriever_name}/{args.summarization_model}"
-            logger.info(
-                f"Generating dataset with RAG Context with {args.retriever} as retriever and {args.summarization_model} as summarization model.")
-        else:
-            logger.info(
-                f"Generating dataset with RAG Context with {args.retriever} as retriever and NO summarization model.")
+        path += f"-retriever={retriever_name}"
     else:
-        logger.info("Generating dataset without RAG Context.")
+        path += "-retriever=false"
+
+    if args.summarization_model:
+        path += f"-summarizer={args.summarization_model}"
+    else:
+        path += "-summarizer=false"
+
+    path = path.lower()
 
     os.makedirs(path, exist_ok=True)
 

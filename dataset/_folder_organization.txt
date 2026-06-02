@@ -1,17 +1,5 @@
-dataset
-  └── test.csv
-  └── dev.csv
-  └── train.csv
-  └── detection
-    └── train.json (without rag)
-    └── test.json (without rag)
-    └── dev.json (without rag)
-    └── *retriever model*
-        └── train.json (without summarization)
-        └── test.json (without summarization)
-        └── dev.json (without summarization)
-        └── *summarization model*
-            └── train.json
-            └── test.json
-            └── dev.json
- └── classification
+detection/
+└── agentic={true,false}/
+    └── temporal={true,false}/
+        └── retriever=<name>/
+            └── summarizer=<name>/
