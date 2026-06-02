@@ -23,6 +23,7 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 BROWSER_TIMEOUT_MS = 30000
 SKIP_WIKI_SECTIONS = {"External_links", "Further_reading", "Sources", "Notes", "See_also", "Media"}
 
+
 def normalize_text(text):
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
@@ -32,6 +33,7 @@ def normalize_text(text):
     # text = re.sub(r"\s+", " ", text).strip()
     text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text).strip()
     return text
+
 
 def create_and_save_record(path: Path,
                            id: str,

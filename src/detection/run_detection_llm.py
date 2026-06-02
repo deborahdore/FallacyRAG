@@ -469,10 +469,10 @@ def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
 
 
 def _build_load_kwargs(
-    model_name_or_path: str,
-    llm_args: "LLMExperimentArguments",
-    base_kwargs: dict,
-    torch_module,
+        model_name_or_path: str,
+        llm_args: "LLMExperimentArguments",
+        base_kwargs: dict,
+        torch_module,
 ) -> dict:
     """
     Populate quantization / dtype entries in `base_kwargs` for
@@ -553,7 +553,6 @@ class LocalLLMInference:
             revision=model_args.model_revision,
             token=model_args.token,
             trust_remote_code=model_args.trust_remote_code,
-            device_map="auto",
         )
         load_kwargs = _build_load_kwargs(model_name_or_path, llm_args, base_kwargs, torch)
 
@@ -728,7 +727,6 @@ def run_fine_tuning(
         revision=model_args.model_revision,
         token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
-        device_map="auto",
     )
     load_kwargs = _build_load_kwargs(model_args.model_name_or_path, llm_args, base_kwargs, torch)
 
@@ -785,7 +783,7 @@ def run_fine_tuning(
         seed=training_args.seed,
         report_to=training_args.report_to,
         dataset_text_field="text",
-        packing=False,  # no sequence packing (examples are short)
+        packing=False,
     )
 
     trainer = SFTTrainer(
@@ -795,7 +793,6 @@ def run_fine_tuning(
         eval_dataset=eval_sft,
         peft_config=lora_config,
         processing_class=tokenizer,
-        max_seq_length=2048,  # passed here since TRL moved it off SFTConfig
     )
 
     logger.info("Starting SFT training …")

@@ -1,35 +1,23 @@
 #!/bin/bash
-#SBATCH --job-name=fallacy_detection
-#SBATCH --account=vqm@a100
-#SBATCH -C a100
+#SBATCH --job-name=encoders_fallacy_detection
+#SBATCH --output=logs/encoders_fallacy_detection.out
+#SBATCH --error=logs/encoders_fallacy_detection.out
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=8
-#SBATCH --time=20:00:00
-#SBATCH --output=logs/fallacy_detection_%j.out
-#SBATCH --error=logs/fallacy_detection_%j.out
-#SBATCH --hint=nomultithread
-
 #SBATCH --mail-user=deborah.dore@inria.fr
-#SBATCH --mail-type=BEGIN,FAIL
-
-module purge
-module load cuda/12.4.1
-module load miniforge/24.9.0
-conda activate rags
+#SBATCH --mail-type=FAIL
 
 set -e
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
-export TOKENIZERS_PARALLELISM=false
-export HF_HOME="/linkhome/rech/genzqh01/ubq61ty/.cache/huggingface/hub/"
-wandb offline
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_HUB_OFFLINE=1
-export TRANSFORMERS_OFFLINE=1
+export TOKENIZERS_PARALLELISM=false
+export HF_HOME="/home/ddore/.cache/huggingface"
+export WANDB_PROJECT="fallacy_detection"
+export WANDB_PROJECT="fallacy_detection"
 
-SEED=14
+SEED=123
 export PYTHONHASHSEED=$SEED
 
-export WANDB_PROJECT="fallacy_detection"
+wandb offline
 
 TRAIN_FILE="dataset/detection/train.csv"
 VAL_FILE="dataset/detection/dev.csv"
@@ -41,6 +29,8 @@ MODELS=(
     "MARIANNE-INRIA/RooseBERT-cont-cased"
     "MARIANNE-INRIA/RooseBERT-scr-uncased"
     "MARIANNE-INRIA/RooseBERT-scr-cased"
+    "MARIANNE-INRIA/RooseBERTa-cont-cased"
+    "MARIANNE-INRIA/ModernRooseBERT-cont-cased"
     "allenai/longformer-base-4096"
     "answerdotai/ModernBERT-base"
     "FacebookAI/roberta-base"
@@ -50,16 +40,8 @@ MODELS=(
 )
 
 BATCH_SIZES=(8 16 32)
-LEARNING_RATES=(1e-5 2e-5 3e-5 5e-5 8e-5)
-EPOCHS=(2 3 4 5)
-
-SKIP_CONFS=(
-    "bs16_lr1e-5_ep2"  "bs8_lr1e-5_ep2"   "bs8_lr1e-5_ep3"   "bs8_lr1e-5_ep4"   "bs8_lr1e-5_ep5"
-    "bs8_lr2e-5_ep2"   "bs8_lr2e-5_ep3"   "bs8_lr2e-5_ep4"
-    "bs8_lr3e-5_ep2"   "bs8_lr3e-5_ep3"   "bs8_lr3e-5_ep5"
-    "bs8_lr5e-5_ep2"   "bs8_lr5e-5_ep3"   "bs8_lr5e-5_ep4"   "bs8_lr5e-5_ep5"
-    "bs8_lr8e-5_ep2"   "bs8_lr8e-5_ep3"   "bs8_lr8e-5_ep4"   "bs8_lr8e-5_ep5"
-)
+LEARNING_RATES=(2e-5 3e-5 5e-5)
+EPOCHS=(2 3 4)
 
 for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do
@@ -67,19 +49,6 @@ for model in "${MODELS[@]}"; do
       for epoch in "${EPOCHS[@]}"; do
         MODEL_NAME=$(basename "$model")
         CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
-
-        # Skip already-completed combinations
-        skip=false
-        for s in "${SKIP_CONFS[@]}"; do
-          if [[ "$CONF_ID" == "$s" ]]; then
-            skip=true
-            break
-          fi
-        done
-        if $skip; then
-          echo "Skipping $CONF_ID"
-          continue
-        fi
 
         OUTPUT_DIR="output_no_rag/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"

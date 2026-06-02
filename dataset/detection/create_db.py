@@ -10,6 +10,7 @@ from types import SimpleNamespace
 import nltk
 import spacy
 from sklearn.model_selection import train_test_split
+
 nlp = spacy.load("en_core_web_sm")
 nltk.download("punkt_tab", quiet=True)
 
@@ -42,6 +43,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
+_bm25_cache: dict[tuple[int, int], BM25Retriever] = {}
 _pipeline_cache: dict[str, pipeline] = {}
 
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
@@ -66,6 +68,7 @@ EMBEDDING_MODELS = {
     "llama3": lambda: OllamaEmbeddings(model="llama3"),
     "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
     "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
+    "bm25": "bm25-as-retriever",
 }
 
 SEARCH_TYPES = {
@@ -140,15 +143,20 @@ def search_knowledge_base(query: str,
 
 def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25Retriever:
     """Build a BM25 retriever directly from the knowledge base source documents."""
-    loader = FallacyLoader(
-        source_path=KNOWLEDGE_BASE_PATH,
-        directories=["people", "bills", "definitions", "geography"],
-    )
-    splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size, chunk_overlap=chunk_overlap, add_start_index=True
-    )
-    chunks = splitter.split_documents(loader.load())
-    return BM25Retriever.from_documents(chunks, k=top_k)
+    cache_key = (chunk_size, chunk_overlap)
+    if cache_key not in _bm25_cache:
+        loader = FallacyLoader(
+            source_path=KNOWLEDGE_BASE_PATH,
+            directories=["people", "bills", "definitions", "geography"],
+        )
+        splitter = RecursiveCharacterTextSplitter(
+            chunk_size=chunk_size, chunk_overlap=chunk_overlap, add_start_index=True
+        )
+        chunks = splitter.split_documents(loader.load())
+        _bm25_cache[cache_key] = BM25Retriever.from_documents(chunks, k=top_k)
+    else:
+        _bm25_cache[cache_key].k = top_k
+    return _bm25_cache[cache_key]
 
 
 def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> list[str]:
@@ -173,8 +181,7 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
             tokenizer = AutoTokenizer.from_pretrained(model_name)
             model = AutoModelForCausalLM.from_pretrained(
                 model_name,
-                torch_dtype=torch.float16 if torch.cuda.is_available() else torch.float32,
-                device_map="auto",
+                torch_dtype="auto",
             )
             _pipeline_cache[model_name] = pipeline("text-generation", model=model, tokenizer=tokenizer)
         pipe = _pipeline_cache[model_name]
@@ -253,9 +260,18 @@ def main(persist_directory_path: str = "./chromadb",
     df_balanced = pd.concat([no_fallacy_downsampled, with_fallacy_df]).sample(frac=1, random_state=42).reset_index(
         drop=True)
 
+    train_df, test_df = train_test_split(df_balanced, test_size=0.2, random_state=42,
+                                         stratify=df_balanced["fallacy_label"])
+    test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
+
     if retriever:
-        copy_dataset = []
-        for _, row in tqdm(df_balanced.iterrows(), total=len(df_balanced), desc="Enriching with RAG context"):
+        if search_type == "bm25":
+            logger.info("Pre-building BM25 index (this may take a while)...")
+            load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=top_k)
+            logger.info("BM25 index ready.")
+
+        enriched_rows = []
+        for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with RAG context"):
             copy_row = row.copy()
             speech_turn = row['speech_turn']
 
@@ -273,21 +289,17 @@ def main(persist_directory_path: str = "./chromadb",
             )
             if passages and summarization_model:
                 #  Summarise single paragraphs
-                #  passages = summarize_docs(passages, summarization_model)
+                passages = summarize_docs(passages, summarization_model)
 
-                #  Summarise paragraphs together instead of summarising single passages
-                passages = summarize_docs([" ".join(passages)], summarization_model)
+            #  Summarise paragraphs together instead of summarising single passages
+            # passages = summarize_docs([" ".join(passages)], summarization_model)
 
             rag_context = " [SEP] ".join(passages)
             rag_context = normalize_text(rag_context)
             copy_row['rag_context'] = rag_context
-            copy_dataset.append(copy_row)
+            enriched_rows.append(copy_row)
 
-        df_balanced = pd.DataFrame(copy_dataset).reset_index(drop=True)
-
-    train_df, test_df = train_test_split(df_balanced, test_size=0.8, random_state=42,
-                                         stratify=df_balanced["fallacy_label"])
-    test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
+        train_df = pd.DataFrame(enriched_rows).reset_index(drop=True)
 
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)
@@ -391,6 +403,11 @@ if __name__ == "__main__":
         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).",
     )
     args = parser.parse_args()
+
+    if args.retriever == "bm25" and args.search_type != "bm25":
+        parser.error("--retriever bm25 requires --search-type bm25")
+    if args.search_type == "bm25" and args.retriever != "bm25":
+        parser.error("--search-type bm25 requires --retriever bm25")
 
     path = f"dataset/detection"
     if args.retriever:

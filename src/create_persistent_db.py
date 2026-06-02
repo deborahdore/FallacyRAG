@@ -5,11 +5,8 @@ from pathlib import Path
 import rootutils
 import torch
 from langchain_chroma import Chroma
-from langchain_cohere import CohereEmbeddings
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_mistralai import MistralAIEmbeddings
-from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 
