@@ -212,6 +212,7 @@ def build_agentic_context(
         agent_model: str,
         vector_store: Chroma,
         top_k: int = 3,
+        temporal_rag: bool = False,
 ) -> str:
     """Use a self-questioning LangChain agent to build multi-dimensional context for fallacy detection.
 
@@ -243,6 +244,17 @@ def build_agentic_context(
         or an empty string if the agent call fails.
     """
 
+    # ── Temporal filter helper ─────────────────────────────────────────────────
+
+    def _build_filter(category: str | None = None) -> dict | None:
+        """Build a Chroma where-clause, optionally combining category and year filters."""
+        f: dict = {}
+        if category:
+            f["category"] = {"$eq": category}
+        if temporal_rag and year is not None:
+            f["year"] = {"$lt": int(year)}
+        return f if f else None
+
     # ── Category-filtered tools ────────────────────────────────────────────────
     # Each tool searches only its KB section.  Docstrings act as self-questioning
     # prompts: they tell the agent *which question* that tool is good for answering.
@@ -257,7 +269,7 @@ def build_agentic_context(
         Then query with the person's name or description.
         """
         docs = vector_store.similarity_search(
-            query, k=top_k, filter={"category": "people"}
+            query, k=top_k, filter=_build_filter("people")
         )
         serialized = "\n\n".join(
             f"[people] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -276,7 +288,7 @@ def build_agentic_context(
         Then query with the policy topic, bill name, or issue area.
         """
         docs = vector_store.similarity_search(
-            query, k=top_k, filter={"category": "bills"}
+            query, k=top_k, filter=_build_filter("bills")
         )
         serialized = "\n\n".join(
             f"[bills] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -295,7 +307,7 @@ def build_agentic_context(
         Then query with the event, statistic, or issue being referenced.
         """
         docs = vector_store.similarity_search(
-            query, k=top_k, filter={"category": "newspapers"}
+            query, k=top_k, filter=_build_filter("newspapers")
         )
         serialized = "\n\n".join(
             f"[newspapers] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -314,7 +326,7 @@ def build_agentic_context(
         Then query with the term or concept to clarify.
         """
         docs = vector_store.similarity_search(
-            query, k=top_k, filter={"category": "definitions"}
+            query, k=top_k, filter=_build_filter("definitions")
         )
         serialized = "\n\n".join(
             f"[definitions] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -332,7 +344,7 @@ def build_agentic_context(
         Then query with the place name or region being discussed.
         """
         docs = vector_store.similarity_search(
-            query, k=top_k, filter={"category": "geography"}
+            query, k=top_k, filter=_build_filter("geography")
         )
         serialized = "\n\n".join(
             f"[geography] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -348,7 +360,7 @@ def build_agentic_context(
         or when you need a broad cross-category perspective on the topic.
         Ask yourself: "What general context can I find about this speech overall?"
         """
-        docs = vector_store.similarity_search(query, k=top_k)
+        docs = vector_store.similarity_search(query, k=top_k, filter=_build_filter())
         serialized = "\n\n".join(
             f"[{doc.metadata.get('category', 'unknown')}] "
             f"Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
@@ -415,6 +427,7 @@ def main(persist_directory_path: str = "./chromadb",
          lambda_mult: float = 0.5,
          score_threshold: float = 0.5,
          agent_model: str = "openai:gpt-4o-mini",
+         temporal_rag: bool = False,
          path: str = "dataset/detection"):
     dataset = []
     for split in ["train", "dev", "test"]:
@@ -487,6 +500,7 @@ def main(persist_directory_path: str = "./chromadb",
                 agent_model=agent_model,
                 vector_store=vector_store,
                 top_k=top_k,
+                temporal_rag=temporal_rag,
             )
             copy_row['rag_context'] = normalize_text(rag_context)
             enriched_rows.append(copy_row)
@@ -596,6 +610,12 @@ if __name__ == "__main__":
         default=0.5,
         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).",
     )
+    parser.add_argument(
+        "--temporal-rag",
+        action="store_true",
+        default=False,
+        help="Only retrieve knowledge base documents whose year is before the debate year.",
+    )
     args = parser.parse_args()
 
     path = f"dataset/detection/"
@@ -623,5 +643,6 @@ if __name__ == "__main__":
         lambda_mult=args.lambda_mult,
         score_threshold=args.score_threshold,
         agent_model=args.agent_model,
+        temporal_rag=args.temporal_rag,
         path=path,
     )

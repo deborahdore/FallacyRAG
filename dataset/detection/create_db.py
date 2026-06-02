@@ -107,12 +107,19 @@ def search_knowledge_base(query: str,
                           chromadb_path: str,
                           fetch_k: int = 20,
                           lambda_mult: float = 0.5,
-                          score_threshold: float = 0.5):
+                          score_threshold: float = 0.5,
+                          temporal_rag: bool = False,
+                          year: int | None = None):
     """Return a list of passage strings relevant to *query*."""
 
     if search_type == "bm25":
-        bm25 = load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=top_k)
+        # Fetch more candidates when filtering temporally, since some will be dropped.
+        fetch_count = top_k * 10 if temporal_rag else top_k
+        bm25 = load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count)
         docs = bm25.invoke(query)
+        if temporal_rag and year is not None:
+            docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
+            docs = docs[:top_k]
     else:
         store_path = os.path.join(chromadb_path, retriever.replace("/", "-"))
         if not os.path.exists(store_path):
@@ -135,6 +142,8 @@ def search_knowledge_base(query: str,
                 score_threshold=score_threshold,
             )
         )
+        if temporal_rag and year is not None:
+            search_kwargs["filter"] = {"year": {"$lt": int(year)}}
         ret = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
         docs = ret.invoke(query)
 
@@ -205,6 +214,7 @@ def main(persist_directory_path: str = "./chromadb",
          lambda_mult: float = 0.5,
          score_threshold: float = 0.5,
          summarization_model: str | None = None,
+         temporal_rag: bool = False,
          path: str = "dataset/detection"):
     dataset = []
     for split in ["train", "dev", "test"]:
@@ -286,6 +296,8 @@ def main(persist_directory_path: str = "./chromadb",
                 fetch_k=fetch_k,
                 lambda_mult=lambda_mult,
                 score_threshold=score_threshold,
+                temporal_rag=temporal_rag,
+                year=int(row["year"]),
             )
             if passages and summarization_model:
                 #  Summarise single paragraphs
@@ -402,6 +414,12 @@ if __name__ == "__main__":
         default=0.5,
         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).",
     )
+    parser.add_argument(
+        "--temporal-rag",
+        action="store_true",
+        default=False,
+        help="Only retrieve knowledge base documents whose year is before the debate year.",
+    )
     args = parser.parse_args()
 
     if args.retriever == "bm25" and args.search_type != "bm25":
@@ -436,5 +454,6 @@ if __name__ == "__main__":
         lambda_mult=args.lambda_mult,
         score_threshold=args.score_threshold,
         summarization_model=args.summarization_model,
+        temporal_rag=args.temporal_rag,
         path=path,
     )
