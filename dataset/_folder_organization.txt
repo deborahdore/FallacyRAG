@@ -1,5 +1,12 @@
 detection/
-└── agentic={true,false}/
-    └── temporal={true,false}/
-        └── retriever=<name>/
-            └── summarizer=<name>/
+└── agentic={true,false}-temporal={true,false}-retriever={<name>|false}-summarizer={<name>|false}
+
+Examples:
+  detection/agentic=true-temporal=false-retriever=false-summarizer=false/
+  detection/agentic=true-temporal=true-retriever=meta-llama-llama-3.1-8b-instruct-summarizer=false/
+  detection/agentic=false-temporal=false-retriever=false-summarizer=false/
+
+Notes:
+  - All folder names are lowercased
+  - Retriever model slashes (/) are replaced with hyphens (-)
+  - summarizer is always false when agentic
