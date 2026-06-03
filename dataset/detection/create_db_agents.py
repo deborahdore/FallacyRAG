@@ -20,7 +20,7 @@ import rootutils
 import torch
 from langchain_chroma import Chroma
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings, CohereEmbeddings
-from langchain_community.retrievers import BM25Retriever
+import bm25s as _bm25s
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_mistralai import MistralAIEmbeddings
 from langchain_ollama import OllamaEmbeddings
@@ -47,7 +47,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
-_bm25_cache: dict[tuple[int, int], BM25Retriever] = {}
+_bm25_cache: dict[tuple[int, int], "FastBM25Retriever"] = {}
 _pipeline_cache: dict[str, pipeline] = {}
 
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
@@ -151,7 +151,26 @@ def search_knowledge_base(query: str,
     return [d.page_content if hasattr(d, "page_content") else str(d) for d in docs]
 
 
-def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25Retriever:
+class FastBM25Retriever:
+    """Vectorized BM25 using bm25s (Scipy-backed) — ~500x faster than rank_bm25
+    on large corpora because scoring is a sparse matrix multiply, not Python loops."""
+
+    def __init__(self, docs: list, k: int = 5):
+        self.docs = docs
+        self.k = k
+        corpus = [d.page_content for d in docs]
+        tokenized = _bm25s.tokenize(corpus, show_progress=False)
+        self._index = _bm25s.BM25()
+        self._index.index(tokenized)
+
+    def invoke(self, query: str) -> list:
+        tokenized_query = _bm25s.tokenize([query], show_progress=False)
+        k = min(self.k, len(self.docs))
+        results, _ = self._index.retrieve(tokenized_query, k=k)
+        return [self.docs[int(i)] for i in results[0]]
+
+
+def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> FastBM25Retriever:
     """Build (or return cached) a BM25 retriever from the knowledge base source documents."""
     cache_key = (chunk_size, chunk_overlap)
     if cache_key not in _bm25_cache:
@@ -163,7 +182,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25
             chunk_size=chunk_size, chunk_overlap=chunk_overlap, add_start_index=True
         )
         chunks = splitter.split_documents(loader.load())
-        _bm25_cache[cache_key] = BM25Retriever.from_documents(chunks, k=top_k)
+        _bm25_cache[cache_key] = FastBM25Retriever(chunks, k=top_k)
     else:
         _bm25_cache[cache_key].k = top_k
     return _bm25_cache[cache_key]
@@ -622,6 +641,7 @@ if __name__ == "__main__":
     path = Path("dataset") / "detection" / "agentic=true"
     path = str(path)
 
+    if args.temporal_rag: assert args.retriever is not None
     path += f"-temporal={str(args.temporal_rag)}"
 
     if args.retriever:
@@ -631,8 +651,7 @@ if __name__ == "__main__":
         path += "-retriever=false"
 
     path += "-summarizer=false"
-    path = path.lower()
-
+    path = str(path).lower()
     os.makedirs(path, exist_ok=True)
 
     main(

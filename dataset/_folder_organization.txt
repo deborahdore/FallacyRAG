@@ -10,3 +10,4 @@ Notes:
   - All folder names are lowercased
   - Retriever model slashes (/) are replaced with hyphens (-)
   - summarizer is always false when agentic
+  - if everything is false then the dataset is the standard without rag
