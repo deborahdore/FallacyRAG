@@ -17,25 +17,25 @@ export WANDB_PROJECT="fallacy_detection"
 SEED=123
 export PYTHONHASHSEED=$SEED
 
-wandb offline
+wandb disabled
 
-TRAIN_FILE="dataset/detection/train.csv"
-VAL_FILE="dataset/detection/dev.csv"
-TEST_FILE="dataset/detection/test.csv"
+dataset="agentic=false-temporal=false-retriever=false-summarizer=false"
+
+TRAIN_FILE="dataset/detection/$dataset/train.csv"
+VAL_FILE="dataset/detection/$dataset/dev.csv"
+TEST_FILE="dataset/detection/$dataset/test.csv"
 
 MODELS=(
-    "microsoft/deberta-v3-base"
-    "MARIANNE-INRIA/RooseBERT-cont-uncased"
-    "MARIANNE-INRIA/RooseBERT-cont-cased"
-    "MARIANNE-INRIA/RooseBERT-scr-uncased"
-    "MARIANNE-INRIA/RooseBERT-scr-cased"
-    "MARIANNE-INRIA/RooseBERTa-cont-cased"
-    "MARIANNE-INRIA/ModernRooseBERT-cont-cased"
-    "allenai/longformer-base-4096"
-    "answerdotai/ModernBERT-base"
-    "FacebookAI/roberta-base"
-    "FacebookAI/xlm-roberta-base"
-    "casehold/legalbert"
+#    "microsoft/deberta-v3-base"
+#    "MARIANNE-INRIA/RooseBERT-cont-uncased"
+#    "MARIANNE-INRIA/RooseBERT-cont-cased"
+#    "MARIANNE-INRIA/RooseBERT-scr-uncased"
+#    "MARIANNE-INRIA/RooseBERT-scr-cased"
+#    "allenai/longformer-base-4096"
+#    "answerdotai/ModernBERT-base"
+#    "FacebookAI/roberta-base"
+#    "FacebookAI/xlm-roberta-base"
+#    "casehold/legalbert"
     "chandar-lab/NeoBERT"
 )
 
@@ -50,7 +50,7 @@ for model in "${MODELS[@]}"; do
         MODEL_NAME=$(basename "$model")
         CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-        OUTPUT_DIR="output_no_rag/${MODEL_NAME}/${CONF_ID}"
+        OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"
 
         python src/detection/run_detection.py \

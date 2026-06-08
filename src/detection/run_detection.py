@@ -382,10 +382,16 @@ def main():
 
     def preprocess_function(examples):
         if data_args.use_rag and context_column_name:
+            # text_a: sentence only (segment A)
+            # text_b: speech_turn + rag_context (segment B)
+            # speech_turn comes first so truncation removes from rag_context end, not local context
+            combined_b = [
+                f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
+                for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
+            ]
             result = tokenizer(
                 examples[text_column_name],
-                examples[speech_turn_column_name],
-                examples[context_column_name],
+                combined_b,
                 padding=padding,
                 max_length=max_seq_length,
                 truncation=True,

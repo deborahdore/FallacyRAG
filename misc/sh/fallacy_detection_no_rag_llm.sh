@@ -3,6 +3,8 @@
 #SBATCH --output=logs/llm_fallacy_detection.out
 #SBATCH --error=logs/llm_fallacy_detection.out
 #SBATCH --gres=gpu:2
+#SBATCH --ntasks=2
+#SBATCH --ntasks-per-node=2
 #SBATCH --mail-user=deborah.dore@inria.fr
 #SBATCH --mail-type=FAIL
 
@@ -18,29 +20,31 @@ export WANDB_PROJECT="fallacy_detection"
 SEED=123
 export PYTHONHASHSEED=$SEED
 
-wandb offline
+wandb disabled
 
-TRAIN_FILE="dataset/detection/train.csv"
-VAL_FILE="dataset/detection/dev.csv"
-TEST_FILE="dataset/detection/test.csv"
+dataset="agentic=false-temporal=false-retriever=false-summarizer=false"
 
-MODES=("zero_shot" "few_shot" "fine_tune")
+TRAIN_FILE="dataset/detection/$dataset/train.csv"
+VAL_FILE="dataset/detection/$dataset/dev.csv"
+TEST_FILE="dataset/detection/$dataset/test.csv"
+
+MODES=("fine_tune" "zero_shot" "few_shot")
 
 MODELS=(
-"mistralai/Mistral-7B-Instruct-v0.3"
-"meta-llama/Llama-3.1-8B-Instruct"
+#"mistralai/Mistral-7B-Instruct-v0.3"
+#"meta-llama/Llama-3.1-8B-Instruct"
 "Qwen/Qwen3.5-9B-Base"
 "openai/gpt-oss-20b"
 )
 
 N_GPUS=2
-grad_acc=2
+grad_acc=4
 
-BATCH_SIZES=(2 4 8)
-LEARNING_RATES=(1e-3 1e-4 2e-4 5e-4)
+BATCH_SIZES=(1 2 4)
+LEARNING_RATES=(1e-4 3e-4 5e-4)
 EPOCHS=(1 2 3)
 
-DEFAULT_BATCH=4
+DEFAULT_BATCH=8
 
 for model in "${MODELS[@]}"; do
   for mode in "${MODES[@]}"; do
@@ -48,7 +52,7 @@ for model in "${MODELS[@]}"; do
 
     if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
       CONF_ID="mode-${mode}"
-      OUTPUT_DIR="output_no_rag/${MODEL_NAME}/${CONF_ID}"
+      OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
       mkdir -p "$OUTPUT_DIR"
 
       torchrun \
@@ -82,7 +86,7 @@ for model in "${MODELS[@]}"; do
         for lr in "${LEARNING_RATES[@]}"; do
           for epoch in "${EPOCHS[@]}"; do
             CONF_ID="mode-${mode}_bs$((batch*grad_acc*N_GPUS))_lr${lr}_ep${epoch}"
-            OUTPUT_DIR="output_no_rag/${MODEL_NAME}/${CONF_ID}"
+            OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
             mkdir -p "$OUTPUT_DIR"
 
             torchrun \

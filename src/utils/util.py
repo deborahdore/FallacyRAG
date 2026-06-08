@@ -30,8 +30,8 @@ def normalize_text(text):
     text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
     text = re.sub(r"[“”]", '"', text)  # double quotes
     text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
-    # text = re.sub(r"\s+", " ", text).strip()
-    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text).strip()
+    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text)  # space after mid-word periods
+    text = re.sub(r"\s+", " ", text).strip()  # collapse newlines/tabs/multiple spaces
     return text
 
 

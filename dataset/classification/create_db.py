@@ -316,7 +316,7 @@ def main(persist_directory_path: str = "./chromadb",
             #  Summarise paragraphs together instead of summarising single passages
             # passages = summarize_docs([" ".join(passages)], summarization_model)
 
-            rag_context = " [SEP] ".join(passages)
+            rag_context = " ".join(passages)
             rag_context = normalize_text(rag_context)
             copy_row['rag_context'] = rag_context
             enriched_rows.append(copy_row)

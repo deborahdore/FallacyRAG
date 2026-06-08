@@ -446,7 +446,7 @@ def main(persist_directory_path: str = "./chromadb",
          fetch_k: int = 20,
          lambda_mult: float = 0.5,
          score_threshold: float = 0.5,
-         agent_model: str = "openai:gpt-4o-mini",
+         agent_model: str = "groq:llama-3.1-8b-instant",
          temporal_rag: bool = False,
          path: str = "dataset/detection"):
     dataset = []
@@ -572,16 +572,13 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--agent-model",
-        default="openai:gpt-4o-mini",
+        default="groq:llama-3.1-8b-instant",
         choices=[
-            "openai:gpt-4o-mini",
-            "openai:gpt-4o",
-            "anthropic:claude-haiku-4-5-20251001",
-            "anthropic:claude-sonnet-4-6",
-            "mistralai:mistral-small-latest",
-            "mistralai:mistral-medium-latest",
+            "ollama:command-r",
+            "ollama:hermes3",
+            "ollama:qwen2.5:14b"
         ],
-        help="LangChain model string for the agent (default: openai:gpt-4o-mini).",
+        help="LangChain model string for the agent (default: groq:llama-3.1-8b-instant).",
     )
     parser.add_argument(
         "--persist-directory",
