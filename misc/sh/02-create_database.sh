@@ -26,7 +26,7 @@ for retriever in "${retrievers[@]}"; do
     if [[ "$retriever" == "bm25" ]]; then
         search_type="--search-type bm25"
     else
-        search_type=""
+        search_type="--search-type similarity"
     fi
 
     python dataset/detection/create_db.py --retriever "$retriever" $search_type

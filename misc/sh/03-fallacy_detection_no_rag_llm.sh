@@ -1,18 +1,28 @@
 #!/bin/bash
-#SBATCH --job-name=llm_fallacy_detection
-#SBATCH --output=logs/llm_fallacy_detection.out
-#SBATCH --error=logs/llm_fallacy_detection.out
-#SBATCH --gres=gpu:2
+#SBATCH --job-name=llm_fallacy_detection_%J
+#SBATCH --output=logs/llm_fallacy_detection_%J.out
+#SBATCH --error=logs/llm_fallacy_detection_%J.out
+#SBATCH --gpus=h100:2
+#SBATCH --partition=gpu
 #SBATCH --ntasks=2
 #SBATCH --ntasks-per-node=2
 #SBATCH --mail-user=deborah.dore@inria.fr
 #SBATCH --mail-type=FAIL
+#SBATCH --time=36:00:00
+#SBATCH --account=marianne
 
 set -e
+
+module purge
+module load miniconda/25.1.1
+module load cuda/13.0
+conda activate rags
+
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 export TOKENIZERS_PARALLELISM=false
-export HF_HOME="/home/ddore/.cache/huggingface"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export HF_HOME="/home/ddore/.cache/huggingface"
+
 export MASTER_ADDR=localhost
 export MASTER_PORT=6000
 export WANDB_PROJECT="fallacy_detection"
@@ -31,20 +41,21 @@ TEST_FILE="dataset/detection/$dataset/test.csv"
 MODES=("fine_tune" "zero_shot" "few_shot")
 
 MODELS=(
-#"mistralai/Mistral-7B-Instruct-v0.3"
+"mistralai/Mistral-7B-Instruct-v0.3"
 #"meta-llama/Llama-3.1-8B-Instruct"
-"Qwen/Qwen3.5-9B-Base"
-"openai/gpt-oss-20b"
+#"Qwen/Qwen3.5-9B-Base"
+#"openai/gpt-oss-20b"
 )
 
 N_GPUS=2
-grad_acc=4
+GRAD_ACC=2
+BATCH=2
 
-BATCH_SIZES=(1 2 4)
+DEFAULT_BATCH=8
+
 LEARNING_RATES=(1e-4 3e-4 5e-4)
 EPOCHS=(1 2 3)
 
-DEFAULT_BATCH=8
 
 for model in "${MODELS[@]}"; do
   for mode in "${MODES[@]}"; do
@@ -82,10 +93,9 @@ for model in "${MODELS[@]}"; do
           --do_predict True \
           --trust_remote_code True
     else
-      for batch in "${BATCH_SIZES[@]}"; do
         for lr in "${LEARNING_RATES[@]}"; do
           for epoch in "${EPOCHS[@]}"; do
-            CONF_ID="mode-${mode}_bs$((batch*grad_acc*N_GPUS))_lr${lr}_ep${epoch}"
+            CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
             OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
             mkdir -p "$OUTPUT_DIR"
 
@@ -104,13 +114,13 @@ for model in "${MODELS[@]}"; do
                 --label_column_name "fallacy_label" \
                 --mode "$mode" \
                 --output_dir "$OUTPUT_DIR" \
-                --per_device_train_batch_size "$batch" \
-                --per_device_eval_batch_size "$batch" \
-                --gradient_accumulation_steps $grad_acc \
+                --per_device_train_batch_size "$BATCH" \
+                --per_device_eval_batch_size "$BATCH" \
+                --gradient_accumulation_steps $GRAD_ACC \
                 --num_train_epochs "$epoch" \
                 --learning_rate "$lr" \
                 --logging_steps 1000 \
-                --run_name "${MODEL_NAME}-bs${batch}-lr${lr}-ep${epoch}-mode-${mode}" \
+                --run_name "${MODEL_NAME}-bs${BATCH}-lr${lr}-ep${epoch}-mode-${mode}" \
                 --eval_strategy "epoch" \
                 --eval_on_start True \
                 --save_strategy "epoch" \
@@ -126,7 +136,6 @@ for model in "${MODELS[@]}"; do
                 --trust_remote_code True
           done
         done
-      done
     fi
   done
 done

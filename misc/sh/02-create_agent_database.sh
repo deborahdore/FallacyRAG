@@ -13,6 +13,7 @@ RETRIEVERS=(
   "ddore14/Sentence-RooseBERT"
   "BAAI/bge-large-en-v1.5"
 )
+
 AGENT_MODEL="ollama:command-r"
 
 PERSIST_DIR="./chromadb"

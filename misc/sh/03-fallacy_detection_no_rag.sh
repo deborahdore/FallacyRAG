@@ -12,7 +12,6 @@ export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export TOKENIZERS_PARALLELISM=false
 export HF_HOME="/home/ddore/.cache/huggingface"
 export WANDB_PROJECT="fallacy_detection"
-export WANDB_PROJECT="fallacy_detection"
 
 SEED=123
 export PYTHONHASHSEED=$SEED
@@ -26,22 +25,22 @@ VAL_FILE="dataset/detection/$dataset/dev.csv"
 TEST_FILE="dataset/detection/$dataset/test.csv"
 
 MODELS=(
-#    "microsoft/deberta-v3-base"
-#    "MARIANNE-INRIA/RooseBERT-cont-uncased"
-#    "MARIANNE-INRIA/RooseBERT-cont-cased"
-#    "MARIANNE-INRIA/RooseBERT-scr-uncased"
-#    "MARIANNE-INRIA/RooseBERT-scr-cased"
-#    "allenai/longformer-base-4096"
-#    "answerdotai/ModernBERT-base"
-#    "FacebookAI/roberta-base"
-#    "FacebookAI/xlm-roberta-base"
-#    "casehold/legalbert"
-    "chandar-lab/NeoBERT"
+    "microsoft/deberta-v3-base"
+    "allenai/longformer-base-4096"
+    "answerdotai/ModernBERT-base"
+    "FacebookAI/roberta-base"
+    "FacebookAI/xlm-roberta-base"
+    "casehold/legalbert"
+    "MARIANNE-INRIA/RooseBERT-cont-uncased"
+    "MARIANNE-INRIA/RooseBERT-cont-cased"
+    "MARIANNE-INRIA/RooseBERT-scr-uncased"
+    "MARIANNE-INRIA/RooseBERT-scr-cased"
+#    "chandar-lab/NeoBERT"
 )
 
-BATCH_SIZES=(8 16 32)
+BATCH_SIZES=(8 16)
 LEARNING_RATES=(2e-5 3e-5 5e-5)
-EPOCHS=(2 3 4)
+EPOCHS=(3 5)
 
 for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do
@@ -82,8 +81,8 @@ for model in "${MODELS[@]}"; do
             --do_train True \
             --do_eval True \
             --do_predict True \
-            --trust_remote_code True
-
+            --trust_remote_code True \
+            --warmup_ratio 0.06
       done
     done
   done

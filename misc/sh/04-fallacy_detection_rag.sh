@@ -40,9 +40,9 @@ MODELS=(
 #"chandar-lab/NeoBERT"
 )
 
-BATCH_SIZES=(8 16 32)
+BATCH_SIZES=(8 16)
 LEARNING_RATES=(2e-5 3e-5 5e-5)
-EPOCHS=(2 3 4)
+EPOCHS=(3 5)
 
 for dataset in "${DATASETS[@]}"; do
 
@@ -104,7 +104,9 @@ for dataset in "${DATASETS[@]}"; do
                         --do_predict True \
                         --trust_remote_code True \
                         --use_rag True \
-                        --context_column_name "rag_context"
+                        --context_column_name "rag_context" \
+                        --trust_remote_code True \
+                        --warmup_ratio 0.06
 
                 done
             done
