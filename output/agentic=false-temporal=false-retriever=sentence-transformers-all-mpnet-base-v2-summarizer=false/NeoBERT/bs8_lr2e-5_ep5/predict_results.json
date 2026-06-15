@@ -1,0 +1,12 @@
+{
+  "epoch": 5.0,
+  "predict_accuracy": 0.654434250764526,
+  "predict_f1_macro": 0.6480622517691657,
+  "predict_loss": 0.689490556716919,
+  "predict_precision": 0.6657608695652174,
+  "predict_recall": 0.6540288792458477,
+  "predict_runtime": 6.8254,
+  "predict_samples": 327,
+  "predict_samples_per_second": 47.909,
+  "predict_steps_per_second": 6.007
+}
