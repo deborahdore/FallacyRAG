@@ -161,3 +161,9 @@ dmypy.json
 ./chromadb/*
 ./output/*
 ./output
+
+/knowledge_base/
+knowledge_base
+
+*.idea
+/.idea/
