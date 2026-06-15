@@ -459,7 +459,6 @@ def main():
         weight = class_weights.to(outputs.logits.device) if class_weights is not None else None
         return torch.nn.CrossEntropyLoss(weight=weight)(outputs.logits, labels)
 
-
     # ── Trainer ───────────────────────────────────────────────────────────
     trainer = Trainer(
         model=model,

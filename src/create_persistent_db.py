@@ -170,8 +170,8 @@ if __name__ == "__main__":
     parser.add_argument(
         "--chunk-overlap",
         type=int,
-        default=200,
-        help="Character overlap between chunks",
+        default=None,
+        help="Character overlap between chunks (default: 10% of chunk-size)",
     )
 
     parser.add_argument(

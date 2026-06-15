@@ -7,8 +7,6 @@
     * [🎯 Tasks](#-tasks)
     * [⛁ Knowledge Base](#-knowledge-base)
         * [Knowledge Base Format](#knowledge-base-format)
-            * [Standard Entry](#standard-entry)
-            * [Paragraph-Structured Entry](#paragraph-structured-entry)
 
 <!-- TOC -->
 
@@ -50,7 +48,7 @@ The project focuses on three main tasks.
 
 To ground the language model, we constructed a **knowledge base of approximately 5GB of political and contextual
 documents**. The corpus combines official government sources with curated background information.
-The knowledge base is organized into four main categories.
+The knowledge base is organized into five main categories.
 
 - **Bills and Laws**: this collection includes congressional bills and public and private laws approved by the U.S.
   Congress, collected from their official
@@ -58,6 +56,7 @@ The knowledge base is organized into four main categories.
   and [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf)
 - **Geography**: geographic and demographic information about U.S. states was collected from
   the [U.S. Census](https://data.census.gov/webpages)and Wikipedia.
+- **Newspapers**: news articles providing political context for the debates.
 - **People**: biographical information about members of the U.S. Congress was collected from
   the [Biographical Directory of the United States Congress](https://bioguide.congress.gov/search). Additional entries
   from Wikipedia were added for public figures referenced during the debates.
@@ -76,6 +75,7 @@ Each entry in the knowledge base is stored as a JSON document.
   "text": "",
   "xml": "[when available]",
   "source": "",
-  "url": ""
+  "url": "",
+  "year": "[when available]"
 }
 ```
