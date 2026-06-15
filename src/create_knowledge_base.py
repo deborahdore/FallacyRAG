@@ -3,6 +3,7 @@ import logging
 import os
 import re
 import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
@@ -12,12 +13,14 @@ import pandas as pd
 import pytesseract
 import requests
 import rootutils
+from datasets import load_dataset
 from pdf2image import convert_from_path
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.util import create_and_save_record, get_request, simulate_browser, safe_filename, \
-    fetch_wikipedia_sections, post_request, get_item_ids
+    fetch_wikipedia_sections, fetch_wikipedia_links, fetch_wikipedia_category_members, \
+    post_request, get_item_ids
 
 logging.basicConfig(
     level=logging.INFO,
@@ -46,8 +49,111 @@ CHRONICLING_AMERICA_SEARCH_URL = "https://www.loc.gov/newspapers/"
 CHRONICLING_AMERICA_MIN_YEAR = 1770
 CHRONICLING_AMERICA_MAX_YEAR = 1963
 
+SCHOLAR_QUERIES = [
+    "fallacy political debate",
+    "fallacious argument political discourse",
+    "logical fallacy detection argumentation",
+    "ad hominem appeal to emotion political speech",
+    "propaganda technique detection political text",
+    "argument mining fallacy classification debate",
+]
+OPENALEX_URL = "https://api.openalex.org/works"
+CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "research@example.com")
+# OpenAlex robustness: longer timeout + retries so a single slow response can't drop a
+# whole query (which previously let one query fill the entire quota with low-relevance hits).
+OPENALEX_TIMEOUT = 60
+OPENALEX_RETRIES = 3
+# Cap how many papers any one query may contribute, so the top relevant results of EVERY
+# query are kept instead of diving hundreds deep into a single query's ranking.
+PAPERS_PER_QUERY = 40
+# A paper is kept only if its title+abstract mentions one of these (precision gate).
+PAPER_RELEVANCE_KEYWORDS = (
+    "fallac", "fallacious", "argument", "argumentation", "rhetoric", "debate",
+    "propaganda", "persuas", "ad hominem", "appeal to", "sophis", "demagog",
+    "political discourse", "political speech", "reasoning",
+)
 
-# ============================================ #
+# HF datasets to ingest as labeled exemplars: (hf_id, config, split, text_col, label_col).
+# MAFALDA is NOT a HF dataset — it's handled separately from its GitHub JSONL (see below).
+EXEMPLAR_DATASETS = [
+    ("tasksource/logical-fallacy", None, "train", "source_article", "logical_fallacies"),
+]
+MAFALDA_JSONL_URL = (
+    "https://raw.githubusercontent.com/ChadiHelwe/MAFALDA/main/"
+    "datasets/gold_standard_dataset.jsonl"
+)
+# Map the many fine-grained fallacy names used across corpora (LOGIC, MAFALDA, propaganda)
+# onto the six project categories. Keys are lowercased with hyphens normalised to spaces.
+# Names that have no equivalent among the six categories deliberately fall through to "Other"
+# and (with drop_other=True) are skipped, so only on-taxonomy exemplars are kept.
+FALLACY_LABEL_MAP = {
+    # --- Ad Hominem ---
+    "ad hominem": "Ad Hominem",
+    "abusive ad hominem": "Ad Hominem",
+    "abusive": "Ad Hominem",
+    "tu quoque": "Ad Hominem",
+    "guilt by association": "Ad Hominem",
+    "name calling": "Ad Hominem",
+    "name_calling": "Ad Hominem",
+    "poisoning the well": "Ad Hominem",
+    # --- Appeal to Emotion ---
+    "appeal to emotion": "Appeal to Emotion",
+    "appeal_to_emotion": "Appeal to Emotion",
+    "appeal to (positive) emotion": "Appeal to Emotion",
+    "appeal to positive emotion": "Appeal to Emotion",
+    "appeal to anger": "Appeal to Emotion",
+    "appeal to fear": "Appeal to Emotion",
+    "appeal to pity": "Appeal to Emotion",
+    "appeal to ridicule": "Appeal to Emotion",
+    "appeal to worse problems": "Appeal to Emotion",
+    "loaded language": "Appeal to Emotion",
+    "flag waving": "Appeal to Emotion",
+    # --- Appeal to Authority (incl. appeal to popularity / majority opinion per project def) ---
+    "appeal to authority": "Appeal to Authority",
+    "appeal_to_authority": "Appeal to Authority",
+    "appeal to false authority": "Appeal to Authority",
+    "appeal to (false) authority": "Appeal to Authority",
+    "fallacy of credibility": "Appeal to Authority",
+    "ad populum": "Appeal to Authority",
+    "appeal to popularity": "Appeal to Authority",
+    "appeal to the people": "Appeal to Authority",
+    "bandwagon": "Appeal to Authority",
+    # --- Slippery Slope ---
+    "slippery slope": "Slippery Slope",
+    "slippery_slope": "Slippery Slope",
+    # --- False Cause ---
+    "false cause": "False Cause",
+    "false_cause": "False Cause",
+    "false causality": "False Cause",
+    "causal oversimplification": "False Cause",
+    "post hoc": "False Cause",
+    "post hoc ergo propter hoc": "False Cause",
+    # --- Slogan ---
+    "slogan": "Slogan",
+    "slogans": "Slogan",
+}
+
+# --- Relevance filter for "connected" Wikipedia pages (keep fallacy/argumentation only) ---
+# Authoritative Wikipedia sub-categories that contain the actual fallacy articles. Their
+# members form a high-precision allowlist (e.g. "Ad hominem", "Slippery slope").
+FALLACY_WIKI_CATEGORIES = [
+    "Relevance fallacies",
+    "Causal fallacies",
+    "Verbal fallacies",
+    "Syllogistic fallacies",
+    "Propositional fallacies",
+    "Informal fallacies",
+    "Quantificational fallacies",
+]
+# Keyword fallback: catches general rhetoric/argument pages and named fallacies not captured
+# by the category membership above (matched as lowercased substrings of the title).
+FALLACY_WIKI_KEYWORDS = (
+    "fallac", "argument", "rhetoric", "reasoning", "syllogism", "premise", "inference",
+    "sophis", "appeal to", "ad hominem", "ad nauseam", "nauseam", "consequent", "disjunct",
+    "amphibol", "equivocat", "non sequitur", "begging the question", "red herring",
+    "straw man", "slippery slope", "circular", "false cause", "false dilemma", "anecdot",
+)
+
 
 def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
     pkg_id = result["packageId"]
@@ -201,41 +307,344 @@ def bills_and_laws(path: Path):
     # del filename, response, custom_url
 
 
+def _reconstruct_abstract(inverted_index: dict | None) -> str:
+    """Rebuild plain abstract text from OpenAlex's abstract_inverted_index."""
+    if not inverted_index:
+        return ""
+    positions = [(pos, word) for word, idxs in inverted_index.items() for pos in idxs]
+    positions.sort()
+    return " ".join(word for _, word in positions)
+
+
+def _download_and_ocr_pdf(url: str) -> str:
+    """Best-effort download + OCR of a PDF. Returns '' on any failure."""
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
+            tmp_path = Path(tmp.name)
+        resp = requests.get(
+            url, timeout=120, stream=True,
+            headers={"User-Agent": "Mozilla/5.0 (compatible; FallacyRAG/1.0)"},
+        )
+        resp.raise_for_status()
+        tmp_path.write_bytes(resp.content)
+        pages = convert_from_path(str(tmp_path), dpi=300)
+        return "\n".join(pytesseract.image_to_string(page) for page in pages)
+    except Exception as e:
+        log.warning("Full-text fetch failed for %s: %s", url, e)
+        return ""
+    finally:
+        if tmp_path is not None:
+            tmp_path.unlink(missing_ok=True)
+
+
+def _openalex_get(params: dict) -> dict | None:
+    """GET OpenAlex with a longer timeout and retries/backoff. Returns None on failure."""
+    for attempt in range(1, OPENALEX_RETRIES + 1):
+        try:
+            r = requests.get(OPENALEX_URL, params=params, timeout=OPENALEX_TIMEOUT)
+            r.raise_for_status()
+            return r.json()
+        except Exception as e:
+            wait = 2.0 * attempt
+            log.warning("OpenAlex request failed (attempt %d/%d): %s — retrying in %.0fs",
+                        attempt, OPENALEX_RETRIES, e, wait)
+            time.sleep(wait)
+    return None
+
+
+def _papers_from_openalex(queries: list[str], n_papers: int, since_year: int,
+                          per_query_cap: int = PAPERS_PER_QUERY):
+    """Yield normalized paper dicts from the OpenAlex API (no API key required).
+
+    Each query contributes at most `per_query_cap` papers, and within a query results are
+    returned by OpenAlex in descending relevance order — so we keep the top, most relevant
+    hits of every query instead of letting one query dive hundreds deep into noise.
+    """
+    seen: set[str] = set()
+    collected = 0
+    per_page = min(per_query_cap, 200)  # no need to pull more than the per-query cap
+    for query in queries:
+        cursor = "*"
+        from_query = 0
+        while collected < n_papers and from_query < per_query_cap and cursor:
+            params = {
+                "search": query,
+                "filter": f"from_publication_date:{since_year}-01-01,type:article",
+                "per-page": per_page,
+                "cursor": cursor,
+                "mailto": CONTACT_EMAIL,
+                # NOTE: `search` already returns results in descending relevance order;
+                # an explicit `sort=relevance_score:desc` is incompatible with cursor paging.
+                "select": "id,title,publication_year,abstract_inverted_index,"
+                          "primary_location,open_access,relevance_score",
+            }
+            data = _openalex_get(params)
+            if data is None:
+                log.error("OpenAlex query '%s' dropped after retries.", query)
+                break
+            results = data.get("results", [])
+            if not results:
+                break
+            for r in results:
+                title = (r.get("title") or "").strip()
+                if not title:
+                    continue
+                slug = safe_filename(title).lower()
+                if slug in seen:
+                    continue
+                seen.add(slug)
+                ploc = r.get("primary_location") or {}
+                oa = r.get("open_access") or {}
+                source = ploc.get("source") or {}
+                yield {
+                    "title": title,
+                    "abstract": _reconstruct_abstract(r.get("abstract_inverted_index")),
+                    "year": r.get("publication_year"),
+                    "url": ploc.get("landing_page_url") or r.get("id"),
+                    "pdf_url": ploc.get("pdf_url") or oa.get("oa_url"),
+                    "venue": source.get("display_name") or "OpenAlex",
+                }
+                collected += 1
+                from_query += 1
+                if collected >= n_papers or from_query >= per_query_cap:
+                    break
+            cursor = (data.get("meta") or {}).get("next_cursor")
+
+
+def _papers_from_google_scholar(queries: list[str], n_papers: int, since_year: int):
+    """Yield normalized paper dicts by scraping Google Scholar via `scholarly`.
+
+    Google Scholar has no official API and aggressively rate-limits / blocks scraping,
+    so this backend is best-effort. Install with `pip install scholarly`; for large,
+    reliable pulls prefer backend='openalex'.
+    """
+    try:
+        from scholarly import scholarly
+    except ImportError:
+        log.error("`scholarly` is not installed (pip install scholarly). "
+                  "Use backend='openalex' instead.")
+        return
+    seen: set[str] = set()
+    collected = 0
+    for query in queries:
+        try:
+            search = scholarly.search_pubs(query)
+        except Exception as e:
+            log.error("Google Scholar query '%s' failed: %s", query, e)
+            continue
+        for pub in search:
+            if collected >= n_papers:
+                return
+            bib = pub.get("bib", {}) if isinstance(pub, dict) else {}
+            title = (bib.get("title") or "").strip()
+            if not title:
+                continue
+            try:
+                year = int(bib.get("pub_year"))
+            except (TypeError, ValueError):
+                year = None
+            if year is not None and year < since_year:
+                continue
+            slug = safe_filename(title).lower()
+            if slug in seen:
+                continue
+            seen.add(slug)
+            yield {
+                "title": title,
+                "abstract": bib.get("abstract", ""),
+                "year": year,
+                "url": pub.get("pub_url") or pub.get("eprint_url") or "",
+                "pdf_url": pub.get("eprint_url"),
+                "venue": bib.get("venue", "Google Scholar"),
+            }
+            collected += 1
+            time.sleep(1.0)  # be polite — Scholar blocks rapid requests
+
+
+def fallacy_papers(path: Path, n_papers: int = 200, since_year: int = 2015,
+                   backend: str = "openalex", fetch_fulltext: bool = False,
+                   queries: list[str] | None = None) -> int:
+    """Search an academic index for recent papers on fallacies in political debates
+    and add each as a knowledge-base record.
+    """
+    path.mkdir(parents=True, exist_ok=True)
+    queries = queries or SCHOLAR_QUERIES
+    if backend == "google_scholar":
+        stream = _papers_from_google_scholar(queries, n_papers, since_year)
+    else:
+        stream = _papers_from_openalex(queries, n_papers, since_year)
+
+    saved = 0
+    skipped_irrelevant = 0
+    for paper in tqdm(stream, total=n_papers, desc=f"Fallacy papers ({backend})"):
+        # Relevance gate: keep only papers whose title+abstract actually concern
+        # fallacies / argumentation / political debate. This drops tangential matches
+        # (e.g. coastal degradation, space-weather) that merely share a query word.
+        haystack = f"{paper['title']} {paper.get('abstract', '')}".lower()
+        if not any(kw in haystack for kw in PAPER_RELEVANCE_KEYWORDS):
+            skipped_irrelevant += 1
+            continue
+
+        text = ""
+        if fetch_fulltext and paper.get("pdf_url"):
+            text = _download_and_ocr_pdf(paper["pdf_url"])
+        if not text.strip():
+            text = f"{paper['title']}. {paper.get('abstract', '')}".strip()
+        # Skip records with no usable content (e.g. no abstract available).
+        if len(text.split()) < 5:
+            continue
+        try:
+            filename = create_and_save_record(
+                path=path,
+                id=paper["title"],
+                text=text,
+                source=f"{paper.get('venue', 'Academic paper')} (via {backend})",
+                url=paper.get("url", ""),
+                year=paper.get("year") or 1900,
+            )
+            saved += 1
+            log.info("Saved paper %s", filename)
+        except Exception as e:
+            log.error("Failed to save paper '%s': %s", paper.get("title"), e)
+    log.info("Saved %d fallacy papers to %s (%d skipped as off-topic)",
+             saved, path, skipped_irrelevant)
+    return saved
+
+
+def _normalize_fallacy_label(raw) -> str:
+    """Map a raw corpus label (possibly a list / span-tagged value) to a project category."""
+    if raw is None:
+        return "Other"
+    if isinstance(raw, (list, tuple)):
+        # Multi-label: pick the first that maps to a known category.
+        for item in raw:
+            mapped = _normalize_fallacy_label(item)
+            if mapped != "Other":
+                return mapped
+        return "Other"
+    key = str(raw).strip().lower().replace("-", " ")
+    return FALLACY_LABEL_MAP.get(key, "Other")
+
+
+def _save_exemplar_record(path: Path, record_id: str, example: str, category: str,
+                          source: str, url: str) -> bool:
+    """Write a single labeled exemplar record. Returns True on success."""
+    # Embed the label in the text so the encoder sees the structural cue, and store it as a
+    # field for fallacy-keyed retrieval.
+    record = {
+        "id": record_id,
+        "text": f"Fallacy type: {category}. Example: {example}",
+        "source": source,
+        "url": url,
+        "year": 1900,
+        "fallacy_label": category,
+    }
+    try:
+        (path / f"{record_id}.json").write_text(
+            json.dumps(record, indent=4, ensure_ascii=False), encoding="utf-8")
+        return True
+    except Exception as e:
+        log.error("Failed to save exemplar %s: %s", record_id, e)
+        return False
+
+
+def _load_mafalda_exemplars(path: Path, drop_other: bool) -> int:
+    """Ingest MAFALDA exemplars from its GitHub JSONL (it is not a HuggingFace dataset).
+
+    Each row has a `text` and `labels` = list of [start, end, fallacy_name] spans; we keep
+    the exact fallacious span as the example, labeled with its project category.
+    """
+    try:
+        raw = requests.get(MAFALDA_JSONL_URL, timeout=OPENALEX_TIMEOUT).text
+    except Exception as e:
+        log.error("Could not fetch MAFALDA JSONL: %s — skipping.", e)
+        return 0
+
+    saved = 0
+    for i, line in enumerate(raw.strip().splitlines()):
+        try:
+            row = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        text = row.get("text", "")
+        for j, span in enumerate(row.get("labels", [])):
+            if not (isinstance(span, (list, tuple)) and len(span) == 3):
+                continue
+            start, end, name = span
+            category = _normalize_fallacy_label(name)
+            if drop_other and category == "Other":
+                continue
+            example = str(text[start:end]).strip()
+            if not example:
+                continue
+            if _save_exemplar_record(
+                path, f"MAFALDA_{i}_{j}", example, category,
+                "Fallacy exemplar corpus: MAFALDA", "https://github.com/ChadiHelwe/MAFALDA",
+            ):
+                saved += 1
+    log.info("Ingested %d on-taxonomy exemplars from MAFALDA", saved)
+    return saved
+
+
+def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
+                      max_per_dataset: int | None = None, drop_other: bool = True) -> int:
+    """Ingest labeled fallacy examples (LOGIC + MAFALDA) as KB records.
+
+    drop_other : if True (default), skip examples whose fallacy type has no equivalent among
+                 the six project categories — keeping only on-taxonomy exemplars so that
+                 fallacy-keyed retrieval returns useful matches.
+    """
+    path.mkdir(parents=True, exist_ok=True)
+    datasets_spec = datasets_spec or EXEMPLAR_DATASETS
+    saved = 0
+    dropped = 0
+
+    # --- HuggingFace datasets (e.g. tasksource/logical-fallacy) ---
+    for hf_id, config, split, text_col, label_col in datasets_spec:
+        try:
+            ds = load_dataset(hf_id, config, split=split)
+        except Exception as e:
+            log.error("Could not load exemplar dataset %s (%s): %s — skipping.",
+                      hf_id, config, e)
+            continue
+        n = len(ds) if max_per_dataset is None else min(len(ds), max_per_dataset)
+        kept = 0
+        for i in range(n):
+            row = ds[i]
+            example = str(row.get(text_col, "")).strip()
+            if not example:
+                continue
+            category = _normalize_fallacy_label(row.get(label_col))
+            if drop_other and category == "Other":
+                dropped += 1
+                continue
+            if _save_exemplar_record(
+                path, f"{safe_filename(hf_id)}_{i}", example, category,
+                f"Fallacy exemplar corpus: {hf_id}",
+                f"https://huggingface.co/datasets/{hf_id}",
+            ):
+                saved += 1
+                kept += 1
+        log.info("Ingested %d on-taxonomy exemplars from %s", kept, hf_id)
+
+    # --- MAFALDA (GitHub JSONL) ---
+    saved += _load_mafalda_exemplars(path, drop_other)
+
+    log.info("Saved %d fallacy exemplars to %s (%d off-taxonomy dropped)",
+             saved, path, dropped)
+    return saved
+
+
 def definitions(path: Path):
     path.mkdir(parents=True, exist_ok=True)
-    papers = {
-        "goffredo2022fallacious": {
-            "url": "https://www.ijcai.org/proceedings/2022/0575.pdf",
-            "title": "Fallacious argument classification in political debates"
-        },
-        "goffredo2023argument": {
-            "title": "Argument-based Detection and Classification of Fallacies in Political Debates",
-            "url": "https://aclanthology.org/2023.emnlp-main.684.pdf"
-        }
-    }
 
-    # =================== papers =================== #
-    for key in papers.keys():
-        link = papers[key]["url"]
-        title = papers[key]["title"]
-        try:
-            with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
-                tmp_path = Path(tmp.name)
+    # =================== recent papers on fallacies in political debates =================== #
+    # Search an academic index for ~200 recent papers and add each as a KB record. Kept in a
+    # dedicated subfolder so the searched papers don't dilute the curated definition pages.
+    fallacy_papers(path / "papers", n_papers=200, since_year=2015, backend="openalex",
+                   fetch_fulltext=False)
 
-            response = requests.get(link, timeout=120, stream=True)
-            response.raise_for_status()
-            tmp_path.write_bytes(response.content)
-
-            pages = convert_from_path(str(tmp_path), dpi=800)
-            text = "\n".join(pytesseract.image_to_string(page) for page in pages)
-            filename = create_and_save_record(path=path,
-                                              id=key,
-                                              text=text,
-                                              source=title,
-                                              url=link)
-            log.info("Saved %s", filename)
-        finally:
-            tmp_path.unlink(missing_ok=True)
     # =================== wikipedia page for fallacies =================== #
     id = "fallacy"
     text = fetch_wikipedia_sections(id)
@@ -245,6 +654,51 @@ def definitions(path: Path):
                                       source="Wikipedia webpage for {}".format(id),
                                       url=f"https://en.wikipedia.org/wiki/{id}")
     log.info("Saved %s", filename)
+
+    # =================== connected wikipedia pages =================== #
+    # Expand coverage by also downloading the article-namespace pages linked from the main
+    # "fallacy" page (the individual fallacy types and related rhetorical concepts), but
+    # filtered to fallacy/argumentation-relevant pages only — otherwise the "fallacy" page's
+    # links pull in noise (e.g. "Adam Smith", "Advertisement") that would dilute retrieval.
+    # A linked page is kept if it is EITHER a member of an authoritative fallacy category
+    # OR its title matches a fallacy/rhetoric keyword.
+    fallacy_allowlist = set()
+    for category in FALLACY_WIKI_CATEGORIES:
+        try:
+            fallacy_allowlist.update(fetch_wikipedia_category_members(category))
+        except Exception as e:
+            log.error("Could not fetch category '%s': %s", category, e)
+    log.info("Built fallacy allowlist of %d articles from %d categories",
+             len(fallacy_allowlist), len(FALLACY_WIKI_CATEGORIES))
+
+    def _is_fallacy_relevant(title: str) -> bool:
+        if title in fallacy_allowlist:
+            return True
+        lowered = title.lower()
+        return any(keyword in lowered for keyword in FALLACY_WIKI_KEYWORDS)
+
+    seen_pages = {safe_filename(id)}
+    for linked_title in fetch_wikipedia_links(id, limit=200):
+        if not _is_fallacy_relevant(linked_title):
+            continue
+        slug = safe_filename(linked_title)
+        if slug in seen_pages:
+            continue
+        seen_pages.add(slug)
+        try:
+            linked_text = fetch_wikipedia_sections(linked_title)
+            if not linked_text:
+                continue
+            filename = create_and_save_record(
+                path=path,
+                id=slug,
+                text=linked_text,
+                source=f"Wikipedia webpage for {linked_title}",
+                url=f"https://en.wikipedia.org/wiki/{linked_title.replace(' ', '_')}",
+            )
+            log.info("Saved %s", filename)
+        except Exception as e:
+            log.error("Failed to fetch connected page '%s': %s", linked_title, e)
 
 
 def people(path: Path):
@@ -510,11 +964,12 @@ def newspapers(path: Path):
 
 
 def main():
-    bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
+    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
     definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
-    newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
+    # newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
+    fallacy_exemplars(Path(KNOWLEDGE_BASE_PATH + "/exemplars"))
 
 
 if __name__ == "__main__":

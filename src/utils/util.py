@@ -119,6 +119,106 @@ def safe_filename(x: str) -> str:
     return x.strip()
 
 
+def fetch_wikipedia_category_members(category: str) -> list[str]:
+    """Return the article-namespace titles that belong to a Wikipedia category.
+
+    Used to build an authoritative allowlist of fallacy articles (e.g.
+    "Category:Relevance fallacies") so the knowledge base only ingests
+    fallacy/argumentation-relevant pages.
+    """
+    url = "https://en.wikipedia.org/w/api.php"
+    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    titles: list[str] = []
+    cmcontinue = None
+
+    while True:
+        params = {
+            "action": "query",
+            "list": "categorymembers",
+            "cmtitle": f"Category:{category}",
+            "cmnamespace": 0,  # articles only (skip sub-categories / talk pages)
+            "cmlimit": "max",
+            "format": "json",
+            "formatversion": "2",
+        }
+        if cmcontinue:
+            params["cmcontinue"] = cmcontinue
+
+        response = None
+        for attempt in range(5):
+            r = requests.get(url, params=params, headers=headers, timeout=15)
+            if r.status_code == 429:
+                time.sleep(int(r.headers.get("Retry-After", 2)))
+                continue
+            if r.status_code != 200:
+                time.sleep(2.0 * attempt)
+                continue
+            response = r.json()
+            break
+
+        if not response:
+            break
+
+        titles.extend(m["title"] for m in response.get("query", {}).get("categorymembers", []))
+        cmcontinue = response.get("continue", {}).get("cmcontinue")
+        if not cmcontinue:
+            break
+
+    return titles
+
+
+def fetch_wikipedia_links(page: str, limit: int = 200) -> list[str]:
+    """Return the titles of article-namespace pages linked from `page`.
+
+    These are the 'connected' pages of a Wikipedia article — e.g. for "Fallacy"
+    this yields the individual fallacy types (Ad hominem, Slippery slope, ...).
+    Results are restricted to namespace 0 (main/article namespace) and paged
+    until `limit` titles have been collected.
+    """
+    url = "https://en.wikipedia.org/w/api.php"
+    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    titles: list[str] = []
+    plcontinue = None
+
+    while len(titles) < limit:
+        params = {
+            "action": "query",
+            "prop": "links",
+            "titles": page,
+            "plnamespace": 0,  # main/article namespace only
+            "pllimit": "max",
+            "format": "json",
+            "formatversion": "2",
+        }
+        if plcontinue:
+            params["plcontinue"] = plcontinue
+
+        response = None
+        for attempt in range(5):
+            r = requests.get(url, params=params, headers=headers, timeout=15)
+            if r.status_code == 429:
+                time.sleep(int(r.headers.get("Retry-After", 2)))
+                continue
+            if r.status_code != 200:
+                time.sleep(2.0 * attempt)
+                continue
+            response = r.json()
+            break
+
+        if not response:
+            break
+
+        for pg in response.get("query", {}).get("pages", []):
+            for link in pg.get("links", []):
+                titles.append(link["title"])
+
+        plcontinue = response.get("continue", {}).get("plcontinue")
+        if not plcontinue:
+            break
+
+    return titles[:limit]
+
+
 def fetch_wikipedia_sections(page: str):
     url = "https://en.wikipedia.org/w/api.php"
     result = {}
