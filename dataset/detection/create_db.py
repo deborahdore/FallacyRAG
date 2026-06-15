@@ -188,7 +188,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> Fast
     return _bm25_cache[cache_key]
 
 
-def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> list[str]:
+def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 512) -> list[str]:
     """Summarize each passage with the given model. Returns one summary per doc."""
 
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
@@ -215,11 +215,22 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
             _pipeline_cache[model_name] = pipeline("text-generation", model=model, tokenizer=tokenizer)
         pipe = _pipeline_cache[model_name]
 
-        for doc in docs:
-            messages = [{"role": "user", "content": prompt_template.format(doc)}]
-            formatted = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-            output = pipe(formatted, max_new_tokens=max_tokens, do_sample=False, return_full_text=False)
-            summaries.append(output[0]["generated_text"].strip())
+        formatted_list = [
+            pipe.tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt_template.format(doc)}],
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+            for doc in docs
+        ]
+        outputs = pipe(
+            formatted_list,
+            max_new_tokens=max_tokens,
+            do_sample=False,
+            return_full_text=False,
+            batch_size=len(docs),
+        )
+        summaries = [o[0]["generated_text"].strip() for o in outputs]
 
     return summaries
 
@@ -303,10 +314,10 @@ def main(persist_directory_path: str = "./chromadb",
         enriched_rows = []
         for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with RAG context"):
             copy_row = row.copy()
-            speech_turn = row['speech_turn']
+            sentence = row['sentence']
 
             passages = search_knowledge_base(
-                speech_turn,
+                sentence,
                 search_type=search_type,
                 retriever=retriever,
                 chunk_size=chunk_size,

@@ -226,7 +226,7 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
 
 
 def build_agentic_context(
-        speech_turn: str,
+        sentence: str,
         speaker: str,
         year: str | int,
         agent_model: str,
@@ -236,7 +236,7 @@ def build_agentic_context(
 ) -> str:
     """Use a self-questioning LangChain agent to build multi-dimensional context for fallacy detection.
 
-    The agent receives the speech turn and is instructed to ask itself a series of targeted
+    The agent receives the sentence and is instructed to ask itself a series of targeted
     questions — e.g. "What topic are they discussing?", "Who is the person they're attacking?",
     "What legislation is relevant here?" — then routes each question to the appropriate
     knowledge-base section via a specialised tool:
@@ -252,7 +252,7 @@ def build_agentic_context(
       TOPIC / REFERENCES / BACKGROUND / CLAIMS
 
     Args:
-        speech_turn:  Full speech turn text being analysed.
+        sentence:     Sentence text being analysed.
         speaker:      Name of the candidate/speaker.
         year:         Year of the debate.
         agent_model:  LangChain-compatible model string, e.g. ``"openai:gpt-4o-mini"``.
@@ -395,7 +395,7 @@ def build_agentic_context(
     system_prompt = (
         "You are an expert political analyst enriching a fallacy-detection dataset.\n"
         f"Speech by: {speaker} | Year: {year}\n\n"
-        "Your task is to build structured context for the speech turn below by asking yourself "
+        "Your task is to build structured context for the sentence below by asking yourself "
         "a series of targeted questions and retrieving answers from the knowledge base.\n\n"
         "Work through these questions in order:\n"
         "  1. What is the main TOPIC or policy area being discussed?\n"
@@ -430,7 +430,7 @@ def build_agentic_context(
     agent = create_agent(llm, tools, system_prompt=system_prompt)
 
     try:
-        result = agent.invoke({"messages": [{"role": "user", "content": speech_turn}]})
+        result = agent.invoke({"messages": [{"role": "user", "content": sentence}]})
         return result["messages"][-1].content
     except Exception as exc:
         logger.warning(f"Agentic context retrieval failed for speaker={speaker}: {exc}")
@@ -514,7 +514,7 @@ def main(persist_directory_path: str = "./chromadb",
         for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with Agentic RAG context"):
             copy_row = row.copy()
             rag_context = build_agentic_context(
-                speech_turn=row['speech_turn'],
+                sentence=row['sentence'],
                 speaker=row['speaker'],
                 year=row['year'],
                 agent_model=agent_model,

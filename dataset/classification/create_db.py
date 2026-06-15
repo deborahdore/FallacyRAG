@@ -215,11 +215,22 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
             _pipeline_cache[model_name] = pipeline("text-generation", model=model, tokenizer=tokenizer)
         pipe = _pipeline_cache[model_name]
 
-        for doc in docs:
-            messages = [{"role": "user", "content": prompt_template.format(doc)}]
-            formatted = pipe.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-            output = pipe(formatted, max_new_tokens=max_tokens, do_sample=False, return_full_text=False)
-            summaries.append(output[0]["generated_text"].strip())
+        formatted_list = [
+            pipe.tokenizer.apply_chat_template(
+                [{"role": "user", "content": prompt_template.format(doc)}],
+                tokenize=False,
+                add_generation_prompt=True,
+            )
+            for doc in docs
+        ]
+        outputs = pipe(
+            formatted_list,
+            max_new_tokens=max_tokens,
+            do_sample=False,
+            return_full_text=False,
+            batch_size=len(docs),
+        )
+        summaries = [o[0]["generated_text"].strip() for o in outputs]
 
     return summaries
 
