@@ -122,7 +122,15 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
 
     loader = FallacyLoader(
         source_path=KNOWLEDGE_BASE_PATH,
-        directories=["bills", "definitions", "geography", "newspapers", "people"],
+        directories=[
+            "bills",
+            "definitions",
+            ("definitions/papers", "papers"),  # academic papers (nested subfolder)
+            "exemplars",                        # labeled fallacy examples (carry fallacy_label)
+            "geography",
+            "newspapers",
+            "people",
+        ],
     )
 
     docs = loader.load()

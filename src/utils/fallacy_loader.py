@@ -15,13 +15,20 @@ class FallacyLoader(BaseLoader):
         documents = []
 
         for directory in self.directories:
-            dir_path = os.path.join(self.source_path, directory)
+            # An entry may be a plain folder name, or a (folder, category_label) tuple so a
+            # nested folder (e.g. "definitions/papers") can get a clean category label.
+            if isinstance(directory, (tuple, list)):
+                folder, category = directory
+            else:
+                folder, category = directory, directory
+
+            dir_path = os.path.join(self.source_path, folder)
 
             if not os.path.exists(dir_path):
                 continue
 
             files = os.listdir(dir_path)
-            for filename in tqdm(files, total=len(files), desc=f"Processing section {directory}"):
+            for filename in tqdm(files, total=len(files), desc=f"Processing section {category}"):
                 if not filename.endswith(".json"):
                     continue
 
@@ -34,19 +41,21 @@ class FallacyLoader(BaseLoader):
                 text = data.get("text", "")
                 source = data.get("source", "")
                 url = data.get("url", "")
-                year = data.get("year", None)
+                year = data.get("year", 1900)
 
-                documents.append(
-                    Document(
-                        page_content=text,
-                        metadata={
-                            "id": entity_id,
-                            "source": source,
-                            "url": url,
-                            "year": year,
-                            "category": directory
-                        },
-                    )
-                )
+                metadata = {
+                    "id": entity_id,
+                    "source": source,
+                    "url": url,
+                    "year": year,
+                    "category": category,
+                }
+                # Carry the fallacy label (present on exemplar records) so it can be used
+                # for fallacy-keyed retrieval / metadata filtering.
+                fallacy_label = data.get("fallacy_label")
+                if fallacy_label is not None:
+                    metadata["fallacy_label"] = fallacy_label
+
+                documents.append(Document(page_content=text, metadata=metadata))
 
         return documents

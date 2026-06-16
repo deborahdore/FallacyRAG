@@ -188,7 +188,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> Fast
     return _bm25_cache[cache_key]
 
 
-def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> list[str]:
+def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 256) -> list[str]:
     """Summarize each passage with the given model. Returns one summary per doc."""
 
     prompt_template = "Summarize the following text in a concise paragraph:\n\n{}"
@@ -212,6 +212,8 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 1024) -> 
                 model_name,
                 torch_dtype="auto",
             )
+            if tokenizer.pad_token is None:
+                tokenizer.pad_token = tokenizer.eos_token
             _pipeline_cache[model_name] = pipeline("text-generation", model=model, tokenizer=tokenizer)
         pipe = _pipeline_cache[model_name]
 
