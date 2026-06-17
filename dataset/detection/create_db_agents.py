@@ -706,11 +706,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--categories",
         nargs="+",
-        default=None,
+        default=[c for c in KNOWLEDGE_BASE_CATEGORIES if c != "bills"],
         choices=KNOWLEDGE_BASE_CATEGORIES,
         metavar="CATEGORY",
         help="Restrict the agent's retrieval to these knowledge-base categories "
-             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; default: all).",
+             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; "
+             "default: all categories except 'bills').",
     )
     args = parser.parse_args()
 
@@ -728,10 +729,10 @@ if __name__ == "__main__":
 
     path += "-summarizer=false"
 
-    if args.categories:
-        path += f"-categories={'+'.join(sorted(args.categories))}"
-    else:
-        path += "-categories=all"
+    # if args.categories:
+    #     path += f"-categories={'+'.join(sorted(args.categories))}"
+    # else:
+    #     path += "-categories=all"
 
     path = str(path).lower()
     os.makedirs(path, exist_ok=True)
