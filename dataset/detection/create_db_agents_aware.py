@@ -458,30 +458,34 @@ def main(persist_directory_path: str = "./chromadb",
                                          stratify=df_balanced["fallacy_label"])
     test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
-    # Discourse-aware enrichment of the train split.
+    # Discourse-aware enrichment of all splits.
     vector_store = get_vector_store(retriever, persist_directory_path) if retriever else None
-    enriched_rows = []
 
-    for _, row in tqdm(train_df.iterrows(), total=len(train_df),
-                       desc="Enriching train with discourse-aware context"):
-        copy_row = row.copy()
-        rag_context = build_discourse_aware_context(
-            sentence=row['sentence'],
-            speaker=row['speaker'],
-            year=row['year'],
-            turn_id=row['id'],
-            agent_model=agent_model,
-            conversation=conversation,
-            vector_store=vector_store,
-            top_k=top_k,
-            temporal_rag=temporal_rag,
-            categories=categories,
-            history_turns=history_turns,
-        )
-        copy_row['rag_context'] = normalize_text(rag_context)
-        enriched_rows.append(copy_row)
+    def _enrich_split(split_df, split_name):
+        enriched_rows = []
+        for _, row in tqdm(split_df.iterrows(), total=len(split_df),
+                           desc=f"Enriching {split_name} with discourse-aware context"):
+            copy_row = row.copy()
+            rag_context = build_discourse_aware_context(
+                sentence=row['sentence'],
+                speaker=row['speaker'],
+                year=row['year'],
+                turn_id=row['id'],
+                agent_model=agent_model,
+                conversation=conversation,
+                vector_store=vector_store,
+                top_k=top_k,
+                temporal_rag=temporal_rag,
+                categories=categories,
+                history_turns=history_turns,
+            )
+            copy_row['rag_context'] = normalize_text(rag_context)
+            enriched_rows.append(copy_row)
+        return pd.DataFrame(enriched_rows).reset_index(drop=True)
 
-    train_df = pd.DataFrame(enriched_rows).reset_index(drop=True)
+    train_df = _enrich_split(train_df, "train")
+    dev_df = _enrich_split(dev_df, "dev")
+    test_df = _enrich_split(test_df, "test")
 
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)

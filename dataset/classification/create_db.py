@@ -332,7 +332,7 @@ def main(persist_directory_path: str = "./chromadb",
     df = df.dropna().drop_duplicates().reset_index(drop=True)
 
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
-    test_df, dev_df = train_test_split(df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
+    test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
     if retriever:
         if search_type == "bm25":
@@ -341,39 +341,45 @@ def main(persist_directory_path: str = "./chromadb",
                                 categories=categories)
             logger.info("BM25 index ready.")
 
-        enriched_rows = []
-        for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with RAG context"):
-            copy_row = row.copy()
-            sentence = row['sentence']
+        def _enrich_split(split_df, split_name):
+            enriched_rows = []
+            for _, row in tqdm(split_df.iterrows(), total=len(split_df),
+                               desc=f"Enriching {split_name} with RAG context"):
+                copy_row = row.copy()
+                sentence = row['sentence']
 
-            passages = search_knowledge_base(
-                sentence,
-                search_type=search_type,
-                retriever=retriever,
-                chunk_size=chunk_size,
-                chunk_overlap=chunk_overlap,
-                top_k=top_k,
-                chromadb_path=persist_directory_path,
-                fetch_k=fetch_k,
-                lambda_mult=lambda_mult,
-                score_threshold=score_threshold,
-                temporal_rag=temporal_rag,
-                year=int(row["year"]),
-                categories=categories,
-            )
-            if passages and summarization_model:
-                #  Summarise single paragraphs
-                passages = summarize_docs(passages, summarization_model)
+                passages = search_knowledge_base(
+                    sentence,
+                    search_type=search_type,
+                    retriever=retriever,
+                    chunk_size=chunk_size,
+                    chunk_overlap=chunk_overlap,
+                    top_k=top_k,
+                    chromadb_path=persist_directory_path,
+                    fetch_k=fetch_k,
+                    lambda_mult=lambda_mult,
+                    score_threshold=score_threshold,
+                    temporal_rag=temporal_rag,
+                    year=int(row["year"]),
+                    categories=categories,
+                )
+                if passages and summarization_model:
+                    #  Summarise single paragraphs
+                    passages = summarize_docs(passages, summarization_model)
 
-            #  Summarise paragraphs together instead of summarising single passages
-            # passages = summarize_docs([" ".join(passages)], summarization_model)
+                #  Summarise paragraphs together instead of summarising single passages
+                # passages = summarize_docs([" ".join(passages)], summarization_model)
 
-            rag_context = " ".join(passages)
-            rag_context = normalize_text(rag_context)
-            copy_row['rag_context'] = rag_context
-            enriched_rows.append(copy_row)
+                rag_context = " ".join(passages)
+                rag_context = normalize_text(rag_context)
+                copy_row['rag_context'] = rag_context
+                enriched_rows.append(copy_row)
 
-        train_df = pd.DataFrame(enriched_rows).reset_index(drop=True)
+            return pd.DataFrame(enriched_rows).reset_index(drop=True)
+
+        train_df = _enrich_split(train_df, "train")
+        dev_df = _enrich_split(dev_df, "dev")
+        test_df = _enrich_split(test_df, "test")
 
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)

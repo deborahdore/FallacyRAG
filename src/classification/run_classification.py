@@ -161,10 +161,6 @@ class DataTrainingArguments:
         default=None,
         metadata={"help": "Number of processes for dataset.map()."},
     )
-    max_seq_length: Optional[int] = field(
-        default=512,
-        metadata={"help": "Maximum total input length after tokenisation."},
-    )
     pad_to_max_length: bool = field(
         default=False,
         metadata={"help": "Pad all samples to max_seq_length (needed for TPU)."},
@@ -202,8 +198,6 @@ class DataTrainingArguments:
             path = getattr(self, attr)
             if path is not None and path.rsplit(".", 1)[-1] not in ("csv", "json"):
                 raise ValueError(f"{attr} must be a .csv or .json file.")
-        if self.max_seq_length is None:
-            self.max_seq_length = 512
         # Convenience: if --use_rag is set and the default no_rag paths are still in place,
         # automatically redirect to the rag/ subdirectory.
         if self.use_rag:
@@ -369,12 +363,14 @@ def main():
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
     # ── Tokenisation ──────────────────────────────────────────────────────
-    if data_args.max_seq_length > tokenizer.model_max_length:
-        logger.warning(
-            f"max_seq_length ({data_args.max_seq_length}) exceeds model maximum "
-            f"({tokenizer.model_max_length}); clamping to {tokenizer.model_max_length}."
-        )
-    max_seq_length = min(data_args.max_seq_length, tokenizer.model_max_length)
+    # Always use the model's own capacity as the maximum sequence length
+    # (e.g. 512 for BERT, 4096 for Longformer). Some tokenizers report a
+    # huge sentinel value (e.g. 1e30) when no limit is configured, so fall
+    # back to the config's positional-embedding size or a safe default.
+    max_seq_length = tokenizer.model_max_length
+    if max_seq_length is None or max_seq_length > 100_000:
+        max_seq_length = getattr(config, "max_position_embeddings", 512)
+    logger.info(f"Using model maximum sequence length: {max_seq_length}")
     padding = "max_length" if data_args.pad_to_max_length else False
 
     text_column_name = data_args.text_column_name
@@ -383,10 +379,16 @@ def main():
 
     def preprocess_function(examples):
         if data_args.use_rag and context_column_name:
+            # text_a: sentence only (segment A)
+            # text_b: speech_turn + rag_context (segment B)
+            # speech_turn comes first so truncation removes from rag_context end, not local context
+            combined_b = [
+                f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
+                for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
+            ]
             result = tokenizer(
                 examples[text_column_name],
-                examples[speech_turn_column_name],
-                examples[context_column_name],
+                combined_b,
                 padding=padding,
                 max_length=max_seq_length,
                 truncation=True,

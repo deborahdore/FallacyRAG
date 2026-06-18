@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=encoders_fallacy_detection
-#SBATCH --output=logs/encoders_fallacy_detection.out
-#SBATCH --error=logs/encoders_fallacy_detection.out
+#SBATCH --job-name=encoders_fallacy_detection_rag
+#SBATCH --output=logs/encoders_fallacy_detection_rag.out
+#SBATCH --error=logs/encoders_fallacy_detection_rag.out
 #SBATCH --gres=gpu:1
 #SBATCH --mail-user=deborah.dore@inria.fr
 #SBATCH --mail-type=FAIL
@@ -14,29 +14,22 @@ export TOKENIZERS_PARALLELISM=false
 export HF_HOME="/home/ddore/.cache/huggingface"
 export WANDB_PROJECT="fallacy_detection"
 
-SEED=123
+SEED=14
 export PYTHONHASHSEED=$SEED
 
 wandb disabled
 
 DATASETS=(
-"agentic=false-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-summarizer=false"
-"agentic=false-temporal=false-retriever=bm25-summarizer=false"
-"agentic=false-temporal=false-retriever=baai-bge-large-en-v1.5-summarizer=false"
-"agentic=false-temporal=false-retriever=ddore14-sentence-roosebert-summarizer=false"
+""
 )
 
 MODELS=(
- "microsoft/deberta-v3-base"
- "MARIANNE-INRIA/RooseBERT-cont-uncased"
- "MARIANNE-INRIA/RooseBERT-cont-cased"
- "MARIANNE-INRIA/RooseBERT-scr-uncased"
- "MARIANNE-INRIA/RooseBERT-scr-cased"
+# "microsoft/deberta-v3-base"
  "allenai/longformer-base-4096"
  "answerdotai/ModernBERT-base"
  "FacebookAI/roberta-base"
- "FacebookAI/xlm-roberta-base"
- "casehold/legalbert"
+# "FacebookAI/xlm-roberta-base"
+# "casehold/legalbert"
 #"chandar-lab/NeoBERT"
 )
 
@@ -105,7 +98,6 @@ for dataset in "${DATASETS[@]}"; do
                         --trust_remote_code True \
                         --use_rag True \
                         --context_column_name "rag_context" \
-                        --trust_remote_code True \
                         --warmup_ratio 0.06
 
                 done

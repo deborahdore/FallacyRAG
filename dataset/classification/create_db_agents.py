@@ -507,7 +507,13 @@ def build_agentic_context(
 
 def main(persist_directory_path: str = "./chromadb",
          retriever: str = None,
+         search_type: str = "similarity",
+         chunk_size: int = 1000,
+         chunk_overlap: int = 200,
          top_k: int = 3,
+         fetch_k: int = 20,
+         lambda_mult: float = 0.5,
+         score_threshold: float = 0.5,
          agent_model: str = "groq:llama-3.1-8b-instant",
          temporal_rag: bool = False,
          categories: list[str] | None = None,
@@ -536,8 +542,7 @@ def main(persist_directory_path: str = "./chromadb",
                 end = sent.end_char
 
                 flabels = list(set(label for label in fallacy_labels[start:end] if label != 'O'))
-                # flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
-                flabels = "Fallacy" if flabels and flabels[0] is not None else "NoFallacy"
+                flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
 
                 clabels = list(set(label for label in component_labels[start:end] if label != 'O'))
                 clabels = clabels[0] if clabels and clabels[0] is not None else "NoComponent"
@@ -557,39 +562,34 @@ def main(persist_directory_path: str = "./chromadb",
     df = pd.DataFrame(dataset)
     df = df.replace({"nan": None})
     df = df.dropna().drop_duplicates().reset_index(drop=True)
-
-    no_fallacy_df = df[df["fallacy_label"] == "NoFallacy"]
-    with_fallacy_df = df[df["fallacy_label"] != "NoFallacy"]
-
-    no_fallacy_downsampled = no_fallacy_df.sample(n=len(with_fallacy_df), random_state=42)
-
-    df_balanced = pd.concat([no_fallacy_downsampled, with_fallacy_df]).sample(frac=1, random_state=42).reset_index(
-        drop=True)
-
-    train_df, test_df = train_test_split(df_balanced, test_size=0.2, random_state=42,
-                                         stratify=df_balanced["fallacy_label"])
+    train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
     test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
     if retriever:
         vector_store = get_vector_store(retriever, persist_directory_path)
-        enriched_rows = []
 
-        for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with Agentic RAG context"):
-            copy_row = row.copy()
-            rag_context = build_agentic_context(
-                sentence=row['sentence'],
-                speaker=row['speaker'],
-                year=row['year'],
-                agent_model=agent_model,
-                vector_store=vector_store,
-                top_k=top_k,
-                temporal_rag=temporal_rag,
-                categories=categories,
-            )
-            copy_row['rag_context'] = normalize_text(rag_context)
-            enriched_rows.append(copy_row)
+        def _enrich_split(split_df, split_name):
+            enriched_rows = []
+            for _, row in tqdm(split_df.iterrows(), total=len(split_df),
+                               desc=f"Enriching {split_name} with Agentic RAG context"):
+                copy_row = row.copy()
+                rag_context = build_agentic_context(
+                    sentence=row['sentence'],
+                    speaker=row['speaker'],
+                    year=row['year'],
+                    agent_model=agent_model,
+                    vector_store=vector_store,
+                    top_k=top_k,
+                    temporal_rag=temporal_rag,
+                    categories=categories,
+                )
+                copy_row['rag_context'] = normalize_text(rag_context)
+                enriched_rows.append(copy_row)
+            return pd.DataFrame(enriched_rows).reset_index(drop=True)
 
-        train_df = pd.DataFrame(enriched_rows).reset_index(drop=True)
+        train_df = _enrich_split(train_df, "train")
+        dev_df = _enrich_split(dev_df, "dev")
+        test_df = _enrich_split(test_df, "test")
 
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)
@@ -732,9 +732,15 @@ if __name__ == "__main__":
     os.makedirs(path, exist_ok=True)
 
     main(
+        search_type=args.search_type,
         retriever=args.retriever,
         persist_directory_path=args.persist_directory,
+        chunk_size=args.chunk_size,
+        chunk_overlap=args.chunk_overlap,
         top_k=args.top_k,
+        fetch_k=args.fetch_k,
+        lambda_mult=args.lambda_mult,
+        score_threshold=args.score_threshold,
         agent_model=args.agent_model,
         temporal_rag=args.temporal_rag,
         categories=args.categories,

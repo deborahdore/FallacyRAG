@@ -33,16 +33,15 @@ export PYTHONHASHSEED=$SEED
 wandb disabled
 
 DATASETS=(
-"agentic=false-temporal=false-retriever=baai-bge-large-en-v1.5-summarizer=false"
-"agentic=false-temporal=false-retriever=baai-bge-large-en-v1.5-summarizer=mistralai-mistral-7b-instruct-v0.3"
+""
 )
 
 MODES=("fine_tune" "zero_shot" "few_shot")
 
 MODELS=(
-"mistralai/Mistral-7B-Instruct-v0.3"
+#"mistralai/Mistral-7B-Instruct-v0.3"
 #"meta-llama/Llama-3.1-8B-Instruct"
-#"Qwen/Qwen3.5-9B-Base"
+"Qwen/Qwen3.5-9B-Base"
 #"openai/gpt-oss-20b"
 )
 
@@ -86,7 +85,7 @@ for dataset in "${DATASETS[@]}"; do
           --mode "$mode" \
           --output_dir "$OUTPUT_DIR" \
           --per_device_eval_batch_size "$DEFAULT_BATCH" \
-          --run_name "${MODEL_NAME}-mode-${mode}" \
+          --run_name "${dataset}-${MODEL_NAME}-mode-${mode}" \
           --seed $SEED \
           --data_seed $SEED \
           --dataloader_num_workers 8 \
@@ -126,7 +125,7 @@ for dataset in "${DATASETS[@]}"; do
                 --num_train_epochs "$epoch" \
                 --learning_rate "$lr" \
                 --logging_steps 1000 \
-                --run_name "${MODEL_NAME}-bs${BATCH}-lr${lr}-ep${epoch}-mode-${mode}" \
+                --run_name "${dataset}-${MODEL_NAME}-bs${BATCH}-lr${lr}-ep${epoch}-mode-${mode}" \
                 --eval_strategy "epoch" \
                 --eval_on_start True \
                 --save_strategy "epoch" \

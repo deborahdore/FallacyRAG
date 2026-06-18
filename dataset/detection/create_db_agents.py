@@ -578,24 +578,29 @@ def main(persist_directory_path: str = "./chromadb",
 
     if retriever:
         vector_store = get_vector_store(retriever, persist_directory_path)
-        enriched_rows = []
 
-        for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with Agentic RAG context"):
-            copy_row = row.copy()
-            rag_context = build_agentic_context(
-                sentence=row['sentence'],
-                speaker=row['speaker'],
-                year=row['year'],
-                agent_model=agent_model,
-                vector_store=vector_store,
-                top_k=top_k,
-                temporal_rag=temporal_rag,
-                categories=categories,
-            )
-            copy_row['rag_context'] = normalize_text(rag_context)
-            enriched_rows.append(copy_row)
+        def _enrich_split(split_df, split_name):
+            enriched_rows = []
+            for _, row in tqdm(split_df.iterrows(), total=len(split_df),
+                               desc=f"Enriching {split_name} with Agentic RAG context"):
+                copy_row = row.copy()
+                rag_context = build_agentic_context(
+                    sentence=row['sentence'],
+                    speaker=row['speaker'],
+                    year=row['year'],
+                    agent_model=agent_model,
+                    vector_store=vector_store,
+                    top_k=top_k,
+                    temporal_rag=temporal_rag,
+                    categories=categories,
+                )
+                copy_row['rag_context'] = normalize_text(rag_context)
+                enriched_rows.append(copy_row)
+            return pd.DataFrame(enriched_rows).reset_index(drop=True)
 
-        train_df = pd.DataFrame(enriched_rows).reset_index(drop=True)
+        train_df = _enrich_split(train_df, "train")
+        dev_df = _enrich_split(dev_df, "dev")
+        test_df = _enrich_split(test_df, "test")
 
     train_df.to_csv(f"{path}/train.csv", index=False)
     test_df.to_csv(f"{path}/test.csv", index=False)

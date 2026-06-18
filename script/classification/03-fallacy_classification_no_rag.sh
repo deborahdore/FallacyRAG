@@ -13,7 +13,7 @@ export TOKENIZERS_PARALLELISM=false
 export HF_HOME="/home/ddore/.cache/huggingface"
 export WANDB_PROJECT="fallacy_classification"
 
-SEED=14
+SEED=123
 export PYTHONHASHSEED=$SEED
 
 wandb disabled
