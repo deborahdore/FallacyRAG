@@ -43,8 +43,24 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
+# Categories the retriever can search. These map to both the knowledge-base
+# sub-directories (for BM25) and the "category" metadata field (for vector search).
+KNOWLEDGE_BASE_CATEGORIES = ["bills", "definitions", "papers", "exemplars", "geography", "newspapers", "people"]
+
+# Map each category to its loader directory spec. Most are plain folder names; "papers" is a
+# nested folder (definitions/papers) given a clean category label via a (folder, label) tuple.
+CATEGORY_TO_DIRECTORY = {
+    "bills": "bills",
+    "definitions": "definitions",
+    "papers": ("definitions/papers", "papers"),
+    "exemplars": "exemplars",
+    "geography": "geography",
+    "newspapers": "newspapers",
+    "people": "people",
+}
+
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
-_bm25_cache: dict[tuple[int, int], "FastBM25Retriever"] = {}
+_bm25_cache: dict[tuple, "FastBM25Retriever"] = {}
 _pipeline_cache: dict[str, pipeline] = {}
 
 model_kwargs = {"device": "cuda" if torch.cuda.is_available() else "cpu"}
@@ -110,13 +126,20 @@ def search_knowledge_base(query: str,
                           lambda_mult: float = 0.5,
                           score_threshold: float = 0.5,
                           temporal_rag: bool = False,
-                          year: int | None = None):
-    """Return a list of passage strings relevant to *query*."""
+                          year: int | None = None,
+                          categories: list[str] | None = None):
+    """Return a list of passage strings relevant to *query*.
+
+    If *categories* is given, retrieval is restricted to those knowledge-base
+    categories (e.g. ["people", "bills"]); otherwise all categories are searched.
+    """
 
     if search_type == "bm25":
         # Fetch more candidates when filtering temporally, since some will be dropped.
         fetch_count = top_k * 10 if temporal_rag else top_k
-        bm25 = load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count)
+        bm25 = load_bm25_retriever(
+            chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count, categories=categories
+        )
         docs = bm25.invoke(query)
         if temporal_rag and year is not None:
             docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
@@ -143,8 +166,15 @@ def search_knowledge_base(query: str,
                 score_threshold=score_threshold,
             )
         )
+        filters = []
         if temporal_rag and year is not None:
-            search_kwargs["filter"] = {"year": {"$lt": int(year)}}
+            filters.append({"year": {"$lt": int(year)}})
+        if categories:
+            filters.append({"category": {"$in": list(categories)}})
+        if len(filters) == 1:
+            search_kwargs["filter"] = filters[0]
+        elif len(filters) > 1:
+            search_kwargs["filter"] = {"$and": filters}
         ret = vector_store.as_retriever(search_type=search_type, search_kwargs=search_kwargs)
         docs = ret.invoke(query)
 
@@ -170,13 +200,19 @@ class FastBM25Retriever:
         return [self.docs[int(i)] for i in results[0]]
 
 
-def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> FastBM25Retriever:
-    """Build a BM25 retriever directly from the knowledge base source documents."""
-    cache_key = (chunk_size, chunk_overlap)
+def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int,
+                        categories: list[str] | None = None) -> FastBM25Retriever:
+    """Build a BM25 retriever directly from the knowledge base source documents.
+
+    If *categories* is given, only those knowledge-base sub-directories are loaded.
+    """
+    cats = list(categories) if categories else list(KNOWLEDGE_BASE_CATEGORIES)
+    directories = [CATEGORY_TO_DIRECTORY[c] for c in cats]
+    cache_key = (chunk_size, chunk_overlap, tuple(sorted(cats)))
     if cache_key not in _bm25_cache:
         loader = FallacyLoader(
             source_path=KNOWLEDGE_BASE_PATH,
-            directories=["people", "bills", "definitions", "geography"],
+            directories=directories,
         )
         splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size, chunk_overlap=chunk_overlap, add_start_index=True
@@ -248,6 +284,7 @@ def main(persist_directory_path: str = "./chromadb",
          score_threshold: float = 0.5,
          summarization_model: str | None = None,
          temporal_rag: bool = False,
+         categories: list[str] | None = None,
          path: str = "dataset/classification"):
     dataset = []
     for split in ["train", "dev", "test"]:
@@ -292,24 +329,25 @@ def main(persist_directory_path: str = "./chromadb",
 
     df = pd.DataFrame(dataset)
     df = df.replace({"nan": None})
-    df = df[df['fallacy_label'] != 'NoFallacy']
     df = df.dropna().drop_duplicates().reset_index(drop=True)
+
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
-    test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
+    test_df, dev_df = train_test_split(df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
     if retriever:
         if search_type == "bm25":
             logger.info("Pre-building BM25 index (this may take a while)...")
-            load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=top_k)
+            load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=top_k,
+                                categories=categories)
             logger.info("BM25 index ready.")
 
         enriched_rows = []
         for _, row in tqdm(train_df.iterrows(), total=len(train_df), desc="Enriching train with RAG context"):
             copy_row = row.copy()
-            speech_turn = row['speech_turn']
+            sentence = row['sentence']
 
             passages = search_knowledge_base(
-                speech_turn,
+                sentence,
                 search_type=search_type,
                 retriever=retriever,
                 chunk_size=chunk_size,
@@ -321,6 +359,7 @@ def main(persist_directory_path: str = "./chromadb",
                 score_threshold=score_threshold,
                 temporal_rag=temporal_rag,
                 year=int(row["year"]),
+                categories=categories,
             )
             if passages and summarization_model:
                 #  Summarise single paragraphs
@@ -443,6 +482,16 @@ if __name__ == "__main__":
         default=False,
         help="Only retrieve knowledge base documents whose year is before the debate year.",
     )
+    parser.add_argument(
+        "--categories",
+        nargs="+",
+        default=[c for c in KNOWLEDGE_BASE_CATEGORIES if c != "bills"],
+        choices=KNOWLEDGE_BASE_CATEGORIES,
+        metavar="CATEGORY",
+        help="Restrict retrieval to these knowledge-base categories "
+             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; "
+             "default: all categories except 'bills').",
+    )
     args = parser.parse_args()
 
     if args.retriever == "bm25" and args.search_type != "bm25":
@@ -463,9 +512,15 @@ if __name__ == "__main__":
         path += "-retriever=false"
 
     if args.summarization_model:
-        path += f"-summarizer={args.summarization_model}"
+        summarization_model_name = args.summarization_model.replace("/", "-")
+        path += f"-summarizer={summarization_model_name}"
     else:
         path += "-summarizer=false"
+
+    # if args.categories:
+    #     path += f"-categories={'+'.join(sorted(args.categories))}"
+    # else:
+    #     path += "-categories=all"
 
     path = str(path).lower()
     os.makedirs(path, exist_ok=True)
@@ -482,5 +537,6 @@ if __name__ == "__main__":
         score_threshold=args.score_threshold,
         summarization_model=args.summarization_model,
         temporal_rag=args.temporal_rag,
+        categories=args.categories,
         path=path,
     )

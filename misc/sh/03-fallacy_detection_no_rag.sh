@@ -49,7 +49,7 @@ for model in "${MODELS[@]}"; do
         MODEL_NAME=$(basename "$model")
         CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-        OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
+        OUTPUT_DIR="output/detection/$dataset/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"
 
         python src/detection/run_detection.py \

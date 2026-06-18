@@ -63,7 +63,7 @@ for dataset in "${DATASETS[@]}"; do
 
                     CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-                    OUTPUT_DIR="output/${dataset}/${MODEL_NAME}/${CONF_ID}"
+                    OUTPUT_DIR="output/detection/${dataset}/${MODEL_NAME}/${CONF_ID}"
                     mkdir -p "$OUTPUT_DIR"
 
                     echo "Running:"

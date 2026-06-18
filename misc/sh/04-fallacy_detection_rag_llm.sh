@@ -67,7 +67,7 @@ for dataset in "${DATASETS[@]}"; do
 
     if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
       CONF_ID="mode-${mode}"
-      OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
+      OUTPUT_DIR="output/detection/$dataset/${MODEL_NAME}/${CONF_ID}"
       mkdir -p "$OUTPUT_DIR"
 
       torchrun \
@@ -102,7 +102,7 @@ for dataset in "${DATASETS[@]}"; do
         for lr in "${LEARNING_RATES[@]}"; do
           for epoch in "${EPOCHS[@]}"; do
             CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
-            OUTPUT_DIR="output/$dataset/${MODEL_NAME}/${CONF_ID}"
+            OUTPUT_DIR="output/detection/$dataset/${MODEL_NAME}/${CONF_ID}"
             mkdir -p "$OUTPUT_DIR"
 
             torchrun \
