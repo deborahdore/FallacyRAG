@@ -1,7 +1,7 @@
 #!/bin/bash
-#SBATCH --job-name=create_knowledge_base
-#SBATCH --output=logs/create_knowledge_base.out
-#SBATCH --error=logs/create_knowledge_base.out
+#SBATCH --job-name=create_persistent_db
+#SBATCH --output=logs/create_persistent_db.out
+#SBATCH --error=logs/create_persistent_db.out
 #SBATCH --gres=gpu:1
 
 set -e

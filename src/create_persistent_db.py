@@ -54,9 +54,6 @@ RETRIEVERS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    # "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    # "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    # "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed")
 }
 
 
@@ -90,7 +87,39 @@ def _apply_gpu_optimizations(embedding_function, retriever: str):
         log.warning(f"torch.compile not available or failed: {e}")
 
 
-def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
+DEFAULT_DIRECTORIES = [
+    "bills",
+    "definitions",
+    ("definitions/papers", "papers"),  # academic papers (nested subfolder)
+    "exemplars",                        # labeled fallacy examples (carry fallacy_label)
+    "geography",
+    "history",                          # US history 1900-today, one record per year
+    "newspapers",
+    "people",
+]
+
+
+def _deterministic_ids(splits: list) -> list[str]:
+    """Build a stable id for every chunk so re-indexing upserts instead of duplicating.
+
+    The id is derived from the document's category + source id + a per-document chunk index,
+    e.g. "history:US_history_1929:0". Re-running on unchanged content produces the same ids,
+    so Chroma overwrites those chunks rather than appending copies.
+    """
+    counters: dict[tuple[str, str], int] = {}
+    ids: list[str] = []
+    for doc in splits:
+        category = str(doc.metadata.get("category", "uncat"))
+        doc_id = str(doc.metadata.get("id", "noid"))
+        key = (category, doc_id)
+        idx = counters.get(key, 0)
+        counters[key] = idx + 1
+        ids.append(f"{category}:{doc_id}:{idx}")
+    return ids
+
+
+def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
+         update: bool = False, directories: list | None = None):
     torch.set_grad_enabled(False)
 
     if DEVICE == "cuda":
@@ -103,9 +132,13 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
     persist_directory_path = PERSIST_DIRECTORY + retriever.replace("/", "-")
     Path(persist_directory_path).mkdir(parents=True, exist_ok=True)
 
-    if any(Path(persist_directory_path).iterdir()):
-        log.info("Vector database already exists. Skipping indexing.")
+    store_exists = any(Path(persist_directory_path).iterdir())
+    if store_exists and not update:
+        log.info("Vector database already exists. Skipping indexing. "
+                 "Use --update to append documents incrementally.")
         return
+    if update:
+        log.info("Update mode: appending to the existing store (no full rebuild).")
 
     embedding_function = RETRIEVERS[retriever]()
 
@@ -122,15 +155,7 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
 
     loader = FallacyLoader(
         source_path=KNOWLEDGE_BASE_PATH,
-        directories=[
-            "bills",
-            "definitions",
-            ("definitions/papers", "papers"),  # academic papers (nested subfolder)
-            "exemplars",                        # labeled fallacy examples (carry fallacy_label)
-            "geography",
-            "newspapers",
-            "people",
-        ],
+        directories=directories if directories is not None else DEFAULT_DIRECTORIES,
     )
 
     docs = loader.load()
@@ -148,8 +173,11 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int):
 
     splits = text_splitter.split_documents(docs)
 
+    # Deterministic ids → re-running upserts the same chunks instead of duplicating them.
+    ids = _deterministic_ids(splits)
+
     for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):
-        vector_store.add_documents(splits[i: i + batch_size])
+        vector_store.add_documents(splits[i: i + batch_size], ids=ids[i: i + batch_size])
 
     log.info("Indexing completed")
 
@@ -189,6 +217,21 @@ if __name__ == "__main__":
         help="Number of chunks indexed per batch",
     )
 
+    parser.add_argument(
+        "--update",
+        action="store_true",
+        help="Append to an existing store instead of skipping. Combined with deterministic "
+             "ids, re-running upserts chunks rather than duplicating them.",
+    )
+
+    parser.add_argument(
+        "--directories",
+        nargs="+",
+        default=None,
+        help="Knowledge-base sub-folders to (re)index, e.g. --directories history. "
+             "Defaults to all sections. Useful with --update to add only new content.",
+    )
+
     args = parser.parse_args()
 
     overlap = (
@@ -202,4 +245,6 @@ if __name__ == "__main__":
         chunk_size=args.chunk_size,
         chunk_overlap=overlap,
         batch_size=args.batch_size,
+        update=args.update,
+        directories=args.directories,
     )

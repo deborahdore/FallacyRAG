@@ -19,8 +19,8 @@ from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 from src.utils.util import create_and_save_record, get_request, simulate_browser, safe_filename, \
-    fetch_wikipedia_sections, fetch_wikipedia_links, fetch_wikipedia_category_members, \
-    post_request, get_item_ids
+    fetch_wikipedia_sections, fetch_wikipedia_section, fetch_wikipedia_links, \
+    fetch_wikipedia_category_members, post_request, get_item_ids
 
 logging.basicConfig(
     level=logging.INFO,
@@ -48,6 +48,22 @@ CENSUS_BASE = "https://data.census.gov/api"
 CHRONICLING_AMERICA_SEARCH_URL = "https://www.loc.gov/newspapers/"
 CHRONICLING_AMERICA_MIN_YEAR = 1770
 CHRONICLING_AMERICA_MAX_YEAR = 1963
+
+# --- American history (one Wikipedia "{year} in the United States" page per year) ---
+HISTORY_START_YEAR = 1900
+HISTORY_WIKI_TITLE = "{year} in the United States"
+
+# Broad "History of the United States (start–end)" era pages. These complement the per-year
+# pages with narrative overviews of each period. NOTE the titles use an en-dash (–), which is
+# the actual Wikipedia title character. `end_year=None` means "present".
+HISTORY_ERA_PAGES = [
+    ("History of the United States (1917–1945)", 1917, 1945),
+    ("History of the United States (1945–1964)", 1945, 1964),
+    ("History of the United States (1964–1980)", 1964, 1980),
+    ("History of the United States (1980–1991)", 1980, 1991),
+    ("History of the United States (1991–2016)", 1991, 2016),
+    ("History of the United States (2016–present)", 2016, None),
+]
 
 SCHOLAR_QUERIES = [
     "fallacy political debate",
@@ -579,8 +595,8 @@ def _load_mafalda_exemplars(path: Path, drop_other: bool) -> int:
             if not example:
                 continue
             if _save_exemplar_record(
-                path, f"MAFALDA_{i}_{j}", example, category,
-                "Fallacy exemplar corpus: MAFALDA", "https://github.com/ChadiHelwe/MAFALDA",
+                    path, f"MAFALDA_{i}_{j}", example, category,
+                    "Fallacy exemplar corpus: MAFALDA", "https://github.com/ChadiHelwe/MAFALDA",
             ):
                 saved += 1
     log.info("Ingested %d on-taxonomy exemplars from MAFALDA", saved)
@@ -620,9 +636,9 @@ def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
                 dropped += 1
                 continue
             if _save_exemplar_record(
-                path, f"{safe_filename(hf_id)}_{i}", example, category,
-                f"Fallacy exemplar corpus: {hf_id}",
-                f"https://huggingface.co/datasets/{hf_id}",
+                    path, f"{safe_filename(hf_id)}_{i}", example, category,
+                    f"Fallacy exemplar corpus: {hf_id}",
+                    f"https://huggingface.co/datasets/{hf_id}",
             ):
                 saved += 1
                 kept += 1
@@ -963,10 +979,204 @@ def newspapers(path: Path):
     # log.info("Removed temporary folder %s", saveTo)
 
 
+def _make_year_aware(year: int, text: str) -> str:
+    """Make a year's history text year-anchored at every chunk boundary.
+
+    The text splitter (RecursiveCharacterTextSplitter in create_persistent_db.py) cuts a long
+    record into several chunks, and each chunk is embedded *independently*. If the year only
+    appeared once at the top, every chunk after the first would lose all temporal context and
+    the retriever could no longer tell which year that passage is about. So we prepend a strong
+    header and prefix every paragraph with an explicit "[{year}]" marker, ensuring the year
+    token is present in whatever chunk the splitter produces.
+    """
+    header = f"Year: {year}. History of the United States in {year}.\n\n"
+    paragraphs = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
+    body = "\n\n".join(f"[{year}] {p}" for p in paragraphs)
+    return header + body
+
+
+def _make_period_aware(start_year: int, end_year: int, text: str) -> str:
+    """Like `_make_year_aware`, but for a multi-year era page.
+
+    Prefixes every paragraph with the period span so each split chunk stays anchored to the
+    era it describes. The numeric metadata year is set to `start_year` by the caller, so the
+    retrieval agents' temporal filter ({"year": {"$lt": Y}}) still treats it consistently.
+    """
+    span = f"{start_year}–{end_year}"
+    header = f"Period: {start_year} to {end_year}. History of the United States, {span}.\n\n"
+    paragraphs = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
+    body = "\n\n".join(f"[{span}] {p}" for p in paragraphs)
+    return header + body
+
+
+def _save_history_page(path: Path, title: str, start_year: int, end_year: int,
+                       seen: set) -> bool:
+    """Fetch one Wikipedia page and save it as a period-anchored history record.
+
+    The page text is made period-aware and the numeric `year` metadata is set to `start_year`
+    so it stays compatible with the temporal `{"year": {"$lt": Y}}` retrieval filter. Returns
+    True if a record was written. `seen` dedupes pages shared across eras.
+    """
+    slug = safe_filename(title)
+    if slug in seen:
+        return False
+    seen.add(slug)
+    try:
+        text = fetch_wikipedia_sections(title)
+        if not text or not text.strip():
+            log.warning("No content for '%s', skipping", title)
+            return False
+        filename = create_and_save_record(
+            path=path,
+            id=slug,
+            text=_make_period_aware(start_year, end_year, text),
+            source=f"Wikipedia webpage for {title}",
+            url=f"https://en.wikipedia.org/wiki/{title.replace(' ', '_')}",
+            year=start_year,
+        )
+        log.info("Saved %s", filename)
+        return True
+    except Exception as e:
+        log.error("Failed to fetch page '%s': %s", title, e)
+        return False
+
+
+def history_eras(path: Path, era_pages: list | None = None,
+                 explore_links: bool = True, links_per_page: int = 200,
+                 seen: set | None = None):
+    """Ingest the broad "History of the United States (start–end)" era overview pages.
+
+    Each era spans several years, so the year is encoded as the period span inside the text
+    (see `_make_period_aware`) and the numeric `year` metadata is set to the era's start year
+    — keeping it compatible with the temporal `{"year": {"$lt": Y}}` retrieval filter.
+
+    When `explore_links` is True, the first-level article-namespace pages linked from each era
+    page are also fetched and saved, inheriting that era's period span and start year.
+
+    `seen` is a shared set of page slugs already saved; pass the one used by `american_history`
+    so a page is written only once across the whole history ingestion (no duplicate pages).
+    """
+    path.mkdir(parents=True, exist_ok=True)
+    era_pages = era_pages or HISTORY_ERA_PAGES
+    if seen is None:
+        seen = set()
+    saved = 0
+    for title, start_year, end_year in tqdm(era_pages, desc="US history eras"):
+        resolved_end = end_year if end_year is not None else time.localtime().tm_year
+
+        # --- the era overview page itself ---
+        if _save_history_page(path, title, start_year, resolved_end, seen):
+            saved += 1
+
+        # --- first-level links from the era page ---
+        if not explore_links:
+            continue
+        try:
+            linked_titles = fetch_wikipedia_links(title, limit=links_per_page)
+        except Exception as e:
+            log.error("Could not fetch links for '%s': %s", title, e)
+            continue
+        for linked_title in tqdm(linked_titles, desc=f"Links of {start_year}", leave=False):
+            if _save_history_page(path, linked_title, start_year, resolved_end, seen):
+                saved += 1
+
+    log.info("Saved %d US-history era + linked records to %s", saved, path)
+    return saved
+
+
+def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
+                     end_year: int | None = None,
+                     explore_links: bool = True, links_per_year: int = 200):
+    """Ingest the history of the United States from `start_year` to today, one record per year.
+
+    For each year we pull the "Events" section of Wikipedia's "{year} in the United States"
+    article (the dated list of what happened that year) and save it as a knowledge-base record.
+    The year is stored TWICE so the retriever can reason about time:
+
+      1. As the numeric `year` metadata field — `FallacyLoader` copies this into the Chroma
+         metadata, where the retrieval agents already filter on it (e.g. {"year": {"$lt": Y}}).
+         This is what lets the DB return only documents from before / around a given year.
+      2. Embedded inside the text itself (see `_make_year_aware`) so semantic search can match
+         year-specific queries even within chunks that were split off from the record head.
+
+    When `explore_links` is True, the first-level article-namespace pages linked from each year
+    page are also fetched and saved, inheriting that year's metadata. A single `seen` set is
+    shared across the per-year crawl, the link crawl, and the era crawl so each page is written
+    at most once (drop duplicate pages).
+    """
+    path.mkdir(parents=True, exist_ok=True)
+    if end_year is None:
+        end_year = time.localtime().tm_year  # "today"
+
+    seen: set = set()
+    saved = 0
+    for year in tqdm(range(start_year, end_year + 1), desc="US history by year"):
+        title = HISTORY_WIKI_TITLE.format(year=year)
+        seen.add(safe_filename(title))  # don't re-fetch the year page via its own links
+
+        # --- the "Events" section of the year page ---
+        try:
+            events = fetch_wikipedia_section(title, "Events")
+            if events and events.strip():
+                filename = create_and_save_record(
+                    path=path,
+                    id=f"US_history_{year}",
+                    text=_make_year_aware(year, events),
+                    source=f"Wikipedia webpage for {title} (Events)",
+                    url=f"https://en.wikipedia.org/wiki/{title.replace(' ', '_')}#Events",
+                    year=year,
+                )
+                saved += 1
+                log.info("Saved %s", filename)
+            else:
+                log.warning("No Events section for '%s'", title)
+        except Exception as e:
+            log.error("Failed to fetch Events for %d: %s", year, e)
+
+        # --- first-level links from the year page ---
+        if not explore_links:
+            continue
+        try:
+            linked_titles = fetch_wikipedia_links(title, limit=links_per_year)
+        except Exception as e:
+            log.error("Could not fetch links for '%s': %s", title, e)
+            continue
+        for linked_title in tqdm(linked_titles, desc=f"Links of {year}", leave=False):
+            slug = safe_filename(linked_title)
+            if slug in seen:
+                continue
+            seen.add(slug)
+            try:
+                linked_text = fetch_wikipedia_sections(linked_title)
+                if not linked_text or not linked_text.strip():
+                    continue
+                filename = create_and_save_record(
+                    path=path,
+                    id=slug,
+                    text=_make_year_aware(year, linked_text),
+                    source=f"Wikipedia webpage for {linked_title}",
+                    url=f"https://en.wikipedia.org/wiki/{linked_title.replace(' ', '_')}",
+                    year=year,
+                )
+                saved += 1
+                log.info("Saved %s", filename)
+            except Exception as e:
+                log.error("Failed to fetch linked page '%s': %s", linked_title, e)
+
+    log.info("Saved %d yearly US-history records to %s (%d-%d)",
+             saved, path, start_year, end_year)
+
+    # Also ingest the broad era-overview pages into the same folder, sharing the `seen` set so
+    # pages already saved from the per-year crawl are not written again (drop duplicate pages).
+    saved += history_eras(path, seen=seen)
+    return saved
+
+
 def main():
     # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
     # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
     # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    american_history(Path(KNOWLEDGE_BASE_PATH + "/history"))
     definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
     # newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
     fallacy_exemplars(Path(KNOWLEDGE_BASE_PATH + "/exemplars"))

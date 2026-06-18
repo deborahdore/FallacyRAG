@@ -321,6 +321,83 @@ def fetch_wikipedia_sections(page: str):
     return text
 
 
+def fetch_wikipedia_section(page: str, section_name: str) -> str:
+    """Return the text of a single named section of a Wikipedia page.
+
+    Unlike `fetch_wikipedia_sections` (which only keeps <p> paragraphs across the whole page),
+    this targets one section by its heading (e.g. "Events") and extracts BOTH paragraphs and
+    list items (<li>) — necessary for pages like "{year} in the United States" whose events are
+    bulleted lists. Requesting a top-level section also returns its nested subsections (e.g. the
+    month groupings under "Events"). Returns "" if the section is not found.
+    """
+    url = "https://en.wikipedia.org/w/api.php"
+    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+
+    # ---- locate the section index by heading ----
+    params = {
+        "action": "parse",
+        "page": page,
+        "prop": "sections",
+        "format": "json",
+        "formatversion": "2",
+    }
+    section_response = None
+    for attempt in range(5):
+        r = requests.get(url, params=params, headers=headers, timeout=15)
+        if r.status_code == 429:
+            time.sleep(int(r.headers.get("Retry-After", 2)))
+            continue
+        if r.status_code != 200:
+            time.sleep(2.0 * attempt)
+            continue
+        section_response = r.json()
+        break
+    if not section_response:
+        return ""
+
+    target_index = None
+    for section in section_response.get("parse", {}).get("sections", []):
+        if section.get("line", "").strip().lower() == section_name.strip().lower():
+            target_index = section["index"]
+            break
+    if target_index is None:
+        return ""
+
+    # ---- fetch that section's HTML and extract paragraphs + list items ----
+    params = {
+        "action": "parse",
+        "page": page,
+        "prop": "text",
+        "section": target_index,
+        "format": "json",
+        "formatversion": "2",
+    }
+    html_response = None
+    for attempt in range(5):
+        r = requests.get(url, params=params, headers=headers, timeout=15)
+        if r.status_code == 429:
+            time.sleep(int(r.headers.get("Retry-After", 2)))
+            continue
+        if r.status_code != 200:
+            time.sleep(2.0 * attempt)
+            continue
+        html_response = r.json()
+        break
+    if not html_response:
+        return ""
+
+    soup = BeautifulSoup(html_response.get("parse", {}).get("text", ""), "html.parser")
+    for ref in soup.select("sup.reference"):
+        ref.decompose()
+
+    parts = [
+        el.get_text(" ", strip=True)
+        for el in soup.find_all(["p", "li"])
+        if el.get_text(strip=True)
+    ]
+    return "\n".join(parts)
+
+
 # def get_request_token():
 #     url = f"https://en.wikipedia.org/wiki/Special:OAuth/initiate"
 #

@@ -45,7 +45,7 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 # Categories the retriever can search. These map to both the knowledge-base
 # sub-directories (for BM25) and the "category" metadata field (for vector search).
-KNOWLEDGE_BASE_CATEGORIES = ["bills", "definitions", "papers", "exemplars", "geography", "newspapers", "people"]
+KNOWLEDGE_BASE_CATEGORIES = ["bills", "definitions", "papers", "exemplars", "geography", "history", "newspapers", "people"]
 
 # Map each category to its loader directory spec. Most are plain folder names; "papers" is a
 # nested folder (definitions/papers) given a clean category label via a (folder, label) tuple.
@@ -55,6 +55,7 @@ CATEGORY_TO_DIRECTORY = {
     "papers": ("definitions/papers", "papers"),
     "exemplars": "exemplars",
     "geography": "geography",
+    "history": "history",
     "newspapers": "newspapers",
     "people": "people",
 }

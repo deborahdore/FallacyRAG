@@ -48,7 +48,7 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 # Knowledge-base categories the agent can search, each backed by a dedicated tool.
 KNOWLEDGE_BASE_CATEGORIES = [
-    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography"
+    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography", "history"
 ]
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
@@ -432,6 +432,25 @@ def build_agentic_context(
         return serialized, docs
 
     @tool(response_format="content_and_artifact")
+    def search_history(query: str) -> tuple[str, list]:
+        """Search the 'history' section of the knowledge base for U.S. historical events by
+        year and era (from 1900 to today).
+
+        Ask yourself: "What historical or political background is relevant here?",
+        "What was happening in the country around this time?", "Is this reference to a past
+        event accurate?"
+        Then query with the event, period, or year being discussed.
+        """
+        docs = vector_store.similarity_search(
+            query, k=top_k, filter=_build_filter("history")
+        )
+        serialized = "\n\n".join(
+            f"[history] Source: {doc.metadata.get('source', '')}\nContent: {doc.page_content}"
+            for doc in docs
+        )
+        return serialized, docs
+
+    @tool(response_format="content_and_artifact")
     def search_all(query: str) -> tuple[str, list]:
         """Search across ALL sections of the knowledge base simultaneously.
 
@@ -490,6 +509,7 @@ def build_agentic_context(
         "papers": search_papers,
         "exemplars": search_exemplars,
         "geography": search_geography,
+        "history": search_history,
     }
     tools = [category_tools[c] for c in allowed_categories if c in category_tools]
     # Only offer the cross-category fallback when more than one category is searchable.

@@ -43,7 +43,7 @@ KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 # Knowledge-base categories the agent can search, each backed by a dedicated tool.
 KNOWLEDGE_BASE_CATEGORIES = [
-    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography"
+    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography", "history"
 ]
 
 # Speaker labels that denote a non-candidate turn. When the topic a candidate
@@ -311,6 +311,9 @@ def build_discourse_aware_context(
         "exemplars": "Search the 'exemplars' KB section for labeled fallacy examples. "
                      "Ask: what known fallacy does this reasoning resemble?",
         "geography": "Search the 'geography' KB section. Ask: what place or region is referenced?",
+        "history": "Search the 'history' KB section for U.S. events by year/era (1900-today). "
+                   "Ask: what historical or political background is relevant? Query with the "
+                   "event, period, or year.",
     }
 
     tools = [get_preceding_turns, get_following_turns, get_speaker_role]
