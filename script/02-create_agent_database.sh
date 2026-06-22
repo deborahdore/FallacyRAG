@@ -9,9 +9,9 @@ export TOKENIZERS_PARALLELISM=false
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
 RETRIEVERS=(
-  "sentence-transformers/all-mpnet-base-v2"
-  "ddore14/Sentence-RooseBERT"
   "BAAI/bge-large-en-v1.5"
+  "ddore14/Sentence-RooseBERT"
+  "sentence-transformers/all-mpnet-base-v2"
 )
 
 AGENT_MODEL="ollama:command-r"

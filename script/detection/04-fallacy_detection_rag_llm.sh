@@ -29,7 +29,6 @@ export WANDB_PROJECT="fallacy_detection"
 
 SEED=14
 export PYTHONHASHSEED=$SEED
-
 wandb disabled
 
 DATASETS=(
@@ -39,10 +38,9 @@ DATASETS=(
 MODES=("fine_tune" "zero_shot" "few_shot")
 
 MODELS=(
-#"mistralai/Mistral-7B-Instruct-v0.3"
-#"meta-llama/Llama-3.1-8B-Instruct"
+"meta-llama/Llama-3.1-8B-Instruct"
 "Qwen/Qwen3.5-9B-Base"
-#"openai/gpt-oss-20b"
+"openai/gpt-oss-20b"
 )
 
 N_GPUS=2
