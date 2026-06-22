@@ -46,9 +46,15 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
-# Knowledge-base categories the agent can search, each backed by a dedicated tool.
 KNOWLEDGE_BASE_CATEGORIES = [
-    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography", "history"
+    # "bills",
+    "definitions",
+    "papers",  # academic papers (nested subfolder)
+    "exemplars",  # labeled fallacy examples (carry fallacy_label)
+    "geography",
+    "history",  # US history 1900-today, one record per year
+    "newspapers",
+    "people",
 ]
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
@@ -731,12 +737,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "--categories",
         nargs="+",
-        default=[c for c in KNOWLEDGE_BASE_CATEGORIES if c != "bills"],
+        default=KNOWLEDGE_BASE_CATEGORIES,
         choices=KNOWLEDGE_BASE_CATEGORIES,
         metavar="CATEGORY",
         help="Restrict the agent's retrieval to these knowledge-base categories "
-             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; "
-             "default: all categories except 'bills').",
+             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}).",
     )
     args = parser.parse_args()
 
@@ -753,11 +758,6 @@ if __name__ == "__main__":
         path += "-retriever=false"
 
     path += "-summarizer=false"
-
-    # if args.categories:
-    #     path += f"-categories={'+'.join(sorted(args.categories))}"
-    # else:
-    #     path += "-categories=all"
 
     path = str(path).lower()
     os.makedirs(path, exist_ok=True)

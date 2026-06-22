@@ -18,10 +18,8 @@ import pandas as pd
 import rootutils
 import torch
 from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings, CohereEmbeddings
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_mistralai import MistralAIEmbeddings
-from langchain_ollama import OllamaEmbeddings
 from langchain.agents import create_agent
 from langchain.chat_models import init_chat_model
 from langchain.tools import tool
@@ -41,16 +39,17 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
-# Knowledge-base categories the agent can search, each backed by a dedicated tool.
 KNOWLEDGE_BASE_CATEGORIES = [
-    "people", "bills", "newspapers", "definitions", "papers", "exemplars", "geography", "history"
+    # "bills",
+    "definitions",
+    "papers",  # academic papers (nested subfolder)
+    "exemplars",  # labeled fallacy examples (carry fallacy_label)
+    "geography",
+    "history",  # US history 1900-today, one record per year
+    "newspapers",
+    "people",
 ]
 
-# Speaker labels that denote a non-candidate turn. When the topic a candidate
-# later "disclaims" was actually introduced by one of these roles, the move reads
-# as a *solicited* clarification rather than a *volunteered* insinuation. This is
-# the discourse signal that distinguishes sincere denial from weaponised innuendo
-# (e.g. the 1960 Kennedy "I do not suggest ... Ku Klux Klan" passage).
 NON_CANDIDATE_ROLES = {
     "MODERATOR", "MEMBER_OF_AUDIENCE", "PANELIST", "QUESTIONER", "AUDIENCE",
 }
@@ -76,9 +75,6 @@ EMBEDDING_MODELS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
 }
 
 
@@ -585,12 +581,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "--categories",
         nargs="+",
-        default=[c for c in KNOWLEDGE_BASE_CATEGORIES], #if c != "bills"],
+        default=KNOWLEDGE_BASE_CATEGORIES,
         choices=KNOWLEDGE_BASE_CATEGORIES,
         metavar="CATEGORY",
         help="Restrict KB retrieval to these categories "
-             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; "
-             "default: all categories except 'bills').",
+             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}).",
     )
     args = parser.parse_args()
 

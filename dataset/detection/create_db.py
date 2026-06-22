@@ -19,11 +19,9 @@ import pandas as pd
 import rootutils
 import torch
 from langchain_chroma import Chroma
-from langchain_community.embeddings import HuggingFaceBgeEmbeddings, CohereEmbeddings
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 import bm25s as _bm25s
 from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_mistralai import MistralAIEmbeddings
-from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
@@ -43,12 +41,17 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
-# Categories the retriever can search. These map to both the knowledge-base
-# sub-directories (for BM25) and the "category" metadata field (for vector search).
-KNOWLEDGE_BASE_CATEGORIES = ["bills", "definitions", "papers", "exemplars", "geography", "history", "newspapers", "people"]
+KNOWLEDGE_BASE_CATEGORIES = [
+    # "bills",
+    "definitions",
+    "papers",  # academic papers (nested subfolder)
+    "exemplars",  # labeled fallacy examples (carry fallacy_label)
+    "geography",
+    "history",  # US history 1900-today, one record per year
+    "newspapers",
+    "people",
+]
 
-# Map each category to its loader directory spec. Most are plain folder names; "papers" is a
-# nested folder (definitions/papers) given a clean category label via a (folder, label) tuple.
 CATEGORY_TO_DIRECTORY = {
     "bills": "bills",
     "definitions": "definitions",
@@ -83,9 +86,6 @@ EMBEDDING_MODELS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    "llama3": lambda: OllamaEmbeddings(model="llama3"),
-    "embed-english-v3.0": lambda: CohereEmbeddings(model="embed-english-v3.0"),
-    "mistral-embed": lambda: MistralAIEmbeddings(model="mistral-embed"),
     "bm25": "bm25-as-retriever",
 }
 
@@ -502,12 +502,12 @@ if __name__ == "__main__":
     parser.add_argument(
         "--categories",
         nargs="+",
-        default=[c for c in KNOWLEDGE_BASE_CATEGORIES if c != "bills"],
+        default=KNOWLEDGE_BASE_CATEGORIES,
         choices=KNOWLEDGE_BASE_CATEGORIES,
         metavar="CATEGORY",
         help="Restrict retrieval to these knowledge-base categories "
              f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; "
-             "default: all categories except 'bills').",
+             "default: all categories).",
     )
     args = parser.parse_args()
 
@@ -533,11 +533,6 @@ if __name__ == "__main__":
         path += f"-summarizer={summarization_model_name}"
     else:
         path += "-summarizer=false"
-
-    # if args.categories:
-    #     path += f"-categories={'+'.join(sorted(args.categories))}"
-    # else:
-    #     path += "-categories=all"
 
     path = str(path).lower()
     os.makedirs(path, exist_ok=True)
