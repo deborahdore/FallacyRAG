@@ -18,9 +18,10 @@ from pdf2image import convert_from_path
 from tqdm import tqdm
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
-from src.utils.util import create_and_save_record, get_request, simulate_browser, safe_filename, \
-    fetch_wikipedia_sections, fetch_wikipedia_section, fetch_wikipedia_links, \
-    fetch_wikipedia_category_members, post_request, get_item_ids
+from src.utils.util import create_and_save_record, get_request, simulate_browser, \
+    safe_filename, fetch_wikipedia_sections, fetch_wikipedia_section, \
+    fetch_wikipedia_links, fetch_wikipedia_extracts, fetch_wikipedia_category_members, \
+    post_request, get_item_ids
 
 logging.basicConfig(
     level=logging.INFO,
@@ -694,6 +695,7 @@ def definitions(path: Path):
         return any(keyword in lowered for keyword in FALLACY_WIKI_KEYWORDS)
 
     seen_pages = {safe_filename(id)}
+    relevant_titles = []
     for linked_title in fetch_wikipedia_links(id, limit=200):
         if not _is_fallacy_relevant(linked_title):
             continue
@@ -701,20 +703,86 @@ def definitions(path: Path):
         if slug in seen_pages:
             continue
         seen_pages.add(slug)
+        relevant_titles.append(linked_title)
+
+    # Fetch all relevant connected pages concurrently instead of one at a time.
+    linked_texts = _fetch_pages_parallel(relevant_titles)
+    for linked_title in relevant_titles:
+        linked_text = linked_texts.get(safe_filename(linked_title))
+        if not linked_text:
+            continue
+        create_and_save_record(
+            path=path,
+            id=safe_filename(linked_title),
+            text=linked_text,
+            source=f"Wikipedia webpage for {linked_title}",
+            url=f"https://en.wikipedia.org/wiki/{linked_title.replace(' ', '_')}",
+        )
+
+
+def _fetch_pages_parallel(titles, max_workers: int = 6) -> dict:
+    """Fetch full plain-text for many Wikipedia pages quickly. Returns {slug: text}.
+
+    Uses the `extracts` API (full article text in ONE request per page) run concurrently,
+    instead of `fetch_wikipedia_sections` which issues ~one request *per section* and, fanned
+    out across workers, quickly trips Wikipedia's rate limiter (HTTP 429). This both avoids the
+    429 storm and returns richer content (full plaintext, including lists). Keys are slugs
+    (`safe_filename` of the canonical title) so callers can look up by their page id.
+    """
+    extracts = fetch_wikipedia_extracts(titles, intro_only=False, max_workers=max_workers)
+    return {safe_filename(title): text for title, text in extracts.items()}
+
+
+def _expand_first_level_links(path: Path, seed_titles, source_template: str,
+                              limit: int = 500, max_workers: int = 8,
+                              seen: set | None = None) -> int:
+    """Fetch and save the first-level Wikipedia pages linked from each seed page.
+
+    For every `seed_titles` entry (a Wikipedia article title), collect the article-namespace
+    pages it links to (its 'first level', capped at `limit`), then save each unique linked page
+    using its lead extract. Link lists are gathered concurrently and bodies are pulled with the
+    batched `fetch_wikipedia_extracts`, so the expansion stays fast. Seed pages themselves and
+    any already-saved slug (via `seen`) are skipped, so nothing is duplicated.
+    """
+    seen = seen if seen is not None else set()
+    seeds = [t for t in dict.fromkeys(seed_titles) if t]  # de-dupe, preserve order, drop empties
+    for t in seeds:
+        seen.add(safe_filename(t))  # don't re-save the seed page via its own links
+
+    def _links(title: str):
         try:
-            linked_text = fetch_wikipedia_sections(linked_title)
-            if not linked_text:
-                continue
-            filename = create_and_save_record(
-                path=path,
-                id=slug,
-                text=linked_text,
-                source=f"Wikipedia webpage for {linked_title}",
-                url=f"https://en.wikipedia.org/wiki/{linked_title.replace(' ', '_')}",
-            )
-            log.info("Saved %s", filename)
+            return fetch_wikipedia_links(title, limit=limit)
         except Exception as e:
-            log.error("Failed to fetch connected page '%s': %s", linked_title, e)
+            log.error("Could not fetch links for '%s': %s", title, e)
+            return []
+
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        link_lists = list(pool.map(_links, seeds))
+
+    new_titles: list[str] = []
+    for linked_titles in link_lists:
+        for linked_title in linked_titles:
+            slug = safe_filename(linked_title)
+            if slug in seen:
+                continue
+            seen.add(slug)
+            new_titles.append(linked_title)
+
+    log.info("Expanding %d unique first-level linked pages", len(new_titles))
+    extracts = fetch_wikipedia_extracts(new_titles, max_workers=max_workers)
+
+    saved = 0
+    for canon_title, text in extracts.items():
+        create_and_save_record(
+            path=path,
+            id=safe_filename(canon_title),
+            text=text,
+            source=source_template.format(title=canon_title),
+            url=f"https://en.wikipedia.org/wiki/{canon_title.replace(' ', '_')}",
+        )
+        saved += 1
+    log.info("Saved %d first-level linked pages to %s", saved, path)
+    return saved
 
 
 def people(path: Path):
@@ -747,16 +815,28 @@ def people(path: Path):
     # =================== people discussed in the debates =================== #
     people.extend(json.loads(Path(TOPIC_RESULTS_PATH).read_text(encoding="utf-8"))["PEOPLE"])
     people = set(people)
-    for name in tqdm(set(people)):
-        id = safe_filename(name)
-        paragraph = fetch_wikipedia_sections(id)
-        if not paragraph: continue
-        filename = create_and_save_record(path=path,
-                                          id=id,
-                                          text=paragraph,
-                                          source="Wikipedia's Web Page for {}".format(name),
-                                          url="https://en.wikipedia.org/wiki/" + id)
-        log.info(f"Saved {filename}")
+    seen_pages: set = set()
+
+    # Fetch all the people's Wikipedia pages concurrently.
+    person_titles = {name: safe_filename(name) for name in people}
+    person_texts = _fetch_pages_parallel(list(person_titles.values()))
+    for name, page_id in person_titles.items():
+        seen_pages.add(page_id)
+        paragraph = person_texts.get(page_id)
+        if not paragraph:
+            continue
+        create_and_save_record(path=path,
+                               id=page_id,
+                               text=paragraph,
+                               source="Wikipedia's Web Page for {}".format(name),
+                               url="https://en.wikipedia.org/wiki/" + page_id)
+
+    # =================== first-level Wikipedia links of those people =================== #
+    # Expand each person's Wikipedia page by also saving the pages it links to (capped at
+    # 1000 links per page), deduped against the people already saved above.
+    _expand_first_level_links(
+        path, people, "Wikipedia connected page for {title}", seen=seen_pages,
+    )
 
 
 def geography(path: Path):
@@ -766,8 +846,10 @@ def geography(path: Path):
     profiles = r.get("response", {}).get("profiles", [])
     log.info("Processing %d states/territories", len(profiles))
 
-    states = []
-    for state in tqdm(profiles):
+    # Process each state's census profile concurrently (one worker per state); the per-state
+    # topic requests still run inside the worker. Workers write distinct files and return the
+    # state name so the main thread can collect the list.
+    def _process_state(state) -> str | None:
         try:
             geo_id = state["facets"]["geography"][0]
             meta = get_request(
@@ -775,10 +857,10 @@ def geography(path: Path):
                 params={"g": geo_id, "includeHighlights": "false"},
                 return_json=True
             )
-            if not meta: continue
+            if not meta:
+                return None
 
             name = state["title"]
-            states.append(name)
             file_id = safe_filename(name)
 
             paragraph = (
@@ -792,11 +874,9 @@ def geography(path: Path):
             topics = set()
             for section in meta.get("sections", []):
                 topics.add(section.get("title"))
-
                 for sub in section.get("subsections", []):
                     if sub.get("type") == "topic":
                         topics.add(sub.get("topic"))
-
             topics.discard("Explore Your State")
 
             # -------- fetch topic data --------
@@ -806,10 +886,8 @@ def geography(path: Path):
                     params={"g": geo_id, "infoSection": topic},
                     return_json=True
                 )
-
                 if not response:
                     continue
-
                 viz = response.get("vizData", {})
                 if viz and viz.get("stats"):
                     text = (
@@ -818,37 +896,50 @@ def geography(path: Path):
                     )
                     paragraph += f"{topic}: {text}\n\n"
 
-            # -------- save record --------
-            filename = create_and_save_record(
+            create_and_save_record(
                 path=path,
                 id=file_id,
                 text=paragraph,
                 source="UNITED STATES CENSUS BUREAU",
                 url=f"https://data.census.gov/profile/{state['title']}?g={geo_id}",
             )
-
-            log.info("Saved %s", filename)
-
+            return name
         except Exception as e:
             log.error("Error processing %s: %s", state.get("title"), e)
+            return None
+
+    states = []
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for name in tqdm(pool.map(_process_state, profiles), total=len(profiles),
+                         desc="Census states"):
+            if name:
+                states.append(name)
 
     # ================== get states from wikipedia ==================
     states.extend(json.loads(Path(TOPIC_RESULTS_PATH).read_text())["PLACES"])
     states = set(states)
-    for state in tqdm(states):
-        id = safe_filename(state)
-        try:
-            paragraph = fetch_wikipedia_sections(id)
-            filename = create_and_save_record(path=path,
-                                              id=id,
-                                              text=paragraph,
-                                              source="Wikipedia's Web Page for {}".format(state),
-                                              url=f"https://en.wikipedia.org/wiki/{id}"
-                                              )
-        except Exception as e:
-            log.error("Error processing %s: %s", id, e)
+    seen_pages: set = set()
+
+    # Fetch all the places' Wikipedia pages concurrently.
+    place_titles = {state: safe_filename(state) for state in states}
+    place_texts = _fetch_pages_parallel(list(place_titles.values()))
+    for state, page_id in place_titles.items():
+        seen_pages.add(page_id)
+        paragraph = place_texts.get(page_id)
+        if not paragraph:
             continue
-        log.info("Saved %s", filename)
+        create_and_save_record(path=path,
+                               id=page_id,
+                               text=paragraph,
+                               source="Wikipedia's Web Page for {}".format(state),
+                               url=f"https://en.wikipedia.org/wiki/{page_id}")
+
+    # ================== first-level Wikipedia links of those places ================== #
+    # Expand each place's Wikipedia page by also saving the pages it links to (capped at
+    # 1000 links per page), deduped against the places already saved above.
+    _expand_first_level_links(
+        path, states, "Wikipedia connected page for {title}", seen=seen_pages,
+    )
 
 
 def newspapers(path: Path):
@@ -1042,7 +1133,7 @@ def _save_history_page(path: Path, title: str, start_year: int, end_year: int,
 
 
 def history_eras(path: Path, era_pages: list | None = None,
-                 explore_links: bool = True, links_per_page: int = 200,
+                 explore_links: bool = True, links_per_page: int = 500,
                  seen: set | None = None):
     """Ingest the broad "History of the United States (start–end)" era overview pages.
 
@@ -1086,7 +1177,8 @@ def history_eras(path: Path, era_pages: list | None = None,
 
 def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
                      end_year: int | None = None,
-                     explore_links: bool = True, links_per_year: int = 200):
+                     explore_links: bool = True, links_per_year: int = 500,
+                     max_workers: int = 8):
     """Ingest the history of the United States from `start_year` to today, one record per year.
 
     For each year we pull the "Events" section of Wikipedia's "{year} in the United States"
@@ -1103,65 +1195,94 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
     page are also fetched and saved, inheriting that year's metadata. A single `seen` set is
     shared across the per-year crawl, the link crawl, and the era crawl so each page is written
     at most once (drop duplicate pages).
+
+    Performance: the Events sections and the link lists are fetched concurrently (`max_workers`
+    threads), and linked-page bodies are pulled with `fetch_wikipedia_extracts` — one batched
+    request for up to 20 pages — instead of one request per section. This is many times faster
+    than fetching every page sequentially section-by-section.
     """
     path.mkdir(parents=True, exist_ok=True)
     if end_year is None:
         end_year = time.localtime().tm_year  # "today"
 
+    years = list(range(start_year, end_year + 1))
     seen: set = set()
     saved = 0
-    for year in tqdm(range(start_year, end_year + 1), desc="US history by year"):
-        title = HISTORY_WIKI_TITLE.format(year=year)
-        seen.add(safe_filename(title))  # don't re-fetch the year page via its own links
 
-        # --- the "Events" section of the year page ---
+    # ── Phase 1: the "Events" section of each year page (fetched concurrently) ──────────────
+    def _fetch_events(year: int):
+        title = HISTORY_WIKI_TITLE.format(year=year)
         try:
-            events = fetch_wikipedia_section(title, "Events")
-            if events and events.strip():
-                filename = create_and_save_record(
-                    path=path,
-                    id=f"US_history_{year}",
-                    text=_make_year_aware(year, events),
-                    source=f"Wikipedia webpage for {title} (Events)",
-                    url=f"https://en.wikipedia.org/wiki/{title.replace(' ', '_')}#Events",
-                    year=year,
-                )
-                saved += 1
-                log.info("Saved %s", filename)
-            else:
-                log.warning("No Events section for '%s'", title)
+            return year, title, fetch_wikipedia_section(title, "Events")
         except Exception as e:
             log.error("Failed to fetch Events for %d: %s", year, e)
+            return year, title, ""
 
-        # --- first-level links from the year page ---
-        if not explore_links:
-            continue
-        try:
-            linked_titles = fetch_wikipedia_links(title, limit=links_per_year)
-        except Exception as e:
-            log.error("Could not fetch links for '%s': %s", title, e)
-            continue
-        for linked_title in tqdm(linked_titles, desc=f"Links of {year}", leave=False):
-            slug = safe_filename(linked_title)
-            if slug in seen:
-                continue
-            seen.add(slug)
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        events_results = list(tqdm(pool.map(_fetch_events, years),
+                                   total=len(years), desc="US history events"))
+
+    for year, title, events in events_results:
+        seen.add(safe_filename(title))  # don't re-fetch the year page via its own links
+        if events and events.strip():
+            create_and_save_record(
+                path=path,
+                id=f"US_history_{year}",
+                text=_make_year_aware(year, events),
+                source=f"Wikipedia webpage for {title} (Events)",
+                url=f"https://en.wikipedia.org/wiki/{title.replace(' ', '_')}#Events",
+                year=year,
+            )
+            saved += 1
+        else:
+            log.warning("No Events section for '%s'", title)
+
+    # ── Phase 2: first-level links from every year page ─────────────────────────────────────
+    if explore_links:
+        # 2a. Collect link lists concurrently (one cheap request each).
+        def _fetch_links(year: int):
+            title = HISTORY_WIKI_TITLE.format(year=year)
             try:
-                linked_text = fetch_wikipedia_sections(linked_title)
-                if not linked_text or not linked_text.strip():
-                    continue
-                filename = create_and_save_record(
-                    path=path,
-                    id=slug,
-                    text=_make_year_aware(year, linked_text),
-                    source=f"Wikipedia webpage for {linked_title}",
-                    url=f"https://en.wikipedia.org/wiki/{linked_title.replace(' ', '_')}",
-                    year=year,
-                )
-                saved += 1
-                log.info("Saved %s", filename)
+                return year, fetch_wikipedia_links(title, limit=links_per_year)
             except Exception as e:
-                log.error("Failed to fetch linked page '%s': %s", linked_title, e)
+                log.error("Could not fetch links for '%s': %s", title, e)
+                return year, []
+
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            link_lists = list(tqdm(pool.map(_fetch_links, years),
+                                   total=len(years), desc="US history link lists"))
+
+        # 2b. Deduplicate to the first year that references each page (keeps year attribution
+        #     stable and avoids fetching the same page twice).
+        title_to_year: dict[str, int] = {}
+        for year, linked_titles in link_lists:
+            for linked_title in linked_titles:
+                slug = safe_filename(linked_title)
+                if slug in seen:
+                    continue
+                seen.add(slug)
+                title_to_year[linked_title] = year
+
+        # 2c. Bulk-fetch page bodies in batched, concurrent requests.
+        log.info("Fetching %d unique linked pages in batches", len(title_to_year))
+        extracts = fetch_wikipedia_extracts(list(title_to_year), max_workers=max_workers)
+
+        # The extract API returns canonical titles (after redirect/normalisation); map each
+        # back to its source year via the requested title, falling back to the canonical one.
+        requested = {safe_filename(t): t for t in title_to_year}
+        for canon_title, text in extracts.items():
+            year = title_to_year.get(canon_title)
+            if year is None:
+                year = title_to_year.get(requested.get(safe_filename(canon_title), ""), start_year)
+            create_and_save_record(
+                path=path,
+                id=safe_filename(canon_title),
+                text=_make_year_aware(year, text),
+                source=f"Wikipedia webpage for {canon_title}",
+                url=f"https://en.wikipedia.org/wiki/{canon_title.replace(' ', '_')}",
+                year=year,
+            )
+            saved += 1
 
     log.info("Saved %d yearly US-history records to %s (%d-%d)",
              saved, path, start_year, end_year)
@@ -1173,13 +1294,13 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
 
 
 def main():
-    # bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
-    # geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
-    # people(Path(KNOWLEDGE_BASE_PATH + "/people"))
+    bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
+    geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
+    people(Path(KNOWLEDGE_BASE_PATH + "/people"))
     american_history(Path(KNOWLEDGE_BASE_PATH + "/history"))
     definitions(Path(KNOWLEDGE_BASE_PATH + "/definitions"))
-    # newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
     fallacy_exemplars(Path(KNOWLEDGE_BASE_PATH + "/exemplars"))
+    newspapers(Path(KNOWLEDGE_BASE_PATH + "/newspapers"))
 
 
 if __name__ == "__main__":

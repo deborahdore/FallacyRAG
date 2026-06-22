@@ -19,7 +19,7 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-PERSIST_DIRECTORY = "./chromadb/"
+PERSIST_DIRECTORY = "./chromadb_complete/"
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 Path(PERSIST_DIRECTORY).mkdir(parents=True, exist_ok=True)
@@ -91,9 +91,9 @@ DEFAULT_DIRECTORIES = [
     "bills",
     "definitions",
     ("definitions/papers", "papers"),  # academic papers (nested subfolder)
-    "exemplars",                        # labeled fallacy examples (carry fallacy_label)
+    "exemplars",  # labeled fallacy examples (carry fallacy_label)
     "geography",
-    "history",                          # US history 1900-today, one record per year
+    "history",  # US history 1900-today, one record per year
     "newspapers",
     "people",
 ]
@@ -116,6 +116,64 @@ def _deterministic_ids(splits: list) -> list[str]:
         counters[key] = idx + 1
         ids.append(f"{category}:{doc_id}:{idx}")
     return ids
+
+
+def _build_text_splitter(embedding_function, retriever: str,
+                         chunk_size: int, chunk_overlap: int) -> RecursiveCharacterTextSplitter:
+    """Build a token-aware splitter so chunks never exceed the embedding model's input window.
+
+    The previous splitter measured length in *characters*, but embedding models truncate on
+    *tokens* (all-mpnet ~384, bge-large 512). A 1000-char chunk could overflow the window and be
+    silently truncated at encode time, dropping the tail of every long chunk from the index — a
+    direct recall loss.
+
+    We read the tokenizer and max sequence length from the very model that will do the encoding,
+    clamp chunk_size to that limit, and fall back to character-based splitting if no tokenizer is
+    reachable.
+    """
+    client = getattr(embedding_function, "client", None)
+    tokenizer = getattr(client, "tokenizer", None)
+    max_seq_length = getattr(client, "max_seq_length", None)
+
+    if tokenizer is None:
+        try:
+            from transformers import AutoTokenizer
+            tokenizer = AutoTokenizer.from_pretrained(retriever)
+        except Exception as e:
+            log.warning(
+                f"Could not load a tokenizer for {retriever!r} ({e}); "
+                f"falling back to character-based splitting."
+            )
+            return RecursiveCharacterTextSplitter(
+                chunk_size=chunk_size,
+                chunk_overlap=chunk_overlap,
+                length_function=len,
+            )
+
+    # Clamp to the model's real input window (leave a couple of tokens for special tokens).
+    if max_seq_length:
+        token_limit = max(8, int(max_seq_length) - 2)
+        if chunk_size > token_limit:
+            log.info(
+                f"Requested chunk_size={chunk_size} tokens exceeds {retriever}'s input window "
+                f"({max_seq_length}); clamping to {token_limit}."
+            )
+            chunk_size = token_limit
+
+    # Overlap must stay strictly below the (possibly clamped) chunk size.
+    if chunk_overlap >= chunk_size:
+        chunk_overlap = chunk_size // 10
+        log.info(f"Adjusted chunk_overlap to {chunk_overlap} tokens (must be < chunk_size).")
+
+    log.info(
+        f"Token-based splitting via the {retriever} tokenizer "
+        f"(chunk_size={chunk_size} tokens, overlap={chunk_overlap} tokens)."
+    )
+    return RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
+        tokenizer,
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+    )
 
 
 def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
@@ -162,13 +220,11 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
     log.info(f"Loaded {len(docs)} documents")
 
     log.info(
-        f"Splitting documents (chunk_size={chunk_size}, overlap={chunk_overlap})"
+        f"Splitting documents (requested chunk_size={chunk_size}, overlap={chunk_overlap})"
     )
 
-    text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=chunk_size,
-        chunk_overlap=chunk_overlap,
-        length_function=len,
+    text_splitter = _build_text_splitter(
+        embedding_function, retriever, chunk_size, chunk_overlap
     )
 
     splits = text_splitter.split_documents(docs)
@@ -200,14 +256,14 @@ if __name__ == "__main__":
         "--chunk-size",
         type=int,
         default=1000,
-        help="Maximum characters per chunk",
+        help="Maximum tokens per chunk (clamped to the embedding model's input window)",
     )
 
     parser.add_argument(
         "--chunk-overlap",
         type=int,
         default=None,
-        help="Character overlap between chunks (default: 10% of chunk-size)",
+        help="Token overlap between chunks (default: 10% of chunk-size)",
     )
 
     parser.add_argument(

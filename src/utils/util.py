@@ -7,6 +7,7 @@ import string
 import time
 import unicodedata
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -92,24 +93,75 @@ def post_request(url: str, params: dict | None = None, json_obj: dict = None, re
         return BeautifulSoup(response.text, "xml")
 
 
+_BROWSER_UA = (
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
+)
+
+
 def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS):
     """Fetch a JSON endpoint via a headless Chromium browser."""
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
         try:
-            context = browser.new_context(user_agent=(
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
-                "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0 Safari/537.36"
-            ))
+            context = browser.new_context(user_agent=_BROWSER_UA)
             page = context.new_page()
             page.set_default_timeout(timeout_ms)
-            page.goto(url, wait_until="networkidle")
+            page.goto(url, wait_until="domcontentloaded")
             return json.loads(page.evaluate("() => document.body.innerText"))
-        except Exception as e:
+        except Exception:
             pass
         finally:
             browser.close()
     return None
+
+
+def simulate_browser_batch(urls, max_workers: int = 4,
+                           timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict:
+    """Fetch many JSON endpoints via headless Chromium, fast.
+
+    Two speedups over calling `simulate_browser` per URL: (1) each worker thread launches the
+    browser ONCE and reuses it for its whole shard of URLs (browser launch is the dominant
+    cost), and (2) `max_workers` workers run in parallel, each with its own Playwright instance
+    (the sync API is per-thread, so instances are not shared across threads). Returns
+    {url: parsed_json_or_None}.
+    """
+    urls = list(dict.fromkeys(urls))  # de-dupe, preserve order
+    if not urls:
+        return {}
+    max_workers = max(1, min(max_workers, len(urls)))
+    shards = [urls[i::max_workers] for i in range(max_workers)]
+
+    def _worker(shard: list) -> dict:
+        local: dict = {url: None for url in shard}
+        try:
+            with sync_playwright() as p:
+                browser = p.chromium.launch(headless=True)
+                try:
+                    context = browser.new_context(user_agent=_BROWSER_UA)
+                    page = context.new_page()
+                    page.set_default_timeout(timeout_ms)
+                    for url in shard:
+                        try:
+                            page.goto(url, wait_until="domcontentloaded")
+                            local[url] = json.loads(page.evaluate("() => document.body.innerText"))
+                        except Exception:
+                            local[url] = None
+                finally:
+                    browser.close()
+        except Exception as e:
+            # Browser couldn't launch (e.g. missing system libs) — skip this shard rather than
+            # crashing the whole run, matching the original per-call best-effort behaviour.
+            # Only keep the first line; the full Playwright browser log is very verbose.
+            first_line = str(e).splitlines()[0] if str(e) else type(e).__name__
+            print(f"Headless browser unavailable, skipping {len(shard)} URLs: {first_line}")
+        return local
+
+    results: dict = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        for shard_result in pool.map(_worker, [s for s in shards if s]):
+            results.update(shard_result)
+    return results
 
 
 def safe_filename(x: str) -> str:
@@ -396,6 +448,74 @@ def fetch_wikipedia_section(page: str, section_name: str) -> str:
         if el.get_text(strip=True)
     ]
     return "\n".join(parts)
+
+
+def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
+                             batch_size: int = 20, max_workers: int = 8) -> dict[str, str]:
+    """Fetch the plain-text of many Wikipedia pages quickly.
+
+    This is dramatically faster than calling `fetch_wikipedia_sections` per page: it uses the
+    `extracts` API (prop=extracts&explaintext) and runs requests concurrently.
+
+    intro_only : if True (default) fetch only each page's lead/intro section, which the API
+                 allows to be batched up to 20 titles per request — by far the fastest option
+                 and a compact, on-topic summary, ideal for bulk link expansion. If False, the
+                 full article text is fetched, but Wikipedia caps *full* extracts at one page
+                 per request, so `batch_size` is forced to 1 (one request per page, still run
+                 concurrently).
+
+    Returns {canonical_title: plaintext} for pages that have content (missing pages skipped).
+    """
+    if not titles:
+        return {}
+    url = "https://en.wikipedia.org/w/api.php"
+    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    if not intro_only:
+        batch_size = 1  # full-article extracts are limited to one page per request
+
+    def _fetch_batch(batch: list[str]) -> dict[str, str]:
+        params = {
+            "action": "query",
+            "prop": "extracts",
+            "explaintext": "1",
+            "exlimit": "max",
+            "redirects": "1",
+            "titles": "|".join(batch),
+            "format": "json",
+            "formatversion": "2",
+        }
+        if intro_only:
+            params["exintro"] = "1"
+        data = None
+        for attempt in range(5):
+            try:
+                r = requests.get(url, params=params, headers=headers, timeout=30)
+            except requests.RequestException:
+                time.sleep(2.0 * attempt)
+                continue
+            if r.status_code == 429:
+                time.sleep(int(r.headers.get("Retry-After", 2)))
+                continue
+            if r.status_code != 200:
+                time.sleep(2.0 * attempt)
+                continue
+            data = r.json()
+            break
+        if not data:
+            return {}
+        out: dict[str, str] = {}
+        for pg in data.get("query", {}).get("pages", []):
+            extract = (pg.get("extract") or "").strip()
+            if extract:
+                out[pg["title"]] = extract
+        return out
+
+    batches = [titles[i:i + batch_size] for i in range(0, len(titles), batch_size)]
+    results: dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        for batch_result in pool.map(_fetch_batch, batches):
+            results.update(batch_result)
+    return results
 
 
 # def get_request_token():
