@@ -116,10 +116,13 @@ def build_retrieval_query(fallacy_text, relations_text, mode: str) -> tuple[str,
     relation_parts = _parse_relations_text(relations_text)
     has_relations = len(relation_parts) > 0
 
-    if mode == "fallacy_only":
+    if not has_relations:
+        # No relation: don't concatenate anything — retrieve with the fallacy alone.
+        parts = fallacy_parts
+    elif mode == "fallacy_only":
         parts = fallacy_parts
     elif mode == "relations_only":
-        parts = relation_parts if relation_parts else fallacy_parts
+        parts = relation_parts
     else:  # fallacy_relations (default)
         parts = fallacy_parts + relation_parts
 

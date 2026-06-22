@@ -47,7 +47,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
 KNOWLEDGE_BASE_CATEGORIES = [
-    # "bills",
+    "bills",
     "definitions",
     "papers",  # academic papers (nested subfolder)
     "exemplars",  # labeled fallacy examples (carry fallacy_label)
