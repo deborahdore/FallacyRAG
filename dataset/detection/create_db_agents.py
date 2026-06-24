@@ -280,19 +280,24 @@ def build_agentic_context(
 
     # Restrict retrieval to the requested categories (default: all).
     allowed_categories = list(categories) if categories else list(KNOWLEDGE_BASE_CATEGORIES)
+    # When every category is searchable the cross-category ($in over all) filter is a
+    # no-op that still forces Chroma onto its slow filtered path instead of the fast
+    # HNSW index — skip the category clause entirely in that case.
+    all_categories = set(allowed_categories) == set(KNOWLEDGE_BASE_CATEGORIES)
 
     # ── Temporal filter helper ─────────────────────────────────────────────────
 
     def _build_filter(category: str | None = None) -> dict | None:
         """Build a Chroma where-clause, optionally combining category and year filters.
 
-        When *category* is None (the cross-category ``search_all`` tool), retrieval is
-        still confined to the agent's *allowed_categories*.
+        When *category* is None (the cross-category ``search_all`` tool) and only a
+        subset of categories is allowed, retrieval is confined to *allowed_categories*;
+        when all categories are allowed the (redundant) category clause is omitted.
         """
         conditions: list[dict] = []
         if category:
             conditions.append({"category": {"$eq": category}})
-        else:
+        elif not all_categories:
             conditions.append({"category": {"$in": allowed_categories}})
         if temporal_rag and year is not None:
             conditions.append({"year": {"$lt": int(year)}})

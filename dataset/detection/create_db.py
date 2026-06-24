@@ -622,8 +622,6 @@ def build_sentence_mode(persist_directory_path: str,
                         path: str) -> None:
     splits = _build_balanced_splits(dataset_dir)
 
-    # Retrieve with the sentence (normalized, so NoFallacy rows query identically to
-    # relations mode's fallback).
     def query_fn(row):
         return normalize_text(row["sentence"]), None
 

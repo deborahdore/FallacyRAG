@@ -215,6 +215,10 @@ def build_discourse_aware_context(
     """
 
     allowed_categories = list(categories) if categories else list(KNOWLEDGE_BASE_CATEGORIES)
+    # When every category is searchable the cross-category ($in over all) filter is a
+    # no-op that still forces Chroma onto its slow filtered path instead of the fast
+    # HNSW index — skip the category clause entirely in that case.
+    all_categories = set(allowed_categories) == set(KNOWLEDGE_BASE_CATEGORIES)
 
     # ── Discourse tools (always available) ─────────────────────────────────────
 
@@ -273,7 +277,7 @@ def build_discourse_aware_context(
         conditions: list[dict] = []
         if category:
             conditions.append({"category": {"$eq": category}})
-        else:
+        elif not all_categories:
             conditions.append({"category": {"$in": allowed_categories}})
         if temporal_rag and year is not None:
             conditions.append({"year": {"$lt": int(year)}})
