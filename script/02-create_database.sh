@@ -1,12 +1,20 @@
 #!/bin/bash
 #SBATCH --job-name=create_rag_dataset
-#SBATCH --output=logs/create_rag_dataset.out
-#SBATCH --error=logs/create_rag_dataset.out
+#SBATCH --output=logs/create_rag_dataset_%j.out
+#SBATCH --error=logs/create_rag_dataset_%j.out
 #SBATCH --gres=gpu:1
 
 set -e
 export TOKENIZERS_PARALLELISM=false
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+
+TEMPORAL_BOOL=False
+
+if [[ "$TEMPORAL_BOOL" == "True" ]]; then
+    TEMPORAL_FLAG="--temporal-rag"
+else
+    TEMPORAL_FLAG=""
+fi
 
 retrievers=(
     "BAAI/bge-large-en-v1.5"
@@ -21,15 +29,20 @@ summarization_models=(
 )
 
 for retriever in "${retrievers[@]}"; do
+    echo "========================================================================"
+    echo "Basic RAG enrichment"
+    echo "Retriever: $retriever"
+    echo "========================================================================"
+
     if [[ "$retriever" == "bm25" ]]; then
         search_type="--search-type bm25"
     else
         search_type="--search-type similarity"
     fi
 
-    python dataset/detection/create_db.py --retriever "$retriever" $search_type
+    python dataset/detection/create_db.py --retriever "$retriever" $search_type $TEMPORAL_FLAG
 
     for model in "${summarization_models[@]}"; do
-        python dataset/detection/create_db.py --retriever "$retriever" --summarization-model "$model" $search_type
+        python dataset/detection/create_db.py --retriever "$retriever" --summarization-model "$model" $search_type $TEMPORAL_FLAG
     done
 done

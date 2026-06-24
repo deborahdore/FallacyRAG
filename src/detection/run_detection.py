@@ -10,20 +10,7 @@ For each example the tokenizer receives:
     [CLS] sentence [SEP]                                 (without RAG)
 
 The [CLS] token representation is used for binary classification
-(fallacy / not-fallacy).  BERT's bidirectional self-attention propagates
-knowledge-base signal into the sentence representation.
-
-Retrieval (optional, controlled by --use_rag)
----------------------------------------------
-  - BM25  : lexical retrieval via BM25Retriever
-  - dense : vector-store similarity / MMR search (ChromaDB)
-
-Summarisation (optional, controlled by --summarization_model)
---------------------------------------------------------------
-  - Local  : meta-llama/Llama-3.1-8B-Instruct
-             mistralai/Mistral-7B-Instruct-v0.3
-  - API    : gpt-4o-mini  (requires OPENAI_API_KEY)
-  - None   : raw retrieved passages are appended verbatim (truncated)
+(fallacy / not-fallacy).
 """
 
 from __future__ import annotations
@@ -240,12 +227,6 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
     ds = raw_datasets[split_name]
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
-    # Drop all original columns EXCEPT 'label': the preprocess_function
-    # overwrites 'label' with an int, but if 'label' itself is listed in
-    # remove_columns, datasets removes the rewritten version too, leaving
-    # no label in the dataset.  String columns (sentence, context, etc.)
-    # still need to go — they would cause the DataCollator to crash when
-    # it tries to call torch.tensor() on raw text.
     non_label_cols = [c for c in ds.column_names if c != "label"]
     tokenized = ds.map(
         tokenize_fn,
@@ -361,14 +342,12 @@ def main():
     model.config.label2id = label_to_id
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
-    # ── Tokenisation ──────────────────────────────────────────────────────
     # Always use the model's own capacity as the maximum sequence length
-    # (e.g. 512 for BERT, 4096 for Longformer). Some tokenizers report a
-    # huge sentinel value (e.g. 1e30) when no limit is configured, so fall
-    # back to the config's positional-embedding size or a safe default.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
         max_seq_length = getattr(config, "max_position_embeddings", 512)
+        if config.model_type in {"roberta", "longformer", "xlm-roberta", "camembert"}:
+            max_seq_length -= getattr(config, "pad_token_id", 1) + 1
     logger.info(f"Using model maximum sequence length: {max_seq_length}")
     padding = "max_length" if data_args.pad_to_max_length else False
 
@@ -380,7 +359,6 @@ def main():
         if data_args.use_rag and context_column_name:
             # text_a: sentence only (segment A)
             # text_b: speech_turn + rag_context (segment B)
-            # speech_turn comes first so truncation removes from rag_context end, not local context
             combined_b = [
                 f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
                 for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
