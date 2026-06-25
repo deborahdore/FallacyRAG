@@ -69,10 +69,10 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
-KNOWLEDGE_BASE_CATEGORIES = [
+KNOWLEDGE_BASE_DIRECTORIES = [
     "bills",
     "definitions",
-    "papers",
+    ("definitions/papers", "papers"),  # academic papers (nested subfolder)
     "exemplars",
     "geography",
     "history",
@@ -80,18 +80,12 @@ KNOWLEDGE_BASE_CATEGORIES = [
     "people",
 ]
 
-CATEGORY_TO_DIRECTORY = {
-    "bills": "bills",
-    "definitions": "definitions",
-    "papers": ("definitions/papers", "papers"),
-    "exemplars": "exemplars",
-    "geography": "geography",
-    "history": "history",
-    "newspapers": "newspapers",
-    "people": "people",
-}
-
 DEFAULT_RERANKER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+# Temporal filtering is a Python post-filter (see _dense_candidates / _bm25_candidates):
+# fetch this many × top_k candidates from the unfiltered index, then drop future-dated
+# docs and keep top_k. Over-fetch covers cases where the nearest neighbours are excluded.
+TEMPORAL_OVERFETCH = 10
 
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
 _bm25_cache: dict[tuple, "FastBM25Retriever"] = {}
@@ -128,7 +122,7 @@ SEARCH_TYPES = {
     "mmr": "Maximal Marginal Relevance — balances relevance and diversity.",
     "similarity_score_threshold": "Similarity search filtered to results above a score threshold.",
     "bm25": "Keyword-based BM25 retrieval — no embeddings or vector store required.",
-    "hybrid": "Dense + BM25 fused with Reciprocal Rank Fusion (recommended).",
+    "hybrid": "Dense + BM25 fused with Reciprocal Rank Fusion.",
 }
 
 DATASET_MODES = {
@@ -143,8 +137,6 @@ COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relatio
 
 QUERY_MODES = {
     "fallacy_relations": "Concatenate the fallacy text with the text of its related components (default).",
-    "relations_only": "Use only the related-component text (falls back to the fallacy text if none).",
-    "fallacy_only": "Use only the fallacy text — baseline for ablation.",
 }
 
 
@@ -164,13 +156,10 @@ class FastBM25Retriever:
         return [self.docs[int(i)] for i in results[0]]
 
 
-def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int,
-                        categories: list[str] | None = None) -> FastBM25Retriever:
-    cats = list(categories) if categories else list(KNOWLEDGE_BASE_CATEGORIES)
-    directories = [CATEGORY_TO_DIRECTORY[c] for c in cats]
-    cache_key = (chunk_size, chunk_overlap, tuple(sorted(cats)))
+def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> FastBM25Retriever:
+    cache_key = (chunk_size, chunk_overlap)
     if cache_key not in _bm25_cache:
-        loader = FallacyLoader(source_path=KNOWLEDGE_BASE_PATH, directories=directories)
+        loader = FallacyLoader(source_path=KNOWLEDGE_BASE_PATH, directories=KNOWLEDGE_BASE_DIRECTORIES)
         splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size, chunk_overlap=chunk_overlap, add_start_index=True
         )
@@ -198,46 +187,75 @@ def get_vector_store(retriever: str, chromadb_path: str) -> Chroma:
     return _vector_store_cache[cache_key]
 
 
-def _build_chroma_filter(temporal_rag: bool, year: int | None,
-                         categories: list[str] | None) -> dict | None:
-    filters = []
-    if temporal_rag and year is not None:
-        filters.append({"year": {"$lt": int(year)}})
-    if categories:
-        filters.append({"category": {"$in": list(categories)}})
-    if len(filters) == 1:
-        return filters[0]
-    if len(filters) > 1:
-        return {"$and": filters}
-    return None
+def _get_embedding_function(retriever: str, chromadb_path: str):
+    """Return the embedding object backing the vector store (reused, never reloaded)."""
+    vs = get_vector_store(retriever, chromadb_path)
+    return getattr(vs, "embeddings", None) or vs._embedding_function
+
+
+def embed_queries(retriever: str, chromadb_path: str, queries: list[str]) -> list[list[float]]:
+    """Batch-encode all retrieval queries for a split in a single pass.
+
+    Embedding one query per row issues a batch-of-1 GPU forward pass thousands of times,
+    leaving the GPU almost idle behind Python/launch overhead; encoding the whole split at
+    once (encode_kwargs already sets a large batch_size) is the dominant speedup for dense
+    retrieval. This mirrors LangChain's per-query ``embed_query`` semantics so the vectors
+    match the string-based path exactly: BGE-style embedders prepend a query instruction
+    (and strip newlines) in ``embed_query`` but not in ``embed_documents``, so we replicate
+    that prefix before the single batched ``embed_documents`` call.
+    """
+    emb = _get_embedding_function(retriever, chromadb_path)
+    instruction = getattr(emb, "query_instruction", "") or ""
+    texts = [instruction + q.replace("\n", " ") for q in queries]
+    return emb.embed_documents(texts)
 
 
 def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
                       search_type: str, fetch_k: int, lambda_mult: float,
                       score_threshold: float, temporal_rag: bool,
-                      year: int | None, categories: list[str] | None) -> list:
+                      year: int | None, query_embedding: list[float] | None = None) -> list:
     vector_store = get_vector_store(retriever, chromadb_path)
-    where = _build_chroma_filter(temporal_rag, year, categories)
+    # Temporal (year) filtering is done as a Python post-filter on an *unfiltered* ANN
+    # search. A Chroma `$lt` where-clause forces constrained HNSW traversal that degrades
+    # toward a full scan when the nearest neighbours are excluded by the predicate; an
+    # unfiltered search runs at full index speed and a year comparison in Python is free.
+    do_temporal = temporal_rag and year is not None
+    fetch = k * TEMPORAL_OVERFETCH if do_temporal else k
 
     effective_type = "similarity" if search_type == "hybrid" else search_type
-    kwargs = {"k": k}
-    if effective_type == "mmr":
-        kwargs.update({"fetch_k": fetch_k, "lambda_mult": lambda_mult})
-    elif effective_type == "similarity_score_threshold":
-        kwargs.update({"score_threshold": score_threshold})
-    if where:
-        kwargs["filter"] = where
 
-    ret = vector_store.as_retriever(search_type=effective_type, search_kwargs=kwargs)
-    return ret.invoke(query)
+    # Fast path: when the caller has already batch-encoded the query (see _enrich_split),
+    # search straight from the vector and skip the per-row embedding forward pass. Only
+    # similarity/mmr have *_by_vector entry points; score_threshold falls back to the
+    # string retriever (rarely used, and its scoring helper isn't vector-addressable).
+    if query_embedding is not None and effective_type in ("similarity", "mmr"):
+        if effective_type == "mmr":
+            docs = vector_store.max_marginal_relevance_search_by_vector(
+                query_embedding, k=fetch, fetch_k=max(fetch_k, fetch), lambda_mult=lambda_mult
+            )
+        else:
+            docs = vector_store.similarity_search_by_vector(query_embedding, k=fetch)
+    else:
+        kwargs = {"k": fetch}
+        if effective_type == "mmr":
+            kwargs.update({"fetch_k": max(fetch_k, fetch), "lambda_mult": lambda_mult})
+        elif effective_type == "similarity_score_threshold":
+            kwargs.update({"score_threshold": score_threshold})
+        ret = vector_store.as_retriever(search_type=effective_type, search_kwargs=kwargs)
+        docs = ret.invoke(query)
+
+    if do_temporal:
+        # Missing year -> treat as future (year + 1) so it's excluded, matching the BM25 leg.
+        docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
+        docs = docs[:k]
+    return docs
 
 
 def _bm25_candidates(query: str, chunk_size: int, chunk_overlap: int, k: int,
-                     temporal_rag: bool, year: int | None,
-                     categories: list[str] | None) -> list:
+                     temporal_rag: bool, year: int | None) -> list:
     fetch_count = k * 10 if temporal_rag else k
     bm25 = load_bm25_retriever(
-        chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count, categories=categories
+        chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count
     )
     docs = bm25.invoke(query)
     if temporal_rag and year is not None:
@@ -300,21 +318,18 @@ def search_knowledge_base(query: str,
                           score_threshold: float = 0.5,
                           temporal_rag: bool = False,
                           year: int | None = None,
-                          categories: list[str] | None = None,
                           rerank: bool = False,
                           reranker_model: str = DEFAULT_RERANKER,
                           rrf_k: int = 60,
                           dense_weight: float = 1.0,
-                          bm25_weight: float = 1.0) -> list[str]:
+                          bm25_weight: float = 1.0,
+                          query_embedding: list[float] | None = None) -> list[str]:
     """Return a list of passage strings relevant to *query*.
 
     ``search_type='hybrid'`` fuses a dense and a BM25 candidate pool with RRF; any
     search type can additionally be reranked by a local cross-encoder when
     ``rerank=True``. When reranking, each leg fetches ``fetch_k`` candidates and the
     reranker trims to ``top_k``; otherwise the pools are sized to ``top_k`` directly.
-
-    If *categories* is given, retrieval is restricted to those knowledge-base
-    categories; otherwise all categories are searched.
     """
     pool = fetch_k if (rerank or search_type == "hybrid") else top_k
 
@@ -322,11 +337,11 @@ def search_knowledge_base(query: str,
         dense = _dense_candidates(
             query, retriever, chromadb_path, k=pool, search_type="hybrid",
             fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-            temporal_rag=temporal_rag, year=year, categories=categories,
+            temporal_rag=temporal_rag, year=year, query_embedding=query_embedding,
         )
         sparse = _bm25_candidates(
             query, chunk_size, chunk_overlap, k=pool,
-            temporal_rag=temporal_rag, year=year, categories=categories,
+            temporal_rag=temporal_rag, year=year,
         )
         candidates = reciprocal_rank_fusion(
             [dense, sparse], rrf_k=rrf_k, weights=[dense_weight, bm25_weight]
@@ -334,13 +349,13 @@ def search_knowledge_base(query: str,
     elif search_type == "bm25":
         candidates = _bm25_candidates(
             query, chunk_size, chunk_overlap, k=pool,
-            temporal_rag=temporal_rag, year=year, categories=categories,
+            temporal_rag=temporal_rag, year=year,
         )
     else:
         candidates = _dense_candidates(
             query, retriever, chromadb_path, k=pool, search_type=search_type,
             fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-            temporal_rag=temporal_rag, year=year, categories=categories,
+            temporal_rag=temporal_rag, year=year, query_embedding=query_embedding,
         )
 
     if rerank:
@@ -353,18 +368,17 @@ def search_knowledge_base(query: str,
 
 def warm_retrievers(search_type: str, retriever: str | None, chunk_size: int,
                     chunk_overlap: int, top_k: int, fetch_k: int,
-                    categories: list[str] | None, rerank: bool,
-                    reranker_model: str, chromadb_path: str) -> None:
+                    rerank: bool, reranker_model: str, chromadb_path: str) -> None:
     """Pre-build BM25 index / load vector store / load reranker before the per-row loop."""
     if search_type == "bm25":
         logger.info("Pre-building BM25 index (this may take a while)...")
         load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap,
-                            top_k=top_k, categories=categories)
+                            top_k=top_k)
         logger.info("BM25 index ready.")
     elif search_type == "hybrid":
         logger.info("Pre-building BM25 index for the hybrid sparse leg...")
         load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap,
-                            top_k=fetch_k, categories=categories)
+                            top_k=fetch_k)
         get_vector_store(retriever, chromadb_path)
         logger.info("Hybrid retrievers ready.")
     elif retriever and retriever != "bm25":
@@ -536,19 +550,34 @@ def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
 
 def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
                   *, retriever, search_type, chunk_size, chunk_overlap, top_k, fetch_k,
-                  lambda_mult, score_threshold, temporal_rag, categories, rerank,
+                  lambda_mult, score_threshold, temporal_rag, rerank,
                   reranker_model, rrf_k, dense_weight, bm25_weight, summarization_model,
                   persist_directory_path, record_query: bool) -> pd.DataFrame:
     """Attach a ``rag_context`` column to each row. ``query_fn(row)`` returns
     ``(query, has_relations)`` and is the only thing that differs between modes."""
+    rows = [row for _, row in split_df.iterrows()]
+    queries, has_rel_flags = [], []
+    for row in rows:
+        q, has_relations = query_fn(row)
+        queries.append(q)
+        has_rel_flags.append(has_relations)
+
+    # Encode every query for the split in one batched pass. Dense retrieval otherwise
+    # runs a batch-of-1 forward pass per row, which is the real bottleneck on GPU; with
+    # the embeddings precomputed each row only does the (sub-millisecond) HNSW lookup.
+    query_embeddings = None
+    if retriever and retriever != "bm25" and search_type != "bm25":
+        logger.info(f"Batch-embedding {len(queries)} {split_name} queries...")
+        query_embeddings = embed_queries(retriever, persist_directory_path, queries)
+
     enriched_rows = []
-    for _, row in tqdm(split_df.iterrows(), total=len(split_df),
-                       desc=f"Enriching {split_name} with RAG context"):
+    for i, row in enumerate(tqdm(rows, total=len(rows),
+                                 desc=f"Enriching {split_name} with RAG context")):
         copy_row = row.copy()
-        query, has_relations = query_fn(row)
+        query = queries[i]
         if record_query:
             copy_row["retrieval_query"] = query
-            copy_row["has_relations"] = bool(has_relations)
+            copy_row["has_relations"] = bool(has_rel_flags[i])
 
         passages = search_knowledge_base(
             query,
@@ -563,12 +592,12 @@ def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
             score_threshold=score_threshold,
             temporal_rag=temporal_rag,
             year=int(row["year"]),
-            categories=categories,
             rerank=rerank,
             reranker_model=reranker_model,
             rrf_k=rrf_k,
             dense_weight=dense_weight,
             bm25_weight=bm25_weight,
+            query_embedding=(query_embeddings[i] if query_embeddings is not None else None),
         )
         if passages and summarization_model:
             passages = summarize_docs(passages, summarization_model)
@@ -585,7 +614,7 @@ def _run_pipeline(splits: dict[str, pd.DataFrame], query_fn, *, retriever, path,
         warm_retrievers(
             enrich_kwargs["search_type"], retriever, enrich_kwargs["chunk_size"],
             enrich_kwargs["chunk_overlap"], enrich_kwargs["top_k"], enrich_kwargs["fetch_k"],
-            enrich_kwargs["categories"], enrich_kwargs["rerank"], enrich_kwargs["reranker_model"],
+            enrich_kwargs["rerank"], enrich_kwargs["reranker_model"],
             enrich_kwargs["persist_directory_path"],
         )
         for name in ("train", "dev", "test"):
@@ -612,7 +641,6 @@ def build_sentence_mode(persist_directory_path: str,
                         score_threshold: float,
                         summarization_model: str | None,
                         temporal_rag: bool,
-                        categories: list[str] | None,
                         rerank: bool,
                         reranker_model: str,
                         rrf_k: int,
@@ -629,7 +657,7 @@ def build_sentence_mode(persist_directory_path: str,
         splits, query_fn, retriever=retriever, path=path, record_query=False,
         search_type=search_type, chunk_size=chunk_size, chunk_overlap=chunk_overlap,
         top_k=top_k, fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-        temporal_rag=temporal_rag, categories=categories, rerank=rerank,
+        temporal_rag=temporal_rag, rerank=rerank,
         reranker_model=reranker_model, rrf_k=rrf_k, dense_weight=dense_weight,
         bm25_weight=bm25_weight, summarization_model=summarization_model,
         persist_directory_path=persist_directory_path,
@@ -679,7 +707,6 @@ def build_relations_mode(persist_directory_path: str,
                          score_threshold: float,
                          summarization_model: str | None,
                          temporal_rag: bool,
-                         categories: list[str] | None,
                          rerank: bool,
                          reranker_model: str,
                          rrf_k: int,
@@ -707,14 +734,15 @@ def build_relations_mode(persist_directory_path: str,
         splits, query_fn, retriever=retriever, path=path, record_query=True,
         search_type=search_type, chunk_size=chunk_size, chunk_overlap=chunk_overlap,
         top_k=top_k, fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-        temporal_rag=temporal_rag, categories=categories, rerank=rerank,
+        temporal_rag=temporal_rag, rerank=rerank,
         reranker_model=reranker_model, rrf_k=rrf_k, dense_weight=dense_weight,
         bm25_weight=bm25_weight, summarization_model=summarization_model,
         persist_directory_path=persist_directory_path,
     )
 
 
-def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame, dev_df: pd.DataFrame) -> None:
+def \
+        _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame, dev_df: pd.DataFrame) -> None:
     """Print size and label distribution statistics for each dataset split."""
     splits = {"train": train_df, "dev": dev_df, "test": test_df}
 
@@ -781,8 +809,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--reranker-model",
         default=DEFAULT_RERANKER,
-        help=f"Local cross-encoder for reranking (default: {DEFAULT_RERANKER}). "
-             "E.g. BAAI/bge-reranker-base or BAAI/bge-reranker-large for higher quality.",
+        help=f"Local cross-encoder for reranking (default: {DEFAULT_RERANKER}).",
     )
     parser.add_argument("--rrf-k", type=int, default=60,
                         help="RRF constant; larger values flatten top-rank contribution (default: 60).")
@@ -793,12 +820,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--summarization-model",
         default=None,
-        choices=[
-            "openai/gpt-oss-20b",
-            "mistralai/Mistral-7B-Instruct-v0.3",
-            "meta-llama/Llama-3.1-8B-Instruct",
-            "Qwen/Qwen3.5-9B-Base",
-        ],
+        choices=["meta-llama/Llama-3.1-8B-Instruct", "Qwen/Qwen3.5-9B-Base"],
         help="Optional model name to summarize retrieved passages.",
     )
     parser.add_argument("--persist-directory", default="./chromadb",
@@ -819,19 +841,13 @@ def _build_arg_parser() -> argparse.ArgumentParser:
                         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).")
     parser.add_argument("--temporal-rag", action="store_true", default=False,
                         help="Only retrieve knowledge base documents whose year is before the debate year.")
-    parser.add_argument(
-        "--categories",
-        nargs="+",
-        default=KNOWLEDGE_BASE_CATEGORIES,
-        choices=KNOWLEDGE_BASE_CATEGORIES,
-        metavar="CATEGORY",
-        help="Restrict retrieval to these knowledge-base categories "
-             f"(choices: {', '.join(KNOWLEDGE_BASE_CATEGORIES)}; default: all).",
-    )
     return parser
 
 
-def _validate(args, parser) -> None:
+if __name__ == "__main__":
+    parser = _build_arg_parser()
+    args = parser.parse_args()
+
     if args.search_type == "hybrid" and args.retriever not in DENSE_MODELS:
         parser.error("--search-type hybrid requires a dense --retriever (not bm25).")
     if args.search_type == "bm25" and args.retriever != "bm25":
@@ -843,9 +859,8 @@ def _validate(args, parser) -> None:
     if args.mode == "relations" and args.retriever is None:
         parser.error("--mode relations requires a --retriever.")
 
-
-def _build_output_path(args) -> str:
     path = str(Path("dataset") / "detection" / "agentic=false")
+
     path += f"-temporal={str(args.temporal_rag)}"
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
@@ -859,18 +874,7 @@ def _build_output_path(args) -> str:
         path += f"-summarizer={args.summarization_model.replace('/', '-')}"
     else:
         path += "-summarizer=false"
-    return path.lower()
-
-
-if __name__ == "__main__":
-    parser = _build_arg_parser()
-    args = parser.parse_args()
-    _validate(args, parser)
-
-    if args.categories and set(args.categories) == set(KNOWLEDGE_BASE_CATEGORIES):
-        args.categories = None
-
-    path = _build_output_path(args)
+    path = path.lower()
     os.makedirs(path, exist_ok=True)
 
     if args.mode == "sentence":
@@ -886,7 +890,6 @@ if __name__ == "__main__":
             score_threshold=args.score_threshold,
             summarization_model=args.summarization_model,
             temporal_rag=args.temporal_rag,
-            categories=args.categories,
             rerank=args.rerank,
             reranker_model=args.reranker_model,
             rrf_k=args.rrf_k,
@@ -909,7 +912,6 @@ if __name__ == "__main__":
             score_threshold=args.score_threshold,
             summarization_model=args.summarization_model,
             temporal_rag=args.temporal_rag,
-            categories=args.categories,
             rerank=args.rerank,
             reranker_model=args.reranker_model,
             rrf_k=args.rrf_k,
