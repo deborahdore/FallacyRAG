@@ -6,8 +6,10 @@ Two dataset-construction modes (``--mode``) share one retrieval backend:
   downsample the NoFallacy class, re-split into train/dev/test, and enrich every sentence.
   With no ``--retriever`` it is the plain no-RAG pipeline; with a retriever it is enriched.
 * ``relations`` — same construction as ``sentence``; the only difference is the retrieval
-  query, which concatenates each fallacy's ``fallacy_text`` with its ``relations_text``
-  (looked up from ``{split}_with_relations.csv``). Unmatched rows fall back to the sentence.
+  query, controlled by ``--query-mode`` and looked up from ``{split}_with_relations.csv``:
+  ``fallacy_relations`` concatenates ``fallacy_text`` with its ``relations_text``;
+  ``relations_labeled`` builds one clause per relation — "<relation> supports/attacks
+  <fallacy>" — using ``relations_label`` to pick the verb. Unmatched rows fall back to the sentence.
 
 Retrieval backend (shared by both modes):
 * Dense vector search over a persisted Chroma store (``similarity`` / ``mmr`` / ``threshold``).
@@ -130,8 +132,13 @@ DATASET_MODES = {
 
 COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relations cells
 
+# Maps a relations_label value to the verb phrase used in the 'relations_labeled' query.
+LABEL_VERBS = {"support": "supports", "attack": "attacks"}
+
 QUERY_MODES = {
     "fallacy_relations": "Concatenate the fallacy text with the text of its related components (default).",
+    "relations_labeled": "Build labeled clauses: '<relation> supports/attacks <fallacy>' per relation, "
+                         "using relations_label to pick the verb.",
 }
 
 
@@ -428,6 +435,16 @@ def _parse_relations_text(raw) -> list[str]:
     return [str(parsed).strip()]
 
 
+def _parse_relations_label(raw) -> list[str]:
+    """Parse the ``relations_label`` cell (``;``-separated tags) into a clean list, aligned with relations_text."""
+    if raw is None:
+        return []
+    s = str(raw).strip()
+    if s in ("", "nan", "None"):
+        return []
+    return [part.strip() for part in s.split(";") if part.strip()]
+
+
 def _clean_components(text) -> list[str]:
     """Split a fallacy/component cell on the ``|||`` separator into individual spans."""
     if text is None:
@@ -438,11 +455,31 @@ def _clean_components(text) -> list[str]:
     return [part.strip() for part in s.split(COMPONENT_SEP) if part.strip()]
 
 
-def build_retrieval_query(fallacy_text, relations_text, mode: str) -> tuple[str, bool]:
+def build_retrieval_query(fallacy_text, relations_text, mode: str,
+                          relations_label=None) -> tuple[str, bool]:
     """Build the relations-augmented retrieval query for one row; return (query, has_relations)."""
     fallacy_parts = _clean_components(fallacy_text)
     relation_parts = _parse_relations_text(relations_text)
     has_relations = len(relation_parts) > 0
+
+    if mode == "relations_labeled":
+        # One clause per relation: "<relation> supports/attacks <fallacy>", verb from relations_label.
+        fallacy_str = ". ".join(p.rstrip(". ") for p in fallacy_parts if p)
+        if not has_relations:
+            query = fallacy_str  # no relation: retrieve with the fallacy alone
+        else:
+            label_parts = _parse_relations_label(relations_label)
+            clauses = []
+            for i, relation in enumerate(relation_parts):
+                label = label_parts[i] if i < len(label_parts) else "support"
+                verb = LABEL_VERBS.get(label.strip().lower(), label.strip().lower())
+                clause = f"{relation.rstrip('. ')} {verb} {fallacy_str.rstrip('. ')}".strip()
+                if clause:
+                    clauses.append(clause)
+            query = ", ".join(clauses)
+        if query and not query.endswith("."):
+            query += "."
+        return normalize_text(query), has_relations
 
     if not has_relations:
         parts = fallacy_parts  # no relation: retrieve with the fallacy alone
@@ -641,7 +678,7 @@ def build_sentence_mode(persist_directory_path: str,
 
 
 def _load_relations_lookup(dataset_dir: str) -> dict[str, list[tuple]]:
-    """Map ``speech_turn`` -> list of ``(fallacy_text, relations_text)`` from the relations CSVs."""
+    """Map ``speech_turn`` -> list of ``(fallacy_text, relations_text, relations_label)`` from the relations CSVs."""
     lookup: dict[str, list[tuple]] = {}
     for split in ["train", "dev", "test"]:
         p = os.path.join(dataset_dir, f"{split}_with_relations.csv")
@@ -653,20 +690,22 @@ def _load_relations_lookup(dataset_dir: str) -> dict[str, list[tuple]]:
             ft = r.get("fallacy_text")
             if ft is None or str(ft).strip() in ("", "nan", "None"):
                 continue  # skip rows without a fallacy span
-            lookup.setdefault(str(r["speech_turn"]), []).append((ft, r.get("relations_text")))
+            lookup.setdefault(str(r["speech_turn"]), []).append(
+                (ft, r.get("relations_text"), r.get("relations_label"))
+            )
     return lookup
 
 
 def _match_relations(sentence: str, speech_turn, lookup: dict[str, list[tuple]]):
-    """Find the fallacy entry overlapping *sentence*; return (fallacy_text, relations_text) or (None, None)."""
+    """Find the fallacy entry overlapping *sentence*; return (fallacy_text, relations_text, relations_label) or (None, None, None)."""
     s = str(sentence).strip()
     if not s:
-        return None, None
-    for fallacy_text, relations_text in lookup.get(str(speech_turn), []):
+        return None, None, None
+    for fallacy_text, relations_text, relations_label in lookup.get(str(speech_turn), []):
         for comp in _clean_components(fallacy_text):
             if s in comp or comp in s:
-                return fallacy_text, relations_text
-    return None, None
+                return fallacy_text, relations_text, relations_label
+    return None, None, None
 
 
 def build_relations_mode(persist_directory_path: str,
@@ -697,11 +736,15 @@ def build_relations_mode(persist_directory_path: str,
         # NoFallacy sentences have no relations: query with the bare sentence.
         if row["fallacy_label"] == "NoFallacy":
             return normalize_text(sentence), False
-        fallacy_text, relations_text = _match_relations(sentence, row["speech_turn"], lookup)
+        fallacy_text, relations_text, relations_label = _match_relations(
+            sentence, row["speech_turn"], lookup
+        )
         # Fallacy sentence with no matched relation row: fall back to the sentence.
         if fallacy_text is None:
             return normalize_text(sentence), False
-        query, has_relations = build_retrieval_query(fallacy_text, relations_text, query_mode)
+        query, has_relations = build_retrieval_query(
+            fallacy_text, relations_text, query_mode, relations_label
+        )
         if not query:
             return normalize_text(sentence), False
         return query, has_relations

@@ -1,28 +1,39 @@
 #!/bin/bash
-#SBATCH --job-name=encoders_fallacy_detection
-#SBATCH --output=logs/encoders_fallacy_detection.out
-#SBATCH --error=logs/encoders_fallacy_detection.out
-#SBATCH --gres=gpu:1
+#SBATCH --job-name=encoders_no_rag
+#SBATCH --output=logs/encoders_no_rag_%j.out
+#SBATCH --error=logs/encoders_no_rag_%j.out
+
+#SBATCH --time=36:00:00
+#SBATCH --account=marianne
+#SBATCH --gpus=h100:1
+#SBATCH --partition=gpu
+
 #SBATCH --mail-user=deborah.dore@inria.fr
 #SBATCH --mail-type=FAIL
 
-set -e
-export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
-export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+module purge
+module load miniconda
+conda activate rags
+
+set -uo pipefail
+
 export TOKENIZERS_PARALLELISM=false
 export HF_HOME="/home/ddore/.cache/huggingface"
-export WANDB_PROJECT="fallacy_detection"
+export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
-SEED=123
+SEED=14
 export PYTHONHASHSEED=$SEED
-
 wandb disabled
 
+task=detection
 dataset="agentic=false-temporal=false-retriever=false-summarizer=false"
 
-TRAIN_FILE="dataset/detection/$dataset/train.csv"
-VAL_FILE="dataset/detection/$dataset/dev.csv"
-TEST_FILE="dataset/detection/$dataset/test.csv"
+export WANDB_PROJECT="fallacy_$task"
+
+TRAIN_FILE="dataset/$task/$dataset/train.csv"
+VAL_FILE="dataset/$task/$dataset/dev.csv"
+TEST_FILE="dataset/$task/$dataset/test.csv"
 
 MODELS=(
     "microsoft/deberta-v3-base"
@@ -42,6 +53,10 @@ BATCH_SIZES=(8 16)
 LEARNING_RATES=(2e-5 3e-5 5e-5)
 EPOCHS=(3 5)
 
+FAILED_LOG="logs/failed_runs_${task}.log"
+mkdir -p logs
+: > "$FAILED_LOG"  # truncate/create fresh each run
+
 for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do
     for lr in "${LEARNING_RATES[@]}"; do
@@ -49,10 +64,12 @@ for model in "${MODELS[@]}"; do
         MODEL_NAME=$(basename "$model")
         CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-        OUTPUT_DIR="output/detection/$dataset/${MODEL_NAME}/${CONF_ID}"
+        OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"
 
-        python src/detection/run_detection.py \
+        echo "=== Running $MODEL_NAME | $CONF_ID ==="
+
+        if ! python "src/$task/run_$task.py" \
             --model_name_or_path "$model" \
             --cache_dir "./cache/" \
             --train_file "$TRAIN_FILE" \
@@ -83,7 +100,13 @@ for model in "${MODELS[@]}"; do
             --do_predict True \
             --trust_remote_code True \
             --warmup_ratio 0.06
+        then
+          echo "FAILED: $model $CONF_ID" >> "$FAILED_LOG"
+          echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
+        fi
       done
     done
   done
 done
+
+echo "Sweep complete. Failed runs (if any) logged in $FAILED_LOG."
