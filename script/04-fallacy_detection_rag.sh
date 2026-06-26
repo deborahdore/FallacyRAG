@@ -27,7 +27,7 @@ export PYTHONHASHSEED=$SEED
 wandb disabled
 
 task=detection
-dataset="agentic=false-temporal=false-retriever=false-summarizer=false"
+dataset="temporal=false-retriever=false-summarizer=false"
 
 export WANDB_PROJECT="fallacy_$task"
 
