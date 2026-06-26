@@ -350,10 +350,7 @@ def format_for_sft(
         context_col: Optional[str],
         use_rag: bool,
 ) -> dict:
-    """
-    Format a single training example as a complete chat string for SFTTrainer.
-    Returns {"text": <formatted_string>}.
-    """
+    """Format one training example as a complete chat string for SFTTrainer ({"text": ...})."""
     sentence = example[text_col] or ""
     speech_turn = example[speech_turn_col] or ""
     context = example[context_col] if (use_rag and context_col and context_col in example) else None
@@ -373,19 +370,10 @@ def format_for_sft(
 # ── Output parsing ─────────────────────────────────────────────────────────────
 
 def parse_llm_response(response: str, fallback: str = LLM_NO) -> str:
-    """
-    Extract "Yes" or "No" from a raw LLM response string.
-
-    Matching is case-insensitive and looks for the token anywhere in the
-    response (the model sometimes adds punctuation or extra words).
-    Falls back to `fallback` when neither token is found.
-
-    Returns the canonical cased token: "Yes" or "No".
-    """
+    """Extract the canonical "Yes"/"No" token from a raw LLM response, else return *fallback*."""
     response_clean = response.strip()
     lowered = response_clean.lower()
-    # Check "yes" before "no" so "yes" in "no yes" is caught correctly;
-    # order matters since "no" is a substring of "noisy", etc.
+    # Check "yes" before "no" so a response containing both resolves to "Yes".
     if "yes" in lowered:
         return LLM_YES
     if "no" in lowered:
@@ -398,11 +386,7 @@ def parse_llm_response(response: str, fallback: str = LLM_NO) -> str:
 
 
 def llm_response_to_label(llm_response: str) -> str:
-    """
-    Post-processing translation: LLM response token → dataset label.
-        "Yes"  → "Fallacy"
-        "No"   → "NoFallacy"
-    """
+    """Translate an LLM response token to a dataset label ("Yes"→"Fallacy", "No"→"NoFallacy")."""
     return LLM_TO_LABEL.get(llm_response, LABEL_NO_FALLACY)
 
 
@@ -417,10 +401,7 @@ def sample_few_shot_examples(
         use_rag: bool,
         seed: int = 42,
 ) -> list[dict]:
-    """
-    Sample `n_per_class` balanced examples per label from `dataset`.
-    Returns a flat shuffled list of dicts with keys: sentence, speech_turn, [context], label.
-    """
+    """Sample `n_per_class` balanced examples per label; return a flat shuffled list of dicts."""
     rng = random.Random(seed)
     examples = []
     for label in ALL_LABELS:
@@ -444,6 +425,7 @@ def sample_few_shot_examples(
 # ── Metrics ────────────────────────────────────────────────────────────────────
 
 def compute_metrics(predictions: list[str], references: list[str]) -> dict:
+    """Compute accuracy and macro precision/recall/F1 from string predictions and references."""
     return {
         "accuracy": accuracy_score(y_true=references, y_pred=predictions),
         "precision": precision_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
@@ -455,11 +437,7 @@ def compute_metrics(predictions: list[str], references: list[str]) -> dict:
 # ── Model loading helpers ──────────────────────────────────────────────────────
 
 def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
-    """
-    Return True if the model's config already declares a quantization_config
-    (e.g. Mxfp4Config for gpt-oss).  In that case we must NOT pass a
-    BitsAndBytesConfig — Transformers will reject conflicting quant configs.
-    """
+    """Return True if the checkpoint already ships its own quantization_config (e.g. Mxfp4)."""
     from transformers import AutoConfig
     try:
         cfg = AutoConfig.from_pretrained(model_name_or_path, **config_kwargs)
@@ -474,15 +452,7 @@ def _build_load_kwargs(
         base_kwargs: dict,
         torch_module,
 ) -> dict:
-    """
-    Populate quantization / dtype entries in `base_kwargs` for
-    AutoModelForCausalLM.from_pretrained(), respecting pre-quantized models.
-
-    If the checkpoint already ships with its own quantization config
-    (e.g. Mxfp4Config), the BitsAndBytes flags are silently ignored and the
-    model is loaded as-is with torch_dtype='auto' so the native quant weights
-    are consumed correctly.
-    """
+    """Populate quantization/dtype load kwargs, deferring to a checkpoint's built-in quant config."""
     kwargs = dict(base_kwargs)
 
     config_keys = {k: base_kwargs[k] for k in ("cache_dir", "token", "trust_remote_code")
@@ -522,10 +492,7 @@ def _build_load_kwargs(
 # ── Local HuggingFace backend ──────────────────────────────────────────────────
 
 class LocalLLMInference:
-    """
-    Wraps a HuggingFace causal LM for batched inference.
-    Applies the model's chat template via the tokenizer.
-    """
+    """Wrap a HuggingFace causal LM for batched, chat-templated inference."""
 
     def __init__(
             self,
@@ -533,6 +500,7 @@ class LocalLLMInference:
             llm_args: LLMExperimentArguments,
             model_args: ModelArguments,
     ):
+        """Load the tokenizer and model with the requested quantization settings."""
         import torch
         from transformers import AutoModelForCausalLM, AutoTokenizer
 
@@ -616,6 +584,7 @@ class OpenAIInference:
     """Wraps the OpenAI chat completions API for inference."""
 
     def __init__(self, model_name: str, llm_args: LLMExperimentArguments):
+        """Initialize the OpenAI client from the OPENAI_API_KEY environment variable."""
         try:
             from openai import OpenAI
         except ImportError as e:
@@ -631,6 +600,7 @@ class OpenAIInference:
         self.temperature = llm_args.temperature
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
+        """Run chat completion on each message list and return the raw text responses."""
         responses = []
         for messages in messages_list:
             response = self.client.chat.completions.create(
@@ -653,10 +623,7 @@ def run_inference(
         llm_args: LLMExperimentArguments,
         few_shot_examples: Optional[list[dict]] = None,
 ) -> tuple[list[str], list[str]]:
-    """
-    Build prompts for `dataset`, run inference, and return (predictions, references).
-    `references` is an empty list if the dataset has no labels.
-    """
+    """Build prompts, run inference, and return (predictions, references); references may be empty."""
     text_col = data_args.text_column_name
     speech_col = data_args.speech_turn_column_name
     ctx_col = data_args.context_column_name
@@ -698,10 +665,7 @@ def run_fine_tuning(
         train_dataset,
         eval_dataset,
 ) -> tuple:
-    """
-    Fine-tune using LoRA / QLoRA + TRL SFTTrainer.
-    Returns (model, tokenizer) ready for inference.
-    """
+    """Fine-tune with LoRA/QLoRA via TRL SFTTrainer; return (model, tokenizer) ready for inference."""
     import torch
     from peft import LoraConfig, TaskType
     from transformers import AutoModelForCausalLM, AutoTokenizer
@@ -752,6 +716,7 @@ def run_fine_tuning(
 
     # ── Format datasets for SFT ───────────────────────────────────────────────
     def _fmt(ex):
+        """Format one example as an SFT chat string."""
         return format_for_sft(
             ex,
             tokenizer=tokenizer,
@@ -818,6 +783,7 @@ def run_fine_tuning(
 # ── Dataset helpers ────────────────────────────────────────────────────────────
 
 def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArguments):
+    """Load the train/validation/test CSV or JSON splits into a DatasetDict."""
     data_files = {
         "train": data_args.train_file,
         "validation": data_args.validation_file,
@@ -840,6 +806,7 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
 # ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
+    """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, LLMExperimentArguments, TrainingArguments)
     )
@@ -995,12 +962,10 @@ def main():
 # ── Thin wrapper to reuse fine-tuned model for inference ──────────────────────
 
 class _FineTunedLocalEngine:
-    """
-    Adapts a fine-tuned (PEFT-wrapped) model for the same predict_batch() interface
-    as LocalLLMInference without reloading from disk.
-    """
+    """Adapt an in-memory fine-tuned model to the LocalLLMInference predict_batch() interface."""
 
     def __init__(self, model, tokenizer, llm_args: LLMExperimentArguments):
+        """Store the fine-tuned model/tokenizer and switch to left-padding for inference."""
         import torch
         self.model = model
         self.tokenizer = tokenizer
@@ -1012,6 +977,7 @@ class _FineTunedLocalEngine:
         self._torch = torch
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
+        """Run batched generation over chat-message lists and return decoded responses."""
         all_responses = []
         for i in range(0, len(messages_list), self.batch_size):
             batch = messages_list[i: i + self.batch_size]
@@ -1048,6 +1014,7 @@ class _FineTunedLocalEngine:
 # ── Utility ────────────────────────────────────────────────────────────────────
 
 def _save_metrics(metrics: dict, path: str):
+    """Write a metrics dict to *path* as indented JSON."""
     import json
     with open(path, "w") as fh:
         json.dump(metrics, fh, indent=2)

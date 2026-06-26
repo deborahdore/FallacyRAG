@@ -1,3 +1,5 @@
+"""CLI to retrieve knowledge-base documents for a query via dense or BM25 search."""
+
 import argparse
 import logging
 import os.path
@@ -54,6 +56,7 @@ SEARCH_TYPES = {
 
 
 def load_vector_store(retriever: str, persist_directory_path: str) -> Chroma:
+    """Load the persisted Chroma store for the given embedding model."""
     persist_directory_path = os.path.join(persist_directory_path, retriever.replace("/", "-"))
     if not Path(persist_directory_path).exists():
         raise FileNotFoundError(
@@ -92,6 +95,7 @@ def load_bm25_retriever(chunk_size: int, chunk_overlap: int, top_k: int) -> BM25
 
 
 def main(args):
+    """Build the chosen retriever and return the documents matching the query."""
     search_config = SEARCH_TYPES[args.search_type]
     log.info(f"Search type: {args.search_type} — {search_config['description']}")
 

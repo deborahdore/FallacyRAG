@@ -234,16 +234,14 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
         remove_columns=non_label_cols,
         **map_kwargs,
     )
-    # Explicitly cast 'label' to int64.  When the source column held strings
-    # ("Fallacy"/"NoFallacy") or NER-style sequences, the Arrow schema can be
-    # inferred as list[int] instead of int, causing DataCollatorWithPadding to
-    # fail with "inputs type list where type int is expected".
+    # Force 'label' to int64; string/NER-style sources can otherwise be inferred as list[int].
     if "label" in tokenized.column_names:
         tokenized = tokenized.cast_column("label", Value("int64"))
     return tokenized
 
 
 def main():
+    """Load data, tokenize with optional RAG context, and train/evaluate/predict the detector."""
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         model_args, data_args, training_args = parser.parse_json_file(
@@ -342,7 +340,7 @@ def main():
     model.config.label2id = label_to_id
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
-    # Always use the model's own capacity as the maximum sequence length
+    # Use the model's own capacity; some tokenizers report a huge sentinel, so fall back safely.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
         max_seq_length = getattr(config, "max_position_embeddings", 512)
@@ -356,9 +354,8 @@ def main():
     context_column_name = data_args.context_column_name
 
     def preprocess_function(examples):
+        """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
-            # text_a: sentence only (segment A)
-            # text_b: speech_turn + rag_context (segment B)
             combined_b = [
                 f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
                 for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])

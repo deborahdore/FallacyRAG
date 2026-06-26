@@ -241,12 +241,8 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
     ds = raw_datasets[split_name]
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
-    # Drop all original columns EXCEPT 'label': the preprocess_function
-    # overwrites 'label' with an int, but if 'label' itself is listed in
-    # remove_columns, datasets removes the rewritten version too, leaving
-    # no label in the dataset.  String columns (sentence, context, etc.)
-    # still need to go — they would cause the DataCollator to crash when
-    # it tries to call torch.tensor() on raw text.
+    # Drop every column except 'label' (raw text columns would crash the collator); keep the
+    # int 'label' that preprocess_function writes.
     non_label_cols = [c for c in ds.column_names if c != "label"]
     tokenized = ds.map(
         tokenize_fn,
@@ -254,16 +250,14 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
         remove_columns=non_label_cols,
         **map_kwargs,
     )
-    # Explicitly cast 'label' to int64.  When the source column held strings
-    # ("Fallacy"/"NoFallacy") or NER-style sequences, the Arrow schema can be
-    # inferred as list[int] instead of int, causing DataCollatorWithPadding to
-    # fail with "inputs type list where type int is expected".
+    # Force 'label' to int64; string/NER-style sources can otherwise be inferred as list[int].
     if "label" in tokenized.column_names:
         tokenized = tokenized.cast_column("label", Value("int64"))
     return tokenized
 
 
 def main():
+    """Load data, tokenize with optional RAG context, and train/evaluate/predict the classifier."""
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         model_args, data_args, training_args = parser.parse_json_file(
@@ -367,6 +361,7 @@ def main():
     # (e.g. 512 for BERT, 4096 for Longformer). Some tokenizers report a
     # huge sentinel value (e.g. 1e30) when no limit is configured, so fall
     # back to the config's positional-embedding size or a safe default.
+    # Use the model's own capacity; some tokenizers report a huge sentinel, so fall back safely.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
         max_seq_length = getattr(config, "max_position_embeddings", 512)
@@ -378,10 +373,9 @@ def main():
     context_column_name = data_args.context_column_name
 
     def preprocess_function(examples):
+        """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
-            # text_a: sentence only (segment A)
-            # text_b: speech_turn + rag_context (segment B)
-            # speech_turn comes first so truncation removes from rag_context end, not local context
+            # speech_turn comes first so truncation trims rag_context, not the local context.
             combined_b = [
                 f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
                 for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
@@ -458,6 +452,7 @@ def main():
 
     # ── Loss function ─────────────────────────────────────────────────────
     def weighted_loss_fn(outputs, labels, num_items_in_batch=None):
+        """Class-weighted cross-entropy loss to offset label imbalance."""
         weight = class_weights.to(outputs.logits.device) if class_weights is not None else None
         return torch.nn.CrossEntropyLoss(weight=weight)(outputs.logits, labels)
 

@@ -26,6 +26,7 @@ SKIP_WIKI_SECTIONS = {"External_links", "Further_reading", "Sources", "Notes", "
 
 
 def normalize_text(text):
+    """Normalize unicode, quotes, dashes and whitespace into clean ASCII text."""
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
     text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
@@ -43,6 +44,7 @@ def create_and_save_record(path: Path,
                            url: str,
                            xml: str = None,
                            year: int = 1900):
+    """Write a knowledge-base record to ``{id}.json``, avoiding name collisions."""
     text = normalize_text(text)
 
     if len(id.split()) > 1:
@@ -66,6 +68,7 @@ def create_and_save_record(path: Path,
 
 
 def get_request(url: str, params: dict | None = None, return_json: bool = False):
+    """GET a URL and return parsed JSON or a BeautifulSoup XML document."""
     r = requests.get(url, params=params, timeout=30)
     r.raise_for_status()
     if return_json:
@@ -74,6 +77,7 @@ def get_request(url: str, params: dict | None = None, return_json: bool = False)
 
 
 def post_request(url: str, params: dict | None = None, json_obj: dict = None, return_json: bool = False):
+    """POST a URL with retry-on-429 and return parsed JSON or a BeautifulSoup XML document."""
     while True:
         response = requests.post(
             url,
@@ -118,14 +122,9 @@ def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS):
 
 def simulate_browser_batch(urls, max_workers: int = 4,
                            timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict:
-    """Fetch many JSON endpoints via headless Chromium, fast.
-
-    Two speedups over calling `simulate_browser` per URL: (1) each worker thread launches the
-    browser ONCE and reuses it for its whole shard of URLs (browser launch is the dominant
-    cost), and (2) `max_workers` workers run in parallel, each with its own Playwright instance
-    (the sync API is per-thread, so instances are not shared across threads). Returns
-    {url: parsed_json_or_None}.
-    """
+    """Fetch many JSON endpoints concurrently via headless Chromium; return {url: json_or_None}."""
+    # Each worker reuses one browser for its whole shard (launch is the dominant cost) and runs
+    # in parallel with its own Playwright instance (the sync API is per-thread).
     urls = list(dict.fromkeys(urls))  # de-dupe, preserve order
     if not urls:
         return {}
@@ -172,12 +171,7 @@ def safe_filename(x: str) -> str:
 
 
 def fetch_wikipedia_category_members(category: str) -> list[str]:
-    """Return the article-namespace titles that belong to a Wikipedia category.
-
-    Used to build an authoritative allowlist of fallacy articles (e.g.
-    "Category:Relevance fallacies") so the knowledge base only ingests
-    fallacy/argumentation-relevant pages.
-    """
+    """Return the article-namespace titles belonging to a Wikipedia category (paged)."""
     url = "https://en.wikipedia.org/w/api.php"
     headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
     titles: list[str] = []
@@ -220,13 +214,7 @@ def fetch_wikipedia_category_members(category: str) -> list[str]:
 
 
 def fetch_wikipedia_links(page: str, limit: int = 200) -> list[str]:
-    """Return the titles of article-namespace pages linked from `page`.
-
-    These are the 'connected' pages of a Wikipedia article — e.g. for "Fallacy"
-    this yields the individual fallacy types (Ad hominem, Slippery slope, ...).
-    Results are restricted to namespace 0 (main/article namespace) and paged
-    until `limit` titles have been collected.
-    """
+    """Return up to *limit* article-namespace titles linked from `page` (paged)."""
     url = "https://en.wikipedia.org/w/api.php"
     headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
     titles: list[str] = []
@@ -272,6 +260,7 @@ def fetch_wikipedia_links(page: str, limit: int = 200) -> list[str]:
 
 
 def fetch_wikipedia_sections(page: str):
+    """Return the concatenated paragraph text of all kept sections of a Wikipedia page."""
     url = "https://en.wikipedia.org/w/api.php"
     result = {}
 
@@ -374,14 +363,9 @@ def fetch_wikipedia_sections(page: str):
 
 
 def fetch_wikipedia_section(page: str, section_name: str) -> str:
-    """Return the text of a single named section of a Wikipedia page.
-
-    Unlike `fetch_wikipedia_sections` (which only keeps <p> paragraphs across the whole page),
-    this targets one section by its heading (e.g. "Events") and extracts BOTH paragraphs and
-    list items (<li>) — necessary for pages like "{year} in the United States" whose events are
-    bulleted lists. Requesting a top-level section also returns its nested subsections (e.g. the
-    month groupings under "Events"). Returns "" if the section is not found.
-    """
+    """Return one named section's text, extracting both paragraphs and list items."""
+    # Unlike fetch_wikipedia_sections, this keeps <li> items too (needed for bulleted event pages)
+    # and includes nested subsections; returns "" if the section is not found.
     url = "https://en.wikipedia.org/w/api.php"
     headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
 
@@ -452,20 +436,9 @@ def fetch_wikipedia_section(page: str, section_name: str) -> str:
 
 def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
                              batch_size: int = 20, max_workers: int = 8) -> dict[str, str]:
-    """Fetch the plain-text of many Wikipedia pages quickly.
-
-    This is dramatically faster than calling `fetch_wikipedia_sections` per page: it uses the
-    `extracts` API (prop=extracts&explaintext) and runs requests concurrently.
-
-    intro_only : if True (default) fetch only each page's lead/intro section, which the API
-                 allows to be batched up to 20 titles per request — by far the fastest option
-                 and a compact, on-topic summary, ideal for bulk link expansion. If False, the
-                 full article text is fetched, but Wikipedia caps *full* extracts at one page
-                 per request, so `batch_size` is forced to 1 (one request per page, still run
-                 concurrently).
-
-    Returns {canonical_title: plaintext} for pages that have content (missing pages skipped).
-    """
+    """Fetch plain-text extracts for many Wikipedia pages concurrently; return {title: text}."""
+    # intro_only=True batches up to 20 intros per request (fastest); False fetches full articles,
+    # which the API caps at one page per request (batch_size forced to 1).
     if not titles:
         return {}
     url = "https://en.wikipedia.org/w/api.php"
@@ -535,6 +508,7 @@ def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
 
 
 def analyze_paragraph_lengths(original_path: str = "./knowledge_base"):
+    """Print token-length statistics for knowledge-base paragraphs and plot their CDF."""
     counter = Counter()
     sections = os.listdir(original_path)
 
@@ -576,6 +550,7 @@ def analyze_paragraph_lengths(original_path: str = "./knowledge_base"):
 
 
 def plot_paragraph_cdf(lengths, counts, output_path="./data/paragraph_length_distribution.pdf"):
+    """Plot and save the cumulative distribution of paragraph token lengths."""
     expanded = np.repeat(lengths, counts)
     sorted_lengths = np.sort(expanded)
     cdf = np.arange(1, len(sorted_lengths) + 1) / len(sorted_lengths)
@@ -645,7 +620,8 @@ def plot_paragraph_cdf(lengths, counts, output_path="./data/paragraph_length_dis
 
 
 def get_item_ids(url, items, conditional='True'):
-    # Check that the query URL is not an item or resource link.
+    """Collect Library of Congress item/resource links from a search URL into *items*."""
+    # The URL must be a search URL, not a direct item/resource page.
     exclude = ["loc.gov/item", "loc.gov/resource"]
     if any(string in url for string in exclude):
         raise NameError('Your URL points directly to an item or '

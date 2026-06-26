@@ -7,8 +7,15 @@ configuration), reads all predict_results.json files found under
 and writes a single Excel file:
   output/<config>/<config>.xlsx
 
-Columns: agentic, temporal, retriever, summarizer, model, configuration,
-         predict_f1_macro, predict_accuracy
+Columns: temporal, retriever, search, rerank, query, summarizer,
+         model, configuration, predict_f1_macro, predict_accuracy
+
+The config folder name mirrors the layout produced by
+``dataset/detection/create_db.py``:
+  detection-temporal=<bool>-retriever=<r|false>[-search=<s>-rerank=<rr|false>]
+           [-query=<q>]-summarizer=<sum|false>
+The ``-search``/``-rerank`` segments are present only when a retriever is set,
+and ``-query`` only for the relations mode.
 """
 
 import json
@@ -27,35 +34,40 @@ logger = logging.getLogger(__name__)
 OUTPUT_DIR = "output/detection"
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
+AGGREGATE_FILE = "all_results.csv"
 
-# Matches folder names like:
-#   agentic=false-temporal=true-retriever=bm25-summarizer=false
-# Retriever may contain dashes (e.g. baai-bge-large-en-v1.5), so we use a
-# greedy group for it and rely on the literal "-summarizer=" anchor at the end.
+COLUMNS = [
+    "temporal", "retriever", "search", "rerank", "query", "summarizer",
+    "model", "configuration", "predict_f1_macro", "predict_accuracy",
+]
+
 CONFIG_RE = re.compile(
-    r"^agentic=(?P<agentic>[^-]+)"
-    r"-temporal=(?P<temporal>[^-]+)"
-    r"-retriever=(?P<retriever>.+)"
+    r"-?temporal=(?P<temporal>true|false)"
+    r"-retriever=(?P<retriever>.+?)"
+    r"(?:-search=(?P<search>.+?)-rerank=(?P<rerank>.+?))?"
+    r"(?:-query=(?P<query>.+?))?"
     r"-summarizer=(?P<summarizer>.+)$"
 )
 
 
 def parse_config_folder(folder_name: str) -> dict:
     """Parse RAG hyper-parameters from the top-level folder name."""
-    m = CONFIG_RE.match(folder_name)
+    m = CONFIG_RE.search(folder_name)
     if not m:
         raise ValueError(f"Cannot parse config folder name: {folder_name!r}")
 
     def to_bool(v: str) -> bool:
         return v.lower() == "true"
 
-    def to_optional(v: str) -> str:
-        return "none" if v.lower() == "false" else v
+    def to_optional(v: str | None) -> str:
+        return "none" if v is None or v.lower() == "false" else v
 
     return {
-        "agentic": to_bool(m.group("agentic")),
         "temporal": to_bool(m.group("temporal")),
         "retriever": to_optional(m.group("retriever")),
+        "search": to_optional(m.group("search")),
+        "rerank": to_optional(m.group("rerank")),
+        "query": to_optional(m.group("query")),
         "summarizer": to_optional(m.group("summarizer")),
     }
 
@@ -106,6 +118,7 @@ if __name__ == "__main__":
         if os.path.isdir(os.path.join(OUTPUT_DIR, e))
     )
 
+    aggregated = []
     for folder_name in config_folders:
         config_path = os.path.join(OUTPUT_DIR, folder_name)
         try:
@@ -119,10 +132,7 @@ if __name__ == "__main__":
             logger.warning("No results found in %s — skipping", config_path)
             continue
 
-        df = pd.DataFrame(rows, columns=[
-            "agentic", "temporal", "retriever", "summarizer",
-            "model", "configuration", "predict_f1_macro", "predict_accuracy",
-        ])
+        df = pd.DataFrame(rows, columns=COLUMNS)
         df = (
             df.loc[df.groupby("model")["predict_f1_macro"].idxmax()]
             .reset_index(drop=True)
@@ -131,3 +141,14 @@ if __name__ == "__main__":
         excel_path = os.path.join(OUTPUT_DIR, folder_name, "results.xlsx")
         df.to_excel(excel_path, index=False)
         logger.info("Wrote %d rows → %s", len(df), excel_path)
+
+        aggregated.append(df)
+
+    if not aggregated:
+        logger.warning("No results to aggregate — %s not written.", AGGREGATE_FILE)
+    else:
+        agg_df = pd.concat(aggregated, ignore_index=True)[COLUMNS]
+        agg_df = agg_df.sort_values("predict_f1_macro", ascending=False).reset_index(drop=True)
+        agg_path = os.path.join(OUTPUT_DIR, AGGREGATE_FILE)
+        agg_df.to_csv(agg_path, index=False)
+        logger.info("Wrote %d aggregated rows → %s", len(agg_df), agg_path)

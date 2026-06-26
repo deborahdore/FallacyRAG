@@ -77,6 +77,9 @@ DEFAULT_RERANKER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 # Over-fetch factor for temporal filtering: pull this many × top_k, drop future docs, keep top_k.
 TEMPORAL_OVERFETCH = 10
 
+# Queries are batch-embedded per split (see embed_queries).
+QUERY_EMBED_BATCH_SIZE = 256
+
 # Module-level caches so expensive objects are built once and reused across calls.
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
 _bm25_cache: dict[tuple, "FastBM25Retriever"] = {}
@@ -191,14 +194,18 @@ def _get_embedding_function(retriever: str, chromadb_path: str):
     return getattr(vs, "embeddings", None) or vs._embedding_function
 
 
-def embed_queries(retriever: str, chromadb_path: str, queries: list[str]) -> list[list[float]]:
-    """Batch-encode all retrieval queries for a split in one GPU pass."""
-    # Per-query encoding runs thousands of batch-of-1 forward passes; batching is the main speedup.
+def embed_queries(retriever: str, chromadb_path: str, queries: list[str],
+                  batch_size: int = QUERY_EMBED_BATCH_SIZE) -> list[list[float]]:
+    """Batch-encode all retrieval queries for a split, in bounded GPU mini-batches. """
     emb = _get_embedding_function(retriever, chromadb_path)
-    # Replicate embed_query semantics (BGE prepends an instruction and strips newlines).
     instruction = getattr(emb, "query_instruction", "") or ""
     texts = [instruction + q.replace("\n", " ") for q in queries]
-    return emb.embed_documents(texts)
+    embeddings: list[list[float]] = []
+    for start in range(0, len(texts), batch_size):
+        embeddings.extend(emb.embed_documents(texts[start:start + batch_size]))
+        if DEVICE == "cuda":
+            torch.cuda.empty_cache()
+    return embeddings
 
 
 def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
@@ -831,8 +838,7 @@ if __name__ == "__main__":
         parser.error("--mode relations requires a --retriever.")
 
     # Encode the run configuration into the output directory name.
-    path = str(Path("dataset") / "detection" / "agentic=false")
-    path += f"-temporal={str(args.temporal_rag)}"
+    path = str(Path("dataset") / "detection" / f"temporal={str(args.temporal_rag)}")
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
         path += f"-search={args.search_type}"

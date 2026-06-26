@@ -1,3 +1,5 @@
+"""Build the FallacyRAG knowledge base: bills, people, geography, history, papers and exemplars."""
+
 import json
 import logging
 import os
@@ -173,6 +175,7 @@ FALLACY_WIKI_KEYWORDS = (
 
 
 def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
+    """Fetch one GovInfo search result's HTML content and save it as a KB record."""
     pkg_id = result["packageId"]
     gran_id = result.get("granuleId") or pkg_id
     id = gran_id.replace(" ", "_")
@@ -218,6 +221,7 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
 
 
 def bills_and_laws(path: Path):
+    """Ingest GovInfo bills/laws by topic, the US Government Manual, and the UDHR."""
     path.mkdir(parents=True, exist_ok=True)
 
     # Cache once — avoids repeated env lookups on every request
@@ -372,12 +376,7 @@ def _openalex_get(params: dict) -> dict | None:
 
 def _papers_from_openalex(queries: list[str], n_papers: int, since_year: int,
                           per_query_cap: int = PAPERS_PER_QUERY):
-    """Yield normalized paper dicts from the OpenAlex API (no API key required).
-
-    Each query contributes at most `per_query_cap` papers, and within a query results are
-    returned by OpenAlex in descending relevance order — so we keep the top, most relevant
-    hits of every query instead of letting one query dive hundreds deep into noise.
-    """
+    """Yield normalized paper dicts from the OpenAlex API, capped per query for relevance."""
     seen: set[str] = set()
     collected = 0
     per_page = min(per_query_cap, 200)  # no need to pull more than the per-query cap
@@ -430,12 +429,7 @@ def _papers_from_openalex(queries: list[str], n_papers: int, since_year: int,
 
 
 def _papers_from_google_scholar(queries: list[str], n_papers: int, since_year: int):
-    """Yield normalized paper dicts by scraping Google Scholar via `scholarly`.
-
-    Google Scholar has no official API and aggressively rate-limits / blocks scraping,
-    so this backend is best-effort. Install with `pip install scholarly`; for large,
-    reliable pulls prefer backend='openalex'.
-    """
+    """Yield normalized paper dicts by scraping Google Scholar (best-effort, rate-limited)."""
     try:
         from scholarly import scholarly
     except ImportError:
@@ -482,9 +476,7 @@ def _papers_from_google_scholar(queries: list[str], n_papers: int, since_year: i
 def fallacy_papers(path: Path, n_papers: int = 200, since_year: int = 2015,
                    backend: str = "openalex", fetch_fulltext: bool = False,
                    queries: list[str] | None = None) -> int:
-    """Search an academic index for recent papers on fallacies in political debates
-    and add each as a knowledge-base record.
-    """
+    """Search an academic index for recent fallacy/argumentation papers and save each as a record."""
     path.mkdir(parents=True, exist_ok=True)
     queries = queries or SCHOLAR_QUERIES
     if backend == "google_scholar":
@@ -567,11 +559,7 @@ def _save_exemplar_record(path: Path, record_id: str, example: str, category: st
 
 
 def _load_mafalda_exemplars(path: Path, drop_other: bool) -> int:
-    """Ingest MAFALDA exemplars from its GitHub JSONL (it is not a HuggingFace dataset).
-
-    Each row has a `text` and `labels` = list of [start, end, fallacy_name] spans; we keep
-    the exact fallacious span as the example, labeled with its project category.
-    """
+    """Ingest MAFALDA exemplars from its GitHub JSONL, keeping each labeled fallacious span."""
     try:
         raw = requests.get(MAFALDA_JSONL_URL, timeout=OPENALEX_TIMEOUT).text
     except Exception as e:
@@ -606,12 +594,7 @@ def _load_mafalda_exemplars(path: Path, drop_other: bool) -> int:
 
 def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
                       max_per_dataset: int | None = None, drop_other: bool = True) -> int:
-    """Ingest labeled fallacy examples (LOGIC + MAFALDA) as KB records.
-
-    drop_other : if True (default), skip examples whose fallacy type has no equivalent among
-                 the six project categories — keeping only on-taxonomy exemplars so that
-                 fallacy-keyed retrieval returns useful matches.
-    """
+    """Ingest labeled fallacy examples (LOGIC + MAFALDA); drop_other keeps only on-taxonomy ones."""
     path.mkdir(parents=True, exist_ok=True)
     datasets_spec = datasets_spec or EXEMPLAR_DATASETS
     saved = 0
@@ -654,6 +637,7 @@ def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
 
 
 def definitions(path: Path):
+    """Ingest fallacy papers, the Wikipedia 'fallacy' page, and its relevant linked pages."""
     path.mkdir(parents=True, exist_ok=True)
 
     # =================== recent papers on fallacies in political debates =================== #
@@ -721,14 +705,7 @@ def definitions(path: Path):
 
 
 def _fetch_pages_parallel(titles, max_workers: int = 6) -> dict:
-    """Fetch full plain-text for many Wikipedia pages quickly. Returns {slug: text}.
-
-    Uses the `extracts` API (full article text in ONE request per page) run concurrently,
-    instead of `fetch_wikipedia_sections` which issues ~one request *per section* and, fanned
-    out across workers, quickly trips Wikipedia's rate limiter (HTTP 429). This both avoids the
-    429 storm and returns richer content (full plaintext, including lists). Keys are slugs
-    (`safe_filename` of the canonical title) so callers can look up by their page id.
-    """
+    """Fetch full plain-text for many Wikipedia pages concurrently; return {slug: text}."""
     extracts = fetch_wikipedia_extracts(titles, intro_only=False, max_workers=max_workers)
     return {safe_filename(title): text for title, text in extracts.items()}
 
@@ -736,14 +713,7 @@ def _fetch_pages_parallel(titles, max_workers: int = 6) -> dict:
 def _expand_first_level_links(path: Path, seed_titles, source_template: str,
                               limit: int = 500, max_workers: int = 8,
                               seen: set | None = None) -> int:
-    """Fetch and save the first-level Wikipedia pages linked from each seed page.
-
-    For every `seed_titles` entry (a Wikipedia article title), collect the article-namespace
-    pages it links to (its 'first level', capped at `limit`), then save each unique linked page
-    using its lead extract. Link lists are gathered concurrently and bodies are pulled with the
-    batched `fetch_wikipedia_extracts`, so the expansion stays fast. Seed pages themselves and
-    any already-saved slug (via `seen`) are skipped, so nothing is duplicated.
-    """
+    """Fetch and save the unique first-level Wikipedia pages linked from each seed page."""
     seen = seen if seen is not None else set()
     seeds = [t for t in dict.fromkeys(seed_titles) if t]  # de-dupe, preserve order, drop empties
     for t in seeds:
@@ -786,6 +756,7 @@ def _expand_first_level_links(path: Path, seed_titles, source_template: str,
 
 
 def people(path: Path):
+    """Ingest Congress member bios, debate-mentioned people's Wikipedia pages, and their links."""
     path.mkdir(parents=True, exist_ok=True)
 
     # =================== official congress bibliography =================== #
@@ -840,6 +811,7 @@ def people(path: Path):
 
 
 def geography(path: Path):
+    """Ingest US Census state profiles plus debate-mentioned places' Wikipedia pages and links."""
     path.mkdir(parents=True, exist_ok=True)
     # ================== get states from census ==================
     r = get_request(CENSUS_BASE + "/search", params={"g": "010XX00US", "services": "entities"}, return_json=True)
@@ -850,6 +822,7 @@ def geography(path: Path):
     # topic requests still run inside the worker. Workers write distinct files and return the
     # state name so the main thread can collect the list.
     def _process_state(state) -> str | None:
+        """Fetch one state's census profile and topic data and save it as a record."""
         try:
             geo_id = state["facets"]["geography"][0]
             meta = get_request(
@@ -943,6 +916,7 @@ def geography(path: Path):
 
 
 def newspapers(path: Path):
+    """Download Chronicling America newspaper PDFs by topic, OCR them, and save records."""
     path.mkdir(parents=True, exist_ok=True)
     searchURL = 'https://www.loc.gov/collections/chronicling-america/?dl=page&ops=PHRASE&qs={query}&searchType=advanced&start_date=1950-01-01&fo=json'
     fileExtension = 'pdf'
@@ -969,6 +943,7 @@ def newspapers(path: Path):
 
     # ---- fetch page URLs from all items in parallel ----
     def fetch_page_urls(item_url: str, session: requests.Session) -> list[str]:
+        """Return the PDF page URLs listed in one item's metadata."""
         try:
             r = session.get(item_url, timeout=120)
             if r.status_code != 200:
@@ -993,6 +968,7 @@ def newspapers(path: Path):
 
     # ---- download PDFs in parallel, skipping already-downloaded files ----
     def download_pdf(page_url: str, session: requests.Session) -> None:
+        """Download one PDF to the temp folder, skipping if already present."""
         dest = saveTo / page_url.split('/')[-1]
         if dest.exists():
             log.info("Skipping already-downloaded %s", dest.name)
@@ -1071,15 +1047,7 @@ def newspapers(path: Path):
 
 
 def _make_year_aware(year: int, text: str) -> str:
-    """Make a year's history text year-anchored at every chunk boundary.
-
-    The text splitter (RecursiveCharacterTextSplitter in create_persistent_db.py) cuts a long
-    record into several chunks, and each chunk is embedded *independently*. If the year only
-    appeared once at the top, every chunk after the first would lose all temporal context and
-    the retriever could no longer tell which year that passage is about. So we prepend a strong
-    header and prefix every paragraph with an explicit "[{year}]" marker, ensuring the year
-    token is present in whatever chunk the splitter produces.
-    """
+    """Prefix every paragraph with the year so each split chunk keeps its temporal context."""
     header = f"Year: {year}. History of the United States in {year}.\n\n"
     paragraphs = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
     body = "\n\n".join(f"[{year}] {p}" for p in paragraphs)
@@ -1087,12 +1055,7 @@ def _make_year_aware(year: int, text: str) -> str:
 
 
 def _make_period_aware(start_year: int, end_year: int, text: str) -> str:
-    """Like `_make_year_aware`, but for a multi-year era page.
-
-    Prefixes every paragraph with the period span so each split chunk stays anchored to the
-    era it describes. The numeric metadata year is set to `start_year` by the caller, so the
-    retrieval agents' temporal filter ({"year": {"$lt": Y}}) still treats it consistently.
-    """
+    """Prefix every paragraph with the period span so each split chunk stays era-anchored."""
     span = f"{start_year}–{end_year}"
     header = f"Period: {start_year} to {end_year}. History of the United States, {span}.\n\n"
     paragraphs = [p.strip() for p in re.split(r"\n{2,}", text) if p.strip()]
@@ -1102,12 +1065,7 @@ def _make_period_aware(start_year: int, end_year: int, text: str) -> str:
 
 def _save_history_page(path: Path, title: str, start_year: int, end_year: int,
                        seen: set) -> bool:
-    """Fetch one Wikipedia page and save it as a period-anchored history record.
-
-    The page text is made period-aware and the numeric `year` metadata is set to `start_year`
-    so it stays compatible with the temporal `{"year": {"$lt": Y}}` retrieval filter. Returns
-    True if a record was written. `seen` dedupes pages shared across eras.
-    """
+    """Fetch one Wikipedia page and save it as a period-anchored history record (year=start_year)."""
     slug = safe_filename(title)
     if slug in seen:
         return False
@@ -1135,18 +1093,9 @@ def _save_history_page(path: Path, title: str, start_year: int, end_year: int,
 def history_eras(path: Path, era_pages: list | None = None,
                  explore_links: bool = True, links_per_page: int = 500,
                  seen: set | None = None):
-    """Ingest the broad "History of the United States (start–end)" era overview pages.
-
-    Each era spans several years, so the year is encoded as the period span inside the text
-    (see `_make_period_aware`) and the numeric `year` metadata is set to the era's start year
-    — keeping it compatible with the temporal `{"year": {"$lt": Y}}` retrieval filter.
-
-    When `explore_links` is True, the first-level article-namespace pages linked from each era
-    page are also fetched and saved, inheriting that era's period span and start year.
-
-    `seen` is a shared set of page slugs already saved; pass the one used by `american_history`
-    so a page is written only once across the whole history ingestion (no duplicate pages).
-    """
+    """Ingest the broad "History of the United States (start–end)" era pages and their links."""
+    # Year is encoded as the period span in the text and as start_year in metadata; `seen` is
+    # shared with american_history so no page is written twice.
     path.mkdir(parents=True, exist_ok=True)
     era_pages = era_pages or HISTORY_ERA_PAGES
     if seen is None:
@@ -1179,28 +1128,9 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
                      end_year: int | None = None,
                      explore_links: bool = True, links_per_year: int = 500,
                      max_workers: int = 8):
-    """Ingest the history of the United States from `start_year` to today, one record per year.
-
-    For each year we pull the "Events" section of Wikipedia's "{year} in the United States"
-    article (the dated list of what happened that year) and save it as a knowledge-base record.
-    The year is stored TWICE so the retriever can reason about time:
-
-      1. As the numeric `year` metadata field — `FallacyLoader` copies this into the Chroma
-         metadata, where the retrieval agents already filter on it (e.g. {"year": {"$lt": Y}}).
-         This is what lets the DB return only documents from before / around a given year.
-      2. Embedded inside the text itself (see `_make_year_aware`) so semantic search can match
-         year-specific queries even within chunks that were split off from the record head.
-
-    When `explore_links` is True, the first-level article-namespace pages linked from each year
-    page are also fetched and saved, inheriting that year's metadata. A single `seen` set is
-    shared across the per-year crawl, the link crawl, and the era crawl so each page is written
-    at most once (drop duplicate pages).
-
-    Performance: the Events sections and the link lists are fetched concurrently (`max_workers`
-    threads), and linked-page bodies are pulled with `fetch_wikipedia_extracts` — one batched
-    request for up to 20 pages — instead of one request per section. This is many times faster
-    than fetching every page sequentially section-by-section.
-    """
+    """Ingest US history one record per year (each year's Wikipedia 'Events' section) plus links."""
+    # The year is stored both as `year` metadata (for temporal filtering) and inside the text
+    # (see _make_year_aware). Events sections, link lists and bodies are fetched concurrently.
     path.mkdir(parents=True, exist_ok=True)
     if end_year is None:
         end_year = time.localtime().tm_year  # "today"
@@ -1211,6 +1141,7 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
 
     # ── Phase 1: the "Events" section of each year page (fetched concurrently) ──────────────
     def _fetch_events(year: int):
+        """Fetch one year's 'Events' section text."""
         title = HISTORY_WIKI_TITLE.format(year=year)
         try:
             return year, title, fetch_wikipedia_section(title, "Events")
@@ -1241,6 +1172,7 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
     if explore_links:
         # 2a. Collect link lists concurrently (one cheap request each).
         def _fetch_links(year: int):
+            """Fetch the article-namespace links from one year's page."""
             title = HISTORY_WIKI_TITLE.format(year=year)
             try:
                 return year, fetch_wikipedia_links(title, limit=links_per_year)
@@ -1294,6 +1226,7 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
 
 
 def main():
+    """Build every knowledge-base section into its subfolder."""
     bills_and_laws(Path(KNOWLEDGE_BASE_PATH + "/bills"))
     geography(Path(KNOWLEDGE_BASE_PATH + "/geography"))
     people(Path(KNOWLEDGE_BASE_PATH + "/people"))

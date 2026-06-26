@@ -7,11 +7,15 @@ from tqdm import tqdm
 
 
 class FallacyLoader(BaseLoader):
+    """Load knowledge-base JSON records from a set of folders into LangChain Documents."""
+
     def __init__(self, source_path: str, directories: list):
+        """Store the root path and the list of (sub)folders to scan."""
         self.source_path = source_path
         self.directories = directories
 
     def load(self):
+        """Read every JSON file in each folder and return them as Documents."""
         documents = []
 
         for directory in self.directories:

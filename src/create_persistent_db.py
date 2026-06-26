@@ -1,3 +1,5 @@
+"""Index the knowledge base into a persisted Chroma vector store with a chosen embedder."""
+
 import argparse
 import logging
 from pathlib import Path
@@ -58,11 +60,7 @@ RETRIEVERS = {
 
 
 def _apply_gpu_optimizations(embedding_function, retriever: str):
-    """
-    Apply FP16 and torch.compile to local HuggingFace models on CUDA.
-    FP16 halves memory usage and roughly doubles throughput on tensor cores.
-    torch.compile fuses ops for an additional ~20-30% speedup.
-    """
+    """Apply FP16 + torch.compile to local HuggingFace models on CUDA for faster encoding."""
     if DEVICE != "cuda" or retriever not in LOCAL_HF_MODELS:
         return
 
@@ -100,12 +98,7 @@ DEFAULT_DIRECTORIES = [
 
 
 def _deterministic_ids(splits: list) -> list[str]:
-    """Build a stable id for every chunk so re-indexing upserts instead of duplicating.
-
-    The id is derived from the document's category + source id + a per-document chunk index,
-    e.g. "history:US_history_1929:0". Re-running on unchanged content produces the same ids,
-    so Chroma overwrites those chunks rather than appending copies.
-    """
+    """Build a stable "category:id:index" id per chunk so re-indexing upserts, not duplicates."""
     counters: dict[tuple[str, str], int] = {}
     ids: list[str] = []
     for doc in splits:
@@ -120,17 +113,9 @@ def _deterministic_ids(splits: list) -> list[str]:
 
 def _build_text_splitter(embedding_function, retriever: str,
                          chunk_size: int, chunk_overlap: int) -> RecursiveCharacterTextSplitter:
-    """Build a token-aware splitter so chunks never exceed the embedding model's input window.
-
-    The previous splitter measured length in *characters*, but embedding models truncate on
-    *tokens* (all-mpnet ~384, bge-large 512). A 1000-char chunk could overflow the window and be
-    silently truncated at encode time, dropping the tail of every long chunk from the index — a
-    direct recall loss.
-
-    We read the tokenizer and max sequence length from the very model that will do the encoding,
-    clamp chunk_size to that limit, and fall back to character-based splitting if no tokenizer is
-    reachable.
-    """
+    """Build a token-aware splitter clamped to the embedding model's input window."""
+    # Models truncate on tokens, not characters; splitting by tokens avoids silently dropping
+    # the tail of long chunks. Falls back to character-based splitting if no tokenizer is found.
     client = getattr(embedding_function, "client", None)
     tokenizer = getattr(client, "tokenizer", None)
     max_seq_length = getattr(client, "max_seq_length", None)
@@ -178,6 +163,7 @@ def _build_text_splitter(embedding_function, retriever: str,
 
 def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
          update: bool = False, directories: list | None = None):
+    """Load, split, embed and index the knowledge base into the Chroma store."""
     torch.set_grad_enabled(False)
 
     if DEVICE == "cuda":
