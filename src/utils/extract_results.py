@@ -31,6 +31,7 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
+# OUTPUT_DIR = "output/detection"
 OUTPUT_DIR = "output/detection"
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
@@ -140,6 +141,7 @@ if __name__ == "__main__":
 
         excel_path = os.path.join(OUTPUT_DIR, folder_name, "results.xlsx")
         df.to_excel(excel_path, index=False)
+        # assert len(df)>=3
         logger.info("Wrote %d rows → %s", len(df), excel_path)
 
         aggregated.append(df)

@@ -426,12 +426,19 @@ def sample_few_shot_examples(
 
 def compute_metrics(predictions: list[str], references: list[str]) -> dict:
     """Compute accuracy and macro precision/recall/F1 from string predictions and references."""
-    return {
+    metrics = {
         "accuracy": accuracy_score(y_true=references, y_pred=predictions),
         "precision": precision_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
         "recall": recall_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
         "f1_macro": f1_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
     }
+    # Per-class F1 for error analysis
+    per_class = f1_score(
+        y_true=references, y_pred=predictions, labels=ALL_LABELS, average=None, zero_division=0
+    )
+    for label, score in zip(ALL_LABELS, per_class):
+        metrics[f"f1_{label}"] = float(score)
+    return metrics
 
 
 # ── Model loading helpers ──────────────────────────────────────────────────────

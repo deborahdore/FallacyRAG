@@ -46,6 +46,7 @@ MODELS=(
 "meta-llama/Llama-3.1-8B-Instruct"
 "Qwen/Qwen3.5-9B-Base"
 "openai/gpt-oss-20b"
+"mistralai/Mistral-7B-Instruct-v0.3"
 )
 
 N_GPUS=2

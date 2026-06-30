@@ -225,12 +225,19 @@ def make_compute_metrics(label_list: list[str]):
         pred_labels = [label_list[pred] for pred in predictions]
         true_labels = [label_list[lbl] for lbl in labels]
 
-        return {
+        metrics = {
             "accuracy": accuracy_score(y_true=true_labels, y_pred=pred_labels),
             "precision": precision_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
             "recall": recall_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
             "f1_macro": f1_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
         }
+        # Per-class F1 for error analysis
+        per_class = f1_score(
+            y_true=true_labels, y_pred=pred_labels, labels=label_list, average=None, zero_division=0
+        )
+        for label, score in zip(label_list, per_class):
+            metrics[f"f1_{label}"] = float(score)
+        return metrics
 
     return compute_metrics
 
@@ -453,8 +460,9 @@ def main():
     # ── Loss function ─────────────────────────────────────────────────────
     def weighted_loss_fn(outputs, labels, num_items_in_batch=None):
         """Class-weighted cross-entropy loss to offset label imbalance."""
-        weight = class_weights.to(outputs.logits.device) if class_weights is not None else None
-        return torch.nn.CrossEntropyLoss(weight=weight)(outputs.logits, labels)
+        logits = outputs.logits.float()
+        weight = class_weights.to(device=logits.device, dtype=logits.dtype) if class_weights is not None else None
+        return torch.nn.CrossEntropyLoss(weight=weight)(logits, labels)
 
     # ── Trainer ───────────────────────────────────────────────────────────
     trainer = Trainer(
