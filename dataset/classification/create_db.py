@@ -498,7 +498,7 @@ def build_retrieval_query(fallacy_text, relations_text, mode: str,
 
 
 def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
-    """Sentence-split the speech turns, downsample NoFallacy, and re-split into train/dev/test."""
+    """Sentence-split the speech turns, drop non-fallacy sentences, and re-split into train/dev/test."""
     dataset = []
     for split in ["train", "dev", "test"]:
         df = pd.read_csv(os.path.join(dataset_dir, f"{split}.csv"))
@@ -544,6 +544,10 @@ def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
     df = pd.DataFrame(dataset)
     df = df.replace({"nan": None})
     df = df.dropna().drop_duplicates().reset_index(drop=True)
+
+    # Classification (unlike detection) only ever sees sentences that are already known to be
+    # fallacies, so drop non-fallacy sentences rather than keeping a "NoFallacy" class.
+    df = df[df["fallacy_label"] != "NoFallacy"].reset_index(drop=True)
 
     # Stratified 80/10/10 train/dev/test split on the fallacy label.
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
@@ -723,9 +727,8 @@ def build_relations_mode(persist_directory_path: str,
 
     def query_fn(row):
         sentence = row["sentence"]
-        # NoFallacy sentences have no relations: query with the bare sentence.
-        if row["fallacy_label"] == "NoFallacy":
-            return normalize_text(sentence), False
+        # Every row here is a fallacy sentence (NoFallacy rows are dropped in
+        # _build_balanced_splits); look up its matched relation row, if any.
         fallacy_text, relations_text, relations_label = _match_relations(
             sentence, row["speech_turn"], lookup
         )
