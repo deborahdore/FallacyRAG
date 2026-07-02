@@ -32,12 +32,10 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
-task=classification
+task=detection
 export WANDB_PROJECT="fallacy_$task"
 
-DATASETS=(
-"temporal=false-retriever=false-summarizer=false"
-)
+dataset="temporal=false-retriever=false-summarizer=false"
 
 MODES=("fine_tune" "zero_shot" "few_shot")
 
@@ -63,105 +61,103 @@ mkdir -p logs
 FAILED_LOG="logs/failed_runs_$task.log"
 : > "$FAILED_LOG"  # fresh log per task, per submission
 
-for dataset in "${DATASETS[@]}"; do
-  TRAIN_FILE="dataset/$task/$dataset/train.csv"
-  VAL_FILE="dataset/$task/$dataset/dev.csv"
-  TEST_FILE="dataset/$task/$dataset/test.csv"
+TRAIN_FILE="dataset/$task/$dataset/train.csv"
+VAL_FILE="dataset/$task/$dataset/dev.csv"
+TEST_FILE="dataset/$task/$dataset/test.csv"
 
-  for model in "${MODELS[@]}"; do
-    for mode in "${MODES[@]}"; do
-      MODEL_NAME=$(basename "$model")
+for model in "${MODELS[@]}"; do
+  for mode in "${MODES[@]}"; do
+    MODEL_NAME=$(basename "$model")
 
-      if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
-        CONF_ID="mode-${mode}"
-        OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
-        mkdir -p "$OUTPUT_DIR"
+    if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
+      CONF_ID="mode-${mode}"
+      OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+      mkdir -p "$OUTPUT_DIR"
 
-        echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
+      echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
 
-        if ! torchrun \
-            --nproc_per_node=${N_GPUS} \
-            --rdzv_backend=c10d \
-            --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
-            "src/${task}/run_${task}_llm.py" \
-            --model_name_or_path "$model" \
-            --cache_dir "./cache/" \
-            --train_file "$TRAIN_FILE" \
-            --validation_file "$VAL_FILE" \
-            --test_file "$TEST_FILE" \
-            --text_column_name "sentence" \
-            --speech_turn_column_name "speech_turn" \
-            --label_column_name "fallacy_label" \
-            --mode "$mode" \
-            --output_dir "$OUTPUT_DIR" \
-            --per_device_eval_batch_size "$DEFAULT_BATCH" \
-            --run_name "${task}-${dataset}-${MODEL_NAME}-mode-${mode}" \
-            --seed $SEED \
-            --data_seed $SEED \
-            --dataloader_num_workers 8 \
-            --dataloader_prefetch_factor 2 \
-            --remove_unused_columns True \
-            --do_train False \
-            --do_eval True \
-            --do_predict True \
-            --trust_remote_code True
-        then
-          echo "FAILED: $task $model $CONF_ID" >> "$FAILED_LOG"
-          echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
-        fi
-
-      else
-        for lr in "${LEARNING_RATES[@]}"; do
-          for epoch in "${EPOCHS[@]}"; do
-            CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
-            OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
-            mkdir -p "$OUTPUT_DIR"
-
-            echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
-
-            if ! torchrun \
-                --nproc_per_node=${N_GPUS} \
-                --rdzv_backend=c10d \
-                --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
-                "src/${task}/run_${task}_llm.py" \
-                --model_name_or_path "$model" \
-                --cache_dir "./cache/" \
-                --train_file "$TRAIN_FILE" \
-                --validation_file "$VAL_FILE" \
-                --test_file "$TEST_FILE" \
-                --text_column_name "sentence" \
-                --speech_turn_column_name "speech_turn" \
-                --label_column_name "fallacy_label" \
-                --mode "$mode" \
-                --output_dir "$OUTPUT_DIR" \
-                --per_device_train_batch_size "$BATCH" \
-                --per_device_eval_batch_size "$BATCH" \
-                --gradient_accumulation_steps $GRAD_ACC \
-                --num_train_epochs "$epoch" \
-                --learning_rate "$lr" \
-                --logging_steps 1000 \
-                --run_name "${task}-${dataset}-${MODEL_NAME}-bs${BATCH}-lr${lr}-ep${epoch}-mode-${mode}" \
-                --eval_strategy "epoch" \
-                --eval_on_start True \
-                --save_strategy "epoch" \
-                --save_total_limit 1 \
-                --seed $SEED \
-                --data_seed $SEED \
-                --dataloader_num_workers 8 \
-                --dataloader_prefetch_factor 2 \
-                --remove_unused_columns True \
-                --do_train True \
-                --do_eval True \
-                --do_predict True \
-                --trust_remote_code True
-            then
-              echo "FAILED: $task $model $CONF_ID" >> "$FAILED_LOG"
-              echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
-            fi
-          done
-        done
+      if ! torchrun \
+          --nproc_per_node=${N_GPUS} \
+          --rdzv_backend=c10d \
+          --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
+          "src/${task}/run_${task}_llm.py" \
+          --model_name_or_path "$model" \
+          --cache_dir "./cache/" \
+          --train_file "$TRAIN_FILE" \
+          --validation_file "$VAL_FILE" \
+          --test_file "$TEST_FILE" \
+          --text_column_name "sentence" \
+          --speech_turn_column_name "speech_turn" \
+          --label_column_name "fallacy_label" \
+          --mode "$mode" \
+          --output_dir "$OUTPUT_DIR" \
+          --per_device_eval_batch_size "$DEFAULT_BATCH" \
+          --run_name "${task}-${dataset}-${MODEL_NAME}-mode-${mode}" \
+          --seed $SEED \
+          --data_seed $SEED \
+          --dataloader_num_workers 8 \
+          --dataloader_prefetch_factor 2 \
+          --remove_unused_columns True \
+          --do_train False \
+          --do_eval True \
+          --do_predict True \
+          --trust_remote_code True
+      then
+        echo "FAILED: $task $model $CONF_ID" >> "$FAILED_LOG"
+        echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
       fi
-    done
+
+    else
+      for lr in "${LEARNING_RATES[@]}"; do
+        for epoch in "${EPOCHS[@]}"; do
+          CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
+          OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+          mkdir -p "$OUTPUT_DIR"
+
+          echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
+
+          if ! torchrun \
+              --nproc_per_node=${N_GPUS} \
+              --rdzv_backend=c10d \
+              --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
+              "src/${task}/run_${task}_llm.py" \
+              --model_name_or_path "$model" \
+              --cache_dir "./cache/" \
+              --train_file "$TRAIN_FILE" \
+              --validation_file "$VAL_FILE" \
+              --test_file "$TEST_FILE" \
+              --text_column_name "sentence" \
+              --speech_turn_column_name "speech_turn" \
+              --label_column_name "fallacy_label" \
+              --mode "$mode" \
+              --output_dir "$OUTPUT_DIR" \
+              --per_device_train_batch_size "$BATCH" \
+              --per_device_eval_batch_size "$BATCH" \
+              --gradient_accumulation_steps $GRAD_ACC \
+              --num_train_epochs "$epoch" \
+              --learning_rate "$lr" \
+              --logging_steps 1000 \
+              --run_name "${task}-${dataset}-${MODEL_NAME}-bs${BATCH}-lr${lr}-ep${epoch}-mode-${mode}" \
+              --eval_strategy "epoch" \
+              --eval_on_start True \
+              --save_strategy "epoch" \
+              --save_total_limit 1 \
+              --seed $SEED \
+              --data_seed $SEED \
+              --dataloader_num_workers 8 \
+              --dataloader_prefetch_factor 2 \
+              --remove_unused_columns True \
+              --do_train True \
+              --do_eval True \
+              --do_predict True \
+              --trust_remote_code True
+          then
+            echo "FAILED: $task $model $CONF_ID" >> "$FAILED_LOG"
+            echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
+          fi
+        done
+      done
+    fi
   done
 done
 

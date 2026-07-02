@@ -15,7 +15,7 @@ module purge
 module load miniconda
 conda activate rags
 
-set -e
+set -uo pipefail
 
 export TOKENIZERS_PARALLELISM=false
 export HF_HOME="/home/ddore/.cache/huggingface"
@@ -26,23 +26,22 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
-task=classification
-DATASETS=("")
+task=detection
+DATASETS=()
 
 export WANDB_PROJECT="fallacy_$task"
 
 MODELS=(
-#    "microsoft/deberta-v3-base"
+    "microsoft/deberta-v3-base"
     "allenai/longformer-base-4096"
     "answerdotai/ModernBERT-base"
     "FacebookAI/roberta-base"
-#    "FacebookAI/xlm-roberta-base"
-#    "casehold/legalbert"
-#    "MARIANNE-INRIA/RooseBERT-cont-uncased"
-#    "MARIANNE-INRIA/RooseBERT-cont-cased"
-#    "MARIANNE-INRIA/RooseBERT-scr-uncased"
-#    "MARIANNE-INRIA/RooseBERT-scr-cased"
-#    "chandar-lab/NeoBERT"
+    "FacebookAI/xlm-roberta-base"
+    "casehold/legalbert"
+    "MARIANNE-INRIA/RooseBERT-cont-uncased"
+    "MARIANNE-INRIA/RooseBERT-cont-cased"
+    "MARIANNE-INRIA/RooseBERT-scr-uncased"
+    "MARIANNE-INRIA/RooseBERT-scr-cased"
 )
 
 BATCH_SIZES=(8 16)
@@ -50,11 +49,8 @@ LEARNING_RATES=(2e-5 3e-5 5e-5)
 EPOCHS=(3 5)
 
 FAILED_LOG="logs/failed_runs_${task}.log"
-mkdir -p logs
-: > "$FAILED_LOG"  # truncate/create fresh each run
 
 for dataset in "${DATASETS[@]}"; do
-
   TRAIN_FILE="dataset/$task/$dataset/train.csv"
   VAL_FILE="dataset/$task/$dataset/dev.csv"
   TEST_FILE="dataset/$task/$dataset/test.csv"
@@ -105,7 +101,7 @@ for dataset in "${DATASETS[@]}"; do
               --use_rag True \
               --context_column_name "rag_context"
           then
-            echo "FAILED: $model $CONF_ID, Dataset: $task-$dataset" >> "$FAILED_LOG"
+            echo "FAILED: $model $CONF_ID, Dataset: $dataset" >> "$FAILED_LOG"
             echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."
           fi
         done

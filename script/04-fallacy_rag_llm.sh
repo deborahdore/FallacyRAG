@@ -36,9 +36,7 @@ task=detection
 export WANDB_PROJECT="fallacy_$task"
 
 
-DATASETS=(
-""
-)
+DATASETS=()
 
 MODES=("fine_tune" "zero_shot" "few_shot")
 
@@ -62,7 +60,6 @@ mkdir -p logs
 
 
 FAILED_LOG="logs/failed_runs_$task.log"
-: > "$FAILED_LOG"  # fresh log per task, per submission
 
 for dataset in "${DATASETS[@]}"; do
   TRAIN_FILE="dataset/$task/$dataset/train.csv"
