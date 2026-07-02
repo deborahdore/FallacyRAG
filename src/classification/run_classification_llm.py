@@ -1097,6 +1097,15 @@ def main():
                 fh.write(f"{idx}\t{pred_str}\t{gold_str}\n")
         logger.info(f"Predictions saved to {output_path}")
 
+        output_path = os.path.join(training_args.output_dir, f"predict_results_{training_args.seed}.txt")
+        with open(output_path, "w") as fh:
+            fh.write("index\tprediction\tgold\n")
+            for idx, pred in enumerate(predictions):
+                pred_str = ",".join(pred) if pred else LLM_NONE
+                gold_str = (",".join(references[idx]) if references[idx] else LLM_NONE) if references else "N/A"
+                fh.write(f"{idx}\t{pred_str}\t{gold_str}\n")
+        logger.info(f"Predictions saved to {output_path}")
+
 
 # ── Thin wrapper to reuse fine-tuned model for inference ──────────────────────
 

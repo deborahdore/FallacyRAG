@@ -31,15 +31,15 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-# OUTPUT_DIR = "output/detection"
 OUTPUT_DIR = "output/detection"
+# OUTPUT_DIR = "output/classification"
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
 AGGREGATE_FILE = "all_results.csv"
 
 COLUMNS = [
-    "temporal", "retriever", "search", "rerank", "query", "summarizer",
-    "model", "configuration", "predict_f1_macro", "predict_accuracy",
+    "dataset", "temporal", "retriever", "search", "rerank", "query", "summarizer",
+    "model", "configuration", "predict_f1_macro", "predict_accuracy"
 ]
 
 CONFIG_RE = re.compile(
@@ -52,7 +52,7 @@ CONFIG_RE = re.compile(
 
 
 def parse_config_folder(folder_name: str) -> dict:
-    """Parse RAG hyper-parameters from the top-level folder name."""
+    """Parse RAG hyper-parameters from the top-level folder namCOLUMNSe."""
     m = CONFIG_RE.search(folder_name)
     if not m:
         raise ValueError(f"Cannot parse config folder name: {folder_name!r}")
@@ -103,6 +103,7 @@ def collect_rows(config_path: str, config_meta: dict) -> list[dict]:
                 **config_meta,
                 "model": model_name,
                 "configuration": run_name,
+                "dataset": config_path,
                 "predict_f1_macro": metrics.get("f1_macro" if alt else "predict_f1_macro"),
                 "predict_accuracy": metrics.get("accuracy" if alt else "predict_accuracy"),
             })
@@ -134,8 +135,9 @@ if __name__ == "__main__":
             continue
 
         df = pd.DataFrame(rows, columns=COLUMNS)
+        best_metric = "predict_accuracy" if "detection" in OUTPUT_DIR else "predict_f1_macro"
         df = (
-            df.loc[df.groupby("model")["predict_f1_macro"].idxmax()]
+            df.loc[df.groupby("model")[best_metric].idxmax()]
             .reset_index(drop=True)
         )
 
@@ -150,7 +152,8 @@ if __name__ == "__main__":
         logger.warning("No results to aggregate — %s not written.", AGGREGATE_FILE)
     else:
         agg_df = pd.concat(aggregated, ignore_index=True)[COLUMNS]
-        agg_df = agg_df.sort_values("predict_f1_macro", ascending=False).reset_index(drop=True)
+        agg_metric = "predict_accuracy" if "detection" in OUTPUT_DIR else "predict_f1_macro"
+        agg_df = agg_df.sort_values(agg_metric, ascending=False).reset_index(drop=True)
         agg_path = os.path.join(OUTPUT_DIR, AGGREGATE_FILE)
         agg_df.to_csv(agg_path, index=False)
         logger.info("Wrote %d aggregated rows → %s", len(agg_df), agg_path)

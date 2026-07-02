@@ -490,6 +490,14 @@ def main():
                     fh.write(f"{index}\t{label_list[item[0]]}\t{label_list[item[1]]}\n")
             logger.info(f"Predictions saved to {output_path}")
 
+            output_path = os.path.join(training_args.output_dir, f"predict_results_{training_args.seed}.txt")
+            with open(output_path, "w") as fh:
+                logger.info("***** Predict results *****")
+                fh.write("index\tprediction\tgold\n")
+                for index, item in enumerate(zip(predictions, np.array(label_column))):
+                    fh.write(f"{index}\t{label_list[item[0]]}\t{label_list[item[1]]}\n")
+            logger.info(f"Predictions saved to {output_path}")
+
     # ── Model card / Hub push ─────────────────────────────────────────────
     hub_kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "text-classification"}
     if data_args.dataset_name is not None:
