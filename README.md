@@ -1,13 +1,11 @@
 # Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates
 
 <!-- TOC -->
-
-* [Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates]
-    * [🚀 Overview](#-overview)
-    * [🎯 Tasks](#-tasks)
-    * [⛁ Knowledge Base](#-knowledge-base)
-        * [Knowledge Base Format](#knowledge-base-format)
-
+* [Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates](#retrieval-augmented-generation-for-argumentative-fallacies-in-us-political-debates)
+  * [🚀 Overview](#-overview)
+  * [🎯 Tasks](#-tasks)
+  * [⛁ Knowledge Base](#-knowledge-base)
+    * [Knowledge Base Format](#knowledge-base-format)
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -24,8 +22,9 @@ Experiments are conducted using the **[ElecDeb60to20](https://3ia-data.inria.fr/
 The project focuses on three main tasks.
 
 - **Fallacy Detection**: detect whether a segment of speech contains a **fallacious argument**.
-- **Fallacy Classification**: classify the type of fallacy present in the argument. The system currently supports the
-  following fallacy categories:
+- **Fallacy Classification**: given a sentence already identified as fallacious, classify which type of fallacy it
+  contains. Unlike detection, this task never sees non-fallacious sentences (`NoFallacy` sentences are dropped during
+  dataset construction). The system currently supports the following fallacy categories:
     - _Ad Hominem_: an argument that attacks the opponent personally instead of addressing their position or reasoning.
     - _Appeal to Emotion_: the use of emotionally charged language intended to manipulate the audience’s feelings rather
       than provide logical support.
@@ -42,7 +41,7 @@ The project focuses on three main tasks.
 
 To ground the language model, we constructed a **knowledge base of approximately 5GB of political and contextual
 documents**. The corpus combines official government sources with curated background information.
-The knowledge base is organized into five main categories.
+The knowledge base is organized into seven main categories.
 
 - **Bills and Laws**: this collection includes congressional bills and public and private laws approved by the U.S.
   Congress, collected from their official
@@ -50,14 +49,24 @@ The knowledge base is organized into five main categories.
   and [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf)
 - **Geography**: geographic and demographic information about U.S. states was collected from
   the [U.S. Census](https://data.census.gov/webpages)and Wikipedia.
-- **Newspapers**: news articles providing political context for the debates.
+- **Newspapers**: news articles providing political context for the debates, collected from
+  the [Chronicling America](https://www.loc.gov/collections/chronicling-america/) collection at the Library of Congress
+  and OCR-processed into text.
 - **People**: biographical information about members of the U.S. Congress was collected from
   the [Biographical Directory of the United States Congress](https://bioguide.congress.gov/search). Additional entries
   from Wikipedia were added for public figures referenced during the debates.
+- **History**: U.S. historical context, built from per-year Wikipedia "*{year} in the United States*" pages (from 1900
+  onward) together with broad "*History of the United States*" era-overview pages and their linked articles. Each record
+  is tagged with its year to support temporal filtering during retrieval.
 - **Definitions**: conceptual definitions and explanations of argumentative fallacies were compiled from peer-reviewed
   research papers and reference
-  sources ([Goffredo et al., 2023](https://aclanthology.org/2023.emnlp-main.684.pdf), [Goffredo et al., 2022](https://www.ijcai.org/proceedings/2022/0575.pdf)).
-  Additional supporting definitions were collected from Wikipedia.
+  sources ([Goffredo et al., 2023](https://aclanthology.org/2023.emnlp-main.684.pdf), [Goffredo et al., 2022](https://www.ijcai.org/proceedings/2022/0575.pdf)),
+  a curated set of recent fallacy / argumentation papers retrieved from [OpenAlex](https://openalex.org/), and the
+  Wikipedia fallacy pages.
+- **Exemplars**: labeled examples of fallacious arguments drawn from public fallacy datasets
+  ([LOGIC](https://huggingface.co/datasets/tasksource/logical-fallacy) and
+  [MAFALDA](https://github.com/ChadiHelwe/MAFALDA)), mapped onto the project's fallacy taxonomy to provide concrete
+  reference instances of each fallacy type.
 
 ### Knowledge Base Format
 
