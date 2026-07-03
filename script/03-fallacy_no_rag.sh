@@ -46,7 +46,7 @@ MODELS=(
     "MARIANNE-INRIA/RooseBERT-cont-cased"
     "MARIANNE-INRIA/RooseBERT-scr-uncased"
     "MARIANNE-INRIA/RooseBERT-scr-cased"
-#    "chandar-lab/NeoBERT"
+    "chandar-lab/NeoBERT"
 )
 
 BATCH_SIZES=(8 16)
