@@ -218,13 +218,14 @@ mkdir -p logs
 
 for SEED in "${{SEEDS[@]}}"; do
   export PYTHONHASHSEED=$SEED
+  SEED_NUMBER=$SEED
 
   for entry in "${{BEST_CONFIGS[@]}}"; do
     IFS='|' read -r model batch lr epoch <<< "$entry"
     MODEL_NAME=$(basename "$model")
     CONF_ID="bs${{batch}}_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
 
-    OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/${{CONF_ID}}"
+    OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
     mkdir -p "$OUTPUT_DIR"
 
     echo "=== Running $MODEL_NAME | $CONF_ID ==="
@@ -394,6 +395,7 @@ mkdir -p logs
 
 for SEED in "${{SEEDS[@]}}"; do
   export PYTHONHASHSEED=$SEED
+  SEED_NUMBER=$SEED
 
   for entry in "${{BEST_CONFIGS[@]}}"; do
     IFS='|' read -r model mode lr epoch <<< "$entry"
@@ -401,7 +403,7 @@ for SEED in "${{SEEDS[@]}}"; do
 
     if [[ "$mode" == "fine_tune" ]]; then
       CONF_ID="mode-fine_tune_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
-      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/${{CONF_ID}}"
+      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
       mkdir -p "$OUTPUT_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -411,7 +413,7 @@ for SEED in "${{SEEDS[@]}}"; do
           --rdzv_backend=c10d \\
           --rdzv_endpoint=${{MASTER_ADDR}}:${{MASTER_PORT}} \\
           "src/${{task}}/run_${{task}}_llm.py" \\
-          --model_name_or_path "$model" \\
+          --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \\
           --cache_dir "./cache/" \\
           --train_file "$TRAIN_FILE" \\
           --validation_file "$VAL_FILE" \\
@@ -451,7 +453,7 @@ for SEED in "${{SEEDS[@]}}"; do
 
     else
       CONF_ID="mode-${{mode}}_seed${{SEED}}"
-      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/${{CONF_ID}}"
+      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
       mkdir -p "$OUTPUT_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -461,7 +463,7 @@ for SEED in "${{SEEDS[@]}}"; do
           --rdzv_backend=c10d \\
           --rdzv_endpoint=${{MASTER_ADDR}}:${{MASTER_PORT}} \\
           "src/${{task}}/run_${{task}}_llm.py" \\
-          --model_name_or_path "$model" \\
+          --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \\
           --cache_dir "./cache/" \\
           --train_file "$TRAIN_FILE" \\
           --validation_file "$VAL_FILE" \\
