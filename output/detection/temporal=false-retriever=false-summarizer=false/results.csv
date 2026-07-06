@@ -1,0 +1,16 @@
+dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,Llama-3.1-8B-Instruct,mode-fine_tune_bs8_lr5e-4_ep3,0.6994936234058515,0.7003058103975535
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,Mistral-7B-Instruct-v0.3,mode-zero_shot,0.5540338071456012,0.5657492354740061
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,ModernBERT-base,bs8_lr3e-5_ep5,0.7753381081004771,0.7767584097859327
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,NeoBERT,bs8_lr5e-5_ep5,0.7273289423139985,0.72782874617737
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,Qwen3.5-9B-Base,mode-fine_tune_bs8_lr5e-4_ep3,0.729772368717602,0.7308868501529052
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-cont-cased,bs16_lr2e-5_ep3,0.3326530612244898,0.4984709480122324
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-cont-uncased,bs8_lr2e-5_ep5,0.3340122199592668,0.5015290519877675
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-scr-cased,bs16_lr2e-5_ep3,0.3326530612244898,0.4984709480122324
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-scr-uncased,bs16_lr2e-5_ep3,0.3326530612244898,0.4984709480122324
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,deberta-v3-base,bs16_lr2e-5_ep3,0.3326530612244898,0.4984709480122324
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,gpt-oss-20b,mode-fine_tune_bs8_lr5e-4_ep3,0.6844584878528722,0.6880733944954128
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,legalbert,bs8_lr5e-5_ep5,0.7386533525147387,0.7400611620795107
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,longformer-base-4096,bs16_lr5e-5_ep5,0.7700917758008118,0.7706422018348624
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,roberta-base,bs16_lr2e-5_ep5,0.7694000169247694,0.7706422018348624
+/Users/ddore/Documents/FallacyRAG/output/detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,xlm-roberta-base,bs8_lr3e-5_ep3,0.7284463234183904,0.7308868501529052
