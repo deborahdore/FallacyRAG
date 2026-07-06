@@ -4,8 +4,8 @@ extract_results.py
 Scans the output/ directory. For every top-level folder (one per RAG
 configuration), reads all predict_results.json files found under
   output/<config>/<model>/<run>/predict_results.json
-and writes a single Excel file:
-  output/<config>/<config>.xlsx
+and writes a single CSV file:
+  output/<config>/results.csv
 
 Columns: temporal, retriever, search, rerank, query, summarizer,
          model, configuration, predict_f1_macro, predict_accuracy
@@ -31,8 +31,7 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-# OUTPUT_DIR = "output/detection"
-OUTPUT_DIR = "output/classification"
+ROOT_OUTPUT_DIR = os.path.join(rootutils.find_root("."), "output")
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
 AGGREGATE_FILE = "all_results.csv"
@@ -111,49 +110,52 @@ def collect_rows(config_path: str, config_meta: dict) -> list[dict]:
 
 
 if __name__ == "__main__":
-    if not os.path.isdir(OUTPUT_DIR):
-        logger.error("Output directory %r not found. Run from the project root.", OUTPUT_DIR)
+    if not os.path.isdir(ROOT_OUTPUT_DIR):
+        logger.error("Output directory %r not found. Run from the project root.", ROOT_OUTPUT_DIR)
         raise SystemExit(1)
+    os.system(f"find {ROOT_OUTPUT_DIR} -name '*.csv' -type f -delete")
 
-    config_folders = sorted(
-        e for e in os.listdir(OUTPUT_DIR)
-        if os.path.isdir(os.path.join(OUTPUT_DIR, e))
-    )
-
-    aggregated = []
-    for folder_name in config_folders:
-        config_path = os.path.join(OUTPUT_DIR, folder_name)
-        try:
-            config_meta = parse_config_folder(folder_name)
-        except ValueError as exc:
-            logger.warning("%s — skipping folder", exc)
-            continue
-
-        rows = collect_rows(config_path, config_meta)
-        if not rows:
-            logger.warning("No results found in %s — skipping", config_path)
-            continue
-
-        df = pd.DataFrame(rows, columns=COLUMNS)
-        best_metric = "predict_accuracy" if "detection" in OUTPUT_DIR else "predict_f1_macro"
-        df = (
-            df.loc[df.groupby("model")[best_metric].idxmax()]
-            .reset_index(drop=True)
+    for task in ['detection', 'classification']:
+        output_dir = os.path.join(ROOT_OUTPUT_DIR, task)
+        config_folders = sorted(
+            e for e in os.listdir(output_dir)
+            if os.path.isdir(os.path.join(output_dir, e))
         )
 
-        excel_path = os.path.join(OUTPUT_DIR, folder_name, "results.xlsx")
-        df.to_excel(excel_path, index=False)
-        # assert len(df)>=3
-        logger.info("Wrote %d rows → %s", len(df), excel_path)
+        aggregated = []
+        for folder_name in config_folders:
+            config_path = os.path.join(output_dir, folder_name)
+            try:
+                config_meta = parse_config_folder(folder_name)
+            except ValueError as exc:
+                logger.warning("%s — skipping folder", exc)
+                continue
 
-        aggregated.append(df)
+            rows = collect_rows(config_path, config_meta)
+            if not rows:
+                logger.warning("No results found in %s — skipping", config_path)
+                continue
 
-    if not aggregated:
-        logger.warning("No results to aggregate — %s not written.", AGGREGATE_FILE)
-    else:
-        agg_df = pd.concat(aggregated, ignore_index=True)[COLUMNS]
-        agg_metric = "predict_accuracy" if "detection" in OUTPUT_DIR else "predict_f1_macro"
-        agg_df = agg_df.sort_values(agg_metric, ascending=False).reset_index(drop=True)
-        agg_path = os.path.join(OUTPUT_DIR, AGGREGATE_FILE)
-        agg_df.to_csv(agg_path, index=False)
-        logger.info("Wrote %d aggregated rows → %s", len(agg_df), agg_path)
+            df = pd.DataFrame(rows, columns=COLUMNS)
+            best_metric = "predict_accuracy" if "detection" in output_dir else "predict_f1_macro"
+            df = (
+                df.loc[df.groupby("model")[best_metric].idxmax()]
+                .reset_index(drop=True)
+            )
+
+            csv_path = os.path.join(output_dir, folder_name, "results.csv")
+            df.to_csv(csv_path, index=False)
+            # assert len(df)>=3
+            logger.info("Wrote %d rows → %s", len(df), csv_path)
+
+            aggregated.append(df)
+
+        if not aggregated:
+            logger.warning("No results to aggregate — %s not written.", AGGREGATE_FILE)
+        else:
+            agg_df = pd.concat(aggregated, ignore_index=True)[COLUMNS]
+            agg_metric = "predict_accuracy" if "detection" in output_dir else "predict_f1_macro"
+            agg_df = agg_df.sort_values(agg_metric, ascending=False).reset_index(drop=True)
+            agg_path = os.path.join(output_dir, AGGREGATE_FILE)
+            agg_df.to_csv(agg_path, index=False)
+            logger.info("Wrote %d aggregated rows → %s", len(agg_df), agg_path)

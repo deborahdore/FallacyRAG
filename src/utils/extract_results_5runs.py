@@ -184,6 +184,8 @@ def process_task(task_path: str, task_name: str) -> list[pd.DataFrame]:
 
 
 if __name__ == "__main__":
+    os.system(f"find {OUTPUT_ROOT} -name '*.csv' -type f -delete")
+
     if not os.path.isdir(OUTPUT_ROOT):
         logger.error("Output directory %r not found. Run from the project root.", OUTPUT_ROOT)
         raise SystemExit(1)

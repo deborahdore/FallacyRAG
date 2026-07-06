@@ -74,6 +74,7 @@ from typing import Optional
 import datasets
 import rootutils
 from datasets import load_dataset
+from tqdm.auto import tqdm
 from sklearn.metrics import (
     accuracy_score,
     f1_score,
@@ -294,9 +295,11 @@ class LLMExperimentArguments:
     )
     # ── Few-shot ──────────────────────────────────────────────────────────────
     num_shots: int = field(
-        default=2,
+        default=1,
         metadata={"help": "Number of labelled examples per fallacy class for few-shot prompting "
-                          "(total prompt examples ≈ num_shots * number_of_classes)."},
+                          "(total prompt examples ≈ num_shots * number_of_classes). "
+                          "Fewer shots means shorter prompts and faster inference; raise it "
+                          "if accuracy matters more than speed."},
     )
     few_shot_seed: int = field(
         default=42,
@@ -624,6 +627,73 @@ def _build_load_kwargs(
     return kwargs
 
 
+# ── Batched generation helper ──────────────────────────────────────────────────
+
+def _generate_batched(
+        model,
+        tokenizer,
+        messages_list,
+        batch_size,
+        max_new_tokens,
+        temperature,
+        torch_module,
+        max_length: int = 2048,
+) -> list[str]:
+    """Length-sorted, left-padded batched generation.
+
+    Each chat prompt is tokenised once, then examples are sorted short→long so that
+    every padded batch groups similar-length sequences together. This minimises the
+    compute wasted on padding tokens (a plain in-order pass pads every batch to the
+    longest example it happens to contain). Results are re-ordered back to the
+    original input order before returning, so callers see no difference in output —
+    only in speed. This helps both zero-shot and, especially, few-shot inference,
+    where prompt lengths vary the most.
+    """
+    # 1. Render + tokenise each chat prompt once (no padding yet).
+    encodings = []
+    for msgs in messages_list:
+        text = tokenizer.apply_chat_template(
+            msgs, tokenize=False, add_generation_prompt=True
+        )
+        encodings.append(tokenizer(text, truncation=True, max_length=max_length))
+
+    # 2. Process short prompts first so padding within each batch stays minimal.
+    order = sorted(range(len(encodings)), key=lambda i: len(encodings[i]["input_ids"]))
+
+    gen_kwargs = dict(
+        max_new_tokens=max_new_tokens,
+        pad_token_id=tokenizer.pad_token_id,
+        eos_token_id=tokenizer.eos_token_id,
+    )
+    if temperature > 0:
+        gen_kwargs.update(do_sample=True, temperature=temperature)
+    else:
+        gen_kwargs["do_sample"] = False
+
+    responses: list[Optional[str]] = [None] * len(encodings)
+    n_batches = (len(order) + batch_size - 1) // batch_size
+    for i in tqdm(range(0, len(order), batch_size), total=n_batches,
+                  desc="Generating", unit="batch"):
+        idxs = order[i: i + batch_size]
+        # tokenizer.pad re-pads the pre-tokenised examples (left padding set on the tokenizer).
+        inputs = tokenizer.pad(
+            [encodings[j] for j in idxs],
+            padding=True,
+            return_tensors="pt",
+        ).to(model.device)
+
+        with torch_module.inference_mode():
+            output_ids = model.generate(**inputs, **gen_kwargs)
+
+        # Decode only newly generated tokens; map each result back to its original slot.
+        prompt_len = inputs["input_ids"].shape[1]
+        for k, out in enumerate(output_ids):
+            decoded = tokenizer.decode(out[prompt_len:], skip_special_tokens=True)
+            responses[idxs[k]] = decoded
+
+    return responses
+
+
 # ── Local HuggingFace backend ──────────────────────────────────────────────────
 
 class LocalLLMInference:
@@ -659,58 +729,46 @@ class LocalLLMInference:
         )
         load_kwargs = _build_load_kwargs(model_name_or_path, llm_args, base_kwargs, torch)
 
+        # Place the model on an accelerator. Plain from_pretrained leaves an unquantized
+        # model on CPU, where generation for a multi-billion-parameter model is extremely
+        # slow — the dominant cause of slow inference. Quantized models are placed by
+        # device_map at load time; unquantized ones are moved after loading.
+        is_quantized = "quantization_config" in load_kwargs
+        if torch.cuda.is_available():
+            load_kwargs.setdefault("device_map", "auto")
+
         logger.info(f"Loading model from {model_name_or_path}")
         self.model = AutoModelForCausalLM.from_pretrained(model_name_or_path, **load_kwargs)
+
+        if not is_quantized and "device_map" not in load_kwargs:
+            if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+                self.model = self.model.to("mps")
+            else:
+                logger.warning(
+                    "No CUDA/MPS device detected — running on CPU. Generation with a large "
+                    "model will be slow; use a GPU, --load_in_4bit, a smaller model, or the "
+                    "OpenAI backend."
+                )
         self.model.eval()
+        logger.info(f"Model device: {next(self.model.parameters()).device}")
 
         self.max_new_tokens = llm_args.max_new_tokens
         self.temperature = llm_args.temperature
         self.batch_size = llm_args.inference_batch_size
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
-        """Run inference on a list of chat-message lists. Returns decoded responses."""
+        """Run length-sorted batched inference over chat-message lists."""
         import torch
 
-        all_responses = []
-        for i in range(0, len(messages_list), self.batch_size):
-            batch = messages_list[i: i + self.batch_size]
-            # Apply chat template for each example, add generation prompt
-            texts = [
-                self.tokenizer.apply_chat_template(
-                    msgs, tokenize=False, add_generation_prompt=True
-                )
-                for msgs in batch
-            ]
-            inputs = self.tokenizer(
-                texts,
-                return_tensors="pt",
-                padding=True,
-                truncation=True,
-                max_length=2048,
-            ).to(self.model.device)
-
-            gen_kwargs = dict(
-                max_new_tokens=self.max_new_tokens,
-                pad_token_id=self.tokenizer.pad_token_id,
-                eos_token_id=self.tokenizer.eos_token_id,
-            )
-            if self.temperature > 0:
-                gen_kwargs["do_sample"] = True
-                gen_kwargs["temperature"] = self.temperature
-            else:
-                gen_kwargs["do_sample"] = False
-
-            with torch.inference_mode():
-                output_ids = self.model.generate(**inputs, **gen_kwargs)
-
-            # Decode only the newly generated tokens
-            prompt_len = inputs["input_ids"].shape[1]
-            for out in output_ids:
-                new_tokens = out[prompt_len:]
-                decoded = self.tokenizer.decode(new_tokens, skip_special_tokens=True)
-                all_responses.append(decoded)
-
-        return all_responses
+        return _generate_batched(
+            self.model,
+            self.tokenizer,
+            messages_list,
+            batch_size=self.batch_size,
+            max_new_tokens=self.max_new_tokens,
+            temperature=self.temperature,
+            torch_module=torch,
+        )
 
 
 # ── OpenAI backend ─────────────────────────────────────────────────────────────
@@ -737,7 +795,7 @@ class OpenAIInference:
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
         """Run chat completion on each message list and return the raw text responses."""
         responses = []
-        for messages in messages_list:
+        for messages in tqdm(messages_list, desc="Generating", unit="ex"):
             response = self.client.chat.completions.create(
                 model=self.model_name,
                 messages=messages,
@@ -1115,38 +1173,16 @@ class _FineTunedLocalEngine:
         self._torch = torch
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
-        """Run batched generation over chat-message lists and return decoded responses."""
-        all_responses = []
-        for i in range(0, len(messages_list), self.batch_size):
-            batch = messages_list[i: i + self.batch_size]
-            texts = [
-                self.tokenizer.apply_chat_template(
-                    msgs, tokenize=False, add_generation_prompt=True
-                )
-                for msgs in batch
-            ]
-            inputs = self.tokenizer(
-                texts, return_tensors="pt", padding=True, truncation=True, max_length=2048
-            ).to(self.model.device)
-
-            gen_kwargs = dict(
-                max_new_tokens=self.max_new_tokens,
-                pad_token_id=self.tokenizer.pad_token_id,
-                eos_token_id=self.tokenizer.eos_token_id,
-            )
-            if self.temperature > 0:
-                gen_kwargs.update(do_sample=True, temperature=self.temperature)
-            else:
-                gen_kwargs["do_sample"] = False
-
-            with self._torch.inference_mode():
-                output_ids = self.model.generate(**inputs, **gen_kwargs)
-
-            prompt_len = inputs["input_ids"].shape[1]
-            for out in output_ids:
-                decoded = self.tokenizer.decode(out[prompt_len:], skip_special_tokens=True)
-                all_responses.append(decoded)
-        return all_responses
+        """Run length-sorted batched generation over chat-message lists."""
+        return _generate_batched(
+            self.model,
+            self.tokenizer,
+            messages_list,
+            batch_size=self.batch_size,
+            max_new_tokens=self.max_new_tokens,
+            temperature=self.temperature,
+            torch_module=self._torch,
+        )
 
 
 # ── Utility ────────────────────────────────────────────────────────────────────
