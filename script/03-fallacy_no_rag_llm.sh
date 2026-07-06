@@ -1,36 +1,39 @@
 #!/bin/bash
 #SBATCH --job-name=llm_fallacy_no_rag
+#SBATCH --account=fuo@a100
+#SBATCH -C a100
+#SBATCH --ntasks=2
+#SBATCH --ntasks-per-node=2
+#SBATCH --gres=gpu:2
+#SBATCH --cpus-per-task=8
+
+#SBATCH --time=20:00:00
 #SBATCH --output=logs/llm_fallacy_no_rag_%j.out
 #SBATCH --error=logs/llm_fallacy_no_rag_%j.out
 
-#SBATCH --gpus=h100:2
-#SBATCH --partition=gpu
-#SBATCH --ntasks=2
-#SBATCH --ntasks-per-node=2
+#SBATCH --hint=nomultithread
 
 #SBATCH --mail-user=deborah.dore@inria.fr
 #SBATCH --mail-type=FAIL
-#SBATCH --time=36:00:00
-#SBATCH --account=marianne
-
-set -uo pipefail
 
 module purge
-module load miniconda/25.1.1
-module load cuda/13.0
+module load arch/a100
+module load cuda/13.0.3
+module load miniforge/24.9.0
+
 conda activate rags
 
 export LD_LIBRARY_PATH="$CONDA_PREFIX/lib:$LD_LIBRARY_PATH"
 export TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_HOME="/home/ddore/.cache/huggingface"
 
 export MASTER_ADDR=localhost
 export MASTER_PORT=6000
 
+wandb disabled
+
 SEED=14
 export PYTHONHASHSEED=$SEED
-wandb disabled
 
 task=detection
 export WANDB_PROJECT="fallacy_$task"
