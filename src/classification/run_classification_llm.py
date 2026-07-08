@@ -1,18 +1,16 @@
 """
-LLM-based fallacy classification (multi-label): zero-shot, few-shot, and fine-tuning.
+LLM-based fallacy classification (single-label): zero-shot, few-shot, and fine-tuning.
 
 Task
 ----
-Given a sentence (and its surrounding speech turn), assign *all* applicable
-fallacy types from a fixed inventory of six categories:
+Given a sentence (and its surrounding speech turn), assign the *one* fallacy
+type it contains from a fixed inventory of six categories:
 
     AdHominem | AppealtoAuthority | AppealtoEmotion |
     FalseCause | Slipperyslope | Slogans
 
-This is a multi-label problem: a sentence may exhibit zero, one, or several
-fallacy types simultaneously. (The current ElecDeb60to20 classification split
-ships one gold label per sentence, but the pipeline parses gold and predictions
-as label *sets*, so multi-label data is handled transparently.)
+This is a single-label problem: every sentence contains exactly one fallacy
+type. There is no "none of the above" option — "None" is never a valid answer.
 
 Architecture
 ------------
@@ -22,19 +20,21 @@ Each example is formatted as an instruction-following chat prompt:
     [User]     Sentence: <sentence>
                Debate turn context: <speech_turn>
                [Retrieved context: <context>]   (when --use_rag)
-               Which fallacy types does this sentence contain?
-               Answer with a comma-separated list drawn only from:
+               Which single fallacy type does this sentence contain?
+               Answer with exactly one type drawn only from:
                Ad Hominem, Appeal to Authority, Appeal to Emotion,
                False Cause, Slippery Slope, Slogan.
-    [Assistant] Appeal to Emotion, Ad Hominem
+    [Assistant] Appeal to Emotion
 
 Post-processing
 ---------------
-The raw LLM response (a free-text list of human-readable fallacy names) is
-parsed back into the canonical dataset labels via fuzzy alias matching before
-metrics and file output, e.g.:
+The raw LLM response (a free-text fallacy name) is parsed back into the
+canonical dataset label via fuzzy alias matching before metrics and file
+output, e.g.:
     "Appeal to Emotion"  → "AppealtoEmotion"
     "Slippery Slope"     → "Slipperyslope"
+If the response happens to mention more than one fallacy name, only the
+earliest-occurring match is kept, since exactly one label is expected.
 
 Modes (--mode)
 --------------
@@ -118,7 +118,9 @@ LABEL_TO_LLM: dict[str, str] = {
     "Slogans": "Slogan",
 }
 
-# Token emitted / accepted when no fallacy type applies (empty label set).
+# Fallback token used only when response parsing fails to find any known fallacy
+# name (should not happen in practice — the task never has an empty label set,
+# and the model is never instructed to answer "None").
 LLM_NONE = "None"
 
 
@@ -163,8 +165,10 @@ SYSTEM_PROMPT = (
     "- False Cause: assuming a causal link between events merely because they co-occur.\n"
     "- Slippery Slope: claiming a small first step inevitably leads to extreme consequences.\n"
     "- Slogan: a short, striking phrase meant to provoke agreement rather than argue.\n"
-    "Answer with a comma-separated list of the applicable fallacy types, using exactly "
-    "those names. If the sentence contains none of them, answer \"None\"."
+    "Every sentence contains exactly one of these six fallacy types — there is always "
+    "a fallacy present, so \"None\" is never a valid answer. "
+    "Answer with exactly one fallacy type, using exactly one of those six names, and "
+    "nothing else."
 )
 
 
@@ -235,8 +239,10 @@ class DataTrainingArguments:
     )
     label_column_name: Optional[str] = field(
         default="fallacy_label",
-        metadata={"help": "Column containing the (multi-label) fallacy classification label(s). "
-                          "Multiple gold labels may be separated by comma / semicolon / pipe."},
+        metadata={"help": "Column containing the gold fallacy classification label. "
+                          "Parsing tolerates comma / semicolon / pipe separated cells, "
+                          "but the task itself is single-label: exactly one fallacy "
+                          "type per example."},
     )
     overwrite_cache: bool = field(
         default=True,
@@ -309,7 +315,7 @@ class LLMExperimentArguments:
     max_new_tokens: int = field(
         default=32,
         metadata={"help": "Maximum number of new tokens to generate per example "
-                          "(needs to fit a comma-separated list of fallacy names)."},
+                          "(needs to fit a single fallacy type name)."},
     )
     temperature: float = field(
         default=0.0,
@@ -371,8 +377,10 @@ _GOLD_SPLIT_RE = re.compile(r"[,;|/]+")
 def parse_gold_labels(raw: object) -> list[str]:
     """Parse a raw gold-label cell into a sorted list of canonical labels.
 
-    Supports single-label cells ("AppealtoEmotion") and multi-label cells with
-    comma/semicolon/pipe/slash delimiters ("AppealtoEmotion, AdHominem").
+    The task is single-label (exactly one fallacy per example), so this
+    normally returns a single-item list. Comma/semicolon/pipe/slash delimiters
+    are still tolerated for robustness against legacy or malformed cells, but
+    an empty result ("None") should not occur in valid single-label data.
     """
     if raw is None:
         return []
@@ -393,27 +401,47 @@ def parse_gold_labels(raw: object) -> list[str]:
 
 
 def parse_llm_response(response: str) -> list[str]:
-    """Extract the set of canonical fallacy labels mentioned in a raw LLM response.
+    """Extract the single canonical fallacy label mentioned in a raw LLM response.
 
-    Scans the response for each known alias; returns a sorted list of the labels
-    found. An explicit "None" (and no other match) yields an empty list.
+    The task is single-label: every sentence has exactly one fallacy type, so
+    this returns at most one label. If the response happens to mention several
+    known alias names (e.g. the model ignored the "answer with exactly one"
+    instruction), only the earliest-occurring match is kept — ties broken in
+    favor of the longer (more specific) alias. Returns an empty list only if no
+    known fallacy name could be found at all (parsing failure; "None" is never
+    a valid target so it is not treated as an explicit empty answer).
     """
     norm = _normalize(response)
     if not norm:
         return []
-    found = set()
+    matches = []
     for alias_norm, canon in ALIAS_TO_LABEL.items():
-        if alias_norm and alias_norm in norm:
-            found.add(canon)
-    return sorted(found, key=ALL_LABELS.index)
+        if not alias_norm:
+            continue
+        pos = norm.find(alias_norm)
+        if pos != -1:
+            matches.append((pos, -len(alias_norm), canon))
+    if not matches:
+        return []
+    matches.sort()
+    return [matches[0][2]]
 
 
 def labels_to_llm_target(labels: list[str]) -> str:
-    """Render a list of canonical labels as the human-readable target string ("None" if empty)."""
+    """Render the single canonical label as its human-readable target string.
+
+    The task is single-label: every example has exactly one fallacy type, so
+    "None" is never a valid target. Raises if `labels` is empty; if more than
+    one label is present (e.g. a legacy multi-label gold cell), only the first
+    (canonical order) is used.
+    """
     if not labels:
-        return LLM_NONE
-    ordered = sorted(set(labels), key=ALL_LABELS.index)
-    return ", ".join(LABEL_TO_LLM[lab] for lab in ordered)
+        raise ValueError(
+            "Expected exactly one fallacy label; empty label sets are not valid "
+            "under the single-label task (\"None\" is not permitted)."
+        )
+    canon = sorted(set(labels), key=ALL_LABELS.index)[0]
+    return LABEL_TO_LLM[canon]
 
 
 # ── Prompt helpers ─────────────────────────────────────────────────────────────
@@ -434,9 +462,10 @@ def build_user_message(
     if context:
         parts.append(f"Retrieved context:\n{context}")
     parts.append(
-        "Which fallacy types does this sentence contain? "
-        f"Answer with a comma-separated list drawn only from: {_LABEL_MENU}. "
-        'If none apply, answer "None".'
+        "Which single fallacy type does this sentence contain? "
+        f"Answer with exactly one type drawn only from: {_LABEL_MENU}. "
+        "Every sentence contains exactly one of these; do not answer \"None\" and "
+        "do not list more than one type."
     )
     return "\n\n".join(parts)
 
@@ -509,8 +538,9 @@ def sample_few_shot_examples(
 ) -> list[dict]:
     """Sample up to `n_per_class` examples per fallacy label; return a flat shuffled list of dicts.
 
-    Multi-label aware: an example is eligible for a class if its gold label set
-    contains that class. De-duplicates examples chosen for several classes.
+    Each example is eligible for a class if its gold label matches that class
+    (the task is single-label, so this is normally a single exact match).
+    De-duplicates examples chosen for several classes.
     """
     rng = random.Random(seed)
     examples = []
@@ -543,11 +573,13 @@ def sample_few_shot_examples(
 # ── Metrics ────────────────────────────────────────────────────────────────────
 
 def compute_metrics(predictions: list[list[str]], references: list[list[str]]) -> dict:
-    """Compute multi-label metrics from predicted and gold label sets.
+    """Compute classification metrics from predicted and gold labels.
 
-    Uses a fixed 6-class indicator space (ALL_LABELS). Reports subset (exact-match)
-    accuracy, Hamming loss, and micro / macro / weighted / samples F1, plus
-    micro/macro precision and recall.
+    Predictions/references are single-item label lists under the single-label
+    task (an empty list only signals a parse failure). Uses a fixed 6-class
+    indicator space (ALL_LABELS) via MultiLabelBinarizer for convenience.
+    Reports subset (exact-match) accuracy, Hamming loss, micro/macro/weighted/
+    samples F1, and micro/macro precision and recall.
     """
     mlb = MultiLabelBinarizer(classes=ALL_LABELS)
     y_true = mlb.fit_transform(references)
