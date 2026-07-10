@@ -46,7 +46,7 @@ MODELS=(
     "MARIANNE-INRIA/RooseBERT-cont-cased"
     "MARIANNE-INRIA/RooseBERT-scr-uncased"
     "MARIANNE-INRIA/RooseBERT-scr-cased"
-    "chandar-lab/NeoBERT"
+#    "chandar-lab/NeoBERT"
 )
 
 BATCH_SIZES=(8 16)
@@ -55,7 +55,6 @@ EPOCHS=(3 5)
 
 FAILED_LOG="logs/failed_runs_${task}.log"
 mkdir -p logs
-: > "$FAILED_LOG"  # truncate/create fresh each run
 
 for model in "${MODELS[@]}"; do
   for batch in "${BATCH_SIZES[@]}"; do

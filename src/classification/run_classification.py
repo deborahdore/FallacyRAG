@@ -357,7 +357,7 @@ def main():
         revision=model_args.model_revision,
         token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
-        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes,
+        ignore_mismatched_sizes=model_args.ignore_mismatched_sizes
     )
 
     model.config.label2id = label_to_id
@@ -383,17 +383,27 @@ def main():
         """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
             # speech_turn comes first so truncation trims rag_context, not the local context.
-            combined_b = [
-                f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
-                for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
-            ]
-            result = tokenizer(
-                examples[text_column_name],
-                combined_b,
-                padding=padding,
-                max_length=max_seq_length,
-                truncation=True,
-            )
+            if speech_turn_column_name == text_column_name:
+                # reddit-dataset
+                result = tokenizer(
+                    examples[text_column_name],
+                    examples[context_column_name],
+                    padding=padding,
+                    max_length=max_seq_length,
+                    truncation=True,
+                )
+            else:
+                combined_b = [
+                    f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
+                    for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
+                ]
+                result = tokenizer(
+                    examples[text_column_name],
+                    combined_b,
+                    padding=padding,
+                    max_length=max_seq_length,
+                    truncation=True,
+                )
         else:
             result = tokenizer(
                 examples[text_column_name],

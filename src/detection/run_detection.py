@@ -363,17 +363,27 @@ def main():
     def preprocess_function(examples):
         """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
-            combined_b = [
-                f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
-                for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
-            ]
-            result = tokenizer(
-                examples[text_column_name],
-                combined_b,
-                padding=padding,
-                max_length=max_seq_length,
-                truncation=True,
-            )
+            if speech_turn_column_name == text_column_name:
+                # reddit-dataset
+                result = tokenizer(
+                    examples[text_column_name],
+                    examples[context_column_name],
+                    padding=padding,
+                    max_length=max_seq_length,
+                    truncation=True,
+                )
+            else:
+                combined_b = [
+                    f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
+                    for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
+                ]
+                result = tokenizer(
+                    examples[text_column_name],
+                    combined_b,
+                    padding=padding,
+                    max_length=max_seq_length,
+                    truncation=True,
+                )
         else:
             result = tokenizer(
                 examples[text_column_name],
