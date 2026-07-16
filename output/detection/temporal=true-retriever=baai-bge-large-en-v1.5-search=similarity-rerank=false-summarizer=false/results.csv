@@ -1,4 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/detection/temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,True,baai-bge-large-en-v1.5,similarity,none,none,none,ModernBERT-base,bs16_lr5e-5_ep5,0.7295488721804511,0.7308868501529052
-/Users/ddore/Documents/FallacyRAG/output/detection/temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,True,baai-bge-large-en-v1.5,similarity,none,none,none,longformer-base-4096,bs16_lr3e-5_ep3,0.7483860070565272,0.7492354740061162
-/Users/ddore/Documents/FallacyRAG/output/detection/temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,True,baai-bge-large-en-v1.5,similarity,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.7678282354945898,0.7706422018348624

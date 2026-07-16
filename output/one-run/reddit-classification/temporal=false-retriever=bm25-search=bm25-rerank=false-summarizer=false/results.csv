@@ -1,0 +1,4 @@
+dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,ModernBERT-base,bs16_lr5e-5_ep5,0.554013569962436,0.6238805970149254
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,longformer-base-4096,bs8_lr3e-5_ep5,0.6140072325430048,0.6656716417910448
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.6113637061429179,0.6358208955223881

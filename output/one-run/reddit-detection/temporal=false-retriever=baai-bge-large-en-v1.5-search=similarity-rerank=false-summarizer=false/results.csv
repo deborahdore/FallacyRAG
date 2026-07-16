@@ -1,0 +1,4 @@
+dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,ModernBERT-base,bs8_lr5e-5_ep5,0.6089412854991489,0.608955223880597
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,deberta-v3-base,bs8_lr5e-5_ep3,0.6893372588210932,0.6925373134328359
+/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.6800382043935052,0.6805970149253732

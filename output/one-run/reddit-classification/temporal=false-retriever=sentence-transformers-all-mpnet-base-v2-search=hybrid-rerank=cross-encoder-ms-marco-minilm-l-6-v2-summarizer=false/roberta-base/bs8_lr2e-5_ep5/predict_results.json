@@ -1,0 +1,21 @@
+{
+    "epoch": 5.0,
+    "predict_accuracy": 0.5791044776119403,
+    "predict_f1_Authority": 0.6,
+    "predict_f1_Blackwhite": 0.4166666666666667,
+    "predict_f1_HastyGeneralization": 0.40816326530612246,
+    "predict_f1_Natural": 0.7777777777777778,
+    "predict_f1_NoFallacy": 0.6013986013986014,
+    "predict_f1_Population": 0.5777777777777777,
+    "predict_f1_SlipperySlope": 0.5769230769230769,
+    "predict_f1_Tradition": 0.6521739130434783,
+    "predict_f1_WorseProblems": 0.48,
+    "predict_f1_macro": 0.565653453210389,
+    "predict_loss": 1.172455072402954,
+    "predict_precision": 0.5318709348827796,
+    "predict_recall": 0.6209409909834087,
+    "predict_runtime": 2.771,
+    "predict_samples": 335,
+    "predict_samples_per_second": 120.896,
+    "predict_steps_per_second": 15.157
+}
