@@ -76,6 +76,7 @@ for model in "${MODELS[@]}"; do
     if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
       CONF_ID="mode-${mode}"
       OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+      CACHE_DIR="cache/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
       mkdir -p "$OUTPUT_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -85,8 +86,8 @@ for model in "${MODELS[@]}"; do
           --rdzv_backend=c10d \
           --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
           "src/${task}/run_${task}_llm.py" \
-          --model_name_or_path "$model" \
-          --cache_dir "./cache/" \
+          --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \
+          --cache_dir "$CACHE_DIR" \
           --train_file "$TRAIN_FILE" \
           --validation_file "$VAL_FILE" \
           --test_file "$TEST_FILE" \
@@ -116,6 +117,7 @@ for model in "${MODELS[@]}"; do
         for epoch in "${EPOCHS[@]}"; do
           CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
           OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+          CACHE_DIR="cache/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
           mkdir -p "$OUTPUT_DIR"
 
           echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -125,8 +127,8 @@ for model in "${MODELS[@]}"; do
               --rdzv_backend=c10d \
               --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
               "src/${task}/run_${task}_llm.py" \
-              --model_name_or_path "$model" \
-              --cache_dir "./cache/" \
+              --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \
+              --cache_dir "$CACHE_DIR" \
               --train_file "$TRAIN_FILE" \
               --validation_file "$VAL_FILE" \
               --test_file "$TEST_FILE" \

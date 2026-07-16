@@ -50,7 +50,7 @@ MODELS=(
 BATCH_SIZES=(8 16)
 LEARNING_RATES=(2e-5 3e-5 5e-5)
 EPOCHS=(3 5)
-
+GRAD_ACC=1
 FAILED_LOG="logs/failed_runs_${task}.log"
 
 for dataset in "${DATASETS[@]}"; do
@@ -66,13 +66,14 @@ for dataset in "${DATASETS[@]}"; do
           CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
           OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+          CACHE_DIR="cache/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
           mkdir -p "$OUTPUT_DIR"
 
           echo "=== Running $MODEL_NAME | $CONF_ID ==="
 
           if ! python "src/$task/run_$task.py" \
               --model_name_or_path "$model" \
-              --cache_dir "./cache/" \
+              --cache_dir "$CACHE_DIR" \
               --train_file "$TRAIN_FILE" \
               --validation_file "$VAL_FILE" \
               --test_file "$TEST_FILE" \
@@ -81,8 +82,8 @@ for dataset in "${DATASETS[@]}"; do
               --label_column_name "fallacy_label" \
               --preprocessing_num_workers 8 \
               --output_dir "$OUTPUT_DIR" \
-              --per_device_train_batch_size "$batch" \
-              --per_device_eval_batch_size "$batch" \
+              --per_device_train_batch_size "$((batch/GRAD_ACC))" \
+              --per_device_eval_batch_size "$((batch/GRAD_ACC))" \
               --num_train_epochs "$epoch" \
               --learning_rate "$lr" \
               --logging_steps 1000 \
@@ -102,7 +103,8 @@ for dataset in "${DATASETS[@]}"; do
               --trust_remote_code True \
               --warmup_ratio 0.06 \
               --use_rag True \
-              --context_column_name "rag_context"
+              --context_column_name "rag_context" \
+              --gradient_accumulation_steps $GRAD_ACC
           then
             echo "FAILED: $model $CONF_ID, Dataset: $dataset" >> "$FAILED_LOG"
             echo "!!! Run failed, see $FAILED_LOG. Continuing with next configuration."

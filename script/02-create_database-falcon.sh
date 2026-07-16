@@ -20,8 +20,7 @@ export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 RUN_MODE="${1:-relations}"
 
 TEMPORAL_BOOLS=(True False)
-TASK=detection
-SCRIPT="datasets/falcon-dataset/$TASK/create_db.py"
+SCRIPT="datasets/falcon-dataset/classification/create_db.py"
 
 for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
   if [[ "$TEMPORAL_BOOL" == "True" ]]; then
@@ -56,7 +55,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                   search_type="--search-type similarity"
               fi
 
-              python "$SCRIPT" --mode comment --retriever "$retriever" $search_type $TEMPORAL_FLAG
+              python "$SCRIPT" --mode sentence --retriever "$retriever" $search_type $TEMPORAL_FLAG
 
   #            for model in "${summarization_models[@]}"; do
   #                python "$SCRIPT" --mode comment --retriever "$retriever" --summarization-model "$model" $search_type $TEMPORAL_FLAG
@@ -138,7 +137,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
               echo "Retriever: $retriever"
               echo "========================================================================"
 
-              python "$SCRIPT" --mode comment --retriever "$retriever"\
+              python "$SCRIPT" --mode sentence --retriever "$retriever"\
                 --search-type "hybrid" \
                 --rerank \
                 --fetch-k 30 \
