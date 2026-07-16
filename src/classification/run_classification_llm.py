@@ -214,15 +214,15 @@ class DataTrainingArguments:
         metadata={"help": "Configuration name for the dataset."},
     )
     train_file: Optional[str] = field(
-        default="./dataset/classification/train.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/train.csv",
         metadata={"help": "Training data file (CSV or JSON)."},
     )
     validation_file: Optional[str] = field(
-        default="./dataset/classification/dev.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/dev.csv",
         metadata={"help": "Validation data file (CSV or JSON)."},
     )
     test_file: Optional[str] = field(
-        default="./dataset/classification/test.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/test.csv",
         metadata={"help": "Test / prediction data file (CSV or JSON)."},
     )
     text_column_name: Optional[str] = field(

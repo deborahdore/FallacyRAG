@@ -16,7 +16,7 @@ retrievers=(
 )
 
 for task in "${tasks[@]}"; do
-  script="reddit-dataset/reddit-$task/create_db.py"
+  script="datasets/reddit-dataset/$task/create_db.py"
 
   # bm25
   python "$script" --retriever bm25 --search-type bm25

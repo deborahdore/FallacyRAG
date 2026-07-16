@@ -21,7 +21,7 @@ RUN_MODE="${1:-relations}"
 
 TEMPORAL_BOOLS=(True False)
 TASK=detection
-SCRIPT="falcon-dataset/falcon-$TASK/create_db.py"
+SCRIPT="datasets/falcon-dataset/$TASK/create_db.py"
 
 for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
   if [[ "$TEMPORAL_BOOL" == "True" ]]; then

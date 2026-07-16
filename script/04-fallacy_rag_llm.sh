@@ -35,6 +35,7 @@ wandb disabled
 SEED=14
 export PYTHONHASHSEED=$SEED
 
+data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
 task=detection
 export WANDB_PROJECT="fallacy_$task"
 
@@ -64,9 +65,9 @@ mkdir -p logs
 FAILED_LOG="logs/failed_runs_$task.log"
 
 for dataset in "${DATASETS[@]}"; do
-  TRAIN_FILE="dataset/$task/$dataset/train.csv"
-  VAL_FILE="dataset/$task/$dataset/dev.csv"
-  TEST_FILE="dataset/$task/$dataset/test.csv"
+  TRAIN_FILE="datasets/$data-dataset/$task/$dataset/train.csv"
+  VAL_FILE="datasets/$data-dataset/$task/$dataset/dev.csv"
+  TEST_FILE="datasets/$data-dataset/$task/$dataset/test.csv"
 
   for model in "${MODELS[@]}"; do
     for mode in "${MODES[@]}"; do
@@ -74,7 +75,7 @@ for dataset in "${DATASETS[@]}"; do
 
       if [[ "$mode" == "zero_shot" || "$mode" == "few_shot" ]]; then
         CONF_ID="mode-${mode}"
-        OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+        OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"
 
         echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -116,7 +117,7 @@ for dataset in "${DATASETS[@]}"; do
         for lr in "${LEARNING_RATES[@]}"; do
           for epoch in "${EPOCHS[@]}"; do
             CONF_ID="mode-${mode}_bs$((BATCH*N_GPUS*GRAD_ACC))_lr${lr}_ep${epoch}"
-            OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+            OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
             mkdir -p "$OUTPUT_DIR"
 
             echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="

@@ -26,14 +26,15 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
+data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
 task=detection
 dataset="temporal=false-retriever=false-summarizer=false"
 
 export WANDB_PROJECT="fallacy_$task"
 
-TRAIN_FILE="dataset/$task/$dataset/train.csv"
-VAL_FILE="dataset/$task/$dataset/dev.csv"
-TEST_FILE="dataset/$task/$dataset/test.csv"
+TRAIN_FILE="datasets/$data-dataset/$task/$dataset/train.csv"
+VAL_FILE="datasets/$data-dataset/$task/$dataset/dev.csv"
+TEST_FILE="datasets/$data-dataset/$task/$dataset/test.csv"
 
 MODELS=(
     "microsoft/deberta-v3-base"
@@ -63,7 +64,7 @@ for model in "${MODELS[@]}"; do
         MODEL_NAME=$(basename "$model")
         CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-        OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+        OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
         mkdir -p "$OUTPUT_DIR"
 
         echo "=== Running $MODEL_NAME | $CONF_ID ==="

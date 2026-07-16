@@ -1,9 +1,9 @@
 """
 extract_results_5runs.py
 ------------------------
-Scans the ``output_5runs`` directory, which stores several seeds per model:
+Scans the ``output/five-runs`` directory, which stores several seeds per model:
 
-  output_5runs/<task>/<config>/<model>/seed_<n>/<run>/predict_results.json
+  output/five-runs/<dataset-task>/<config>/<model>/seed_<n>/<run>/predict_results.json
 
 (encoder runs finish with ``predict_results.json``; LLM runs finish with
 ``predict_results_metrics.json`` — both are supported.)
@@ -11,12 +11,12 @@ Scans the ``output_5runs`` directory, which stores several seeds per model:
 For every config folder it writes a CSV summarising the metrics of each model
 aggregated over its seeds:
 
-  output_5runs/<task>/<config>/results_mean_std.csv
+  output/five-runs/<dataset-task>/<config>/results_mean_std.csv
 
 Each row is one model, with the mean and standard deviation of the metrics
 computed across all available seeds, plus the number of seeds that were found.
 An aggregate CSV combining every config folder is also written to
-``output_5runs/<task>/all_results_mean_std.csv``.
+``output/five-runs/<dataset-task>/all_results_mean_std.csv``.
 """
 
 import json
@@ -32,8 +32,8 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-# Root that holds one sub-folder per task (e.g. "detection", "classification").
-OUTPUT_ROOT = "output_5runs"
+# Root that holds one sub-folder per dataset-task combination (e.g. "elecdeb60to20-detection").
+OUTPUT_ROOT = "output/five-runs"
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
 AGGREGATE_FILE = "all_results_mean_std.csv"

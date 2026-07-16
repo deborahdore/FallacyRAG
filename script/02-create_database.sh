@@ -18,6 +18,7 @@ RUN_MODE="${1:-relations}"
 
 TEMPORAL_BOOLS=(True False)
 TASK=classification
+SCRIPT_PATH="datasets/elecdeb60to20-dataset/$TASK/create_db.py"
 
 for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
   if [[ "$TEMPORAL_BOOL" == "True" ]]; then
@@ -52,10 +53,10 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                   search_type="--search-type similarity"
               fi
 
-              python dataset/$TASK/create_db.py --retriever "$retriever" $search_type $TEMPORAL_FLAG
+              python "$SCRIPT_PATH" --retriever "$retriever" $search_type $TEMPORAL_FLAG
 
   #            for model in "${summarization_models[@]}"; do
-  #                python dataset/$TASK/create_db.py --retriever "$retriever" --summarization-model "$model" $search_type $TEMPORAL_FLAG
+  #                python "$SCRIPT_PATH" --retriever "$retriever" --summarization-model "$model" $search_type $TEMPORAL_FLAG
   #            done
           done
           ;;
@@ -73,7 +74,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
               echo "Retriever: $retriever"
               echo "========================================================================"
 
-              python dataset/$TASK/create_db.py \
+              python "$SCRIPT_PATH" \
                 --mode "relations" \
                 --retriever "$retriever"\
                 --search-type "hybrid" \
@@ -83,7 +84,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                 $TEMPORAL_FLAG \
                 --query-mode "relations_labeled"
 
-              python dataset/$TASK/create_db.py \
+              python "$SCRIPT_PATH" \
                     --mode "relations" \
                     --retriever "$retriever"\
                     --search-type "similarity" \
@@ -91,7 +92,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                     --query-mode "relations_labeled"
 
 
-              python dataset/$TASK/create_db.py \
+              python "$SCRIPT_PATH" \
                 --mode "relations" \
                 --retriever "$retriever"\
                 --search-type "hybrid" \
@@ -101,7 +102,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                 $TEMPORAL_FLAG \
                 --query-mode "fallacy_relations"
 
-              python dataset/$TASK/create_db.py \
+              python "$SCRIPT_PATH" \
                     --mode "relations" \
                     --retriever "$retriever"\
                     --search-type "similarity" \
@@ -109,7 +110,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                     --query-mode "fallacy_relations"
 
   #            for model in "${summarization_models[@]}"; do
-  #                python dataset/$TASK/create_db.py --mode relations --retriever "$retriever" \
+  #                python "$SCRIPT_PATH" --mode relations --retriever "$retriever" \
   #                --query-mode "relations_labeled" \
   #                --search-type "hybrid" \
   #                --rerank \
@@ -134,7 +135,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
               echo "Retriever: $retriever"
               echo "========================================================================"
 
-              python dataset/$TASK/create_db.py --mode sentence --retriever "$retriever"\
+              python "$SCRIPT_PATH" --mode sentence --retriever "$retriever"\
                 --search-type "hybrid" \
                 --rerank \
                 --fetch-k 30 \
@@ -142,7 +143,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
                 $TEMPORAL_FLAG
 
   #            for model in "${summarization_models[@]}"; do
-  #                python dataset/$TASK/create_db.py --mode sentence --retriever "$retriever" \
+  #                python "$SCRIPT_PATH" --mode sentence --retriever "$retriever" \
   #                --search-type "hybrid" \
   #                --rerank \
   #                --fetch-k 30 \

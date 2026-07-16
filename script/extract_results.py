@@ -1,17 +1,18 @@
 """
 extract_results.py
 ------------------
-Scans the output/ directory. For every top-level folder (one per RAG
-configuration), reads all predict_results.json files found under
-  output/<config>/<model>/<run>/predict_results.json
+Scans the output/one-run/ directory. For every top-level folder (one per
+dataset-task combination, e.g. elecdeb60to20-detection), reads all
+predict_results.json files found under
+  output/one-run/<dataset-task>/<config>/<model>/<run>/predict_results.json
 and writes a single CSV file:
-  output/<config>/results.csv
+  output/one-run/<dataset-task>/<config>/results.csv
 
 Columns: temporal, retriever, search, rerank, query, summarizer,
          model, configuration, predict_f1_macro, predict_accuracy
 
 The config folder name mirrors the layout produced by
-``dataset/detection/create_db.py``:
+``datasets/elecdeb60to20-dataset/detection/create_db.py``:
   detection-temporal=<bool>-retriever=<r|false>[-search=<s>-rerank=<rr|false>]
            [-query=<q>]-summarizer=<sum|false>
 The ``-search``/``-rerank`` segments are present only when a retriever is set,
@@ -31,7 +32,7 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-ROOT_OUTPUT_DIR = os.path.join(rootutils.find_root(search_from=__file__, indicator=".project-root"), "output/one_run")
+ROOT_OUTPUT_DIR = os.path.join(rootutils.find_root(search_from=__file__, indicator=".project-root"), "output/one-run")
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
 AGGREGATE_FILE = "all_results.csv"

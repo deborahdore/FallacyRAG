@@ -26,6 +26,7 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
+data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
 task=detection
 DATASETS=(
 temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
@@ -84,9 +85,9 @@ EPOCHS=(3 5)
 FAILED_LOG="logs/failed_runs_${task}.log"
 
 for dataset in "${DATASETS[@]}"; do
-  TRAIN_FILE="dataset/$task/$dataset/train.csv"
-  VAL_FILE="dataset/$task/$dataset/dev.csv"
-  TEST_FILE="dataset/$task/$dataset/test.csv"
+  TRAIN_FILE="datasets/$data-dataset/$task/$dataset/train.csv"
+  VAL_FILE="datasets/$data-dataset/$task/$dataset/dev.csv"
+  TEST_FILE="datasets/$data-dataset/$task/$dataset/test.csv"
 
   for model in "${MODELS[@]}"; do
     for batch in "${BATCH_SIZES[@]}"; do
@@ -95,7 +96,7 @@ for dataset in "${DATASETS[@]}"; do
           MODEL_NAME=$(basename "$model")
           CONF_ID="bs${batch}_lr${lr}_ep${epoch}"
 
-          OUTPUT_DIR="output/$task/$dataset/${MODEL_NAME}/${CONF_ID}"
+          OUTPUT_DIR="output/one-run/$data-$task/$dataset/${MODEL_NAME}/${CONF_ID}"
           mkdir -p "$OUTPUT_DIR"
 
           echo "=== Running $MODEL_NAME | $CONF_ID ==="

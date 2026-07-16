@@ -125,15 +125,15 @@ class DataTrainingArguments:
         metadata={"help": "Configuration name for the dataset."},
     )
     train_file: Optional[str] = field(
-        default="./dataset/detection/train.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/train.csv",
         metadata={"help": "Training data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     validation_file: Optional[str] = field(
-        default="./dataset/detection/dev.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/dev.csv",
         metadata={"help": "Validation data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )
     test_file: Optional[str] = field(
-        default="./dataset/detection/test.csv",
+        default="./datasets/elecdeb60to20-dataset/classification/test.csv",
         metadata={
             "help": "Test / prediction data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
     )

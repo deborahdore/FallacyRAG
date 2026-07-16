@@ -32,7 +32,7 @@ Usage:
 
 Example:
     python src/utils/generate_best_hparam_script.py \
-        output/detection/temporal=false-retriever=false-summarizer=false
+        output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false
 """
 
 import argparse
@@ -199,9 +199,9 @@ dataset="{dataset}"
 
 export WANDB_PROJECT="fallacy_$task"
 
-TRAIN_FILE="dataset/$task/$dataset/train.csv"
-VAL_FILE="dataset/$task/$dataset/dev.csv"
-TEST_FILE="dataset/$task/$dataset/test.csv"
+TRAIN_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/train.csv"
+VAL_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/dev.csv"
+TEST_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/test.csv"
 
 SEEDS=({seeds_str})
 
@@ -225,7 +225,7 @@ for SEED in "${{SEEDS[@]}}"; do
     MODEL_NAME=$(basename "$model")
     CONF_ID="bs${{batch}}_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
 
-    OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+    OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
     mkdir -p "$OUTPUT_DIR"
 
     echo "=== Running $MODEL_NAME | $CONF_ID ==="
@@ -370,9 +370,9 @@ dataset="{dataset}"
 
 export WANDB_PROJECT="fallacy_$task"
 
-TRAIN_FILE="dataset/$task/$dataset/train.csv"
-VAL_FILE="dataset/$task/$dataset/dev.csv"
-TEST_FILE="dataset/$task/$dataset/test.csv"
+TRAIN_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/train.csv"
+VAL_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/dev.csv"
+TEST_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/test.csv"
 
 N_GPUS={n_gpus}
 GRAD_ACC={grad_acc}
@@ -403,7 +403,7 @@ for SEED in "${{SEEDS[@]}}"; do
 
     if [[ "$mode" == "fine_tune" ]]; then
       CONF_ID="mode-fine_tune_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
-      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
       mkdir -p "$OUTPUT_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -453,7 +453,7 @@ for SEED in "${{SEEDS[@]}}"; do
 
     else
       CONF_ID="mode-${{mode}}_seed${{SEED}}"
-      OUTPUT_DIR="output_5runs/$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
       mkdir -p "$OUTPUT_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
@@ -504,7 +504,7 @@ echo "Best-hyperparameter multi-seed LLM sweep complete. Failed runs (if any) lo
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("output_folder", help="e.g. output/detection/temporal=false-retriever=false-summarizer=false")
+    parser.add_argument("output_folder", help="e.g. output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false")
     parser.add_argument("--template", default="script/03-fallacy_no_rag.sh", help="Encoder template sbatch script.")
     parser.add_argument("--llm-template", default="script/03-fallacy_no_rag_llm.sh", help="LLM template sbatch script.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[14, 42, 55, 89, 3], help="Seeds to run each best config with.")

@@ -583,8 +583,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--persist-directory", default="./chromadb",
                         help="Path to the Chroma vector store directory (default: ./chromadb).")
-    parser.add_argument("--dataset-dir", default="reddit-dataset",
-                        help="Directory holding the input CSVs (default: reddit-dataset).")
+    parser.add_argument("--dataset-dir", default="datasets/reddit-dataset",
+                        help="Directory holding the input CSVs (default: datasets/reddit-dataset).")
     parser.add_argument("--chunk-size", type=int, default=1000,
                         help="BM25 text splitter chunk size in characters (default: 1000).")
     parser.add_argument("--chunk-overlap", type=int, default=200,
@@ -613,7 +613,7 @@ if __name__ == "__main__":
         parser.error("--retriever bm25 only supports --search-type bm25.")
 
     # Encode the run configuration into the output directory name.
-    path = str(Path(args.dataset_dir) / "reddit-detection" / "temporal=false")
+    path = str(Path(args.dataset_dir) / "detection" / "temporal=false")
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
         path += f"-search={args.search_type}"

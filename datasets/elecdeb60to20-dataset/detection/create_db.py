@@ -845,8 +845,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--persist-directory", default="./chromadb",
                         help="Path to the Chroma vector store directory (default: ./chromadb).")
-    parser.add_argument("--dataset-dir", default="dataset",
-                        help="Directory holding the input CSVs (default: dataset).")
+    parser.add_argument("--dataset-dir", default="datasets/elecdeb60to20-dataset",
+                        help="Directory holding the input CSVs (default: datasets/elecdeb60to20-dataset).")
     parser.add_argument("--chunk-size", type=int, default=1000,
                         help="BM25 text splitter chunk size in characters (default: 1000).")
     parser.add_argument("--chunk-overlap", type=int, default=200,
@@ -881,7 +881,7 @@ if __name__ == "__main__":
         parser.error("--mode relations requires a --retriever.")
 
     # Encode the run configuration into the output directory name.
-    path = str(Path("dataset") / "detection" / f"temporal={str(args.temporal_rag)}")
+    path = str(Path(args.dataset_dir) / "detection" / f"temporal={str(args.temporal_rag)}")
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
         path += f"-search={args.search_type}"
