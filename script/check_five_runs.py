@@ -124,7 +124,7 @@ def check(base: Path):
 
 if __name__ == "__main__":
     dataset = "elecdeb60to20"
-    task = "detection"
+    task = "classification"
     default = root / "output" / "five-runs" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default
     sys.exit(check(base))
