@@ -43,6 +43,14 @@ Fine-tuning details
   - TRL SFTTrainer handles response-only loss masking automatically
   - Saves adapter weights to --output_dir; merges + saves full model
     if --merge_adapter is set
+
+Dataset-aware prompts
+---------------------
+  The system prompt is automatically selected based on the dataset used:
+  - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
+  - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
+  - unknown: Uses a generic prompt
+  The dataset is automatically identified from the training file path.
 """
 
 from __future__ import annotations
@@ -57,11 +65,13 @@ from typing import Optional
 import datasets
 import rootutils
 from datasets import load_dataset
-from tqdm.auto import tqdm
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
+from tqdm.auto import tqdm
 from transformers import HfArgumentParser, TrainingArguments, set_seed
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
+
+from src.utils.dataset_prompts import get_detection_prompt
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -92,13 +102,8 @@ LLM_TO_LABEL: dict[str, str] = {
     LLM_NO: LABEL_NO_FALLACY,
 }
 
-SYSTEM_PROMPT = (
-    "You are an expert in argumentation theory and political discourse analysis. "
-    "Your task is to determine whether a given sentence from a political debate contains a fallacy. "
-    "A fallacy is a deceptive argumentative move that appears valid but violates principles of correct reasoning. "
-    'Answer with exactly one word: "Yes" if the sentence contains a fallacy, '
-    'or "No" if it does not.'
-)
+# SYSTEM_PROMPT is now dynamically set during main() based on the dataset
+SYSTEM_PROMPT = None  # Will be set in main()
 
 
 # ── Dataclasses ────────────────────────────────────────────────────────────────
@@ -874,6 +879,8 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
 
 def main():
     """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
+    global SYSTEM_PROMPT
+
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, LLMExperimentArguments, TrainingArguments)
     )
@@ -883,6 +890,9 @@ def main():
         )
     else:
         model_args, data_args, llm_args, training_args = parser.parse_args_into_dataclasses()
+
+    # ── Dynamically set the system prompt based on the dataset ──────────────────
+    SYSTEM_PROMPT = get_detection_prompt(data_args.train_file)
 
     logger.setLevel(logging.INFO)
     datasets.utils.logging.set_verbosity(logging.INFO)

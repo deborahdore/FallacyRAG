@@ -20,11 +20,12 @@ import os
 import random
 import sys
 from dataclasses import dataclass, field
-from typing import Optional
+from typing import Optional, Counter
 
 import datasets
 import numpy as np
 import rootutils
+import torch
 import transformers
 from datasets import load_dataset
 from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
@@ -438,6 +439,22 @@ def main():
     # ── Data collator ─────────────────────────────────────────────────────
     data_collator = DataCollatorWithPadding(tokenizer, pad_to_multiple_of=8)
 
+    # ── Class weights (from train set) ────────────────────────────────────
+    class_weights = None
+    if training_args.do_train and train_dataset is not None:
+        label_counts = Counter(train_dataset[label_column_name])
+        total = sum(label_counts.values())
+        weights = [total / (num_labels * label_counts[i]) for i in range(num_labels)]
+        class_weights = torch.tensor(weights, dtype=torch.float)
+        logger.info(f"Class weights: { {label_list[i]: round(w, 4) for i, w in enumerate(weights)} }")
+
+    # ── Loss function ─────────────────────────────────────────────────────
+    def weighted_loss_fn(outputs, labels, num_items_in_batch=None):
+        """Class-weighted cross-entropy loss to offset label imbalance."""
+        logits = outputs.logits.float()
+        weight = class_weights.to(device=logits.device, dtype=logits.dtype) if class_weights is not None else None
+        return torch.nn.CrossEntropyLoss(weight=weight)(logits, labels)
+
     # ── Trainer ───────────────────────────────────────────────────────────
     trainer = Trainer(
         model=model,
@@ -447,6 +464,7 @@ def main():
         processing_class=tokenizer,
         data_collator=data_collator,
         compute_metrics=make_compute_metrics(label_list),
+        compute_loss_func=weighted_loss_fn
     )
 
     # ── Training ──────────────────────────────────────────────────────────

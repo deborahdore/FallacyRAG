@@ -91,9 +91,8 @@ simultaneously.
 
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/detection/create_db.py`
 
-The same `create_db.py` script (with different defaults) also exists for the other datasets:
-[`datasets/reddit-dataset/detection/create_db.py`](../../datasets/reddit-dataset/detection/create_db.py) and
-[`datasets/falcon-dataset/detection/create_db.py`](../../datasets/falcon-dataset/detection/create_db.py).
+The same `create_db.py` script (with different defaults) also exists for the other dataset:
+[`datasets/reddit-dataset/detection/create_db.py`](../../datasets/reddit-dataset/detection/create_db.py).
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, balances and
 re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes them into the `context`

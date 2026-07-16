@@ -59,6 +59,15 @@ Fine-tuning details
   - TRL SFTTrainer handles response-only loss masking automatically
   - Saves adapter weights to --output_dir; merges + saves full model
     if --merge_adapter is set
+
+Dataset-aware prompts
+---------------------
+  The system prompt is automatically selected based on the dataset used:
+  - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
+  - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
+  - falcon: References "FALCON: A multi-label graph-based dataset for fallacy classification in the COVID-19 infodemic"
+  - unknown: Uses a generic prompt
+  The dataset is automatically identified from the training file path.
 """
 
 from __future__ import annotations
@@ -74,7 +83,6 @@ from typing import Optional
 import datasets
 import rootutils
 from datasets import load_dataset
-from tqdm.auto import tqdm
 from sklearn.metrics import (
     accuracy_score,
     f1_score,
@@ -83,9 +91,12 @@ from sklearn.metrics import (
     recall_score,
 )
 from sklearn.preprocessing import MultiLabelBinarizer
+from tqdm.auto import tqdm
 from transformers import HfArgumentParser, TrainingArguments, set_seed
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
+
+from src.utils.dataset_prompts import get_classification_prompt, get_label_config
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -95,32 +106,29 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-# ── Label constants ────────────────────────────────────────────────────────────
+# ── Label constants (dataset-aware) ─────────────────────────────────────────────
+#
+# The label inventory depends on the dataset (elecdeb60to20, reddit, falcon). The
+# globals below are populated at runtime in main() from
+# src.utils.dataset_prompts.get_label_config(), so switching datasets automatically
+# switches the canonical labels, the human-readable names, the alias map used to
+# parse LLM responses, and the label menu shown in the prompt.
+#
+#   ALL_LABELS      : canonical labels (CSV "fallacy_label" values), also the columns
+#                     of the indicator matrix used for metrics.
+#   LABEL_TO_LLM    : canonical -> human-readable name the LLM produces.
+#   ALIAS_TO_LABEL  : normalized alias -> canonical label (for response parsing).
+#   _LABEL_MENU     : comma-separated readable names, injected into the prompt.
+#
+# A "No Fallacy" / "NoFallacy" answer or gold cell is represented as the empty label
+# set (see parse_gold_labels / parse_llm_response), so it is not one of ALL_LABELS.
+ALL_LABELS: list[str] = []
+LABEL_TO_LLM: dict[str, str] = {}
+ALIAS_TO_LABEL: dict[str, str] = {}
+_LABEL_MENU: str = ""
 
-# Canonical dataset labels (exactly as they appear in the CSV "fallacy_label" column).
-# These are also the columns of the multi-label indicator matrix used for metrics.
-ALL_LABELS = [
-    "AdHominem",
-    "AppealtoAuthority",
-    "AppealtoEmotion",
-    "FalseCause",
-    "Slipperyslope",
-    "Slogans",
-]
-
-# Human-readable names the LLM is asked to produce (and that few-shot / SFT targets use).
-LABEL_TO_LLM: dict[str, str] = {
-    "AdHominem": "Ad Hominem",
-    "AppealtoAuthority": "Appeal to Authority",
-    "AppealtoEmotion": "Appeal to Emotion",
-    "FalseCause": "False Cause",
-    "Slipperyslope": "Slippery Slope",
-    "Slogans": "Slogan",
-}
-
-# Fallback token used only when response parsing fails to find any known fallacy
-# name (should not happen in practice — the task never has an empty label set,
-# and the model is never instructed to answer "None").
+# Fallback token written to the predictions file when the label set is empty
+# (i.e. "No Fallacy"). Valid for the reddit split; never occurs for elecdeb/falcon.
 LLM_NONE = "None"
 
 
@@ -129,47 +137,18 @@ def _normalize(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", text.lower())
 
 
-# Aliases → canonical label. Built from the canonical name, the human-readable name,
-# plus a few hand-written variants the models tend to emit. All keys are normalized.
-def _build_alias_map() -> dict[str, str]:
-    aliases: dict[str, str] = {}
-
-    def add(canon: str, *variants: str):
-        for v in variants:
-            aliases[_normalize(v)] = canon
-
-    add("AdHominem", "AdHominem", "Ad Hominem", "ad-hominem", "personal attack")
-    add("AppealtoAuthority", "AppealtoAuthority", "Appeal to Authority",
-        "appeal-to-authority", "authority")
-    add("AppealtoEmotion", "AppealtoEmotion", "Appeal to Emotion",
-        "appeal-to-emotion", "emotion", "emotional appeal")
-    add("FalseCause", "FalseCause", "False Cause", "false-cause",
-        "post hoc", "correlation causation")
-    add("Slipperyslope", "Slipperyslope", "Slippery Slope", "slippery-slope",
-        "slippery", "slope")
-    add("Slogans", "Slogans", "Slogan", "slogans")
-    return aliases
+def _apply_label_config(train_file) -> None:
+    """Populate the dataset-aware label globals from the training file path."""
+    global ALL_LABELS, LABEL_TO_LLM, ALIAS_TO_LABEL, _LABEL_MENU
+    cfg = get_label_config(train_file)
+    ALL_LABELS = cfg["labels"]
+    LABEL_TO_LLM = cfg["label_to_llm"]
+    ALIAS_TO_LABEL = cfg["alias_to_label"]
+    _LABEL_MENU = cfg["label_menu"]
 
 
-ALIAS_TO_LABEL = _build_alias_map()
-
-SYSTEM_PROMPT = (
-    "You are an expert in argumentation theory and political discourse analysis. "
-    "Your task is to identify which fallacy types, if any, a given sentence from a "
-    "political debate contains. A fallacy is a deceptive argumentative move that "
-    "appears valid but violates principles of correct reasoning. "
-    "Consider only these six fallacy types:\n"
-    "- Ad Hominem: attacking the opponent personally instead of their argument.\n"
-    "- Appeal to Authority: relying on an authority figure or consensus without sufficient evidence.\n"
-    "- Appeal to Emotion: using emotionally charged language to manipulate rather than reason.\n"
-    "- False Cause: assuming a causal link between events merely because they co-occur.\n"
-    "- Slippery Slope: claiming a small first step inevitably leads to extreme consequences.\n"
-    "- Slogan: a short, striking phrase meant to provoke agreement rather than argue.\n"
-    "Every sentence contains exactly one of these six fallacy types — there is always "
-    "a fallacy present, so \"None\" is never a valid answer. "
-    "Answer with exactly one fallacy type, using exactly one of those six names, and "
-    "nothing else."
-)
+# SYSTEM_PROMPT is dynamically set during main() based on the dataset
+SYSTEM_PROMPT = None  # Will be set in main()
 
 
 # ── Dataclasses ────────────────────────────────────────────────────────────────
@@ -445,8 +424,7 @@ def labels_to_llm_target(labels: list[str]) -> str:
 
 
 # ── Prompt helpers ─────────────────────────────────────────────────────────────
-
-_LABEL_MENU = ", ".join(LABEL_TO_LLM[lab] for lab in ALL_LABELS)
+# NOTE: _LABEL_MENU is populated at runtime in main() via _apply_label_config().
 
 
 def build_user_message(
@@ -1034,6 +1012,8 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
 
 def main():
     """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
+    global SYSTEM_PROMPT
+
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, LLMExperimentArguments, TrainingArguments)
     )
@@ -1043,6 +1023,10 @@ def main():
         )
     else:
         model_args, data_args, llm_args, training_args = parser.parse_args_into_dataclasses()
+
+    # ── Dynamically set the system prompt AND label space based on the dataset ──
+    SYSTEM_PROMPT = get_classification_prompt(data_args.train_file)
+    _apply_label_config(data_args.train_file)
 
     logger.setLevel(logging.INFO)
     datasets.utils.logging.set_verbosity(logging.INFO)
