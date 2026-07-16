@@ -1,37 +1,29 @@
-"""Build comment-level (CL) fallacy-classification datasets from the falcon dataset,
-optionally enriched with RAG context.
+"""Build sentence-level multi-label fallacy-classification datasets for FALCON, optionally enriched with RAG context.
 
-Like the falcon detection dataset, each row of ``df_{split}_with_relations.csv``
-is already one comment (``text``) with a one-hot set of fallacy-type columns
-(``Ad Hominem``, ``Appeal to Fear``, ``Appeal to Ridicule``, ``False Dilemma``,
-``Hasty Generalization``, ``Loaded Language``, ``None of the above``).
-Classification (unlike detection) only classifies comments that are already
-known to contain a fallacy: rows where ``None of the above == 1`` are dropped,
-and every remaining row's ``fallacy_label`` is set to whichever fallacy-type
-column is ``1`` for that row. There is no character-level span to reduce and
-no re-splitting to do — the authors' original train/val/test partition is
-kept as-is (minus the dropped non-fallacy rows).
+Unlike the ELECDEB/Reddit builders, the FALCON corpus is already delivered at the
+sentence level with **multi-label** annotations: every row in
+``df_{train,val,test}_with_relations.csv`` is one sentence carrying a binary column
+per fallacy class (plus ``None of the above``) and the row's argumentative relations.
+There is therefore no per-character BIO decoding, no sentence-splitting, and no
+re-balancing/re-splitting here — the official splits are preserved as-is.
 
 Two dataset-construction modes (``--mode``) share one retrieval backend:
 
-* ``comment`` (default) — the retrieval query is the comment (``text``) itself.
-* ``relations`` — the retrieval query is built from ``text`` plus the row's
-  own ``relations`` (quoted/replied-to texts) and ``relations_type``
-  (``quoted`` / ``replied_to``), controlled by ``--query-mode``:
-  ``fallacy_relations`` concatenates ``text`` with the related texts;
-  ``relations_labeled`` builds one clause per relation — "<relation>
-  replies to/quotes <text>" — using ``relations_type`` to pick the verb.
-  Unlike the debate-transcript dataset, relations don't need to be looked up
-  from a separate file or matched by substring: they already live on the
-  same row as the comment.
+* ``sentence`` (default) — enrich every sentence using the sentence itself as the
+  retrieval query. With no ``--retriever`` it is the plain no-RAG pipeline; with a
+  retriever it is enriched.
+* ``relations`` — same rows/labels; the only difference is the retrieval query,
+  controlled by ``--query-mode`` and built from each row's ``relations`` /
+  ``relations_type`` cells: ``fallacy_relations`` concatenates the sentence with the
+  text of its related components; ``relations_labeled`` builds one clause per relation
+  — "<sentence> replied to/quoted <relation>" — using ``relations_type`` to pick the
+  verb. Rows with no relations fall back to the sentence.
 
 Retrieval backend (shared by both modes):
 * Dense vector search over a persisted Chroma store (``similarity`` / ``mmr`` / ``threshold``).
 * Sparse BM25 via bm25s.
 * ``hybrid`` — dense + BM25 fused with Reciprocal Rank Fusion.
-* Optional cross-encoder reranking, per-passage summarization, and temporal (year)
-  filtering (the falcon dataset carries a ``year`` per row, so ``--temporal-rag``
-  is supported here, unlike the reddit dataset).
+* Optional cross-encoder reranking, per-passage summarization, and temporal (year) filtering.
 """
 
 from __future__ import annotations
@@ -43,7 +35,11 @@ import os
 import sys
 from pathlib import Path
 
+import nltk
 import numpy as np
+
+nltk.download("punkt_tab", quiet=True)
+
 import pandas as pd
 import rootutils
 import torch
@@ -132,38 +128,41 @@ SEARCH_TYPES = {
 }
 
 DATASET_MODES = {
-    "comment": "One row per comment ('text'), label = whichever fallacy-type column is 1 "
-               "(retrieval query = the comment itself).",
-    "relations": "Same rows/labels as 'comment'; the only difference is the retrieval "
-                 "query = text + its own relations/relations_type columns.",
+    "sentence": "Enrich the official sentence-level rows of df_{train,val,test}_with_relations.csv "
+                "(retrieval query = the sentence).",
+    "relations": "Same rows/labels; the only difference is the retrieval query = sentence + the text "
+                 "of its related components (from the relations / relations_type columns).",
 }
 
-# Maps a relations_type value to the verb phrase used in the 'relations_labeled' query.
-LABEL_VERBS = {"replied_to": "replies to", "quoted": "quotes"}
-
-QUERY_MODES = {
-    "fallacy_relations": "Concatenate the comment text with the text of its related comments (default).",
-    "relations_labeled": "Build labeled clauses: '<relation> replies to/quotes <text>' per relation, "
-                         "using relations_type to pick the verb.",
-}
-
-# Maps the input split name to the actual CSV filename shipped with the falcon dataset.
-SPLIT_FILENAMES = {
-    "train": "df_train_with_relations.csv",
-    "dev": "df_val_with_relations.csv",
-    "test": "df_test_with_relations.csv",
-}
-
-# One-hot fallacy-type columns in the falcon dataset (excludes "None of the above",
-# which marks a comment as not containing any of these fallacies).
-FALLACY_COLUMNS = [
+# The FALCON multi-label columns (order preserved for reporting).
+FALCON_LABEL_COLUMNS = [
     "Ad Hominem",
     "Appeal to Fear",
     "Appeal to Ridicule",
     "False Dilemma",
     "Hasty Generalization",
     "Loaded Language",
+    "None of the above",
 ]
+# The actual fallacy classes (everything except the negative "None of the above" class).
+FALCON_FALLACY_COLUMNS = [c for c in FALCON_LABEL_COLUMNS if c != "None of the above"]
+
+# Maps a split name to its source file. FALCON's validation split is written out as "dev"
+# to match the downstream classifier's default train/dev/test file names.
+FALCON_SPLIT_FILES = {
+    "train": "df_train_with_relations.csv",
+    "dev": "df_val_with_relations.csv",
+    "test": "df_test_with_relations.csv",
+}
+
+# Maps a relations_type value to the verb phrase used in the 'relations_labeled' query.
+RELATION_VERBS = {"replied_to": "replied to", "quoted": "quoted"}
+
+QUERY_MODES = {
+    "fallacy_relations": "Concatenate the sentence with the text of its related components (default).",
+    "relations_labeled": "Build labeled clauses: '<sentence> replied to/quoted <relation>' per relation, "
+                         "using relations_type to pick the verb.",
+}
 
 
 class FastBM25Retriever:
@@ -444,7 +443,7 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 256) -> l
 
 
 def _parse_list_cell(raw) -> list[str]:
-    """Parse a stringified-list cell (``relations`` or ``relations_type``) into a clean list."""
+    """Parse a stringified-list cell (``relations`` / ``relations_type``) into a clean list of strings."""
     if raw is None:
         return []
     s = str(raw).strip()
@@ -459,22 +458,24 @@ def _parse_list_cell(raw) -> list[str]:
     return [str(parsed).strip()]
 
 
-def build_retrieval_query(text: str, relations, relations_type, mode: str) -> tuple[str, bool]:
-    """Build the relations-augmented retrieval query for one row; return (query, has_relations)."""
-    fallacy_str = normalize_text(str(text)).rstrip(". ")
-    relation_parts = _parse_list_cell(relations)
-    label_parts = _parse_list_cell(relations_type)
+def build_retrieval_query(sentence, relations_raw, relations_type_raw, mode: str) -> tuple[str, bool]:
+    """Build the relations-augmented retrieval query for one FALCON row; return (query, has_relations)."""
+    fallacy_str = str(sentence).strip()
+    relation_parts = _parse_list_cell(relations_raw)
+    type_parts = _parse_list_cell(relations_type_raw)
     has_relations = len(relation_parts) > 0
 
     if mode == "relations_labeled":
+        base = fallacy_str.rstrip(". ")
         if not has_relations:
-            query = fallacy_str  # no relation: retrieve with the comment alone
+            query = fallacy_str  # no relation: retrieve with the sentence alone
         else:
             clauses = []
             for i, relation in enumerate(relation_parts):
-                label = label_parts[i] if i < len(label_parts) else "replied_to"
-                verb = LABEL_VERBS.get(label.strip().lower(), label.strip().lower())
-                clause = f"{relation.rstrip('. ')} {verb} {fallacy_str}".strip()
+                rtype = type_parts[i] if i < len(type_parts) else "replied_to"
+                key = str(rtype).strip().lower()
+                verb = RELATION_VERBS.get(key, key.replace("_", " "))
+                clause = f"{base} {verb} {relation.rstrip('. ')}".strip()
                 if clause:
                     clauses.append(clause)
             query = ", ".join(clauses)
@@ -482,49 +483,43 @@ def build_retrieval_query(text: str, relations, relations_type, mode: str) -> tu
             query += "."
         return normalize_text(query), has_relations
 
-    # fallacy_relations (default): concatenate the comment with its related texts.
-    parts = [fallacy_str] + relation_parts if has_relations else [fallacy_str]
+    if not has_relations:
+        parts = [fallacy_str]  # no relation: retrieve with the sentence alone
+    elif mode == "fallacy_only":
+        parts = [fallacy_str]
+    elif mode == "relations_only":
+        parts = relation_parts
+    else:  # fallacy_relations (default)
+        parts = [fallacy_str] + relation_parts
+
+    # Join with sentence-final punctuation so the embedding sees discrete spans.
     query = ". ".join(p.rstrip(". ") for p in parts if p)
     if query and not query.endswith("."):
         query += "."
     return normalize_text(query), has_relations
 
 
-def _build_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
-    """Load the falcon dataset's own train/val/test partition, keeping only fallacy rows.
-
-    Each row is one comment (``text``). Classification only classifies comments that are
-    already known to contain a fallacy, so rows where ``None of the above == 1`` are
-    dropped; every remaining row's ``fallacy_label`` is set to whichever of
-    ``FALLACY_COLUMNS`` is ``1`` for that row. No sentence-splitting or re-splitting is
-    needed — the authors' split is kept intact (minus the dropped non-fallacy rows)."""
+def _load_falcon_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
+    """Load the official FALCON sentence-level multi-label splits (no re-splitting or balancing)."""
     splits: dict[str, pd.DataFrame] = {}
-    for split, filename in SPLIT_FILENAMES.items():
-        df = pd.read_csv(os.path.join(dataset_dir, filename))
-
-        # Drop comments that aren't a fallacy at all.
-        df = df[df["None of the above"] != 1].reset_index(drop=True)
-
-        # Defensive check: every remaining row should have exactly one fallacy-type
-        # column set to 1. Skip (and warn about) any row that doesn't.
-        row_sums = df[FALLACY_COLUMNS].sum(axis=1)
-        malformed = row_sums != 1
-        if malformed.any():
-            logger.warning(
-                f"{filename}: {int(malformed.sum())} rows have {{0, >1}} fallacy-type "
-                "columns set to 1 despite 'None of the above' == 0 — skipping them."
+    for name, fname in FALCON_SPLIT_FILES.items():
+        path = os.path.join(dataset_dir, fname)
+        if not os.path.exists(path):
+            raise FileNotFoundError(
+                f"Expected FALCON split file not found: {path!r}. "
+                f"Each split is read from df_{{train,val,test}}_with_relations.csv."
             )
-            df = df[~malformed].reset_index(drop=True)
+        df = pd.read_csv(path)
 
-        fallacy_label = df[FALLACY_COLUMNS].idxmax(axis=1)
+        missing = [c for c in ("sentence", "speech_turn", "year") if c not in df.columns]
+        if missing:
+            raise ValueError(f"{path!r} is missing required columns: {missing}")
 
-        split_df = df.copy()
-        split_df["fallacy_label"] = fallacy_label
-        split_df = split_df.replace({"nan": None})
-        split_df = split_df.dropna(subset=["text", "fallacy_label"])
-        split_df = split_df.drop_duplicates().reset_index(drop=True)
-        splits[split] = split_df
-
+        # The rows are already sentence-level; only drop rows we can't enrich (no text / no year).
+        df = df.dropna(subset=["sentence", "speech_turn", "year"]).reset_index(drop=True)
+        df["year"] = df["year"].astype(int)
+        splits[name] = df
+        logger.info(f"Loaded {name} split: {len(df):,} sentences from {os.path.basename(path)}")
     return splits
 
 
@@ -605,32 +600,32 @@ def _run_pipeline(splits: dict[str, pd.DataFrame], query_fn, *, retriever, path,
     splits["test"].to_csv(f"{path}/test.csv", index=False)
     splits["dev"].to_csv(f"{path}/dev.csv", index=False)
 
-    _print_dataset_statistics(splits["train"], splits["test"], splits["dev"])
+    _print_dataset_statistics(splits)
 
 
-def build_comment_mode(persist_directory_path: str,
-                       retriever: str | None,
-                       search_type: str,
-                       chunk_size: int,
-                       chunk_overlap: int,
-                       top_k: int,
-                       fetch_k: int,
-                       lambda_mult: float,
-                       score_threshold: float,
-                       summarization_model: str | None,
-                       temporal_rag: bool,
-                       rerank: bool,
-                       reranker_model: str,
-                       rrf_k: int,
-                       dense_weight: float,
-                       bm25_weight: float,
-                       dataset_dir: str,
-                       path: str) -> None:
-    """Run the 'comment' pipeline: the retrieval query is the comment itself."""
-    splits = _build_splits(dataset_dir)
+def build_sentence_mode(persist_directory_path: str,
+                        retriever: str | None,
+                        search_type: str,
+                        chunk_size: int,
+                        chunk_overlap: int,
+                        top_k: int,
+                        fetch_k: int,
+                        lambda_mult: float,
+                        score_threshold: float,
+                        summarization_model: str | None,
+                        temporal_rag: bool,
+                        rerank: bool,
+                        reranker_model: str,
+                        rrf_k: int,
+                        dense_weight: float,
+                        bm25_weight: float,
+                        dataset_dir: str,
+                        path: str) -> None:
+    """Run the 'sentence' pipeline: the retrieval query is the sentence itself."""
+    splits = _load_falcon_splits(dataset_dir)
 
     def query_fn(row):
-        return normalize_text(str(row["text"])), None
+        return normalize_text(str(row["sentence"])), None
 
     _run_pipeline(
         splits, query_fn, retriever=retriever, path=path, record_query=False,
@@ -662,15 +657,17 @@ def build_relations_mode(persist_directory_path: str,
                          bm25_weight: float,
                          dataset_dir: str,
                          path: str) -> None:
-    """Run the 'relations' pipeline: the query is text + its own relations/relations_type."""
-    splits = _build_splits(dataset_dir)
+    """Run the 'relations' pipeline: the query is the sentence + the text of its related components."""
+    splits = _load_falcon_splits(dataset_dir)
 
     def query_fn(row):
+        # Relations live inline on each FALCON row, so no cross-file lookup is needed.
         query, has_relations = build_retrieval_query(
-            row["text"], row.get("relations"), row.get("relations_type"), query_mode
+            row["sentence"], row.get("relations"), row.get("relations_type"), query_mode
         )
+        # Empty query (should not happen since the sentence is always present): fall back to it.
         if not query:
-            return normalize_text(str(row["text"])), False
+            return normalize_text(str(row["sentence"])), False
         return query, has_relations
 
     _run_pipeline(
@@ -684,25 +681,34 @@ def build_relations_mode(persist_directory_path: str,
     )
 
 
-def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame,
-                              dev_df: pd.DataFrame) -> None:
-    """Print size and label-distribution statistics for each dataset split."""
-    splits = {"train": train_df, "dev": dev_df, "test": test_df}
-
+def _print_dataset_statistics(splits: dict[str, pd.DataFrame]) -> None:
+    """Print size and multi-label distribution statistics for each dataset split."""
     logger.info("=" * 60)
     logger.info("DATASET STATISTICS")
     logger.info("=" * 60)
 
-    for name, df in splits.items():
-        logger.info(f"\n--- {name.upper()} ({len(df):,} samples) ---")
+    for name in ("train", "dev", "test"):
+        df = splits[name]
+        n = len(df)
+        logger.info(f"\n--- {name.upper()} ({n:,} samples) ---")
 
-        logger.info("  Fallacy label distribution:")
-        fallacy_counts = df["fallacy_label"].value_counts()
-        fallacy_pct = df["fallacy_label"].value_counts(normalize=True) * 100
-        for label in fallacy_counts.index:
-            logger.info(f"    {label:<30s} {fallacy_counts[label]:>6,}  ({fallacy_pct[label]:.1f}%)")
+        logger.info("  Label distribution (multi-label — one count per class):")
+        for col in FALCON_LABEL_COLUMNS:
+            if col in df.columns:
+                count = int(df[col].sum())
+                pct = (100.0 * count / n) if n else 0.0
+                logger.info(f"    {col:<25s} {count:>6,}  ({pct:.1f}%)")
 
-    total = sum(len(df) for df in splits.values())
+        fallacy_cols = [c for c in FALCON_FALLACY_COLUMNS if c in df.columns]
+        if fallacy_cols:
+            n_per_row = df[fallacy_cols].sum(axis=1)
+            logger.info(f"  Sentences with >=1 fallacy: {int((n_per_row > 0).sum()):,}")
+            logger.info(f"  Sentences with >1 fallacy:  {int((n_per_row > 1).sum()):,}")
+
+        if "has_relations" in df.columns:
+            logger.info(f"  Sentences with retrieved relations: {int(df['has_relations'].sum()):,}")
+
+    total = sum(len(splits[n]) for n in ("train", "dev", "test"))
     logger.info(f"\nTotal samples across all splits: {total:,}")
     logger.info("=" * 60)
 
@@ -710,13 +716,12 @@ def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame,
 def _build_arg_parser() -> argparse.ArgumentParser:
     """Define and return the command-line argument parser."""
     parser = argparse.ArgumentParser(
-        description="Build comment-level (CL) fallacy-classification datasets from the falcon "
-                    "dataset, with optional (hybrid / reranked) RAG context. Use --mode to "
-                    "pick the dataset-construction path."
+        description="Build sentence-level multi-label FALCON fallacy-classification datasets with "
+                    "optional (hybrid / reranked) RAG context. Use --mode to pick the retrieval query."
     )
     parser.add_argument(
         "--mode",
-        default="comment",
+        default="sentence",
         choices=list(DATASET_MODES),
         help="; ".join(f"{k}: {v}" for k, v in DATASET_MODES.items()),
     )
@@ -724,7 +729,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
         "--retriever",
         default=None,
         choices=list(EMBEDDING_MODELS),
-        help="Embedding model for the dense leg. In 'comment' mode, omit it for a "
+        help="Embedding model for the dense leg. In 'sentence' mode, omit it for a "
              "no-RAG dataset. Required for hybrid/dense search and for 'relations' mode.",
     )
     parser.add_argument(
@@ -765,7 +770,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--persist-directory", default="./chromadb",
                         help="Path to the Chroma vector store directory (default: ./chromadb).")
     parser.add_argument("--dataset-dir", default="datasets/falcon-dataset",
-                        help="Directory holding the input CSVs (default: datasets/falcon-dataset).")
+                        help="Directory holding the FALCON df_{train,val,test}_with_relations.csv files "
+                             "(default: datasets/falcon-dataset).")
     parser.add_argument("--chunk-size", type=int, default=1000,
                         help="BM25 text splitter chunk size in characters (default: 1000).")
     parser.add_argument("--chunk-overlap", type=int, default=200,
@@ -779,7 +785,7 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--score-threshold", type=float, default=0.5,
                         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).")
     parser.add_argument("--temporal-rag", action="store_true", default=False,
-                        help="Only retrieve knowledge base documents whose year is before the comment's year.")
+                        help="Only retrieve knowledge base documents whose year is before the sentence year.")
     return parser
 
 
@@ -816,8 +822,8 @@ if __name__ == "__main__":
     path = path.lower()
     os.makedirs(path, exist_ok=True)
 
-    if args.mode == "comment":
-        build_comment_mode(
+    if args.mode == "sentence":
+        build_sentence_mode(
             persist_directory_path=args.persist_directory,
             retriever=args.retriever,
             search_type=args.search_type,
