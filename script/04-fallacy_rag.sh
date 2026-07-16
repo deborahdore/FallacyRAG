@@ -27,55 +27,24 @@ export PYTHONHASHSEED=$SEED
 wandb disabled
 
 data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
-task=detection
 DATASETS=(
-temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false
-temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=false-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-summarizer=false
-temporal=false-retriever=false-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=true-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false
-temporal=true-retriever=bm25-search=bm25-rerank=false-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=fallacy_relations-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-query=fallacy_relations-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-query=relations_labeled-summarizer=false
-temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-summarizer=false
 )
 
+task=detection
 export WANDB_PROJECT="fallacy_$task"
 
 MODELS=(
+    "microsoft/deberta-v3-base"
     "allenai/longformer-base-4096"
+    "answerdotai/ModernBERT-base"
     "FacebookAI/roberta-base"
+    "FacebookAI/xlm-roberta-base"
     "casehold/legalbert"
+    "MARIANNE-INRIA/RooseBERT-cont-uncased"
+    "MARIANNE-INRIA/RooseBERT-cont-cased"
+    "MARIANNE-INRIA/RooseBERT-scr-uncased"
+    "MARIANNE-INRIA/RooseBERT-scr-cased"
+    "chandar-lab/NeoBERT"
 )
 
 BATCH_SIZES=(8 16)

@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:2
 #SBATCH --cpus-per-task=8
 
-#SBATCH --time=20:00:00
+#SBATCH --time=10:00:00
 #SBATCH --output=logs/llm_fallacy_rag_%j.out
 #SBATCH --error=logs/llm_fallacy_rag_%j.out
 

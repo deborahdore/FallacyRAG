@@ -1,4 +1,4 @@
 dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,ModernBERT-base,bs8_lr3e-5_ep5,0.6417623155343266,0.6417910447761194
-/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,deberta-v3-base,bs8_lr2e-5_ep5,0.6626865671641791,0.6626865671641791
-/Users/ddore/Documents/FallacyRAG/reddit-output/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,roberta-base,bs16_lr3e-5_ep3,0.7055499748869914,0.7074626865671642
+/Users/ddore/Documents/FallacyRAG/output/one-run/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,ModernBERT-base,bs8_lr3e-5_ep5,0.6417623155343266,0.6417910447761194
+/Users/ddore/Documents/FallacyRAG/output/one-run/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,deberta-v3-base,bs8_lr2e-5_ep5,0.6626865671641791,0.6626865671641791
+/Users/ddore/Documents/FallacyRAG/output/one-run/reddit-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,roberta-base,bs16_lr3e-5_ep3,0.7055499748869914,0.7074626865671642

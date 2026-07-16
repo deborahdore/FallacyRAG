@@ -1,9 +1,13 @@
 """
 generate_best_hparam_script.py
 -------------------------------
-Given an output/<task>/<dataset> folder, find every model's best
-hyperparameter configuration and emit sbatch scripts under script/ that
+Given an output/one-run/<data>-<task>/<dataset> folder, find every model's
+best hyperparameter configuration and emit sbatch scripts under script/ that
 re-run only those best configs, once per seed (default: 14, 42, 55, 89, 3).
+
+<data> is inferred from the output folder itself (elecdeb60to20, falcon, or
+reddit — anything matching datasets/<data>-dataset/) and threaded through to
+the generated script, so this works unmodified for any of the three datasets.
 
 Two families of runs are handled, each cloned from its own template:
 
@@ -27,12 +31,18 @@ Usage:
         [--template script/03-fallacy_no_rag.sh] \
         [--llm-template script/03-fallacy_no_rag_llm.sh] \
         [--seeds 14 42 55 89 3] \
-        [--output script/05-best_hparams_<task>_<dataset>.sh] \
-        [--llm-output script/05-best_hparams_llm_<task>_<dataset>.sh]
+        [--output script/05-best_hparams_<data>_<task>_<dataset>.sh] \
+        [--llm-output script/05-best_hparams_llm_<data>_<task>_<dataset>.sh]
 
-Example:
+Examples:
     python src/utils/generate_best_hparam_script.py \
         output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false
+
+    python src/utils/generate_best_hparam_script.py \
+        output/one-run/falcon-detection/temporal=false-retriever=false-summarizer=false
+
+    python src/utils/generate_best_hparam_script.py \
+        output/one-run/reddit-classification/temporal=false-retriever=false-summarizer=false
 """
 
 import argparse
@@ -54,6 +64,10 @@ RESULTS_FILE_LLM = "predict_results_metrics.json"
 CONF_RE = re.compile(r"^bs(?P<batch>\d+)_lr(?P<lr>[0-9.eE+-]+)_ep(?P<epoch>\d+)$")
 MODE_FINE_TUNE_RE = re.compile(r"^mode-fine_tune_bs\d+_lr(?P<lr>[0-9.eE+-]+)_ep(?P<epoch>\d+)$")
 MODE_SIMPLE_RE = re.compile(r"^mode-(?P<mode>zero_shot|few_shot)$")
+
+# Matches the "<data>-<task>" folder name directly under output/one-run/, e.g.
+# "elecdeb60to20-detection", "falcon-classification", "reddit-detection".
+DATA_TASK_RE = re.compile(r"^(?P<data>.+)-(?P<task>detection|classification)$")
 
 MODELS_BLOCK_RE = re.compile(r"MODELS=\((.*?)^\)", re.DOTALL | re.MULTILINE)
 MODEL_LINE_RE = re.compile(r'"([^"]+)"')
@@ -104,6 +118,20 @@ def extract_header(template_path: str) -> str:
             break
         header_lines.append(line)
     return "".join(header_lines).rstrip("\n") + "\n"
+
+
+def parse_data_task(output_folder: str) -> tuple[str, str]:
+    """Split the "<data>-<task>" folder name (parent of the dataset-config folder)
+    into its ``data`` (elecdeb60to20 / falcon / reddit) and ``task``
+    (detection / classification) components."""
+    data_task = os.path.basename(os.path.dirname(output_folder))
+    m = DATA_TASK_RE.match(data_task)
+    if not m:
+        raise ValueError(
+            f"Could not parse '<data>-<task>' from folder name {data_task!r} "
+            f"(expected e.g. 'elecdeb60to20-detection'). Full path: {output_folder}"
+        )
+    return m.group("data"), m.group("task")
 
 
 def tag_job_name(header: str, suffix: str) -> str:
@@ -171,7 +199,7 @@ def find_best_encoder_configs(output_folder: str, metric: str) -> dict[str, tupl
 
 def build_encoder_script(output_folder: str, template_path: str, seeds: list[int]) -> tuple[str, int]:
     dataset = os.path.basename(output_folder)
-    task = os.path.basename(os.path.dirname(output_folder))
+    data, task = parse_data_task(output_folder)
 
     model_map = parse_template_models(template_path)
     metric = "predict_accuracy" if task == "detection" else "predict_f1_macro"
@@ -194,14 +222,15 @@ def build_encoder_script(output_folder: str, template_path: str, seeds: list[int
 
     body = f"""wandb disabled
 
+data="{data}"  # elecdeb60to20 | falcon | reddit
 task={task}
 dataset="{dataset}"
 
 export WANDB_PROJECT="fallacy_$task"
 
-TRAIN_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/train.csv"
-VAL_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/dev.csv"
-TEST_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/test.csv"
+TRAIN_FILE="datasets/$data-dataset/$task/$dataset/train.csv"
+VAL_FILE="datasets/$data-dataset/$task/$dataset/dev.csv"
+TEST_FILE="datasets/$data-dataset/$task/$dataset/test.csv"
 
 SEEDS=({seeds_str})
 
@@ -225,14 +254,15 @@ for SEED in "${{SEEDS[@]}}"; do
     MODEL_NAME=$(basename "$model")
     CONF_ID="bs${{batch}}_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
 
-    OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
-    mkdir -p "$OUTPUT_DIR"
+    OUTPUT_DIR="output/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+    CACHE_DIR="cache/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+    mkdir -p "$OUTPUT_DIR" "$CACHE_DIR"
 
     echo "=== Running $MODEL_NAME | $CONF_ID ==="
 
     if ! python "src/$task/run_$task.py" \\
         --model_name_or_path "$model" \\
-        --cache_dir "./cache/" \\
+        --cache_dir "$CACHE_DIR" \\
         --train_file "$TRAIN_FILE" \\
         --validation_file "$VAL_FILE" \\
         --test_file "$TEST_FILE" \\
@@ -331,7 +361,7 @@ def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[st
 
 def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -> tuple[str, int]:
     dataset = os.path.basename(output_folder)
-    task = os.path.basename(os.path.dirname(output_folder))
+    data, task = parse_data_task(output_folder)
 
     with open(template_path, "r", encoding="utf-8") as fh:
         template_content = fh.read()
@@ -365,14 +395,15 @@ def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -
 
     body = f"""wandb disabled
 
+data="{data}"  # elecdeb60to20 | falcon | reddit
 task={task}
 dataset="{dataset}"
 
 export WANDB_PROJECT="fallacy_$task"
 
-TRAIN_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/train.csv"
-VAL_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/dev.csv"
-TEST_FILE="datasets/elecdeb60to20-dataset/$task/$dataset/test.csv"
+TRAIN_FILE="datasets/$data-dataset/$task/$dataset/train.csv"
+VAL_FILE="datasets/$data-dataset/$task/$dataset/dev.csv"
+TEST_FILE="datasets/$data-dataset/$task/$dataset/test.csv"
 
 N_GPUS={n_gpus}
 GRAD_ACC={grad_acc}
@@ -403,8 +434,9 @@ for SEED in "${{SEEDS[@]}}"; do
 
     if [[ "$mode" == "fine_tune" ]]; then
       CONF_ID="mode-fine_tune_lr${{lr}}_ep${{epoch}}_seed${{SEED}}"
-      OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
-      mkdir -p "$OUTPUT_DIR"
+      OUTPUT_DIR="output/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      CACHE_DIR="cache/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      mkdir -p "$OUTPUT_DIR" "$CACHE_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
 
@@ -414,7 +446,7 @@ for SEED in "${{SEEDS[@]}}"; do
           --rdzv_endpoint=${{MASTER_ADDR}}:${{MASTER_PORT}} \\
           "src/${{task}}/run_${{task}}_llm.py" \\
           --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \\
-          --cache_dir "./cache/" \\
+          --cache_dir "$CACHE_DIR" \\
           --train_file "$TRAIN_FILE" \\
           --validation_file "$VAL_FILE" \\
           --test_file "$TEST_FILE" \\
@@ -453,8 +485,9 @@ for SEED in "${{SEEDS[@]}}"; do
 
     else
       CONF_ID="mode-${{mode}}_seed${{SEED}}"
-      OUTPUT_DIR="output/five-runs/elecdeb60to20-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
-      mkdir -p "$OUTPUT_DIR"
+      OUTPUT_DIR="output/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      CACHE_DIR="cache/five-runs/$data-$task/$dataset/${{MODEL_NAME}}/seed_${{SEED_NUMBER}}/${{CONF_ID}}"
+      mkdir -p "$OUTPUT_DIR" "$CACHE_DIR"
 
       echo "=== [$task] Running $MODEL_NAME | $CONF_ID ==="
 
@@ -464,7 +497,7 @@ for SEED in "${{SEEDS[@]}}"; do
           --rdzv_endpoint=${{MASTER_ADDR}}:${{MASTER_PORT}} \\
           "src/${{task}}/run_${{task}}_llm.py" \\
           --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \\
-          --cache_dir "./cache/" \\
+          --cache_dir "$CACHE_DIR" \\
           --train_file "$TRAIN_FILE" \\
           --validation_file "$VAL_FILE" \\
           --test_file "$TEST_FILE" \\
@@ -508,8 +541,10 @@ def main() -> None:
     parser.add_argument("--template", default="script/03-fallacy_no_rag.sh", help="Encoder template sbatch script.")
     parser.add_argument("--llm-template", default="script/03-fallacy_no_rag_llm.sh", help="LLM template sbatch script.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[14, 42, 55, 89, 3], help="Seeds to run each best config with.")
-    parser.add_argument("--output", default=None, help="Path for the encoder script (default: script/05-best_hparams_<task>_<dataset>.sh).")
-    parser.add_argument("--llm-output", default=None, help="Path for the LLM script (default: script/05-best_hparams_llm_<task>_<dataset>.sh).")
+    parser.add_argument("--output", default=None,
+                        help="Path for the encoder script (default: script/05-best_hparams_<data>_<task>_<dataset>.sh).")
+    parser.add_argument("--llm-output", default=None,
+                        help="Path for the LLM script (default: script/05-best_hparams_llm_<data>_<task>_<dataset>.sh).")
     args = parser.parse_args()
 
     output_folder = args.output_folder.rstrip("/")
@@ -521,10 +556,13 @@ def main() -> None:
         raise SystemExit(f"LLM template not found: {args.llm_template}")
 
     dataset = os.path.basename(output_folder)
-    task = os.path.basename(os.path.dirname(output_folder))
+    try:
+        data, task = parse_data_task(output_folder)
+    except ValueError as exc:
+        raise SystemExit(str(exc))
 
-    encoder_dest = args.output or os.path.join("script", f"05-best_hparams_{task}_{dataset}.sh")
-    llm_dest = args.llm_output or os.path.join("script", f"05-best_hparams_llm_{task}_{dataset}.sh")
+    encoder_dest = args.output or os.path.join("script", f"05-best_hparams_{data}_{task}_{dataset}.sh")
+    llm_dest = args.llm_output or os.path.join("script", f"05-best_hparams_llm_{data}_{task}_{dataset}.sh")
 
     encoder_text, n_encoder = build_encoder_script(output_folder, args.template, args.seeds)
     llm_text, n_llm = build_llm_script(output_folder, args.llm_template, args.seeds)
