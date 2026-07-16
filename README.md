@@ -6,6 +6,7 @@
   * [🎯 Tasks](#-tasks)
   * [⛁ Knowledge Base](#-knowledge-base)
     * [Knowledge Base Format](#knowledge-base-format)
+  * [📁 Project Structure](#-project-structure)
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -82,3 +83,42 @@ Each entry in the knowledge base is stored as a JSON document.
   "year": "[when available]"
 }
 ```
+
+## 📁 Project Structure
+
+```
+datasets/                          # source data + per-dataset RAG-enrichment scripts
+  elecdeb60to20-dataset/            # ElecDeb60to20 (main dataset)
+    train.csv, dev.csv, test.csv    # raw splits
+    detection/create_db.py          # builds RAG-enriched detection datasets
+    classification/create_db.py     # builds RAG-enriched classification datasets
+  reddit-dataset/                   # same layout, Reddit dataset
+  falcon-dataset/                   # same layout, Falcon dataset
+
+script/                             # sbatch / driver scripts
+  00-create_knowledge_base.sh
+  01-create_persistent_db.sh
+  02-create_database*.sh            # runs create_db.py to build RAG-enriched datasets
+  03-fallacy_no_rag*.sh              # no-RAG training sweep (encoder / LLM)
+  04-fallacy_rag*.sh                 # RAG training sweep (encoder / LLM)
+  generate_best_hparam_script.py     # generates a 05-best_hparams_*.sh from a finished sweep
+  extract_results.py                 # aggregates output/one-run into per-config CSVs
+  extract_results_5runs.py           # aggregates output/five-runs into per-config CSVs
+
+output/
+  one-run/<dataset>-<task>/<config>/<model>/<run>/    # single-seed grid search results
+  five-runs/<dataset>-<task>/<config>/<model>/seed_<n>/<run>/  # multi-seed best-hparam results
+```
+
+Each `create_db.py` reads its raw splits from `--dataset-dir` (default `datasets/<name>-dataset`) and writes the
+RAG-enriched splits back under `<dataset-dir>/<task>/<config>/{train,dev,test}.csv`.
+
+The `03-*.sh` / `04-*.sh` training scripts default to the ElecDeb60to20 dataset. To point them at Reddit or Falcon
+instead, edit the `data` variable near the top of the script:
+
+```bash
+data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
+```
+
+which is used to build both the input paths (`datasets/$data-dataset/...`) and the output paths
+(`output/one-run/$data-$task/...`).
