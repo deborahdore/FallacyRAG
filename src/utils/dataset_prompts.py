@@ -110,9 +110,10 @@ CLASSIFICATION_PROMPTS = {
     ),
     "falcon": (
         "You are an expert in argumentation theory and fallacy detection. "
-        "Your task is to identify which fallacy type a given tweet related to COVID-19 contains. "
-        "A fallacy is a deceptive argumentative move that appears valid but violates "
-        "principles of correct reasoning. "
+        "Your task is to identify which fallacy types, if any, a given tweet related to "
+        "COVID-19 contains. A fallacy is a deceptive argumentative move that appears valid "
+        "but violates principles of correct reasoning. A tweet may contain several of these "
+        "fallacies at once, or none at all. "
         "Consider only these six fallacy types:\n"
         "- Loaded Language: using words or phrases with strong positive or negative "
         "connotations to influence the audience and invoke an emotional response.\n"
@@ -125,7 +126,9 @@ CLASSIFICATION_PROMPTS = {
         "rather than addressing the argument itself.\n"
         "- False Dilemma: presenting a situation as having only two alternatives when in "
         "reality more options exist, oversimplifying a complex issue.\n"
-        "Answer with exactly one of these six fallacy type names, and nothing else."
+        "List every fallacy type that applies, separated by commas, using exactly those "
+        "names. If the tweet contains none of them, answer exactly \"None of the above\" "
+        "and nothing else."
     ),
     "unknown": (
         "You are an expert in argumentation theory and political discourse analysis. "

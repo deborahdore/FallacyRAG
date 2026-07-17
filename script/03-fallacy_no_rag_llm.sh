@@ -37,6 +37,11 @@ export PYTHONHASHSEED=$SEED
 
 data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
 task=detection
+
+if [[ "$data" == "falcon" ]]; then
+  task=classification
+fi
+
 export WANDB_PROJECT="fallacy_$task"
 
 dataset="temporal=false-retriever=false-summarizer=false"

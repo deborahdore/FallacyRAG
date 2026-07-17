@@ -1,16 +1,21 @@
 """
-LLM-based fallacy classification (single-label): zero-shot, few-shot, and fine-tuning.
+LLM-based fallacy classification: zero-shot, few-shot, and fine-tuning.
 
-Task
-----
-Given a sentence (and its surrounding speech turn), assign the *one* fallacy
-type it contains from a fixed inventory of six categories:
+Task (auto-detected from the dataset columns)
+---------------------------------------------
+Given a sentence (and its surrounding speech turn), assign the fallacy type(s)
+it contains from the dataset's inventory.
 
-    AdHominem | AppealtoAuthority | AppealtoEmotion |
-    FalseCause | Slipperyslope | Slogans
+  - single-label (elecdeb / reddit): one categorical ``fallacy_label`` column;
+    exactly one type per example. For elecdeb there is no "none" option; reddit
+    additionally allows "No Fallacy".
+  - multi-label (FALCON): several 0/1 indicator columns; a sentence may carry
+    multiple fallacies or none. "None of the above" is an explicit, exclusive
+    class — if it is predicted it is the sole answer, and an empty prediction
+    defaults to it.
 
-This is a single-label problem: every sentence contains exactly one fallacy
-type. There is no "none of the above" option — "None" is never a valid answer.
+The format is detected automatically (see ``detect_label_columns``); the prompt
+wording, response parsing, target rendering, and metrics all adapt accordingly.
 
 Architecture
 ------------
@@ -28,13 +33,13 @@ Each example is formatted as an instruction-following chat prompt:
 
 Post-processing
 ---------------
-The raw LLM response (a free-text fallacy name) is parsed back into the
-canonical dataset label via fuzzy alias matching before metrics and file
-output, e.g.:
+The raw LLM response (free-text fallacy name(s)) is parsed back into canonical
+dataset labels via fuzzy alias matching before metrics and file output, e.g.:
     "Appeal to Emotion"  → "AppealtoEmotion"
     "Slippery Slope"     → "Slipperyslope"
-If the response happens to mention more than one fallacy name, only the
-earliest-occurring match is kept, since exactly one label is expected.
+Single-label keeps only the earliest-occurring match. Multi-label keeps every
+matched label, then applies the "None of the above" rules (exclusive; empty
+defaults to None).
 
 Modes (--mode)
 --------------
@@ -127,14 +132,82 @@ LABEL_TO_LLM: dict[str, str] = {}
 ALIAS_TO_LABEL: dict[str, str] = {}
 _LABEL_MENU: str = ""
 
-# Fallback token written to the predictions file when the label set is empty
-# (i.e. "No Fallacy"). Valid for the reddit split; never occurs for elecdeb/falcon.
+# Whether the current dataset is multi-label (FALCON: several 0/1 fallacy columns +
+# an explicit "None of the above" class) vs single-label (elecdeb / reddit). Set in main().
+IS_MULTI_LABEL: bool = False
+
+# The explicit negative class used in multi-label mode. Its column in the FALCON CSV is
+# "None of the above"; it is exclusive with every fallacy and is the empty-row default.
+NONE_LABEL = "None of the above"
+NONE_ALIASES = ["None of the above", "none of the above", "none", "no fallacy", "nofallacy"]
+
+# Fallback token written to the predictions file when the label set is empty. In multi-label
+# mode empty predictions are resolved to NONE_LABEL, so this only appears for single-label
+# parse failures.
 LLM_NONE = "None"
+
+# Columns that are never fallacy labels; used to auto-detect the multi-label 0/1 columns.
+METADATA_COLUMNS = {
+    "id", "component_id", "year", "sentence", "speech_turn", "speaker",
+    "relations", "relations_type", "relations_text", "relations_label",
+    "fallacy_text", "fallacy_labels", "components_labels", "component_labels",
+    "component_label", "rag_context", "retrieval_query", "has_relations", "text",
+}
 
 
 def _normalize(text: str) -> str:
     """Lowercase and strip every non-alphanumeric character (spaces, hyphens, plurals' punctuation)."""
     return re.sub(r"[^a-z0-9]", "", text.lower())
+
+
+def _looks_binary(values) -> bool:
+    """True if every non-null value in *values* is 0 or 1 (i.e. an indicator column)."""
+    seen = set()
+    for v in values:
+        if v is None:
+            continue
+        try:
+            iv = int(v)
+        except (TypeError, ValueError):
+            return False
+        if iv not in (0, 1):
+            return False
+        seen.add(iv)
+    return len(seen) > 0
+
+
+def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool, list[str]]:
+    """Decide single- vs multi-label and return ``(is_multi_label, label_columns)``.
+
+    A present single ``--label_column_name`` -> single-label; otherwise two or more binary
+    (0/1) non-metadata columns -> multi-label (FALCON).
+    """
+    columns = raw_datasets[ref_split].column_names
+    if data_args.label_column_name in columns:
+        return False, [data_args.label_column_name]
+    candidates = [
+        c for c in columns
+        if c not in METADATA_COLUMNS and _looks_binary(raw_datasets[ref_split].unique(c))
+    ]
+    if len(candidates) >= 2:
+        return True, candidates
+    return False, [data_args.label_column_name]
+
+
+def apply_none_rules(labels: list[str]) -> list[str]:
+    """Multi-label 'None of the above' handling: it is exclusive, and empty defaults to it.
+
+    - If NONE_LABEL is among the labels, it becomes the sole answer.
+    - If the label set is empty, it falls back to NONE_LABEL.
+    No-op for single-label datasets (NONE_LABEL is not in their label space).
+    """
+    if not IS_MULTI_LABEL:
+        return labels
+    if NONE_LABEL in labels:
+        return [NONE_LABEL]
+    if not labels:
+        return [NONE_LABEL]
+    return labels
 
 
 def _apply_label_config(train_file) -> None:
@@ -145,6 +218,22 @@ def _apply_label_config(train_file) -> None:
     LABEL_TO_LLM = cfg["label_to_llm"]
     ALIAS_TO_LABEL = cfg["alias_to_label"]
     _LABEL_MENU = cfg["label_menu"]
+
+
+def _register_none_class() -> None:
+    """Register the explicit 'None of the above' class in the label globals (multi-label only).
+
+    ``get_label_config`` only lists the positive fallacy classes; multi-label FALCON also has
+    an explicit negative class that must be a recognised, parseable, and scored label.
+    """
+    global ALL_LABELS
+    if NONE_LABEL not in ALL_LABELS:
+        ALL_LABELS = ALL_LABELS + [NONE_LABEL]
+    LABEL_TO_LLM[NONE_LABEL] = NONE_LABEL
+    for alias in NONE_ALIASES:
+        norm = _normalize(alias)
+        if norm:
+            ALIAS_TO_LABEL[norm] = NONE_LABEL
 
 
 # SYSTEM_PROMPT is dynamically set during main() based on the dataset
@@ -380,15 +469,13 @@ def parse_gold_labels(raw: object) -> list[str]:
 
 
 def parse_llm_response(response: str) -> list[str]:
-    """Extract the single canonical fallacy label mentioned in a raw LLM response.
+    """Extract the canonical fallacy label(s) mentioned in a raw LLM response.
 
-    The task is single-label: every sentence has exactly one fallacy type, so
-    this returns at most one label. If the response happens to mention several
-    known alias names (e.g. the model ignored the "answer with exactly one"
-    instruction), only the earliest-occurring match is kept — ties broken in
-    favor of the longer (more specific) alias. Returns an empty list only if no
-    known fallacy name could be found at all (parsing failure; "None" is never
-    a valid target so it is not treated as an explicit empty answer).
+    Single-label: returns at most one label — the earliest-occurring alias match,
+    ties broken in favor of the longer (more specific) alias.
+    Multi-label: returns every distinct matched label, ordered by canonical index;
+    the 'None of the above' exclusivity / empty-default rules are applied separately
+    by ``apply_none_rules``. Returns an empty list if no known label is found.
     """
     norm = _normalize(response)
     if not norm:
@@ -403,17 +490,23 @@ def parse_llm_response(response: str) -> list[str]:
     if not matches:
         return []
     matches.sort()
-    return [matches[0][2]]
+    if not IS_MULTI_LABEL:
+        return [matches[0][2]]
+    # Multi-label: keep all distinct labels the response mentions.
+    distinct = {canon for _, _, canon in matches}
+    return sorted(distinct, key=ALL_LABELS.index)
 
 
 def labels_to_llm_target(labels: list[str]) -> str:
-    """Render the single canonical label as its human-readable target string.
+    """Render canonical label(s) as the human-readable target string for the assistant turn.
 
-    The task is single-label: every example has exactly one fallacy type, so
-    "None" is never a valid target. Raises if `labels` is empty; if more than
-    one label is present (e.g. a legacy multi-label gold cell), only the first
-    (canonical order) is used.
+    Multi-label: renders every label (canonical order) joined by ", "; an empty set is
+    resolved to "None of the above" via ``apply_none_rules``.
+    Single-label: renders the one label; raises on an empty set ("None" is never valid).
     """
+    if IS_MULTI_LABEL:
+        canon = apply_none_rules(sorted(set(labels), key=ALL_LABELS.index))
+        return ", ".join(LABEL_TO_LLM[c] for c in canon)
     if not labels:
         raise ValueError(
             "Expected exactly one fallacy label; empty label sets are not valid "
@@ -439,12 +532,21 @@ def build_user_message(
     ]
     if context:
         parts.append(f"Retrieved context:\n{context}")
-    parts.append(
-        "Which single fallacy type does this sentence contain? "
-        f"Answer with exactly one type drawn only from: {_LABEL_MENU}. "
-        "Every sentence contains exactly one of these; do not answer \"None\" and "
-        "do not list more than one type."
-    )
+    if IS_MULTI_LABEL:
+        parts.append(
+            "Which fallacy type(s) does this sentence contain? "
+            f"Answer with every type that applies, drawn only from: {_LABEL_MENU}, "
+            "separated by commas. "
+            f"If the sentence contains no fallacy, answer exactly \"{NONE_LABEL}\". "
+            "Do not invent new types."
+        )
+    else:
+        parts.append(
+            "Which single fallacy type does this sentence contain? "
+            f"Answer with exactly one type drawn only from: {_LABEL_MENU}. "
+            "Every sentence contains exactly one of these; do not answer \"None\" and "
+            "do not list more than one type."
+        )
     return "\n\n".join(parts)
 
 
@@ -850,8 +952,9 @@ def run_inference(
     logger.info(f"Running inference on {len(messages_list)} {split_name} examples …")
     raw_responses = inference_engine.predict_batch(messages_list)
 
-    # Parse each raw response into a set of canonical fallacy labels
-    predictions = [parse_llm_response(r) for r in raw_responses]
+    # Parse each raw response into a set of canonical fallacy labels, then apply the
+    # multi-label 'None of the above' rules (exclusive; empty -> None). No-op single-label.
+    predictions = [apply_none_rules(parse_llm_response(r)) for r in raw_responses]
 
     references: list[list[str]] = []
     if "label" in dataset.features:
@@ -998,10 +1101,27 @@ def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArgumen
     return load_dataset(extension, data_files=data_files, cache_dir=model_args.cache_dir)
 
 
-def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
-    """Rename label column, optionally truncate, and return a plain HF Dataset."""
+def _build_gold_label_column(ds, label_columns: list[str]):
+    """Add a ';'-joined 'label' string built from the 0/1 indicator columns (multi-label)."""
+
+    def _mk(ex):
+        names = [c for c in label_columns if int(ex[c]) == 1]
+        return {"label": ";".join(names)}
+
+    return ds.map(_mk, desc="Building multi-label gold labels")
+
+
+def prepare_split(raw_datasets, split_name, label_column, max_samples=None,
+                  multilabel_columns: Optional[list[str]] = None):
+    """Materialise a 'label' column, optionally truncate, and return a plain HF Dataset.
+
+    Multi-label: build 'label' from the 0/1 indicator columns. Single-label: rename the
+    categorical label column to 'label'.
+    """
     ds = raw_datasets[split_name]
-    if label_column != "label" and label_column in ds.column_names:
+    if multilabel_columns:
+        ds = _build_gold_label_column(ds, multilabel_columns)
+    elif label_column != "label" and label_column in ds.column_names:
         ds = ds.rename_column(label_column, "label")
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
@@ -1012,7 +1132,7 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
 
 def main():
     """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
-    global SYSTEM_PROMPT
+    global SYSTEM_PROMPT, IS_MULTI_LABEL
 
     parser = HfArgumentParser(
         (ModelArguments, DataTrainingArguments, LLMExperimentArguments, TrainingArguments)
@@ -1035,18 +1155,30 @@ def main():
         f"Mode: {llm_args.mode} | Backend: {llm_args.backend} | "
         f"Model: {model_args.model_name_or_path} | RAG: {data_args.use_rag}"
     )
-    logger.info(f"Fallacy label space ({len(ALL_LABELS)}): {ALL_LABELS}")
     set_seed(training_args.seed)
 
     # ── Load datasets ─────────────────────────────────────────────────────────
     raw_datasets = load_raw_datasets(data_args, model_args)
+
+    # ── Auto-detect single- vs multi-label from the dataset columns ────────────
+    ref_split = "train" if "train" in raw_datasets else next(iter(raw_datasets))
+    IS_MULTI_LABEL, label_columns = detect_label_columns(raw_datasets, data_args, ref_split)
+    multilabel_columns = None
+    if IS_MULTI_LABEL:
+        _register_none_class()  # add the explicit "None of the above" class to the label space
+        multilabel_columns = label_columns
+        logger.info(f"Detected MULTI-LABEL classification over columns: {label_columns}")
+    else:
+        logger.info("Detected SINGLE-LABEL classification")
+    logger.info(f"Fallacy label space ({len(ALL_LABELS)}): {ALL_LABELS}")
 
     label_column = data_args.label_column_name
     train_dataset, eval_dataset, predict_dataset = None, None, None
 
     if training_args.do_train or llm_args.mode in ("few_shot",):
         train_dataset = prepare_split(
-            raw_datasets, "train", label_column, data_args.max_train_samples
+            raw_datasets, "train", label_column, data_args.max_train_samples,
+            multilabel_columns=multilabel_columns,
         )
         if data_args.shuffle_train_dataset:
             train_dataset = train_dataset.shuffle(seed=data_args.shuffle_seed)
@@ -1054,13 +1186,15 @@ def main():
 
     if training_args.do_eval:
         eval_dataset = prepare_split(
-            raw_datasets, "validation", label_column, data_args.max_eval_samples
+            raw_datasets, "validation", label_column, data_args.max_eval_samples,
+            multilabel_columns=multilabel_columns,
         )
         logger.info(f"Validation split: {len(eval_dataset)} examples")
 
     if training_args.do_predict:
         predict_dataset = prepare_split(
-            raw_datasets, "test", label_column, data_args.max_predict_samples
+            raw_datasets, "test", label_column, data_args.max_predict_samples,
+            multilabel_columns=multilabel_columns,
         )
         logger.info(f"Test split: {len(predict_dataset)} examples")
 

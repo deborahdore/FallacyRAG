@@ -31,6 +31,11 @@ DATASETS=(
 )
 
 task=detection
+
+if [[ "$data" == "falcon" ]]; then
+  task=classification
+fi
+
 export WANDB_PROJECT="fallacy_$task"
 
 MODELS=(
