@@ -1,0 +1,12 @@
+dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,ModernBERT-base,bs8_lr5e-5_ep3,0.4980389687904029,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.4851065310017327,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,longformer-base-4096,bs16_lr5e-5_ep5,0.4726154884634788,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-cont-cased,bs8_lr3e-5_ep5,0.44437947605691963,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-cont-uncased,bs8_lr5e-5_ep5,0.4389977509801931,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,legalbert,bs16_lr3e-5_ep5,0.4345833440364307,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-scr-cased,bs8_lr5e-5_ep5,0.4319762425552444,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,deberta-v3-base,bs8_lr2e-5_ep5,0.4121388915408547,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,xlm-roberta-base,bs16_lr2e-5_ep5,0.3779002037292375,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,RooseBERT-scr-uncased,bs8_lr5e-5_ep5,0.37358561729683204,
+/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,NeoBERT,bs16_lr2e-5_ep3,0.3094777379186104,
