@@ -1,15 +1,28 @@
 """Build BIO-tag fallacy-detection datasets, optionally enriched with RAG context.
 
-Two dataset-construction modes (``--mode``) share one retrieval backend:
+Base construction (shared by both ``--mode`` values):
+* Read the raw annotations from ``data_v1.csv`` (one row per annotated fallacy span; several
+  rows can share the same ``Speech_Turn``) and spaCy sentence-split every speech turn.
+* A sentence is labeled ``Fallacy`` if it overlaps one of that turn's ``Fallacy_Text`` spans
+  (keeping the fallacy type, its component label, and any relations already reported in
+  ``data_v1.csv``).
+* Every other sentence is labeled ``NoFallacy``. It is kept only if it matches a Claim/Premise
+  component reported in ``relations.csv`` (its matched relations are recorded); otherwise it is
+  dropped. This still leaves more non-fallacy than fallacy sentences.
+* NoFallacy is then downsampled 1:1 against Fallacy, stratified on ``component_label`` so the
+  downsampled rows keep the same Claim/Premise (etc.) distribution as the full NoFallacy pool.
+* The resulting class-balanced dataset is split into train/dev/test with stratification on
+  ``fallacy_label``.
 
-* ``sentence`` (default) — read ``{split}.csv``, spaCy sentence-split each speech turn,
-  downsample the NoFallacy class, re-split into train/dev/test, and enrich every sentence.
-  With no ``--retriever`` it is the plain no-RAG pipeline; with a retriever it is enriched.
-* ``relations`` — same construction as ``sentence``; the only difference is the retrieval
-  query, controlled by ``--query-mode`` and looked up from ``{split}_with_relations.csv``:
-  ``fallacy_relations`` concatenates ``fallacy_text`` with its ``relations_text``;
-  ``relations_labeled`` builds one clause per relation — "<relation> supports/attacks
-  <fallacy>" — using ``relations_label`` to pick the verb. Unmatched rows fall back to the sentence.
+Two dataset-construction modes (``--mode``) share one retrieval backend on top of this base:
+
+* ``sentence`` (default) — retrieval query is the sentence itself. With no ``--retriever`` it
+  is the plain no-RAG pipeline; with a retriever it is enriched.
+* ``relations`` — same base dataset; the only difference is the retrieval query, controlled by
+  ``--query-mode``: ``fallacy_relations`` concatenates ``fallacy_text`` (the fallacy span, or the
+  sentence itself for a matched NoFallacy row) with its ``relations_text``; ``relations_labeled``
+  builds one clause per relation — "<relation> supports/attacks <fallacy>" — using
+  ``relations_label`` to pick the verb. Rows with no relations fall back to the sentence/fallacy text alone.
 
 Retrieval backend (shared by both modes):
 * Dense vector search over a persisted Chroma store (``similarity`` / ``mmr`` / ``threshold``).
@@ -24,6 +37,7 @@ import argparse
 import ast
 import logging
 import os
+import re
 import sys
 from pathlib import Path
 
@@ -123,11 +137,11 @@ SEARCH_TYPES = {
 }
 
 DATASET_MODES = {
-    "sentence": "Sentence-split speech turns from {split}.csv, balance, re-split, enrich "
-                "(retrieval query = the sentence).",
-    "relations": "Same construction as 'sentence' (split, balance, re-split); the only "
-                 "difference is the retrieval query = fallacy_text + relations_text "
-                 "(from {split}_with_relations.csv).",
+    "sentence": "Sentence-split speech turns from data_v1.csv + relations.csv, stratified "
+                "train/dev/test split, enrich (retrieval query = the sentence).",
+    "relations": "Same base construction as 'sentence'; the only difference is the retrieval "
+                 "query = fallacy_text (or the sentence, for a matched NoFallacy row) + "
+                 "relations_text.",
 }
 
 COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relations cells
@@ -497,69 +511,226 @@ def build_retrieval_query(fallacy_text, relations_text, mode: str,
     return normalize_text(query), has_relations
 
 
-def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
-    """Sentence-split the speech turns, downsample NoFallacy, and re-split into train/dev/test."""
-    dataset = []
-    for split in ["train", "dev", "test"]:
-        df = pd.read_csv(os.path.join(dataset_dir, f"{split}.csv"))
-        for idx, row in tqdm(df.iterrows(), total=len(df), desc=f"Processing {split} dataset."):
-            text = row["speech_turn"]
+def _find_span(haystack: str, needle: str) -> tuple[int, int] | None:
+    """Locate *needle* inside *haystack*; return its (start, end) char span, or None if absent."""
+    needle = needle.strip()
+    if not needle:
+        return None
+    start = haystack.find(needle)
+    if start == -1:
+        return None
+    return start, start + len(needle)
 
-            fallacy_labels = ast.literal_eval(row["fallacy_labels"])
-            component_labels = ast.literal_eval(row["components_labels"])
 
-            # Skip rows whose per-character labels don't line up with the text.
-            if len(text) != len(fallacy_labels):
-                logger.warning(
-                    f"Row {idx} ({split}): text length {len(text)} != "
-                    f"fallacy_labels length {len(fallacy_labels)} — skipping."
-                )
+RELATIONS_WORD_MIN_LEN = 4  # words shorter than this are too common to index (stopword-ish)
+MIN_COMPONENT_LEN = 20  # components shorter than this (e.g. "I don't", "Yes") give spurious substring hits
+
+
+def _load_relations_csv_index(relations_path: str) -> tuple[list[dict], dict[str, list[int]]]:
+    """Load ``relations.csv`` into (entries, word -> entry-index inverted index).
+
+    Every relation row yields two entries — one per side (subj/obj) — each carrying that
+    side's component type, the *other* side's text (what it relates to), the relation label,
+    and the direction (``outgoing`` if this side is the subject, ``incoming`` if the object).
+    The inverted index (rare word -> entry indices) lets ``_match_relations_csv`` avoid scanning
+    all ~50k entries for every candidate sentence.
+    """
+    rel_df = pd.read_csv(relations_path)
+    entries: list[dict] = []
+    for _, r in rel_df.iterrows():
+        subj, obj = str(r["subj"]).strip(), str(r["obj"]).strip()
+        relation = str(r["relation"]).strip()
+        if len(subj) < MIN_COMPONENT_LEN or len(obj) < MIN_COMPONENT_LEN:
+            continue  # too short ("Yes", "I don't") to match without spurious substring hits
+        entries.append({"text": subj, "component_label": r["subj_type"],
+                        "other_text": obj, "relation": relation, "direction": "outgoing"})
+        entries.append({"text": obj, "component_label": r["obj_type"],
+                        "other_text": subj, "relation": relation, "direction": "incoming"})
+
+    word_index: dict[str, list[int]] = {}
+    for i, entry in enumerate(entries):
+        words = {w.lower() for w in re.findall(r"[A-Za-z']+", entry["text"])
+                 if len(w) >= RELATIONS_WORD_MIN_LEN}
+        for w in words:
+            word_index.setdefault(w, []).append(i)
+
+    return entries, word_index
+
+
+def _match_relations_csv(sentence: str, entries: list[dict],
+                         word_index: dict[str, list[int]]) -> list[dict]:
+    """Return every ``relations.csv`` entry whose component text overlaps *sentence*.
+
+    "Overlaps" means containment either way (the annotated component can be a sub-span of a
+    longer sentence, or occasionally equal to it). Candidates are narrowed first via the
+    inverted index (entries sharing a distinctive word with the sentence) before the exact
+    containment check, so this stays fast even against a ~50k-entry relations table.
+    """
+    s = sentence.strip()
+    if not s:
+        return []
+    words = {w.lower() for w in re.findall(r"[A-Za-z']+", s) if len(w) >= RELATIONS_WORD_MIN_LEN}
+    candidate_ids: set[int] = set()
+    for w in words:
+        candidate_ids.update(word_index.get(w, []))
+
+    matches = []
+    for i in candidate_ids:
+        comp = entries[i]["text"]
+        if comp and (comp in s or s in comp):
+            matches.append(entries[i])
+    return matches
+
+
+def _build_dataset_from_raw(dataset_dir: str, data_file: str, relations_file: str) -> dict[str, pd.DataFrame]:
+    """Build sentence-level Fallacy/NoFallacy rows from the raw annotation CSVs, then split.
+
+    See the module docstring for the labeling rule. Returns a stratified 80/10/10
+    train/dev/test split (not class-balanced — NoFallacy still outnumbers Fallacy).
+    """
+    data_path = os.path.join(dataset_dir, data_file)
+    relations_path = os.path.join(dataset_dir, relations_file)
+
+    raw = pd.read_csv(data_path)
+    logger.info(f"Loaded {len(raw):,} annotation rows covering "
+                f"{raw['FileName'].nunique():,} speech turns from {data_path}")
+
+    logger.info(f"Indexing {relations_path} for non-fallacy component lookup...")
+    rel_entries, rel_word_index = _load_relations_csv_index(relations_path)
+
+    rows = []
+    dropped_no_relation = 0
+
+    grouped = raw.groupby("FileName", sort=False)
+    for file_name, group in tqdm(grouped, total=grouped.ngroups, desc="Processing speech turns"):
+        # A handful of turns have more than one Speech_Turn variant across their rows
+        # (re-annotation passes); the longest one is a superset of every Fallacy_Text span.
+        text = str(group["Speech_Turn"].astype(str).loc[group["Speech_Turn"].astype(str).str.len().idxmax()])
+
+        try:
+            year = int(str(file_name).split("_")[0])
+        except ValueError:
+            year = None
+
+        # Locate each annotated fallacy span within this turn's text.
+        fallacy_spans = []
+        for _, r in group.iterrows():
+            fallacy_text = str(r["Fallacy_Text"]).strip()
+            span = _find_span(text, fallacy_text)
+            if span is None:
+                logger.warning(f"Could not locate Fallacy_Text in {file_name} — skipping this span.")
+                continue
+            fallacy_spans.append({
+                "start": span[0], "end": span[1], "text": fallacy_text,
+                "fallacy_label": str(r["Fallacy_Label"]).strip(),
+                "component_label": str(r["CompLabel"]).strip(),
+                "relations_text": _parse_relations_text(r.get("relations_text")),
+                "relations_label": _parse_relations_text(r.get("relations_labels")),
+                "relations_direction": _parse_relations_text(r.get("relations_direction")),
+            })
+
+        doc = nlp(text)
+        for sent in doc.sents:
+            sent_start, sent_end = sent.start_char, sent.end_char
+            sentence = text[sent_start:sent_end]
+            if not sentence.strip():
                 continue
 
-            doc = nlp(text)
+            # A sentence is a Fallacy if it overlaps (not necessarily exactly matches) an
+            # annotated Fallacy_Text span — spans occasionally cross spaCy's sentence boundary.
+            overlapping = [fs for fs in fallacy_spans if fs["start"] < sent_end and fs["end"] > sent_start]
 
-            for sent in doc.sents:
-                start = sent.start_char
-                end = sent.end_char
+            if overlapping:
+                # Sorted so a sentence overlapping the same *set* of fallacy types always yields
+                # the same joined label; component_label just takes the (deterministic) first one
+                # rather than joining, since a sentence has one primary argumentative role.
+                fallacy_types = sorted(dict.fromkeys(fs["fallacy_label"] for fs in overlapping))
+                component_labels = sorted(dict.fromkeys(fs["component_label"] for fs in overlapping))
+                fallacy_texts = list(dict.fromkeys(fs["text"] for fs in overlapping))
+                relations_text = [t for fs in overlapping for t in fs["relations_text"]]
+                relations_label = [l for fs in overlapping for l in fs["relations_label"]]
+                relations_direction = [d for fs in overlapping for d in fs["relations_direction"]]
 
-                # Reduce the sentence's character labels to a single Fallacy/NoFallacy tag.
-                flabels = list(set(label for label in fallacy_labels[start:end] if label != 'O'))
-                flabels = "Fallacy" if flabels and flabels[0] is not None else "NoFallacy"
-
-                # Reduce the sentence's character labels to a single component tag.
-                clabels = list(set(label for label in component_labels[start:end] if label != 'O'))
-                clabels = clabels[0] if clabels and clabels[0] is not None else "NoComponent"
-
-                item = {
-                    "text": f"{text} [SEP] {sent}",
-                    "fallacy_label": flabels,
-                    "component_label": clabels,
-                    "speaker": row["speaker"],
-                    "year": row["year"],
-                    "sentence": text[start:end],
+                rows.append({
+                    "text": f"{text} [SEP] {sentence}",
                     "speech_turn": text,
-                }
-                dataset.append(item)
+                    "sentence": sentence,
+                    "fallacy_label": "Fallacy",
+                    "fallacy_type": COMPONENT_SEP.join(fallacy_types),
+                    "component_label": component_labels[0],
+                    "fallacy_text": COMPONENT_SEP.join(fallacy_texts),
+                    "relations_text": str(relations_text),
+                    "relations_label": ";".join(relations_label),
+                    "relations_direction": str(relations_direction),
+                    "n_relations": len(relations_text),
+                    "year": year,
+                    "file_name": file_name,
+                })
+                continue
 
-    df = pd.DataFrame(dataset)
-    df = df.replace({"nan": None})
-    df = df.dropna().drop_duplicates().reset_index(drop=True)
+            # Non-fallacy sentence: keep only if relations.csv reports it as a Claim/Premise
+            # component; otherwise drop it.
+            matches = _match_relations_csv(sentence, rel_entries, rel_word_index)
+            if not matches:
+                dropped_no_relation += 1
+                continue
 
-    # Downsample NoFallacy to match the number of fallacy sentences (1:1 balance).
+            # Sorted for a deterministic pick below: `matches` comes from a set of candidate
+            # indices, so its order is arbitrary. Take the first (alphabetical) label rather than
+            # joining, since a sentence has one primary argumentative role.
+            component_labels = sorted(dict.fromkeys(str(m["component_label"]) for m in matches))
+            relations_text = [m["other_text"] for m in matches]
+            relations_label = [m["relation"] for m in matches]
+            relations_direction = [m["direction"] for m in matches]
+
+            rows.append({
+                "text": f"{text} [SEP] {sentence}",
+                "speech_turn": text,
+                "sentence": sentence,
+                "fallacy_label": "NoFallacy",
+                "fallacy_type": "",
+                "component_label": component_labels[0],
+                "fallacy_text": sentence,
+                "relations_text": str(relations_text),
+                "relations_label": ";".join(relations_label),
+                "relations_direction": str(relations_direction),
+                "n_relations": len(relations_text),
+                "year": year,
+                "file_name": file_name,
+            })
+
+    df = pd.DataFrame(rows)
+    df = df.dropna(subset=["text", "sentence", "fallacy_label"]).drop_duplicates().reset_index(drop=True)
+
+    n_fallacy = int((df["fallacy_label"] == "Fallacy").sum())
+
+    # Downsample NoFallacy to match Fallacy 1:1, stratified on component_label so the
+    # Claim/Premise (etc.) distribution of the downsampled NoFallacy rows matches the full pool.
+    fallacy_df = df[df["fallacy_label"] == "Fallacy"]
     no_fallacy_df = df[df["fallacy_label"] == "NoFallacy"]
-    with_fallacy_df = df[df["fallacy_label"] != "NoFallacy"]
-    no_fallacy_downsampled = no_fallacy_df.sample(n=len(with_fallacy_df), random_state=42)
+    n_no_fallacy_before = len(no_fallacy_df)
+    if 0 < n_fallacy < n_no_fallacy_before:
+        no_fallacy_df, _ = train_test_split(
+            no_fallacy_df, train_size=n_fallacy, random_state=42,
+            stratify=no_fallacy_df["component_label"],
+        )
+    df = pd.concat([fallacy_df, no_fallacy_df]).sample(frac=1, random_state=42).reset_index(drop=True)
 
-    df_balanced = pd.concat([no_fallacy_downsampled, with_fallacy_df]).sample(
-        frac=1, random_state=42).reset_index(drop=True)
+    n_no_fallacy = int((df["fallacy_label"] == "NoFallacy").sum())
 
-    # Stratified 80/10/10 train/dev/test split on the fallacy label.
+    logger.info(f"Kept {len(df):,} sentences ({n_fallacy:,} Fallacy / {n_no_fallacy:,} NoFallacy, "
+                f"downsampled from {n_no_fallacy_before:,}); dropped {dropped_no_relation:,} "
+                f"non-fallacy sentences with no matching relations.csv component.")
+
+    # Stratified 80/10/10 train/dev/test split on fallacy_label — now a 1:1 class balance thanks
+    # to the downsampling above, and each split preserves that balance.
     train_df, test_df = train_test_split(
-        df_balanced, test_size=0.2, random_state=42, stratify=df_balanced["fallacy_label"])
+        df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
     test_df, dev_df = train_test_split(
         test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
-    return {"train": train_df, "dev": dev_df, "test": test_df}
+    return {"train": train_df.reset_index(drop=True), "dev": dev_df.reset_index(drop=True),
+            "test": test_df.reset_index(drop=True)}
 
 
 def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
@@ -659,9 +830,11 @@ def build_sentence_mode(persist_directory_path: str,
                         dense_weight: float,
                         bm25_weight: float,
                         dataset_dir: str,
+                        data_file: str,
+                        relations_file: str,
                         path: str) -> None:
     """Run the 'sentence' pipeline: the retrieval query is the sentence itself."""
-    splits = _build_balanced_splits(dataset_dir)
+    splits = _build_dataset_from_raw(dataset_dir, data_file, relations_file)
 
     def query_fn(row):
         return normalize_text(row["sentence"]), None
@@ -675,37 +848,6 @@ def build_sentence_mode(persist_directory_path: str,
         bm25_weight=bm25_weight, summarization_model=summarization_model,
         persist_directory_path=persist_directory_path,
     )
-
-
-def _load_relations_lookup(dataset_dir: str) -> dict[str, list[tuple]]:
-    """Map ``speech_turn`` -> list of ``(fallacy_text, relations_text, relations_label)`` from the relations CSVs."""
-    lookup: dict[str, list[tuple]] = {}
-    for split in ["train", "dev", "test"]:
-        p = os.path.join(dataset_dir, f"{split}_with_relations.csv")
-        if not os.path.exists(p):
-            logger.warning(f"Missing {p}; relations for these rows will fall back to the sentence.")
-            continue
-        df = pd.read_csv(p)
-        for _, r in df.iterrows():
-            ft = r.get("fallacy_text")
-            if ft is None or str(ft).strip() in ("", "nan", "None"):
-                continue  # skip rows without a fallacy span
-            lookup.setdefault(str(r["speech_turn"]), []).append(
-                (ft, r.get("relations_text"), r.get("relations_label"))
-            )
-    return lookup
-
-
-def _match_relations(sentence: str, speech_turn, lookup: dict[str, list[tuple]]):
-    """Find the fallacy entry overlapping *sentence*; return (fallacy_text, relations_text, relations_label) or (None, None, None)."""
-    s = str(sentence).strip()
-    if not s:
-        return None, None, None
-    for fallacy_text, relations_text, relations_label in lookup.get(str(speech_turn), []):
-        for comp in _clean_components(fallacy_text):
-            if s in comp or comp in s:
-                return fallacy_text, relations_text, relations_label
-    return None, None, None
 
 
 def build_relations_mode(persist_directory_path: str,
@@ -726,27 +868,27 @@ def build_relations_mode(persist_directory_path: str,
                          dense_weight: float,
                          bm25_weight: float,
                          dataset_dir: str,
+                         data_file: str,
+                         relations_file: str,
                          path: str) -> None:
-    """Run the 'relations' pipeline: the query is fallacy_text + relations_text."""
-    splits = _build_balanced_splits(dataset_dir)
-    lookup = _load_relations_lookup(dataset_dir)
+    """Run the 'relations' pipeline: the query is fallacy_text + relations_text.
+
+    Every row already carries its own ``fallacy_text`` / ``relations_text`` / ``relations_label``
+    from ``_build_dataset_from_raw`` (the fallacy span and its relations for Fallacy rows; the
+    sentence itself and its matched relations.csv relations for a kept NoFallacy row) — so, unlike
+    the old lookup-based version, no separate relations file needs to be loaded here.
+    """
+    splits = _build_dataset_from_raw(dataset_dir, data_file, relations_file)
 
     def query_fn(row):
-        sentence = row["sentence"]
-        # NoFallacy sentences have no relations: query with the bare sentence.
-        if row["fallacy_label"] == "NoFallacy":
-            return normalize_text(sentence), False
-        fallacy_text, relations_text, relations_label = _match_relations(
-            sentence, row["speech_turn"], lookup
-        )
-        # Fallacy sentence with no matched relation row: fall back to the sentence.
-        if fallacy_text is None:
-            return normalize_text(sentence), False
+        fallacy_text = row.get("fallacy_text")
+        if fallacy_text is None or str(fallacy_text).strip() in ("", "nan", "None"):
+            return normalize_text(row["sentence"]), False
         query, has_relations = build_retrieval_query(
-            fallacy_text, relations_text, query_mode, relations_label
+            fallacy_text, row.get("relations_text"), query_mode, row.get("relations_label")
         )
         if not query:
-            return normalize_text(sentence), False
+            return normalize_text(row["sentence"]), False
         return query, has_relations
 
     _run_pipeline(
@@ -846,7 +988,12 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     parser.add_argument("--persist-directory", default="./chromadb",
                         help="Path to the Chroma vector store directory (default: ./chromadb).")
     parser.add_argument("--dataset-dir", default="datasets/elecdeb60to20-dataset",
-                        help="Directory holding the input CSVs (default: datasets/elecdeb60to20-dataset).")
+                        help="Directory holding data_file and relations_file "
+                             "(default: datasets/elecdeb60to20-dataset).")
+    parser.add_argument("--data-file", default="data_v1.csv",
+                        help="Raw annotation CSV, relative to --dataset-dir (default: data_v1.csv).")
+    parser.add_argument("--relations-file", default="relations.csv",
+                        help="Claim/Premise relations CSV, relative to --dataset-dir (default: relations.csv).")
     parser.add_argument("--chunk-size", type=int, default=1000,
                         help="BM25 text splitter chunk size in characters (default: 1000).")
     parser.add_argument("--chunk-overlap", type=int, default=200,
@@ -916,6 +1063,8 @@ if __name__ == "__main__":
             dense_weight=args.dense_weight,
             bm25_weight=args.bm25_weight,
             dataset_dir=args.dataset_dir,
+            data_file=args.data_file,
+            relations_file=args.relations_file,
             path=path,
         )
     else:  # relations
@@ -938,5 +1087,7 @@ if __name__ == "__main__":
             dense_weight=args.dense_weight,
             bm25_weight=args.bm25_weight,
             dataset_dir=args.dataset_dir,
+            data_file=args.data_file,
+            relations_file=args.relations_file,
             path=path,
         )
