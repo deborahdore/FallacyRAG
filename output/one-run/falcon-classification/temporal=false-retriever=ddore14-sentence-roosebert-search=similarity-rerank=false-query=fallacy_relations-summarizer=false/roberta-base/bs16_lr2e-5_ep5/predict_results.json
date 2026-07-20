@@ -1,0 +1,22 @@
+{
+  "epoch": 5.0,
+  "predict_f1_Ad Hominem": 0.39572192513368987,
+  "predict_f1_Appeal to Fear": 0.352,
+  "predict_f1_Appeal to Ridicule": 0.3431952662721893,
+  "predict_f1_False Dilemma": 0.3888888888888889,
+  "predict_f1_Hasty Generalization": 0.1610738255033557,
+  "predict_f1_Loaded Language": 0.5132075471698113,
+  "predict_f1_None of the above": 0.8575380359612724,
+  "predict_f1_macro": 0.43023221270417256,
+  "predict_f1_micro": 0.578215527230591,
+  "predict_f1_samples": 0.682127842127842,
+  "predict_f1_weighted": 0.6644830581217741,
+  "predict_loss": 0.8807665705680847,
+  "predict_precision_macro": 0.3352820432903276,
+  "predict_recall_macro": 0.7155630180466124,
+  "predict_runtime": 2.2953,
+  "predict_samples": 555,
+  "predict_samples_per_second": 241.793,
+  "predict_steps_per_second": 15.248,
+  "predict_subset_accuracy": 0.5711711711711712
+}
