@@ -6,8 +6,10 @@ Two dataset-construction modes (``--mode``) share one retrieval backend:
   downsample the NoFallacy class, re-split into train/dev/test, and enrich every sentence.
   With no ``--retriever`` it is the plain no-RAG pipeline; with a retriever it is enriched.
 * ``relations`` — same construction as ``sentence``; the only difference is the retrieval
-  query, controlled by ``--query-mode`` and looked up from ``{split}_with_relations.csv``:
-  ``fallacy_relations`` concatenates ``fallacy_text`` with its ``relations_text``;
+  query, controlled by ``--query-mode``. For every component overlapping the sentence, its
+  related components are looked up from ``relations.csv`` (matched by text overlap, over all
+  components regardless of fallacy status):
+  ``fallacy_relations`` concatenates the component text with its ``relations_text``;
   ``relations_labeled`` builds one clause per relation — "<relation> supports/attacks
   <fallacy>" — using ``relations_label`` to pick the verb. Unmatched rows fall back to the sentence.
 
@@ -126,8 +128,8 @@ DATASET_MODES = {
     "sentence": "Sentence-split speech turns from {split}.csv, balance, re-split, enrich "
                 "(retrieval query = the sentence).",
     "relations": "Same construction as 'sentence' (split, balance, re-split); the only "
-                 "difference is the retrieval query = fallacy_text + relations_text "
-                 "(from {split}_with_relations.csv).",
+                 "difference is the retrieval query = component text + relations_text of "
+                 "its related components (looked up from relations.csv by text overlap).",
 }
 
 COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relations cells
@@ -677,35 +679,60 @@ def build_sentence_mode(persist_directory_path: str,
     )
 
 
-def _load_relations_lookup(dataset_dir: str) -> dict[str, list[tuple]]:
-    """Map ``speech_turn`` -> list of ``(fallacy_text, relations_text, relations_label)`` from the relations CSVs."""
-    lookup: dict[str, list[tuple]] = {}
-    for split in ["train", "dev", "test"]:
-        p = os.path.join(dataset_dir, f"{split}_with_relations.csv")
-        if not os.path.exists(p):
-            logger.warning(f"Missing {p}; relations for these rows will fall back to the sentence.")
+def _load_relations_index(dataset_dir: str) -> tuple[dict[str, list[tuple[str, str]]], list[str]]:
+    """Index ``relations.csv`` as ``component_text -> [(related_text, relation_label), ...]``.
+
+    Each relation row (``subj <relation> obj``) is recorded in both directions so a component
+    finds its neighbour regardless of the role (subject/object) it plays. This covers every
+    component in ``relations.csv``, not just fallacious ones. The second return value is the
+    list of unique component strings, used for text-overlap matching in ``_match_relations``.
+    """
+    p = os.path.join(dataset_dir, "relations.csv")
+    index: dict[str, list[tuple[str, str]]] = {}
+    if not os.path.exists(p):
+        logger.warning(f"Missing {p}; relations for these rows will fall back to the sentence.")
+        return index, []
+    df = pd.read_csv(p)
+    for _, r in df.iterrows():
+        subj = "" if r.get("subj") is None else str(r.get("subj")).strip()
+        obj = "" if r.get("obj") is None else str(r.get("obj")).strip()
+        label = "" if r.get("relation") is None else str(r.get("relation")).strip()
+        if subj in ("", "nan", "None") or obj in ("", "nan", "None"):
             continue
-        df = pd.read_csv(p)
-        for _, r in df.iterrows():
-            ft = r.get("fallacy_text")
-            if ft is None or str(ft).strip() in ("", "nan", "None"):
-                continue  # skip rows without a fallacy span
-            lookup.setdefault(str(r["speech_turn"]), []).append(
-                (ft, r.get("relations_text"), r.get("relations_label"))
-            )
-    return lookup
+        index.setdefault(subj, []).append((obj, label))
+        index.setdefault(obj, []).append((subj, label))
+    return index, list(index.keys())
 
 
-def _match_relations(sentence: str, speech_turn, lookup: dict[str, list[tuple]]):
-    """Find the fallacy entry overlapping *sentence*; return (fallacy_text, relations_text, relations_label) or (None, None, None)."""
+def _match_relations(sentence: str, index: dict[str, list[tuple[str, str]]],
+                     components: list[str]):
+    """Find every ``relations.csv`` component overlapping *sentence* and gather its relations.
+
+    Matching is text-overlap (either string contains the other), applied to all components
+    regardless of fallacy status. Returns ``(component_text, relations_text, relations_label)``
+    where ``component_text`` is the matched span(s) joined by ``|||``, ``relations_text`` is a
+    stringified list of the related component texts, and ``relations_label`` is a
+    ``;``-separated list of relation labels aligned with it. Returns ``(None, None, None)``
+    when no component overlaps the sentence.
+    """
     s = str(sentence).strip()
     if not s:
         return None, None, None
-    for fallacy_text, relations_text, relations_label in lookup.get(str(speech_turn), []):
-        for comp in _clean_components(fallacy_text):
-            if s in comp or comp in s:
-                return fallacy_text, relations_text, relations_label
-    return None, None, None
+    matched_comps: list[str] = []
+    related_texts: list[str] = []
+    related_labels: list[str] = []
+    seen_related: set[str] = set()
+    for comp in components:
+        if comp in s or s in comp:
+            matched_comps.append(comp)
+            for other, label in index.get(comp, []):
+                if other not in seen_related:
+                    seen_related.add(other)
+                    related_texts.append(other)
+                    related_labels.append(label)
+    if not related_texts:
+        return None, None, None
+    return COMPONENT_SEP.join(matched_comps), str(related_texts), ";".join(related_labels)
 
 
 def build_relations_mode(persist_directory_path: str,
@@ -729,17 +756,16 @@ def build_relations_mode(persist_directory_path: str,
                          path: str) -> None:
     """Run the 'relations' pipeline: the query is fallacy_text + relations_text."""
     splits = _build_balanced_splits(dataset_dir)
-    lookup = _load_relations_lookup(dataset_dir)
+    index, components = _load_relations_index(dataset_dir)
 
     def query_fn(row):
         sentence = row["sentence"]
-        # NoFallacy sentences have no relations: query with the bare sentence.
-        if row["fallacy_label"] == "NoFallacy":
-            return normalize_text(sentence), False
+        # For every component overlapping this sentence, pull its relations from
+        # relations.csv (all components, including NoFallacy ones — no fallacy filtering).
         fallacy_text, relations_text, relations_label = _match_relations(
-            sentence, row["speech_turn"], lookup
+            sentence, index, components
         )
-        # Fallacy sentence with no matched relation row: fall back to the sentence.
+        # No component in relations.csv overlaps the sentence: fall back to the sentence.
         if fallacy_text is None:
             return normalize_text(sentence), False
         query, has_relations = build_retrieval_query(
