@@ -1,3 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-summarizer=false,True,sentence-transformers-all-mpnet-base-v2,similarity,none,none,none,ModernBERT-base,bs8_lr3e-5_ep5,0.4090239535712938,
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=true-retriever=sentence-transformers-all-mpnet-base-v2-search=similarity-rerank=false-summarizer=false,True,sentence-transformers-all-mpnet-base-v2,similarity,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.45930770593973713,

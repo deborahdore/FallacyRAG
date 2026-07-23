@@ -13,4 +13,3 @@ dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,pr
 /Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,legalbert,bs8_lr5e-5_ep5,0.7386533525147387,0.7400611620795107
 /Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,longformer-base-4096,bs16_lr5e-5_ep5,0.7700917758008118,0.7706422018348624
 /Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,roberta-base,bs16_lr2e-5_ep5,0.7694000169247694,0.7706422018348624
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false,False,none,none,none,none,none,xlm-roberta-base,bs8_lr3e-5_ep3,0.7284463234183904,0.7308868501529052

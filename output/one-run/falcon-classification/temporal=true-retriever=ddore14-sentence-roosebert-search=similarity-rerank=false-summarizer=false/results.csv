@@ -1,4 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-summarizer=false,True,ddore14-sentence-roosebert,similarity,none,none,none,ModernBERT-base,bs16_lr5e-5_ep5,0.42933515948860546,
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-summarizer=false,True,ddore14-sentence-roosebert,similarity,none,none,none,longformer-base-4096,bs8_lr2e-5_ep5,0.4470797239890644,
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=true-retriever=ddore14-sentence-roosebert-search=similarity-rerank=false-summarizer=false,True,ddore14-sentence-roosebert,similarity,none,none,none,roberta-base,bs16_lr3e-5_ep5,0.4574107135487457,

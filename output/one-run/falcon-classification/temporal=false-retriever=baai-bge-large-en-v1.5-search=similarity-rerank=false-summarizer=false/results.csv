@@ -1,4 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,ModernBERT-base,bs8_lr2e-5_ep5,0.4404527761835629,
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,longformer-base-4096,bs8_lr3e-5_ep5,0.47470449629923983,
-/Users/ddore/Documents/FallacyRAG/output/one-run/falcon-classification/temporal=false-retriever=baai-bge-large-en-v1.5-search=similarity-rerank=false-summarizer=false,False,baai-bge-large-en-v1.5,similarity,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.4548591483474942,
