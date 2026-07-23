@@ -1,24 +1,29 @@
-"""Build comment-level (CL) fallacy-detection datasets from the reddit dataset,
-optionally enriched with RAG context.
+"""Build propaganda-detection datasets, optionally enriched with RAG context.
 
-This replicates the comment-level (CL) task of Sahai et al. (2021), "Breaking
-Down the Invisible Wall of Informal Fallacies in Online Discussions": the unit
-of classification is the full COI (comment of interest) — one row per comment,
-with a single Fallacy/NoFallacy label for the whole thing — not a sentence or
-span within it. The retrieval query is likewise the full COI.
+This is the propaganda-dataset variant of the shared detection builder. The label is binary
+(``propaganda`` / ``non-propaganda``). Unlike the elecdeb pipeline, the ``{split}.csv`` files
+are already sentence-level and pre-split by the dataset authors, so they are read as-is — no
+spaCy sentence-splitting, class balancing, or stratified re-splitting.
 
-Unlike the debate-transcript dataset, the reddit dataset (see
-``reddit-dataset/transform.py``) only provides ``id``, ``speech_turn`` (the
-COI text) and ``fallacy_labels`` columns — there is no ``components_labels``,
-``speaker``, ``year``, or relations data, hence no "relations" mode and no
-``--temporal-rag`` option here. With no ``--retriever`` this is the plain
-no-RAG pipeline; with a retriever it is enriched.
+Two dataset-construction modes (``--mode``) share one retrieval backend:
 
-Retrieval backend:
+* ``sentence`` (default) — read ``{split}.csv`` and enrich every sentence. With no
+  ``--retriever`` it is the plain no-RAG pipeline; with a retriever it is enriched
+  (retrieval query = the sentence).
+* ``relations`` — same construction as ``sentence``; the only difference is the retrieval
+  query, controlled by ``--query-mode``. Each sentence's predicted relations are looked up in
+  ``relation-classification/predictions.csv`` by ``fallacy_sentence_id`` (matched to the
+  sentence's ``sentence_id``), keeping only ``support`` / ``attack`` predictions:
+  ``fallacy_relations`` concatenates the sentence with its related phrases' text;
+  ``relations_labeled`` builds one clause per relation — "<relation> supports/attacks
+  <sentence>" — using the predicted relation to pick the verb. Sentences with no support/attack
+  relation fall back to the sentence.
+
+Retrieval backend (shared by both modes):
 * Dense vector search over a persisted Chroma store (``similarity`` / ``mmr`` / ``threshold``).
 * Sparse BM25 via bm25s.
 * ``hybrid`` — dense + BM25 fused with Reciprocal Rank Fusion.
-* Optional cross-encoder reranking and per-passage summarization.
+* Optional cross-encoder reranking, per-passage summarization, and temporal (year) filtering.
 """
 
 from __future__ import annotations
@@ -30,13 +35,19 @@ import os
 import sys
 from pathlib import Path
 
-import bm25s as _bm25s
+import nltk
 import numpy as np
+import spacy
+
+nlp = spacy.load("en_core_web_sm")
+nltk.download("punkt_tab", quiet=True)
+
 import pandas as pd
 import rootutils
 import torch
 from langchain_chroma import Chroma
 from langchain_community.embeddings import HuggingFaceBgeEmbeddings
+import bm25s as _bm25s
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from tqdm import tqdm
@@ -71,6 +82,9 @@ KNOWLEDGE_BASE_DIRECTORIES = [
 ]
 
 DEFAULT_RERANKER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
+
+# Over-fetch factor for temporal filtering: pull this many × top_k, drop future docs, keep top_k.
+TEMPORAL_OVERFETCH = 10
 
 # Queries are batch-embedded per split (see embed_queries).
 QUERY_EMBED_BATCH_SIZE = 256
@@ -113,6 +127,25 @@ SEARCH_TYPES = {
     "similarity_score_threshold": "Similarity search filtered to results above a score threshold.",
     "bm25": "Keyword-based BM25 retrieval — no embeddings or vector store required.",
     "hybrid": "Dense + BM25 fused with Reciprocal Rank Fusion.",
+}
+
+DATASET_MODES = {
+    "sentence": "Read the already sentence-level, pre-split {split}.csv as-is and enrich "
+                "(retrieval query = the sentence).",
+    "relations": "Same construction as 'sentence'; the only difference is the retrieval query "
+                 "= sentence + the support/attack relations found for its sentence_id in "
+                 "relation-classification/predictions.csv (fallacy_sentence_id).",
+}
+
+COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relations cells
+
+# Maps a relations_label value to the verb phrase used in the 'relations_labeled' query.
+LABEL_VERBS = {"support": "supports", "attack": "attacks"}
+
+QUERY_MODES = {
+    "fallacy_relations": "Concatenate the fallacy text with the text of its related components (default).",
+    "relations_labeled": "Build labeled clauses: '<relation> supports/attacks <fallacy>' per relation, "
+                         "using relations_label to pick the verb.",
 }
 
 
@@ -191,10 +224,15 @@ def embed_queries(retriever: str, chromadb_path: str, queries: list[str],
 
 def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
                       search_type: str, fetch_k: int, lambda_mult: float,
-                      score_threshold: float,
-                      query_embedding: list[float] | None = None) -> list:
+                      score_threshold: float, temporal_rag: bool,
+                      year: int | None, query_embedding: list[float] | None = None) -> list:
     """Run dense vector search and return up to *k* candidate documents."""
     vector_store = get_vector_store(retriever, chromadb_path)
+    # Year filtering is a Python post-filter on an unfiltered search: Chroma's where-clause
+    # degrades HNSW toward a full scan, while an unfiltered search runs at full index speed.
+    do_temporal = temporal_rag and year is not None
+    fetch = k * TEMPORAL_OVERFETCH if do_temporal else k
+
     effective_type = "similarity" if search_type == "hybrid" else search_type
 
     # Fast path: search straight from a pre-computed embedding to skip the per-row forward pass.
@@ -202,26 +240,38 @@ def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
     if query_embedding is not None and effective_type in ("similarity", "mmr"):
         if effective_type == "mmr":
             docs = vector_store.max_marginal_relevance_search_by_vector(
-                query_embedding, k=k, fetch_k=max(fetch_k, k), lambda_mult=lambda_mult
+                query_embedding, k=fetch, fetch_k=max(fetch_k, fetch), lambda_mult=lambda_mult
             )
         else:
-            docs = vector_store.similarity_search_by_vector(query_embedding, k=k)
+            docs = vector_store.similarity_search_by_vector(query_embedding, k=fetch)
     else:
-        kwargs = {"k": k}
+        kwargs = {"k": fetch}
         if effective_type == "mmr":
-            kwargs.update({"fetch_k": max(fetch_k, k), "lambda_mult": lambda_mult})
+            kwargs.update({"fetch_k": max(fetch_k, fetch), "lambda_mult": lambda_mult})
         elif effective_type == "similarity_score_threshold":
             kwargs.update({"score_threshold": score_threshold})
         ret = vector_store.as_retriever(search_type=effective_type, search_kwargs=kwargs)
         docs = ret.invoke(query)
 
+    if do_temporal:
+        # Missing year -> treat as future (year + 1) so it's excluded, matching the BM25 leg.
+        docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
+        docs = docs[:k]
     return docs
 
 
-def _bm25_candidates(query: str, chunk_size: int, chunk_overlap: int, k: int) -> list:
+def _bm25_candidates(query: str, chunk_size: int, chunk_overlap: int, k: int,
+                     temporal_rag: bool, year: int | None) -> list:
     """Run BM25 keyword search and return up to *k* candidate documents."""
-    bm25 = load_bm25_retriever(chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=k)
-    return bm25.invoke(query)[:k]
+    fetch_count = k * 10 if temporal_rag else k
+    bm25 = load_bm25_retriever(
+        chunk_size=chunk_size, chunk_overlap=chunk_overlap, top_k=fetch_count
+    )
+    docs = bm25.invoke(query)
+    if temporal_rag and year is not None:
+        # Missing year -> treat as future (year + 1) so it's excluded.
+        docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
+    return docs[:k]
 
 
 def reciprocal_rank_fusion(ranked_lists: list[list], rrf_k: int = 60,
@@ -277,6 +327,8 @@ def search_knowledge_base(query: str,
                           fetch_k: int = 20,
                           lambda_mult: float = 0.5,
                           score_threshold: float = 0.5,
+                          temporal_rag: bool = False,
+                          year: int | None = None,
                           rerank: bool = False,
                           reranker_model: str = DEFAULT_RERANKER,
                           rrf_k: int = 60,
@@ -291,19 +343,25 @@ def search_knowledge_base(query: str,
         dense = _dense_candidates(
             query, retriever, chromadb_path, k=pool, search_type="hybrid",
             fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-            query_embedding=query_embedding,
+            temporal_rag=temporal_rag, year=year, query_embedding=query_embedding,
         )
-        sparse = _bm25_candidates(query, chunk_size, chunk_overlap, k=pool)
+        sparse = _bm25_candidates(
+            query, chunk_size, chunk_overlap, k=pool,
+            temporal_rag=temporal_rag, year=year,
+        )
         candidates = reciprocal_rank_fusion(
             [dense, sparse], rrf_k=rrf_k, weights=[dense_weight, bm25_weight]
         )
     elif search_type == "bm25":
-        candidates = _bm25_candidates(query, chunk_size, chunk_overlap, k=pool)
+        candidates = _bm25_candidates(
+            query, chunk_size, chunk_overlap, k=pool,
+            temporal_rag=temporal_rag, year=year,
+        )
     else:
         candidates = _dense_candidates(
             query, retriever, chromadb_path, k=pool, search_type=search_type,
             fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-            query_embedding=query_embedding,
+            temporal_rag=temporal_rag, year=year, query_embedding=query_embedding,
         )
 
     if rerank:
@@ -368,14 +426,130 @@ def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 256) -> l
     return summaries
 
 
+def _parse_relations_text(raw) -> list[str]:
+    """Parse the ``relations_text`` cell (a stringified list) into a clean list of strings."""
+    if raw is None:
+        return []
+    s = str(raw).strip()
+    if s in ("", "nan", "[]", "None"):
+        return []
+    try:
+        parsed = ast.literal_eval(s)
+    except (ValueError, SyntaxError):
+        return [s]
+    if isinstance(parsed, (list, tuple)):
+        return [str(x).strip() for x in parsed if str(x).strip()]
+    return [str(parsed).strip()]
+
+
+def _parse_relations_label(raw) -> list[str]:
+    """Parse the ``relations_label`` cell (``;``-separated tags) into a clean list, aligned with relations_text."""
+    if raw is None:
+        return []
+    s = str(raw).strip()
+    if s in ("", "nan", "None"):
+        return []
+    return [part.strip() for part in s.split(";") if part.strip()]
+
+
+def _clean_components(text) -> list[str]:
+    """Split a fallacy/component cell on the ``|||`` separator into individual spans."""
+    if text is None:
+        return []
+    s = str(text).strip()
+    if s in ("", "nan", "None"):
+        return []
+    return [part.strip() for part in s.split(COMPONENT_SEP) if part.strip()]
+
+
+def build_retrieval_query(fallacy_text, relations_text, mode: str,
+                          relations_label=None) -> tuple[str, bool]:
+    """Build the relations-augmented retrieval query for one row; return (query, has_relations)."""
+    fallacy_parts = _clean_components(fallacy_text)
+    relation_parts = _parse_relations_text(relations_text)
+    has_relations = len(relation_parts) > 0
+
+    if mode == "relations_labeled":
+        # One clause per relation: "<relation> supports/attacks <fallacy>", verb from relations_label.
+        fallacy_str = ". ".join(p.rstrip(". ") for p in fallacy_parts if p)
+        if not has_relations:
+            query = fallacy_str  # no relation: retrieve with the fallacy alone
+        else:
+            label_parts = _parse_relations_label(relations_label)
+            clauses = []
+            for i, relation in enumerate(relation_parts):
+                label = label_parts[i] if i < len(label_parts) else "support"
+                verb = LABEL_VERBS.get(label.strip().lower(), label.strip().lower())
+                clause = f"{relation.rstrip('. ')} {verb} {fallacy_str.rstrip('. ')}".strip()
+                if clause:
+                    clauses.append(clause)
+            query = ", ".join(clauses)
+        if query and not query.endswith("."):
+            query += "."
+        return normalize_text(query), has_relations
+
+    if not has_relations:
+        parts = fallacy_parts  # no relation: retrieve with the fallacy alone
+    elif mode == "fallacy_only":
+        parts = fallacy_parts
+    elif mode == "relations_only":
+        parts = relation_parts
+    else:  # fallacy_relations (default)
+        parts = fallacy_parts + relation_parts
+
+    # Join with sentence-final punctuation so the embedding sees discrete spans.
+    query = ". ".join(p.rstrip(". ") for p in parts if p)
+    if query and not query.endswith("."):
+        query += "."
+    return normalize_text(query), has_relations
+
+
+def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
+    """Read the already sentence-level, pre-split propaganda CSVs, preserving the official splits.
+
+    Each ``{split}.csv`` row is one newspaper sentence with a binary ``label``
+    (``propaganda`` / ``non-propaganda``) and a ``sentence_id``. There is no speech turn,
+    character-level labels, spaCy splitting, class balancing, or re-splitting: the authors'
+    train/dev/test partition and natural class distribution are kept as-is. ``fallacy_label`` /
+    ``component_label`` are populated so the shared enrichment, statistics, and downstream
+    detection code keep working unchanged.
+    """
+    splits: dict[str, pd.DataFrame] = {}
+    for split in ["train", "dev", "test"]:
+        df = pd.read_csv(os.path.join(dataset_dir, f"{split}.csv"))
+        rows = []
+        for _, row in tqdm(df.iterrows(), total=len(df), desc=f"Processing {split} dataset."):
+            sentence = str(row["sentence"])
+            label = str(row["label"]).strip()  # 'propaganda' / 'non-propaganda'
+            techniques = str(row.get("techniques", "")).strip()
+            has_tech = techniques not in ("", "nan", "None")
+
+            rows.append({
+                "text": sentence,
+                "fallacy_label": label,
+                "component_label": techniques if (label == "propaganda" and has_tech) else "NoComponent",
+                "sentence": sentence,
+                "sentence_id": str(row["sentence_id"]),
+                "article_id": str(row["article_id"]),
+                "label_binary": row.get("label_binary"),
+            })
+        splits[split] = pd.DataFrame(rows).drop_duplicates().reset_index(drop=True)
+
+    return splits
+
+
 def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
                   *, retriever, search_type, chunk_size, chunk_overlap, top_k, fetch_k,
-                  lambda_mult, score_threshold, rerank,
+                  lambda_mult, score_threshold, temporal_rag, rerank,
                   reranker_model, rrf_k, dense_weight, bm25_weight, summarization_model,
-                  persist_directory_path) -> pd.DataFrame:
+                  persist_directory_path, record_query: bool) -> pd.DataFrame:
     """Attach a ``rag_context`` column to each row; ``query_fn(row)`` builds the query."""
     rows = [row for _, row in split_df.iterrows()]
-    queries = [query_fn(row) for row in rows]
+    queries, has_rel_flags = [], []
+    for row in rows:
+        q, has_relations = query_fn(row)
+        queries.append(q)
+        has_rel_flags.append(has_relations)
 
     # Encode every query for the split in one batched pass to avoid per-row GPU overhead.
     query_embeddings = None
@@ -388,6 +562,14 @@ def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
                                  desc=f"Enriching {split_name} with RAG context")):
         copy_row = row.copy()
         query = queries[i]
+        if record_query:
+            copy_row["retrieval_query"] = query
+            copy_row["has_relations"] = bool(has_rel_flags[i])
+
+        # Temporal filtering needs a debate year; the propaganda dataset has none, so pass
+        # year=None, which search_knowledge_base ignores unless temporal_rag is set.
+        year_val = row.get("year", None)
+        row_year = int(year_val) if year_val is not None and not pd.isna(year_val) else None
 
         passages = search_knowledge_base(
             query,
@@ -400,6 +582,8 @@ def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
             fetch_k=fetch_k,
             lambda_mult=lambda_mult,
             score_threshold=score_threshold,
+            temporal_rag=temporal_rag,
+            year=row_year,
             rerank=rerank,
             reranker_model=reranker_model,
             rrf_k=rrf_k,
@@ -417,7 +601,7 @@ def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
 
 
 def _run_pipeline(splits: dict[str, pd.DataFrame], query_fn, *, retriever, path,
-                  **enrich_kwargs) -> None:
+                  record_query: bool, **enrich_kwargs) -> None:
     """Enrich each split (if a retriever is set), write the CSVs, and print statistics."""
     if retriever:
         warm_retrievers(
@@ -429,7 +613,7 @@ def _run_pipeline(splits: dict[str, pd.DataFrame], query_fn, *, retriever, path,
         for name in ("train", "dev", "test"):
             splits[name] = _enrich_split(
                 splits[name], name, query_fn,
-                retriever=retriever, **enrich_kwargs
+                retriever=retriever, record_query=record_query, **enrich_kwargs
             )
 
     splits["train"].to_csv(f"{path}/train.csv", index=False)
@@ -439,77 +623,119 @@ def _run_pipeline(splits: dict[str, pd.DataFrame], query_fn, *, retriever, path,
     _print_dataset_statistics(splits["train"], splits["test"], splits["dev"])
 
 
-def _build_comment_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
-    """Build one row per full COI (no sentence splitting), keeping the original
-    train/dev/test partition from the authors. The comment-level label is
-    Fallacy if any character in the COI carries a non-'O' fallacy tag, else
-    NoFallacy — matching Sahai et al. (2021)'s comment-level (CL) task, where
-    the unit of classification is the whole COI rather than a span within it."""
-    splits: dict[str, pd.DataFrame] = {}
-    for split in ["train", "dev", "test"]:
-        df = pd.read_csv(os.path.join(dataset_dir, f"{split}.csv"))
-        dataset = []
-        for idx, row in tqdm(df.iterrows(), total=len(df), desc=f"Processing {split} dataset."):
-            text = row["speech_turn"]
-
-            fallacy_labels = ast.literal_eval(row["fallacy_labels"])
-
-            # Skip rows whose per-character labels don't line up with the text.
-            if len(text) != len(fallacy_labels):
-                logger.warning(
-                    f"Row {idx} ({split}): text length {len(text)} != "
-                    f"fallacy_labels length {len(fallacy_labels)} — skipping."
-                )
-                continue
-
-            # Reduce the whole comment's character labels to a single Fallacy/NoFallacy tag.
-            flabels = list(set(label for label in fallacy_labels if label != 'O'))
-            flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
-
-            item = {
-                "text": text,
-                "fallacy_label": flabels,
-                "speech_turn": text,
-            }
-            dataset.append(item)
-
-        split_df = pd.DataFrame(dataset)
-        split_df = split_df.replace({"nan": None})
-        split_df = split_df.dropna().drop_duplicates().reset_index(drop=True)
-        splits[split] = split_df
-
-    return splits
-
-
-def build_comment_mode(persist_directory_path: str,
-                       retriever: str | None,
-                       search_type: str,
-                       chunk_size: int,
-                       chunk_overlap: int,
-                       top_k: int,
-                       fetch_k: int,
-                       lambda_mult: float,
-                       score_threshold: float,
-                       summarization_model: str | None,
-                       rerank: bool,
-                       reranker_model: str,
-                       rrf_k: int,
-                       dense_weight: float,
-                       bm25_weight: float,
-                       dataset_dir: str,
-                       path: str) -> None:
-    """Run the 'comment' pipeline: one row per full COI; the retrieval query is
-    the full comment itself (Sahai et al. 2021's comment-level (CL) task)."""
-    splits = _build_comment_splits(dataset_dir)
+def build_sentence_mode(persist_directory_path: str,
+                        retriever: str | None,
+                        search_type: str,
+                        chunk_size: int,
+                        chunk_overlap: int,
+                        top_k: int,
+                        fetch_k: int,
+                        lambda_mult: float,
+                        score_threshold: float,
+                        summarization_model: str | None,
+                        temporal_rag: bool,
+                        rerank: bool,
+                        reranker_model: str,
+                        rrf_k: int,
+                        dense_weight: float,
+                        bm25_weight: float,
+                        dataset_dir: str,
+                        path: str) -> None:
+    """Run the 'sentence' pipeline: the retrieval query is the sentence itself."""
+    splits = _build_balanced_splits(dataset_dir)
 
     def query_fn(row):
-        return normalize_text(row["speech_turn"])
+        return normalize_text(row["sentence"]), None
 
     _run_pipeline(
-        splits, query_fn, retriever=retriever, path=path,
+        splits, query_fn, retriever=retriever, path=path, record_query=False,
         search_type=search_type, chunk_size=chunk_size, chunk_overlap=chunk_overlap,
         top_k=top_k, fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
-        rerank=rerank,
+        temporal_rag=temporal_rag, rerank=rerank,
+        reranker_model=reranker_model, rrf_k=rrf_k, dense_weight=dense_weight,
+        bm25_weight=bm25_weight, summarization_model=summarization_model,
+        persist_directory_path=persist_directory_path,
+    )
+
+
+def _load_relations_index(dataset_dir: str) -> dict[str, list[tuple[str, str]]]:
+    """Index ``relation-classification/predictions.csv`` as ``sentence_id -> [(text, label)]``.
+
+    The predictions file pairs every propaganda sentence (``fallacy_sentence_id``) with other
+    phrases of its article (``candidate_relation``), each carrying a ``predicted_relation``
+    (support / attack / no_relation). Only ``support`` and ``attack`` rows are kept; each is
+    recorded under the anchor sentence's id so a sentence in the split can look up the related
+    phrase text and its relation label by ``sentence_id``. Sentences absent from the index
+    (e.g. every non-propaganda sentence) fall back to the sentence during query building.
+    """
+    p = os.path.join(dataset_dir, "relation-classification", "predictions.csv")
+    index: dict[str, list[tuple[str, str]]] = {}
+    if not os.path.exists(p):
+        logger.warning(f"Missing {p}; relations for these rows will fall back to the sentence.")
+        return index
+    df = pd.read_csv(
+        p, usecols=["fallacy_sentence_id", "candidate_relation", "predicted_relation"],
+        dtype=str,
+    )
+    df["predicted_relation"] = df["predicted_relation"].astype(str).str.strip().str.lower()
+    df = df[df["predicted_relation"].isin(("support", "attack"))]
+    for fsid, sub in df.groupby("fallacy_sentence_id"):
+        pairs: list[tuple[str, str]] = []
+        for text, label in zip(sub["candidate_relation"], sub["predicted_relation"]):
+            text = str(text).strip()
+            if text and text not in ("nan", "None"):
+                pairs.append((text, label))
+        if pairs:
+            index[str(fsid)] = pairs
+    logger.info(f"Loaded support/attack relations for {len(index):,} sentences.")
+    return index
+
+
+def build_relations_mode(persist_directory_path: str,
+                         retriever: str,
+                         search_type: str,
+                         query_mode: str,
+                         chunk_size: int,
+                         chunk_overlap: int,
+                         top_k: int,
+                         fetch_k: int,
+                         lambda_mult: float,
+                         score_threshold: float,
+                         summarization_model: str | None,
+                         temporal_rag: bool,
+                         rerank: bool,
+                         reranker_model: str,
+                         rrf_k: int,
+                         dense_weight: float,
+                         bm25_weight: float,
+                         dataset_dir: str,
+                         path: str) -> None:
+    """Run the 'relations' pipeline: the query is sentence + its support/attack relations."""
+    splits = _build_balanced_splits(dataset_dir)
+    index = _load_relations_index(dataset_dir)
+
+    def query_fn(row):
+        sentence = row["sentence"]
+        # Pull this sentence's predicted support/attack relations from predictions.csv,
+        # matched by sentence_id (== fallacy_sentence_id).
+        relations = index.get(str(row["sentence_id"]), [])
+        # No support/attack relation predicted for this sentence: fall back to the sentence.
+        if not relations:
+            return normalize_text(sentence), False
+        relations_text = str([t for t, _ in relations])
+        relations_label = ";".join(l for _, l in relations)
+        query, has_relations = build_retrieval_query(
+            sentence, relations_text, query_mode, relations_label
+        )
+        if not query:
+            return normalize_text(sentence), False
+        return query, has_relations
+
+    _run_pipeline(
+        splits, query_fn, retriever=retriever, path=path, record_query=True,
+        search_type=search_type, chunk_size=chunk_size, chunk_overlap=chunk_overlap,
+        top_k=top_k, fetch_k=fetch_k, lambda_mult=lambda_mult, score_threshold=score_threshold,
+        temporal_rag=temporal_rag, rerank=rerank,
         reranker_model=reranker_model, rrf_k=rrf_k, dense_weight=dense_weight,
         bm25_weight=bm25_weight, summarization_model=summarization_model,
         persist_directory_path=persist_directory_path,
@@ -534,6 +760,12 @@ def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame,
         for label in fallacy_counts.index:
             logger.info(f"    {label:<30s} {fallacy_counts[label]:>6,}  ({fallacy_pct[label]:.1f}%)")
 
+        logger.info("  Component label distribution:")
+        component_counts = df["component_label"].value_counts()
+        component_pct = df["component_label"].value_counts(normalize=True) * 100
+        for label in component_counts.index:
+            logger.info(f"    {label:<30s} {component_counts[label]:>6,}  ({component_pct[label]:.1f}%)")
+
     total = sum(len(df) for df in splits.values())
     logger.info(f"\nTotal samples across all splits: {total:,}")
     logger.info("=" * 60)
@@ -542,22 +774,33 @@ def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame,
 def _build_arg_parser() -> argparse.ArgumentParser:
     """Define and return the command-line argument parser."""
     parser = argparse.ArgumentParser(
-        description="Build comment-level (CL) fallacy-detection datasets from the reddit "
-                    "dataset, with optional (hybrid / reranked) RAG context. One row per "
-                    "full COI; retrieval query = the full comment (Sahai et al. 2021)."
+        description="Build BIO-tag fallacy-detection datasets with optional (hybrid / "
+                    "reranked) RAG context. Use --mode to pick the dataset-construction path."
+    )
+    parser.add_argument(
+        "--mode",
+        default="sentence",
+        choices=list(DATASET_MODES),
+        help="; ".join(f"{k}: {v}" for k, v in DATASET_MODES.items()),
     )
     parser.add_argument(
         "--retriever",
         default=None,
         choices=list(EMBEDDING_MODELS),
-        help="Embedding model for the dense leg. Omit it for a no-RAG dataset. Required "
-             "for hybrid/dense search.",
+        help="Embedding model for the dense leg. In 'sentence' mode, omit it for a "
+             "no-RAG dataset. Required for hybrid/dense search and for 'relations' mode.",
     )
     parser.add_argument(
         "--search-type",
         default="similarity",
         choices=list(SEARCH_TYPES),
         help="Retrieval strategy (default: similarity).",
+    )
+    parser.add_argument(
+        "--query-mode",
+        default="fallacy_relations",
+        choices=list(QUERY_MODES),
+        help="(relations mode only) " + "; ".join(f"{k}: {v}" for k, v in QUERY_MODES.items()),
     )
     parser.add_argument(
         "--rerank",
@@ -584,8 +827,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument("--persist-directory", default="./chromadb",
                         help="Path to the Chroma vector store directory (default: ./chromadb).")
-    parser.add_argument("--dataset-dir", default="datasets/reddit-dataset",
-                        help="Directory holding the input CSVs (default: datasets/reddit-dataset).")
+    parser.add_argument("--dataset-dir", default="datasets/propaganda-dataset",
+                        help="Directory holding the input CSVs (default: datasets/propaganda-dataset).")
     parser.add_argument("--chunk-size", type=int, default=1000,
                         help="BM25 text splitter chunk size in characters (default: 1000).")
     parser.add_argument("--chunk-overlap", type=int, default=200,
@@ -598,6 +841,8 @@ def _build_arg_parser() -> argparse.ArgumentParser:
                         help="MMR diversity factor between 0 (max diversity) and 1 (max relevance) (default: 0.5).")
     parser.add_argument("--score-threshold", type=float, default=0.5,
                         help="Minimum similarity score for similarity_score_threshold retrieval (default: 0.5).")
+    parser.add_argument("--temporal-rag", action="store_true", default=False,
+                        help="Only retrieve knowledge base documents whose year is before the debate year.")
     return parser
 
 
@@ -605,22 +850,28 @@ if __name__ == "__main__":
     parser = _build_arg_parser()
     args = parser.parse_args()
 
-    # Validate retriever / search-type combinations before doing any work.
+    # Validate retriever / search-type / mode combinations before doing any work.
     if args.search_type == "hybrid" and args.retriever not in DENSE_MODELS:
         parser.error("--search-type hybrid requires a dense --retriever (not bm25).")
     if args.search_type == "bm25" and args.retriever != "bm25":
         parser.error("--search-type bm25 requires --retriever bm25.")
     if args.retriever == "bm25" and args.search_type != "bm25":
         parser.error("--retriever bm25 only supports --search-type bm25.")
+    if args.temporal_rag:
+        assert args.retriever is not None, "--temporal-rag requires a --retriever."
+    if args.mode == "relations" and args.retriever is None:
+        parser.error("--mode relations requires a --retriever.")
 
     # Encode the run configuration into the output directory name.
-    path = str(Path(args.dataset_dir) / "classification" / "temporal=false")
+    path = str(Path(args.dataset_dir) / "detection" / f"temporal={str(args.temporal_rag)}")
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
         path += f"-search={args.search_type}"
         path += f"-rerank={args.reranker_model.replace('/', '-') if args.rerank else 'false'}"
     else:
         path += "-retriever=false"
+    if args.mode == "relations":
+        path += f"-query={args.query_mode}"
     if args.summarization_model:
         path += f"-summarizer={args.summarization_model.replace('/', '-')}"
     else:
@@ -628,22 +879,46 @@ if __name__ == "__main__":
     path = path.lower()
     os.makedirs(path, exist_ok=True)
 
-    build_comment_mode(
-        persist_directory_path=args.persist_directory,
-        retriever=args.retriever,
-        search_type=args.search_type,
-        chunk_size=args.chunk_size,
-        chunk_overlap=args.chunk_overlap,
-        top_k=args.top_k,
-        fetch_k=args.fetch_k,
-        lambda_mult=args.lambda_mult,
-        score_threshold=args.score_threshold,
-        summarization_model=args.summarization_model,
-        rerank=args.rerank,
-        reranker_model=args.reranker_model,
-        rrf_k=args.rrf_k,
-        dense_weight=args.dense_weight,
-        bm25_weight=args.bm25_weight,
-        dataset_dir=args.dataset_dir,
-        path=path,
-    )
+    if args.mode == "sentence":
+        build_sentence_mode(
+            persist_directory_path=args.persist_directory,
+            retriever=args.retriever,
+            search_type=args.search_type,
+            chunk_size=args.chunk_size,
+            chunk_overlap=args.chunk_overlap,
+            top_k=args.top_k,
+            fetch_k=args.fetch_k,
+            lambda_mult=args.lambda_mult,
+            score_threshold=args.score_threshold,
+            summarization_model=args.summarization_model,
+            temporal_rag=args.temporal_rag,
+            rerank=args.rerank,
+            reranker_model=args.reranker_model,
+            rrf_k=args.rrf_k,
+            dense_weight=args.dense_weight,
+            bm25_weight=args.bm25_weight,
+            dataset_dir=args.dataset_dir,
+            path=path,
+        )
+    else:  # relations
+        build_relations_mode(
+            persist_directory_path=args.persist_directory,
+            retriever=args.retriever,
+            search_type=args.search_type,
+            query_mode=args.query_mode,
+            chunk_size=args.chunk_size,
+            chunk_overlap=args.chunk_overlap,
+            top_k=args.top_k,
+            fetch_k=args.fetch_k,
+            lambda_mult=args.lambda_mult,
+            score_threshold=args.score_threshold,
+            summarization_model=args.summarization_model,
+            temporal_rag=args.temporal_rag,
+            rerank=args.rerank,
+            reranker_model=args.reranker_model,
+            rrf_k=args.rrf_k,
+            dense_weight=args.dense_weight,
+            bm25_weight=args.bm25_weight,
+            dataset_dir=args.dataset_dir,
+            path=path,
+        )
