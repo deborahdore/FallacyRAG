@@ -379,7 +379,8 @@ def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -
             continue
         entries.append((model_map[model_name], mode, lr or "", epoch or ""))
         if mode == "fine_tune":
-            logger.info("[llm]     %-30s best = mode-fine_tune_lr%s_ep%s (%s=%.4f)", model_name, lr, epoch, metric, score)
+            logger.info("[llm]     %-30s best = mode-fine_tune_lr%s_ep%s (%s=%.4f)", model_name, lr, epoch, metric,
+                        score)
         else:
             logger.info("[llm]     %-30s best = mode-%s (%s=%.4f)", model_name, mode, metric, score)
 
@@ -534,10 +535,12 @@ echo "Best-hyperparameter multi-seed LLM sweep complete. Failed runs (if any) lo
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("output_folder", help="e.g. output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false")
+    parser.add_argument("output_folder",
+                        help="e.g. output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false")
     parser.add_argument("--template", default="script/03-fallacy_no_rag.sh", help="Encoder template sbatch script.")
     parser.add_argument("--llm-template", default="script/03-fallacy_no_rag_llm.sh", help="LLM template sbatch script.")
-    parser.add_argument("--seeds", type=int, nargs="+", default=[14, 42, 55, 89, 3], help="Seeds to run each best config with.")
+    parser.add_argument("--seeds", type=int, nargs="+", default=[14, 42, 55, 89, 3],
+                        help="Seeds to run each best config with.")
     parser.add_argument("--output", default=None,
                         help="Path for the encoder script (default: script/05-best_hparams_<data>_<task>_<dataset>.sh).")
     parser.add_argument("--llm-output", default=None,
