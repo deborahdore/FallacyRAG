@@ -10,14 +10,14 @@ be fallacious and the model only has to decide *which* fallacy type(s) it exhibi
 The label inventory is a fixed set of six categories. Canonical labels (exactly as they appear in the `fallacy_label`
 column) and their human-readable forms:
 
-| Canonical label       | Human-readable        |
-|-----------------------|-----------------------|
-| `AdHominem`           | Ad Hominem            |
-| `AppealtoAuthority`   | Appeal to Authority   |
-| `AppealtoEmotion`     | Appeal to Emotion     |
-| `FalseCause`          | False Cause           |
-| `Slipperyslope`       | Slippery Slope        |
-| `Slogans`             | Slogan                |
+| Canonical label     | Human-readable      |
+|---------------------|---------------------|
+| `AdHominem`         | Ad Hominem          |
+| `AppealtoAuthority` | Appeal to Authority |
+| `AppealtoEmotion`   | Appeal to Emotion   |
+| `FalseCause`        | False Cause         |
+| `Slipperyslope`     | Slippery Slope      |
+| `Slogans`           | Slogan              |
 
 Two scripts are provided, covering encoder-based fine-tuning and LLM-based inference/fine-tuning:
 
@@ -33,12 +33,12 @@ Two scripts are provided, covering encoder-based fine-tuning and LLM-based infer
 Each example contains a short **sentence** extracted from a debate turn, the full **speech turn** for context, an
 optional **retrieved context** field (when `--use_rag` is set), and a fallacy-type label.
 
-| Column          | Description                                                              |
-|-----------------|--------------------------------------------------------------------------|
-| `sentence`      | The sentence to classify                                                 |
-| `speech_turn`   | The full debate turn the sentence was extracted from                     |
-| `context`       | Pre-built RAG context (only present in `rag/` split variants)            |
-| `fallacy_label` | One of the six canonical fallacy types (see the table above)             |
+| Column          | Description                                                   |
+|-----------------|---------------------------------------------------------------|
+| `sentence`      | The sentence to classify                                      |
+| `speech_turn`   | The full debate turn the sentence was extracted from          |
+| `context`       | Pre-built RAG context (only present in `rag/` split variants) |
+| `fallacy_label` | One of the six canonical fallacy types (see the table above)  |
 
 ---
 
@@ -51,7 +51,8 @@ Fine-tunes a BERT-style encoder for multi-class classification. Each example is 
 [CLS] sentence [SEP] speech_turn context_1 … context_n [SEP]        (with RAG)
 ```
 
-The `[CLS]` representation is passed to a linear head sized to the number of fallacy types. The label set is derived from
+The `[CLS]` representation is passed to a linear head sized to the number of fallacy types. The label set is derived
+from
 the data at run time (sorted for determinism), and training uses a **class-weighted cross-entropy loss** to offset the
 imbalance between fallacy types.
 
@@ -108,7 +109,7 @@ trims the retrieved context rather than the local debate context).
 
 `run_classification.py` therefore exposes only two RAG-related arguments:
 
-| Argument                | Default | Description                                                                    |
+| Argument                | Default | Description                                                                     |
 |-------------------------|---------|---------------------------------------------------------------------------------|
 | `--use_rag`             | `False` | Read the pre-built `context` field from the dataset and append it to the input. |
 | `--context_column_name` | `None`  | Name of the column holding the retrieved context (typically `context`).         |
@@ -122,26 +123,26 @@ The retrieval strategy is chosen when the datasets are built. The script sentenc
 `NoFallacy` sentences, re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes
 them into the `context` column. Key arguments:
 
-| Argument                | Default                                   | Description                                                                                                                        |
-|-------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
-| `--mode`                | `sentence`                                | `sentence` — query with the bare sentence; `relations` — query with the fallacy text plus its related components.                 |
-| `--query-mode`          | `fallacy_relations`                       | (`relations` mode only) `fallacy_relations` — concatenate fallacy + relation text; `relations_labeled` — one `<relation> supports/attacks <fallacy>` clause per relation. |
-| `--retriever`           | `None`                                    | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `ddore14/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset. |
-| `--search-type`         | `similarity`                              | Retrieval strategy: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`, `hybrid`.                                          |
-| `--persist-directory`   | `./chromadb`                              | ChromaDB persistence directory for dense search.                                                                                  |
-| `--chunk-size`          | `1000`                                    | Document chunk size for the BM25 leg.                                                                                             |
-| `--chunk-overlap`       | `200`                                     | Chunk overlap for the BM25 leg.                                                                                                   |
-| `--top-k`               | `3`                                       | Number of documents to keep per example.                                                                                          |
-| `--fetch-k`             | `20`                                      | Candidate pool size fetched before MMR / reranking narrows it to `top-k`.                                                         |
-| `--lambda-mult`         | `0.5`                                     | MMR relevance/diversity trade-off (`mmr` search only).                                                                            |
-| `--score-threshold`     | `0.5`                                     | Minimum similarity score (`similarity_score_threshold` search only).                                                             |
-| `--rrf-k`               | `60`                                      | Reciprocal Rank Fusion constant (`hybrid` search only).                                                                          |
-| `--dense-weight`        | `1.0`                                     | Weight of the dense leg in hybrid fusion.                                                                                        |
-| `--bm25-weight`         | `1.0`                                     | Weight of the BM25 leg in hybrid fusion.                                                                                         |
-| `--rerank`              | `False`                                   | Rerank the candidate pool with a local cross-encoder before keeping `top-k`.                                                     |
-| `--reranker-model`      | `cross-encoder/ms-marco-MiniLM-L-6-v2`    | Cross-encoder used for reranking.                                                                                                |
-| `--summarization-model` | `None`                                    | Optional LLM to summarise retrieved passages before writing them. Supported: `meta-llama/Llama-3.1-8B-Instruct`, `Qwen/Qwen3.5-9B-Base`. If `None`, passages are written verbatim. |
-| `--temporal-rag`        | `False`                                   | Only retrieve knowledge-base documents whose year precedes the debate year.                                                       |
+| Argument                | Default                                | Description                                                                                                                                                                        |
+|-------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `--mode`                | `sentence`                             | `sentence` — query with the bare sentence; `relations` — query with the fallacy text plus its related components.                                                                  |
+| `--query-mode`          | `fallacy_relations`                    | (`relations` mode only) `fallacy_relations` — concatenate fallacy + relation text; `relations_labeled` — one `<relation> supports/attacks <fallacy>` clause per relation.          |
+| `--retriever`           | `None`                                 | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `ddore14/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset.                    |
+| `--search-type`         | `similarity`                           | Retrieval strategy: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`, `hybrid`.                                                                                           |
+| `--persist-directory`   | `./chromadb`                           | ChromaDB persistence directory for dense search.                                                                                                                                   |
+| `--chunk-size`          | `1000`                                 | Document chunk size for the BM25 leg.                                                                                                                                              |
+| `--chunk-overlap`       | `200`                                  | Chunk overlap for the BM25 leg.                                                                                                                                                    |
+| `--top-k`               | `3`                                    | Number of documents to keep per example.                                                                                                                                           |
+| `--fetch-k`             | `20`                                   | Candidate pool size fetched before MMR / reranking narrows it to `top-k`.                                                                                                          |
+| `--lambda-mult`         | `0.5`                                  | MMR relevance/diversity trade-off (`mmr` search only).                                                                                                                             |
+| `--score-threshold`     | `0.5`                                  | Minimum similarity score (`similarity_score_threshold` search only).                                                                                                               |
+| `--rrf-k`               | `60`                                   | Reciprocal Rank Fusion constant (`hybrid` search only).                                                                                                                            |
+| `--dense-weight`        | `1.0`                                  | Weight of the dense leg in hybrid fusion.                                                                                                                                          |
+| `--bm25-weight`         | `1.0`                                  | Weight of the BM25 leg in hybrid fusion.                                                                                                                                           |
+| `--rerank`              | `False`                                | Rerank the candidate pool with a local cross-encoder before keeping `top-k`.                                                                                                       |
+| `--reranker-model`      | `cross-encoder/ms-marco-MiniLM-L-6-v2` | Cross-encoder used for reranking.                                                                                                                                                  |
+| `--summarization-model` | `None`                                 | Optional LLM to summarise retrieved passages before writing them. Supported: `meta-llama/Llama-3.1-8B-Instruct`, `Qwen/Qwen3.5-9B-Base`. If `None`, passages are written verbatim. |
+| `--temporal-rag`        | `False`                                | Only retrieve knowledge-base documents whose year precedes the debate year.                                                                                                        |
 
 **Retrieval strategies at a glance:**
 

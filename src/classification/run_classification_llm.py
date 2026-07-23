@@ -1304,6 +1304,7 @@ def main():
                 fh.write(f"{idx}\t{pred_str}\t{gold_str}\n")
         logger.info(f"Predictions saved to {output_path}")
 
+
 # ── Thin wrapper to reuse fine-tuned model for inference ──────────────────────
 
 class _FineTunedLocalEngine:
