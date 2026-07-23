@@ -11,12 +11,16 @@
 
 ## 🚀 Overview
 
-**Fallacies** are arguments that rely on faulty or misleading reasoning [(Goffredo et al., 2023)](https://aclanthology.org/2023.emnlp-main.684.pdf).
+**Fallacies** are arguments that rely on faulty or misleading
+reasoning [(Goffredo et al., 2023)](https://aclanthology.org/2023.emnlp-main.684.pdf).
 
-The goal of this project is to improve **fallacy detection and classification** in political discourse using **Retrieval-Augmented Generation (RAG)**. 
-By grounding large language models in external knowledge sources, the system aims to provide more accurate classifications and clearer explanations of fallacious arguments in US political debates.
+The goal of this project is to improve **fallacy detection and classification** in political discourse using *
+*Retrieval-Augmented Generation (RAG)**.
+By grounding large language models in external knowledge sources, the system aims to provide more accurate
+classifications and clearer explanations of fallacious arguments in US political debates.
 
-Experiments are conducted using the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains transcripts from U.S. political debates from 1960 to 2020.
+Experiments are conducted using the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains
+transcripts from U.S. political debates from 1960 to 2020.
 
 ## 🎯 Tasks
 
