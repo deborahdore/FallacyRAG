@@ -164,6 +164,4 @@ dmypy.json
 
 /knowledge_base/
 knowledge_base
-
-*.idea
-/.idea/
+output/trained-models
