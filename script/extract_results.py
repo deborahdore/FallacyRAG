@@ -17,6 +17,10 @@ The config folder name mirrors the layout produced by
            [-query=<q>]-summarizer=<sum|false>
 The ``-search``/``-rerank`` segments are present only when a retriever is set,
 and ``-query`` only for the relations mode.
+
+Tasks with no RAG dimension at all (e.g. output/one-run/LIARArg-relation-classification)
+use a single literal ``baseline`` config folder instead -- treated as the no-retrieval case
+(temporal=false, retriever/search/rerank/query=none, summarizer=none).
 """
 
 import json
@@ -50,9 +54,26 @@ CONFIG_RE = re.compile(
     r"-summarizer=(?P<summarizer>.+)$"
 )
 
+BASELINE_FOLDER = "baseline"
+
 
 def parse_config_folder(folder_name: str) -> dict:
-    """Parse RAG hyper-parameters from the top-level folder namCOLUMNSe."""
+    """Parse RAG hyper-parameters from the top-level folder name.
+
+    Tasks with no RAG dimension (e.g. LIARArg-relation-classification) use a single literal
+    "baseline" folder instead of the temporal=/retriever=/... naming -- treat it as the
+    no-retrieval case rather than failing to parse.
+    """
+    if folder_name == BASELINE_FOLDER:
+        return {
+            "temporal": False,
+            "retriever": "none",
+            "search": "none",
+            "rerank": "none",
+            "query": "none",
+            "summarizer": "none",
+        }
+
     m = CONFIG_RE.search(folder_name)
     if not m:
         raise ValueError(f"Cannot parse config folder name: {folder_name!r}")

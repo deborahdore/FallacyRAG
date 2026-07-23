@@ -35,12 +35,8 @@ wandb disabled
 SEED=14
 export PYTHONHASHSEED=$SEED
 
-data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
+data="elecdeb60to20"  # elecdeb60to20 | reddit
 task=detection
-
-if [[ "$data" == "falcon" ]]; then
-  task=classification
-fi
 
 export WANDB_PROJECT="fallacy_$task"
 

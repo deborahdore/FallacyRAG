@@ -6,7 +6,7 @@ The label format is auto-detected (see ``detect_label_columns``):
   - single-label  : one categorical column (``--label_column_name``, default ``fallacy_label``),
                     softmax head + class-weighted cross-entropy, argmax decoding
                     (elecdeb / reddit).
-  - multi-label   : several 0/1 indicator columns (FALCON's six fallacies + "None of the
+  - multi-label   : several 0/1 indicator columns (one per fallacy + "None of the
                     above"), sigmoid head + pos_weight BCEWithLogitsLoss (per-class
                     inverse-frequency weighting), threshold decoding, and
                     macro/micro/weighted/samples F1 metrics. Force it with
@@ -166,7 +166,7 @@ class DataTrainingArguments:
     )
     label_column_names: Optional[str] = field(
         default=None,
-        metadata={"help": "Comma-separated 0/1 label columns for MULTI-LABEL classification (FALCON). "
+        metadata={"help": "Comma-separated 0/1 label columns for MULTI-LABEL classification. "
                           "If set, forces multi-label mode. If omitted, the label format is "
                           "auto-detected: a present --label_column_name -> single-label; otherwise "
                           "two or more binary (0/1) non-metadata columns -> multi-label."},
@@ -207,6 +207,16 @@ class DataTrainingArguments:
     shuffle_seed: int = field(
         default=42,
         metadata={"help": "Random seed for shuffling the training dataset."},
+    )
+    oversample_minority: bool = field(
+        default=False,
+        metadata={"help": "Duplicate rare-class training rows up to ~1/3 of the majority class count "
+                          "(single-label only; skipped for multi-label, where labels aren't hashable)."},
+    )
+    oversample_max_repeats: int = field(
+        default=10,
+        metadata={"help": "Cap on how many times a single minority-class row can be duplicated, so one "
+                          "example isn't cloned hundreds of times when it's extremely rare."},
     )
     # ── RAG-specific ──────────────────────────────────────────────────────
     use_rag: bool = field(
@@ -454,7 +464,7 @@ def main():
     is_multi_label, label_columns = detect_label_columns(raw_datasets, data_args, ref_split)
 
     if is_multi_label:
-        # Each fallacy class (incl. "None of the above") is its own 0/1 column (FALCON).
+        # Each fallacy class (incl. "None of the above") is its own 0/1 column.
         # Column order defines the output-neuron order and the multi-hot target order.
         label_list = list(label_columns)
         num_labels = len(label_list)

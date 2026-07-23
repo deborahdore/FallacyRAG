@@ -1,163 +1,86 @@
 #!/bin/bash
-#SBATCH --job-name=relations
-#SBATCH --output=logs/relations_%j.out
-#SBATCH --error=logs/relations_%j.out
+#SBATCH --job-name=create-db
+#SBATCH --output=logs/create-db_%j.out
+#SBATCH --error=logs/create-db_%j.out
 #SBATCH --gres=gpu:1
 
 set -e
 export TOKENIZERS_PARALLELISM=false
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 
-# ---------------------------------------------------------------------------
-# Usage: 02-create_database.sh [basic|relations|reranked]
-#   basic      Basic RAG enrichment (with summarization-model variants)
-#   reranked   Hybrid RAG enrichment (sentence mode, hybrid+rerank)
-#   relations  Relations-aware RAG enrichment (hybrid+rerank and similarity)
-# ---------------------------------------------------------------------------
-RUN_MODE="${1:-relations}"
-
+TASKS=(classification detection)
 TEMPORAL_BOOLS=(True False)
-TASK=classification
-SCRIPT_PATH="datasets/elecdeb60to20-dataset/$TASK/create_db.py"
 
-for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
-  if [[ "$TEMPORAL_BOOL" == "True" ]]; then
-      TEMPORAL_FLAG="--temporal-rag"
-  else
-      TEMPORAL_FLAG=""
-  fi
+DENSE_RETRIEVERS=(
+    "BAAI/bge-large-en-v1.5"
+    "ddore14/Sentence-RooseBERT"
+    "sentence-transformers/all-mpnet-base-v2"
+)
+DENSE_SEARCH_TYPES=(similarity hybrid)
+QUERY_MODES=(fallacy_relations relations_labeled)
 
-#  summarization_models=(
-#      "meta-llama/Llama-3.1-8B-Instruct"
-#      "Qwen/Qwen3.5-9B-Base"
-#  )
+FAILED_RUNS=()
 
-  case "$RUN_MODE" in
-      basic)
-          retrievers=(
-              "BAAI/bge-large-en-v1.5"
-              "bm25"
-              "ddore14/Sentence-RooseBERT"
-              "sentence-transformers/all-mpnet-base-v2"
-          )
+run() {
+    echo "------------------------------------------------------------------------"
+    echo "python $*"
+    echo "------------------------------------------------------------------------"
+    if ! python "$@"; then
+        echo "FAILED: python $*"
+        FAILED_RUNS+=("python $*")
+    fi
+}
 
-          for retriever in "${retrievers[@]}"; do
-              echo "========================================================================"
-              echo "Basic RAG enrichment"
-              echo "Retriever: $retriever"
-              echo "========================================================================"
+for TASK in "${TASKS[@]}"; do
+  SCRIPT_PATH="datasets/elecdeb60to20-dataset/$TASK/create_db.py"
 
-              if [[ "$retriever" == "bm25" ]]; then
-                  search_type="--search-type bm25"
-              else
-                  search_type="--search-type similarity"
-              fi
+  for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
+    if [[ "$TEMPORAL_BOOL" == "True" ]]; then
+        TEMPORAL_FLAG="--temporal-rag"
+    else
+        TEMPORAL_FLAG=""
+    fi
 
-              python "$SCRIPT_PATH" --retriever "$retriever" $search_type $TEMPORAL_FLAG
+    echo "========================================================================"
+    echo "TASK=$TASK  TEMPORAL_RAG=$TEMPORAL_BOOL"
+    echo "========================================================================"
 
-  #            for model in "${summarization_models[@]}"; do
-  #                python "$SCRIPT_PATH" --retriever "$retriever" --summarization-model "$model" $search_type $TEMPORAL_FLAG
-  #            done
-          done
-          ;;
+    # --- No-RAG baseline: sentence mode, no retriever. --temporal-rag asserts a
+    # retriever is set, so this combination only exists without it. ---
+    if [[ "$TEMPORAL_BOOL" == "False" ]]; then
+        run "$SCRIPT_PATH" --mode sentence
+    fi
 
-      relations)
-          retrievers=(
-              "BAAI/bge-large-en-v1.5"
-              "ddore14/Sentence-RooseBERT"
-              "sentence-transformers/all-mpnet-base-v2"
-          )
+    # --- Dense retrievers x every dense search-type.
+    # (bm25 is only valid paired with --search-type hybrid, covered below.)
+    # similarity never reranks; hybrid always reranks. ---
+    for RETRIEVER in "${DENSE_RETRIEVERS[@]}"; do
+      for SEARCH_TYPE in "${DENSE_SEARCH_TYPES[@]}"; do
+        if [[ "$SEARCH_TYPE" == "hybrid" ]]; then
+            RERANK="--rerank"
+        else
+            RERANK=""
+        fi
 
-          for retriever in "${retrievers[@]}"; do
-              echo "========================================================================"
-              echo "Relations Aware RAG enrichment"
-              echo "Retriever: $retriever"
-              echo "========================================================================"
+        run "$SCRIPT_PATH" --mode sentence --retriever "$RETRIEVER" --search-type "$SEARCH_TYPE" \
+            --fetch-k 30 --top-k 5 $RERANK $TEMPORAL_FLAG
 
-              python "$SCRIPT_PATH" \
-                --mode "relations" \
-                --retriever "$retriever"\
-                --search-type "hybrid" \
-                --rerank \
-                --fetch-k 30 \
-                --top-k 5 \
-                $TEMPORAL_FLAG \
-                --query-mode "relations_labeled"
-
-              python "$SCRIPT_PATH" \
-                    --mode "relations" \
-                    --retriever "$retriever"\
-                    --search-type "similarity" \
-                    $TEMPORAL_FLAG \
-                    --query-mode "relations_labeled"
-
-
-              python "$SCRIPT_PATH" \
-                --mode "relations" \
-                --retriever "$retriever"\
-                --search-type "hybrid" \
-                --rerank \
-                --fetch-k 30 \
-                --top-k 5 \
-                $TEMPORAL_FLAG \
-                --query-mode "fallacy_relations"
-
-              python "$SCRIPT_PATH" \
-                    --mode "relations" \
-                    --retriever "$retriever"\
-                    --search-type "similarity" \
-                    $TEMPORAL_FLAG \
-                    --query-mode "fallacy_relations"
-
-  #            for model in "${summarization_models[@]}"; do
-  #                python "$SCRIPT_PATH" --mode relations --retriever "$retriever" \
-  #                --query-mode "relations_labeled" \
-  #                --search-type "hybrid" \
-  #                --rerank \
-  #                --fetch-k 30 \
-  #                --top-k 5 \
-  #                --summarization-model "$model" \
-  #                $TEMPORAL_FLAG
-  #            done
-          done
-          ;;
-
-      reranked)
-          retrievers=(
-              "BAAI/bge-large-en-v1.5"
-              "ddore14/Sentence-RooseBERT"
-              "sentence-transformers/all-mpnet-base-v2"
-          )
-
-          for retriever in "${retrievers[@]}"; do
-              echo "========================================================================"
-              echo "Hybrid RAG enrichment"
-              echo "Retriever: $retriever"
-              echo "========================================================================"
-
-              python "$SCRIPT_PATH" --mode sentence --retriever "$retriever"\
-                --search-type "hybrid" \
-                --rerank \
-                --fetch-k 30 \
-                --top-k 3 \
-                $TEMPORAL_FLAG
-
-  #            for model in "${summarization_models[@]}"; do
-  #                python "$SCRIPT_PATH" --mode sentence --retriever "$retriever" \
-  #                --search-type "hybrid" \
-  #                --rerank \
-  #                --fetch-k 30 \
-  #                --top-k 5 \
-  #                --summarization-model "$model" \
-  #                $TEMPORAL_FLAG
-  #            done
-          done
-          ;;
-
-      *)
-          echo "Unknown mode: $RUN_MODE"
-          echo "Usage: $0 [basic|relations|reranked]"
-          exit 1
-          ;;
-  esac
+        for QUERY_MODE in "${QUERY_MODES[@]}"; do
+            run "$SCRIPT_PATH" --mode relations --retriever "$RETRIEVER" --search-type "$SEARCH_TYPE" \
+                --fetch-k 30 --top-k 5 $RERANK $TEMPORAL_FLAG --query-mode "$QUERY_MODE"
+        done
+      done
+    done
+  done
 done
+
+echo "========================================================================"
+echo "Done. ${#FAILED_RUNS[@]} run(s) failed."
+for f in "${FAILED_RUNS[@]}"; do
+    echo "  FAILED: $f"
+done
+echo "========================================================================"
+
+if [[ ${#FAILED_RUNS[@]} -gt 0 ]]; then
+    exit 1
+fi

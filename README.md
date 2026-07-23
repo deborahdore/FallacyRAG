@@ -93,7 +93,6 @@ datasets/                          # source data + per-dataset RAG-enrichment sc
     detection/create_db.py          # builds RAG-enriched detection datasets
     classification/create_db.py     # builds RAG-enriched classification datasets
   reddit-dataset/                   # same layout, Reddit dataset
-  falcon-dataset/                   # same layout, Falcon dataset
 
 script/                             # sbatch / driver scripts
   00-create_knowledge_base.sh
@@ -113,11 +112,11 @@ output/
 Each `create_db.py` reads its raw splits from `--dataset-dir` (default `datasets/<name>-dataset`) and writes the
 RAG-enriched splits back under `<dataset-dir>/<task>/<config>/{train,dev,test}.csv`.
 
-The `03-*.sh` / `04-*.sh` training scripts default to the ElecDeb60to20 dataset. To point them at Reddit or Falcon
+The `03-*.sh` / `04-*.sh` training scripts default to the ElecDeb60to20 dataset. To point them at Reddit
 instead, edit the `data` variable near the top of the script:
 
 ```bash
-data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
+data="elecdeb60to20"  # elecdeb60to20 | reddit
 ```
 
 which is used to build both the input paths (`datasets/$data-dataset/...`) and the output paths

@@ -1,7 +1,7 @@
 """
 Dataset-aware prompt configuration for fallacy classification and detection.
 
-This module maps datasets (elecdeb60to20, reddit, falcon) to their corresponding
+This module maps datasets (elecdeb60to20, reddit) to their corresponding
 system prompts, based on the papers and annotation schemes used.
 
 The prompt is automatically selected based on the dataset path or name provided
@@ -29,7 +29,7 @@ def identify_dataset(train_file: Optional[str]) -> str:
     Returns
     -------
     str
-        One of: "elecdeb60to20", "reddit", "falcon", or "unknown".
+        One of: "elecdeb60to20", "reddit", or "unknown".
 
     Examples
     --------
@@ -37,8 +37,6 @@ def identify_dataset(train_file: Optional[str]) -> str:
     'elecdeb60to20'
     >>> identify_dataset("./datasets/reddit-dataset/detection/train.csv")
     'reddit'
-    >>> identify_dataset("./datasets/falcon-dataset/classification/train.csv")
-    'falcon'
     """
     if train_file is None:
         return "unknown"
@@ -49,8 +47,6 @@ def identify_dataset(train_file: Optional[str]) -> str:
         return "elecdeb60to20"
     elif "reddit" in path:
         return "reddit"
-    elif "falcon" in path:
-        return "falcon"
     else:
         return "unknown"
 
@@ -107,28 +103,6 @@ CLASSIFICATION_PROMPTS = {
         "contain no fallacy at all. "
         "Answer with exactly one of those eight type names, or \"No Fallacy\" if the "
         "sentence contains none of them, and nothing else."
-    ),
-    "falcon": (
-        "You are an expert in argumentation theory and fallacy detection. "
-        "Your task is to identify which fallacy types, if any, a given tweet related to "
-        "COVID-19 contains. A fallacy is a deceptive argumentative move that appears valid "
-        "but violates principles of correct reasoning. A tweet may contain several of these "
-        "fallacies at once, or none at all. "
-        "Consider only these six fallacy types:\n"
-        "- Loaded Language: using words or phrases with strong positive or negative "
-        "connotations to influence the audience and invoke an emotional response.\n"
-        "- Appeal to Fear: eliciting fear in the audience to support a claim.\n"
-        "- Appeal to Ridicule: presenting the opponent's argument as absurd, ridiculous, or "
-        "humorous, mocking their point of view.\n"
-        "- Hasty Generalization: making a broad statement about a group or population based "
-        "on a limited or unrepresentative sample.\n"
-        "- Ad Hominem: attacking the person, or some aspect of the person, making the argument "
-        "rather than addressing the argument itself.\n"
-        "- False Dilemma: presenting a situation as having only two alternatives when in "
-        "reality more options exist, oversimplifying a complex issue.\n"
-        "List every fallacy type that applies, separated by commas, using exactly those "
-        "names. If the tweet contains none of them, answer exactly \"None of the above\" "
-        "and nothing else."
     ),
     "unknown": (
         "You are an expert in argumentation theory and political discourse analysis. "
@@ -203,15 +177,6 @@ _LABEL_TO_LLM_BY_DATASET: dict[str, dict[str, str]] = {
         "HastyGeneralization": "Hasty Generalization",
         "SlipperySlope": "Slippery Slope",
     },
-    "falcon": {
-        # In the FALCON CSV the canonical label already equals the readable name.
-        "Loaded Language": "Loaded Language",
-        "Appeal to Fear": "Appeal to Fear",
-        "Appeal to Ridicule": "Appeal to Ridicule",
-        "Hasty Generalization": "Hasty Generalization",
-        "Ad Hominem": "Ad Hominem",
-        "False Dilemma": "False Dilemma",
-    },
 }
 _LABEL_TO_LLM_BY_DATASET["unknown"] = _LABEL_TO_LLM_BY_DATASET["elecdeb60to20"]
 
@@ -244,16 +209,6 @@ _EXTRA_ALIASES_BY_DATASET: dict[str, dict[str, list[str]]] = {
                                 "generalization"],
         "SlipperySlope": ["slippery slope", "slippery", "slope",
                           "thin edge of the wedge", "camel's nose"],
-    },
-    "falcon": {
-        "Loaded Language": ["loaded language", "loaded"],
-        "Appeal to Fear": ["appeal to fear", "fear"],
-        "Appeal to Ridicule": ["appeal to ridicule", "ridicule", "mockery"],
-        "Hasty Generalization": ["hasty generalization", "hasty generalisation",
-                                 "generalization"],
-        "Ad Hominem": ["ad hominem", "ad-hominem", "personal attack"],
-        "False Dilemma": ["false dilemma", "false dichotomy", "black or white",
-                          "bifurcation"],
     },
 }
 _EXTRA_ALIASES_BY_DATASET["unknown"] = _EXTRA_ALIASES_BY_DATASET["elecdeb60to20"]

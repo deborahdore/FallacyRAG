@@ -5,9 +5,9 @@ Given an output/one-run/<data>-<task>/<dataset> folder, find every model's
 best hyperparameter configuration and emit sbatch scripts under script/ that
 re-run only those best configs, once per seed (default: 14, 42, 55, 89, 3).
 
-<data> is inferred from the output folder itself (elecdeb60to20, falcon, or
-reddit — anything matching datasets/<data>-dataset/) and threaded through to
-the generated script, so this works unmodified for any of the three datasets.
+<data> is inferred from the output folder itself (elecdeb60to20 or reddit —
+anything matching datasets/<data>-dataset/) and threaded through to the
+generated script, so this works unmodified for any of the datasets.
 
 Two families of runs are handled, each cloned from its own template:
 
@@ -39,9 +39,6 @@ Examples:
         output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false
 
     python src/utils/generate_best_hparam_script.py \
-        output/one-run/falcon-detection/temporal=false-retriever=false-summarizer=false
-
-    python src/utils/generate_best_hparam_script.py \
         output/one-run/reddit-classification/temporal=false-retriever=false-summarizer=false
 """
 
@@ -66,7 +63,7 @@ MODE_FINE_TUNE_RE = re.compile(r"^mode-fine_tune_bs\d+_lr(?P<lr>[0-9.eE+-]+)_ep(
 MODE_SIMPLE_RE = re.compile(r"^mode-(?P<mode>zero_shot|few_shot)$")
 
 # Matches the "<data>-<task>" folder name directly under output/one-run/, e.g.
-# "elecdeb60to20-detection", "falcon-classification", "reddit-detection".
+# "elecdeb60to20-detection", "reddit-classification", "reddit-detection".
 DATA_TASK_RE = re.compile(r"^(?P<data>.+)-(?P<task>detection|classification)$")
 
 MODELS_BLOCK_RE = re.compile(r"MODELS=\((.*?)^\)", re.DOTALL | re.MULTILINE)
@@ -122,7 +119,7 @@ def extract_header(template_path: str) -> str:
 
 def parse_data_task(output_folder: str) -> tuple[str, str]:
     """Split the "<data>-<task>" folder name (parent of the dataset-config folder)
-    into its ``data`` (elecdeb60to20 / falcon / reddit) and ``task``
+    into its ``data`` (elecdeb60to20 / reddit) and ``task``
     (detection / classification) components."""
     data_task = os.path.basename(os.path.dirname(output_folder))
     m = DATA_TASK_RE.match(data_task)
@@ -222,7 +219,7 @@ def build_encoder_script(output_folder: str, template_path: str, seeds: list[int
 
     body = f"""wandb disabled
 
-data="{data}"  # elecdeb60to20 | falcon | reddit
+data="{data}"  # elecdeb60to20 | reddit
 task={task}
 dataset="{dataset}"
 
@@ -395,7 +392,7 @@ def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -
 
     body = f"""wandb disabled
 
-data="{data}"  # elecdeb60to20 | falcon | reddit
+data="{data}"  # elecdeb60to20 | reddit
 task={task}
 dataset="{dataset}"
 

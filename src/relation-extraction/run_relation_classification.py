@@ -1,6 +1,5 @@
 """
-Fine-tuning BERT-style models for relation classification, augmented with retrieved
-knowledge-base context (RAG).
+Fine-tuning BERT-style models for relation classification.
 
 Task
 ----
@@ -12,25 +11,11 @@ A softmax head is trained with class-weighted cross-entropy and decoded with arg
 
 Architecture
 ------------
-For each example the tokenizer receives:
+For each example the tokenizer receives a sentence pair:
 
-    [CLS] sentence [SEP] context_1 … context_n [SEP]   (with RAG)
-    [CLS] sentence [SEP]                                 (without RAG)
+    [CLS] sentence1 [SEP] sentence2 [SEP]
 
-The [CLS] token representation is used for classification. BERT's bidirectional
-self-attention propagates knowledge-base signal into the sentence representation.
-
-Retrieval (optional, controlled by --use_rag)
----------------------------------------------
-  - BM25  : lexical retrieval via BM25Retriever
-  - dense : vector-store similarity / MMR search (ChromaDB)
-
-Summarisation (optional, controlled by --summarization_model)
---------------------------------------------------------------
-  - Local  : meta-llama/Llama-3.1-8B-Instruct
-             mistralai/Mistral-7B-Instruct-v0.3
-  - API    : gpt-4o-mini  (requires OPENAI_API_KEY)
-  - None   : raw retrieved passages are appended verbatim (truncated)
+The [CLS] token representation is used for classification.
 """
 
 from __future__ import annotations
@@ -121,7 +106,7 @@ class ModelArguments:
 
 @dataclass
 class DataTrainingArguments:
-    """Arguments for data loading, preprocessing, and retrieval-augmentation."""
+    """Arguments for data loading and preprocessing."""
 
     dataset_name: Optional[str] = field(
         default=None,
@@ -133,28 +118,23 @@ class DataTrainingArguments:
     )
     train_file: Optional[str] = field(
         default="./datasets/elecdeb60to20-dataset/classification/train.csv",
-        metadata={"help": "Training data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
+        metadata={"help": "Training data file (CSV or JSON)."},
     )
     validation_file: Optional[str] = field(
         default="./datasets/elecdeb60to20-dataset/classification/dev.csv",
-        metadata={"help": "Validation data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
+        metadata={"help": "Validation data file (CSV or JSON)."},
     )
     test_file: Optional[str] = field(
         default="./datasets/elecdeb60to20-dataset/classification/test.csv",
-        metadata={
-            "help": "Test / prediction data file (CSV or JSON). Use the rag/ subdirectory when --use_rag is set."},
+        metadata={"help": "Test / prediction data file (CSV or JSON)."},
     )
     text_column_name: Optional[str] = field(
-        default="sentence",
-        metadata={"help": "Column containing the input sentence text."},
+        default="sentence1",
+        metadata={"help": "Column containing the first sentence of the pair."},
     )
     speech_turn_column_name: Optional[str] = field(
-        default="speech_turn",
-        metadata={"help": "Column containing the input speech turn text."},
-    )
-    context_column_name: Optional[str] = field(
-        default=None,
-        metadata={"help": "Column containing the RAG context text (used when --use_rag is set)."},
+        default="sentence2",
+        metadata={"help": "Column containing the second sentence of the pair."},
     )
     label_column_name: Optional[str] = field(
         default="relation_label",
@@ -193,11 +173,6 @@ class DataTrainingArguments:
         default=42,
         metadata={"help": "Random seed for shuffling the training dataset."},
     )
-    # ── RAG-specific ──────────────────────────────────────────────────────
-    use_rag: bool = field(
-        default=False,
-        metadata={"help": "Read the pre-built 'context' field from the dataset and append it to each BERT input."},
-    )
 
     def __post_init__(self):
         if self.dataset_name is None and self.train_file is None and self.validation_file is None:
@@ -206,13 +181,6 @@ class DataTrainingArguments:
             path = getattr(self, attr)
             if path is not None and path.rsplit(".", 1)[-1] not in ("csv", "json"):
                 raise ValueError(f"{attr} must be a .csv or .json file.")
-        # Convenience: if --use_rag is set and the default no_rag paths are still in place,
-        # automatically redirect to the rag/ subdirectory.
-        if self.use_rag:
-            for attr in ("train_file", "validation_file", "test_file"):
-                path = getattr(self, attr)
-                if path is not None and "/no_rag/" in path:
-                    setattr(self, attr, path.replace("/no_rag/", "/rag/"))
 
 
 def get_label_list(raw_datasets, split: str = "train", label_column: str = "label") -> list[str]:
@@ -275,7 +243,7 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
 
 
 def main():
-    """Load data, tokenize with optional RAG context, and train/evaluate/predict the classifier."""
+    """Load data, tokenize sentence pairs, and train/evaluate/predict the classifier."""
     parser = HfArgumentParser((ModelArguments, DataTrainingArguments, TrainingArguments))
     if len(sys.argv) == 2 and sys.argv[1].endswith(".json"):
         model_args, data_args, training_args = parser.parse_json_file(
@@ -393,41 +361,16 @@ def main():
 
     text_column_name = data_args.text_column_name
     speech_turn_column_name = data_args.speech_turn_column_name
-    context_column_name = data_args.context_column_name
 
     def preprocess_function(examples):
-        """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
-        if data_args.use_rag and context_column_name:
-            # speech_turn comes first so truncation trims rag_context, not the local context.
-            if speech_turn_column_name == text_column_name:
-                # reddit-dataset
-                result = tokenizer(
-                    examples[text_column_name],
-                    examples[context_column_name],
-                    padding=padding,
-                    max_length=max_seq_length,
-                    truncation=True,
-                )
-            else:
-                combined_b = [
-                    f"{st} {ctx}" if (ctx is not None and isinstance(ctx, str) and ctx.strip()) else st
-                    for st, ctx in zip(examples[speech_turn_column_name], examples[context_column_name])
-                ]
-                result = tokenizer(
-                    examples[text_column_name],
-                    combined_b,
-                    padding=padding,
-                    max_length=max_seq_length,
-                    truncation=True,
-                )
-        else:
-            result = tokenizer(
-                examples[text_column_name],
-                examples[speech_turn_column_name],
-                padding=padding,
-                max_length=max_seq_length,
-                truncation=True,
-            )
+        """Tokenize sentence1 (segment A) and sentence2 (segment B)."""
+        result = tokenizer(
+            examples[text_column_name],
+            examples[speech_turn_column_name],
+            padding=padding,
+            max_length=max_seq_length,
+            truncation=True,
+        )
 
         if "label" in examples:
             result["label"] = [

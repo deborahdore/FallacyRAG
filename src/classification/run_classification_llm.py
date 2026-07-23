@@ -9,7 +9,7 @@ it contains from the dataset's inventory.
   - single-label (elecdeb / reddit): one categorical ``fallacy_label`` column;
     exactly one type per example. For elecdeb there is no "none" option; reddit
     additionally allows "No Fallacy".
-  - multi-label (FALCON): several 0/1 indicator columns; a sentence may carry
+  - multi-label: several 0/1 indicator columns; a sentence may carry
     multiple fallacies or none. "None of the above" is an explicit, exclusive
     class — if it is predicted it is the sole answer, and an empty prediction
     defaults to it.
@@ -70,7 +70,6 @@ Dataset-aware prompts
   The system prompt is automatically selected based on the dataset used:
   - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
   - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
-  - falcon: References "FALCON: A multi-label graph-based dataset for fallacy classification in the COVID-19 infodemic"
   - unknown: Uses a generic prompt
   The dataset is automatically identified from the training file path.
 """
@@ -113,7 +112,7 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # ── Label constants (dataset-aware) ─────────────────────────────────────────────
 #
-# The label inventory depends on the dataset (elecdeb60to20, reddit, falcon). The
+# The label inventory depends on the dataset (elecdeb60to20, reddit). The
 # globals below are populated at runtime in main() from
 # src.utils.dataset_prompts.get_label_config(), so switching datasets automatically
 # switches the canonical labels, the human-readable names, the alias map used to
@@ -132,11 +131,11 @@ LABEL_TO_LLM: dict[str, str] = {}
 ALIAS_TO_LABEL: dict[str, str] = {}
 _LABEL_MENU: str = ""
 
-# Whether the current dataset is multi-label (FALCON: several 0/1 fallacy columns +
+# Whether the current dataset is multi-label (several 0/1 fallacy columns +
 # an explicit "None of the above" class) vs single-label (elecdeb / reddit). Set in main().
 IS_MULTI_LABEL: bool = False
 
-# The explicit negative class used in multi-label mode. Its column in the FALCON CSV is
+# The explicit negative class used in multi-label mode. Its column in the CSV is
 # "None of the above"; it is exclusive with every fallacy and is the empty-row default.
 NONE_LABEL = "None of the above"
 NONE_ALIASES = ["None of the above", "none of the above", "none", "no fallacy", "nofallacy"]
@@ -180,7 +179,7 @@ def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool,
     """Decide single- vs multi-label and return ``(is_multi_label, label_columns)``.
 
     A present single ``--label_column_name`` -> single-label; otherwise two or more binary
-    (0/1) non-metadata columns -> multi-label (FALCON).
+    (0/1) non-metadata columns -> multi-label.
     """
     columns = raw_datasets[ref_split].column_names
     if data_args.label_column_name in columns:
@@ -223,7 +222,7 @@ def _apply_label_config(train_file) -> None:
 def _register_none_class() -> None:
     """Register the explicit 'None of the above' class in the label globals (multi-label only).
 
-    ``get_label_config`` only lists the positive fallacy classes; multi-label FALCON also has
+    ``get_label_config`` only lists the positive fallacy classes; multi-label datasets also have
     an explicit negative class that must be a recognised, parseable, and scored label.
     """
     global ALL_LABELS

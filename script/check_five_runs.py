@@ -40,11 +40,10 @@ ENCODERS = [
     "RooseBERT-cont-cased", "RooseBERT-cont-uncased",
     "RooseBERT-scr-cased", "RooseBERT-scr-uncased",
     "deberta-v3-base", "legalbert",
-    "longformer-base-4096", "roberta-base", "xlm-roberta-base",
+    "longformer-base-4096", "roberta-base",
 ]
 LLMS = [
-    "Llama-3.1-8B-Instruct", "Mistral-7B-Instruct-v0.3",
-    "Qwen3.5-9B-Base", "gpt-oss-20b",
+    "Llama-3.1-8B-Instruct", "Qwen3.5-9B-Base", "gpt-oss-20b",
 ]
 ALL_MODELS = ENCODERS + LLMS  # every config folder should contain all 15
 
@@ -124,7 +123,7 @@ def check(base: Path):
 
 if __name__ == "__main__":
     dataset = "elecdeb60to20"
-    task = "classification"
+    task = "detection"
     default = root / "output" / "five-runs" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default
     sys.exit(check(base))

@@ -26,12 +26,8 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
-data="elecdeb60to20"  # elecdeb60to20 | falcon | reddit
+data="elecdeb60to20"  # elecdeb60to20 | reddit
 task=detection
-
-if [[ "$data" == "falcon" ]]; then
-  task=classification
-fi
 
 dataset="temporal=false-retriever=false-summarizer=false"
 
@@ -46,7 +42,6 @@ MODELS=(
     "allenai/longformer-base-4096"
     "answerdotai/ModernBERT-base"
     "FacebookAI/roberta-base"
-    "FacebookAI/xlm-roberta-base"
     "casehold/legalbert"
     "MARIANNE-INRIA/RooseBERT-cont-uncased"
     "MARIANNE-INRIA/RooseBERT-cont-cased"

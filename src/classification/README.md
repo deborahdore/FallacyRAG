@@ -115,9 +115,8 @@ trims the retrieved context rather than the local debate context).
 
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/classification/create_db.py`
 
-The same `create_db.py` script (with different defaults) also exists for the other datasets:
-[`datasets/reddit-dataset/classification/create_db.py`](../../datasets/reddit-dataset/classification/create_db.py) and
-[`datasets/falcon-dataset/classification/create_db.py`](../../datasets/falcon-dataset/classification/create_db.py).
+The same `create_db.py` script (with different defaults) also exists for the other datasets, e.g.
+[`datasets/reddit-dataset/classification/create_db.py`](../../datasets/reddit-dataset/classification/create_db.py).
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, drops
 `NoFallacy` sentences, re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes

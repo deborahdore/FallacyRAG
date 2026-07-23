@@ -35,11 +35,10 @@ ENCODERS = [
     "RooseBERT-cont-cased", "RooseBERT-cont-uncased",
     "RooseBERT-scr-cased", "RooseBERT-scr-uncased",
     "deberta-v3-base", "legalbert",
-    "longformer-base-4096", "roberta-base", "xlm-roberta-base",
+    "longformer-base-4096", "roberta-base",
 ]
 LLMS = [
-    "Llama-3.1-8B-Instruct", "Mistral-7B-Instruct-v0.3",
-    "Qwen3.5-9B-Base", "gpt-oss-20b",
+    "Llama-3.1-8B-Instruct", "Qwen3.5-9B-Base", "gpt-oss-20b", "Mistral-7B-Instruct-v0.3"
 ]
 
 # The 3 encoders every ordinary config folder must contain.
