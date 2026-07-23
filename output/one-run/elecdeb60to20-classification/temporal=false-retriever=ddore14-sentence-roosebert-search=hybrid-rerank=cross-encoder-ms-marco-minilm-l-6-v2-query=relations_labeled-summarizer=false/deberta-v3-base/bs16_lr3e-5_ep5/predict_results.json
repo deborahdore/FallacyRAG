@@ -1,5 +1,5 @@
 {
-    "epoch": 5.0,
+  "epoch": 5.0,
   "predict_accuracy": 0.6134969325153374,
   "predict_f1_AdHominem": 0.68,
   "predict_f1_AppealtoAuthority": 0.6875,
@@ -12,7 +12,7 @@
   "predict_precision": 0.49682539682539684,
   "predict_recall": 0.6675599700149926,
   "predict_runtime": 1.2226,
-    "predict_samples": 163,
+  "predict_samples": 163,
   "predict_samples_per_second": 133.32,
   "predict_steps_per_second": 8.997
 }

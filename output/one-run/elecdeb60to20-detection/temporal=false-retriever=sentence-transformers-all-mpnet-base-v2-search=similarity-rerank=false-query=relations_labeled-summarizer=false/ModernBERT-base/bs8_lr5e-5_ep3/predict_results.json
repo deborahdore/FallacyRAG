@@ -1,12 +1,12 @@
 {
-    "epoch": 3.0,
-    "predict_accuracy": 0.8012232415902141,
-    "predict_f1_macro": 0.8006191079217673,
-    "predict_loss": 0.635716438293457,
-    "predict_precision": 0.8045485506697949,
-    "predict_recall": 0.8010623971270387,
-    "predict_runtime": 20.299,
-    "predict_samples": 327,
-    "predict_samples_per_second": 16.109,
-    "predict_steps_per_second": 2.02
+  "epoch": 3.0,
+  "predict_accuracy": 0.8012232415902141,
+  "predict_f1_macro": 0.8006191079217673,
+  "predict_loss": 0.635716438293457,
+  "predict_precision": 0.8045485506697949,
+  "predict_recall": 0.8010623971270387,
+  "predict_runtime": 20.299,
+  "predict_samples": 327,
+  "predict_samples_per_second": 16.109,
+  "predict_steps_per_second": 2.02
 }
