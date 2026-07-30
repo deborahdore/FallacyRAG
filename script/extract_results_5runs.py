@@ -46,6 +46,8 @@ METRICS = [
     ("predict_recall", "recall"),
 ]
 
+BASELINE_CONFIGS = ("baseline", "temporal=false-retriever=false-summarizer=false")
+
 CONFIG_META_COLUMNS = [
     "task", "config", "temporal", "retriever", "search", "rerank", "query", "summarizer",
 ]
@@ -61,6 +63,11 @@ CONFIG_RE = re.compile(
 
 def parse_config_folder(folder_name: str) -> dict:
     """Parse RAG hyper-parameters from the config folder name."""
+    # "baseline" has no RAG config; use "none" for every hyper-parameter.
+    if folder_name == "baseline":
+        return {key: "none" for key in
+                ("temporal", "retriever", "search", "rerank", "query", "summarizer")}
+
     m = CONFIG_RE.search(folder_name)
     if not m:
         raise ValueError(f"Cannot parse config folder name: {folder_name!r}")
@@ -141,14 +148,32 @@ def summarise_config(config_path: str) -> pd.DataFrame:
         row = {"model": model_name, "n_seeds": len(seed_rows)}
         for col in metric_cols:
             values = pd.to_numeric(model_df.get(col), errors="coerce")
-            row[f"{col}_mean"] = values.mean()
-            row[f"{col}_std"] = values.std(ddof=1)  # sample std; NaN if a single seed
+            row[f"{col}_mean"] = round(values.mean(), 3)
+            # sample std; NaN if a single seed
+            row[f"{col}_std"] = round(values.std(ddof=1), 3)
+            # per-seed values, in seed order; missing metrics shown as "nan"
+            row[f"{col}_values"] = " ".join(
+                "nan" if pd.isna(v) else f"{round(v, 3)}" for v in values
+            )
         summary_rows.append(row)
 
     columns = ["model", "n_seeds"] + [
-        f"{col}_{stat}" for col in metric_cols for stat in ("mean", "std")
+        f"{col}_{stat}" for col in metric_cols for stat in ("mean", "std", "values")
     ]
     return pd.DataFrame(summary_rows, columns=columns)
+
+
+def add_baseline_deltas(agg_df: pd.DataFrame, metric_cols: list[str]) -> pd.DataFrame:
+    """Add per-model delta columns: config mean minus the baseline mean."""
+    baseline = agg_df[agg_df["config"].isin(BASELINE_CONFIGS)]
+    if baseline.empty:
+        logger.warning("No baseline config found — delta columns will be NaN")
+
+    for col in metric_cols:
+        ref = baseline.set_index("model")[f"{col}_mean"] if not baseline.empty else None
+        base_means = agg_df["model"].map(ref) if ref is not None else float("nan")
+        agg_df[f"{col}_delta"] = (agg_df[f"{col}_mean"] - base_means).round(3)
+    return agg_df
 
 
 def process_task(task_path: str, task_name: str) -> list[pd.DataFrame]:
@@ -204,9 +229,11 @@ if __name__ == "__main__":
 
         metric_cols = [main for main, _ in METRICS]
         ordered = CONFIG_META_COLUMNS + ["model", "n_seeds"] + [
-            f"{col}_{stat}" for col in metric_cols for stat in ("mean", "std")
+            f"{col}_{stat}" for col in metric_cols
+            for stat in ("mean", "std", "values", "delta")
         ]
         agg_df = pd.concat(aggregated, ignore_index=True)
+        agg_df = add_baseline_deltas(agg_df, metric_cols)
         agg_df = agg_df[[c for c in ordered if c in agg_df.columns]]
         agg_df = agg_df.sort_values(
             ["config", "predict_f1_macro_mean"], ascending=[True, False]

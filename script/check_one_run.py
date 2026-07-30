@@ -31,43 +31,47 @@ root = rootutils.find_root(search_from=__file__, indicator=".project-root")
 # ---------------------------------------------------------------------------
 
 ENCODERS = [
-    "ModernBERT-base", "NeoBERT",
-    "RooseBERT-cont-cased", "RooseBERT-cont-uncased",
-    "RooseBERT-scr-cased", "RooseBERT-scr-uncased",
-    "deberta-v3-base", "legalbert",
-    "longformer-base-4096", "roberta-base",
+    "ModernBERT-base",
+    "NeoBERT",
+    "RooseBERT-cont-cased",
+    "RooseBERT-cont-uncased",
+    "RooseBERT-scr-cased",
+    "RooseBERT-scr-uncased",
+    "deberta-v3-base",
+    "legalbert",
+    "longformer-base-4096",
+    "roberta-base",
 ]
 LLMS = [
-    "Llama-3.1-8B-Instruct", "Qwen3.5-9B-Base", "gpt-oss-20b", "Mistral-7B-Instruct-v0.3"
+    "Llama-3.1-8B-Instruct",
+    "Qwen3.5-9B-Base",
+    "gpt-oss-20b",
+    "Mistral-7B-Instruct-v0.3"
 ]
 
-# The 3 encoders every ordinary config folder must contain.
-# CLASSIFICATION
-REQUIRED_ENCODERS_CLASSIFICATION = ["legalbert", "roberta-base", "longformer-base-4096", "RooseBERT-cont-cased"]
-REQUIRED_ENCODERS_REDDIT_CLASSIFICATION = ["longformer-base-4096", "ModernBERT-base", "roberta-base"]
+BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline"]
 
-# DETECTION
-REQUIRED_ENCODERS_DETECTION = ["ModernBERT-base", "roberta-base", "longformer-base-4096", "RooseBERT-scr-cased"]
-REQUIRED_ENCODERS_REDDIT_DETECTION = ["deberta-v3-base", "ModernBERT-base", "roberta-base"]
+BEST_FOLDER_ELECDEB60TO20_DETECTION = "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
+BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 
-# Config folders that should instead contain the FULL model set (all encoders + LLMs).
-FULL_GRID_FOLDERS_DETECTION = {
-    "temporal=false-retriever=false-summarizer=false",
-    "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
-}
+BEST_FOLDER_PROPAGANDA_DETECTION = ""
 
-FULL_GRID_FOLDERS_CLASSIFICATION = {
-    "temporal=false-retriever=false-summarizer=false",
-    "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
-}
+BEST_FOLDER_REDDIT_DETECTION = ""
+BEST_FOLDER_REDDIT_DETECTION_CLASSIFICATION = ""
 
-# REDDIT ---------------------
-FULL_GRID_FOLDERS_REDDIT_DETECTION = {
-    "temporal=false-retriever=false-summarizer=false",
-}
-FULL_GRID_FOLDERS_REDDIT_CLASSIFICATION = {
-    "temporal=false-retriever=false-summarizer=false",
-}
+REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_DETECTION = ["RooseBERT-scr-cased",
+                                                         "ModernBERT-base",
+                                                         "RooseBERT-cont-cased"]
+REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = ["longformer-base-4096",
+                                                              "RooseBERT-cont-cased",
+                                                              "RooseBERT-scr-cased"]
+
+REQUIRED_ENCODERS_BEST_FOLDER_PROPAGANDA_DETECTION = ["deberta-v3-base",
+                                                      "Llama-3.1-8B-Instruct",
+                                                      "Mistral-7B-Instruct-v0.3"]
+
+REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_DETECTION = []
+REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_CLASSIFICATION = []
 
 # Completion markers
 ENCODER_MARKER = "predict_results.json"
@@ -92,24 +96,35 @@ LLM_COMBOS = (
 
 # ---------------------------------------------------------------------------
 
-def expected_models(config_name: str, base: Path):
-    if "reddit" in str(base):
+def expected_models(folder_name: str, base: Path):
+    if "elecdeb60to20" in str(base):
         if "classification" in str(base):
-            if config_name in FULL_GRID_FOLDERS_REDDIT_CLASSIFICATION:
+            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION:
                 return ENCODERS + LLMS
-            return REQUIRED_ENCODERS_REDDIT_CLASSIFICATION
+            return REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION
         else:
-            if config_name in FULL_GRID_FOLDERS_REDDIT_DETECTION:
+            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_ELECDEB60TO20_DETECTION:
                 return ENCODERS + LLMS
-            return REQUIRED_ENCODERS_REDDIT_DETECTION
-    if "classification" in str(base):
-        if config_name in FULL_GRID_FOLDERS_CLASSIFICATION:
+            return REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_DETECTION
+    elif "reddit" in str(base):
+        if "classification" in str(base):
+            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_REDDIT_DETECTION_CLASSIFICATION:
+                return ENCODERS + LLMS
+            return REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_CLASSIFICATION
+        else:
+            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_REDDIT_DETECTION:
+                return ENCODERS + LLMS
+            return REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_DETECTION
+    elif "propaganda" in str(base):
+        # propaganda is detection-only
+        if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_PROPAGANDA_DETECTION:
             return ENCODERS + LLMS
-        return REQUIRED_ENCODERS_CLASSIFICATION
-    else:
-        if config_name in FULL_GRID_FOLDERS_DETECTION:
-            return ENCODERS + LLMS
-        return REQUIRED_ENCODERS_DETECTION
+        return REQUIRED_ENCODERS_BEST_FOLDER_PROPAGANDA_DETECTION
+    # unknown dataset: nothing expected
+    elif "debagreeement" in str(base) or "LIARArg" in str(base):
+        return ENCODERS + LLMS
+
+    return []
 
 
 def check(base: Path):
@@ -174,8 +189,8 @@ def check(base: Path):
 
 
 if __name__ == "__main__":
-    dataset = "elecdeb60to20"
-    task = "classification"
+    dataset = "propaganda"
+    task = "detection"
     default = root / "output" / "one-run" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default
     sys.exit(check(base))

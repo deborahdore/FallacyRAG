@@ -49,8 +49,7 @@ for TEMPORAL_BOOL in "${TEMPORAL_BOOLS[@]}"; do
       run "$SCRIPT_PATH" --mode sentence
   fi
 
-  # --- Dense retrievers x every dense search-type.
-  # (bm25 is only valid paired with --search-type hybrid, covered below.)
+  # --- Dense retrievers x every dense search-type (bm25 only valid with hybrid).
   # similarity never reranks; hybrid always reranks. ---
   for RETRIEVER in "${DENSE_RETRIEVERS[@]}"; do
     for SEARCH_TYPE in "${DENSE_SEARCH_TYPES[@]}"; do

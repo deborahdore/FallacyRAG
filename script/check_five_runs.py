@@ -36,14 +36,22 @@ root = rootutils.find_root(search_from=__file__, indicator=".project-root")
 # ---------------------------------------------------------------------------
 
 ENCODERS = [
-    "ModernBERT-base", "NeoBERT",
-    "RooseBERT-cont-cased", "RooseBERT-cont-uncased",
-    "RooseBERT-scr-cased", "RooseBERT-scr-uncased",
-    "deberta-v3-base", "legalbert",
-    "longformer-base-4096", "roberta-base",
+    "ModernBERT-base",
+    "NeoBERT",
+    "RooseBERT-cont-cased",
+    "RooseBERT-cont-uncased",
+    "RooseBERT-scr-cased",
+    "RooseBERT-scr-uncased",
+    "deberta-v3-base",
+    "legalbert",
+    "longformer-base-4096",
+    "roberta-base",
 ]
 LLMS = [
-    "Llama-3.1-8B-Instruct", "Qwen3.5-9B-Base", "gpt-oss-20b",
+    "Llama-3.1-8B-Instruct",
+    "Qwen3.5-9B-Base",
+    "gpt-oss-20b",
+    "Mistral-7B-Instruct-v0.3"
 ]
 ALL_MODELS = ENCODERS + LLMS  # every config folder should contain all 15
 
@@ -122,7 +130,7 @@ def check(base: Path):
 
 
 if __name__ == "__main__":
-    dataset = "elecdeb60to20"
+    dataset = "propaganda"
     task = "detection"
     default = root / "output" / "five-runs" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default
