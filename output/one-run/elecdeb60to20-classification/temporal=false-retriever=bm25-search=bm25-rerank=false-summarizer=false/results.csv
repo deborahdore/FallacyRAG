@@ -1,5 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,RooseBERT-cont-cased,bs8_lr3e-5_ep5,0.5980230096070377,0.7055214723926381
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,legalbert,bs8_lr3e-5_ep5,0.6878109251623683,0.7300613496932515
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,longformer-base-4096,bs8_lr3e-5_ep5,0.5872815252182406,0.6871165644171779
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-classification/temporal=false-retriever=bm25-search=bm25-rerank=false-summarizer=false,False,bm25,bm25,none,none,none,roberta-base,bs8_lr2e-5_ep5,0.6433564808517198,0.754601226993865
