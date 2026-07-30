@@ -16,9 +16,9 @@ Each example is formatted as an instruction-following chat prompt:
 Post-processing
 ---------------
 The raw LLM response ("Yes" / "No") is translated to dataset labels
-before metrics and file output:
-    "Yes"  → "Fallacy"
-    "No"   → "NoFallacy"
+before metrics and file output. The label pair is dataset-aware:
+    fallacy datasets   : "Yes" → "Fallacy",    "No" → "NoFallacy"
+    propaganda dataset : "Yes" → "propaganda", "No" → "non-propaganda"
 
 Modes (--mode)
 --------------
@@ -46,9 +46,10 @@ Fine-tuning details
 
 Dataset-aware prompts
 ---------------------
-  The system prompt is automatically selected based on the dataset used:
+  The system prompt and label pair are automatically selected based on the dataset used:
   - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
   - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
+  - propaganda: News-article propaganda-technique detection (propaganda / non-propaganda labels)
   - unknown: Uses a generic prompt
   The dataset is automatically identified from the training file path.
 """
@@ -71,7 +72,7 @@ from transformers import HfArgumentParser, TrainingArguments, set_seed
 
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 
-from src.utils.dataset_prompts import get_detection_prompt
+from src.utils.dataset_prompts import get_detection_label_config, get_detection_prompt
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -83,27 +84,46 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # ── Label constants ────────────────────────────────────────────────────────────
 
-# Dataset-level labels (used for metrics, output files, and gold references)
-LABEL_FALLACY = "Fallacy"
-LABEL_NO_FALLACY = "NoFallacy"
-ALL_LABELS = [LABEL_FALLACY, LABEL_NO_FALLACY]
-
 # LLM-level response tokens (what the model is asked to produce)
 LLM_YES = "Yes"
 LLM_NO = "No"
 
-# Bidirectional mappings between LLM responses and dataset labels
-LABEL_TO_LLM: dict[str, str] = {
-    LABEL_FALLACY: LLM_YES,
-    LABEL_NO_FALLACY: LLM_NO,
-}
-LLM_TO_LABEL: dict[str, str] = {
-    LLM_YES: LABEL_FALLACY,
-    LLM_NO: LABEL_NO_FALLACY,
-}
+# Dataset-level labels and their mappings are dataset-aware and set in main()
+# via configure_detection_labels(). Defaults target the fallacy datasets
+# (elecdeb60to20, reddit); the propaganda dataset uses propaganda/non-propaganda.
+LABEL_FALLACY = "Fallacy"       # positive label
+LABEL_NO_FALLACY = "NoFallacy"  # negative label
+ALL_LABELS = [LABEL_FALLACY, LABEL_NO_FALLACY]
 
-# SYSTEM_PROMPT is now dynamically set during main() based on the dataset
+# Bidirectional mappings between LLM responses and dataset labels
+LABEL_TO_LLM: dict[str, str] = {LABEL_FALLACY: LLM_YES, LABEL_NO_FALLACY: LLM_NO}
+LLM_TO_LABEL: dict[str, str] = {LLM_YES: LABEL_FALLACY, LLM_NO: LABEL_NO_FALLACY}
+
+# SYSTEM_PROMPT and USER_QUESTION are dynamically set during main() per dataset
 SYSTEM_PROMPT = None  # Will be set in main()
+
+# The user-turn question; propaganda asks about a technique, fallacy datasets a fallacy.
+USER_QUESTION = (
+    'Does this sentence contain a fallacy? '
+    'Answer with exactly one word: "Yes" or "No".'
+)
+
+
+def configure_detection_labels(train_file: Optional[str]) -> None:
+    """Set the dataset-aware label and question globals from the detection config."""
+    global LABEL_FALLACY, LABEL_NO_FALLACY, ALL_LABELS, LABEL_TO_LLM, LLM_TO_LABEL
+    global USER_QUESTION
+    cfg = get_detection_label_config(train_file)
+    LABEL_FALLACY = cfg["positive_label"]
+    LABEL_NO_FALLACY = cfg["negative_label"]
+    ALL_LABELS = [LABEL_FALLACY, LABEL_NO_FALLACY]
+    LABEL_TO_LLM = {LABEL_FALLACY: LLM_YES, LABEL_NO_FALLACY: LLM_NO}
+    LLM_TO_LABEL = {LLM_YES: LABEL_FALLACY, LLM_NO: LABEL_NO_FALLACY}
+    target = "propaganda technique" if cfg["dataset"] == "propaganda" else "fallacy"
+    USER_QUESTION = (
+        f'Does this sentence contain a {target}? '
+        'Answer with exactly one word: "Yes" or "No".'
+    )
 
 
 # ── Dataclasses ────────────────────────────────────────────────────────────────
@@ -309,16 +329,13 @@ def build_user_message(
         context: Optional[str] = None,
 ) -> str:
     """Build the user-turn text for a single example."""
-    parts = [
-        f'Sentence: "{sentence}"',
-        f"Debate turn context:\n{speech_turn}",
-    ]
+    parts = [f'Sentence: "{sentence}"']
+    # Some datasets (e.g. propaganda) have no speech-turn context.
+    if speech_turn:
+        parts.append(f"Debate turn context:\n{speech_turn}")
     if context:
         parts.append(f"Retrieved context:\n{context}")
-    parts.append(
-        'Does this sentence contain a fallacy? '
-        'Answer with exactly one word: "Yes" or "No".'
-    )
+    parts.append(USER_QUESTION)
     return "\n\n".join(parts)
 
 
@@ -362,7 +379,8 @@ def format_for_sft(
 ) -> dict:
     """Format one training example as a complete chat string for SFTTrainer ({"text": ...})."""
     sentence = example[text_col] or ""
-    speech_turn = example[speech_turn_col] or ""
+    # speech_turn column is absent in some datasets (e.g. propaganda).
+    speech_turn = (example[speech_turn_col] if speech_turn_col in example else "") or ""
     context = example[context_col] if (use_rag and context_col and context_col in example) else None
     # Translate dataset label → LLM response token so the model learns to say "Yes"/"No"
     llm_target = LABEL_TO_LLM.get(str(example["label"]), LLM_NO)
@@ -420,7 +438,7 @@ def sample_few_shot_examples(
         for ex in chosen:
             record = {
                 "sentence": ex[text_col] or "",
-                "speech_turn": ex[speech_turn_col] or "",
+                "speech_turn": (ex[speech_turn_col] if speech_turn_col in ex else "") or "",
                 "label": label,
                 # Pre-translated response token used in the assistant turn of the prompt
                 "llm_response": LABEL_TO_LLM[label],
@@ -608,10 +626,8 @@ class LocalLLMInference:
         )
         load_kwargs = _build_load_kwargs(model_name_or_path, llm_args, base_kwargs, torch)
 
-        # Place the model on an accelerator. Plain from_pretrained leaves an unquantized
-        # model on CPU, where generation for a multi-billion-parameter model is extremely
-        # slow — the dominant cause of slow inference. Quantized models are placed by
-        # device_map at load time; unquantized ones are moved after loading.
+        # Place the model on an accelerator; CPU generation for a large model is very slow.
+        # Quantized models are placed by device_map at load; unquantized ones moved after.
         is_quantized = "quantization_config" in load_kwargs
         if torch.cuda.is_available():
             load_kwargs.setdefault("device_map", "auto")
@@ -703,7 +719,8 @@ def run_inference(
     messages_list = []
     for ex in dataset:
         sentence = ex[text_col] or ""
-        speech_turn = ex[speech_col] or ""
+        # speech_turn column is absent in some datasets (e.g. propaganda).
+        speech_turn = (ex[speech_col] if speech_col in ex else "") or ""
         context = ex[ctx_col] if (data_args.use_rag and ctx_col and ctx_col in ex) else None
 
         if llm_args.mode == "few_shot" and few_shot_examples:
@@ -891,8 +908,9 @@ def main():
     else:
         model_args, data_args, llm_args, training_args = parser.parse_args_into_dataclasses()
 
-    # ── Dynamically set the system prompt based on the dataset ──────────────────
+    # ── Dynamically set the system prompt and labels based on the dataset ───────
     SYSTEM_PROMPT = get_detection_prompt(data_args.train_file)
+    configure_detection_labels(data_args.train_file)
 
     logger.setLevel(logging.INFO)
     datasets.utils.logging.set_verbosity(logging.INFO)

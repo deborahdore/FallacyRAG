@@ -533,10 +533,6 @@ def main():
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
     # ── Tokenisation ──────────────────────────────────────────────────────
-    # Always use the model's own capacity as the maximum sequence length
-    # (e.g. 512 for BERT, 4096 for Longformer). Some tokenizers report a
-    # huge sentinel value (e.g. 1e30) when no limit is configured, so fall
-    # back to the config's positional-embedding size or a safe default.
     # Use the model's own capacity; some tokenizers report a huge sentinel, so fall back safely.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
@@ -637,8 +633,7 @@ def main():
 
     # ── Class weights (from train set) ────────────────────────────────────
     # Single-label: per-class inverse-frequency weights for cross-entropy.
-    # Multi-label:  per-class pos_weight = (#negatives / #positives) for BCE, which
-    #               up-weights the positive term of rare classes.
+    # Multi-label: per-class pos_weight = #neg/#pos for BCE, up-weighting rare classes.
     class_weights = None
     pos_weight = None
     if training_args.do_train and train_dataset is not None:

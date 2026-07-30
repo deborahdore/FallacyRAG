@@ -52,13 +52,9 @@ CHRONICLING_AMERICA_SEARCH_URL = "https://www.loc.gov/newspapers/"
 CHRONICLING_AMERICA_MIN_YEAR = 1770
 CHRONICLING_AMERICA_MAX_YEAR = 1963
 
-# --- American history (one Wikipedia "{year} in the United States" page per year) ---
 HISTORY_START_YEAR = 1900
 HISTORY_WIKI_TITLE = "{year} in the United States"
 
-# Broad "History of the United States (start–end)" era pages. These complement the per-year
-# pages with narrative overviews of each period. NOTE the titles use an en-dash (–), which is
-# the actual Wikipedia title character. `end_year=None` means "present".
 HISTORY_ERA_PAGES = [
     ("History of the United States (1917–1945)", 1917, 1945),
     ("History of the United States (1945–1964)", 1945, 1964),
@@ -78,22 +74,15 @@ SCHOLAR_QUERIES = [
 ]
 OPENALEX_URL = "https://api.openalex.org/works"
 CONTACT_EMAIL = os.environ.get("CONTACT_EMAIL", "research@example.com")
-# OpenAlex robustness: longer timeout + retries so a single slow response can't drop a
-# whole query (which previously let one query fill the entire quota with low-relevance hits).
 OPENALEX_TIMEOUT = 60
 OPENALEX_RETRIES = 3
-# Cap how many papers any one query may contribute, so the top relevant results of EVERY
-# query are kept instead of diving hundreds deep into a single query's ranking.
 PAPERS_PER_QUERY = 40
-# A paper is kept only if its title+abstract mentions one of these (precision gate).
 PAPER_RELEVANCE_KEYWORDS = (
     "fallac", "fallacious", "argument", "argumentation", "rhetoric", "debate",
     "propaganda", "persuas", "ad hominem", "appeal to", "sophis", "demagog",
     "political discourse", "political speech", "reasoning",
 )
 
-# HF datasets to ingest as labeled exemplars: (hf_id, config, split, text_col, label_col).
-# MAFALDA is NOT a HF dataset — it's handled separately from its GitHub JSONL (see below).
 EXEMPLAR_DATASETS = [
     ("tasksource/logical-fallacy", None, "train", "source_article", "logical_fallacies"),
 ]
@@ -101,10 +90,6 @@ MAFALDA_JSONL_URL = (
     "https://raw.githubusercontent.com/ChadiHelwe/MAFALDA/main/"
     "datasets/gold_standard_dataset.jsonl"
 )
-# Map the many fine-grained fallacy names used across corpora (LOGIC, MAFALDA, propaganda)
-# onto the six project categories. Keys are lowercased with hyphens normalised to spaces.
-# Names that have no equivalent among the six categories deliberately fall through to "Other"
-# and (with drop_other=True) are skipped, so only on-taxonomy exemplars are kept.
 FALLACY_LABEL_MAP = {
     # --- Ad Hominem ---
     "ad hominem": "Ad Hominem",
@@ -152,9 +137,8 @@ FALLACY_LABEL_MAP = {
     "slogans": "Slogan",
 }
 
-# --- Relevance filter for "connected" Wikipedia pages (keep fallacy/argumentation only) ---
-# Authoritative Wikipedia sub-categories that contain the actual fallacy articles. Their
-# members form a high-precision allowlist (e.g. "Ad hominem", "Slippery slope").
+# Authoritative fallacy sub-categories; their members form a high-precision allowlist
+# for filtering connected Wikipedia pages (e.g. "Ad hominem", "Slippery slope").
 FALLACY_WIKI_CATEGORIES = [
     "Relevance fallacies",
     "Causal fallacies",
@@ -224,7 +208,6 @@ def bills_and_laws(path: Path):
     """Ingest GovInfo bills/laws by topic, the US Government Manual, and the UDHR."""
     path.mkdir(parents=True, exist_ok=True)
 
-    # Cache once — avoids repeated env lookups on every request
     api_params = {"api_key": os.environ["GOVINFO_API_KEY"]}
 
     # =================== get bills and laws =================== #
@@ -390,8 +373,6 @@ def _papers_from_openalex(queries: list[str], n_papers: int, since_year: int,
                 "per-page": per_page,
                 "cursor": cursor,
                 "mailto": CONTACT_EMAIL,
-                # NOTE: `search` already returns results in descending relevance order;
-                # an explicit `sort=relevance_score:desc` is incompatible with cursor paging.
                 "select": "id,title,publication_year,abstract_inverted_index,"
                           "primary_location,open_access,relevance_score",
             }
@@ -487,9 +468,6 @@ def fallacy_papers(path: Path, n_papers: int = 200, since_year: int = 2015,
     saved = 0
     skipped_irrelevant = 0
     for paper in tqdm(stream, total=n_papers, desc=f"Fallacy papers ({backend})"):
-        # Relevance gate: keep only papers whose title+abstract actually concern
-        # fallacies / argumentation / political debate. This drops tangential matches
-        # (e.g. coastal degradation, space-weather) that merely share a query word.
         haystack = f"{paper['title']} {paper.get('abstract', '')}".lower()
         if not any(kw in haystack for kw in PAPER_RELEVANCE_KEYWORDS):
             skipped_irrelevant += 1
@@ -500,7 +478,6 @@ def fallacy_papers(path: Path, n_papers: int = 200, since_year: int = 2015,
             text = _download_and_ocr_pdf(paper["pdf_url"])
         if not text.strip():
             text = f"{paper['title']}. {paper.get('abstract', '')}".strip()
-        # Skip records with no usable content (e.g. no abstract available).
         if len(text.split()) < 5:
             continue
         try:
@@ -539,8 +516,6 @@ def _normalize_fallacy_label(raw) -> str:
 def _save_exemplar_record(path: Path, record_id: str, example: str, category: str,
                           source: str, url: str) -> bool:
     """Write a single labeled exemplar record. Returns True on success."""
-    # Embed the label in the text so the encoder sees the structural cue, and store it as a
-    # field for fallacy-keyed retrieval.
     record = {
         "id": record_id,
         "text": f"Fallacy type: {category}. Example: {example}",
@@ -641,8 +616,7 @@ def definitions(path: Path):
     path.mkdir(parents=True, exist_ok=True)
 
     # =================== recent papers on fallacies in political debates =================== #
-    # Search an academic index for ~200 recent papers and add each as a KB record. Kept in a
-    # dedicated subfolder so the searched papers don't dilute the curated definition pages.
+    # Search an academic index for ~200 recent papers and add each as a KB record
     fallacy_papers(path / "papers", n_papers=200, since_year=2015, backend="openalex",
                    fetch_fulltext=False)
 
@@ -657,12 +631,6 @@ def definitions(path: Path):
     log.info("Saved %s", filename)
 
     # =================== connected wikipedia pages =================== #
-    # Expand coverage by also downloading the article-namespace pages linked from the main
-    # "fallacy" page (the individual fallacy types and related rhetorical concepts), but
-    # filtered to fallacy/argumentation-relevant pages only — otherwise the "fallacy" page's
-    # links pull in noise (e.g. "Adam Smith", "Advertisement") that would dilute retrieval.
-    # A linked page is kept if it is EITHER a member of an authoritative fallacy category
-    # OR its title matches a fallacy/rhetoric keyword.
     fallacy_allowlist = set()
     for category in FALLACY_WIKI_CATEGORIES:
         try:
@@ -818,9 +786,8 @@ def geography(path: Path):
     profiles = r.get("response", {}).get("profiles", [])
     log.info("Processing %d states/territories", len(profiles))
 
-    # Process each state's census profile concurrently (one worker per state); the per-state
-    # topic requests still run inside the worker. Workers write distinct files and return the
-    # state name so the main thread can collect the list.
+    # Process each state's census profile concurrently (one worker per state); each worker
+    # writes its own file and returns the state name for the main thread to collect.
     def _process_state(state) -> str | None:
         """Fetch one state's census profile and topic data and save it as a record."""
         try:

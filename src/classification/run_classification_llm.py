@@ -111,41 +111,22 @@ logging.basicConfig(
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
 # ── Label constants (dataset-aware) ─────────────────────────────────────────────
-#
-# The label inventory depends on the dataset (elecdeb60to20, reddit). The
-# globals below are populated at runtime in main() from
-# src.utils.dataset_prompts.get_label_config(), so switching datasets automatically
-# switches the canonical labels, the human-readable names, the alias map used to
-# parse LLM responses, and the label menu shown in the prompt.
-#
-#   ALL_LABELS      : canonical labels (CSV "fallacy_label" values), also the columns
-#                     of the indicator matrix used for metrics.
-#   LABEL_TO_LLM    : canonical -> human-readable name the LLM produces.
-#   ALIAS_TO_LABEL  : normalized alias -> canonical label (for response parsing).
-#   _LABEL_MENU     : comma-separated readable names, injected into the prompt.
-#
-# A "No Fallacy" / "NoFallacy" answer or gold cell is represented as the empty label
-# set (see parse_gold_labels / parse_llm_response), so it is not one of ALL_LABELS.
 ALL_LABELS: list[str] = []
 LABEL_TO_LLM: dict[str, str] = {}
 ALIAS_TO_LABEL: dict[str, str] = {}
 _LABEL_MENU: str = ""
 
-# Whether the current dataset is multi-label (several 0/1 fallacy columns +
-# an explicit "None of the above" class) vs single-label (elecdeb / reddit). Set in main().
 IS_MULTI_LABEL: bool = False
 
-# The explicit negative class used in multi-label mode. Its column in the CSV is
-# "None of the above"; it is exclusive with every fallacy and is the empty-row default.
+# Canonical negative class for single-label datasets that have one (reddit "NoFallacy"); None otherwise.
+# Unlike the multi-label NONE_LABEL below, this is a real dataset label that is parsed and scored.
+SINGLE_LABEL_NONE: Optional[str] = None
+
 NONE_LABEL = "None of the above"
 NONE_ALIASES = ["None of the above", "none of the above", "none", "no fallacy", "nofallacy"]
 
-# Fallback token written to the predictions file when the label set is empty. In multi-label
-# mode empty predictions are resolved to NONE_LABEL, so this only appears for single-label
-# parse failures.
 LLM_NONE = "None"
 
-# Columns that are never fallacy labels; used to auto-detect the multi-label 0/1 columns.
 METADATA_COLUMNS = {
     "id", "component_id", "year", "sentence", "speech_turn", "speaker",
     "relations", "relations_type", "relations_text", "relations_label",
@@ -211,12 +192,13 @@ def apply_none_rules(labels: list[str]) -> list[str]:
 
 def _apply_label_config(train_file) -> None:
     """Populate the dataset-aware label globals from the training file path."""
-    global ALL_LABELS, LABEL_TO_LLM, ALIAS_TO_LABEL, _LABEL_MENU
+    global ALL_LABELS, LABEL_TO_LLM, ALIAS_TO_LABEL, _LABEL_MENU, SINGLE_LABEL_NONE
     cfg = get_label_config(train_file)
     ALL_LABELS = cfg["labels"]
     LABEL_TO_LLM = cfg["label_to_llm"]
     ALIAS_TO_LABEL = cfg["alias_to_label"]
     _LABEL_MENU = cfg["label_menu"]
+    SINGLE_LABEL_NONE = cfg.get("none_label")
 
 
 def _register_none_class() -> None:
@@ -452,7 +434,9 @@ def parse_gold_labels(raw: object) -> list[str]:
     if raw is None:
         return []
     text = str(raw).strip()
-    if not text or _normalize(text) in {"", "none", "nofallacy", "nan"}:
+    # Only truly empty / NaN cells short-circuit. "none"/"nofallacy" go through alias lookup so
+    # datasets with an explicit "No Fallacy" class (reddit) resolve it to a real label.
+    if not text or _normalize(text) in {"", "nan"}:
         return []
     labels = set()
     for token in _GOLD_SPLIT_RE.split(text):
@@ -507,6 +491,9 @@ def labels_to_llm_target(labels: list[str]) -> str:
         canon = apply_none_rules(sorted(set(labels), key=ALL_LABELS.index))
         return ", ".join(LABEL_TO_LLM[c] for c in canon)
     if not labels:
+        # Datasets with an explicit negative class (reddit) render it; others have no valid empty.
+        if SINGLE_LABEL_NONE:
+            return LABEL_TO_LLM[SINGLE_LABEL_NONE]
         raise ValueError(
             "Expected exactly one fallacy label; empty label sets are not valid "
             "under the single-label task (\"None\" is not permitted)."
@@ -538,6 +525,15 @@ def build_user_message(
             "separated by commas. "
             f"If the sentence contains no fallacy, answer exactly \"{NONE_LABEL}\". "
             "Do not invent new types."
+        )
+    elif SINGLE_LABEL_NONE:
+        # Dataset carries an explicit "No Fallacy" class (classification + detection).
+        none_readable = LABEL_TO_LLM.get(SINGLE_LABEL_NONE, "No Fallacy")
+        parts.append(
+            "Which fallacy type does this sentence contain, if any? "
+            f"Answer with exactly one option drawn only from: {_LABEL_MENU}. "
+            f"If the sentence contains no fallacy, answer exactly \"{none_readable}\". "
+            "Do not list more than one option."
         )
     else:
         parts.append(
@@ -840,10 +836,6 @@ class LocalLLMInference:
         )
         load_kwargs = _build_load_kwargs(model_name_or_path, llm_args, base_kwargs, torch)
 
-        # Place the model on an accelerator. Plain from_pretrained leaves an unquantized
-        # model on CPU, where generation for a multi-billion-parameter model is extremely
-        # slow — the dominant cause of slow inference. Quantized models are placed by
-        # device_map at load time; unquantized ones are moved after loading.
         is_quantized = "quantization_config" in load_kwargs
         if torch.cuda.is_available():
             load_kwargs.setdefault("device_map", "auto")

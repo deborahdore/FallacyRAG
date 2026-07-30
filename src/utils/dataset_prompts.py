@@ -1,8 +1,8 @@
 """
 Dataset-aware prompt configuration for fallacy classification and detection.
 
-This module maps datasets (elecdeb60to20, reddit) to their corresponding
-system prompts, based on the papers and annotation schemes used.
+This module maps datasets (elecdeb60to20, reddit, propaganda) to their
+corresponding system prompts, based on the papers and annotation schemes used.
 
 The prompt is automatically selected based on the dataset path or name provided
 to the LLM scripts, without requiring manual changes to the code.
@@ -29,7 +29,7 @@ def identify_dataset(train_file: Optional[str]) -> str:
     Returns
     -------
     str
-        One of: "elecdeb60to20", "reddit", or "unknown".
+        One of: "elecdeb60to20", "reddit", "propaganda", or "unknown".
 
     Examples
     --------
@@ -37,6 +37,8 @@ def identify_dataset(train_file: Optional[str]) -> str:
     'elecdeb60to20'
     >>> identify_dataset("./datasets/reddit-dataset/detection/train.csv")
     'reddit'
+    >>> identify_dataset("./datasets/propaganda-dataset/detection/train.csv")
+    'propaganda'
     """
     if train_file is None:
         return "unknown"
@@ -47,6 +49,8 @@ def identify_dataset(train_file: Optional[str]) -> str:
         return "elecdeb60to20"
     elif "reddit" in path:
         return "reddit"
+    elif "propaganda" in path:
+        return "propaganda"
     else:
         return "unknown"
 
@@ -140,6 +144,14 @@ DETECTION_PROMPTS = {
         'Answer with exactly one word: "Yes" if the sentence contains a fallacy, '
         'or "No" if it does not.'
     ),
+    "propaganda": (
+        "You are an expert in propaganda detection and persuasion analysis. "
+        "Your task is to determine whether a given sentence from a news article contains a propaganda technique. "
+        "A propaganda technique is a persuasive device (such as loaded language, name calling, "
+        "exaggeration, appeal to fear, or flag waving) used to influence an audience beyond sound reasoning. "
+        'Answer with exactly one word: "Yes" if the sentence contains a propaganda technique, '
+        'or "No" if it does not.'
+    ),
     "unknown": (
         "You are an expert in argumentation theory and political discourse analysis. "
         "Your task is to determine whether a given sentence from a political debate contains a fallacy. "
@@ -149,14 +161,57 @@ DETECTION_PROMPTS = {
     ),
 }
 
+# ── Detection label configuration (binary detection) ──────────────────────────
+# Maps each dataset to its (positive, negative) CSV "fallacy_label" values.
+# The positive label is translated to the LLM "Yes" token, the negative to "No".
+
+_DETECTION_LABELS_BY_DATASET: dict[str, tuple[str, str]] = {
+    "elecdeb60to20": ("Fallacy", "NoFallacy"),
+    "reddit": ("Fallacy", "NoFallacy"),
+    "propaganda": ("propaganda", "non-propaganda"),
+    "unknown": ("Fallacy", "NoFallacy"),
+}
+
+
+def get_detection_label_config(train_file: Optional[str]) -> dict:
+    """
+    Get the dataset-specific positive/negative labels for binary detection.
+
+    Parameters
+    ----------
+    train_file : Optional[str]
+        Path to the training file (CSV or JSON).
+
+    Returns
+    -------
+    dict with keys:
+        dataset         : identified dataset name
+        positive_label  : CSV label mapped to the LLM "Yes" token
+        negative_label  : CSV label mapped to the LLM "No" token
+        labels          : [positive_label, negative_label]
+
+    Example
+    -------
+    >>> cfg = get_detection_label_config("./datasets/propaganda-dataset/detection/train.csv")
+    >>> cfg["positive_label"], cfg["negative_label"]
+    ('propaganda', 'non-propaganda')
+    """
+    dataset = identify_dataset(train_file)
+    positive, negative = _DETECTION_LABELS_BY_DATASET.get(
+        dataset, _DETECTION_LABELS_BY_DATASET["unknown"]
+    )
+    logger.info(f"Using detection labels for dataset '{dataset}': {positive} / {negative}")
+    return {
+        "dataset": dataset,
+        "positive_label": positive,
+        "negative_label": negative,
+        "labels": [positive, negative],
+    }
+
+
 # ── Label configuration (single-label classification) ─────────────────────────
-#
-# Each dataset uses its OWN label inventory. The keys below are the *canonical*
-# labels exactly as they appear in the CSV "fallacy_label" column; the values are
-# the human-readable names the LLM is asked to produce (and that few-shot / SFT
-# targets use). A "No Fallacy" / "NoFallacy" gold cell (present in the reddit
-# classification split) is handled as the empty label set by the pipeline, so it
-# is intentionally NOT listed here.
+# Keys are canonical CSV "fallacy_label" values; values are the readable names the LLM emits.
+# "No Fallacy" is handled as the empty label set elsewhere, so it is not listed here.
 
 _LABEL_TO_LLM_BY_DATASET: dict[str, dict[str, str]] = {
     "elecdeb60to20": {
@@ -176,13 +231,18 @@ _LABEL_TO_LLM_BY_DATASET: dict[str, dict[str, str]] = {
         "Blackwhite": "Black-or-White",
         "HastyGeneralization": "Hasty Generalization",
         "SlipperySlope": "Slippery Slope",
+        # Explicit negative class: reddit classification doubles as detection (see create_db).
+        "NoFallacy": "No Fallacy",
     },
 }
 _LABEL_TO_LLM_BY_DATASET["unknown"] = _LABEL_TO_LLM_BY_DATASET["elecdeb60to20"]
 
-# Extra normalized alias variants a model tends to emit, mapped to the canonical
-# label. These are ADDED on top of the canonical name and the readable name,
-# which are always registered automatically.
+# Single-label datasets that carry an explicit negative "No Fallacy" class (classification+detection).
+# Its canonical value is a real, parseable, scored label — not the multi-label "None of the above".
+_SINGLE_LABEL_NONE_BY_DATASET: dict[str, str] = {"reddit": "NoFallacy"}
+
+# Extra alias variants a model tends to emit, mapped to the canonical label.
+# Added on top of the canonical and readable names, which register automatically.
 _EXTRA_ALIASES_BY_DATASET: dict[str, dict[str, list[str]]] = {
     "elecdeb60to20": {
         "AdHominem": ["ad-hominem", "personal attack", "name calling", "name-calling",
@@ -209,6 +269,8 @@ _EXTRA_ALIASES_BY_DATASET: dict[str, dict[str, list[str]]] = {
                                 "generalization"],
         "SlipperySlope": ["slippery slope", "slippery", "slope",
                           "thin edge of the wedge", "camel's nose"],
+        "NoFallacy": ["no fallacy", "nofallacy", "no-fallacy", "not a fallacy",
+                      "none", "no fallacies", "no fallacy present"],
     },
 }
 _EXTRA_ALIASES_BY_DATASET["unknown"] = _EXTRA_ALIASES_BY_DATASET["elecdeb60to20"]
@@ -237,6 +299,7 @@ def get_label_config(train_file: Optional[str]) -> dict:
         label_to_llm   : {canonical -> human-readable name shown to the LLM}
         alias_to_label : {normalized alias -> canonical label} for parsing responses
         label_menu     : comma-separated readable names, for the prompt
+        none_label     : canonical negative "No Fallacy" class if the dataset has one, else None
 
     Example
     -------
@@ -271,6 +334,7 @@ def get_label_config(train_file: Optional[str]) -> dict:
         "label_to_llm": label_to_llm,
         "alias_to_label": alias_to_label,
         "label_menu": label_menu,
+        "none_label": _SINGLE_LABEL_NONE_BY_DATASET.get(dataset),
     }
 
 

@@ -149,9 +149,8 @@ def simulate_browser_batch(urls, max_workers: int = 4,
                 finally:
                     browser.close()
         except Exception as e:
-            # Browser couldn't launch (e.g. missing system libs) — skip this shard rather than
-            # crashing the whole run, matching the original per-call best-effort behaviour.
-            # Only keep the first line; the full Playwright browser log is very verbose.
+            # Browser couldn't launch — skip this shard instead of crashing the run.
+            # Keep only the first line; the full Playwright log is very verbose.
             first_line = str(e).splitlines()[0] if str(e) else type(e).__name__
             print(f"Headless browser unavailable, skipping {len(shard)} URLs: {first_line}")
         return local

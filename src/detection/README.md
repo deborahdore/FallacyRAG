@@ -91,8 +91,9 @@ simultaneously.
 
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/detection/create_db.py`
 
-The same `create_db.py` script (with different defaults) also exists for the other dataset:
-[`datasets/reddit-dataset/detection/create_db.py`](../../datasets/reddit-dataset/detection/create_db.py).
+A `create_db.py` with the same interface (and dataset-specific defaults) exists per dataset; the ElecDeb60to20 one is
+the canonical reference. The Reddit and propaganda RAG datasets are built the same way via their
+`02-create_database-*.sh` driver scripts.
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, balances and
 re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes them into the `context`
@@ -183,8 +184,9 @@ python src/detection/run_detection.py \
 
 ## LLM script — `run_detection_llm.py`
 
-Runs fallacy detection with a causal language model using one of three modes. Each example is formatted as a structured
-chat prompt:
+Runs fallacy detection with a causal language model using one of three modes. The **system prompt is selected
+automatically from the dataset** (ElecDeb60to20 vs. Reddit) based on the training-file path, so no code changes are
+needed to switch datasets. Each example is formatted as a structured chat prompt:
 
 ```
 [System]    You are an expert in argumentation theory…
@@ -251,9 +253,9 @@ Same columns and defaults as the encoder script. Additional argument:
 |--------------------------|-------------|----------------------------------------------------------------------------------------------------------------|
 | `--mode`                 | `zero_shot` | Experiment mode: `zero_shot`, `few_shot`, `fine_tune`.                                                         |
 | `--backend`              | `local`     | Inference backend: `local` or `openai`.                                                                        |
-| `--num_shots`            | `5`         | Examples **per class** for few-shot prompting (total prompt examples = `2 × num_shots`).                       |
+| `--num_shots`            | `1`         | Examples **per class** for few-shot prompting (total prompt examples = `2 × num_shots`).                       |
 | `--few_shot_seed`        | `42`        | Random seed for selecting few-shot examples from the training split.                                           |
-| `--max_new_tokens`       | `16`        | Maximum new tokens to generate per example.                                                                    |
+| `--max_new_tokens`       | `4`         | Maximum new tokens to generate per example (the answer is a single "Yes"/"No" word).                           |
 | `--temperature`          | `0.0`       | Sampling temperature. `0` = greedy decoding.                                                                   |
 | `--inference_batch_size` | `8`         | Batch size for local inference (not used for `openai` backend).                                                |
 | `--load_in_4bit`         | `False`     | Load model in 4-bit NF4 (QLoRA). Requires `bitsandbytes`.                                                      |

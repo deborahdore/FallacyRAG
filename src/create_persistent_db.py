@@ -76,8 +76,7 @@ def _apply_gpu_optimizations(embedding_function, retriever: str):
     except Exception as e:
         log.warning(f"FP16 conversion failed: {e}")
 
-    # torch.compile: graph-level fusion (PyTorch >= 2.0)
-    # "reduce-overhead" minimises Python dispatcher overhead — best for one long encode pass
+    # torch.compile graph fusion; "reduce-overhead" mode suits one long encode pass
     try:
         embedding_function.client = torch.compile(client, mode="reduce-overhead")
         log.info("Applied torch.compile(mode='reduce-overhead') to embedding model")
@@ -114,8 +113,7 @@ def _deterministic_ids(splits: list) -> list[str]:
 def _build_text_splitter(embedding_function, retriever: str,
                          chunk_size: int, chunk_overlap: int) -> RecursiveCharacterTextSplitter:
     """Build a token-aware splitter clamped to the embedding model's input window."""
-    # Models truncate on tokens, not characters; splitting by tokens avoids silently dropping
-    # the tail of long chunks. Falls back to character-based splitting if no tokenizer is found.
+    # Split by tokens, not chars, so long chunks aren't truncated; fall back to chars if no tokenizer.
     client = getattr(embedding_function, "client", None)
     tokenizer = getattr(client, "tokenizer", None)
     max_seq_length = getattr(client, "max_seq_length", None)

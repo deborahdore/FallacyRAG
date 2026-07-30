@@ -7,8 +7,10 @@ never sees non-fallacious sentences — `NoFallacy` sentences are dropped during
 so every input is already known to
 be fallacious and the model only has to decide *which* fallacy type(s) it exhibits.
 
-The label inventory is a fixed set of six categories. Canonical labels (exactly as they appear in the `fallacy_label`
-column) and their human-readable forms:
+The label inventory is **dataset-aware**: it is selected automatically from the training-file path (see
+[`src/utils/dataset_prompts.py`](../utils/dataset_prompts.py)), and single- vs. multi-label is auto-detected from the
+dataset columns. For **ElecDeb60to20** the task is single-label over six categories. Canonical labels (exactly as they
+appear in the `fallacy_label` column) and their human-readable forms:
 
 | Canonical label     | Human-readable      |
 |---------------------|---------------------|
@@ -18,6 +20,19 @@ column) and their human-readable forms:
 | `FalseCause`        | False Cause         |
 | `Slipperyslope`     | Slippery Slope      |
 | `Slogans`           | Slogan              |
+
+The **Reddit** dataset uses a different eight-class inventory plus an explicit "No Fallacy" option:
+
+| Canonical label       | Human-readable          |
+|-----------------------|-------------------------|
+| `Authority`           | Appeal to Authority     |
+| `Population`          | Appeal to Majority      |
+| `Natural`             | Appeal to Nature        |
+| `Tradition`           | Appeal to Tradition     |
+| `WorseProblems`       | Appeal to Worse Problems |
+| `Blackwhite`          | Black-or-White          |
+| `HastyGeneralization` | Hasty Generalization    |
+| `SlipperySlope`       | Slippery Slope          |
 
 Two scripts are provided, covering encoder-based fine-tuning and LLM-based inference/fine-tuning:
 
@@ -52,9 +67,9 @@ Fine-tunes a BERT-style encoder for multi-class classification. Each example is 
 ```
 
 The `[CLS]` representation is passed to a linear head sized to the number of fallacy types. The label set is derived
-from
-the data at run time (sorted for determinism), and training uses a **class-weighted cross-entropy loss** to offset the
-imbalance between fallacy types.
+from the data at run time. Single- vs. multi-label is auto-detected from the columns: single-label uses a softmax head
+with **class-weighted cross-entropy**, while multi-label (several 0/1 indicator columns) uses a sigmoid head with
+**pos_weight `BCEWithLogitsLoss`** — both offset the imbalance between fallacy types.
 
 ### Model
 
@@ -116,8 +131,9 @@ trims the retrieved context rather than the local debate context).
 
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/classification/create_db.py`
 
-The same `create_db.py` script (with different defaults) also exists for the other datasets, e.g.
-[`datasets/reddit-dataset/classification/create_db.py`](../../datasets/reddit-dataset/classification/create_db.py).
+A `create_db.py` with the same interface (and dataset-specific defaults) exists per dataset; the ElecDeb60to20 one is
+the canonical reference. The Reddit RAG datasets are built the same way via the `02-create_database-reddit.sh` driver
+script.
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, drops
 `NoFallacy` sentences, re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes
@@ -209,10 +225,10 @@ python src/classification/run_classification.py \
 
 ## LLM script — `run_classification_llm.py`
 
-Runs fallacy-type classification with a causal language model using one of three modes. The task is treated as
-**multi-label**: a sentence may exhibit zero, one, or several fallacy types (the current ElecDeb60to20 split ships one
-gold label per sentence, but gold and predictions are parsed as label *sets*, so multi-label data is handled
-transparently). Each example is formatted as a structured chat prompt:
+Runs fallacy-type classification with a causal language model using one of three modes. The **system prompt and label
+inventory are selected automatically from the dataset** (ElecDeb60to20 vs. Reddit). Gold labels and predictions are
+parsed as label *sets*, so both single-label datasets (ElecDeb60to20 — one type per sentence) and multi-label datasets
+are handled transparently. Each example is formatted as a structured chat prompt:
 
 ```
 [System]    You are an expert in argumentation analysis…
@@ -281,7 +297,7 @@ Same columns and defaults as the encoder script. Additional argument:
 |--------------------------|-------------|----------------------------------------------------------------------------------------------------------------|
 | `--mode`                 | `zero_shot` | Experiment mode: `zero_shot`, `few_shot`, `fine_tune`.                                                         |
 | `--backend`              | `local`     | Inference backend: `local` or `openai`.                                                                        |
-| `--num_shots`            | `2`         | Examples **per class** for few-shot prompting.                                                                 |
+| `--num_shots`            | `1`         | Examples **per class** for few-shot prompting.                                                                 |
 | `--few_shot_seed`        | `42`        | Random seed for selecting few-shot examples from the training split.                                           |
 | `--max_new_tokens`       | `32`        | Maximum new tokens to generate per example.                                                                    |
 | `--temperature`          | `0.0`       | Sampling temperature. `0` = greedy decoding.                                                                   |
