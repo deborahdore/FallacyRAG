@@ -1,0 +1,10 @@
+{
+  "accuracy": 0.0,
+  "precision_macro": 0.0,
+  "recall_macro": 0.0,
+  "f1_macro": 0.0,
+  "f1_support": 0.0,
+  "f1_attack": 0.0,
+  "f1_no_relation": 0.0,
+  "predict_samples": 1506
+}
