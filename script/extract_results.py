@@ -1,27 +1,8 @@
-"""
-extract_results.py
-------------------
-Scans the output/one-run/ directory. For every top-level folder (one per
-dataset-task combination, e.g. elecdeb60to20-detection), reads all
-predict_results.json files found under
-  output/one-run/<dataset-task>/<config>/<model>/<run>/predict_results.json
-and writes a single CSV file:
-  output/one-run/<dataset-task>/<config>/results.csv
-
-Columns: temporal, retriever, search, rerank, query, summarizer,
-         model, configuration, predict_f1_macro, predict_accuracy
-
-The config folder name mirrors the layout produced by
-``datasets/elecdeb60to20-dataset/detection/create_db.py``:
-  detection-temporal=<bool>-retriever=<r|false>[-search=<s>-rerank=<rr|false>]
-           [-query=<q>]-summarizer=<sum|false>
-The ``-search``/``-rerank`` segments are present only when a retriever is set,
-and ``-query`` only for the relations mode.
-
-Tasks with no RAG dimension at all (e.g. output/one-run/LIARArg-relation-classification)
-use a single literal ``baseline`` config folder instead -- treated as the no-retrieval case
-(temporal=false, retriever/search/rerank/query=none, summarizer=none).
-"""
+"""Collect single-run results into per-config CSVs.
+Reads every ``output/one-run/<dataset-task>/<config>/<model>/<run>/predict_results.json`` and
+writes ``output/one-run/<dataset-task>/<config>/results.csv``, with the RAG axes parsed from the
+config folder name (temporal, retriever, search, rerank, query, summarizer) alongside model,
+configuration, predict_f1_macro and predict_accuracy."""
 
 import json
 import logging
@@ -59,11 +40,7 @@ BASELINE_FOLDER = "baseline"
 
 def parse_config_folder(folder_name: str) -> dict:
     """Parse RAG hyper-parameters from the top-level folder name.
-
-    Tasks with no RAG dimension (e.g. LIARArg-relation-classification) use a single literal
-    "baseline" folder instead of the temporal=/retriever=/... naming -- treat it as the
-    no-retrieval case rather than failing to parse.
-    """
+    A literal ``baseline`` folder (tasks with no RAG dimension) is read as the no-retrieval case."""
     if folder_name == BASELINE_FOLDER:
         return {
             "temporal": False,
@@ -167,7 +144,6 @@ if __name__ == "__main__":
 
             csv_path = os.path.join(output_dir, folder_name, "results.csv")
             df.to_csv(csv_path, index=False)
-            # assert len(df)>=3
             logger.info("Wrote %d rows → %s", len(df), csv_path)
 
             aggregated.append(df)

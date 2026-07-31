@@ -1,17 +1,8 @@
-"""
-Fine-tuning BERT-style models for fallacy detection using binary sentence classification,
-augmented with retrieved knowledge-base context (RAG).
-
-Architecture
-------------
-For each example the tokenizer receives:
-
-    [CLS] sentence [SEP] context_1 … context_n [SEP]   (with RAG)
-    [CLS] sentence [SEP]                                 (without RAG)
-
-The [CLS] token representation is used for binary classification
-(fallacy / not-fallacy).
-"""
+"""Fine-tune BERT-style models for fallacy detection as binary sentence classification, with
+optional retrieved knowledge-base context (RAG).
+The tokenizer receives ``[CLS] sentence [SEP] context_1 ... context_n [SEP]``, or just the
+sentence without RAG, and the [CLS] representation is used for the fallacy / not-fallacy
+decision."""
 
 from __future__ import annotations
 
@@ -172,7 +163,6 @@ class DataTrainingArguments:
         default=42,
         metadata={"help": "Random seed for shuffling the training dataset."},
     )
-    # ── RAG-specific ──────────────────────────────────────────────────────
     use_rag: bool = field(
         default=False,
         metadata={"help": "Read the pre-built 'context' field from the dataset and append it to each BERT input."},
@@ -185,8 +175,6 @@ class DataTrainingArguments:
             path = getattr(self, attr)
             if path is not None and path.rsplit(".", 1)[-1] not in ("csv", "json"):
                 raise ValueError(f"{attr} must be a .csv or .json file.")
-        # Convenience: if --use_rag is set and the default no_rag paths are still in place,
-        # automatically redirect to the rag/ subdirectory.
         if self.use_rag:
             for attr in ("train_file", "validation_file", "test_file"):
                 path = getattr(self, attr)
@@ -197,7 +185,6 @@ class DataTrainingArguments:
 def get_label_list(raw_datasets, split: str = "train", label_column: str = "label") -> list[str]:
     """Get the sorted list of unique labels from a dataset split."""
     label_list = raw_datasets[split].unique(label_column)
-    # Treat labels as strings for consistency with model.config.label2id
     return [str(label) for label in label_list]
 
 
@@ -208,7 +195,6 @@ def make_compute_metrics(label_list: list[str]):
         predictions = np.argmax(p.predictions, axis=1)
         labels = p.label_ids
 
-        # Map integer indices back to string labels for sklearn
         pred_labels = [label_list[pred] for pred in predictions]
         true_labels = [label_list[lbl] for lbl in labels]
 
@@ -218,7 +204,6 @@ def make_compute_metrics(label_list: list[str]):
             "recall": recall_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
             "f1_macro": f1_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
         }
-        # Per-class F1 for error analysis
         per_class = f1_score(
             y_true=true_labels, y_pred=pred_labels, labels=label_list, average=None, zero_division=0
         )
@@ -242,7 +227,6 @@ def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwarg
         remove_columns=non_label_cols,
         **map_kwargs,
     )
-    # Force 'label' to int64; string/NER-style sources can otherwise be inferred as list[int].
     if "label" in tokenized.column_names:
         tokenized = tokenized.cast_column("label", Value("int64"))
     return tokenized
@@ -276,7 +260,6 @@ def main():
     logger.info(f"Training/evaluation parameters {training_args}")
     set_seed(training_args.seed)
 
-    # ── Dataset loading ───────────────────────────────────────────────────
     data_files = {
         "train": data_args.train_file,
         "validation": data_args.validation_file,
@@ -285,10 +268,8 @@ def main():
     extension = (data_args.train_file or data_args.validation_file).rsplit(".", 1)[-1]
     raw_datasets = load_dataset(extension, data_files=data_files, cache_dir=model_args.cache_dir)
 
-    # ── Label setup ───────────────────────────────────────────────────────
     label_column_name = data_args.label_column_name
 
-    # Rename to "label" so the Trainer can find it automatically
     if label_column_name != "label":
         for key in raw_datasets:
             raw_datasets[key] = raw_datasets[key].rename_column(label_column_name, "label")
@@ -297,7 +278,6 @@ def main():
     ref_split = "train" if training_args.do_train else "validation"
     label_list = get_label_list(raw_datasets, split=ref_split, label_column=label_column_name)
 
-    # Merge labels across splits to handle labels that appear only in val/test
     for split in ["validation", "test"]:
         if split in raw_datasets:
             extra = get_label_list(raw_datasets, split=split, label_column=label_column_name)
@@ -310,7 +290,6 @@ def main():
     num_labels = len(label_list)
     label_to_id = {v: i for i, v in enumerate(label_list)}
 
-    # ── Model / tokenizer / config ────────────────────────────────────────
     config = AutoConfig.from_pretrained(
         model_args.config_name or model_args.model_name_or_path,
         num_labels=num_labels,
@@ -348,7 +327,6 @@ def main():
     model.config.label2id = label_to_id
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
-    # Use the model's own capacity; some tokenizers report a huge sentinel, so fall back safely.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
         max_seq_length = getattr(config, "max_position_embeddings", 512)
@@ -365,7 +343,6 @@ def main():
         """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
             if speech_turn_column_name == text_column_name:
-                # reddit-dataset
                 result = tokenizer(
                     examples[text_column_name],
                     examples[context_column_name],
@@ -431,15 +408,12 @@ def main():
         logger.info("Shuffling the training dataset")
         train_dataset = train_dataset.shuffle(seed=data_args.shuffle_seed)
 
-    # Log a few random samples from the training set
     if training_args.do_train:
         for index in random.sample(range(len(train_dataset)), min(3, len(train_dataset))):
             logger.info(f"Sample {index} of the training set: {train_dataset[index]}.")
 
-    # ── Data collator ─────────────────────────────────────────────────────
     data_collator = DataCollatorWithPadding(tokenizer, pad_to_multiple_of=8)
 
-    # ── Class weights (from train set) ────────────────────────────────────
     class_weights = None
     if training_args.do_train and train_dataset is not None:
         label_counts = Counter(train_dataset[label_column_name])
@@ -448,14 +422,12 @@ def main():
         class_weights = torch.tensor(weights, dtype=torch.float)
         logger.info(f"Class weights: { {label_list[i]: round(w, 4) for i, w in enumerate(weights)} }")
 
-    # ── Loss function ─────────────────────────────────────────────────────
     def weighted_loss_fn(outputs, labels, num_items_in_batch=None):
         """Class-weighted cross-entropy loss to offset label imbalance."""
         logits = outputs.logits.float()
         weight = class_weights.to(device=logits.device, dtype=logits.dtype) if class_weights is not None else None
         return torch.nn.CrossEntropyLoss(weight=weight)(logits, labels)
 
-    # ── Trainer ───────────────────────────────────────────────────────────
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -467,7 +439,6 @@ def main():
         compute_loss_func=weighted_loss_fn
     )
 
-    # ── Training ──────────────────────────────────────────────────────────
     if training_args.do_train:
         train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
         metrics = train_result.metrics
@@ -480,7 +451,6 @@ def main():
         trainer.save_metrics("train", metrics)
         trainer.save_state()
 
-    # ── Evaluation ────────────────────────────────────────────────────────
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
         metrics = trainer.evaluate(eval_dataset=eval_dataset)
@@ -491,7 +461,6 @@ def main():
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
 
-    # ── Prediction ────────────────────────────────────────────────────────
     if training_args.do_predict:
         logger.info("*** Predict ***")
         metrics = trainer.evaluate(eval_dataset=predict_dataset, metric_key_prefix="predict")
@@ -518,7 +487,6 @@ def main():
                     fh.write(f"{index}\t{label_list[item[0]]}\t{label_list[item[1]]}\n")
             logger.info(f"Predictions saved to {output_path}")
 
-    # ── Model card / Hub push ─────────────────────────────────────────────
     hub_kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "text-classification"}
     if data_args.dataset_name is not None:
         hub_kwargs["dataset_tags"] = data_args.dataset_name

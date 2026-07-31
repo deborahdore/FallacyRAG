@@ -1,46 +1,8 @@
-"""
-generate_best_hparam_script.py
--------------------------------
-Given an output/one-run/<data>-<task>/<dataset> folder, find every model's
-best hyperparameter configuration and emit sbatch scripts under script/ that
-re-run only those best configs, once per seed (default: 14, 42, 55, 89, 3).
-
-<data> is inferred from the output folder itself (elecdeb60to20 or reddit —
-anything matching datasets/<data>-dataset/) and threaded through to the
-generated script, so this works unmodified for any of the datasets.
-
-Two families of runs are handled, each cloned from its own template:
-
-  * Encoder models (predict_results.json, run dirs named "bs<b>_lr<lr>_ep<e>")
-    -> cloned from 03-fallacy_no_rag.sh. Best run per model is chosen by
-    predict_accuracy (detection) / predict_f1_macro (otherwise).
-
-  * LLM models (predict_results_metrics.json, run dirs named "mode-zero_shot",
-    "mode-few_shot", or "mode-fine_tune_bs<b>_lr<lr>_ep<e>")
-    -> cloned from 03-fallacy_no_rag_llm.sh. Best run per model is chosen
-    across ALL modes (fine_tune sweep + zero_shot + few_shot) by the same
-    metric convention. Llama, Mistral, gpt-oss and Qwen always go through
-    this LLM template, never the encoder one.
-
-Models present in the output folder but absent from a template's MODELS
-array are skipped with a warning (e.g. NeoBERT is commented out in
-03-fallacy_no_rag.sh).
-
-Usage:
-    python src/utils/generate_best_hparam_script.py <output_folder> \
-        [--template script/03-fallacy_no_rag.sh] \
-        [--llm-template script/03-fallacy_no_rag_llm.sh] \
-        [--seeds 14 42 55 89 3] \
-        [--output script/06-best_hparams_<data>_<task>_<dataset>.sh] \
-        [--llm-output script/06-best_hparams_llm_<data>_<task>_<dataset>.sh]
-
-Examples:
-    python src/utils/generate_best_hparam_script.py \
-        output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false
-
-    python src/utils/generate_best_hparam_script.py \
-        output/one-run/reddit-classification/temporal=false-retriever=false-summarizer=false
-"""
+"""Emit sbatch scripts re-running each model's best hyperparameter configuration, once per seed.
+Reads an ``output/one-run/<data>-<task>/<dataset>`` folder and picks the best run per model by
+predict_accuracy (detection) or predict_f1_macro (otherwise), then clones the matching template:
+encoders from ``03-fallacy_no_rag.sh``, LLMs from ``03-fallacy_no_rag_llm.sh``.
+Usage: ``python script/generate_best_hparam_script.py <output_folder> [options]``."""
 
 import argparse
 import json
@@ -68,13 +30,11 @@ MODELS_BLOCK_RE = re.compile(r"MODELS=\((.*?)^\)", re.DOTALL | re.MULTILINE)
 MODEL_LINE_RE = re.compile(r'"([^"]+)"')
 SEED_LINE_RE = re.compile(r"^SEED=\d+\s*$")
 
-# predict_results.json key -> predict_results_metrics.json key
 ALT_METRIC_KEY = {
     "predict_accuracy": "accuracy",
     "predict_f1_macro": "f1_macro",
 }
 
-# Task-specific default templates (relation-classification uses its own runner/args).
 FALLACY_ENCODER_TEMPLATE = "script/03-fallacy_no_rag.sh"
 FALLACY_LLM_TEMPLATE = "script/03-fallacy_no_rag_llm.sh"
 RELATION_ENCODER_TEMPLATE = "script/05-relation_classification.sh"
@@ -122,9 +82,8 @@ def extract_header(template_path: str) -> str:
 
 
 def parse_data_task(output_folder: str) -> tuple[str, str]:
-    """Split the "<data>-<task>" folder name (parent of the dataset-config folder)
-    into its ``data`` (elecdeb60to20 / reddit) and ``task``
-    (detection / classification) components."""
+    """Split the ``<data>-<task>`` folder name into its ``data`` (e.g. elecdeb60to20) and
+    ``task`` (detection / classification) components."""
     data_task = os.path.basename(os.path.dirname(output_folder))
     m = DATA_TASK_RE.match(data_task)
     if not m:
@@ -146,9 +105,6 @@ def tag_job_name(header: str, suffix: str) -> str:
     return header
 
 
-# --------------------------------------------------------------------------
-# Encoder models (03-fallacy_no_rag.sh)
-# --------------------------------------------------------------------------
 
 def find_best_encoder_configs(output_folder: str, metric: str) -> dict[str, tuple[str, str, str, float]]:
     """For each model dir with bs/lr/ep run folders, find the best (batch, lr, epoch, score)."""
@@ -169,7 +125,7 @@ def find_best_encoder_configs(output_folder: str, metric: str) -> dict[str, tupl
             if not conf_m:
                 if run_name.startswith("mode-"):
                     seen_llm_style = True
-                continue  # not an encoder-style run dir
+                continue
 
             results_path = os.path.join(run_path, RESULTS_FILE)
             if not os.path.isfile(results_path):
@@ -223,7 +179,7 @@ def build_encoder_script(output_folder: str, template_path: str, seeds: list[int
 
     body = f"""wandb disabled
 
-data="{data}"  # elecdeb60to20 | reddit
+data="{data}"  # elecdeb60to20 | propaganda
 task={task}
 dataset="{dataset}"
 
@@ -305,9 +261,6 @@ echo "Best-hyperparameter multi-seed sweep complete. Failed runs (if any) logged
     return header + "\n" + body, len(entries)
 
 
-# --------------------------------------------------------------------------
-# LLM models (03-fallacy_no_rag_llm.sh) — Llama, Mistral, gpt-oss, Qwen, ...
-# --------------------------------------------------------------------------
 
 def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[str, str | None, str | None, float]]:
     """For each model dir with 'mode-...' run folders, find the best (mode, lr, epoch, score)
@@ -334,7 +287,7 @@ def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[st
             elif simple_m:
                 mode = simple_m.group("mode")
             else:
-                continue  # not an LLM-style run dir (e.g. encoder bs/lr/ep dir)
+                continue
 
             results_path = os.path.join(run_path, RESULTS_FILE_LLM)
             if not os.path.isfile(results_path):
@@ -396,7 +349,7 @@ def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -
 
     body = f"""wandb disabled
 
-data="{data}"  # elecdeb60to20 | reddit
+data="{data}"  # elecdeb60to20 | propaganda
 task={task}
 dataset="{dataset}"
 
@@ -532,17 +485,13 @@ echo "Best-hyperparameter multi-seed LLM sweep complete. Failed runs (if any) lo
     return header + "\n" + body, len(entries)
 
 
-# --------------------------------------------------------------------------
-# Relation classification (06-relation_classification*.sh) — LIARArg, debagreement
-# Different runner and args: label column, sentence-pair, no RAG/speech-turn.
-# --------------------------------------------------------------------------
 
 def build_relation_encoder_script(output_folder: str, template_path: str, seeds: list[int]) -> tuple[str, int]:
     dataset = os.path.basename(output_folder)
     data, task = parse_data_task(output_folder)
 
     model_map = parse_template_models(template_path)
-    metric = "predict_f1_macro"  # relation-classification scored by macro-F1
+    metric = "predict_f1_macro"
     best_configs = find_best_encoder_configs(output_folder, metric)
 
     entries = []
@@ -643,7 +592,7 @@ def build_relation_llm_script(output_folder: str, template_path: str, seeds: lis
     batch = extract_scalar(template_content, "BATCH")
     default_batch = extract_scalar(template_content, "DEFAULT_BATCH")
 
-    metric = "predict_f1_macro"  # relation-classification scored by macro-F1
+    metric = "predict_f1_macro"
     best_configs = find_best_llm_configs(output_folder, metric)
 
     entries = []
@@ -800,13 +749,11 @@ echo "Best-hyperparameter multi-seed relation LLM sweep complete. Failed runs (i
     return header + "\n" + body, len(entries)
 
 
-# --------------------------------------------------------------------------
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("output_folder",
                         help="e.g. output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-summarizer=false")
-    # Templates default per task (fallacy vs relation) when not given explicitly.
     parser.add_argument("--template", default=None, help="Encoder template sbatch script.")
     parser.add_argument("--llm-template", default=None, help="LLM template sbatch script.")
     parser.add_argument("--seeds", type=int, nargs="+", default=[14, 42, 55, 89, 3],
@@ -827,7 +774,6 @@ def main() -> None:
     except ValueError as exc:
         raise SystemExit(str(exc))
 
-    # Pick task-appropriate templates and builders (relation-classification differs).
     is_relation = task == "relation-classification"
     encoder_template = args.template or (RELATION_ENCODER_TEMPLATE if is_relation else FALLACY_ENCODER_TEMPLATE)
     llm_template = args.llm_template or (RELATION_LLM_TEMPLATE if is_relation else FALLACY_LLM_TEMPLATE)

@@ -21,10 +21,8 @@ The workflow has two phases:
 |----------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
 | [`run_relation_classification.py`](run_relation_classification.py)   | Encoder (BERT-style) fine-tuning of the 3-class relation classifier.                         |
 | [`predict_propaganda_relations.py`](predict_propaganda_relations.py) | Predict relations on the propaganda pairs with a LIARArg-trained model.                      |
-| [`predict_agreement_relations.py`](predict_agreement_relations.py)   | Predict relations on the Reddit pairs with a DEBAGREEMENT-trained model.                     |
 | [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)               | Build the LIARArg relation-classification train/dev/test splits.                             |
 | [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)         | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
-| [`utils/prepare_reddit.py`](utils/prepare_reddit.py)                 | Build the Reddit **prediction** pairs (one fallacy × every other sentence in its comment).   |
 
 ---
 
@@ -113,18 +111,17 @@ python src/relation-extraction/run_relation_classification.py \
 
 ---
 
-## Prediction scripts — `predict_propaganda_relations.py` / `predict_agreement_relations.py`
+## Prediction script — `predict_propaganda_relations.py`
 
 Pure inference: load a trained checkpoint, run it over a prediction-pairs CSV, and write back the predicted relation
 plus per-class softmax probabilities alongside the original metadata columns.
 
 The checkpoint's `config.id2label` is just `{0:"0", 1:"1", 2:"2"}`; the **semantic meaning** of each id comes from the
-training corpus and is fixed in each script:
+training corpus and is fixed in the script:
 
 | Script                            | Trained on   | Predicts on | id → relation                                  |
 |-----------------------------------|--------------|-------------|------------------------------------------------|
 | `predict_propaganda_relations.py` | LIARArg      | propaganda  | `0 = attack`, `1 = support`, `2 = no_relation` |
-| `predict_agreement_relations.py`  | DEBAGREEMENT | Reddit      | `0 = attack`, `1 = neutral`, `2 = support`     |
 
 ### Arguments
 
@@ -162,5 +159,3 @@ These build the pair datasets consumed above:
   set (partial support/attack are merged into support/attack, matching the paper's ablation).
 - **`prepare_propaganda.py`** — builds a **prediction** set: every propaganda-labeled sentence paired with every other
   sentence of its own article. No gold relations (`label = -1`).
-- **`prepare_reddit.py`** — builds a **prediction** set: every fallacy sentence paired with every other sentence of its
-  own comment/turn. No gold relations (`label = -1`).

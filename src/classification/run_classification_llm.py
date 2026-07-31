@@ -1,78 +1,8 @@
-"""
-LLM-based fallacy classification: zero-shot, few-shot, and fine-tuning.
-
-Task (auto-detected from the dataset columns)
----------------------------------------------
-Given a sentence (and its surrounding speech turn), assign the fallacy type(s)
-it contains from the dataset's inventory.
-
-  - single-label (elecdeb / reddit): one categorical ``fallacy_label`` column;
-    exactly one type per example. For elecdeb there is no "none" option; reddit
-    additionally allows "No Fallacy".
-  - multi-label: several 0/1 indicator columns; a sentence may carry
-    multiple fallacies or none. "None of the above" is an explicit, exclusive
-    class — if it is predicted it is the sole answer, and an empty prediction
-    defaults to it.
-
-The format is detected automatically (see ``detect_label_columns``); the prompt
-wording, response parsing, target rendering, and metrics all adapt accordingly.
-
-Architecture
-------------
-Each example is formatted as an instruction-following chat prompt:
-
-    [System]   You are an expert in argumentation analysis …
-    [User]     Sentence: <sentence>
-               Debate turn context: <speech_turn>
-               [Retrieved context: <context>]   (when --use_rag)
-               Which single fallacy type does this sentence contain?
-               Answer with exactly one type drawn only from:
-               Ad Hominem, Appeal to Authority, Appeal to Emotion,
-               False Cause, Slippery Slope, Slogan.
-    [Assistant] Appeal to Emotion
-
-Post-processing
----------------
-The raw LLM response (free-text fallacy name(s)) is parsed back into canonical
-dataset labels via fuzzy alias matching before metrics and file output, e.g.:
-    "Appeal to Emotion"  → "AppealtoEmotion"
-    "Slippery Slope"     → "Slipperyslope"
-Single-label keeps only the earliest-occurring match. Multi-label keeps every
-matched label, then applies the "None of the above" rules (exclusive; empty
-defaults to None).
-
-Modes (--mode)
---------------
-  zero_shot  : direct prompt inference, no labelled examples
-  few_shot   : --num_shots balanced examples per class prepended to the prompt
-  fine_tune  : LoRA/QLoRA supervised fine-tuning via TRL SFTTrainer,
-               followed by evaluation / prediction
-
-Backend (--backend)
--------------------
-  local   : HuggingFace generate() — works with any causal LM
-  openai  : OpenAI chat completions (requires OPENAI_API_KEY env var)
-
-Retrieval-augmentation (--use_rag)
------------------------------------
-  Reads the pre-built "context" column from the dataset and appends it
-  to each prompt, exactly mirroring the encoder counterpart.
-
-Fine-tuning details
---------------------
-  - LoRA / QLoRA (4-bit NF4) via peft + bitsandbytes
-  - TRL SFTTrainer handles response-only loss masking automatically
-  - Saves adapter weights to --output_dir; merges + saves full model
-    if --merge_adapter is set
-
-Dataset-aware prompts
----------------------
-  The system prompt is automatically selected based on the dataset used:
-  - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
-  - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
-  - unknown: Uses a generic prompt
-  The dataset is automatically identified from the training file path.
-"""
+"""LLM-based fallacy classification: zero-shot, few-shot, and LoRA/QLoRA fine-tuning.
+Each example becomes an instruction-following chat prompt, carrying the pre-built "context"
+column when ``--use_rag``, and the free-text response is parsed back into canonical labels by
+fuzzy alias matching. Single- vs multi-label and the system prompt are both derived from the
+dataset. Backends: local HuggingFace generate() or the OpenAI chat API."""
 
 from __future__ import annotations
 
@@ -110,7 +40,6 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-# ── Label constants (dataset-aware) ─────────────────────────────────────────────
 ALL_LABELS: list[str] = []
 LABEL_TO_LLM: dict[str, str] = {}
 ALIAS_TO_LABEL: dict[str, str] = {}
@@ -118,8 +47,6 @@ _LABEL_MENU: str = ""
 
 IS_MULTI_LABEL: bool = False
 
-# Canonical negative class for single-label datasets that have one (reddit "NoFallacy"); None otherwise.
-# Unlike the multi-label NONE_LABEL below, this is a real dataset label that is parsed and scored.
 SINGLE_LABEL_NONE: Optional[str] = None
 
 NONE_LABEL = "None of the above"
@@ -158,10 +85,7 @@ def _looks_binary(values) -> bool:
 
 def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool, list[str]]:
     """Decide single- vs multi-label and return ``(is_multi_label, label_columns)``.
-
-    A present single ``--label_column_name`` -> single-label; otherwise two or more binary
-    (0/1) non-metadata columns -> multi-label.
-    """
+    A present ``--label_column_name`` gives single-label; two or more binary columns give multi-label."""
     columns = raw_datasets[ref_split].column_names
     if data_args.label_column_name in columns:
         return False, [data_args.label_column_name]
@@ -175,12 +99,8 @@ def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool,
 
 
 def apply_none_rules(labels: list[str]) -> list[str]:
-    """Multi-label 'None of the above' handling: it is exclusive, and empty defaults to it.
-
-    - If NONE_LABEL is among the labels, it becomes the sole answer.
-    - If the label set is empty, it falls back to NONE_LABEL.
-    No-op for single-label datasets (NONE_LABEL is not in their label space).
-    """
+    """Multi-label 'None of the above' handling: it is exclusive, and an empty set defaults to it.
+    No-op for single-label datasets, whose label space does not contain it."""
     if not IS_MULTI_LABEL:
         return labels
     if NONE_LABEL in labels:
@@ -202,11 +122,8 @@ def _apply_label_config(train_file) -> None:
 
 
 def _register_none_class() -> None:
-    """Register the explicit 'None of the above' class in the label globals (multi-label only).
-
-    ``get_label_config`` only lists the positive fallacy classes; multi-label datasets also have
-    an explicit negative class that must be a recognised, parseable, and scored label.
-    """
+    """Register the explicit 'None of the above' class in the label globals (multi-label only),
+    since ``get_label_config`` lists only the positive fallacy classes."""
     global ALL_LABELS
     if NONE_LABEL not in ALL_LABELS:
         ALL_LABELS = ALL_LABELS + [NONE_LABEL]
@@ -217,11 +134,9 @@ def _register_none_class() -> None:
             ALIAS_TO_LABEL[norm] = NONE_LABEL
 
 
-# SYSTEM_PROMPT is dynamically set during main() based on the dataset
-SYSTEM_PROMPT = None  # Will be set in main()
+SYSTEM_PROMPT = None
 
 
-# ── Dataclasses ────────────────────────────────────────────────────────────────
 
 @dataclass
 class ModelArguments:
@@ -348,7 +263,6 @@ class LLMExperimentArguments:
         default="local",
         metadata={"help": "Inference backend: local (HuggingFace) | openai."},
     )
-    # ── Few-shot ──────────────────────────────────────────────────────────────
     num_shots: int = field(
         default=1,
         metadata={"help": "Number of labelled examples per fallacy class for few-shot prompting "
@@ -360,7 +274,6 @@ class LLMExperimentArguments:
         default=42,
         metadata={"help": "Random seed for selecting few-shot examples."},
     )
-    # ── Inference ─────────────────────────────────────────────────────────────
     max_new_tokens: int = field(
         default=32,
         metadata={"help": "Maximum number of new tokens to generate per example "
@@ -374,7 +287,6 @@ class LLMExperimentArguments:
         default=8,
         metadata={"help": "Batch size for local inference (not used for openai backend)."},
     )
-    # ── Quantization ──────────────────────────────────────────────────────────
     load_in_4bit: bool = field(
         default=False,
         metadata={"help": "Load model in 4-bit NF4 (QLoRA). Requires bitsandbytes."},
@@ -383,7 +295,6 @@ class LLMExperimentArguments:
         default=False,
         metadata={"help": "Load model in 8-bit. Requires bitsandbytes."},
     )
-    # ── LoRA (fine_tune mode) ─────────────────────────────────────────────────
     lora_r: int = field(
         default=16,
         metadata={"help": "LoRA rank."},
@@ -418,24 +329,16 @@ class LLMExperimentArguments:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
 
 
-# ── Label (de)serialisation ────────────────────────────────────────────────────
 
 _GOLD_SPLIT_RE = re.compile(r"[,;|/]+")
 
 
 def parse_gold_labels(raw: object) -> list[str]:
     """Parse a raw gold-label cell into a sorted list of canonical labels.
-
-    The task is single-label (exactly one fallacy per example), so this
-    normally returns a single-item list. Comma/semicolon/pipe/slash delimiters
-    are still tolerated for robustness against legacy or malformed cells, but
-    an empty result ("None") should not occur in valid single-label data.
-    """
+    The task is single-label, so this normally returns a single-item list."""
     if raw is None:
         return []
     text = str(raw).strip()
-    # Only truly empty / NaN cells short-circuit. "none"/"nofallacy" go through alias lookup so
-    # datasets with an explicit "No Fallacy" class (reddit) resolve it to a real label.
     if not text or _normalize(text) in {"", "nan"}:
         return []
     labels = set()
@@ -453,13 +356,7 @@ def parse_gold_labels(raw: object) -> list[str]:
 
 def parse_llm_response(response: str) -> list[str]:
     """Extract the canonical fallacy label(s) mentioned in a raw LLM response.
-
-    Single-label: returns at most one label — the earliest-occurring alias match,
-    ties broken in favor of the longer (more specific) alias.
-    Multi-label: returns every distinct matched label, ordered by canonical index;
-    the 'None of the above' exclusivity / empty-default rules are applied separately
-    by ``apply_none_rules``. Returns an empty list if no known label is found.
-    """
+    Single-label keeps the earliest alias match; multi-label keeps every match in canonical order."""
     norm = _normalize(response)
     if not norm:
         return []
@@ -475,23 +372,17 @@ def parse_llm_response(response: str) -> list[str]:
     matches.sort()
     if not IS_MULTI_LABEL:
         return [matches[0][2]]
-    # Multi-label: keep all distinct labels the response mentions.
     distinct = {canon for _, _, canon in matches}
     return sorted(distinct, key=ALL_LABELS.index)
 
 
 def labels_to_llm_target(labels: list[str]) -> str:
-    """Render canonical label(s) as the human-readable target string for the assistant turn.
-
-    Multi-label: renders every label (canonical order) joined by ", "; an empty set is
-    resolved to "None of the above" via ``apply_none_rules``.
-    Single-label: renders the one label; raises on an empty set ("None" is never valid).
-    """
+    """Render canonical label(s) as the target string for the assistant turn.
+    Multi-label joins them with ", "; single-label raises on an empty set."""
     if IS_MULTI_LABEL:
         canon = apply_none_rules(sorted(set(labels), key=ALL_LABELS.index))
         return ", ".join(LABEL_TO_LLM[c] for c in canon)
     if not labels:
-        # Datasets with an explicit negative class (reddit) render it; others have no valid empty.
         if SINGLE_LABEL_NONE:
             return LABEL_TO_LLM[SINGLE_LABEL_NONE]
         raise ValueError(
@@ -502,8 +393,6 @@ def labels_to_llm_target(labels: list[str]) -> str:
     return LABEL_TO_LLM[canon]
 
 
-# ── Prompt helpers ─────────────────────────────────────────────────────────────
-# NOTE: _LABEL_MENU is populated at runtime in main() via _apply_label_config().
 
 
 def build_user_message(
@@ -527,7 +416,6 @@ def build_user_message(
             "Do not invent new types."
         )
     elif SINGLE_LABEL_NONE:
-        # Dataset carries an explicit "No Fallacy" class (classification + detection).
         none_readable = LABEL_TO_LLM.get(SINGLE_LABEL_NONE, "No Fallacy")
         parts.append(
             "Which fallacy type does this sentence contain, if any? "
@@ -569,7 +457,6 @@ def build_few_shot_messages(
         messages.append({"role": "user", "content": build_user_message(
             ex["sentence"], ex["speech_turn"], ex.get("context")
         )})
-        # Few-shot demonstrations use the human-readable target string (e.g. "Appeal to Emotion")
         messages.append({"role": "assistant", "content": ex["llm_response"]})
     messages.append({"role": "user", "content": build_user_message(sentence, speech_turn, context)})
     return messages
@@ -587,7 +474,6 @@ def format_for_sft(
     sentence = example[text_col] or ""
     speech_turn = example[speech_turn_col] or ""
     context = example[context_col] if (use_rag and context_col and context_col in example) else None
-    # Translate gold label(s) → human-readable target so the model learns to emit the names
     llm_target = labels_to_llm_target(parse_gold_labels(example.get("label")))
 
     messages = [
@@ -595,12 +481,10 @@ def format_for_sft(
         {"role": "user", "content": build_user_message(sentence, speech_turn, context)},
         {"role": "assistant", "content": llm_target},
     ]
-    # apply_chat_template adds the EOS token automatically
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
     return {"text": text}
 
 
-# ── Few-shot example selection ─────────────────────────────────────────────────
 
 def sample_few_shot_examples(
         dataset,
@@ -611,12 +495,8 @@ def sample_few_shot_examples(
         use_rag: bool,
         seed: int = 42,
 ) -> list[dict]:
-    """Sample up to `n_per_class` examples per fallacy label; return a flat shuffled list of dicts.
-
-    Each example is eligible for a class if its gold label matches that class
-    (the task is single-label, so this is normally a single exact match).
-    De-duplicates examples chosen for several classes.
-    """
+    """Sample up to ``n_per_class`` examples per fallacy label and return a flat shuffled list.
+    De-duplicates examples chosen for several classes."""
     rng = random.Random(seed)
     examples = []
     seen = set()
@@ -635,7 +515,6 @@ def sample_few_shot_examples(
                 "sentence": ex[text_col] or "",
                 "speech_turn": ex[speech_turn_col] or "",
                 "labels": gold,
-                # Pre-rendered target string used in the assistant turn of the prompt
                 "llm_response": labels_to_llm_target(gold),
             }
             if use_rag and context_col and context_col in ex:
@@ -645,17 +524,10 @@ def sample_few_shot_examples(
     return examples
 
 
-# ── Metrics ────────────────────────────────────────────────────────────────────
 
 def compute_metrics(predictions: list[list[str]], references: list[list[str]]) -> dict:
-    """Compute classification metrics from predicted and gold labels.
-
-    Predictions/references are single-item label lists under the single-label
-    task (an empty list only signals a parse failure). Uses a fixed 6-class
-    indicator space (ALL_LABELS) via MultiLabelBinarizer for convenience.
-    Reports subset (exact-match) accuracy, Hamming loss, micro/macro/weighted/
-    samples F1, and micro/macro precision and recall.
-    """
+    """Compute classification metrics over a fixed indicator space built from ALL_LABELS.
+    Reports exact-match accuracy, Hamming loss, micro/macro/weighted/samples F1, precision and recall."""
     mlb = MultiLabelBinarizer(classes=ALL_LABELS)
     y_true = mlb.fit_transform(references)
     y_pred = mlb.transform(predictions)
@@ -672,14 +544,12 @@ def compute_metrics(predictions: list[list[str]], references: list[list[str]]) -
         "recall_micro": recall_score(y_true=y_true, y_pred=y_pred, average="micro", zero_division=0),
         "recall_macro": recall_score(y_true=y_true, y_pred=y_pred, average="macro", zero_division=0),
     }
-    # Per-class F1 for error analysis
     per_class = f1_score(y_true=y_true, y_pred=y_pred, average=None, zero_division=0)
     for label, score in zip(ALL_LABELS, per_class):
         metrics[f"f1_{label}"] = float(score)
     return metrics
 
 
-# ── Model loading helpers ──────────────────────────────────────────────────────
 
 def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
     """Return True if the checkpoint already ships its own quantization_config (e.g. Mxfp4)."""
@@ -708,11 +578,9 @@ def _build_load_kwargs(
                 f"Model '{model_name_or_path}' already has a built-in quantization config. "
                 "Ignoring --load_in_4bit / --load_in_8bit to avoid conflicting quant configs."
             )
-        # Let Transformers handle dtype automatically for pre-quantized checkpoints
         kwargs["torch_dtype"] = "auto"
         return kwargs
 
-    # Standard path — apply BitsAndBytes if requested
     try:
         from transformers import BitsAndBytesConfig
         _bnb_available = True
@@ -734,7 +602,6 @@ def _build_load_kwargs(
     return kwargs
 
 
-# ── Batched generation helper ──────────────────────────────────────────────────
 
 def _generate_batched(
         model,
@@ -746,17 +613,8 @@ def _generate_batched(
         torch_module,
         max_length: int = 2048,
 ) -> list[str]:
-    """Length-sorted, left-padded batched generation.
-
-    Each chat prompt is tokenised once, then examples are sorted short→long so that
-    every padded batch groups similar-length sequences together. This minimises the
-    compute wasted on padding tokens (a plain in-order pass pads every batch to the
-    longest example it happens to contain). Results are re-ordered back to the
-    original input order before returning, so callers see no difference in output —
-    only in speed. This helps both zero-shot and, especially, few-shot inference,
-    where prompt lengths vary the most.
-    """
-    # 1. Render + tokenise each chat prompt once (no padding yet).
+    """Length-sorted, left-padded batched generation: prompts are sorted short to long so each batch
+    wastes little compute on padding, then results are re-ordered back to the input order."""
     encodings = []
     for msgs in messages_list:
         text = tokenizer.apply_chat_template(
@@ -764,7 +622,6 @@ def _generate_batched(
         )
         encodings.append(tokenizer(text, truncation=True, max_length=max_length))
 
-    # 2. Process short prompts first so padding within each batch stays minimal.
     order = sorted(range(len(encodings)), key=lambda i: len(encodings[i]["input_ids"]))
 
     gen_kwargs = dict(
@@ -782,7 +639,6 @@ def _generate_batched(
     for i in tqdm(range(0, len(order), batch_size), total=n_batches,
                   desc="Generating", unit="batch"):
         idxs = order[i: i + batch_size]
-        # tokenizer.pad re-pads the pre-tokenised examples (left padding set on the tokenizer).
         inputs = tokenizer.pad(
             [encodings[j] for j in idxs],
             padding=True,
@@ -792,7 +648,6 @@ def _generate_batched(
         with torch_module.inference_mode():
             output_ids = model.generate(**inputs, **gen_kwargs)
 
-        # Decode only newly generated tokens; map each result back to its original slot.
         prompt_len = inputs["input_ids"].shape[1]
         for k, out in enumerate(output_ids):
             decoded = tokenizer.decode(out[prompt_len:], skip_special_tokens=True)
@@ -801,7 +656,6 @@ def _generate_batched(
     return responses
 
 
-# ── Local HuggingFace backend ──────────────────────────────────────────────────
 
 class LocalLLMInference:
     """Wrap a HuggingFace causal LM for batched, chat-templated inference."""
@@ -823,7 +677,7 @@ class LocalLLMInference:
             revision=model_args.model_revision,
             token=model_args.token,
             trust_remote_code=model_args.trust_remote_code,
-            padding_side="left",  # causal LM: pad on the left
+            padding_side="left",
         )
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -874,7 +728,6 @@ class LocalLLMInference:
         )
 
 
-# ── OpenAI backend ─────────────────────────────────────────────────────────────
 
 class OpenAIInference:
     """Wraps the OpenAI chat completions API for inference."""
@@ -909,7 +762,6 @@ class OpenAIInference:
         return responses
 
 
-# ── Inference runner ───────────────────────────────────────────────────────────
 
 def run_inference(
         split_name: str,
@@ -920,10 +772,7 @@ def run_inference(
         few_shot_examples: Optional[list[dict]] = None,
 ) -> tuple[list[list[str]], list[list[str]]]:
     """Build prompts, run inference, and return (predictions, references) as label-set lists.
-
-    Each prediction / reference is a (possibly empty) list of canonical fallacy
-    labels. `references` is empty when the split has no gold labels.
-    """
+    ``references`` is empty when the split has no gold labels."""
     text_col = data_args.text_column_name
     speech_col = data_args.speech_turn_column_name
     ctx_col = data_args.context_column_name
@@ -943,8 +792,6 @@ def run_inference(
     logger.info(f"Running inference on {len(messages_list)} {split_name} examples …")
     raw_responses = inference_engine.predict_batch(messages_list)
 
-    # Parse each raw response into a set of canonical fallacy labels, then apply the
-    # multi-label 'None of the above' rules (exclusive; empty -> None). No-op single-label.
     predictions = [apply_none_rules(parse_llm_response(r)) for r in raw_responses]
 
     references: list[list[str]] = []
@@ -954,7 +801,6 @@ def run_inference(
     return predictions, references
 
 
-# ── Fine-tuning ────────────────────────────────────────────────────────────────
 
 def run_fine_tuning(
         model_args: ModelArguments,
@@ -972,19 +818,17 @@ def run_fine_tuning(
 
     logger.info("=== Fine-tuning phase ===")
 
-    # ── Load tokenizer ────────────────────────────────────────────────────────
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
-        padding_side="right",  # right-padding for SFT
+        padding_side="right",
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    # ── Load base model ───────────────────────────────────────────────────────
     base_kwargs = dict(
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
@@ -998,7 +842,6 @@ def run_fine_tuning(
         **load_kwargs,
     )
 
-    # ── LoRA config ───────────────────────────────────────────────────────────
     target_modules = (
         [m.strip() for m in llm_args.lora_target_modules.split(",")]
         if llm_args.lora_target_modules
@@ -1013,7 +856,6 @@ def run_fine_tuning(
         bias="none",
     )
 
-    # ── Format datasets for SFT ───────────────────────────────────────────────
     def _fmt(ex):
         """Format one example as an SFT chat string."""
         return format_for_sft(
@@ -1028,7 +870,6 @@ def run_fine_tuning(
     train_sft = train_dataset.map(_fmt, desc="Formatting train for SFT")
     eval_sft = eval_dataset.map(_fmt, desc="Formatting eval for SFT") if eval_dataset else None
 
-    # ── SFT config ────────────────────────────────────────────────────────────
     sft_config = SFTConfig(
         output_dir=training_args.output_dir,
         num_train_epochs=training_args.num_train_epochs,
@@ -1066,7 +907,6 @@ def run_fine_tuning(
     trainer.save_state()
     trainer.save_model()
 
-    # Optionally merge adapter into base model
     if llm_args.merge_adapter:
         logger.info("Merging LoRA adapter into base model …")
         merged_model = trainer.model.merge_and_unload()
@@ -1079,7 +919,6 @@ def run_fine_tuning(
     return trainer.model, tokenizer
 
 
-# ── Dataset helpers ────────────────────────────────────────────────────────────
 
 def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArguments):
     """Load the train/validation/test CSV or JSON splits into a DatasetDict."""
@@ -1105,10 +944,7 @@ def _build_gold_label_column(ds, label_columns: list[str]):
 def prepare_split(raw_datasets, split_name, label_column, max_samples=None,
                   multilabel_columns: Optional[list[str]] = None):
     """Materialise a 'label' column, optionally truncate, and return a plain HF Dataset.
-
-    Multi-label: build 'label' from the 0/1 indicator columns. Single-label: rename the
-    categorical label column to 'label'.
-    """
+    Multi-label builds it from the 0/1 indicators; single-label renames the categorical column."""
     ds = raw_datasets[split_name]
     if multilabel_columns:
         ds = _build_gold_label_column(ds, multilabel_columns)
@@ -1119,7 +955,6 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None,
     return ds
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
@@ -1135,7 +970,6 @@ def main():
     else:
         model_args, data_args, llm_args, training_args = parser.parse_args_into_dataclasses()
 
-    # ── Dynamically set the system prompt AND label space based on the dataset ──
     SYSTEM_PROMPT = get_classification_prompt(data_args.train_file)
     _apply_label_config(data_args.train_file)
 
@@ -1148,15 +982,13 @@ def main():
     )
     set_seed(training_args.seed)
 
-    # ── Load datasets ─────────────────────────────────────────────────────────
     raw_datasets = load_raw_datasets(data_args, model_args)
 
-    # ── Auto-detect single- vs multi-label from the dataset columns ────────────
     ref_split = "train" if "train" in raw_datasets else next(iter(raw_datasets))
     IS_MULTI_LABEL, label_columns = detect_label_columns(raw_datasets, data_args, ref_split)
     multilabel_columns = None
     if IS_MULTI_LABEL:
-        _register_none_class()  # add the explicit "None of the above" class to the label space
+        _register_none_class()
         multilabel_columns = label_columns
         logger.info(f"Detected MULTI-LABEL classification over columns: {label_columns}")
     else:
@@ -1189,7 +1021,6 @@ def main():
         )
         logger.info(f"Test split: {len(predict_dataset)} examples")
 
-    # ── Few-shot example pool (sampled once from training set) ─────────────────
     few_shot_examples = None
     if llm_args.mode == "few_shot":
         if train_dataset is None:
@@ -1208,7 +1039,6 @@ def main():
             f"(up to {llm_args.num_shots} per class)"
         )
 
-    # ── Fine-tuning ────────────────────────────────────────────────────────────
     inference_model = None
     inference_tokenizer = None
 
@@ -1227,7 +1057,6 @@ def main():
             eval_dataset=eval_dataset,
         )
 
-    # ── Build inference engine ─────────────────────────────────────────────────
     engine = None
     if training_args.do_eval or training_args.do_predict:
         if llm_args.backend == "openai":
@@ -1236,9 +1065,7 @@ def main():
                 llm_args=llm_args,
             )
         else:
-            # For fine_tune, reuse the fine-tuned model/tokenizer
             if llm_args.mode == "fine_tune" and inference_model is not None:
-                # Wrap the already-loaded fine-tuned model
                 engine = _FineTunedLocalEngine(
                     model=inference_model,
                     tokenizer=inference_tokenizer,
@@ -1253,7 +1080,6 @@ def main():
 
     os.makedirs(training_args.output_dir, exist_ok=True)
 
-    # ── Evaluation ─────────────────────────────────────────────────────────────
     if training_args.do_eval and eval_dataset is not None:
         logger.info("*** Evaluate ***")
         predictions, references = run_inference(
@@ -1270,7 +1096,6 @@ def main():
             logger.info(f"Eval metrics: {metrics}")
             _save_metrics(metrics, os.path.join(training_args.output_dir, "eval_results.json"))
 
-    # ── Prediction ─────────────────────────────────────────────────────────────
     if training_args.do_predict and predict_dataset is not None:
         logger.info("*** Predict ***")
         predictions, references = run_inference(
@@ -1297,7 +1122,6 @@ def main():
         logger.info(f"Predictions saved to {output_path}")
 
 
-# ── Thin wrapper to reuse fine-tuned model for inference ──────────────────────
 
 class _FineTunedLocalEngine:
     """Adapt an in-memory fine-tuned model to the LocalLLMInference predict_batch() interface."""
@@ -1307,7 +1131,6 @@ class _FineTunedLocalEngine:
         import torch
         self.model = model
         self.tokenizer = tokenizer
-        # Switch to left-padding for inference
         self.tokenizer.padding_side = "left"
         self.max_new_tokens = llm_args.max_new_tokens
         self.temperature = llm_args.temperature
@@ -1327,7 +1150,6 @@ class _FineTunedLocalEngine:
         )
 
 
-# ── Utility ────────────────────────────────────────────────────────────────────
 
 def _save_metrics(metrics: dict, path: str):
     """Write a metrics dict to *path* as indented JSON."""

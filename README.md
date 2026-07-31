@@ -26,7 +26,7 @@ The goal of this project is to improve **fallacy detection and classification** 
 more accurate classifications and clearer explanations of fallacious arguments in US political debates.
 
 The main experiments use the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains transcripts
-from U.S. political debates from 1960 to 2020. The same pipeline also runs on a **Reddit** discussion dataset, and a
+from U.S. political debates from 1960 to 2020. The same pipeline also runs on the **propaganda** dataset, and a
 separate relation-classification pipeline draws on the **LIARArg**, **DEBAGREEMENT**, and **propaganda** corpora.
 
 Both an **encoder** track (BERT-style fine-tuning) and an **LLM** track (zero-shot, few-shot, and LoRA/QLoRA
@@ -58,17 +58,13 @@ auto-detected from the dataset columns.
     - _Slippery Slope_: claiming a small first step will inevitably lead to extreme or unlikely consequences.
     - _False Cause_: assuming a causal link between two events merely because they co-occur.
     - _Slogan_: a short, striking phrase meant to provoke agreement rather than argue.
-- **Reddit** — eight categories, plus an explicit "No Fallacy" option: _Appeal to Authority_, _Appeal to Majority_,
-  _Appeal to Nature_, _Appeal to Tradition_, _Appeal to Worse Problems_, _Black-or-White_, _Hasty Generalization_,
-  _Slippery Slope_.
-
 ### Relation Classification
 
 Classify the **argumentative relation** between a pair of components as `support`, `attack`, or `no_relation`. This
 task serves the RAG pipeline: the extracted relations feed the `relations` query mode of the dataset builders (see
 below), enriching the retrieval query with the fallacy's supporting/attacking context. Models are trained on
-relation-labeled corpora (**LIARArg**, **DEBAGREEMENT**) and then used to predict relations on the **propaganda** and
-**Reddit** data. See [`src/relation-extraction/README.md`](src/relation-extraction/README.md).
+relation-labeled corpora (**LIARArg**, **DEBAGREEMENT**) and then used to predict relations on the **propaganda**
+data. See [`src/relation-extraction/README.md`](src/relation-extraction/README.md).
 
 ## ⛁ Knowledge Base
 
@@ -120,7 +116,6 @@ Each entry in the knowledge base is stored as a JSON document.
 | Dataset           | Tasks                                              | Role                                                                          |
 |-------------------|----------------------------------------------------|-------------------------------------------------------------------------------|
 | **ElecDeb60to20** | detection, classification                          | Main dataset (U.S. political debates, 1960–2020).                             |
-| **Reddit**        | detection, classification, relation-classification | Online-discussion counterpart with its own eight-class fallacy inventory.     |
 | **LIARArg**       | relation-classification                            | Training data for the relation classifier (`support / attack / no_relation`). |
 | **DEBAGREEMENT**  | relation-classification                            | Training data for the agreement/relation classifier.                          |
 | **propaganda**    | detection, relation-classification                 | Relation predictions produced by the LIARArg-trained model.                   |
@@ -151,11 +146,11 @@ After a sweep, `extract_results.py` / `extract_results_5runs.py` aggregate the p
 `generate_best_hparam_script.py` emits a `05-best_hparams_*.sh` that re-runs only the best configuration per model
 across several seeds. `check_one_run.py` / `check_five_runs.py` verify grid completeness.
 
-The `03-*.sh` / `04-*.sh` scripts default to ElecDeb60to20. To target Reddit instead, edit the `data` variable near the
-top of the script:
+The `03-*.sh` / `04-*.sh` scripts default to ElecDeb60to20. To target another dataset, edit the `data` variable near
+the top of the script:
 
 ```bash
-data="elecdeb60to20"  # elecdeb60to20 | reddit
+data="elecdeb60to20"  # elecdeb60to20 | propaganda
 ```
 
 which feeds both the input paths (`datasets/$data-dataset/...`) and the output paths (`output/one-run/$data-$task/...`).
@@ -178,7 +173,6 @@ datasets/                           # source data + per-dataset RAG-enrichment s
     detection/create_db.py          # builds RAG-enriched detection datasets
     classification/create_db.py     # builds RAG-enriched classification datasets
     <task>/<config>/                # generated RAG-enriched splits (one folder per config)
-  reddit-dataset/                   # Reddit dataset (same idea)
   propaganda-dataset/, LIARArg-dataset/, debagreeement-dataset/   # relation-classification data
 
 script/                             # sbatch / driver scripts (numbered by pipeline stage)

@@ -21,19 +21,6 @@ appear in the `fallacy_label` column) and their human-readable forms:
 | `Slipperyslope`     | Slippery Slope      |
 | `Slogans`           | Slogan              |
 
-The **Reddit** dataset uses a different eight-class inventory plus an explicit "No Fallacy" option:
-
-| Canonical label       | Human-readable           |
-|-----------------------|--------------------------|
-| `Authority`           | Appeal to Authority      |
-| `Population`          | Appeal to Majority       |
-| `Natural`             | Appeal to Nature         |
-| `Tradition`           | Appeal to Tradition      |
-| `WorseProblems`       | Appeal to Worse Problems |
-| `Blackwhite`          | Black-or-White           |
-| `HastyGeneralization` | Hasty Generalization     |
-| `SlipperySlope`       | Slippery Slope           |
-
 Two scripts are provided, covering encoder-based fine-tuning and LLM-based inference/fine-tuning:
 
 | Script                                                   | Approach                                       | When to use                                                                                |
@@ -132,8 +119,8 @@ trims the retrieved context rather than the local debate context).
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/classification/create_db.py`
 
 A `create_db.py` with the same interface (and dataset-specific defaults) exists per dataset; the ElecDeb60to20 one is
-the canonical reference. The Reddit RAG datasets are built the same way via the `02-create_database-reddit.sh` driver
-script.
+the canonical reference. Other datasets' RAG splits are built the same way via their `02-create_database-*.sh` driver
+scripts.
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, drops
 `NoFallacy` sentences, re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes
@@ -226,7 +213,7 @@ python src/classification/run_classification.py \
 ## LLM script — `run_classification_llm.py`
 
 Runs fallacy-type classification with a causal language model using one of three modes. The **system prompt and label
-inventory are selected automatically from the dataset** (ElecDeb60to20 vs. Reddit). Gold labels and predictions are
+inventory are selected automatically from the dataset** (based on the training-file path). Gold labels and predictions are
 parsed as label *sets*, so both single-label datasets (ElecDeb60to20 — one type per sentence) and multi-label datasets
 are handled transparently. Each example is formatted as a structured chat prompt:
 

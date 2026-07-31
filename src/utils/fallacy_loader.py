@@ -19,8 +19,6 @@ class FallacyLoader(BaseLoader):
         documents = []
 
         for directory in self.directories:
-            # An entry may be a plain folder name, or a (folder, category_label) tuple so a
-            # nested folder (e.g. "definitions/papers") can get a clean category label.
             if isinstance(directory, (tuple, list)):
                 folder, category = directory
             else:
@@ -54,8 +52,6 @@ class FallacyLoader(BaseLoader):
                     "year": year,
                     "category": category,
                 }
-                # Carry the fallacy label (present on exemplar records) so it can be used
-                # for fallacy-keyed retrieval / metadata filtering.
                 fallacy_label = data.get("fallacy_label")
                 if fallacy_label is not None:
                     metadata["fallacy_label"] = fallacy_label

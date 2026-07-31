@@ -1,47 +1,8 @@
-"""
-Prepare the LIARArg dataset for relation classification (support / attack / no_relation),
-in the same train/dev/test CSV format as src/relation-extraction/dataset/persuasive-essays
-(columns: label, label_value, sentence1, sentence2).
-
-Source dataset
---------------
-datasets/LIARArg-dataset/relation-classification/original/LIARArg.csv (Wang et al. 2025, "When
-automated fact-checking meets argumentation: unveiling fake news through argumentative
-evidence"). Each row is one fact-checked statement, with
-argumentative components (claim(s), premise(s)) and directed relations between them stored
-as flat [dependant_id, governor_id, ...] lists in the columns:
-
-    support_relation, psupport_relation   -> the dependant SUPPORTS the governor
-    attack_relation,  pattack_relation    -> the dependant ATTACKS  the governor
-
-("psupport"/"pattack" = partial support / partial attack; the paper itself reports an
-ablation where these are merged into plain support/attack -- we do the same here, matching
-persuasive-essays' 3-way scheme: support | attack | no_relation.)
-
-Method
-------
-1. Keep only rows with quality == '' (the usable/annotated subset -- non-empty quality
-   values are 'Insufficient', 'Bad News Text', 'Not Understandable' and have essentially no
-   annotated components) and that have at least one claim, one premise, and at least one
-   relation linking them.
-2. For each row, map component id -> (text, char position) from the claim/claim_id and
-   premise/premise_id columns.
-3. Build positive pairs (sentence1=dependant text, sentence2=governor text) from the four
-   relation columns, merging psupport->support (label 1) and pattack->attack (label 0). A
-   handful (34 across the corpus) of relation entries reference an id not present in that
-   row's own component ids -- these are almost certainly annotation-id drift from
-   neighbouring rows and are skipped.
-4. Build no_relation pairs from all remaining (unlinked) component-pair combinations within
-   the same row, ordered by character position (earlier text -> sentence1). To match the
-   ~1:1 balance between linked and no_relation pairs found in persuasive-essays, we randomly
-   sample as many no_relation pairs per row as that row has positive pairs (capped by how
-   many unlinked candidates exist).
-5. Split at the *row/statement* level (never split a statement's pairs across sets) into
-   80/10/10 train/dev/test, matching the split proportions the LIARArg paper itself reports
-   using for this dataset. Fixed random seed for reproducibility.
-
-Run: python3 prepare_liarArg.py
-"""
+"""Prepare the LIARArg dataset for relation classification (support / attack / no_relation).
+Keeps annotated rows holding at least one claim, one premise and one relation, builds positive
+pairs from the four relation columns (psupport/pattack merged into support/attack), and samples a
+matching number of no_relation pairs from that row's unlinked component combinations.
+Splits at statement level into 80/10/10. Run: ``python3 prepare_liarArg.py``."""
 
 from __future__ import annotations
 
@@ -62,7 +23,6 @@ OUTPUT_DIR = ROOT / "datasets" / "LIARArg-dataset" / "relation-classification"
 SEED = 42
 TRAIN_FRAC = 0.8
 DEV_FRAC = 0.1
-# remaining ~0.1 goes to test
 
 LABEL_VALUE = {0: "attack", 1: "support", 2: "no_relation"}
 
@@ -82,14 +42,13 @@ def load_documents():
 
     rng = random.Random(SEED)
 
-    documents = {}  # statement id -> list[(label, sentence1, sentence2)]
+    documents = {}
     n_skipped_relation_ids = 0
     n_docs_no_components = 0
     n_docs_no_positive = 0
 
     for row in rows:
         if row["quality"] != "":
-            # 'Insufficient' / 'Bad News Text' / 'Not Understandable' -- not usable.
             continue
 
         claim_ids = parse_list(row["claim_id"])
@@ -111,8 +70,7 @@ def load_documents():
             pos = premise_positions[2 * i] if 2 * i < len(premise_positions) else None
             components[pid] = {"text": text, "pos": pos}
 
-        # ── positive (linked) pairs ──────────────────────────────────────
-        pos_pairs = []  # (dependant_id, governor_id, label)
+        pos_pairs = []
         for column, label in (
                 ("support_relation", 1),
                 ("psupport_relation", 1),
@@ -133,7 +91,6 @@ def load_documents():
 
         linked_unordered = {frozenset((d, g)) for d, g, _ in pos_pairs}
 
-        # ── no_relation candidates: all remaining component-pair combos ──
         all_ids = list(components.keys())
         candidates = []
         for a, b in combinations(all_ids, 2):

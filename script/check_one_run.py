@@ -1,22 +1,9 @@
 #!/usr/bin/env python3
-"""
-Verify completeness of the FallacyRAG detection experiment grid.
-
-For every config folder under output/one-run/elecdeb60to20-detection it checks:
-  - the expected model sub-folders are present
-  - each model folder has the right number of hyperparameter combinations
-  - each combination folder has its completion marker
-      encoders -> predict_results.json
-      LLMs     -> predict_results_metrics.json
-
-Anything missing (or unexpected extra) is reported. Exit code is non-zero
-if any problem is found, so it can be dropped into CI / a cron check.
-
-Usage:
-    python check_detection.py [BASE_DIR]
-
-BASE_DIR defaults to output/one-run/elecdeb60to20-detection next to this script.
-"""
+"""Verify completeness of the FallacyRAG single-run detection experiment grid.
+Checks that every config has the expected model folders, each with the right number of
+hyperparameter combinations carrying the completion marker (``predict_results.json`` for
+encoders, ``predict_results_metrics.json`` for LLMs). Problems are reported and the exit code
+is non-zero. Usage: ``python check_one_run.py [BASE_DIR]``."""
 
 import sys
 from pathlib import Path
@@ -26,9 +13,6 @@ import rootutils
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 root = rootutils.find_root(search_from=__file__, indicator=".project-root")
 
-# ---------------------------------------------------------------------------
-# Expected structure (edit here if the grid changes)
-# ---------------------------------------------------------------------------
 
 ENCODERS = [
     "ModernBERT-base",
@@ -56,9 +40,6 @@ BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=ddore14-sen
 
 BEST_FOLDER_PROPAGANDA_DETECTION = ""
 
-BEST_FOLDER_REDDIT_DETECTION = ""
-BEST_FOLDER_REDDIT_DETECTION_CLASSIFICATION = ""
-
 REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_DETECTION = ["RooseBERT-scr-cased",
                                                          "ModernBERT-base",
                                                          "RooseBERT-cont-cased"]
@@ -70,20 +51,15 @@ REQUIRED_ENCODERS_BEST_FOLDER_PROPAGANDA_DETECTION = ["deberta-v3-base",
                                                       "Llama-3.1-8B-Instruct",
                                                       "Mistral-7B-Instruct-v0.3"]
 
-REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_DETECTION = []
-REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_CLASSIFICATION = []
-
-# Completion markers
 ENCODER_MARKER = "predict_results.json"
 LLM_MARKER = "predict_results_metrics.json"
 
-# Hyperparameter combinations -------------------------------------------------
 ENCODER_COMBOS = [
     f"bs{bs}_lr{lr}_ep{ep}"
     for bs in (8, 16)
     for lr in ("2e-5", "3e-5", "5e-5")
     for ep in (3, 5)
-]  # 12
+]
 LLM_COMBOS = (
         ["mode-zero_shot", "mode-few_shot"]
         + [
@@ -91,10 +67,9 @@ LLM_COMBOS = (
             for lr in ("1e-4", "3e-4", "5e-4")
             for ep in (1, 2, 3)
         ]
-)  # 11
+)
 
 
-# ---------------------------------------------------------------------------
 
 def expected_models(folder_name: str, base: Path):
     if "elecdeb60to20" in str(base):
@@ -106,21 +81,10 @@ def expected_models(folder_name: str, base: Path):
             if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_ELECDEB60TO20_DETECTION:
                 return ENCODERS + LLMS
             return REQUIRED_ENCODERS_BEST_FOLDER_ELECDEB60TO20_DETECTION
-    elif "reddit" in str(base):
-        if "classification" in str(base):
-            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_REDDIT_DETECTION_CLASSIFICATION:
-                return ENCODERS + LLMS
-            return REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_CLASSIFICATION
-        else:
-            if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_REDDIT_DETECTION:
-                return ENCODERS + LLMS
-            return REQUIRED_ENCODERS_BEST_FOLDER_REDDIT_DETECTION
     elif "propaganda" in str(base):
-        # propaganda is detection-only
         if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_PROPAGANDA_DETECTION:
             return ENCODERS + LLMS
         return REQUIRED_ENCODERS_BEST_FOLDER_PROPAGANDA_DETECTION
-    # unknown dataset: nothing expected
     elif "debagreeement" in str(base) or "LIARArg" in str(base):
         return ENCODERS + LLMS
 
@@ -128,7 +92,7 @@ def expected_models(folder_name: str, base: Path):
 
 
 def check(base: Path):
-    problems = []  # list of human-readable strings
+    problems = []
     stats = {"configs": 0, "combos_expected": 0, "combos_ok": 0}
 
     if not base.is_dir():
@@ -140,14 +104,12 @@ def check(base: Path):
         exp_models = expected_models(config.name, base)
         present = {p.name for p in config.iterdir() if p.is_dir()}
 
-        # missing / extra model folders
         for m in exp_models:
             if m not in present:
                 problems.append(f"[MISSING MODEL] {config.name}/{m}")
         for m in sorted(present - set(exp_models)):
             problems.append(f"[EXTRA MODEL]   {config.name}/{m}")
 
-        # per-model combination + marker checks
         for m in exp_models:
             mdir = config / m
             if not mdir.is_dir():
@@ -172,7 +134,6 @@ def check(base: Path):
                 else:
                     stats["combos_ok"] += 1
 
-    # report -----------------------------------------------------------------
     print(f"Scanned {stats['configs']} config folders under {base}")
     print(f"Combinations expected: {stats['combos_expected']} | "
           f"complete: {stats['combos_ok']} | "

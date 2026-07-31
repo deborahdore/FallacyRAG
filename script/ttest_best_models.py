@@ -1,33 +1,8 @@
-"""
-ttest_best_models.py
---------------------
-Paired t-test between the best baseline model and the best model of every other
-configuration, using the per-seed f1_macro values stored in an aggregate CSV
-produced by ``extract_results_5runs.py``:
-
-  output/five-runs/<dataset-task>/all_results_mean_std.csv
-
-"Best" is the model with the highest ``predict_f1_macro_mean`` inside its own
-config, so the two sides of a comparison may be different architectures.
-Seeds are paired by position (seed 0 vs seed 0, ...), so both models must have
-the same number of seeds.
-
-Alongside the paired t-test each comparison also reports:
-  * Shapiro-Wilk on the paired differences (t-test normality assumption)
-  * Wilcoxon signed-rank (distribution-free alternative to the t-test)
-  * exact sign-flip permutation test (no distributional assumption at all)
-  * Hedges' g (Cohen's d corrected for small-sample bias)
-  * a confidence interval on the mean difference at the same level as alpha
-
-With few seeds the rank-based tests are floor-limited: Wilcoxon and the
-permutation test cannot go below p = 2 / 2**n_seeds (0.0625 at 5 seeds), so
-treat the effect size and the interval as the primary evidence.
-
-A comparison is flagged significant at p < 0.01 by default.
-
-Usage:
-  python script/ttest_best_models.py <csv> [<csv> ...] [-o results.csv] [--alpha 0.01]
-"""
+"""Paired significance tests between the best baseline model and the best model of every config.
+Reads the per-seed f1_macro values from ``all_results_mean_std.csv`` and reports the paired
+t-test alongside Shapiro-Wilk, Wilcoxon, an exact sign-flip permutation test, Hedges' g and a
+confidence interval on the mean difference. Rank-based p-values are floored at few seeds, so
+prefer the effect size. Usage: ``python script/ttest_best_models.py <csv> ... [--alpha 0.01]``."""
 
 import argparse
 import itertools
@@ -40,7 +15,6 @@ import pandas as pd
 import rootutils
 from scipy import stats
 
-# Above this many seeds the 2**n sign-flip enumeration is sampled instead.
 EXACT_PERM_MAX_N = 20
 PERM_SAMPLES = 20000
 
@@ -109,7 +83,6 @@ def permutation_p(diffs: list[float], seed: int = 0) -> float:
     else:
         signs = np.random.default_rng(seed).choice((1, -1), size=(PERM_SAMPLES, n))
         total = PERM_SAMPLES
-    # Tolerance guards against float noise making an identical mean look larger.
     hits = sum(1 for s in signs if abs(sum(x * d for x, d in zip(s, diffs)) / n) >= observed - 1e-12)
     return hits / total
 
@@ -134,13 +107,10 @@ def compare(baseline: pd.Series, other: pd.Series, alpha: float) -> dict | None:
     n = len(diffs)
     df = n - 1
     mean_diff = sum(diffs) / n
-    # Cohen's d for paired samples: mean difference over its own std.
     diff_std = pd.Series(diffs).std(ddof=1)
     cohen_d = mean_diff / diff_std if diff_std else float("nan")
-    # Hedges' correction removes the upward bias of d at small n.
     hedges_g = cohen_d * (1 - 3 / (4 * df - 1)) if df > 1 else cohen_d
 
-    # CI on the mean difference at the same level used for the significance flag.
     sem = diff_std / math.sqrt(n) if diff_std else 0.0
     margin = stats.t.ppf(1 - alpha / 2, df) * sem
     shapiro_w, shapiro_p = shapiro_normality(diffs)
@@ -171,10 +141,8 @@ def compare(baseline: pd.Series, other: pd.Series, alpha: float) -> dict | None:
         "wilcoxon_stat": round(wilcoxon_stat, 3),
         "wilcoxon_p": round(wilcoxon_pval, 5),
         "perm_p": round(perm_pval, 5),
-        # Floor of the rank-based tests; they cannot detect anything below it.
         "min_attainable_p": round(perm_floor, 5),
         "significant": bool(result.pvalue < alpha),
-        # Significant by t-test and as extreme as the seed count lets the rank tests go.
         "robust": bool(
             result.pvalue < alpha
             and perm_pval <= max(alpha, perm_floor)
@@ -227,7 +195,6 @@ def main() -> None:
             continue
         rows = process_csv(csv_path, args.alpha)
         all_rows.extend(rows)
-        # Without -o, each input gets its own report alongside it.
         if rows and not args.output:
             out_path = os.path.join(os.path.dirname(csv_path), OUTPUT_FILE)
             pd.DataFrame(rows).to_csv(out_path, index=False)

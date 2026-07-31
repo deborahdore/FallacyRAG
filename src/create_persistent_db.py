@@ -69,14 +69,12 @@ def _apply_gpu_optimizations(embedding_function, retriever: str):
         log.warning("Could not access embedding model client for GPU optimizations.")
         return
 
-    # FP16: ~2x throughput on modern NVIDIA GPUs via tensor cores
     try:
         client.half()
         log.info("Applied FP16 (half precision) to embedding model")
     except Exception as e:
         log.warning(f"FP16 conversion failed: {e}")
 
-    # torch.compile graph fusion; "reduce-overhead" mode suits one long encode pass
     try:
         embedding_function.client = torch.compile(client, mode="reduce-overhead")
         log.info("Applied torch.compile(mode='reduce-overhead') to embedding model")
@@ -87,10 +85,10 @@ def _apply_gpu_optimizations(embedding_function, retriever: str):
 DEFAULT_DIRECTORIES = [
     "bills",
     "definitions",
-    ("definitions/papers", "papers"),  # academic papers (nested subfolder)
-    "exemplars",  # labeled fallacy examples (carry fallacy_label)
+    ("definitions/papers", "papers"),
+    "exemplars",
     "geography",
-    "history",  # US history 1900-today, one record per year
+    "history",
     "newspapers",
     "people",
 ]
@@ -113,7 +111,6 @@ def _deterministic_ids(splits: list) -> list[str]:
 def _build_text_splitter(embedding_function, retriever: str,
                          chunk_size: int, chunk_overlap: int) -> RecursiveCharacterTextSplitter:
     """Build a token-aware splitter clamped to the embedding model's input window."""
-    # Split by tokens, not chars, so long chunks aren't truncated; fall back to chars if no tokenizer.
     client = getattr(embedding_function, "client", None)
     tokenizer = getattr(client, "tokenizer", None)
     max_seq_length = getattr(client, "max_seq_length", None)
@@ -133,7 +130,6 @@ def _build_text_splitter(embedding_function, retriever: str,
                 length_function=len,
             )
 
-    # Clamp to the model's real input window (leave a couple of tokens for special tokens).
     if max_seq_length:
         token_limit = max(8, int(max_seq_length) - 2)
         if chunk_size > token_limit:
@@ -143,7 +139,6 @@ def _build_text_splitter(embedding_function, retriever: str,
             )
             chunk_size = token_limit
 
-    # Overlap must stay strictly below the (possibly clamped) chunk size.
     if chunk_overlap >= chunk_size:
         chunk_overlap = chunk_size // 10
         log.info(f"Adjusted chunk_overlap to {chunk_overlap} tokens (must be < chunk_size).")
@@ -184,7 +179,6 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
 
     embedding_function = RETRIEVERS[retriever]()
 
-    # Apply FP16 + torch.compile for local HuggingFace models on GPU
     _apply_gpu_optimizations(embedding_function, retriever)
 
     vector_store = Chroma(
@@ -213,7 +207,6 @@ def main(retriever: str, chunk_size: int, chunk_overlap: int, batch_size: int,
 
     splits = text_splitter.split_documents(docs)
 
-    # Deterministic ids → re-running upserts the same chunks instead of duplicating them.
     ids = _deterministic_ids(splits)
 
     for i in tqdm(range(0, len(splits), batch_size), desc="Adding to Chroma"):

@@ -1,55 +1,8 @@
-"""
-ablation.py
------------
-Leave-one-out ablation of the RAG pipeline, built entirely from the existing
-single-seed grid in ``output/one-run/<data>-<task>/``. No new training is needed
-for any cell that the grid already covers.
-
-Design
-======
-The study anchors on the best RAG configuration for a task and removes one
-pipeline component at a time, keeping everything else fixed:
-
-  full            temporal + Sentence-RooseBERT + hybrid&rerank + relations_labeled
-  - temporal      flip the temporal filter
-  - structure     relations_labeled -> fallacy_relations -> plain sentence query
-  - hybrid&rerank hybrid + cross-encoder -> dense similarity only
-  - dense retr.   Sentence-RooseBERT -> bge-large / mpnet / BM25 (at the anchor's
-                  query, plus a second BM25 row that also drops the query)
-  - RAG           the no-retriever baseline
-
-Two choices keep the deltas interpretable.
-
-**The anchor model is picked on the no-RAG column** (``--anchor-by baseline``,
-the default): the strongest architecture *without* retrieval. Picking it on the
-RAG column instead would select the architecture where retrieval happened to
-help most, and every ``delta_vs_baseline`` in the table would inherit that bias.
-
-**Hyperparameters are frozen per model** at that model's best cell on the anchor
-config, and reused unchanged for every ablated cell. Re-tuning per cell would mix
-"this component was removed" with "this cell drew a luckier learning rate", and
-``extract_results.py`` picks its per-cell best on the *test* metric, which would
-leak selection straight into the deltas. Two selection-free columns sit alongside:
-
-  f1_fixed   the frozen hyperparameters, applied to every cell   <- report this
-  f1_mean    mean over all 12 hyperparameter cells (no selection at all)
-  f1_max     max over all 12 (matches all_results.csv; for continuity only)
-
-Note the temporal row is a removal for detection (whose winning config has
-temporal=true) but an addition for classification (temporal=false) — read it as
-"temporal filtering on vs off", not as a component being taken away.
-
-Because a single seed is noisy, treat this table as the screen that decides
-*which* ablated cells deserve a 5-seed re-run. ``--emit-missing`` lists the cells
-that are not in the grid yet.
-
-Usage
-=====
-  python script/ablation.py                                    # both tasks
-  python script/ablation.py --anchor-by rag --emit-missing     # match the main table
-  python script/ablation.py --all-models                       # robustness check
-  python script/ablation.py --task classification --anchor-model longformer-base-4096
-"""
+"""Leave-one-out ablation of the RAG pipeline, reusing the single-seed grid in
+``output/one-run/<data>-<task>/``. The study anchors on the best RAG config and removes one
+component at a time: temporal, structure, hybrid&rerank, dense retriever, and RAG itself.
+Hyperparameters are frozen per model at the anchor cell so the deltas stay selection-free.
+Run ``python script/ablation.py --help`` for the available options."""
 
 from __future__ import annotations
 
@@ -89,7 +42,6 @@ def parse_config(name: str) -> dict:
         return {k: "none" for k in ("temporal", "retriever", "search", "rerank", "query", "summarizer")}
     d = {k: (v if v is not None else "none") for k, v in m.groupdict().items()}
     d["temporal"] = d["temporal"] == "true"
-    # A plain 'sentence'-mode build has no query= segment: the query is the sentence itself.
     if d["query"] == "none" and d["retriever"] != "false":
         d["query"] = "sentence"
     return d
@@ -129,21 +81,8 @@ def load_grid(task: str, data: str = "elecdeb60to20") -> pd.DataFrame:
 
 def best_rag_config(task: str, anchor_by: str = "baseline",
                     data: str = "elecdeb60to20") -> tuple[str, str] | None:
-    """Anchor (config, model) taken from the 5-seed aggregate.
-
-    The config is always the proposed pipeline — the best RAG row — because the
-    ablation is of *that pipeline*, not of an architecture.
-
-    The model depends on ``anchor_by``:
-
-    * ``baseline`` (default) — the strongest model *without* retrieval. Picking
-      the anchor on the no-RAG column keeps model choice independent of the
-      quantity being measured; choosing the model whose RAG score is highest
-      would select for the architecture where retrieval happened to help most
-      and inflate every ``delta_vs_baseline`` in the table.
-    * ``rag`` — the best RAG model, i.e. the headline row of the results table.
-      Matches the main table, but carries the selection bias above.
-    """
+    """Anchor (config, model) from the 5-seed aggregate; the config is always the best RAG row.
+    ``anchor_by`` picks the model on the no-RAG column (``baseline``) or the RAG column (``rag``)."""
     path = os.path.join(FIVE_RUN_ROOT, f"{data}-{task}", "all_results_mean_std.csv")
     if not os.path.isfile(path):
         return None
@@ -164,11 +103,7 @@ def best_rag_config(task: str, anchor_by: str = "baseline",
 
 def cell(df: pd.DataFrame, config: str, models: list[str], fixed_hparams: dict[str, str]) -> dict:
     """Fixed-hparam, mean-over-hparams and max-over-hparams F1 for one config.
-
-    ``fixed_hparams`` is per model: a learning rate that suits ModernBERT can be
-    actively bad for Longformer, so sharing one cell across architectures would
-    measure hyperparameter mismatch instead of the ablated component.
-    """
+    ``fixed_hparams`` is per model, so deltas measure the component and not hyperparameter mismatch."""
     sub = df[(df["config"] == config) & (df["model"].isin(models))]
     if sub.empty:
         return {"f1_fixed": float("nan"), "f1_mean": float("nan"),
@@ -177,8 +112,6 @@ def cell(df: pd.DataFrame, config: str, models: list[str], fixed_hparams: dict[s
         g[g["hparams"] == fixed_hparams[m]]["f1_macro"].mean()
         for m, g in sub.groupby("model") if m in fixed_hparams
     ]
-    # With several models the per-model values are averaged, so the row still
-    # answers "what does this component do", not "which architecture is best".
     return {
         "f1_fixed": float(pd.Series(fixed).mean()) if fixed else float("nan"),
         "f1_mean": float(sub.groupby("model")["f1_macro"].mean().mean()),
@@ -189,10 +122,7 @@ def cell(df: pd.DataFrame, config: str, models: list[str], fixed_hparams: dict[s
 
 def build_variants(anchor: dict, df: pd.DataFrame) -> list[tuple[str, str, str]]:
     """(component, level, config) rows: the anchor plus every leave-one-out cell.
-
-    Matching is done on the parsed axes rather than by string-building the folder
-    name, so a variant is found whatever order create_db.py wrote the segments in.
-    """
+    Matching is on the parsed axes, so segment order in the folder name does not matter."""
     axes = df.drop_duplicates("config").set_index("config")
 
     def find(**overrides) -> str | None:
@@ -205,7 +135,6 @@ def build_variants(anchor: dict, df: pd.DataFrame) -> list[tuple[str, str, str]]
 
     variants = [("full pipeline", "all components", anchor["config"])]
 
-    # --- temporal filtering -------------------------------------------------
     c = find(temporal=not anchor["temporal"])
     variants.append((
         "temporal filter",
@@ -213,34 +142,25 @@ def build_variants(anchor: dict, df: pd.DataFrame) -> list[tuple[str, str, str]]
         c,
     ))
 
-    # --- structure-informed query ------------------------------------------
     for level in ("fallacy_relations", "sentence"):
         if level == anchor["query"]:
             continue
         variants.append(("query (structure)", level, find(query=level)))
 
-    # --- fusion + reranking -------------------------------------------------
     if anchor["search"] == "hybrid":
         variants.append(("hybrid + rerank", "dense similarity only",
                          find(search="similarity", rerank="false")))
 
-    # --- retriever ----------------------------------------------------------
     for retr in ("baai-bge-large-en-v1.5", "sentence-transformers-all-mpnet-base-v2"):
         if retr == anchor["retriever"]:
             continue
         variants.append(("dense retriever", retr, find(retriever=retr)))
-    # BM25 is sparse-only (search=bm25, never reranked), but the query modes are
-    # built for it too, so the swap can be made *at the anchor's query*: that row
-    # isolates the retriever. The sentence-query row underneath is the older,
-    # doubly-ablated cell; the gap between the two is exactly what a
-    # structure-informed query is worth to a retriever that cannot embed it.
     variants.append(("dense retriever", "bm25 (sparse only)",
                      find(retriever="bm25", search="bm25", rerank="false")))
     if anchor["query"] != "sentence":
         variants.append(("dense retriever", "bm25 + sentence query",
                          find(retriever="bm25", search="bm25", rerank="false", query="sentence")))
 
-    # --- the pipeline as a whole -------------------------------------------
     variants.append(("RAG itself", "no retrieval (baseline)", BASELINE_CONFIG))
     return variants
 
@@ -257,8 +177,6 @@ def ablate(task: str, anchor_model: str | None, all_models: bool,
     if anchor_config is None:
         raise SystemExit(f"No 5-seed aggregate for {task}; pass --anchor-config explicitly.")
 
-    # Only models with the whole grid can carry an ablation; the rest were run
-    # on the baseline and the winning config alone.
     coverage = df.groupby("model")["config"].nunique()
     full = coverage[coverage == df["config"].nunique()].index.tolist()
     if anchor_model not in full:
@@ -270,8 +188,6 @@ def ablate(task: str, anchor_model: str | None, all_models: bool,
     models = full if all_models else [anchor_model]
 
     anchor = {"config": anchor_config, **parse_config(anchor_config)}
-    # Each model keeps its own hyperparameters, chosen once on the anchor config
-    # and then frozen for every ablated cell.
     if fixed_hparams is None:
         frozen = {}
         for m in models:
@@ -301,25 +217,17 @@ def ablate(task: str, anchor_model: str | None, all_models: bool,
         c = cell(df, config, models, frozen)
         rows.append({
             "task": task, "component": component, "level": level, "config": config, **c,
-            # Kept at 6 dp: the LaTeX writer rounds to one decimal of an F1 point,
-            # and rounding twice can shift that last digit (0.2195 -> 21.9 vs 22.0).
-            # vs the full pipeline: how much this component was contributing.
             "delta_vs_full": round(c["f1_fixed"] - full_cell["f1_fixed"], 6),
-            # vs no retrieval: how much of the RAG gain survives the removal.
             "delta_vs_baseline": round(c["f1_fixed"] - base["f1_fixed"], 6),
         })
     out = pd.DataFrame(rows)
     for col in ("f1_fixed", "f1_mean", "f1_max"):
         out[col] = out[col].round(4)
-    # Carried on the frame so the LaTeX writer can caption itself without
-    # re-deriving which model and config the table was anchored on.
     out.attrs["anchor_model"] = ", ".join(models)
     out.attrs["anchor_config"] = anchor_config
     return out
 
 
-# Component order in the paper table: the contribution first, the whole
-# pipeline last, so the reader meets the structure-informed query immediately.
 COMPONENT_ORDER = [
     "full pipeline", "query (structure)", "dense retriever",
     "hybrid + rerank", "temporal filter", "RAG itself",
@@ -333,8 +241,6 @@ COMPONENT_HEADING = {
     "RAG itself": r"\textit{Retrieval}",
 }
 
-# Kept short so nothing wraps at \columnwidth in a two-column layout; the prose
-# spells out what each retrieval query mode actually contains.
 LEVEL_LABEL = {
     "fallacy_relations": r"$\rightarrow$ \texttt{fallacy\_relations}",
     "sentence": r"$\rightarrow$ target sentence only",
@@ -351,11 +257,6 @@ LEVEL_LABEL = {
 TASK_LABEL = {"detection": "fallacy detection", "classification": "fallacy classification"}
 TASK_COLUMN = {"detection": "Detection", "classification": "Classification"}
 
-# The temporal filter is the one axis whose ablation is not the same edit in both
-# columns: the detection pipeline has it on and the classification pipeline has it
-# off, so the row is a removal on the left and an addition on the right. Collapsing
-# the two into one line is what makes the tables mergeable at all; the shared label
-# has to be neutral about direction, and the caption carries the asymmetry.
 TEMPORAL_MERGED = "toggled"
 LEVEL_LABEL[TEMPORAL_MERGED] = r"$\rightarrow$ toggled$^{\dagger}$"
 
@@ -376,16 +277,7 @@ def _score(table: pd.DataFrame, component: str, key: str) -> str:
 def to_latex(tables: dict[str, pd.DataFrame], anchor_models: dict[str, str],
              anchor_configs: dict[str, str]) -> str:
     """Render both tasks as one booktabs table in the repo's house style.
-
-    One column per task, sharing a single column of row labels. Only macro-F1 is
-    shown: the deltas are still in the CSV, but every row is read against the
-    full-pipeline row at the top, so printing them as columns duplicated what the
-    reader can already see -- and with two tasks side by side there is no room.
-
-    Row order follows the detection column; a level that exists only for
-    classification is appended after it, and a level missing from either task
-    prints ``--`` rather than dropping the row.
-    """
+    Row order follows the detection column; a level missing from a task prints ``--``."""
     tasks = [t for t in ("detection", "classification") if t in tables]
     ncol = len(tasks) + 1
 
@@ -395,13 +287,8 @@ def to_latex(tables: dict[str, pd.DataFrame], anchor_models: dict[str, str],
         "% Requires: \\usepackage{booktabs} and \\usepackage{tabularx}",
         r"\begin{table}[h]",
         r"\centering",
-        # \footnotesize, not \small: two numeric columns leave the X column narrow
-        # enough at \columnwidth that several labels wrapped onto a second line.
         r"\footnotesize",
         r"\setlength{\tabcolsep}{4pt}",
-        # tabularx rather than \resizebox: the X column absorbs the slack so the
-        # table is exactly \columnwidth without rescaling the font away from the
-        # body text. @{} trims the outer padding so the rules align with the margin.
         r"\begin{tabularx}{\columnwidth}{@{}>{\raggedright\arraybackslash}X"
         + "r" * len(tasks) + r"@{}}",
         r"\toprule",
@@ -440,10 +327,6 @@ def to_latex(tables: dict[str, pd.DataFrame], anchor_models: dict[str, str],
     lines += [
         r"\bottomrule",
         r"\end{tabularx}",
-        # Deliberately terse. The anchor rationale, the frozen-hyperparameter
-        # protocol and the two-row BM25 decomposition are all argued in the
-        # Protocol paragraph; only the dagger has to be resolved here, because
-        # the symbol has no meaning outside the caption.
         f"\\caption{{Ablation on ElecDeb60to20 (macro-F1), one component changed at "
         f"a time with hyperparameters frozen. Anchors: {anchors}, each the best "
         f"model without retrieval. $^{{\\dagger}}$Toggled away from each pipeline's "
@@ -477,7 +360,6 @@ def write_section(path: str, latex: list[str]) -> None:
         body = prose.rstrip() + "\n\n" + "\n".join(latex)
     else:
         body = prose.replace(INPUT_LINE, "\n".join(latex))
-    # Strip the split-file header, which describes a layout this file does not use.
     body = body[body.index(r"\section"):] if r"\section" in body else body
     os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
     with open(path, "w") as fh:
@@ -527,8 +409,6 @@ def main() -> None:
                 for _, r in gaps.iterrows():
                     print(f"    {r['component']:<18} {r['level']:<38} {r['config']}")
 
-    # One table for both tasks, so the reader compares the two columns row by row
-    # instead of paging between two floats with identical row labels.
     latex = [to_latex(by_task, anchor_models, anchor_configs)] if args.latex else []
 
     if args.output:

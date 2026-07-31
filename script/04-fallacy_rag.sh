@@ -26,7 +26,7 @@ SEED=14
 export PYTHONHASHSEED=$SEED
 wandb disabled
 
-data="elecdeb60to20"  # elecdeb60to20 | reddit
+data="elecdeb60to20"  # elecdeb60to20 | propaganda
 DATASETS=(
 )
 

@@ -1,24 +1,8 @@
 """Build BIO-tag fallacy-classification datasets, optionally enriched with RAG context.
-
-Two dataset-construction modes (``--mode``) share one retrieval backend:
-
-* ``sentence`` (default) — read ``{split}.csv``, spaCy sentence-split each speech turn,
- re-split into train/dev/test, and enrich every sentence.
-  With no ``--retriever`` it is the plain no-RAG pipeline; with a retriever it is enriched.
-* ``relations`` — same construction as ``sentence``; the only difference is the retrieval
-  query, controlled by ``--query-mode``. For every component overlapping the sentence, its
-  related components are looked up from ``relations.csv`` (matched by text overlap, over all
-  components regardless of fallacy status):
-  ``fallacy_relations`` concatenates the component text with its ``relations_text``;
-  ``relations_labeled`` builds one clause per relation — "<relation> supports/attacks
-  <fallacy>" — using ``relations_label`` to pick the verb. Unmatched rows fall back to the sentence.
-
-Retrieval backend (shared by both modes):
-* Dense vector search over a persisted Chroma store (``similarity`` / ``mmr`` / ``threshold``).
-* Sparse BM25 via bm25s.
-* ``hybrid`` — dense + BM25 fused with Reciprocal Rank Fusion.
-* Optional cross-encoder reranking, per-passage summarization, and temporal (year) filtering.
-"""
+``--mode sentence`` splits each speech turn into sentences and enriches every one; ``--mode
+relations`` builds the retrieval query from ``relations.csv`` instead (see ``--query-mode``).
+Retrieval is dense Chroma search, BM25, or hybrid RRF, with optional cross-encoder reranking,
+per-passage summarization, and temporal (year) filtering."""
 
 from __future__ import annotations
 
@@ -64,7 +48,6 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 
 KNOWLEDGE_BASE_PATH = "./knowledge_base/"
 
-# Knowledge-base subfolders to index; tuples are (path, label) for nested folders.
 KNOWLEDGE_BASE_DIRECTORIES = [
     "bills",
     "definitions",
@@ -78,13 +61,10 @@ KNOWLEDGE_BASE_DIRECTORIES = [
 
 DEFAULT_RERANKER = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
-# Over-fetch factor for temporal filtering: pull this many × top_k, drop future docs, keep top_k.
 TEMPORAL_OVERFETCH = 10
 
-# Queries are batch-embedded per split (see embed_queries).
 QUERY_EMBED_BATCH_SIZE = 256
 
-# Module-level caches so expensive objects are built once and reused across calls.
 _vector_store_cache: dict[tuple[str, str], Chroma] = {}
 _bm25_cache: dict[tuple, "FastBM25Retriever"] = {}
 _pipeline_cache: dict[str, pipeline] = {}
@@ -94,7 +74,6 @@ DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 model_kwargs = {"device": DEVICE}
 encode_kwargs = {"batch_size": 2048, "normalize_embeddings": True}
 
-# Dense embedding models keyed by name; values are lazy factories. "bm25" is the sparse marker.
 EMBEDDING_MODELS = {
     "sentence-transformers/all-mpnet-base-v2": lambda: HuggingFaceEmbeddings(
         model_name="sentence-transformers/all-mpnet-base-v2",
@@ -132,9 +111,8 @@ DATASET_MODES = {
                  "its related components (looked up from relations.csv by text overlap).",
 }
 
-COMPONENT_SEP = "|||"  # joins multiple components inside fallacy_text / relations cells
+COMPONENT_SEP = "|||"
 
-# Maps a relations_label value to the verb phrase used in the 'relations_labeled' query.
 LABEL_VERBS = {"support": "supports", "attack": "attacks"}
 
 QUERY_MODES = {
@@ -223,15 +201,11 @@ def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
                       year: int | None, query_embedding: list[float] | None = None) -> list:
     """Run dense vector search and return up to *k* candidate documents."""
     vector_store = get_vector_store(retriever, chromadb_path)
-    # Year filtering is a Python post-filter on an unfiltered search: Chroma's where-clause
-    # degrades HNSW toward a full scan, while an unfiltered search runs at full index speed.
     do_temporal = temporal_rag and year is not None
     fetch = k * TEMPORAL_OVERFETCH if do_temporal else k
 
     effective_type = "similarity" if search_type == "hybrid" else search_type
 
-    # Fast path: search straight from a pre-computed embedding to skip the per-row forward pass.
-    # Only similarity/mmr expose *_by_vector entry points; threshold falls back to the string path.
     if query_embedding is not None and effective_type in ("similarity", "mmr"):
         if effective_type == "mmr":
             docs = vector_store.max_marginal_relevance_search_by_vector(
@@ -249,7 +223,6 @@ def _dense_candidates(query: str, retriever: str, chromadb_path: str, k: int,
         docs = ret.invoke(query)
 
     if do_temporal:
-        # Missing year -> treat as future (year + 1) so it's excluded, matching the BM25 leg.
         docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
         docs = docs[:k]
     return docs
@@ -264,7 +237,6 @@ def _bm25_candidates(query: str, chunk_size: int, chunk_overlap: int, k: int,
     )
     docs = bm25.invoke(query)
     if temporal_rag and year is not None:
-        # Missing year -> treat as future (year + 1) so it's excluded.
         docs = [d for d in docs if int(d.metadata.get("year", year + 1)) < year]
     return docs[:k]
 
@@ -272,7 +244,6 @@ def _bm25_candidates(query: str, chunk_size: int, chunk_overlap: int, k: int,
 def reciprocal_rank_fusion(ranked_lists: list[list], rrf_k: int = 60,
                            weights: list[float] | None = None) -> list:
     """Merge several ranked document lists by Reciprocal Rank Fusion."""
-    # Documents are keyed by exact page_content; a doc in multiple lists accumulates score.
     if weights is None:
         weights = [1.0] * len(ranked_lists)
     scores: dict[str, float] = {}
@@ -331,7 +302,6 @@ def search_knowledge_base(query: str,
                           bm25_weight: float = 1.0,
                           query_embedding: list[float] | None = None) -> list[str]:
     """Return the passage strings most relevant to *query* for the chosen search type."""
-    # When reranking or fusing, fetch a larger pool of fetch_k; otherwise size pools to top_k.
     pool = fetch_k if (rerank or search_type == "hybrid") else top_k
 
     if search_type == "hybrid":
@@ -385,7 +355,7 @@ def warm_retrievers(search_type: str, retriever: str | None, chunk_size: int,
     elif retriever and retriever != "bm25":
         get_vector_store(retriever, chromadb_path)
     if rerank:
-        get_reranker(reranker_model)  # warm the cross-encoder once
+        get_reranker(reranker_model)
 
 
 def summarize_docs(docs: list[str], model_name: str, max_tokens: int = 256) -> list[str]:
@@ -465,10 +435,9 @@ def build_retrieval_query(fallacy_text, relations_text, mode: str,
     has_relations = len(relation_parts) > 0
 
     if mode == "relations_labeled":
-        # One clause per relation: "<relation> supports/attacks <fallacy>", verb from relations_label.
         fallacy_str = ". ".join(p.rstrip(". ") for p in fallacy_parts if p)
         if not has_relations:
-            query = fallacy_str  # no relation: retrieve with the fallacy alone
+            query = fallacy_str
         else:
             label_parts = _parse_relations_label(relations_label)
             clauses = []
@@ -484,15 +453,14 @@ def build_retrieval_query(fallacy_text, relations_text, mode: str,
         return normalize_text(query), has_relations
 
     if not has_relations:
-        parts = fallacy_parts  # no relation: retrieve with the fallacy alone
+        parts = fallacy_parts
     elif mode == "fallacy_only":
         parts = fallacy_parts
     elif mode == "relations_only":
         parts = relation_parts
-    else:  # fallacy_relations (default)
+    else:
         parts = fallacy_parts + relation_parts
 
-    # Join with sentence-final punctuation so the embedding sees discrete spans.
     query = ". ".join(p.rstrip(". ") for p in parts if p)
     if query and not query.endswith("."):
         query += "."
@@ -510,7 +478,6 @@ def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
             fallacy_labels = ast.literal_eval(row["fallacy_labels"])
             component_labels = ast.literal_eval(row["components_labels"])
 
-            # Skip rows whose per-character labels don't line up with the text.
             if len(text) != len(fallacy_labels):
                 logger.warning(
                     f"Row {idx} ({split}): text length {len(text)} != "
@@ -524,11 +491,9 @@ def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
                 start = sent.start_char
                 end = sent.end_char
 
-                # Reduce the sentence's character labels to a single Fallacy/NoFallacy tag.
                 flabels = list(set(label for label in fallacy_labels[start:end] if label != 'O'))
                 flabels = flabels[0] if flabels and flabels[0] is not None else "NoFallacy"
 
-                # Reduce the sentence's character labels to a single component tag.
                 clabels = list(set(label for label in component_labels[start:end] if label != 'O'))
                 clabels = clabels[0] if clabels and clabels[0] is not None else "NoComponent"
 
@@ -547,11 +512,8 @@ def _build_balanced_splits(dataset_dir: str) -> dict[str, pd.DataFrame]:
     df = df.replace({"nan": None})
     df = df.dropna().drop_duplicates().reset_index(drop=True)
 
-    # Classification (unlike detection) only ever sees sentences that are already known to be
-    # fallacies, so drop non-fallacy sentences rather than keeping a "NoFallacy" class.
     df = df[df["fallacy_label"] != "NoFallacy"].reset_index(drop=True)
 
-    # Stratified 80/10/10 train/dev/test split on the fallacy label.
     train_df, test_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df["fallacy_label"])
     test_df, dev_df = train_test_split(test_df, test_size=0.5, random_state=42, stratify=test_df["fallacy_label"])
 
@@ -571,7 +533,6 @@ def _enrich_split(split_df: pd.DataFrame, split_name: str, query_fn,
         queries.append(q)
         has_rel_flags.append(has_relations)
 
-    # Encode every query for the split in one batched pass to avoid per-row GPU overhead.
     query_embeddings = None
     if retriever and retriever != "bm25" and search_type != "bm25":
         logger.info(f"Batch-embedding {len(queries)} {split_name} queries...")
@@ -674,13 +635,8 @@ def build_sentence_mode(persist_directory_path: str,
 
 
 def _load_relations_index(dataset_dir: str) -> tuple[dict[str, list[tuple[str, str]]], list[str]]:
-    """Index ``relations.csv`` as ``component_text -> [(related_text, relation_label), ...]``.
-
-    Each relation row (``subj <relation> obj``) is recorded in both directions so a component
-    finds its neighbour regardless of the role (subject/object) it plays. This covers every
-    component in ``relations.csv``, not just fallacious ones. The second return value is the
-    list of unique component strings, used for text-overlap matching in ``_match_relations``.
-    """
+    """Index ``relations.csv`` as ``component_text -> [(related_text, relation_label), ...]``, in both
+    directions. Also returns the unique component strings used for text-overlap matching."""
     p = os.path.join(dataset_dir, "relations.csv")
     index: dict[str, list[tuple[str, str]]] = {}
     if not os.path.exists(p):
@@ -701,14 +657,7 @@ def _load_relations_index(dataset_dir: str) -> tuple[dict[str, list[tuple[str, s
 def _match_relations(sentence: str, index: dict[str, list[tuple[str, str]]],
                      components: list[str]):
     """Find every ``relations.csv`` component overlapping *sentence* and gather its relations.
-
-    Matching is text-overlap (either string contains the other), applied to all components
-    regardless of fallacy status. Returns ``(component_text, relations_text, relations_label)``
-    where ``component_text`` is the matched span(s) joined by ``|||``, ``relations_text`` is a
-    stringified list of the related component texts, and ``relations_label`` is a
-    ``;``-separated list of relation labels aligned with it. Returns ``(None, None, None)``
-    when no component overlaps the sentence.
-    """
+    Returns ``(component_text, relations_text, relations_label)``, or all-None if nothing matches."""
     s = str(sentence).strip()
     if not s:
         return None, None, None
@@ -754,12 +703,9 @@ def build_relations_mode(persist_directory_path: str,
 
     def query_fn(row):
         sentence = row["sentence"]
-        # For every component overlapping this sentence, pull its relations from
-        # relations.csv (all components, no fallacy filtering).
         fallacy_text, relations_text, relations_label = _match_relations(
             sentence, index, components
         )
-        # No component in relations.csv overlaps the sentence: fall back to the sentence.
         if fallacy_text is None:
             return normalize_text(sentence), False
         query, has_relations = build_retrieval_query(
@@ -888,7 +834,6 @@ if __name__ == "__main__":
     parser = _build_arg_parser()
     args = parser.parse_args()
 
-    # Validate retriever / search-type / mode combinations before doing any work.
     if args.search_type == "hybrid" and args.retriever not in DENSE_MODELS:
         parser.error("--search-type hybrid requires a dense --retriever (not bm25).")
     if args.search_type == "bm25" and args.retriever != "bm25":
@@ -900,7 +845,6 @@ if __name__ == "__main__":
     if args.mode == "relations" and args.retriever is None:
         parser.error("--mode relations requires a --retriever.")
 
-    # Encode the run configuration into the output directory name.
     path = str(Path(args.dataset_dir) / "classification" / f"temporal={str(args.temporal_rag)}")
     if args.retriever:
         path += f"-retriever={args.retriever.replace('/', '-')}"
@@ -938,7 +882,7 @@ if __name__ == "__main__":
             dataset_dir=args.dataset_dir,
             path=path,
         )
-    else:  # relations
+    else:
         build_relations_mode(
             persist_directory_path=args.persist_directory,
             retriever=args.retriever,

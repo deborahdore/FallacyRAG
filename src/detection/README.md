@@ -92,7 +92,7 @@ simultaneously.
 #### Building the RAG datasets — `datasets/elecdeb60to20-dataset/detection/create_db.py`
 
 A `create_db.py` with the same interface (and dataset-specific defaults) exists per dataset; the ElecDeb60to20 one is
-the canonical reference. The Reddit and propaganda RAG datasets are built the same way via their
+the canonical reference. The propaganda RAG datasets are built the same way via their
 `02-create_database-*.sh` driver scripts.
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, balances and
@@ -185,7 +185,7 @@ python src/detection/run_detection.py \
 ## LLM script — `run_detection_llm.py`
 
 Runs fallacy detection with a causal language model using one of three modes. The **system prompt is selected
-automatically from the dataset** (ElecDeb60to20 vs. Reddit) based on the training-file path, so no code changes are
+automatically from the dataset** (ElecDeb60to20 vs. propaganda) based on the training-file path, so no code changes are
 needed to switch datasets. Each example is formatted as a structured chat prompt:
 
 ```

@@ -31,7 +31,6 @@ logging.basicConfig(
 )
 log = logging.getLogger(__name__)
 
-# =================== PATH =================== #
 PERSIST_DIRECTORY = "./chroma_db/"
 KNOWLEDGE_BASE_PATH = "./knowledge_base"
 
@@ -91,7 +90,6 @@ MAFALDA_JSONL_URL = (
     "datasets/gold_standard_dataset.jsonl"
 )
 FALLACY_LABEL_MAP = {
-    # --- Ad Hominem ---
     "ad hominem": "Ad Hominem",
     "abusive ad hominem": "Ad Hominem",
     "abusive": "Ad Hominem",
@@ -100,7 +98,6 @@ FALLACY_LABEL_MAP = {
     "name calling": "Ad Hominem",
     "name_calling": "Ad Hominem",
     "poisoning the well": "Ad Hominem",
-    # --- Appeal to Emotion ---
     "appeal to emotion": "Appeal to Emotion",
     "appeal_to_emotion": "Appeal to Emotion",
     "appeal to (positive) emotion": "Appeal to Emotion",
@@ -112,7 +109,6 @@ FALLACY_LABEL_MAP = {
     "appeal to worse problems": "Appeal to Emotion",
     "loaded language": "Appeal to Emotion",
     "flag waving": "Appeal to Emotion",
-    # --- Appeal to Authority (incl. appeal to popularity / majority opinion per project def) ---
     "appeal to authority": "Appeal to Authority",
     "appeal_to_authority": "Appeal to Authority",
     "appeal to false authority": "Appeal to Authority",
@@ -122,23 +118,18 @@ FALLACY_LABEL_MAP = {
     "appeal to popularity": "Appeal to Authority",
     "appeal to the people": "Appeal to Authority",
     "bandwagon": "Appeal to Authority",
-    # --- Slippery Slope ---
     "slippery slope": "Slippery Slope",
     "slippery_slope": "Slippery Slope",
-    # --- False Cause ---
     "false cause": "False Cause",
     "false_cause": "False Cause",
     "false causality": "False Cause",
     "causal oversimplification": "False Cause",
     "post hoc": "False Cause",
     "post hoc ergo propter hoc": "False Cause",
-    # --- Slogan ---
     "slogan": "Slogan",
     "slogans": "Slogan",
 }
 
-# Authoritative fallacy sub-categories; their members form a high-precision allowlist
-# for filtering connected Wikipedia pages (e.g. "Ad hominem", "Slippery slope").
 FALLACY_WIKI_CATEGORIES = [
     "Relevance fallacies",
     "Causal fallacies",
@@ -148,8 +139,6 @@ FALLACY_WIKI_CATEGORIES = [
     "Informal fallacies",
     "Quantificational fallacies",
 ]
-# Keyword fallback: catches general rhetoric/argument pages and named fallacies not captured
-# by the category membership above (matched as lowercased substrings of the title).
 FALLACY_WIKI_KEYWORDS = (
     "fallac", "argument", "rhetoric", "reasoning", "syllogism", "premise", "inference",
     "sophis", "appeal to", "ad hominem", "ad nauseam", "nauseam", "consequent", "disjunct",
@@ -164,14 +153,12 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
     gran_id = result.get("granuleId") or pkg_id
     id = gran_id.replace(" ", "_")
 
-    # Extract year from dateIssued or dateIngested
     doc_year = None
     for date_field in ["dateIssued", "dateIngested"]:
         if result.get(date_field):
             doc_year = int(result[date_field][:4])
             break
 
-    # Fetch content with fallback URL
     content = None
     urls = [
         f"https://api.govinfo.gov/packages/{pkg_id}/granules/{gran_id}/htm",
@@ -184,11 +171,9 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
             correct_url = url
             break
         except Exception as e:
-            # log.debug(f"Failed to fetch from {url}: {e}")
             continue
 
     if content is None:
-        # log.error(f"Failed to fetch content for package {pkg_id}")
         raise Exception(f"Could not fetch content for {pkg_id}")
 
     filename = create_and_save_record(
@@ -200,7 +185,6 @@ def _fetch_and_save_result(result: dict, path: Path, api_params: dict) -> str:
         xml=content.prettify(),
         year=doc_year,
     )
-    # log.info(f"Saved {filename}")
     return filename
 
 
@@ -210,7 +194,6 @@ def bills_and_laws(path: Path):
 
     api_params = {"api_key": os.environ["GOVINFO_API_KEY"]}
 
-    # =================== get bills and laws =================== #
     for topic, year in (
             (t, int(y))
             for t, y in json.loads(Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8"))["TOPICS"]
@@ -246,10 +229,7 @@ def bills_and_laws(path: Path):
                     pool.submit(_fetch_and_save_result, result, path, api_params): result
                     for result in res["results"]
                 }
-        #     for fut in as_completed(futures):
-        #         fut.result()  # re-raises any exception from the worker
 
-    # =================== get government manual =================== #
     id = "GOVMAN-2025-01-13"
     source = "U.S. Government Information Official US Government Manual"
     r = get_request(url=GOV_MANUAL_URL)
@@ -263,7 +243,6 @@ def bills_and_laws(path: Path):
 
     del filename, id, r, source
 
-    # =================== get universal declaration =================== #
     id = "UDHR"
     text = "\n".join(
         pytesseract.image_to_string(page)
@@ -282,33 +261,6 @@ def bills_and_laws(path: Path):
 
     del id, filename, text
 
-    # =================== get bills and laws =================== #
-    # for url in [BILLS_URL, PLAWS_URL]:
-    #     root = get_request(url=url)
-    #     assert root is not None
-    #
-    #     for year in root.find_all("loc"):
-    #         y_resp = get_request(url=year.text)
-    #         if y_resp is None: continue
-    #
-    #         for bill in y_resp.find_all("loc"):
-    #             b_id = bill.text.split("/")[-1]
-    #             if b_id + ".json" in os.listdir(path):
-    #                 continue
-    #             custom_url = f"https://www.govinfo.gov/content/pkg/{b_id}/html/{b_id}.htm"
-    #             response = get_request(url=custom_url)
-    #             if response is None: continue
-    #
-    #             filename = create_and_save_record(path=path,
-    #                                               id=b_id,
-    #                                               text=response.text,
-    #                                               source="U.S. Government Information Official WebSite",
-    #                                               url=custom_url,
-    #                                               xml=response.prettify(),
-    #                                               year=int(year.text.split("_")[1]))
-    #             log.info(f"Saved {filename}")
-    #
-    # del filename, response, custom_url
 
 
 def _reconstruct_abstract(inverted_index: dict | None) -> str:
@@ -362,7 +314,7 @@ def _papers_from_openalex(queries: list[str], n_papers: int, since_year: int,
     """Yield normalized paper dicts from the OpenAlex API, capped per query for relevance."""
     seen: set[str] = set()
     collected = 0
-    per_page = min(per_query_cap, 200)  # no need to pull more than the per-query cap
+    per_page = min(per_query_cap, 200)
     for query in queries:
         cursor = "*"
         from_query = 0
@@ -451,7 +403,7 @@ def _papers_from_google_scholar(queries: list[str], n_papers: int, since_year: i
                 "venue": bib.get("venue", "Google Scholar"),
             }
             collected += 1
-            time.sleep(1.0)  # be polite — Scholar blocks rapid requests
+            time.sleep(1.0)
 
 
 def fallacy_papers(path: Path, n_papers: int = 200, since_year: int = 2015,
@@ -503,7 +455,6 @@ def _normalize_fallacy_label(raw) -> str:
     if raw is None:
         return "Other"
     if isinstance(raw, (list, tuple)):
-        # Multi-label: pick the first that maps to a known category.
         for item in raw:
             mapped = _normalize_fallacy_label(item)
             if mapped != "Other":
@@ -575,7 +526,6 @@ def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
     saved = 0
     dropped = 0
 
-    # --- HuggingFace datasets (e.g. tasksource/logical-fallacy) ---
     for hf_id, config, split, text_col, label_col in datasets_spec:
         try:
             ds = load_dataset(hf_id, config, split=split)
@@ -603,7 +553,6 @@ def fallacy_exemplars(path: Path, datasets_spec: list | None = None,
                 kept += 1
         log.info("Ingested %d on-taxonomy exemplars from %s", kept, hf_id)
 
-    # --- MAFALDA (GitHub JSONL) ---
     saved += _load_mafalda_exemplars(path, drop_other)
 
     log.info("Saved %d fallacy exemplars to %s (%d off-taxonomy dropped)",
@@ -615,12 +564,9 @@ def definitions(path: Path):
     """Ingest fallacy papers, the Wikipedia 'fallacy' page, and its relevant linked pages."""
     path.mkdir(parents=True, exist_ok=True)
 
-    # =================== recent papers on fallacies in political debates =================== #
-    # Search an academic index for ~200 recent papers and add each as a KB record
     fallacy_papers(path / "papers", n_papers=200, since_year=2015, backend="openalex",
                    fetch_fulltext=False)
 
-    # =================== wikipedia page for fallacies =================== #
     id = "fallacy"
     text = fetch_wikipedia_sections(id)
     filename = create_and_save_record(path=path,
@@ -630,7 +576,6 @@ def definitions(path: Path):
                                       url=f"https://en.wikipedia.org/wiki/{id}")
     log.info("Saved %s", filename)
 
-    # =================== connected wikipedia pages =================== #
     fallacy_allowlist = set()
     for category in FALLACY_WIKI_CATEGORIES:
         try:
@@ -657,7 +602,6 @@ def definitions(path: Path):
         seen_pages.add(slug)
         relevant_titles.append(linked_title)
 
-    # Fetch all relevant connected pages concurrently instead of one at a time.
     linked_texts = _fetch_pages_parallel(relevant_titles)
     for linked_title in relevant_titles:
         linked_text = linked_texts.get(safe_filename(linked_title))
@@ -683,9 +627,9 @@ def _expand_first_level_links(path: Path, seed_titles, source_template: str,
                               seen: set | None = None) -> int:
     """Fetch and save the unique first-level Wikipedia pages linked from each seed page."""
     seen = seen if seen is not None else set()
-    seeds = [t for t in dict.fromkeys(seed_titles) if t]  # de-dupe, preserve order, drop empties
+    seeds = [t for t in dict.fromkeys(seed_titles) if t]
     for t in seeds:
-        seen.add(safe_filename(t))  # don't re-save the seed page via its own links
+        seen.add(safe_filename(t))
 
     def _links(title: str):
         try:
@@ -727,7 +671,6 @@ def people(path: Path):
     """Ingest Congress member bios, debate-mentioned people's Wikipedia pages, and their links."""
     path.mkdir(parents=True, exist_ok=True)
 
-    # =================== official congress bibliography =================== #
     congress_members_ids = pd.read_csv(CONGRESS_MEMBERS_PATH)["bioguide_id"].dropna().unique().tolist()
     people = []
 
@@ -751,12 +694,10 @@ def people(path: Path):
         except:
             continue
 
-    # =================== people discussed in the debates =================== #
     people.extend(json.loads(Path(TOPIC_RESULTS_PATH).read_text(encoding="utf-8"))["PEOPLE"])
     people = set(people)
     seen_pages: set = set()
 
-    # Fetch all the people's Wikipedia pages concurrently.
     person_titles = {name: safe_filename(name) for name in people}
     person_texts = _fetch_pages_parallel(list(person_titles.values()))
     for name, page_id in person_titles.items():
@@ -770,9 +711,6 @@ def people(path: Path):
                                source="Wikipedia's Web Page for {}".format(name),
                                url="https://en.wikipedia.org/wiki/" + page_id)
 
-    # =================== first-level Wikipedia links of those people =================== #
-    # Expand each person's Wikipedia page by also saving the pages it links to (capped at
-    # 1000 links per page), deduped against the people already saved above.
     _expand_first_level_links(
         path, people, "Wikipedia connected page for {title}", seen=seen_pages,
     )
@@ -781,13 +719,10 @@ def people(path: Path):
 def geography(path: Path):
     """Ingest US Census state profiles plus debate-mentioned places' Wikipedia pages and links."""
     path.mkdir(parents=True, exist_ok=True)
-    # ================== get states from census ==================
     r = get_request(CENSUS_BASE + "/search", params={"g": "010XX00US", "services": "entities"}, return_json=True)
     profiles = r.get("response", {}).get("profiles", [])
     log.info("Processing %d states/territories", len(profiles))
 
-    # Process each state's census profile concurrently (one worker per state); each worker
-    # writes its own file and returns the state name for the main thread to collect.
     def _process_state(state) -> str | None:
         """Fetch one state's census profile and topic data and save it as a record."""
         try:
@@ -810,7 +745,6 @@ def geography(path: Path):
                     + "\n\n"
             )
 
-            # -------- collect topics --------
             topics = set()
             for section in meta.get("sections", []):
                 topics.add(section.get("title"))
@@ -819,7 +753,6 @@ def geography(path: Path):
                         topics.add(sub.get("topic"))
             topics.discard("Explore Your State")
 
-            # -------- fetch topic data --------
             for topic in topics:
                 response = get_request(
                     f"{CENSUS_BASE}/profile/content/topic",
@@ -855,12 +788,10 @@ def geography(path: Path):
             if name:
                 states.append(name)
 
-    # ================== get states from wikipedia ==================
     states.extend(json.loads(Path(TOPIC_RESULTS_PATH).read_text())["PLACES"])
     states = set(states)
     seen_pages: set = set()
 
-    # Fetch all the places' Wikipedia pages concurrently.
     place_titles = {state: safe_filename(state) for state in states}
     place_texts = _fetch_pages_parallel(list(place_titles.values()))
     for state, page_id in place_titles.items():
@@ -874,9 +805,6 @@ def geography(path: Path):
                                source="Wikipedia's Web Page for {}".format(state),
                                url=f"https://en.wikipedia.org/wiki/{page_id}")
 
-    # ================== first-level Wikipedia links of those places ================== #
-    # Expand each place's Wikipedia page by also saving the pages it links to (capped at
-    # 1000 links per page), deduped against the places already saved above.
     _expand_first_level_links(
         path, states, "Wikipedia connected page for {title}", seen=seen_pages,
     )
@@ -890,7 +818,6 @@ def newspapers(path: Path):
     saveTo = path / "tmp_output"
     saveTo.mkdir(parents=True, exist_ok=True)
 
-    # ---- collect all unique item IDs across every topic ----
     topics_with_year = Path(TOPIC_WITH_YEAR_RESULTS_PATH).read_text(encoding="utf-8")
     topics = [topic for topic, _ in json.loads(topics_with_year)["TOPICS"]]
     all_item_ids: set[str] = set()
@@ -908,7 +835,6 @@ def newspapers(path: Path):
 
     log.info("Found %d unique item IDs across %d topics", len(all_item_ids), len(topics))
 
-    # ---- fetch page URLs from all items in parallel ----
     def fetch_page_urls(item_url: str, session: requests.Session) -> list[str]:
         """Return the PDF page URLs listed in one item's metadata."""
         try:
@@ -933,7 +859,6 @@ def newspapers(path: Path):
 
     log.info("Found %d unique PDF page URLs", len(page_urls))
 
-    # ---- download PDFs in parallel, skipping already-downloaded files ----
     def download_pdf(page_url: str, session: requests.Session) -> None:
         """Download one PDF to the temp folder, skipping if already present."""
         dest = saveTo / page_url.split('/')[-1]
@@ -964,7 +889,6 @@ def newspapers(path: Path):
             for _ in tqdm(as_completed(futures), total=len(futures), desc="Downloading PDFs"):
                 pass
 
-    # ---- OCR PDFs from tmp_output and save records to the newspaper folder ----
     pdf_files = list(saveTo.glob("*.pdf"))
     log.info("Found %d PDF files to OCR", len(pdf_files))
 
@@ -974,8 +898,6 @@ def newspapers(path: Path):
         try:
             file_id = safe_filename(pdf_path.stem)
 
-            # Try to extract a 4-digit year from the filename that falls within
-            # the Chronicling America date range.
             year = CHRONICLING_AMERICA_MIN_YEAR
             for match in re.finditer(r'(\d{4})', pdf_path.stem):
                 candidate = int(match.group(1))
@@ -983,7 +905,6 @@ def newspapers(path: Path):
                     year = candidate
                     break
 
-            # Convert each PDF page to an image then OCR with EasyOCR.
             pages = convert_from_path(str(pdf_path), dpi=300)
             page_texts = []
             for page_img in pages:
@@ -1003,14 +924,9 @@ def newspapers(path: Path):
                 url=f"https://chroniclingamerica.loc.gov/{pdf_path.stem}",
                 year=year
             )
-            # log.info("Saved %s", filename)
         except Exception as e:
             log.error("Error OCR-ing %s: %s", pdf_path.name, e)
 
-    # ---- clean up the temporary PDF folder ----
-    # import shutil
-    # shutil.rmtree(saveTo, ignore_errors=True)
-    # log.info("Removed temporary folder %s", saveTo)
 
 
 def _make_year_aware(year: int, text: str) -> str:
@@ -1061,8 +977,6 @@ def history_eras(path: Path, era_pages: list | None = None,
                  explore_links: bool = True, links_per_page: int = 500,
                  seen: set | None = None):
     """Ingest the broad "History of the United States (start–end)" era pages and their links."""
-    # Year is encoded as the period span in the text and as start_year in metadata; `seen` is
-    # shared with american_history so no page is written twice.
     path.mkdir(parents=True, exist_ok=True)
     era_pages = era_pages or HISTORY_ERA_PAGES
     if seen is None:
@@ -1071,11 +985,9 @@ def history_eras(path: Path, era_pages: list | None = None,
     for title, start_year, end_year in tqdm(era_pages, desc="US history eras"):
         resolved_end = end_year if end_year is not None else time.localtime().tm_year
 
-        # --- the era overview page itself ---
         if _save_history_page(path, title, start_year, resolved_end, seen):
             saved += 1
 
-        # --- first-level links from the era page ---
         if not explore_links:
             continue
         try:
@@ -1096,17 +1008,14 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
                      explore_links: bool = True, links_per_year: int = 500,
                      max_workers: int = 8):
     """Ingest US history one record per year (each year's Wikipedia 'Events' section) plus links."""
-    # The year is stored both as `year` metadata (for temporal filtering) and inside the text
-    # (see _make_year_aware). Events sections, link lists and bodies are fetched concurrently.
     path.mkdir(parents=True, exist_ok=True)
     if end_year is None:
-        end_year = time.localtime().tm_year  # "today"
+        end_year = time.localtime().tm_year
 
     years = list(range(start_year, end_year + 1))
     seen: set = set()
     saved = 0
 
-    # ── Phase 1: the "Events" section of each year page (fetched concurrently) ──────────────
     def _fetch_events(year: int):
         """Fetch one year's 'Events' section text."""
         title = HISTORY_WIKI_TITLE.format(year=year)
@@ -1121,7 +1030,7 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
                                    total=len(years), desc="US history events"))
 
     for year, title, events in events_results:
-        seen.add(safe_filename(title))  # don't re-fetch the year page via its own links
+        seen.add(safe_filename(title))
         if events and events.strip():
             create_and_save_record(
                 path=path,
@@ -1135,9 +1044,7 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
         else:
             log.warning("No Events section for '%s'", title)
 
-    # ── Phase 2: first-level links from every year page ─────────────────────────────────────
     if explore_links:
-        # 2a. Collect link lists concurrently (one cheap request each).
         def _fetch_links(year: int):
             """Fetch the article-namespace links from one year's page."""
             title = HISTORY_WIKI_TITLE.format(year=year)
@@ -1151,8 +1058,6 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
             link_lists = list(tqdm(pool.map(_fetch_links, years),
                                    total=len(years), desc="US history link lists"))
 
-        # 2b. Deduplicate to the first year that references each page (keeps year attribution
-        #     stable and avoids fetching the same page twice).
         title_to_year: dict[str, int] = {}
         for year, linked_titles in link_lists:
             for linked_title in linked_titles:
@@ -1162,12 +1067,9 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
                 seen.add(slug)
                 title_to_year[linked_title] = year
 
-        # 2c. Bulk-fetch page bodies in batched, concurrent requests.
         log.info("Fetching %d unique linked pages in batches", len(title_to_year))
         extracts = fetch_wikipedia_extracts(list(title_to_year), max_workers=max_workers)
 
-        # The extract API returns canonical titles (after redirect/normalisation); map each
-        # back to its source year via the requested title, falling back to the canonical one.
         requested = {safe_filename(t): t for t in title_to_year}
         for canon_title, text in extracts.items():
             year = title_to_year.get(canon_title)
@@ -1186,8 +1088,6 @@ def american_history(path: Path, start_year: int = HISTORY_START_YEAR,
     log.info("Saved %d yearly US-history records to %s (%d-%d)",
              saved, path, start_year, end_year)
 
-    # Also ingest the broad era-overview pages into the same folder, sharing the `seen` set so
-    # pages already saved from the per-year crawl are not written again (drop duplicate pages).
     saved += history_eras(path, seen=seen)
     return saved
 

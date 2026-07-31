@@ -1,58 +1,8 @@
-"""
-LLM-based argument detection: zero-shot, few-shot, and fine-tuning.
-
-Architecture
-------------
-Each example is formatted as an instruction-following chat prompt:
-
-    [System]   You are an expert in argumentation analysis …
-    [User]     Sentence: <sentence>
-               Speech turn: <speech_turn>
-               [Retrieved context: <context>]   (when --use_rag)
-               Does this sentence contain a fallacy?
-               Answer with exactly one word: "Yes" or "No".
-    [Assistant] Yes | No
-
-Post-processing
----------------
-The raw LLM response ("Yes" / "No") is translated to dataset labels
-before metrics and file output. The label pair is dataset-aware:
-    fallacy datasets   : "Yes" → "Fallacy",    "No" → "NoFallacy"
-    propaganda dataset : "Yes" → "propaganda", "No" → "non-propaganda"
-
-Modes (--mode)
---------------
-  zero_shot  : direct prompt inference, no labelled examples
-  few_shot   : --num_shots balanced examples prepended to the prompt
-  fine_tune  : LoRA/QLoRA supervised fine-tuning via TRL SFTTrainer,
-               followed by evaluation / prediction
-
-Backend (--backend)
--------------------
-  local   : HuggingFace generate() — works with any causal LM
-  openai  : OpenAI chat completions (requires OPENAI_API_KEY env var)
-
-Retrieval-augmentation (--use_rag)
------------------------------------
-  Reads the pre-built "context" column from the dataset and appends it
-  to each prompt, exactly mirroring the encoder counterpart.
-
-Fine-tuning details
---------------------
-  - LoRA / QLoRA (4-bit NF4) via peft + bitsandbytes
-  - TRL SFTTrainer handles response-only loss masking automatically
-  - Saves adapter weights to --output_dir; merges + saves full model
-    if --merge_adapter is set
-
-Dataset-aware prompts
----------------------
-  The system prompt and label pair are automatically selected based on the dataset used:
-  - elecdeb60to20: References "Fallacious Argument Classification in Political Debates" (Goffredo et al., 2022)
-  - reddit: References "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions" (Shai et al., 2021)
-  - propaganda: News-article propaganda-technique detection (propaganda / non-propaganda labels)
-  - unknown: Uses a generic prompt
-  The dataset is automatically identified from the training file path.
-"""
+"""LLM-based fallacy detection: zero-shot, few-shot, and LoRA/QLoRA fine-tuning.
+Each example becomes an instruction-following chat prompt answered with "Yes" or "No", carrying
+the pre-built "context" column when ``--use_rag``, then translated to dataset labels:
+Fallacy/NoFallacy or propaganda/non-propaganda. The system prompt and label pair are selected
+from the dataset path. Backends: local HuggingFace generate() or the OpenAI chat API."""
 
 from __future__ import annotations
 
@@ -82,27 +32,19 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-# ── Label constants ────────────────────────────────────────────────────────────
 
-# LLM-level response tokens (what the model is asked to produce)
 LLM_YES = "Yes"
 LLM_NO = "No"
 
-# Dataset-level labels and their mappings are dataset-aware and set in main()
-# via configure_detection_labels(). Defaults target the fallacy datasets
-# (elecdeb60to20, reddit); the propaganda dataset uses propaganda/non-propaganda.
-LABEL_FALLACY = "Fallacy"  # positive label
-LABEL_NO_FALLACY = "NoFallacy"  # negative label
+LABEL_FALLACY = "Fallacy"
+LABEL_NO_FALLACY = "NoFallacy"
 ALL_LABELS = [LABEL_FALLACY, LABEL_NO_FALLACY]
 
-# Bidirectional mappings between LLM responses and dataset labels
 LABEL_TO_LLM: dict[str, str] = {LABEL_FALLACY: LLM_YES, LABEL_NO_FALLACY: LLM_NO}
 LLM_TO_LABEL: dict[str, str] = {LLM_YES: LABEL_FALLACY, LLM_NO: LABEL_NO_FALLACY}
 
-# SYSTEM_PROMPT and USER_QUESTION are dynamically set during main() per dataset
-SYSTEM_PROMPT = None  # Will be set in main()
+SYSTEM_PROMPT = None
 
-# The user-turn question; propaganda asks about a technique, fallacy datasets a fallacy.
 USER_QUESTION = (
     'Does this sentence contain a fallacy? '
     'Answer with exactly one word: "Yes" or "No".'
@@ -126,7 +68,6 @@ def configure_detection_labels(train_file: Optional[str]) -> None:
     )
 
 
-# ── Dataclasses ────────────────────────────────────────────────────────────────
 
 @dataclass
 class ModelArguments:
@@ -250,7 +191,6 @@ class LLMExperimentArguments:
         default="local",
         metadata={"help": "Inference backend: local (HuggingFace) | openai."},
     )
-    # ── Few-shot ──────────────────────────────────────────────────────────────
     num_shots: int = field(
         default=1,
         metadata={"help": "Number of labelled examples per class for few-shot prompting "
@@ -262,7 +202,6 @@ class LLMExperimentArguments:
         default=42,
         metadata={"help": "Random seed for selecting few-shot examples."},
     )
-    # ── Inference ─────────────────────────────────────────────────────────────
     max_new_tokens: int = field(
         default=4,
         metadata={"help": "Maximum number of new tokens to generate per example. "
@@ -277,7 +216,6 @@ class LLMExperimentArguments:
         default=8,
         metadata={"help": "Batch size for local inference (not used for openai backend)."},
     )
-    # ── Quantization ──────────────────────────────────────────────────────────
     load_in_4bit: bool = field(
         default=False,
         metadata={"help": "Load model in 4-bit NF4 (QLoRA). Requires bitsandbytes."},
@@ -286,7 +224,6 @@ class LLMExperimentArguments:
         default=False,
         metadata={"help": "Load model in 8-bit. Requires bitsandbytes."},
     )
-    # ── LoRA (fine_tune mode) ─────────────────────────────────────────────────
     lora_r: int = field(
         default=16,
         metadata={"help": "LoRA rank."},
@@ -321,7 +258,6 @@ class LLMExperimentArguments:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
 
 
-# ── Prompt helpers ─────────────────────────────────────────────────────────────
 
 def build_user_message(
         sentence: str,
@@ -330,7 +266,6 @@ def build_user_message(
 ) -> str:
     """Build the user-turn text for a single example."""
     parts = [f'Sentence: "{sentence}"']
-    # Some datasets (e.g. propaganda) have no speech-turn context.
     if speech_turn:
         parts.append(f"Debate turn context:\n{speech_turn}")
     if context:
@@ -363,7 +298,6 @@ def build_few_shot_messages(
         messages.append({"role": "user", "content": build_user_message(
             ex["sentence"], ex["speech_turn"], ex.get("context")
         )})
-        # Few-shot demonstrations use the LLM response token (Yes/No), not the dataset label
         messages.append({"role": "assistant", "content": ex["llm_response"]})
     messages.append({"role": "user", "content": build_user_message(sentence, speech_turn, context)})
     return messages
@@ -379,10 +313,8 @@ def format_for_sft(
 ) -> dict:
     """Format one training example as a complete chat string for SFTTrainer ({"text": ...})."""
     sentence = example[text_col] or ""
-    # speech_turn column is absent in some datasets (e.g. propaganda).
     speech_turn = (example[speech_turn_col] if speech_turn_col in example else "") or ""
     context = example[context_col] if (use_rag and context_col and context_col in example) else None
-    # Translate dataset label → LLM response token so the model learns to say "Yes"/"No"
     llm_target = LABEL_TO_LLM.get(str(example["label"]), LLM_NO)
 
     messages = [
@@ -390,18 +322,15 @@ def format_for_sft(
         {"role": "user", "content": build_user_message(sentence, speech_turn, context)},
         {"role": "assistant", "content": llm_target},
     ]
-    # apply_chat_template adds the EOS token automatically
     text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
     return {"text": text}
 
 
-# ── Output parsing ─────────────────────────────────────────────────────────────
 
 def parse_llm_response(response: str, fallback: str = LLM_NO) -> str:
     """Extract the canonical "Yes"/"No" token from a raw LLM response, else return *fallback*."""
     response_clean = response.strip()
     lowered = response_clean.lower()
-    # Check "yes" before "no" so a response containing both resolves to "Yes".
     if "yes" in lowered:
         return LLM_YES
     if "no" in lowered:
@@ -418,7 +347,6 @@ def llm_response_to_label(llm_response: str) -> str:
     return LLM_TO_LABEL.get(llm_response, LABEL_NO_FALLACY)
 
 
-# ── Few-shot example selection ─────────────────────────────────────────────────
 
 def sample_few_shot_examples(
         dataset,
@@ -440,7 +368,6 @@ def sample_few_shot_examples(
                 "sentence": ex[text_col] or "",
                 "speech_turn": (ex[speech_turn_col] if speech_turn_col in ex else "") or "",
                 "label": label,
-                # Pre-translated response token used in the assistant turn of the prompt
                 "llm_response": LABEL_TO_LLM[label],
             }
             if use_rag and context_col and context_col in ex:
@@ -450,7 +377,6 @@ def sample_few_shot_examples(
     return examples
 
 
-# ── Metrics ────────────────────────────────────────────────────────────────────
 
 def compute_metrics(predictions: list[str], references: list[str]) -> dict:
     """Compute accuracy and macro precision/recall/F1 from string predictions and references."""
@@ -460,7 +386,6 @@ def compute_metrics(predictions: list[str], references: list[str]) -> dict:
         "recall": recall_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
         "f1_macro": f1_score(y_true=references, y_pred=predictions, average="macro", zero_division=0),
     }
-    # Per-class F1 for error analysis
     per_class = f1_score(
         y_true=references, y_pred=predictions, labels=ALL_LABELS, average=None, zero_division=0
     )
@@ -469,7 +394,6 @@ def compute_metrics(predictions: list[str], references: list[str]) -> dict:
     return metrics
 
 
-# ── Model loading helpers ──────────────────────────────────────────────────────
 
 def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
     """Return True if the checkpoint already ships its own quantization_config (e.g. Mxfp4)."""
@@ -498,11 +422,9 @@ def _build_load_kwargs(
                 f"Model '{model_name_or_path}' already has a built-in quantization config. "
                 "Ignoring --load_in_4bit / --load_in_8bit to avoid conflicting quant configs."
             )
-        # Let Transformers handle dtype automatically for pre-quantized checkpoints
         kwargs["torch_dtype"] = "auto"
         return kwargs
 
-    # Standard path — apply BitsAndBytes if requested
     try:
         from transformers import BitsAndBytesConfig
         _bnb_available = True
@@ -524,7 +446,6 @@ def _build_load_kwargs(
     return kwargs
 
 
-# ── Batched generation helper ──────────────────────────────────────────────────
 
 def _generate_batched(
         model,
@@ -536,17 +457,8 @@ def _generate_batched(
         torch_module,
         max_length: int = 2048,
 ) -> list[str]:
-    """Length-sorted, left-padded batched generation.
-
-    Each chat prompt is tokenised once, then examples are sorted short→long so that
-    every padded batch groups similar-length sequences together. This minimises the
-    compute wasted on padding tokens (a plain in-order pass pads every batch to the
-    longest example it happens to contain). Results are re-ordered back to the
-    original input order before returning, so callers see no difference in output —
-    only in speed. This helps both zero-shot and, especially, few-shot inference,
-    where prompt lengths vary the most.
-    """
-    # 1. Render + tokenise each chat prompt once (no padding yet).
+    """Length-sorted, left-padded batched generation: prompts are sorted short to long so each batch
+    wastes little compute on padding, then results are re-ordered back to the input order."""
     encodings = []
     for msgs in messages_list:
         text = tokenizer.apply_chat_template(
@@ -554,7 +466,6 @@ def _generate_batched(
         )
         encodings.append(tokenizer(text, truncation=True, max_length=max_length))
 
-    # 2. Process short prompts first so padding within each batch stays minimal.
     order = sorted(range(len(encodings)), key=lambda i: len(encodings[i]["input_ids"]))
 
     gen_kwargs = dict(
@@ -572,7 +483,6 @@ def _generate_batched(
     for i in tqdm(range(0, len(order), batch_size), total=n_batches,
                   desc="Generating", unit="batch"):
         idxs = order[i: i + batch_size]
-        # tokenizer.pad re-pads the pre-tokenised examples (left padding set on the tokenizer).
         inputs = tokenizer.pad(
             [encodings[j] for j in idxs],
             padding=True,
@@ -582,7 +492,6 @@ def _generate_batched(
         with torch_module.inference_mode():
             output_ids = model.generate(**inputs, **gen_kwargs)
 
-        # Decode only newly generated tokens; map each result back to its original slot.
         prompt_len = inputs["input_ids"].shape[1]
         for k, out in enumerate(output_ids):
             decoded = tokenizer.decode(out[prompt_len:], skip_special_tokens=True)
@@ -591,7 +500,6 @@ def _generate_batched(
     return responses
 
 
-# ── Local HuggingFace backend ──────────────────────────────────────────────────
 
 class LocalLLMInference:
     """Wrap a HuggingFace causal LM for batched, chat-templated inference."""
@@ -613,7 +521,7 @@ class LocalLLMInference:
             revision=model_args.model_revision,
             token=model_args.token,
             trust_remote_code=model_args.trust_remote_code,
-            padding_side="left",  # causal LM: pad on the left
+            padding_side="left",
         )
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
@@ -626,8 +534,6 @@ class LocalLLMInference:
         )
         load_kwargs = _build_load_kwargs(model_name_or_path, llm_args, base_kwargs, torch)
 
-        # Place the model on an accelerator; CPU generation for a large model is very slow.
-        # Quantized models are placed by device_map at load; unquantized ones moved after.
         is_quantized = "quantization_config" in load_kwargs
         if torch.cuda.is_available():
             load_kwargs.setdefault("device_map", "auto")
@@ -666,7 +572,6 @@ class LocalLLMInference:
         )
 
 
-# ── OpenAI backend ─────────────────────────────────────────────────────────────
 
 class OpenAIInference:
     """Wraps the OpenAI chat completions API for inference."""
@@ -701,7 +606,6 @@ class OpenAIInference:
         return responses
 
 
-# ── Inference runner ───────────────────────────────────────────────────────────
 
 def run_inference(
         split_name: str,
@@ -719,7 +623,6 @@ def run_inference(
     messages_list = []
     for ex in dataset:
         sentence = ex[text_col] or ""
-        # speech_turn column is absent in some datasets (e.g. propaganda).
         speech_turn = (ex[speech_col] if speech_col in ex else "") or ""
         context = ex[ctx_col] if (data_args.use_rag and ctx_col and ctx_col in ex) else None
 
@@ -732,9 +635,7 @@ def run_inference(
     logger.info(f"Running inference on {len(messages_list)} {split_name} examples …")
     raw_responses = inference_engine.predict_batch(messages_list)
 
-    # Step 1 – parse the raw text into "Yes" / "No"
     llm_responses = [parse_llm_response(r) for r in raw_responses]
-    # Step 2 – post-process: translate to dataset labels "Fallacy" / "NoFallacy"
     predictions = [llm_response_to_label(r) for r in llm_responses]
 
     references = []
@@ -744,7 +645,6 @@ def run_inference(
     return predictions, references
 
 
-# ── Fine-tuning ────────────────────────────────────────────────────────────────
 
 def run_fine_tuning(
         model_args: ModelArguments,
@@ -762,19 +662,17 @@ def run_fine_tuning(
 
     logger.info("=== Fine-tuning phase ===")
 
-    # ── Load tokenizer ────────────────────────────────────────────────────────
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.model_name_or_path,
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
         token=model_args.token,
         trust_remote_code=model_args.trust_remote_code,
-        padding_side="right",  # right-padding for SFT
+        padding_side="right",
     )
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
 
-    # ── Load base model ───────────────────────────────────────────────────────
     base_kwargs = dict(
         cache_dir=model_args.cache_dir,
         revision=model_args.model_revision,
@@ -788,7 +686,6 @@ def run_fine_tuning(
         **load_kwargs,
     )
 
-    # ── LoRA config ───────────────────────────────────────────────────────────
     target_modules = (
         [m.strip() for m in llm_args.lora_target_modules.split(",")]
         if llm_args.lora_target_modules
@@ -803,7 +700,6 @@ def run_fine_tuning(
         bias="none",
     )
 
-    # ── Format datasets for SFT ───────────────────────────────────────────────
     def _fmt(ex):
         """Format one example as an SFT chat string."""
         return format_for_sft(
@@ -818,7 +714,6 @@ def run_fine_tuning(
     train_sft = train_dataset.map(_fmt, desc="Formatting train for SFT")
     eval_sft = eval_dataset.map(_fmt, desc="Formatting eval for SFT") if eval_dataset else None
 
-    # ── SFT config ────────────────────────────────────────────────────────────
     sft_config = SFTConfig(
         output_dir=training_args.output_dir,
         num_train_epochs=training_args.num_train_epochs,
@@ -856,7 +751,6 @@ def run_fine_tuning(
     trainer.save_state()
     trainer.save_model()
 
-    # Optionally merge adapter into base model
     if llm_args.merge_adapter:
         logger.info("Merging LoRA adapter into base model …")
         merged_model = trainer.model.merge_and_unload()
@@ -869,7 +763,6 @@ def run_fine_tuning(
     return trainer.model, tokenizer
 
 
-# ── Dataset helpers ────────────────────────────────────────────────────────────
 
 def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArguments):
     """Load the train/validation/test CSV or JSON splits into a DatasetDict."""
@@ -892,7 +785,6 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
     return ds
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
 
 def main():
     """Run the chosen mode (zero-shot, few-shot, or fine-tune) and evaluate/predict."""
@@ -908,7 +800,6 @@ def main():
     else:
         model_args, data_args, llm_args, training_args = parser.parse_args_into_dataclasses()
 
-    # ── Dynamically set the system prompt and labels based on the dataset ───────
     SYSTEM_PROMPT = get_detection_prompt(data_args.train_file)
     configure_detection_labels(data_args.train_file)
 
@@ -921,7 +812,6 @@ def main():
     )
     set_seed(training_args.seed)
 
-    # ── Load datasets ─────────────────────────────────────────────────────────
     raw_datasets = load_raw_datasets(data_args, model_args)
 
     label_column = data_args.label_column_name
@@ -947,7 +837,6 @@ def main():
         )
         logger.info(f"Test split: {len(predict_dataset)} examples")
 
-    # ── Few-shot example pool (sampled once from training set) ─────────────────
     few_shot_examples = None
     if llm_args.mode == "few_shot":
         if train_dataset is None:
@@ -966,7 +855,6 @@ def main():
             f"({llm_args.num_shots} per class)"
         )
 
-    # ── Fine-tuning ────────────────────────────────────────────────────────────
     inference_model = None
     inference_tokenizer = None
 
@@ -985,7 +873,6 @@ def main():
             eval_dataset=eval_dataset,
         )
 
-    # ── Build inference engine ─────────────────────────────────────────────────
     engine = None
     if training_args.do_eval or training_args.do_predict:
         if llm_args.backend == "openai":
@@ -994,9 +881,7 @@ def main():
                 llm_args=llm_args,
             )
         else:
-            # For fine_tune, reuse the fine-tuned model/tokenizer
             if llm_args.mode == "fine_tune" and inference_model is not None:
-                # Wrap the already-loaded fine-tuned model
                 engine = _FineTunedLocalEngine(
                     model=inference_model,
                     tokenizer=inference_tokenizer,
@@ -1011,7 +896,6 @@ def main():
 
     os.makedirs(training_args.output_dir, exist_ok=True)
 
-    # ── Evaluation ─────────────────────────────────────────────────────────────
     if training_args.do_eval and eval_dataset is not None:
         logger.info("*** Evaluate ***")
         predictions, references = run_inference(
@@ -1028,7 +912,6 @@ def main():
             logger.info(f"Eval metrics: {metrics}")
             _save_metrics(metrics, os.path.join(training_args.output_dir, "eval_results.json"))
 
-    # ── Prediction ─────────────────────────────────────────────────────────────
     if training_args.do_predict and predict_dataset is not None:
         logger.info("*** Predict ***")
         predictions, references = run_inference(
@@ -1054,7 +937,6 @@ def main():
         logger.info(f"Predictions saved to {output_path}")
 
 
-# ── Thin wrapper to reuse fine-tuned model for inference ──────────────────────
 
 class _FineTunedLocalEngine:
     """Adapt an in-memory fine-tuned model to the LocalLLMInference predict_batch() interface."""
@@ -1064,7 +946,6 @@ class _FineTunedLocalEngine:
         import torch
         self.model = model
         self.tokenizer = tokenizer
-        # Switch to left-padding for inference
         self.tokenizer.padding_side = "left"
         self.max_new_tokens = llm_args.max_new_tokens
         self.temperature = llm_args.temperature
@@ -1084,7 +965,6 @@ class _FineTunedLocalEngine:
         )
 
 
-# ── Utility ────────────────────────────────────────────────────────────────────
 
 def _save_metrics(metrics: dict, path: str):
     """Write a metrics dict to *path* as indented JSON."""

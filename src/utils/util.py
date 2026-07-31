@@ -29,11 +29,11 @@ def normalize_text(text):
     """Normalize unicode, quotes, dashes and whitespace into clean ASCII text."""
     text = unicodedata.normalize("NFKD", text)
     text = text.encode("ascii", "ignore").decode("ascii")
-    text = re.sub(r"[‘’´`]", "'", text)  # apostrophes
-    text = re.sub(r"[“”]", '"', text)  # double quotes
-    text = re.sub(r"[–—]", " - ", text)  # dashes — pad so they tokenize as a separate token
-    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text)  # space after mid-word periods
-    text = re.sub(r"\s+", " ", text).strip()  # collapse newlines/tabs/multiple spaces
+    text = re.sub(r"[‘’´`]", "'", text)
+    text = re.sub(r"[“”]", '"', text)
+    text = re.sub(r"[–—]", " - ", text)
+    text = re.sub(r"([A-Za-z])\.([A-Za-z])", r"\1. \2", text)
+    text = re.sub(r"\s+", " ", text).strip()
     return text
 
 
@@ -123,9 +123,7 @@ def simulate_browser(url: str, timeout_ms: int = BROWSER_TIMEOUT_MS):
 def simulate_browser_batch(urls, max_workers: int = 4,
                            timeout_ms: int = BROWSER_TIMEOUT_MS) -> dict:
     """Fetch many JSON endpoints concurrently via headless Chromium; return {url: json_or_None}."""
-    # Each worker reuses one browser for its whole shard (launch is the dominant cost) and runs
-    # in parallel with its own Playwright instance (the sync API is per-thread).
-    urls = list(dict.fromkeys(urls))  # de-dupe, preserve order
+    urls = list(dict.fromkeys(urls))
     if not urls:
         return {}
     max_workers = max(1, min(max_workers, len(urls)))
@@ -149,8 +147,6 @@ def simulate_browser_batch(urls, max_workers: int = 4,
                 finally:
                     browser.close()
         except Exception as e:
-            # Browser couldn't launch — skip this shard instead of crashing the run.
-            # Keep only the first line; the full Playwright log is very verbose.
             first_line = str(e).splitlines()[0] if str(e) else type(e).__name__
             print(f"Headless browser unavailable, skipping {len(shard)} URLs: {first_line}")
         return local
@@ -181,7 +177,7 @@ def fetch_wikipedia_category_members(category: str) -> list[str]:
             "action": "query",
             "list": "categorymembers",
             "cmtitle": f"Category:{category}",
-            "cmnamespace": 0,  # articles only (skip sub-categories / talk pages)
+            "cmnamespace": 0,
             "cmlimit": "max",
             "format": "json",
             "formatversion": "2",
@@ -224,7 +220,7 @@ def fetch_wikipedia_links(page: str, limit: int = 200) -> list[str]:
             "action": "query",
             "prop": "links",
             "titles": page,
-            "plnamespace": 0,  # main/article namespace only
+            "plnamespace": 0,
             "pllimit": "max",
             "format": "json",
             "formatversion": "2",
@@ -263,7 +259,6 @@ def fetch_wikipedia_sections(page: str):
     url = "https://en.wikipedia.org/w/api.php"
     result = {}
 
-    # ---- get list of sections ----
     params = {
         "action": "parse",
         "page": page,
@@ -275,13 +270,6 @@ def fetch_wikipedia_sections(page: str):
         "User-Agent": "FallacyRAG (doredeborah3@gmail.com)"
     }
 
-    # ACCESS_TOKEN, ACCESS_SECRET = get_request_token()
-    # oauth = OAuth1(
-    #     client_key=os.environ["CONSUMER_KEY"],
-    #     client_secret=os.environ['CONSUMER_SECRET'],
-    #     resource_owner_key=ACCESS_TOKEN,
-    #     resource_owner_secret=ACCESS_SECRET,
-    # )
     section_response = None
     for attempt in range(5):
         r = requests.get(url, params=params, headers=headers, timeout=15)
@@ -303,7 +291,6 @@ def fetch_wikipedia_sections(page: str):
 
     sections = section_response.get("parse", {}).get("sections", [])
 
-    # ---- fetch each section text ----
     for section in sections:
         anchor = section.get("anchor")
         if anchor in SKIP_WIKI_SECTIONS:
@@ -340,7 +327,6 @@ def fetch_wikipedia_sections(page: str):
         raw_html = html_response.get("parse", {}).get("text", "")
         soup = BeautifulSoup(raw_html, "html.parser")
 
-        # remove reference markers
         for ref in soup.select("sup.reference"):
             ref.decompose()
 
@@ -353,7 +339,6 @@ def fetch_wikipedia_sections(page: str):
         if paragraphs:
             result[anchor] = paragraphs
 
-    # ---- build final text ----
     text = ""
     for title, section_text in result.items():
         text += f"{title}: {section_text}\n\n"
@@ -363,12 +348,9 @@ def fetch_wikipedia_sections(page: str):
 
 def fetch_wikipedia_section(page: str, section_name: str) -> str:
     """Return one named section's text, extracting both paragraphs and list items."""
-    # Unlike fetch_wikipedia_sections, this keeps <li> items too (needed for bulleted event pages)
-    # and includes nested subsections; returns "" if the section is not found.
     url = "https://en.wikipedia.org/w/api.php"
     headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
 
-    # ---- locate the section index by heading ----
     params = {
         "action": "parse",
         "page": page,
@@ -398,7 +380,6 @@ def fetch_wikipedia_section(page: str, section_name: str) -> str:
     if target_index is None:
         return ""
 
-    # ---- fetch that section's HTML and extract paragraphs + list items ----
     params = {
         "action": "parse",
         "page": page,
@@ -436,14 +417,12 @@ def fetch_wikipedia_section(page: str, section_name: str) -> str:
 def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
                              batch_size: int = 20, max_workers: int = 8) -> dict[str, str]:
     """Fetch plain-text extracts for many Wikipedia pages concurrently; return {title: text}."""
-    # intro_only=True batches up to 20 intros per request (fastest); False fetches full articles,
-    # which the API caps at one page per request (batch_size forced to 1).
     if not titles:
         return {}
     url = "https://en.wikipedia.org/w/api.php"
     headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
     if not intro_only:
-        batch_size = 1  # full-article extracts are limited to one page per request
+        batch_size = 1
 
     def _fetch_batch(batch: list[str]) -> dict[str, str]:
         params = {
@@ -490,20 +469,6 @@ def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
     return results
 
 
-# def get_request_token():
-#     url = f"https://en.wikipedia.org/wiki/Special:OAuth/initiate"
-#
-#     oauth = OAuth1(
-#         os.environ['CONSUMER_KEY'],
-#         client_secret=os.environ['CONSUMER_SECRET'],
-#         callback_uri="oob"
-#     )
-#
-#     HEADERS = {"User-Agent": "FallacyRAG OAuth Test"}
-#     r = requests.get(url, auth=oauth, headers=HEADERS)
-#     r.raise_for_status()
-#     data = dict(x.split("=") for x in r.text.split("&"))
-#     return data["oauth_token"], data["oauth_token_secret"]
 
 
 def analyze_paragraph_lengths(original_path: str = "./knowledge_base"):
@@ -620,7 +585,6 @@ def plot_paragraph_cdf(lengths, counts, output_path="./data/paragraph_length_dis
 
 def get_item_ids(url, items, conditional='True'):
     """Collect Library of Congress item/resource links from a search URL into *items*."""
-    # The URL must be a search URL, not a direct item/resource page.
     exclude = ["loc.gov/item", "loc.gov/resource"]
     if any(string in url for string in exclude):
         raise NameError('Your URL points directly to an item or '
@@ -630,32 +594,23 @@ def get_item_ids(url, items, conditional='True'):
                         'of \"https://www.loc.gov/item/2009581123/\", '
                         'try \"https://www.loc.gov/maps/?q=2009581123\". ')
 
-    # request pages of 100 results at a time
     params = {"fo": "json", "c": 5, "at": "results,pagination"}
     call = requests.get(url, params=params)
-    # Check that the API request was successful
     if (call.status_code == 200) & ('json' in call.headers.get('content-type')):
         data = call.json()
         results = data['results']
         for result in results:
-            # Filter out anything that's a collection or web page
             filter_out = ("collection" in result.get("original_format")) \
                          or ("web page" in result.get("original_format")) \
                          or (eval(conditional) == False)
             if not filter_out:
-                # Get the link to the item record
                 if result.get("id"):
                     item = result.get("id")
-                    # Filter out links to Catalog or other platforms
                     if item.startswith("http://www.loc.gov/resource"):
-                        resource = item  # Assign item to resource
+                        resource = item
                         items.append(resource)
                     if item.startswith("http://www.loc.gov/item"):
                         items.append(item)
-        # Repeat the loop on the next page, unless we're on the last page.
-        # if data["pagination"]["next"] is not None:
-        #     next_url = data["pagination"]["next"]
-        #     get_item_ids(next_url, items, conditional)
 
         return items
     else:

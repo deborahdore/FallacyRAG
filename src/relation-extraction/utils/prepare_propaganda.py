@@ -1,41 +1,8 @@
-"""
-Prepare the propaganda dataset for relation classification (support / attack / no_relation)
-*inference*, in the same CSV format as src/relation-extraction/dataset/persuasive-essays and
-src/relation-extraction/dataset/LIARArg (columns: label, label_value, sentence1, sentence2 --
-here named fallacy, candidate_relation), plus a few extra metadata columns kept for
-traceability after prediction.
-
-Source dataset
----------------
-datasets/propaganda-dataset/relation-classification/original/{train,test,dev}.csv. Each row is
-one sentence ("phrase") of a newspaper article, identified by article_id + sentence_id
-(article_id + split are 1:1 with the raw article text under
-datasets/propaganda-dataset/relation-classification/original/{train,test,dev}/article<id>.txt), with
-a binary label (propaganda / non-propaganda) and, when propaganda, a ';'-separated list of
-propaganda technique names in the 'techniques' column.
-
-There is no relation annotation in this dataset -- the goal here is not to build a labeled
-training set but a *prediction* set: every "fallacy" (a propaganda-labeled sentence) paired
-with every other phrase (sentence) of its own article, so a relation-classification model
-trained elsewhere (e.g. on LIARArg) can be run over it with --do_predict to see which phrases
-it links a support/attack relation to.
-
-Method
-------
-1. Group rows by (split, article_id), preserving each article's sentence order (by
-   sentence_begin, the character offset into the raw article text).
-2. Within each article, take every row with label == 'propaganda' as a fallacy anchor.
-3. Pair each fallacy with every other sentence in the same article (all rows, propaganda or
-   not, excluding the fallacy's own sentence -- a sentence is never paired with itself).
-4. Unlike prepare_liarArg.py's undirected no_relation candidates, the role of each sentence
-   here is already known, so no position-based reordering is needed: the fallacy sentence
-   always goes in the 'fallacy' column and the other article phrase in 'candidate_relation'.
-5. Since there is no gold relation label, label is written as -1 / label_value 'unknown'.
-   run_relation_classification.py already special-cases label == -1 as "no label" during
-   tokenisation, so these rows can be fed straight in as a --test_file for --do_predict.
-
-Run: python3 prepare_propaganda.py
-"""
+"""Prepare the propaganda dataset for relation-classification inference.
+Groups sentences by article and pairs every propaganda-labeled sentence with every other phrase
+of the same article, so a model trained elsewhere (e.g. on LIARArg) can be run over it with
+``--do_predict``. There is no gold relation, so ``label`` is written as -1 / 'unknown'.
+Run: ``python3 prepare_propaganda.py``."""
 
 from __future__ import annotations
 
@@ -83,7 +50,7 @@ def build_pairs(articles: dict, split: str) -> list[dict]:
         for fallacy in fallacies:
             for phrase in article_rows:
                 if phrase["sentence_id"] == fallacy["sentence_id"]:
-                    continue  # never pair a sentence with itself
+                    continue
 
                 pairs.append(
                     {

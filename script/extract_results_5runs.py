@@ -1,23 +1,8 @@
-"""
-extract_results_5runs.py
-------------------------
-Scans the ``output/five-runs`` directory, which stores several seeds per model:
-
-  output/five-runs/<dataset-task>/<config>/<model>/seed_<n>/<run>/predict_results.json
-
-(encoder runs finish with ``predict_results.json``; LLM runs finish with
-``predict_results_metrics.json`` — both are supported.)
-
-For every config folder it writes a CSV summarising the metrics of each model
-aggregated over its seeds:
-
-  output/five-runs/<dataset-task>/<config>/results_mean_std.csv
-
-Each row is one model, with the mean and standard deviation of the metrics
-computed across all available seeds, plus the number of seeds that were found.
-An aggregate CSV combining every config folder is also written to
-``output/five-runs/<dataset-task>/all_results_mean_std.csv``.
-"""
+"""Aggregate multi-seed results into per-config CSVs.
+Reads ``output/five-runs/<dataset-task>/<config>/<model>/seed_<n>/<run>/`` for
+``predict_results.json`` (encoders) or ``predict_results_metrics.json`` (LLMs) and writes
+``results_mean_std.csv`` per config, one row per model with mean, standard deviation and seed
+count, plus a combined ``all_results_mean_std.csv``."""
 
 import json
 import logging
@@ -32,13 +17,11 @@ rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=T
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
 
-# Root that holds one sub-folder per dataset-task combination (e.g. "elecdeb60to20-detection").
 OUTPUT_ROOT = "output/five-runs"
 RESULTS_FILE = "predict_results.json"
 RESULTS_FILE_ALT = "predict_results_metrics.json"
 AGGREGATE_FILE = "all_results_mean_std.csv"
 
-# Metrics to summarise (encoder key, alt/LLM key).
 METRICS = [
     ("predict_accuracy", "accuracy"),
     ("predict_f1_macro", "f1_macro"),
@@ -63,7 +46,6 @@ CONFIG_RE = re.compile(
 
 def parse_config_folder(folder_name: str) -> dict:
     """Parse RAG hyper-parameters from the config folder name."""
-    # "baseline" has no RAG config; use "none" for every hyper-parameter.
     if folder_name == "baseline":
         return {key: "none" for key in
                 ("temporal", "retriever", "search", "rerank", "query", "summarizer")}
@@ -149,9 +131,7 @@ def summarise_config(config_path: str) -> pd.DataFrame:
         for col in metric_cols:
             values = pd.to_numeric(model_df.get(col), errors="coerce")
             row[f"{col}_mean"] = round(values.mean(), 3)
-            # sample std; NaN if a single seed
             row[f"{col}_std"] = round(values.std(ddof=1), 3)
-            # per-seed values, in seed order; missing metrics shown as "nan"
             row[f"{col}_values"] = " ".join(
                 "nan" if pd.isna(v) else f"{round(v, 3)}" for v in values
             )

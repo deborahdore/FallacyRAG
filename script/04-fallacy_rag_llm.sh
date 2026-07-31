@@ -35,7 +35,7 @@ wandb disabled
 SEED=14
 export PYTHONHASHSEED=$SEED
 
-data="elecdeb60to20"  # elecdeb60to20 | reddit
+data="elecdeb60to20"  # elecdeb60to20 | propaganda
 task=detection
 
 export WANDB_PROJECT="fallacy_$task"

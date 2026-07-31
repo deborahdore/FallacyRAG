@@ -1,40 +1,8 @@
-"""
-Fine-tuning BERT-style models for fallacy classification, augmented with retrieved
-knowledge-base context (RAG).
-
-The label format is auto-detected (see ``detect_label_columns``):
-  - single-label  : one categorical column (``--label_column_name``, default ``fallacy_label``),
-                    softmax head + class-weighted cross-entropy, argmax decoding
-                    (elecdeb / reddit).
-  - multi-label   : several 0/1 indicator columns (one per fallacy + "None of the
-                    above"), sigmoid head + pos_weight BCEWithLogitsLoss (per-class
-                    inverse-frequency weighting), threshold decoding, and
-                    macro/micro/weighted/samples F1 metrics. Force it with
-                    ``--label_column_names`` and tune ``--multi_label_threshold``.
-
-Architecture
-------------
-For each example the tokenizer receives:
-
-    [CLS] sentence [SEP] context_1 … context_n [SEP]   (with RAG)
-    [CLS] sentence [SEP]                                 (without RAG)
-
-The [CLS] token representation is used for binary classification
-(fallacy / not-fallacy).  BERT's bidirectional self-attention propagates
-knowledge-base signal into the sentence representation.
-
-Retrieval (optional, controlled by --use_rag)
----------------------------------------------
-  - BM25  : lexical retrieval via BM25Retriever
-  - dense : vector-store similarity / MMR search (ChromaDB)
-
-Summarisation (optional, controlled by --summarization_model)
---------------------------------------------------------------
-  - Local  : meta-llama/Llama-3.1-8B-Instruct
-             mistralai/Mistral-7B-Instruct-v0.3
-  - API    : gpt-4o-mini  (requires OPENAI_API_KEY)
-  - None   : raw retrieved passages are appended verbatim (truncated)
-"""
+"""Fine-tune BERT-style models for fallacy classification, with optional retrieved context (RAG).
+The tokenizer receives ``[CLS] sentence [SEP] context_1 ... context_n [SEP]`` and the [CLS]
+representation drives the head. The label format is auto-detected: one categorical column gives
+a softmax head with class-weighted cross-entropy, several 0/1 indicator columns give a sigmoid
+head with pos_weight BCE and threshold decoding."""
 
 from __future__ import annotations
 
@@ -162,7 +130,7 @@ class DataTrainingArguments:
     label_column_name: Optional[str] = field(
         default="fallacy_label",
         metadata={"help": "Column containing the single-label classification label. Used when the "
-                          "dataset is single-label (elecdeb / reddit)."},
+                          "dataset is single-label (elecdeb)."},
     )
     label_column_names: Optional[str] = field(
         default=None,
@@ -218,7 +186,6 @@ class DataTrainingArguments:
         metadata={"help": "Cap on how many times a single minority-class row can be duplicated, so one "
                           "example isn't cloned hundreds of times when it's extremely rare."},
     )
-    # ── RAG-specific ──────────────────────────────────────────────────────
     use_rag: bool = field(
         default=False,
         metadata={"help": "Read the pre-built 'context' field from the dataset and append it to each BERT input."},
@@ -231,8 +198,6 @@ class DataTrainingArguments:
             path = getattr(self, attr)
             if path is not None and path.rsplit(".", 1)[-1] not in ("csv", "json"):
                 raise ValueError(f"{attr} must be a .csv or .json file.")
-        # Convenience: if --use_rag is set and the default no_rag paths are still in place,
-        # automatically redirect to the rag/ subdirectory.
         if self.use_rag:
             for attr in ("train_file", "validation_file", "test_file"):
                 path = getattr(self, attr)
@@ -240,7 +205,6 @@ class DataTrainingArguments:
                     setattr(self, attr, path.replace("/no_rag/", "/rag/"))
 
 
-# Columns that are never fallacy labels; used to auto-detect the multi-label 0/1 columns.
 METADATA_COLUMNS = {
     "id", "component_id", "year", "sentence", "speech_turn", "speaker",
     "relations", "relations_type", "relations_text", "relations_label",
@@ -252,7 +216,6 @@ METADATA_COLUMNS = {
 def get_label_list(raw_datasets, split: str = "train", label_column: str = "label") -> list[str]:
     """Get the sorted list of unique labels from a dataset split."""
     label_list = raw_datasets[split].unique(label_column)
-    # Treat labels as strings for consistency with model.config.label2id
     return [str(label) for label in label_list]
 
 
@@ -274,12 +237,7 @@ def _looks_binary(values) -> bool:
 
 def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool, list[str]]:
     """Decide single- vs multi-label and return ``(is_multi_label, label_columns)``.
-
-    Priority:
-      1. Explicit ``--label_column_names`` (comma-separated) -> multi-label with those columns.
-      2. A present single ``--label_column_name`` -> single-label.
-      3. Otherwise auto-detect: >= 2 binary (0/1) non-metadata columns -> multi-label.
-    """
+    Explicit ``--label_column_names`` wins, then ``--label_column_name``, then auto-detection."""
     columns = raw_datasets[ref_split].column_names
 
     if data_args.label_column_names:
@@ -305,7 +263,6 @@ def detect_label_columns(raw_datasets, data_args, ref_split: str) -> tuple[bool,
     )
 
 
-# Normalized names that denote the negative "no fallacy" class.
 _NONE_LABEL_KEYS = {"noneoftheabove", "none", "nofallacy", "no"}
 
 
@@ -319,11 +276,8 @@ def _find_none_index(label_list: list[str]) -> Optional[int]:
 
 
 def _apply_none_exclusivity(preds: np.ndarray, none_idx: Optional[int]) -> np.ndarray:
-    """Enforce the 'none' class rules on multi-label predictions.
-
-    - Exclusivity: if the 'none' class fires, it is the sole label (drop all others).
-    - Empty default: a row with no label above threshold falls back to 'none'.
-    """
+    """Enforce the 'none' class rules on multi-label predictions: when it fires it becomes the sole
+    label, and a row with nothing above threshold falls back to it."""
     if none_idx is None:
         return preds
     preds = preds.copy()
@@ -345,7 +299,6 @@ def make_multilabel_compute_metrics(label_list: list[str], threshold: float = 0.
         logits = p.predictions[0] if isinstance(p.predictions, tuple) else p.predictions
         probs = 1.0 / (1.0 + np.exp(-logits))
         preds = (probs > threshold).astype(int)
-        # 'None of the above' is the sole answer when it fires; empty rows default to it.
         preds = _apply_none_exclusivity(preds, none_idx)
         labels = np.array(p.label_ids).astype(int)
 
@@ -356,10 +309,8 @@ def make_multilabel_compute_metrics(label_list: list[str], threshold: float = 0.
             "f1_samples": f1_score(labels, preds, average="samples", zero_division=0),
             "precision_macro": precision_score(labels, preds, average="macro", zero_division=0),
             "recall_macro": recall_score(labels, preds, average="macro", zero_division=0),
-            # Exact-match ratio: the fraction of samples whose entire label set is correct.
             "subset_accuracy": accuracy_score(labels, preds),
         }
-        # Per-class F1 for error analysis (mirrors the paper's per-class report).
         per_class = f1_score(labels, preds, average=None, zero_division=0)
         for label, score in zip(label_list, per_class):
             metrics[f"f1_{label}"] = float(score)
@@ -375,7 +326,6 @@ def make_compute_metrics(label_list: list[str]):
         predictions = np.argmax(p.predictions, axis=1)
         labels = p.label_ids
 
-        # Map integer indices back to string labels for sklearn
         pred_labels = [label_list[pred] for pred in predictions]
         true_labels = [label_list[lbl] for lbl in labels]
 
@@ -385,7 +335,6 @@ def make_compute_metrics(label_list: list[str]):
             "recall": recall_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
             "f1_macro": f1_score(y_true=true_labels, y_pred=pred_labels, average="macro", zero_division=0),
         }
-        # Per-class F1 for error analysis
         per_class = f1_score(
             y_true=true_labels, y_pred=pred_labels, labels=label_list, average=None, zero_division=0
         )
@@ -399,17 +348,11 @@ def make_compute_metrics(label_list: list[str]):
 def _prepare_split(raw_datasets, split_name, max_samples, tokenize_fn, map_kwargs,
                    cast_label_int: bool = True):
     """Optionally slice a split and tokenize it.
-
-    ``cast_label_int`` forces the single-label integer ``label`` to int64 (string/NER-style
-    sources can otherwise be inferred as list[int]). It is disabled for multi-label, whose
-    ``label`` is a per-example vector of floats.
-    """
+    ``cast_label_int`` forces the single-label ``label`` to int64; it is disabled for multi-label."""
     from datasets import Value
     ds = raw_datasets[split_name]
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
-    # Drop every column except 'label' (raw text columns would crash the collator); keep the
-    # 'label' that preprocess_function writes.
     non_label_cols = [c for c in ds.column_names if c != "label"]
     tokenized = ds.map(
         tokenize_fn,
@@ -450,7 +393,6 @@ def main():
     logger.info(f"Training/evaluation parameters {training_args}")
     set_seed(training_args.seed)
 
-    # ── Dataset loading ───────────────────────────────────────────────────
     data_files = {
         "train": data_args.train_file,
         "validation": data_args.validation_file,
@@ -459,20 +401,16 @@ def main():
     extension = (data_args.train_file or data_args.validation_file).rsplit(".", 1)[-1]
     raw_datasets = load_dataset(extension, data_files=data_files, cache_dir=model_args.cache_dir)
 
-    # ── Label setup (auto-detect single- vs multi-label) ──────────────────
     ref_split = "train" if training_args.do_train else "validation"
     is_multi_label, label_columns = detect_label_columns(raw_datasets, data_args, ref_split)
 
     if is_multi_label:
-        # Each fallacy class (incl. "None of the above") is its own 0/1 column.
-        # Column order defines the output-neuron order and the multi-hot target order.
         label_list = list(label_columns)
         num_labels = len(label_list)
         label_to_id = {v: i for i, v in enumerate(label_list)}
         logger.info(f"Detected MULTI-LABEL setup with {num_labels} classes: {label_list}")
     else:
         label_column_name = label_columns[0]
-        # Rename to "label" so the Trainer can find it automatically
         if label_column_name != "label":
             for key in raw_datasets:
                 raw_datasets[key] = raw_datasets[key].rename_column(label_column_name, "label")
@@ -480,7 +418,6 @@ def main():
 
         label_list = get_label_list(raw_datasets, split=ref_split, label_column=label_column_name)
 
-        # Merge labels across splits to handle labels that appear only in val/test
         for split in ["validation", "test"]:
             if split in raw_datasets:
                 extra = get_label_list(raw_datasets, split=split, label_column=label_column_name)
@@ -494,7 +431,6 @@ def main():
         label_to_id = {v: i for i, v in enumerate(label_list)}
         logger.info(f"Detected SINGLE-LABEL setup with {num_labels} classes: {label_list}")
 
-    # ── Model / tokenizer / config ────────────────────────────────────────
     config = AutoConfig.from_pretrained(
         model_args.config_name or model_args.model_name_or_path,
         num_labels=num_labels,
@@ -532,8 +468,6 @@ def main():
     model.config.label2id = label_to_id
     model.config.id2label = {id: label for label, id in label_to_id.items()}
 
-    # ── Tokenisation ──────────────────────────────────────────────────────
-    # Use the model's own capacity; some tokenizers report a huge sentinel, so fall back safely.
     max_seq_length = tokenizer.model_max_length
     if max_seq_length is None or max_seq_length > 100_000:
         max_seq_length = getattr(config, "max_position_embeddings", 512)
@@ -547,9 +481,7 @@ def main():
     def preprocess_function(examples):
         """Tokenize sentence (segment A) and speech_turn + optional RAG context (segment B)."""
         if data_args.use_rag and context_column_name:
-            # speech_turn comes first so truncation trims rag_context, not the local context.
             if speech_turn_column_name == text_column_name:
-                # reddit-dataset
                 result = tokenizer(
                     examples[text_column_name],
                     examples[context_column_name],
@@ -579,8 +511,6 @@ def main():
             )
 
         if is_multi_label:
-            # Multi-hot float target per example, built from the 0/1 label columns
-            # (the original columns are still present here; map removes them afterwards).
             n_rows = len(examples[text_column_name])
             result["label"] = [
                 [float(examples[col][i]) for col in label_columns] for i in range(n_rows)
@@ -623,25 +553,19 @@ def main():
         logger.info("Shuffling the training dataset")
         train_dataset = train_dataset.shuffle(seed=data_args.shuffle_seed)
 
-    # Log a few random samples from the training set
     if training_args.do_train:
         for index in random.sample(range(len(train_dataset)), min(3, len(train_dataset))):
             logger.info(f"Sample {index} of the training set: {train_dataset[index]}.")
 
-    # ── Data collator ─────────────────────────────────────────────────────
     data_collator = DataCollatorWithPadding(tokenizer, pad_to_multiple_of=8)
 
-    # ── Class weights (from train set) ────────────────────────────────────
-    # Single-label: per-class inverse-frequency weights for cross-entropy.
-    # Multi-label: per-class pos_weight = #neg/#pos for BCE, up-weighting rare classes.
     class_weights = None
     pos_weight = None
     if training_args.do_train and train_dataset is not None:
         if is_multi_label:
-            labels_matrix = np.asarray(train_dataset["label"], dtype=np.float64)  # (N, C)
+            labels_matrix = np.asarray(train_dataset["label"], dtype=np.float64)
             pos = labels_matrix.sum(axis=0)
             neg = labels_matrix.shape[0] - pos
-            # Guard against divide-by-zero for a class with no positives in train.
             weights = neg / np.clip(pos, 1.0, None)
             pos_weight = torch.tensor(weights, dtype=torch.float)
             logger.info(
@@ -654,7 +578,6 @@ def main():
             class_weights = torch.tensor(weights, dtype=torch.float)
             logger.info(f"Class weights: { {label_list[i]: round(w, 4) for i, w in enumerate(weights)} }")
 
-    # ── Loss functions ────────────────────────────────────────────────────
     def weighted_loss_fn(outputs, labels, num_items_in_batch=None):
         """Class-weighted cross-entropy loss to offset label imbalance (single-label)."""
         logits = outputs.logits.float()
@@ -674,7 +597,6 @@ def main():
         compute_metrics_fn = make_compute_metrics(label_list)
         compute_loss_func = weighted_loss_fn
 
-    # ── Trainer ───────────────────────────────────────────────────────────
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -686,7 +608,6 @@ def main():
         compute_loss_func=compute_loss_func,
     )
 
-    # ── Training ──────────────────────────────────────────────────────────
     if training_args.do_train:
         train_result = trainer.train(resume_from_checkpoint=training_args.resume_from_checkpoint)
         metrics = train_result.metrics
@@ -699,7 +620,6 @@ def main():
         trainer.save_metrics("train", metrics)
         trainer.save_state()
 
-    # ── Evaluation ────────────────────────────────────────────────────────
     if training_args.do_eval:
         logger.info("*** Evaluate ***")
         metrics = trainer.evaluate(eval_dataset=eval_dataset)
@@ -710,7 +630,6 @@ def main():
         trainer.log_metrics("eval", metrics)
         trainer.save_metrics("eval", metrics)
 
-    # ── Prediction ────────────────────────────────────────────────────────
     if training_args.do_predict:
         logger.info("*** Predict ***")
         metrics = trainer.evaluate(eval_dataset=predict_dataset, metric_key_prefix="predict")
@@ -734,10 +653,8 @@ def main():
                 if is_multi_label:
                     probs = 1.0 / (1.0 + np.exp(-raw_predictions))
                     preds = (probs > data_args.multi_label_threshold).astype(int)
-                    # 'None of the above' is the sole answer when it fires; empty rows default to it.
                     preds = _apply_none_exclusivity(preds, _find_none_index(label_list))
                     gold = np.array(label_column).astype(int)
-                    # One 0/1 column per class, plus readable ';'-joined predicted / gold label sets.
                     fh.write("index\t" + "\t".join(label_list) + "\tprediction_labels\tgold_labels\n")
                     for index, (prow, grow) in enumerate(zip(preds, gold)):
                         pred_names = ";".join(l for l, v in zip(label_list, prow) if v) or "-"
@@ -751,7 +668,6 @@ def main():
                         fh.write(f"{index}\t{label_list[item[0]]}\t{label_list[item[1]]}\n")
             logger.info(f"Predictions saved to {output_path}")
 
-    # ── Model card / Hub push ─────────────────────────────────────────────
     hub_kwargs = {"finetuned_from": model_args.model_name_or_path, "tasks": "text-classification"}
     if data_args.dataset_name is not None:
         hub_kwargs["dataset_tags"] = data_args.dataset_name
