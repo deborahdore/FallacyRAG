@@ -2,10 +2,8 @@
 
 Sentence-level classification of the **type** of fallacy in political debate transcripts. Unlike detection, this task
 never sees non-fallacious sentences — `NoFallacy` sentences are dropped during dataset construction (see
-[
-`datasets/elecdeb60to20-dataset/classification/create_db.py`](../../datasets/elecdeb60to20-dataset/classification/create_db.py)) —
-so every input is already known to
-be fallacious and the model only has to decide *which* fallacy type(s) it exhibits.
+[`create_db.py`](../../datasets/elecdeb60to20-dataset/classification/create_db.py)) — so every input is already known
+to be fallacious and the model only has to decide *which* fallacy type(s) it exhibits.
 
 The label inventory is **dataset-aware**: it is selected automatically from the training-file path (see
 [`src/utils/dataset_prompts.py`](../utils/dataset_prompts.py)), and single- vs. multi-label is auto-detected from the
@@ -35,12 +33,22 @@ Two scripts are provided, covering encoder-based fine-tuning and LLM-based infer
 Each example contains a short **sentence** extracted from a debate turn, the full **speech turn** for context, an
 optional **retrieved context** field (when `--use_rag` is set), and a fallacy-type label.
 
-| Column          | Description                                                   |
-|-----------------|---------------------------------------------------------------|
-| `sentence`      | The sentence to classify                                      |
-| `speech_turn`   | The full debate turn the sentence was extracted from          |
-| `context`       | Pre-built RAG context (only present in `rag/` split variants) |
-| `fallacy_label` | One of the six canonical fallacy types (see the table above)  |
+| Column          | Description                                                          |
+|-----------------|-----------------------------------------------------------------------|
+| `sentence`      | The sentence to classify                                             |
+| `speech_turn`   | The full debate turn the sentence was extracted from                 |
+| `context`       | Pre-built RAG context (only present in the RAG configuration folders) |
+| `fallacy_label` | One of the six canonical fallacy types (see the table above)         |
+
+Splits live in one folder per retrieval configuration, and the folder name *is* the configuration:
+
+```
+datasets/elecdeb60to20-dataset/classification/temporal=false-retriever=false-summarizer=false/   ← no-RAG baseline
+datasets/elecdeb60to20-dataset/classification/temporal=true-retriever=…-search=hybrid-…/         ← one RAG config
+```
+
+Point `--train_file` / `--validation_file` / `--test_file` at the folder you want. See the
+[root README](../../README.md#configuration-folder-names) for how to read a configuration name.
 
 ---
 
@@ -49,9 +57,12 @@ optional **retrieved context** field (when `--use_rag` is set), and a fallacy-ty
 Fine-tunes a BERT-style encoder for multi-class classification. Each example is tokenised as:
 
 ```
-[CLS] sentence [SEP] speech_turn [SEP]                              (without RAG)
-[CLS] sentence [SEP] speech_turn context_1 … context_n [SEP]        (with RAG)
+[CLS] sentence [SEP] speech_turn [SEP]                            (without RAG)
+[CLS] sentence [SEP] speech_turn context_1 … context_n [SEP]      (with RAG)
 ```
+
+Putting the speech turn ahead of the retrieved context inside segment B means truncation at `--max_seq_length` trims
+the knowledge-base passages first and preserves the local debate context.
 
 The `[CLS]` representation is passed to a linear head sized to the number of fallacy types. The label set is derived
 from the data at run time. Single- vs. multi-label is auto-detected from the columns: single-label uses a softmax head
@@ -78,9 +89,9 @@ with **class-weighted cross-entropy**, while multi-label (several 0/1 indicator 
 |-------------------------------|-------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | `--dataset_name`              | `None`                                                      | HuggingFace dataset name (via `datasets` library).                                                                   |
 | `--dataset_config_name`       | `None`                                                      | Configuration name for the dataset.                                                                                  |
-| `--train_file`                | `./datasets/elecdeb60to20-dataset/classification/train.csv` | Training data file (CSV or JSON). Point at the classification split; use the `rag/` variant when `--use_rag` is set. |
-| `--validation_file`           | `./datasets/elecdeb60to20-dataset/classification/dev.csv`   | Validation data file (CSV or JSON). Use the `rag/` variant when `--use_rag` is set.                                  |
-| `--test_file`                 | `./datasets/elecdeb60to20-dataset/classification/test.csv`  | Test / prediction data file (CSV or JSON). Use the `rag/` variant when `--use_rag` is set.                           |
+| `--train_file`                | `./datasets/elecdeb60to20-dataset/classification/train.csv` | Training data file (CSV or JSON). Point at a configuration folder when `--use_rag` is set.                           |
+| `--validation_file`           | `./datasets/elecdeb60to20-dataset/classification/dev.csv`   | Validation data file (CSV or JSON).                                                                                  |
+| `--test_file`                 | `./datasets/elecdeb60to20-dataset/classification/test.csv`  | Test / prediction data file (CSV or JSON).                                                                           |
 | `--text_column_name`          | `sentence`                                                  | Column containing the input sentence text.                                                                           |
 | `--speech_turn_column_name`   | `speech_turn`                                               | Column containing the full debate turn.                                                                              |
 | `--label_column_name`         | `fallacy_label`                                             | Column containing the fallacy-type label.                                                                            |
@@ -96,16 +107,15 @@ with **class-weighted cross-entropy**, while multi-label (several 0/1 indicator 
 | `--shuffle_seed`              | `42`                                                        | Random seed used when `--shuffle_train_dataset` is set.                                                              |
 | `--use_rag`                   | `False`                                                     | Append pre-built retrieved context to the BERT input.                                                                |
 
-> When `--use_rag` is set and the default no-RAG file paths are still in place, the script automatically redirects
-> `/no_rag/` paths to the corresponding `/rag/` subdirectory.
+> When `--use_rag` is set, any `/no_rag/` segment left in the three file paths is rewritten to `/rag/` — a
+> convenience for older layouts. The current sweeps name their folders by configuration instead, so this normally
+> does nothing.
 
 ### RAG (Retrieval-Augmented Generation)
 
 Retrieval is **not** performed by `run_classification.py`. The knowledge-base context is retrieved ahead of time by
-[
-`datasets/elecdeb60to20-dataset/classification/create_db.py`](../../datasets/elecdeb60to20-dataset/classification/create_db.py),
-which writes a pre-built `context`
-column into the dataset (the `rag/` split variants). At training time, `run_classification.py` simply reads that column
+[`create_db.py`](../../datasets/elecdeb60to20-dataset/classification/create_db.py), which writes a pre-built `context`
+column into each configuration folder's splits. At training time, `run_classification.py` simply reads that column
 and appends it to `speech_turn` as the **second sequence** passed to the tokenizer (speech turn first, so truncation
 trims the retrieved context rather than the local debate context).
 
@@ -124,7 +134,8 @@ scripts.
 
 The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, drops
 `NoFallacy` sentences, re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes
-them into the `context` column. Key arguments:
+them into the `context` column. The arguments below also determine the **output folder name**, so a configuration is
+always recoverable from the path. Key arguments:
 
 | Argument                | Default                                | Description                                                                                                                                                                        |
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -200,13 +211,22 @@ python src/classification/run_classification.py \
   --per_device_train_batch_size 16 \
   --output_dir ./results/bert_baseline
 
-# Fine-tune DeBERTa with RAG context
+# Fine-tune DeBERTa with RAG context from a specific configuration
+CONFIG="temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 python src/classification/run_classification.py \
   --model_name_or_path microsoft/deberta-v3-base \
+  --train_file "datasets/elecdeb60to20-dataset/classification/$CONFIG/train.csv" \
+  --validation_file "datasets/elecdeb60to20-dataset/classification/$CONFIG/dev.csv" \
+  --test_file "datasets/elecdeb60to20-dataset/classification/$CONFIG/test.csv" \
   --use_rag --context_column_name context \
   --do_train --do_eval --do_predict \
   --output_dir ./results/deberta_rag
 ```
+
+For the full sweeps rather than one-off runs, use the numbered driver scripts —
+[`script/03-fallacy_no_rag.sh`](../../script/03-fallacy_no_rag.sh) and
+[`script/04-fallacy_rag.sh`](../../script/04-fallacy_rag.sh) with `task=classification`, and their `*_llm.sh`
+counterparts.
 
 ---
 
@@ -373,14 +393,18 @@ python src/classification/run_classification_llm.py \
 
 ## Output files
 
-Both scripts write the following to `--output_dir`:
+Both scripts write to `--output_dir`:
 
-| File                           | Description                                                    |
-|--------------------------------|----------------------------------------------------------------|
-| `predict_results.txt`          | Tab-separated file with columns `index`, `prediction`, `gold`. |
-| `predict_results_metrics.json` | Accuracy, precision, recall, F1 macro on the test split.       |
-| `eval_results.json`            | Same metrics on the validation split (LLM script).             |
-| `train_results.json`           | Training metrics (encoder script / LLM fine-tuning).           |
+| File                           | Written by | Description                                                    |
+|--------------------------------|------------|----------------------------------------------------------------|
+| `predict_results.txt`          | both       | Tab-separated file with columns `index`, `prediction`, `gold`. |
+| `predict_results.json`         | encoder    | Accuracy, precision, recall, F1 macro on the test split.       |
+| `predict_results_metrics.json` | LLM        | The same test-split metrics, under a different filename.       |
+| `eval_results.json`            | both       | The same metrics on the validation split.                      |
+| `train_results.json`           | both       | Training metrics (encoder training / LLM fine-tuning).         |
+
+The split filenames matter: the aggregation and grid-check scripts in `script/` treat `predict_results.json` as the
+**completion marker for encoder runs** and `predict_results_metrics.json` as the marker for LLM runs.
 
 The encoder script also saves model weights and HuggingFace model cards to `--output_dir`.
 The LLM fine-tuning script saves LoRA adapter weights (and optionally the merged full model) to `--output_dir`.

@@ -17,12 +17,17 @@ The workflow has two phases:
 2. **Predict** relations on an unlabeled corpus with a trained checkpoint (`predict_*.py`), writing the results back to
    CSV for downstream use.
 
-| Script                                                               | Role                                                                                         |
-|----------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [`run_relation_classification.py`](run_relation_classification.py)   | Encoder (BERT-style) fine-tuning of the 3-class relation classifier.                         |
-| [`predict_propaganda_relations.py`](predict_propaganda_relations.py) | Predict relations on the propaganda pairs with a LIARArg-trained model.                      |
-| [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)               | Build the LIARArg relation-classification train/dev/test splits.                             |
-| [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)         | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
+| Script                                                                       | Role                                                                                         |
+|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| [`run_relation_classification.py`](run_relation_classification.py)           | Encoder (BERT-style) fine-tuning of the 3-class relation classifier.                         |
+| [`run_relation_classification_llm.py`](run_relation_classification_llm.py)   | LLM — zero-shot, few-shot, or LoRA/QLoRA fine-tuning of the same 3-class task.               |
+| [`predict_propaganda_relations.py`](predict_propaganda_relations.py)         | Predict relations on the propaganda pairs with a LIARArg-trained model.                      |
+| [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)                       | Build the LIARArg relation-classification train/dev/test splits.                             |
+| [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)                 | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
+
+The relation label space is **dataset-aware**, resolved from the training-file path: LIARArg uses
+`support / attack / no_relation`, DEBAGREEMENT uses `support / attack / neutral`. DEBAGREEMENT is supported by both
+training scripts but the corpus is not shipped in this repository.
 
 ---
 
@@ -87,12 +92,13 @@ Standard HuggingFace `TrainingArguments` (`--do_train`, `--do_eval`, `--do_predi
 Predictions are written to `predict_results.txt` (`index`, `prediction`, `gold`); metrics to the standard
 `train`/`eval`/`predict` JSON files.
 
-### Sweep driver — `run.sh`
+### Sweep driver — `script/05-relation_classification.sh`
 
-`run.sh` is the sbatch driver: it sweeps the model list × batch sizes × learning rates × epochs over the datasets
-listed in its `DATASETS` array (e.g. `change-my-view-dataset`), reading
+[`script/05-relation_classification.sh`](../../script/05-relation_classification.sh) is the sbatch driver: it sweeps
+the model list × batch sizes × learning rates × epochs over the datasets listed in its `DATASETS` array, reading
 `datasets/<dataset>/relation-classification/{train,dev,test}.csv` and writing to
-`output/one-run/<dataset>-relation-classification/<model>/<run>/`.
+`output/one-run/<dataset>-relation-classification/<model>/<run>/`. Its LLM counterpart is
+[`script/05-relation_classification_llm.sh`](../../script/05-relation_classification_llm.sh).
 
 ### Example
 
@@ -106,7 +112,63 @@ python src/relation-extraction/run_relation_classification.py \
   --do_train --do_eval --do_predict \
   --num_train_epochs 3 --learning_rate 3e-5 \
   --per_device_train_batch_size 16 \
-  --output_dir ./output/one-run/LIARArg-relation-classification/deberta-v3-base-bs16_lr3e-5_ep3
+  --output_dir ./output/one-run/LIARArg-relation-classification/deberta-v3-base/bs16_lr3e-5_ep3
+```
+
+---
+
+## LLM script — `run_relation_classification_llm.py`
+
+Runs the same 3-class task with a causal language model, in zero-shot, few-shot, or LoRA/QLoRA fine-tuning mode. The
+system prompt and relation menu are picked from the training-file path, so LIARArg and DEBAGREEMENT both work without
+code changes. Each pair becomes a chat prompt:
+
+```
+[System]    You are an expert in argument mining…
+[User]      Sentence 1: "<sentence1>"
+
+            Sentence 2: "<sentence2>"
+
+            What single relation does Sentence 2 hold toward Sentence 1?
+            Answer with exactly one relation drawn only from: Support, Attack, No Relation.
+            Do not answer with more than one relation.
+[Assistant] Attack
+```
+
+### Post-processing
+
+The reply is a free-text relation name, mapped back to the canonical label by **fuzzy alias matching** before metrics
+are computed — so `"Attack"`, `"attacks"`, `"disagree"` and `"rebut"` all resolve to `attack`, and `"unrelated"`,
+`"none"` or `"neither"` resolve to `no_relation`.
+
+### Modes, backends and arguments
+
+Identical in shape to the detection and classification LLM scripts — `--mode zero_shot | few_shot | fine_tune`,
+`--backend local | openai`, `--num_shots`, `--load_in_4bit` / `--load_in_8bit`, the `--lora_*` family, and
+`--merge_adapter`. See [`src/detection/README.md`](../detection/README.md#llm-script--run_detection_llmpy) for the
+full argument tables. The differences here:
+
+| Argument                    | Default                                                        | Description                                                     |
+|-----------------------------|----------------------------------------------------------------|-----------------------------------------------------------------|
+| `--train_file`              | `./datasets/LIARArg-dataset/relation-classification/train.csv` | Training pairs; also selects the label space and system prompt. |
+| `--text_column_name`        | `sentence1`                                                    | First sentence of the pair.                                     |
+| `--speech_turn_column_name` | `sentence2`                                                    | Second sentence of the pair.                                    |
+| `--num_shots`               | `1`                                                            | Examples **per relation class** for few-shot prompting.         |
+
+There is no `--use_rag` here: relation classification feeds the RAG pipeline rather than consuming it.
+
+### Example
+
+```bash
+python src/relation-extraction/run_relation_classification_llm.py \
+  --model_name_or_path meta-llama/Llama-3.1-8B-Instruct --backend local \
+  --mode fine_tune --load_in_4bit \
+  --train_file datasets/LIARArg-dataset/relation-classification/train.csv \
+  --validation_file datasets/LIARArg-dataset/relation-classification/dev.csv \
+  --test_file datasets/LIARArg-dataset/relation-classification/test.csv \
+  --do_train --do_eval --do_predict \
+  --num_train_epochs 3 --learning_rate 3e-4 --bf16 \
+  --output_dir ./output/trained-models/LIARArg-Llama
 ```
 
 ---
@@ -143,11 +205,15 @@ The input CSV is copied through, with these columns appended: `predicted_label` 
 
 ```bash
 python src/relation-extraction/predict_propaganda_relations.py \
-  --model-dir output/trained-models/LIARArg-deberta-v3-base-bs16_lr3e-5_ep3 \
+  --model-dir output/trained-models/LIARArg-Llama \
   --data-file datasets/propaganda-dataset/relation-classification/dataset.csv \
   --output-file datasets/propaganda-dataset/relation-classification/predictions.csv \
   --batch-size 64
 ```
+
+`output/trained-models/` holds the checkpoints kept for reuse; `LIARArg-Llama` is the one shipped here. The resulting
+`predictions.csv` is what the propaganda `create_db.py` reads in `--mode relations` to build enriched retrieval
+queries.
 
 ---
 
