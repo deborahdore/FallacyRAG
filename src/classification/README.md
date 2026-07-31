@@ -23,16 +23,16 @@ appear in the `fallacy_label` column) and their human-readable forms:
 
 The **Reddit** dataset uses a different eight-class inventory plus an explicit "No Fallacy" option:
 
-| Canonical label       | Human-readable          |
-|-----------------------|-------------------------|
-| `Authority`           | Appeal to Authority     |
-| `Population`          | Appeal to Majority      |
-| `Natural`             | Appeal to Nature        |
-| `Tradition`           | Appeal to Tradition     |
+| Canonical label       | Human-readable           |
+|-----------------------|--------------------------|
+| `Authority`           | Appeal to Authority      |
+| `Population`          | Appeal to Majority       |
+| `Natural`             | Appeal to Nature         |
+| `Tradition`           | Appeal to Tradition      |
 | `WorseProblems`       | Appeal to Worse Problems |
-| `Blackwhite`          | Black-or-White          |
-| `HastyGeneralization` | Hasty Generalization    |
-| `SlipperySlope`       | Slippery Slope          |
+| `Blackwhite`          | Black-or-White           |
+| `HastyGeneralization` | Hasty Generalization     |
+| `SlipperySlope`       | Slippery Slope           |
 
 Two scripts are provided, covering encoder-based fine-tuning and LLM-based inference/fine-tuning:
 

@@ -91,7 +91,7 @@ LLM_NO = "No"
 # Dataset-level labels and their mappings are dataset-aware and set in main()
 # via configure_detection_labels(). Defaults target the fallacy datasets
 # (elecdeb60to20, reddit); the propaganda dataset uses propaganda/non-propaganda.
-LABEL_FALLACY = "Fallacy"       # positive label
+LABEL_FALLACY = "Fallacy"  # positive label
 LABEL_NO_FALLACY = "NoFallacy"  # negative label
 ALL_LABELS = [LABEL_FALLACY, LABEL_NO_FALLACY]
 

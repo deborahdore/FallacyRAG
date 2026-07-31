@@ -1,17 +1,19 @@
 # Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates
 
 <!-- TOC -->
+
 * [Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates](#retrieval-augmented-generation-for-argumentative-fallacies-in-us-political-debates)
-  * [🚀 Overview](#-overview)
-  * [🎯 Tasks](#-tasks)
-    * [Fallacy Detection](#fallacy-detection)
-    * [Fallacy Classification](#fallacy-classification)
-    * [Relation Classification](#relation-classification)
-  * [⛁ Knowledge Base](#-knowledge-base)
-    * [Knowledge Base Format](#knowledge-base-format)
-  * [🗂️ Datasets](#-datasets)
-  * [⚙️ Setup & Pipeline](#-setup--pipeline)
-  * [📁 Project Structure](#-project-structure)
+    * [🚀 Overview](#-overview)
+    * [🎯 Tasks](#-tasks)
+        * [Fallacy Detection](#fallacy-detection)
+        * [Fallacy Classification](#fallacy-classification)
+        * [Relation Classification](#relation-classification)
+    * [⛁ Knowledge Base](#-knowledge-base)
+        * [Knowledge Base Format](#knowledge-base-format)
+    * [🗂️ Datasets](#-datasets)
+    * [⚙️ Setup & Pipeline](#-setup--pipeline)
+    * [📁 Project Structure](#-project-structure)
+
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -115,13 +117,13 @@ Each entry in the knowledge base is stored as a JSON document.
 
 ## 🗂️ Datasets
 
-| Dataset             | Tasks                                            | Role                                                                        |
-|---------------------|--------------------------------------------------|----------------------------------------------------------------------------|
-| **ElecDeb60to20**   | detection, classification                        | Main dataset (U.S. political debates, 1960–2020).                           |
-| **Reddit**          | detection, classification, relation-classification | Online-discussion counterpart with its own eight-class fallacy inventory. |
-| **LIARArg**         | relation-classification                          | Training data for the relation classifier (`support / attack / no_relation`). |
-| **DEBAGREEMENT**    | relation-classification                          | Training data for the agreement/relation classifier.                       |
-| **propaganda**      | detection, relation-classification               | Relation predictions produced by the LIARArg-trained model.                |
+| Dataset           | Tasks                                              | Role                                                                          |
+|-------------------|----------------------------------------------------|-------------------------------------------------------------------------------|
+| **ElecDeb60to20** | detection, classification                          | Main dataset (U.S. political debates, 1960–2020).                             |
+| **Reddit**        | detection, classification, relation-classification | Online-discussion counterpart with its own eight-class fallacy inventory.     |
+| **LIARArg**       | relation-classification                            | Training data for the relation classifier (`support / attack / no_relation`). |
+| **DEBAGREEMENT**  | relation-classification                            | Training data for the agreement/relation classifier.                          |
+| **propaganda**    | detection, relation-classification                 | Relation predictions produced by the LIARArg-trained model.                   |
 
 Each dataset lives under `datasets/<name>-dataset/` with raw `train.csv` / `dev.csv` / `test.csv` splits (and an
 `original/` folder holding the source files). RAG-enriched variants are written into per-task, per-config subfolders by
