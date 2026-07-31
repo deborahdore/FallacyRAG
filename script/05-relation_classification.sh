@@ -30,8 +30,7 @@ export WANDB_PROJECT="relation_classification"
 task=relation-classification
 
 DATASETS=(
-#    "LIARArg-dataset"
-    "change-my-view-dataset"
+    "LIARArg-dataset"
 )
 
 MODELS=(

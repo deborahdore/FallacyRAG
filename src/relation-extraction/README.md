@@ -11,6 +11,10 @@ This task supports the RAG pipeline. The predicted relations enrich the retrieva
 (`create_db.py`'s `relations` / `relations_labeled` query modes), so a fallacy is retrieved together with the
 components that support or attack it.
 
+> **Scope.** This pipeline exists for corpora that have *no* relation layer. ElecDeb60to20 — the main dataset — ships
+> gold relation annotations, and its `create_db.py` reads them directly from `relations.csv`; nothing here is used for
+> it. The classifier supplies relations for the **propaganda** dataset only.
+
 The workflow has two phases:
 
 1. **Train** an encoder relation classifier on a relation-labeled corpus (`run_relation_classification.py`).
@@ -25,9 +29,7 @@ The workflow has two phases:
 | [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)                     | Build the LIARArg relation-classification train/dev/test splits.                             |
 | [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)               | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
 
-The relation label space is **dataset-aware**, resolved from the training-file path: LIARArg uses
-`support / attack / no_relation`, DEBAGREEMENT uses `support / attack / neutral`. DEBAGREEMENT is supported by both
-training scripts but the corpus is not shipped in this repository.
+The relation label space follows LIARArg: `support / attack / no_relation`.
 
 ---
 
@@ -119,9 +121,8 @@ python src/relation-extraction/run_relation_classification.py \
 
 ## LLM script — `run_relation_classification_llm.py`
 
-Runs the same 3-class task with a causal language model, in zero-shot, few-shot, or LoRA/QLoRA fine-tuning mode. The
-system prompt and relation menu are picked from the training-file path, so LIARArg and DEBAGREEMENT both work without
-code changes. Each pair becomes a chat prompt:
+Runs the same 3-class task with a causal language model, in zero-shot, few-shot, or LoRA/QLoRA fine-tuning mode. Each
+pair becomes a chat prompt:
 
 ```
 [System]    You are an expert in argument mining…
@@ -148,12 +149,12 @@ Identical in shape to the detection and classification LLM scripts — `--mode z
 `--merge_adapter`. See [`src/detection/README.md`](../detection/README.md#llm-script--run_detection_llmpy) for the
 full argument tables. The differences here:
 
-| Argument                    | Default                                                        | Description                                                     |
-|-----------------------------|----------------------------------------------------------------|-----------------------------------------------------------------|
-| `--train_file`              | `./datasets/LIARArg-dataset/relation-classification/train.csv` | Training pairs; also selects the label space and system prompt. |
-| `--text_column_name`        | `sentence1`                                                    | First sentence of the pair.                                     |
-| `--speech_turn_column_name` | `sentence2`                                                    | Second sentence of the pair.                                    |
-| `--num_shots`               | `1`                                                            | Examples **per relation class** for few-shot prompting.         |
+| Argument                    | Default                                                        | Description                                             |
+|-----------------------------|----------------------------------------------------------------|---------------------------------------------------------|
+| `--train_file`              | `./datasets/LIARArg-dataset/relation-classification/train.csv` | Training pairs (also the few-shot example pool).        |
+| `--text_column_name`        | `sentence1`                                                    | First sentence of the pair.                             |
+| `--speech_turn_column_name` | `sentence2`                                                    | Second sentence of the pair.                            |
+| `--num_shots`               | `1`                                                            | Examples **per relation class** for few-shot prompting. |
 
 There is no `--use_rag` here: relation classification feeds the RAG pipeline rather than consuming it.
 

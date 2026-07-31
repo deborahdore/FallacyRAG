@@ -44,7 +44,6 @@ SCRIPT="src/relation-extraction/run_relation_classification_llm.py"
 
 DATASETS=(
     "LIARArg-dataset"
-    "debagreeement-dataset"
 )
 
 MODES=("fine_tune" "zero_shot" "few_shot")

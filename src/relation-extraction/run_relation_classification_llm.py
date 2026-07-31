@@ -1,8 +1,8 @@
 """LLM-based relation classification: zero-shot, few-shot, and LoRA/QLoRA fine-tuning.
 Each sentence pair becomes an instruction-following chat prompt asking for the single relation
 holding between them, and the response is parsed to a canonical label by fuzzy alias matching.
-The dataset - LIARArg (support/attack/no_relation) or DEBAGREEMENT (support/attack/neutral) - is
-auto-detected from the training file path. Backends: local HuggingFace or the OpenAI chat API."""
+The label space is LIARArg's: support / attack / no_relation.
+Backends: local HuggingFace or the OpenAI chat API."""
 
 from __future__ import annotations
 
@@ -36,54 +36,32 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-_LABELS_BY_DATASET: dict[str, list[str]] = {
-    "liararg": ["support", "attack", "no_relation"],
-    "debagreement": ["support", "attack", "neutral"],
+_RELATION_LABELS: list[str] = ["support", "attack", "no_relation"]
+
+_LABEL_TO_LLM: dict[str, str] = {
+    "support": "Support",
+    "attack": "Attack",
+    "no_relation": "No Relation",
 }
 
-_LABEL_TO_LLM_BY_DATASET: dict[str, dict[str, str]] = {
-    "liararg": {"support": "Support", "attack": "Attack", "no_relation": "No Relation"},
-    "debagreement": {"support": "Support", "attack": "Attack", "neutral": "Neutral"},
+_EXTRA_ALIASES: dict[str, list[str]] = {
+    "support": ["supports", "supporting", "agree", "agreement", "in favor", "pro"],
+    "attack": ["attacks", "attacking", "disagree", "disagreement", "against",
+               "rebut", "counter", "con"],
+    "no_relation": ["no relation", "unrelated", "none", "neither", "no-relation"],
 }
 
-_EXTRA_ALIASES_BY_DATASET: dict[str, dict[str, list[str]]] = {
-    "liararg": {
-        "support": ["supports", "supporting", "agree", "agreement", "in favor", "pro"],
-        "attack": ["attacks", "attacking", "disagree", "disagreement", "against",
-                   "rebut", "counter", "con"],
-        "no_relation": ["no relation", "unrelated", "none", "neither", "no-relation"],
-    },
-    "debagreement": {
-        "support": ["supports", "supporting", "agree", "agreement", "in favor", "pro"],
-        "attack": ["attacks", "attacking", "disagree", "disagreement", "against",
-                   "rebut", "counter", "con"],
-        "neutral": ["no stance", "undecided", "neither", "unrelated", "none"],
-    },
-}
-
-_SYSTEM_PROMPTS: dict[str, str] = {
-    "liararg": (
-        "You are an expert in argumentation analysis. You are given two sentences "
-        "drawn from a fact-checking argumentation corpus: a claim (Sentence 1) and a "
-        "candidate piece of evidence (Sentence 2). "
-        "Your task is to identify the argumentative relation that Sentence 2 holds "
-        "toward Sentence 1. Consider only these three relations:\n"
-        "- Support: Sentence 2 provides evidence or reasoning in favour of Sentence 1.\n"
-        "- Attack: Sentence 2 provides evidence or reasoning against Sentence 1.\n"
-        "- No Relation: Sentence 2 is not argumentatively related to Sentence 1.\n"
-        "Answer with exactly one of those three relation names, and nothing else."
-    ),
-    "debagreement": (
-        "You are an expert in argumentation analysis. You are given two posts from an "
-        "online debate: a parent comment (Sentence 1) and a reply (Sentence 2). "
-        "Your task is to identify the (dis)agreement relation that the reply holds "
-        "toward the parent comment. Consider only these three relations:\n"
-        "- Support: the reply agrees with or supports the parent comment.\n"
-        "- Attack: the reply disagrees with or argues against the parent comment.\n"
-        "- Neutral: the reply neither clearly agrees nor disagrees with the parent comment.\n"
-        "Answer with exactly one of those three relation names, and nothing else."
-    ),
-}
+_SYSTEM_PROMPT: str = (
+    "You are an expert in argumentation analysis. You are given two sentences "
+    "drawn from a fact-checking argumentation corpus: a claim (Sentence 1) and a "
+    "candidate piece of evidence (Sentence 2). "
+    "Your task is to identify the argumentative relation that Sentence 2 holds "
+    "toward Sentence 1. Consider only these three relations:\n"
+    "- Support: Sentence 2 provides evidence or reasoning in favour of Sentence 1.\n"
+    "- Attack: Sentence 2 provides evidence or reasoning against Sentence 1.\n"
+    "- No Relation: Sentence 2 is not argumentatively related to Sentence 1.\n"
+    "Answer with exactly one of those three relation names, and nothing else."
+)
 
 RELATION_LABELS: list[str] = []
 LABEL_TO_LLM: dict[str, str] = {}
@@ -97,26 +75,12 @@ def _normalize(text: str) -> str:
     return re.sub(r"[^a-z0-9]", "", text.lower())
 
 
-def identify_dataset(train_file: Optional[str]) -> str:
-    """Identify the dataset ('liararg' | 'debagreement') from the training file path."""
-    if train_file is None:
-        return "liararg"
-    path = str(train_file).lower()
-    if "liararg" in path or "liar" in path:
-        return "liararg"
-    if "debag" in path:
-        return "debagreement"
-    logger.warning(f"Could not identify dataset from '{train_file}'; defaulting to LIARArg.")
-    return "liararg"
-
-
-def _apply_relation_config(train_file: Optional[str]) -> None:
-    """Populate the dataset-aware relation-label and prompt globals from the train path."""
+def _apply_relation_config(train_file: Optional[str] = None) -> None:
+    """Populate the relation-label and prompt globals. train_file is kept for call compatibility."""
     global RELATION_LABELS, LABEL_TO_LLM, ALIAS_TO_LABEL, LABEL_MENU, SYSTEM_PROMPT
-    dataset = identify_dataset(train_file)
-    RELATION_LABELS = list(_LABELS_BY_DATASET[dataset])
-    LABEL_TO_LLM = dict(_LABEL_TO_LLM_BY_DATASET[dataset])
-    SYSTEM_PROMPT = _SYSTEM_PROMPTS[dataset]
+    RELATION_LABELS = list(_RELATION_LABELS)
+    LABEL_TO_LLM = dict(_LABEL_TO_LLM)
+    SYSTEM_PROMPT = _SYSTEM_PROMPT
 
     alias_to_label: dict[str, str] = {}
 
@@ -128,12 +92,12 @@ def _apply_relation_config(train_file: Optional[str]) -> None:
 
     for canon in RELATION_LABELS:
         _add(canon, canon, LABEL_TO_LLM[canon])
-    for canon, variants in _EXTRA_ALIASES_BY_DATASET[dataset].items():
+    for canon, variants in _EXTRA_ALIASES.items():
         _add(canon, *variants)
 
     ALIAS_TO_LABEL = alias_to_label
     LABEL_MENU = ", ".join(LABEL_TO_LLM[lab] for lab in RELATION_LABELS)
-    logger.info(f"Dataset '{dataset}' | relations ({len(RELATION_LABELS)}): {RELATION_LABELS}")
+    logger.info(f"Relations ({len(RELATION_LABELS)}): {RELATION_LABELS}")
 
 
 @dataclass
@@ -198,7 +162,7 @@ class DataTrainingArguments:
     label_column_name: Optional[str] = field(
         default="label_value",
         metadata={"help": "Column containing the gold relation label "
-                          "(support / attack / no_relation / neutral)."},
+                          "(support / attack / no_relation)."},
     )
     overwrite_cache: bool = field(
         default=True,

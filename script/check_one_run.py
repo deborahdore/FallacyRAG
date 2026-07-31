@@ -83,7 +83,7 @@ def expected_models(folder_name: str, base: Path):
         if folder_name in BASIC_FOLDER or folder_name == BEST_FOLDER_PROPAGANDA_DETECTION:
             return ENCODERS + LLMS
         return REQUIRED_ENCODERS_BEST_FOLDER_PROPAGANDA_DETECTION
-    elif "debagreeement" in str(base) or "LIARArg" in str(base):
+    elif "LIARArg" in str(base):
         return ENCODERS + LLMS
 
     return []

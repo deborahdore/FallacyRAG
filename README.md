@@ -34,7 +34,7 @@ more accurate classifications and clearer explanations of fallacious arguments i
 
 The main experiments use the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains transcripts
 from U.S. political debates from 1960 to 2020. The same pipeline also runs on the **propaganda** dataset, and a
-separate relation-classification pipeline draws on the **LIARArg** and **DEBAGREEMENT** corpora.
+separate relation-classification pipeline draws on the **LIARArg** corpus.
 
 Both an **encoder** track (BERT-style fine-tuning) and an **LLM** track (zero-shot, few-shot, and LoRA/QLoRA
 fine-tuning) are supported for every task, each with and without RAG context.
@@ -83,17 +83,19 @@ auto-detected from the dataset columns.
 ### Relation Classification
 
 Classify the **argumentative relation** between a pair of components as `support`, `attack`, or `no_relation`. This
-task serves the RAG pipeline: the extracted relations feed the `relations` query mode of the dataset builders (see
-below), enriching the retrieval query with the fallacy's supporting/attacking context. Models are trained on
-relation-labeled corpora (**LIARArg**, **DEBAGREEMENT**) and then used to predict relations on the **propaganda**
-data. See [`src/relation-extraction/README.md`](src/relation-extraction/README.md).
+task serves the RAG pipeline: relations feed the `relations` query mode of the dataset builders (see below), enriching
+the retrieval query with the fallacy's supporting/attacking context.
+
+Where those relations come from depends on the dataset. **ElecDeb60to20 ships gold relation annotations**, so its
+`create_db.py` reads them straight from `relations.csv` — no classifier involved. The **propaganda** dataset has no
+relation layer, so relations are *predicted* there by a classifier trained on **LIARArg**.
+See [`src/relation-extraction/README.md`](src/relation-extraction/README.md).
 
 ## ⛁ Knowledge Base
 
 To ground the model, we constructed a **knowledge base of approximately 15GB of political and contextual documents**.
-The
-corpus combines official government sources with curated background information, organized into seven sections (the
-research papers inside *Definitions* are indexed as their own `papers` category, so the vector store carries eight).
+The corpus combines official government sources with curated background information, organized into six sections (the
+research papers inside *Definitions* are indexed as their own `papers` category, so the vector store carries seven).
 
 - **Bills and Laws**: congressional bills and public/private laws approved by the U.S. Congress, collected from their
   official repository [GovInfo](https://www.govinfo.gov/sitemaps),
@@ -101,9 +103,6 @@ research papers inside *Definitions* are indexed as their own `papers` category,
   the [Universal Declaration of Human Rights](https://www.un.org/sites/un2.un.org/files/2021/03/udhr.pdf).
 - **Geography**: geographic and demographic information about U.S. states, from
   the [U.S. Census](https://data.census.gov/webpages) and Wikipedia.
-- **Newspapers**: news articles providing political context, from
-  the [Chronicling America](https://www.loc.gov/collections/chronicling-america/) collection at the Library of Congress,
-  OCR-processed into text.
 - **People**: biographical information about members of the U.S. Congress, from
   the [Biographical Directory of the United States Congress](https://bioguide.congress.gov/search), plus Wikipedia
   entries for public figures referenced during the debates.
@@ -121,8 +120,15 @@ research papers inside *Definitions* are indexed as their own `papers` category,
 
 Sections are built independently by [`src/create_knowledge_base.py`](src/create_knowledge_base.py) into
 `knowledge_base/<section>/`, then indexed into a per-embedder Chroma store by
-[`src/create_persistent_db.py`](src/create_persistent_db.py). To inspect what a query retrieves without running the
-full pipeline, use [`src/perform_retrieval.py`](src/perform_retrieval.py):
+[`src/create_persistent_db.py`](src/create_persistent_db.py).
+
+Indexing splits long documents into chunks of at most **1,000 tokens with 10% overlap** (`--chunk-size` /
+`--chunk-overlap`). Chunking is by token, not character, and the chunk size is clamped to the input window of the
+embedding model in use so no passage is silently truncated at encoding time. There is one store per embedding model,
+over a fixed document set, so retrievers can be compared in isolation.
+
+To inspect what a query retrieves without running the full pipeline, use
+[`src/perform_retrieval.py`](src/perform_retrieval.py):
 
 ```bash
 python src/perform_retrieval.py \
@@ -157,15 +163,10 @@ makes temporal filtering (`--temporal-rag`) and per-section indexing possible.
 | **ElecDeb60to20** | detection, classification          | Main dataset (U.S. political debates, 1960–2020).                             |
 | **propaganda**    | detection, relation-classification | Second detection dataset; relation predictions come from the LIARArg model.   |
 | **LIARArg**       | relation-classification            | Training data for the relation classifier (`support / attack / no_relation`). |
-| **DEBAGREEMENT**  | relation-classification            | Training data for the agreement/relation classifier.                          |
 
 Each dataset lives under `datasets/<name>-dataset/` with raw `train.csv` / `dev.csv` / `test.csv` splits and an
 `original/` folder holding the source files. RAG-enriched variants are written into per-task, per-config subfolders by
 `create_db.py`.
-
-> **Note.** The DEBAGREEMENT corpus is supported by the relation-classification scripts (which auto-detect its
-> `support / attack / neutral` label space) but is **not shipped in this repository** — add it under
-> `datasets/debagreeement-dataset/relation-classification/` to run those sweeps.
 
 > **Git LFS.** Every CSV under `datasets/` is tracked with Git LFS (see [`.gitattributes`](.gitattributes)). Run
 > `git lfs install && git lfs pull` after cloning, otherwise the splits will be pointer files rather than data.
@@ -202,7 +203,7 @@ A few things are needed on top of the environment file:
 |-------------------------------------------|----------------------------------------------------------------------------------------|
 | `git lfs`                                 | The dataset CSVs are LFS objects — `git lfs pull` after cloning.                       |
 | `python -m spacy download en_core_web_sm` | Sentence splitting inside `create_db.py`.                                              |
-| `poppler`, `tesseract`                    | OCR of scanned PDFs and newspaper scans while building the knowledge base.             |
+| `poppler`, `tesseract`                    | OCR of PDF sources (OpenAlex papers, UDHR) while building the knowledge base.          |
 | `HF_TOKEN`                                | Gated Hub models (Llama, Mistral). Or pass `--token`.                                  |
 | `OPENAI_API_KEY`                          | Only for the LLM scripts run with `--backend openai`.                                  |
 | `CONTACT_EMAIL`                           | Sent in the OpenAlex User-Agent when collecting fallacy papers for the knowledge base. |
@@ -222,11 +223,17 @@ running them directly with `bash` on a single machine.
 | 02    | `02-create_database.sh`, `02-create_database-propaganda.sh`          | Runs each dataset's `create_db.py` over the retrieval grid to produce RAG-enriched splits. |
 | 03    | `03-fallacy_no_rag.sh`, `03-fallacy_no_rag_llm.sh`                   | No-RAG training sweep, encoder and LLM tracks.                                             |
 | 04    | `04-fallacy_rag.sh`, `04-fallacy_rag_llm.sh`                         | RAG training sweep over the configs listed in the script's `DATASETS` array.               |
-| 05    | `05-relation_classification.sh`, `05-relation_classification_llm.sh` | Relation-classification sweep on LIARArg / DEBAGREEMENT.                                   |
+| 05    | `05-relation_classification.sh`, `05-relation_classification_llm.sh` | Relation-classification sweep on LIARArg.                                                  |
 | 06    | `06-best_hparams_*.sh`                                               | **Generated**, not written by hand — see below.                                            |
 
 Stages 00–01 only need to run once. Stage 02 is the expensive one: it performs all retrieval up front, so stages 03–05
 never touch the vector store.
+
+> **The 43 configurations.** `02-create_database.sh` sweeps the *dense* grid — 2 temporal settings × 3 embedding
+> models × 2 search strategies (`similarity`, `hybrid`) × 3 query formulations — plus the no-RAG baseline, i.e. 37 of
+> the 43 configuration folders. The remaining six (`retriever=bm25`, 2 temporal × 3 query formulations) are built by
+> calling `create_db.py` directly with `--retriever bm25 --search-type bm25`. All 43 are already present under
+> `datasets/elecdeb60to20-dataset/<task>/`.
 
 After a single-seed sweep, [`script/generate_best_hparam_script.py`](script/generate_best_hparam_script.py) picks the
 best hyperparameter cell per model and emits a `06-best_hparams_*.sh` that re-runs only those, once per seed:
