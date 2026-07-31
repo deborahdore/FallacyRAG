@@ -36,7 +36,6 @@ logging.basicConfig(
 )
 logging.getLogger("httpx").setLevel(logging.WARNING)
 
-
 _LABELS_BY_DATASET: dict[str, list[str]] = {
     "liararg": ["support", "attack", "no_relation"],
     "debagreement": ["support", "attack", "neutral"],
@@ -135,7 +134,6 @@ def _apply_relation_config(train_file: Optional[str]) -> None:
     ALIAS_TO_LABEL = alias_to_label
     LABEL_MENU = ", ".join(LABEL_TO_LLM[lab] for lab in RELATION_LABELS)
     logger.info(f"Dataset '{dataset}' | relations ({len(RELATION_LABELS)}): {RELATION_LABELS}")
-
 
 
 @dataclass
@@ -312,7 +310,6 @@ class LLMExperimentArguments:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
 
 
-
 def parse_gold_label(raw: object) -> Optional[str]:
     """Parse a raw gold-label cell into its canonical relation label (or None)."""
     if raw is None:
@@ -345,7 +342,6 @@ def label_to_llm_target(label: Optional[str]) -> str:
     if label is None:
         raise ValueError("Expected exactly one relation label; got an empty/unknown label.")
     return LABEL_TO_LLM[label]
-
 
 
 def build_user_message(sentence1: str, sentence2: str) -> str:
@@ -395,7 +391,6 @@ def format_for_sft(example: dict, tokenizer, text_col: str, speech_turn_col: str
     return {"text": text}
 
 
-
 def sample_few_shot_examples(
         dataset,
         n_per_class: int,
@@ -428,7 +423,6 @@ def sample_few_shot_examples(
     return examples
 
 
-
 def compute_metrics(predictions: list[Optional[str]], references: list[Optional[str]]) -> dict:
     """Compute multi-class single-label metrics over the fixed relation label space.
     Unparseable predictions are kept as-is so they count as wrong."""
@@ -449,7 +443,6 @@ def compute_metrics(predictions: list[Optional[str]], references: list[Optional[
     for label, score in zip(RELATION_LABELS, per_class):
         metrics[f"f1_{label}"] = float(score)
     return metrics
-
 
 
 def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
@@ -503,7 +496,6 @@ def _build_load_kwargs(
     return kwargs
 
 
-
 def _generate_batched(
         model,
         tokenizer,
@@ -555,7 +547,6 @@ def _generate_batched(
             responses[idxs[k]] = decoded
 
     return responses
-
 
 
 class LocalLLMInference:
@@ -629,7 +620,6 @@ class LocalLLMInference:
         )
 
 
-
 class OpenAIInference:
     """Wraps the OpenAI chat completions API for inference."""
 
@@ -661,7 +651,6 @@ class OpenAIInference:
             )
             responses.append(response.choices[0].message.content or "")
         return responses
-
 
 
 def run_inference(
@@ -696,7 +685,6 @@ def run_inference(
         references = [parse_gold_label(ex["label"]) for ex in dataset]
 
     return predictions, references
-
 
 
 def run_fine_tuning(
@@ -814,7 +802,6 @@ def run_fine_tuning(
     return trainer.model, tokenizer
 
 
-
 def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArguments):
     """Load the train/validation/test CSV or JSON splits into a DatasetDict."""
     data_files = {
@@ -836,7 +823,6 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None):
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
     return ds
-
 
 
 def main():
@@ -985,7 +971,6 @@ def main():
         logger.info(f"Predictions saved to {output_path}")
 
 
-
 class _FineTunedLocalEngine:
     """Adapt an in-memory fine-tuned model to the LocalLLMInference predict_batch() interface."""
 
@@ -1011,7 +996,6 @@ class _FineTunedLocalEngine:
             temperature=self.temperature,
             torch_module=self._torch,
         )
-
 
 
 def _save_metrics(metrics: dict, path: str):

@@ -19,12 +19,12 @@ The label space is **dataset-aware** and is selected from the training-file path
 Each example contains a short **sentence** extracted from a debate turn, the full **speech turn** for context, an
 optional **retrieved context** field (when `--use_rag` is set), and a binary label.
 
-| Column          | Description                                                            |
-|-----------------|-------------------------------------------------------------------------|
-| `sentence`      | The sentence to classify                                                |
-| `speech_turn`   | The full debate turn the sentence was extracted from                    |
-| `context`       | Pre-built RAG context (only present in the RAG configuration folders)   |
-| `fallacy_label` | `Fallacy` / `NoFallacy`, or `propaganda` / `non-propaganda`             |
+| Column          | Description                                                           |
+|-----------------|-----------------------------------------------------------------------|
+| `sentence`      | The sentence to classify                                              |
+| `speech_turn`   | The full debate turn the sentence was extracted from                  |
+| `context`       | Pre-built RAG context (only present in the RAG configuration folders) |
+| `fallacy_label` | `Fallacy` / `NoFallacy`, or `propaganda` / `non-propaganda`           |
 
 Splits live in one folder per retrieval configuration, and the folder name *is* the configuration:
 
@@ -69,27 +69,27 @@ The `[CLS]` representation is passed to a two-class linear head trained with cro
 
 ### Data
 
-| Argument                      | Default                                                | Description                                                                                     |
-|-------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| `--dataset_name`              | `None`                                                 | HuggingFace dataset name (via `datasets` library).                                              |
-| `--dataset_config_name`       | `None`                                                 | Configuration name for the dataset.                                                             |
-| `--train_file`                | `./datasets/elecdeb60to20-dataset/detection/train.csv` | Training data file (CSV or JSON). Point at a configuration folder when `--use_rag` is set.      |
-| `--validation_file`           | `./datasets/elecdeb60to20-dataset/detection/dev.csv`   | Validation data file (CSV or JSON).                                                             |
-| `--test_file`                 | `./datasets/elecdeb60to20-dataset/detection/test.csv`  | Test / prediction data file (CSV or JSON).                                                      |
-| `--text_column_name`          | `sentence`                                             | Column containing the input sentence text.                                                      |
-| `--speech_turn_column_name`   | `speech_turn`                                          | Column containing the full debate turn.                                                         |
-| `--label_column_name`         | `fallacy_label`                                        | Column containing the binary classification label.                                              |
-| `--context_column_name`       | `None`                                                 | Column containing the RAG context text (used when `--use_rag` is set).                          |
-| `--overwrite_cache`           | `True`                                                 | Overwrite cached tokenised datasets.                                                            |
-| `--preprocessing_num_workers` | `None`                                                 | Number of processes for `dataset.map()`.                                                        |
-| `--max_seq_length`            | `512`                                                  | Maximum total input length after tokenisation.                                                  |
-| `--pad_to_max_length`         | `False`                                                | Pad all samples to `max_seq_length` (needed for TPU; otherwise dynamic padding is used).        |
-| `--max_train_samples`         | `None`                                                 | Truncate training set (for debugging).                                                          |
-| `--max_eval_samples`          | `None`                                                 | Truncate evaluation set (for debugging).                                                        |
-| `--max_predict_samples`       | `None`                                                 | Truncate prediction set (for debugging).                                                        |
-| `--shuffle_train_dataset`     | `False`                                                | Shuffle the training dataset before training.                                                   |
-| `--shuffle_seed`              | `42`                                                   | Random seed used when `--shuffle_train_dataset` is set.                                         |
-| `--use_rag`                   | `False`                                                | Append pre-built retrieved context to the BERT input.                                           |
+| Argument                      | Default                                                | Description                                                                                |
+|-------------------------------|--------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| `--dataset_name`              | `None`                                                 | HuggingFace dataset name (via `datasets` library).                                         |
+| `--dataset_config_name`       | `None`                                                 | Configuration name for the dataset.                                                        |
+| `--train_file`                | `./datasets/elecdeb60to20-dataset/detection/train.csv` | Training data file (CSV or JSON). Point at a configuration folder when `--use_rag` is set. |
+| `--validation_file`           | `./datasets/elecdeb60to20-dataset/detection/dev.csv`   | Validation data file (CSV or JSON).                                                        |
+| `--test_file`                 | `./datasets/elecdeb60to20-dataset/detection/test.csv`  | Test / prediction data file (CSV or JSON).                                                 |
+| `--text_column_name`          | `sentence`                                             | Column containing the input sentence text.                                                 |
+| `--speech_turn_column_name`   | `speech_turn`                                          | Column containing the full debate turn.                                                    |
+| `--label_column_name`         | `fallacy_label`                                        | Column containing the binary classification label.                                         |
+| `--context_column_name`       | `None`                                                 | Column containing the RAG context text (used when `--use_rag` is set).                     |
+| `--overwrite_cache`           | `True`                                                 | Overwrite cached tokenised datasets.                                                       |
+| `--preprocessing_num_workers` | `None`                                                 | Number of processes for `dataset.map()`.                                                   |
+| `--max_seq_length`            | `512`                                                  | Maximum total input length after tokenisation.                                             |
+| `--pad_to_max_length`         | `False`                                                | Pad all samples to `max_seq_length` (needed for TPU; otherwise dynamic padding is used).   |
+| `--max_train_samples`         | `None`                                                 | Truncate training set (for debugging).                                                     |
+| `--max_eval_samples`          | `None`                                                 | Truncate evaluation set (for debugging).                                                   |
+| `--max_predict_samples`       | `None`                                                 | Truncate prediction set (for debugging).                                                   |
+| `--shuffle_train_dataset`     | `False`                                                | Shuffle the training dataset before training.                                              |
+| `--shuffle_seed`              | `42`                                                   | Random seed used when `--shuffle_train_dataset` is set.                                    |
+| `--use_rag`                   | `False`                                                | Append pre-built retrieved context to the BERT input.                                      |
 
 > When `--use_rag` is set, any `/no_rag/` segment left in the three file paths is rewritten to `/rag/` — a
 > convenience for older layouts. The current sweeps name their folders by configuration instead, so this normally

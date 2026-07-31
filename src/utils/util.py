@@ -469,8 +469,6 @@ def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
     return results
 
 
-
-
 def analyze_paragraph_lengths(original_path: str = "./knowledge_base"):
     """Print token-length statistics for knowledge-base paragraphs and plot their CDF."""
     counter = Counter()

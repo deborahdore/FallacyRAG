@@ -262,7 +262,6 @@ def bills_and_laws(path: Path):
     del id, filename, text
 
 
-
 def _reconstruct_abstract(inverted_index: dict | None) -> str:
     """Rebuild plain abstract text from OpenAlex's abstract_inverted_index."""
     if not inverted_index:
@@ -926,7 +925,6 @@ def newspapers(path: Path):
             )
         except Exception as e:
             log.error("Error OCR-ing %s: %s", pdf_path.name, e)
-
 
 
 def _make_year_aware(year: int, text: str) -> str:

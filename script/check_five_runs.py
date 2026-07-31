@@ -13,7 +13,6 @@ import rootutils
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 root = rootutils.find_root(search_from=__file__, indicator=".project-root")
 
-
 ENCODERS = [
     "ModernBERT-base",
     "NeoBERT",
@@ -39,7 +38,6 @@ SEED_DIRS = [f"seed_{s}" for s in SEEDS]
 
 ENCODER_MARKER = "predict_results.json"
 LLM_MARKER = "predict_results_metrics.json"
-
 
 
 def has_marker(seed_dir: Path, marker: str) -> bool:

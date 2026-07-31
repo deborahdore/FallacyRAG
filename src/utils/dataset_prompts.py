@@ -10,7 +10,6 @@ from typing import Optional
 logger = logging.getLogger(__name__)
 
 
-
 def identify_dataset(train_file: Optional[str]) -> str:
     """Identify the dataset name from the training file path.
     Returns "elecdeb60to20", "propaganda", or "unknown"."""
@@ -25,7 +24,6 @@ def identify_dataset(train_file: Optional[str]) -> str:
         return "propaganda"
     else:
         return "unknown"
-
 
 
 CLASSIFICATION_PROMPTS = {
@@ -71,7 +69,6 @@ CLASSIFICATION_PROMPTS = {
     ),
 }
 
-
 DETECTION_PROMPTS = {
     "elecdeb60to20": (
         "You are an expert in argumentation theory and fallacy detection. "
@@ -97,7 +94,6 @@ DETECTION_PROMPTS = {
     ),
 }
 
-
 _DETECTION_LABELS_BY_DATASET: dict[str, tuple[str, str]] = {
     "elecdeb60to20": ("Fallacy", "NoFallacy"),
     "propaganda": ("propaganda", "non-propaganda"),
@@ -119,7 +115,6 @@ def get_detection_label_config(train_file: Optional[str]) -> dict:
         "negative_label": negative,
         "labels": [positive, negative],
     }
-
 
 
 _LABEL_TO_LLM_BY_DATASET: dict[str, dict[str, str]] = {

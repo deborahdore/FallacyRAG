@@ -137,7 +137,6 @@ def _register_none_class() -> None:
 SYSTEM_PROMPT = None
 
 
-
 @dataclass
 class ModelArguments:
     """Arguments for the LLM backbone."""
@@ -329,7 +328,6 @@ class LLMExperimentArguments:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
 
 
-
 _GOLD_SPLIT_RE = re.compile(r"[,;|/]+")
 
 
@@ -391,8 +389,6 @@ def labels_to_llm_target(labels: list[str]) -> str:
         )
     canon = sorted(set(labels), key=ALL_LABELS.index)[0]
     return LABEL_TO_LLM[canon]
-
-
 
 
 def build_user_message(
@@ -485,7 +481,6 @@ def format_for_sft(
     return {"text": text}
 
 
-
 def sample_few_shot_examples(
         dataset,
         n_per_class: int,
@@ -524,7 +519,6 @@ def sample_few_shot_examples(
     return examples
 
 
-
 def compute_metrics(predictions: list[list[str]], references: list[list[str]]) -> dict:
     """Compute classification metrics over a fixed indicator space built from ALL_LABELS.
     Reports exact-match accuracy, Hamming loss, micro/macro/weighted/samples F1, precision and recall."""
@@ -548,7 +542,6 @@ def compute_metrics(predictions: list[list[str]], references: list[list[str]]) -
     for label, score in zip(ALL_LABELS, per_class):
         metrics[f"f1_{label}"] = float(score)
     return metrics
-
 
 
 def _is_prequantized(model_name_or_path: str, **config_kwargs) -> bool:
@@ -602,7 +595,6 @@ def _build_load_kwargs(
     return kwargs
 
 
-
 def _generate_batched(
         model,
         tokenizer,
@@ -654,7 +646,6 @@ def _generate_batched(
             responses[idxs[k]] = decoded
 
     return responses
-
 
 
 class LocalLLMInference:
@@ -728,7 +719,6 @@ class LocalLLMInference:
         )
 
 
-
 class OpenAIInference:
     """Wraps the OpenAI chat completions API for inference."""
 
@@ -760,7 +750,6 @@ class OpenAIInference:
             )
             responses.append(response.choices[0].message.content or "")
         return responses
-
 
 
 def run_inference(
@@ -799,7 +788,6 @@ def run_inference(
         references = [parse_gold_labels(ex["label"]) for ex in dataset]
 
     return predictions, references
-
 
 
 def run_fine_tuning(
@@ -919,7 +907,6 @@ def run_fine_tuning(
     return trainer.model, tokenizer
 
 
-
 def load_raw_datasets(data_args: DataTrainingArguments, model_args: ModelArguments):
     """Load the train/validation/test CSV or JSON splits into a DatasetDict."""
     data_files = {
@@ -953,7 +940,6 @@ def prepare_split(raw_datasets, split_name, label_column, max_samples=None,
     if max_samples is not None:
         ds = ds.select(range(min(len(ds), max_samples)))
     return ds
-
 
 
 def main():
@@ -1122,7 +1108,6 @@ def main():
         logger.info(f"Predictions saved to {output_path}")
 
 
-
 class _FineTunedLocalEngine:
     """Adapt an in-memory fine-tuned model to the LocalLLMInference predict_batch() interface."""
 
@@ -1148,7 +1133,6 @@ class _FineTunedLocalEngine:
             temperature=self.temperature,
             torch_module=self._torch,
         )
-
 
 
 def _save_metrics(metrics: dict, path: str):

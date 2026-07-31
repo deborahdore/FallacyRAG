@@ -13,7 +13,6 @@ import rootutils
 rootutils.setup_root(__file__, indicator=".project-root", pythonpath=True, cwd=True)
 root = rootutils.find_root(search_from=__file__, indicator=".project-root")
 
-
 ENCODERS = [
     "ModernBERT-base",
     "NeoBERT",
@@ -68,7 +67,6 @@ LLM_COMBOS = (
             for ep in (1, 2, 3)
         ]
 )
-
 
 
 def expected_models(folder_name: str, base: Path):

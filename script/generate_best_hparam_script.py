@@ -105,7 +105,6 @@ def tag_job_name(header: str, suffix: str) -> str:
     return header
 
 
-
 def find_best_encoder_configs(output_folder: str, metric: str) -> dict[str, tuple[str, str, str, float]]:
     """For each model dir with bs/lr/ep run folders, find the best (batch, lr, epoch, score)."""
     best = {}
@@ -259,7 +258,6 @@ done
 echo "Best-hyperparameter multi-seed sweep complete. Failed runs (if any) logged in $FAILED_LOG."
 """
     return header + "\n" + body, len(entries)
-
 
 
 def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[str, str | None, str | None, float]]:
@@ -483,7 +481,6 @@ done
 echo "Best-hyperparameter multi-seed LLM sweep complete. Failed runs (if any) logged in $FAILED_LOG."
 """
     return header + "\n" + body, len(entries)
-
 
 
 def build_relation_encoder_script(output_folder: str, template_path: str, seeds: list[int]) -> tuple[str, int]:
@@ -747,7 +744,6 @@ done
 echo "Best-hyperparameter multi-seed relation LLM sweep complete. Failed runs (if any) logged in $FAILED_LOG."
 """
     return header + "\n" + body, len(entries)
-
 
 
 def main() -> None:

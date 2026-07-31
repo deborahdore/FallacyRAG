@@ -17,13 +17,13 @@ The workflow has two phases:
 2. **Predict** relations on an unlabeled corpus with a trained checkpoint (`predict_*.py`), writing the results back to
    CSV for downstream use.
 
-| Script                                                                       | Role                                                                                         |
-|------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
-| [`run_relation_classification.py`](run_relation_classification.py)           | Encoder (BERT-style) fine-tuning of the 3-class relation classifier.                         |
-| [`run_relation_classification_llm.py`](run_relation_classification_llm.py)   | LLM — zero-shot, few-shot, or LoRA/QLoRA fine-tuning of the same 3-class task.               |
-| [`predict_propaganda_relations.py`](predict_propaganda_relations.py)         | Predict relations on the propaganda pairs with a LIARArg-trained model.                      |
-| [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)                       | Build the LIARArg relation-classification train/dev/test splits.                             |
-| [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)                 | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
+| Script                                                                     | Role                                                                                         |
+|----------------------------------------------------------------------------|----------------------------------------------------------------------------------------------|
+| [`run_relation_classification.py`](run_relation_classification.py)         | Encoder (BERT-style) fine-tuning of the 3-class relation classifier.                         |
+| [`run_relation_classification_llm.py`](run_relation_classification_llm.py) | LLM — zero-shot, few-shot, or LoRA/QLoRA fine-tuning of the same 3-class task.               |
+| [`predict_propaganda_relations.py`](predict_propaganda_relations.py)       | Predict relations on the propaganda pairs with a LIARArg-trained model.                      |
+| [`utils/prepare_liarArg.py`](utils/prepare_liarArg.py)                     | Build the LIARArg relation-classification train/dev/test splits.                             |
+| [`utils/prepare_propaganda.py`](utils/prepare_propaganda.py)               | Build the propaganda **prediction** pairs (one fallacy × every other phrase in its article). |
 
 The relation label space is **dataset-aware**, resolved from the training-file path: LIARArg uses
 `support / attack / no_relation`, DEBAGREEMENT uses `support / attack / neutral`. DEBAGREEMENT is supported by both
@@ -181,9 +181,9 @@ plus per-class softmax probabilities alongside the original metadata columns.
 The checkpoint's `config.id2label` is just `{0:"0", 1:"1", 2:"2"}`; the **semantic meaning** of each id comes from the
 training corpus and is fixed in the script:
 
-| Script                            | Trained on   | Predicts on | id → relation                                  |
-|-----------------------------------|--------------|-------------|------------------------------------------------|
-| `predict_propaganda_relations.py` | LIARArg      | propaganda  | `0 = attack`, `1 = support`, `2 = no_relation` |
+| Script                            | Trained on | Predicts on | id → relation                                  |
+|-----------------------------------|------------|-------------|------------------------------------------------|
+| `predict_propaganda_relations.py` | LIARArg    | propaganda  | `0 = attack`, `1 = support`, `2 = no_relation` |
 
 ### Arguments
 
