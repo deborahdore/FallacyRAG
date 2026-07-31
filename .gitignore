@@ -159,4 +159,5 @@ dmypy.json
 ./knowledge_base/*
 ./chromadb/
 ./chromadb/*
+/output/trained-models/*
 /output/trained-models/
