@@ -4,7 +4,7 @@
 #SBATCH --error=logs/encoders_rag_%j.out
 
 #SBATCH --time=36:00:00
-#SBATCH --account=marianne
+#SBATCH --account=anonymous
 #SBATCH --gpus=h100:1
 #SBATCH --partition=gpu
 

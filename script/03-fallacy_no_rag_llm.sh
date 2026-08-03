@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=llm_fallacy_no_rag
-#SBATCH --account=fuo@a100
+#SBATCH --account=anonymous@a100
 #SBATCH -C a100
 #SBATCH --ntasks=2
 #SBATCH --ntasks-per-node=2
