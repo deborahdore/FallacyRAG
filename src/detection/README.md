@@ -116,10 +116,13 @@ A `create_db.py` with the same interface (and dataset-specific defaults) exists 
 the canonical reference. The propaganda RAG datasets are built the same way via their
 `02-create_database-*.sh` driver scripts.
 
-The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns, balances and
-re-splits into train/dev/test, retrieves knowledge-base passages for each sentence, and writes them into the `context`
-column. The arguments below also determine the **output folder name**, so a configuration is always recoverable from
-the path. Key arguments:
+The retrieval strategy is chosen when the datasets are built. The script sentence-splits the speech turns with spaCy
+and propagates the span-level annotations down to the sentence level, labelling a sentence `Fallacy` if it overlaps at
+least one annotated fallacy span. The resulting distribution is strongly skewed towards the negative class, so
+`NoFallacy` is downsampled to a **1:1 ratio** and the balanced pool re-split 80/10/10 stratified by label —
+**2,612 train / 327 dev / 327 test** sentences for ElecDeb60to20. Knowledge-base passages are then retrieved per
+sentence and written into the `context` column. The arguments below also determine the **output folder name**, so a
+configuration is always recoverable from the path. Key arguments:
 
 | Argument                | Default                                | Description                                                                                                                                                                        |
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -128,8 +131,8 @@ the path. Key arguments:
 | `--retriever`           | `None`                                 | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `ddore14/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset.                    |
 | `--search-type`         | `similarity`                           | Retrieval strategy: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`, `hybrid`.                                                                                           |
 | `--persist-directory`   | `./chromadb`                           | ChromaDB persistence directory for dense search.                                                                                                                                   |
-| `--chunk-size`          | `1000`                                 | Document chunk size for the BM25 leg.                                                                                                                                              |
-| `--chunk-overlap`       | `200`                                  | Chunk overlap for the BM25 leg.                                                                                                                                                    |
+| `--chunk-size`          | `1000`                                 | Chunk size **in characters** for the BM25 leg only. (The dense index is chunked separately by `create_persistent_db.py`, at 1,000 *tokens* with 10% overlap.)                      |
+| `--chunk-overlap`       | `200`                                  | Chunk overlap in characters for the BM25 leg.                                                                                                                                      |
 | `--top-k`               | `3`                                    | Number of documents to keep per example. The sweeps pass `5`.                                                                                                                      |
 | `--fetch-k`             | `20`                                   | Candidate pool size fetched per leg before MMR / reranking narrows it to `top-k`. The sweeps pass `30`.                                                                            |
 | `--lambda-mult`         | `0.5`                                  | MMR relevance/diversity trade-off (`mmr` search only).                                                                                                                             |

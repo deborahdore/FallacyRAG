@@ -37,6 +37,11 @@ separate relation-classification pipeline draws on the **LIARArg** corpus.
 Both an **encoder** track (BERT-style fine-tuning) and an **LLM** track (zero-shot, few-shot, and LoRA/QLoRA
 fine-tuning) are supported for every task, each with and without RAG context.
 
+**Headline results.** Across **42 retrieval configurations × 14 models**, argumentatively guided retrieval raises the
+best macro-F1 from **0.772 → 0.864** on detection and from **0.653 → 0.725** on classification (ModernBERT in both
+cases). Retrieval improves every encoder tested except NeoBERT; decoder-only LLMs degrade once retrieved context is
+added.
+
 ## 🔬 Pipeline
 
 ![FallacyRAG pipeline](misc/figures/pipeline.png)
@@ -91,9 +96,10 @@ See [`src/relation-extraction/README.md`](src/relation-extraction/README.md).
 
 ## ⛁ Knowledge Base
 
-To ground the model, we constructed a **knowledge base of approximately 15GB of political and contextual documents**.
-The corpus combines official government sources with curated background information, organized into six sections (the
-research papers inside *Definitions* are indexed as their own `papers` category, so the vector store carries seven).
+To ground the model, we constructed a **knowledge base of approximately 15GB of political and contextual documents**,
+crawled between **May and June 2026**. The corpus combines official government sources with curated background
+information, organized into six sections (the research papers inside *Definitions* are indexed as their own `papers`
+category, so the vector store carries seven).
 
 - **Bills and Laws**: congressional bills and public/private laws approved by the U.S. Congress, collected from their
   official repository [GovInfo](https://www.govinfo.gov/sitemaps),
@@ -109,21 +115,43 @@ research papers inside *Definitions* are indexed as their own `papers` category,
   is tagged with its year to support temporal filtering during retrieval.
 - **Definitions**: conceptual definitions and explanations of argumentative fallacies compiled from peer-reviewed
   research ([Goffredo et al., 2023](https://aclanthology.org/2023.emnlp-main.684.pdf),
-  [Goffredo et al., 2022](https://www.ijcai.org/proceedings/2022/0575.pdf)), a curated set of recent fallacy /
-  argumentation papers retrieved from [OpenAlex](https://openalex.org/), and the Wikipedia fallacy pages.
+  [Goffredo et al., 2022](https://www.ijcai.org/proceedings/2022/0575.pdf)), 200 fallacy / argumentation / rhetoric
+  papers published from **2015 onwards**, retrieved from [OpenAlex](https://openalex.org/) and filtered by lexical
+  relevance over title and abstract, and the Wikipedia fallacy pages.
 - **Exemplars**: labeled examples of fallacious arguments drawn from public fallacy datasets
   ([LOGIC](https://huggingface.co/datasets/tasksource/logical-fallacy) and
   [MAFALDA](https://github.com/ChadiHelwe/MAFALDA)), mapped onto the project's fallacy taxonomy to provide concrete
-  reference instances of each fallacy type.
+  reference instances of each fallacy type. Exemplar texts that overlap an ElecDeb60to20 instance are removed, so
+  retrieval cannot leak gold labels into the evaluation.
+
+| Collection      |   Size | # Documents | # Paragraphs |
+|-----------------|-------:|------------:|-------------:|
+| Bills           |  14 GB |     178,383 |    6,668,178 |
+| Geography       | 516 MB |     125,891 |      125,891 |
+| People          | 297 MB |      72,950 |       72,950 |
+| History         |  89 MB |      16,121 |       16,121 |
+| Exemplars       |   5 MB |       1,273 |        1,284 |
+| Definitions     | 1.3 MB |          65 |           65 |
+| **Total**       | **15 GB** | **394,683** | **6,884,489** |
 
 Sections are built independently by [`src/create_knowledge_base.py`](src/create_knowledge_base.py) into
 `knowledge_base/<section>/`, then indexed into a per-embedder Chroma store by
 [`src/create_persistent_db.py`](src/create_persistent_db.py).
 
+> `create_knowledge_base.py` also ships a `newspapers()` builder (Chronicling America historic newspapers). It is
+> **not** part of the 15GB knowledge base reported above and was not used in the experiments — drop it from `main()`
+> to reproduce the paper's corpus exactly.
+
 Indexing splits long documents into chunks of at most **1,000 tokens with 10% overlap** (`--chunk-size` /
 `--chunk-overlap`). Chunking is by token, not character, and the chunk size is clamped to the input window of the
 embedding model in use so no passage is silently truncated at encoding time. There is one store per embedding model,
 over a fixed document set, so retrievers can be compared in isolation.
+
+Four retrievers are compared: three dense encoders — `sentence-transformers/all-mpnet-base-v2` (SBERT),
+`BAAI/bge-large-en-v1.5` (BGE) and `Sentence-RooseBERT` (domain-specific, pre-trained on political text) —
+against **BM25** as a lexical baseline. At inference the top **k=5** chunks are kept per query; in `hybrid` search the
+dense and BM25 rankings are fused with Reciprocal Rank Fusion (k<sub>RRF</sub>=60) over 30 candidates per leg, then
+re-ranked with a `ms-marco-MiniLM-L-6-v2` cross-encoder before keeping the top 5.
 
 To inspect what a query retrieves without running the full pipeline, use
 [`src/perform_retrieval.py`](src/perform_retrieval.py):
@@ -162,9 +190,16 @@ makes temporal filtering (`--temporal-rag`) and per-section indexing possible.
 | **propaganda**    | detection, relation-classification | Second detection dataset; relation predictions come from the LIARArg model.   |
 | **LIARArg**       | relation-classification            | Training data for the relation classifier (`support / attack / no_relation`). |
 
-Each dataset lives under `datasets/<name>-dataset/` with raw `train.csv` / `dev.csv` / `test.csv` splits and an
-`original/` folder holding the source files. RAG-enriched variants are written into per-task, per-config subfolders by
-`create_db.py`.
+Each dataset lives under `datasets/<name>-dataset/`. ElecDeb60to20 and propaganda keep raw `train.csv` / `dev.csv` /
+`test.csv` splits at the dataset root (ElecDeb60to20 additionally ships `relations.csv`, the gold relation layer);
+propaganda and LIARArg keep their source files in an `original/` folder. RAG-enriched variants are written into
+per-task, per-config subfolders by `create_db.py`.
+
+**Split sizes after `create_db.py`.** Detection sentence-splits the speech turns with spaCy, propagates the span-level
+annotations down to the sentence level, then downsamples `NoFallacy` to a **1:1 ratio** and re-splits 80/10/10
+stratified by label — **2,612 / 327 / 327** train/dev/test sentences. Classification keeps only the fallacious portion
+of the corpus — **1,306 / 164 / 163** — and stays sharply imbalanced (`AppealtoEmotion` alone is 739 of the 1,306
+training instances; `Slogans` is 34), which makes it the harder of the two tasks.
 
 > **Git LFS.** Every CSV under `datasets/` is tracked with Git LFS (see [`.gitattributes`](.gitattributes)). Run
 > `git lfs install && git lfs pull` after cloning, otherwise the splits will be pointer files rather than data.
@@ -201,6 +236,7 @@ A few things are needed on top of the environment file:
 |-------------------------------------------|----------------------------------------------------------------------------------------|
 | `git lfs`                                 | The dataset CSVs are LFS objects — `git lfs pull` after cloning.                       |
 | `python -m spacy download en_core_web_sm` | Sentence splitting inside `create_db.py`.                                              |
+| `python -m spacy download en_core_web_trf` | Named-entity recognition over the debates in `notebooks/topic_analysis.ipynb`.        |
 | `poppler`, `tesseract`                    | OCR of PDF sources (OpenAlex papers, UDHR) while building the knowledge base.          |
 | `HF_TOKEN`                                | Gated Hub models (Llama, Mistral). Or pass `--token`.                                  |
 | `OPENAI_API_KEY`                          | Only for the LLM scripts run with `--backend openai`.                                  |
@@ -262,11 +298,21 @@ take a `DATASETS=()` array listing which configuration folders to sweep.
 
 | Track    | Models                                                                                                                      | Grid                                                                                 |
 |----------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Encoders | DeBERTa-v3, Longformer, ModernBERT, RoBERTa, LegalBERT, NeoBERT, and the four RooseBERT variants (cont/scr × cased/uncased) | batch ∈ {8, 16} × lr ∈ {2e-5, 3e-5, 5e-5} × epochs ∈ {3, 5} — 12 cells per model     |
-| LLMs     | Llama-3.1-8B-Instruct, Qwen3.5-9B-Base, gpt-oss-20b, Mistral-7B-Instruct-v0.3                                               | zero-shot, few-shot, and fine-tuning at lr ∈ {1e-4, 3e-4, 5e-4} × epochs ∈ {1, 2, 3} |
+| Encoders | DeBERTa-v3, Longformer, ModernBERT, RoBERTa, LegalBERT, NeoBERT, and the four RooseBERT variants (cont/scr × cased/uncased) — **10** | batch ∈ {8, 16} × lr ∈ {2e-5, 3e-5, 5e-5} × epochs ∈ {3, 5}, warmup ratio 0.06 — 12 cells per model |
+| LLMs     | Llama-3.1-8B-Instruct, Qwen3.5-9B-Base, gpt-oss-20b, Mistral-7B-Instruct-v0.3 — **4**                                               | zero-shot, few-shot (one example per class), and LoRA fine-tuning (r=16, α=32, dropout 0.05) at lr ∈ {1e-4, 3e-4, 5e-4} × epochs ∈ {1, 2, 3}, effective batch 8 |
 
 Runs are named after their cell (`bs16_lr3e-5_ep5`, `mode-few_shot`, `mode-fine_tune_bs8_lr3e-4_ep2`), which is how the
 aggregation scripts recover the hyperparameters.
+
+**Why the grid is not run exhaustively.** 42 configurations × 14 models × the hyperparameter grid × 5 seeds is not
+computationally feasible, so the sweep runs in three stages: (i) every model is trained on the no-RAG baseline over the
+full hyperparameter grid, and the best cell per model is re-run with five seeds; (ii) only the **three strongest
+baseline models per task** are run over the remaining 42 retrieval configurations, which selects the winning
+configuration; (iii) all 14 models are re-run on that configuration, sweeping hyperparameters and then five seeds. The
+selected configuration is therefore optimal for those three models and merely reasonable for the rest.
+
+The winning configurations are `Sentence-RooseBERT` + hybrid search + cross-encoder reranking +
+`relations_labeled` query, **with** temporal filtering for detection and **without** it for classification.
 
 ## 📊 Results & Analysis
 
@@ -276,8 +322,8 @@ aggregation scripts recover the hyperparameters.
 | [`script/check_five_runs.py`](script/check_five_runs.py)             | Same check for the multi-seed grid (all models × 5 seeds).                                                                  |
 | [`script/extract_results.py`](script/extract_results.py)             | Aggregates `output/one-run/` into a `results.csv` per config plus a combined `all_results.csv`.                             |
 | [`script/extract_results_5runs.py`](script/extract_results_5runs.py) | Aggregates `output/five-runs/` into `results_mean_std.csv` (mean, std, seed count) plus `all_results_mean_std.csv`.         |
-| [`script/ablation.py`](script/ablation.py)                           | Leave-one-out ablation of the RAG components, with hyperparameters frozen at the anchor cell so deltas stay selection-free. |
-| [`script/ttest_best_models.py`](script/ttest_best_models.py)         | Paired significance tests (t-test, Wilcoxon, permutation, Hedges' g) between the baseline and each config's best model.     |
+| [`script/ablation.py`](script/ablation.py)                           | Leave-one-out ablation of the RAG components, anchored on the strongest no-retrieval model per task with hyperparameters frozen at the anchor cell, so deltas stay selection-free. Single seed (14). |
+| [`script/ttest_best_models.py`](script/ttest_best_models.py)         | Paired significance tests between the baseline and each config's best model over the five paired per-seed macro-F1 values: two-sided t-test, Shapiro-Wilk, Wilcoxon, an exact sign-flip permutation test, and both Cohen's d and Hedges' g. |
 
 A run is considered complete when it carries its **completion marker**: `predict_results.json` for encoders,
 `predict_results_metrics.json` for LLMs. Every aggregation and check script keys off these two filenames.
@@ -304,13 +350,19 @@ src/
 
 datasets/                           # source data + per-dataset RAG-enrichment scripts
   elecdeb60to20-dataset/            # main dataset
+    train.csv, dev.csv, test.csv    # raw splits
+    relations.csv                   # gold argumentative relations (support / attack)
+    detection/create_db.py          # builds RAG-enriched detection datasets
+    classification/create_db.py     # builds RAG-enriched classification datasets
+    <task>/<config>/                # generated RAG-enriched splits (43 folders per task)
+  propaganda-dataset/               # detection + relation-classification data
     original/                       # source files
     train.csv, dev.csv, test.csv    # raw splits
     detection/create_db.py          # builds RAG-enriched detection datasets
-    classification/create_db.py     # builds RAG-enriched classification datasets
-    <task>/<config>/                # generated RAG-enriched splits (one folder per config)
-  propaganda-dataset/               # detection + relation-classification data
+    relation-classification/        # prediction pairs + predicted relations
   LIARArg-dataset/                  # relation-classification training data
+    original/                       # source files
+    relation-classification/        # train.csv, dev.csv, test.csv pairs
 
 script/                             # sbatch / driver scripts (numbered by pipeline stage)
   00-create_knowledge_base.sh
@@ -327,8 +379,9 @@ script/                             # sbatch / driver scripts (numbered by pipel
   ttest_best_models.py              # paired significance tests across configs
 
 notebooks/                          # topic / knowledge-base / error analysis
-docs/pipeline.png                   # the pipeline figure shown above
-misc/                               # auxiliary source files (congress roster, UDHR, source URLs)
+misc/                               # auxiliary source files (congress roster, UDHR, source URLs, topic coverage)
+  figures/pipeline.png              # the pipeline figure shown above
+  figures/cm_*.pdf                  # confusion matrices exported by notebooks/error_analysis.ipynb
 output/
   one-run/<dataset>-<task>/<config>/<model>/<run>/            # single-seed grid-search results
   five-runs/<dataset>-<task>/<config>/<model>/seed_<n>/<run>/ # multi-seed best-hparam results

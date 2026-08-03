@@ -223,6 +223,7 @@ queries.
 These build the pair datasets consumed above:
 
 - **`prepare_liarArg.py`** — turns the LIARArg corpus into a labeled `support / attack / no_relation` train/dev/test
-  set (partial support/attack are merged into support/attack, matching the paper's ablation).
+  set. The corpus's partial relations (`psupport_relation` / `pattack_relation`) are merged into `support` / `attack`,
+  and a matching number of `no_relation` pairs is sampled from each row's unlinked component combinations.
 - **`prepare_propaganda.py`** — builds a **prediction** set: every propaganda-labeled sentence paired with every other
   sentence of its own article. No gold relations (`label = -1`).

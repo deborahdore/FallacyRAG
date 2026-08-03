@@ -10,14 +10,18 @@ The label inventory is **dataset-aware**: it is selected automatically from the 
 dataset columns. For **ElecDeb60to20** the task is single-label over six categories. Canonical labels (exactly as they
 appear in the `fallacy_label` column) and their human-readable forms:
 
-| Canonical label     | Human-readable      |
-|---------------------|---------------------|
-| `AdHominem`         | Ad Hominem          |
-| `AppealtoAuthority` | Appeal to Authority |
-| `AppealtoEmotion`   | Appeal to Emotion   |
-| `FalseCause`        | False Cause         |
-| `Slipperyslope`     | Slippery Slope      |
-| `Slogans`           | Slogan              |
+| Canonical label     | Human-readable      | Annotated instances in ElecDeb60to20 |
+|---------------------|---------------------|-------------------------------------:|
+| `AdHominem`         | Ad Hominem          |                                  200 |
+| `AppealtoAuthority` | Appeal to Authority |                                  290 |
+| `AppealtoEmotion`   | Appeal to Emotion   |                                  924 |
+| `FalseCause`        | False Cause         |                                  105 |
+| `Slipperyslope`     | Slippery Slope      |                                   72 |
+| `Slogans`           | Slogan              |                                   42 |
+
+The task is restricted to the fallacious portion of the corpus — **1,306 train / 164 dev / 163 test** sentences — and
+remains sharply imbalanced (`AppealtoEmotion` alone is 739 of the 1,306 training instances). Both the encoder and LLM
+heads compensate with class weighting.
 
 Two scripts are provided, covering encoder-based fine-tuning and LLM-based inference/fine-tuning:
 
@@ -144,8 +148,8 @@ always recoverable from the path. Key arguments:
 | `--retriever`           | `None`                                 | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `ddore14/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset.                    |
 | `--search-type`         | `similarity`                           | Retrieval strategy: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`, `hybrid`.                                                                                           |
 | `--persist-directory`   | `./chromadb`                           | ChromaDB persistence directory for dense search.                                                                                                                                   |
-| `--chunk-size`          | `1000`                                 | Document chunk size for the BM25 leg.                                                                                                                                              |
-| `--chunk-overlap`       | `200`                                  | Chunk overlap for the BM25 leg.                                                                                                                                                    |
+| `--chunk-size`          | `1000`                                 | Chunk size **in characters** for the BM25 leg only. (The dense index is chunked separately by `create_persistent_db.py`, at 1,000 *tokens* with 10% overlap.)                      |
+| `--chunk-overlap`       | `200`                                  | Chunk overlap in characters for the BM25 leg.                                                                                                                                      |
 | `--top-k`               | `3`                                    | Number of documents to keep per example. The sweeps pass `5`.                                                                                                                      |
 | `--fetch-k`             | `20`                                   | Candidate pool size fetched per leg before MMR / reranking narrows it to `top-k`. The sweeps pass `30`.                                                                            |
 | `--lambda-mult`         | `0.5`                                  | MMR relevance/diversity trade-off (`mmr` search only).                                                                                                                             |
