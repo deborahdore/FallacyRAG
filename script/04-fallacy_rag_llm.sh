@@ -87,7 +87,7 @@ for dataset in "${DATASETS[@]}"; do
             --rdzv_backend=c10d \
             --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
             "src/${task}/run_${task}_llm.py" \
-            --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \
+            --model_name_or_path "/path/to/local_models/$model" \
             --cache_dir "$CACHE_DIR" \
             --train_file "$TRAIN_FILE" \
             --validation_file "$VAL_FILE" \
@@ -130,7 +130,7 @@ for dataset in "${DATASETS[@]}"; do
                 --rdzv_backend=c10d \
                 --rdzv_endpoint=${MASTER_ADDR}:${MASTER_PORT} \
                 "src/${task}/run_${task}_llm.py" \
-                --model_name_or_path "/lustre/fsmisc/dataset/HuggingFace_Models/$model" \
+                --model_name_or_path "/path/to/local_models/$model" \
                 --cache_dir "$CACHE_DIR" \
                 --train_file "$TRAIN_FILE" \
                 --validation_file "$VAL_FILE" \
