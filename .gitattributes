@@ -1,5 +1,5 @@
 datasets/propaganda-dataset/*/train.csv filter=lfs diff=lfs merge=lfs -text
-datasets/propaganda-dataset/detection/temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false/train.csv filter=lfs diff=lfs merge=lfs -text
+datasets/propaganda-dataset/detection/temporal=false-retriever=anonymous-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false/train.csv filter=lfs diff=lfs merge=lfs -text
 datasets/propaganda-dataset/relation-classification/dataset.csv filter=lfs diff=lfs merge=lfs -text
 datasets/propaganda-dataset/relation-classification/predictions.csv filter=lfs diff=lfs merge=lfs -text
 datasets/propaganda-dataset/detection/temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false/train.csv filter=lfs diff=lfs merge=lfs -text
