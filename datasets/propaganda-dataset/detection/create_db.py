@@ -79,8 +79,8 @@ EMBEDDING_MODELS = {
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
-    "ddore14/Sentence-RooseBERT": lambda: HuggingFaceEmbeddings(
-        model_name="ddore14/Sentence-RooseBERT",
+    "anonymous/Sentence-RooseBERT": lambda: HuggingFaceEmbeddings(
+        model_name="anonymous/Sentence-RooseBERT",
         model_kwargs=model_kwargs,
         encode_kwargs=encode_kwargs,
     ),
