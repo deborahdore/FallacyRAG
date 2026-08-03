@@ -1,26 +1,24 @@
 # Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates
 
 <!-- TOC -->
-
 * [Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates](#retrieval-augmented-generation-for-argumentative-fallacies-in-us-political-debates)
-    * [🚀 Overview](#-overview)
-    * [🔬 Pipeline](#-pipeline)
-    * [🎯 Tasks](#-tasks)
-        * [Fallacy Detection](#fallacy-detection)
-        * [Fallacy Classification](#fallacy-classification)
-        * [Relation Classification](#relation-classification)
-    * [⛁ Knowledge Base](#-knowledge-base)
-        * [Knowledge Base Format](#knowledge-base-format)
-    * [🗂️ Datasets](#-datasets)
-        * [Configuration Folder Names](#configuration-folder-names)
-    * [⚙️ Setup](#-setup)
-    * [▶️ Running the Pipeline](#-running-the-pipeline)
-        * [Switching Dataset or Task](#switching-dataset-or-task)
-        * [Experiment Grid](#experiment-grid)
-    * [📊 Results & Analysis](#-results--analysis)
-    * [📁 Project Structure](#-project-structure)
-    * [📄 License](#-license)
-
+  * [🚀 Overview](#-overview)
+  * [🔬 Pipeline](#-pipeline)
+  * [🎯 Tasks](#-tasks)
+    * [Fallacy Detection](#fallacy-detection)
+    * [Fallacy Classification](#fallacy-classification)
+    * [Relation Classification](#relation-classification)
+  * [⛁ Knowledge Base](#-knowledge-base)
+    * [Knowledge Base Format](#knowledge-base-format)
+  * [🗂️ Datasets](#-datasets)
+    * [Configuration Folder Names](#configuration-folder-names)
+  * [⚙️ Setup](#-setup)
+  * [▶️ Running the Pipeline](#-running-the-pipeline)
+    * [Switching Dataset or Task](#switching-dataset-or-task)
+    * [Experiment Grid](#experiment-grid)
+  * [📊 Results & Analysis](#-results--analysis)
+  * [📁 Project Structure](#-project-structure)
+  * [📄 License](#-license)
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -41,7 +39,7 @@ fine-tuning) are supported for every task, each with and without RAG context.
 
 ## 🔬 Pipeline
 
-![FallacyRAG pipeline](misc/docs/pipeline.png)
+![FallacyRAG pipeline](misc/figures/pipeline.png)
 
 Each sentence is turned into a retrieval **query** — the bare sentence, or the sentence enriched with the argumentative
 components that support or attack it. The query is sent to the **knowledge base** through one of four retrievers (three
