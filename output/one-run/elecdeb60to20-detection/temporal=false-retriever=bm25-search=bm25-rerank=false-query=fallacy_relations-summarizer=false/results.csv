@@ -1,0 +1,4 @@
+dataset,temporal,retriever,search,rerank,query,summarizer,model,configuration,predict_f1_macro,predict_accuracy
+/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-query=fallacy_relations-summarizer=false,False,bm25,bm25,none,fallacy_relations,none,ModernBERT-base,bs8_lr3e-5_ep5,0.7208667510904742,0.7217125382262997
+/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-query=fallacy_relations-summarizer=false,False,bm25,bm25,none,fallacy_relations,none,RooseBERT-cont-cased,bs8_lr5e-5_ep3,0.7463293725876031,0.7492354740061162
+/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=bm25-search=bm25-rerank=false-query=fallacy_relations-summarizer=false,False,bm25,bm25,none,fallacy_relations,none,RooseBERT-scr-cased,bs8_lr3e-5_ep5,0.7501909854851032,0.7522935779816514
