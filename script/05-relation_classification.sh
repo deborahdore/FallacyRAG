@@ -8,7 +8,7 @@
 #SBATCH --gpus=h100:1
 #SBATCH --partition=gpu
 
-#SBATCH --mail-user=deborah.dore@inria.fr
+#SBATCH --mail-user=anonymous@anonymous.org
 #SBATCH --mail-type=FAIL
 
 module purge
@@ -18,7 +18,7 @@ conda activate rags
 set -uo pipefail
 
 export TOKENIZERS_PARALLELISM=false
-export HF_HOME="/home/ddore/.cache/huggingface"
+export HF_HOME="/home/anonymous/.cache/huggingface"
 export LD_LIBRARY_PATH=$CONDA_PREFIX/lib:$LD_LIBRARY_PATH
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 

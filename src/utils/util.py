@@ -168,7 +168,7 @@ def safe_filename(x: str) -> str:
 def fetch_wikipedia_category_members(category: str) -> list[str]:
     """Return the article-namespace titles belonging to a Wikipedia category (paged)."""
     url = "https://en.wikipedia.org/w/api.php"
-    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    headers = {"User-Agent": "FallacyRAG (anonymous@anonymous.org)"}
     titles: list[str] = []
     cmcontinue = None
 
@@ -211,7 +211,7 @@ def fetch_wikipedia_category_members(category: str) -> list[str]:
 def fetch_wikipedia_links(page: str, limit: int = 200) -> list[str]:
     """Return up to *limit* article-namespace titles linked from `page` (paged)."""
     url = "https://en.wikipedia.org/w/api.php"
-    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    headers = {"User-Agent": "FallacyRAG (anonymous@anonymous.org)"}
     titles: list[str] = []
     plcontinue = None
 
@@ -267,7 +267,7 @@ def fetch_wikipedia_sections(page: str):
         "formatversion": "2",
     }
     headers = {
-        "User-Agent": "FallacyRAG (doredeborah3@gmail.com)"
+        "User-Agent": "FallacyRAG (anonymous@anonymous.org)"
     }
 
     section_response = None
@@ -349,7 +349,7 @@ def fetch_wikipedia_sections(page: str):
 def fetch_wikipedia_section(page: str, section_name: str) -> str:
     """Return one named section's text, extracting both paragraphs and list items."""
     url = "https://en.wikipedia.org/w/api.php"
-    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    headers = {"User-Agent": "FallacyRAG (anonymous@anonymous.org)"}
 
     params = {
         "action": "parse",
@@ -420,7 +420,7 @@ def fetch_wikipedia_extracts(titles: list[str], intro_only: bool = True,
     if not titles:
         return {}
     url = "https://en.wikipedia.org/w/api.php"
-    headers = {"User-Agent": "FallacyRAG (doredeborah3@gmail.com)"}
+    headers = {"User-Agent": "FallacyRAG (anonymous@anonymous.org)"}
     if not intro_only:
         batch_size = 1
 

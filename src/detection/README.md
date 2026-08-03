@@ -128,7 +128,7 @@ configuration is always recoverable from the path. Key arguments:
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `--mode`                | `sentence`                             | `sentence` — query with the bare sentence; `relations` — query with the fallacy text plus its related components.                                                                  |
 | `--query-mode`          | `fallacy_relations`                    | (`relations` mode only) `fallacy_relations` — concatenate fallacy + relation text; `relations_labeled` — one `<relation> supports/attacks <fallacy>` clause per relation.          |
-| `--retriever`           | `None`                                 | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `ddore14/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset.                    |
+| `--retriever`           | `None`                                 | Dense embedding model: `sentence-transformers/all-mpnet-base-v2`, `anonymous/Sentence-RooseBERT`, `BAAI/bge-large-en-v1.5`, or `bm25`. Omit for a no-RAG dataset.                    |
 | `--search-type`         | `similarity`                           | Retrieval strategy: `similarity`, `mmr`, `similarity_score_threshold`, `bm25`, `hybrid`.                                                                                           |
 | `--persist-directory`   | `./chromadb`                           | ChromaDB persistence directory for dense search.                                                                                                                                   |
 | `--chunk-size`          | `1000`                                 | Chunk size **in characters** for the BM25 leg only. (The dense index is chunked separately by `create_persistent_db.py`, at 1,000 *tokens* with 10% overlap.)                      |
@@ -198,7 +198,7 @@ python src/detection/run_detection.py \
   --output_dir ./results/bert_baseline
 
 # Fine-tune DeBERTa with RAG context from a specific configuration
-CONFIG="temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
+CONFIG="temporal=true-retriever=anonymous-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 python src/detection/run_detection.py \
   --model_name_or_path microsoft/deberta-v3-base \
   --train_file "datasets/elecdeb60to20-dataset/detection/$CONFIG/train.csv" \

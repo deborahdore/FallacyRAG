@@ -13,7 +13,7 @@ TEMPORAL_BOOLS=(True False)
 
 DENSE_RETRIEVERS=(
     "BAAI/bge-large-en-v1.5"
-    "ddore14/Sentence-RooseBERT"
+    "anonymous/Sentence-RooseBERT"
     "sentence-transformers/all-mpnet-base-v2"
 )
 DENSE_SEARCH_TYPES=(similarity hybrid)

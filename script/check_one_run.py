@@ -34,8 +34,8 @@ LLMS = [
 
 BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline"]
 
-BEST_FOLDER_ELECDEB60TO20_DETECTION = "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
-BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
+BEST_FOLDER_ELECDEB60TO20_DETECTION = "temporal=true-retriever=anonymous-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
+BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=anonymous-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 
 BEST_FOLDER_PROPAGANDA_DETECTION = "temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 

@@ -13,7 +13,7 @@
 
 #SBATCH --hint=nomultithread
 
-#SBATCH --mail-user=deborah.dore@inria.fr
+#SBATCH --mail-user=anonymous@anonymous.org
 #SBATCH --mail-type=FAIL
 
 module purge

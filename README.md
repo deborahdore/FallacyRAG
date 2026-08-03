@@ -30,7 +30,7 @@ The goal of this project is to improve **fallacy detection and classification** 
 **Retrieval-Augmented Generation (RAG)**. By grounding models in external knowledge sources, the system aims to provide
 more accurate classifications and clearer explanations of fallacious arguments in US political debates.
 
-The main experiments use the **[ElecDeb60to20](https://3ia-data.inria.fr/en/#)** dataset, which contains transcripts
+The main experiments use the **ElecDeb60to20** dataset (link omitted for anonymity), which contains transcripts
 from U.S. political debates from 1960 to 2020. The same pipeline also runs on the **propaganda** dataset, and a
 separate relation-classification pipeline draws on the **LIARArg** corpus.
 
@@ -210,7 +210,7 @@ There is one folder per retrieval configuration, and its name *is* the configura
 the results mirror this naming, so a results folder can always be traced back to the data that produced it:
 
 ```
-temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
+temporal=true-retriever=anonymous-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false
 │             │                                  │             │                                          │                              └── passage summarization model, or false
 │             │                                  │             │                                          └── query mode: fallacy_relations | relations_labeled (omitted in sentence mode)
 │             │                                  │             └── cross-encoder reranker, or false
@@ -394,6 +394,6 @@ retrieval settings as described in [Configuration Folder Names](#configuration-f
 
 ## 📄 License
 
-Inria holds the ownership rights on the code and data in this repository. Use is granted **free of charge to academic
-users for research purposes only**; any other use requires prior consent from Inria. See [`LICENSE`](LICENSE) for the
+Anonymous holds the ownership rights on the code and data in this repository. Use is granted **free of charge to academic
+users for research purposes only**; any other use requires prior consent from Anonymous. See [`LICENSE`](LICENSE) for the
 full terms.
