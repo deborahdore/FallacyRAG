@@ -1,7 +1,7 @@
-# Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates
+# Retrieving Relations, Detecting Fallacies: A RAG Approach to Political Debate Analysis
 
 <!-- TOC -->
-* [Retrieval-Augmented Generation for Argumentative Fallacies in US Political Debates](#retrieval-augmented-generation-for-argumentative-fallacies-in-us-political-debates)
+* [Retrieving Relations, Detecting Fallacies: A RAG Approach to Political Debate Analysis](#retrieving-relations-detecting-fallacies-a-rag-approach-to-political-debate-analysis)
   * [🚀 Overview](#-overview)
   * [🔬 Pipeline](#-pipeline)
   * [🎯 Tasks](#-tasks)
