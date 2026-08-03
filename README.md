@@ -18,7 +18,6 @@
     * [Experiment Grid](#experiment-grid)
   * [📊 Results & Analysis](#-results--analysis)
   * [📁 Project Structure](#-project-structure)
-  * [📄 License](#-license)
 <!-- TOC -->
 
 ## 🚀 Overview
@@ -30,7 +29,7 @@ The goal of this project is to improve **fallacy detection and classification** 
 **Retrieval-Augmented Generation (RAG)**. By grounding models in external knowledge sources, the system aims to provide
 more accurate classifications and clearer explanations of fallacious arguments in US political debates.
 
-The main experiments use the **ElecDeb60to20** dataset (link omitted for anonymity), which contains transcripts
+The main experiments use the **ElecDeb60to20** dataset, which contains transcripts
 from U.S. political debates from 1960 to 2020. The same pipeline also runs on the **propaganda** dataset, and a
 separate relation-classification pipeline draws on the **LIARArg** corpus.
 
@@ -391,9 +390,3 @@ output/
 Each `create_db.py` reads its raw splits from `--dataset-dir` (default `datasets/<name>-dataset`) and writes the
 RAG-enriched splits back under `<dataset-dir>/<task>/<config>/{train,dev,test}.csv`, where `<config>` encodes the
 retrieval settings as described in [Configuration Folder Names](#configuration-folder-names).
-
-## 📄 License
-
-Anonymous holds the ownership rights on the code and data in this repository. Use is granted **free of charge to academic
-users for research purposes only**; any other use requires prior consent from Anonymous. See [`LICENSE`](LICENSE) for the
-full terms.
