@@ -41,7 +41,7 @@ fine-tuning) are supported for every task, each with and without RAG context.
 
 ## 🔬 Pipeline
 
-![FallacyRAG pipeline](docs/pipeline.png)
+![FallacyRAG pipeline](misc/docs/pipeline.png)
 
 Each sentence is turned into a retrieval **query** — the bare sentence, or the sentence enriched with the argumentative
 components that support or attack it. The query is sent to the **knowledge base** through one of four retrievers (three
