@@ -1,8 +1,9 @@
 """Aggregate multi-seed results into per-config CSVs.
 Reads ``output/five-runs/<dataset-task>/<config>/<model>/seed_<n>/<run>/`` for
 ``predict_results.json`` (encoders) or ``predict_results_metrics.json`` (LLMs) and writes
-``results_mean_std.csv`` per config, one row per model with mean, standard deviation and seed
-count, plus a combined ``all_results_mean_std.csv``."""
+``results_mean_std.csv`` per config, one row per model and run (so zero_shot, few_shot and
+fine_tune stay separate) with mean, standard deviation and seed count, plus a combined
+``all_results_mean_std.csv``."""
 
 import json
 import logging
@@ -30,6 +31,9 @@ METRICS = [
 ]
 
 BASELINE_CONFIGS = ("baseline", "temporal=false-retriever=false-summarizer=false")
+
+MODE_RE = re.compile(r"^mode-(?P<mode>zero_shot|few_shot|fine_tune)")
+SEED_SUFFIX_RE = re.compile(r"_seed\d+$")
 
 CONFIG_META_COLUMNS = [
     "task", "config", "temporal", "retriever", "search", "rerank", "query", "summarizer",
@@ -70,13 +74,25 @@ def parse_config_folder(folder_name: str) -> dict:
     }
 
 
-def find_results_file(seed_path: str) -> str | None:
-    """Locate the metrics json under a seed folder (searches any run subdir)."""
+def run_mode(run_name: str) -> str:
+    """Prompting mode of a run: zero_shot/few_shot/fine_tune; encoder sweeps are all fine_tune."""
+    m = MODE_RE.match(run_name)
+    return m.group("mode") if m else "fine_tune"
+
+
+def find_results_files(seed_path: str) -> dict[str, str]:
+    """Every metrics json under a seed folder, keyed by run name with the _seed<N> suffix stripped."""
+    found = {}
     for dirpath, _dirnames, filenames in os.walk(seed_path):
         for candidate in (RESULTS_FILE, RESULTS_FILE_ALT):
-            if candidate in filenames:
-                return os.path.join(dirpath, candidate)
-    return None
+            if candidate not in filenames:
+                continue
+            if os.path.abspath(dirpath) == os.path.abspath(seed_path):
+                run_name = "default"
+            else:
+                run_name = SEED_SUFFIX_RE.sub("", os.path.basename(dirpath))
+            found[run_name] = os.path.join(dirpath, candidate)
+    return found
 
 
 def load_metrics(results_path: str) -> dict | None:
@@ -95,21 +111,23 @@ def load_metrics(results_path: str) -> dict | None:
 
 
 def collect_seed_rows(model_path: str) -> list[dict]:
-    """One row of raw metrics per seed found under a model folder."""
+    """One row of raw metrics per (run, seed) found under a model folder."""
     rows = []
     for seed_name in sorted(os.listdir(model_path)):
         seed_path = os.path.join(model_path, seed_name)
         if not os.path.isdir(seed_path):
             continue
-        results_path = find_results_file(seed_path)
-        if results_path is None:
+        found = find_results_files(seed_path)
+        if not found:
             logger.warning("No results file under %s — skipping", seed_path)
             continue
-        metrics = load_metrics(results_path)
-        if metrics is None:
-            continue
-        metrics["seed"] = seed_name
-        rows.append(metrics)
+        for run_name, results_path in sorted(found.items()):
+            metrics = load_metrics(results_path)
+            if metrics is None:
+                continue
+            metrics["seed"] = seed_name
+            metrics["configuration"] = run_name
+            rows.append(metrics)
     return rows
 
 
@@ -127,31 +145,44 @@ def summarise_config(config_path: str) -> pd.DataFrame:
             continue
 
         model_df = pd.DataFrame(seed_rows)
-        row = {"model": model_name, "n_seeds": len(seed_rows)}
-        for col in metric_cols:
-            values = pd.to_numeric(model_df.get(col), errors="coerce")
-            row[f"{col}_mean"] = round(values.mean(), 3)
-            row[f"{col}_std"] = round(values.std(ddof=1), 3)
-            row[f"{col}_values"] = " ".join(
-                "nan" if pd.isna(v) else f"{round(v, 3)}" for v in values
-            )
-        summary_rows.append(row)
+        for run_name, run_df in model_df.groupby("configuration"):
+            row = {
+                "model": model_name,
+                "mode": run_mode(run_name),
+                "configuration": run_name,
+                "n_seeds": len(run_df),
+            }
+            for col in metric_cols:
+                values = pd.to_numeric(run_df.get(col), errors="coerce")
+                row[f"{col}_mean"] = round(values.mean(), 3)
+                row[f"{col}_std"] = round(values.std(ddof=1), 3)
+                row[f"{col}_values"] = " ".join(
+                    "nan" if pd.isna(v) else f"{round(v, 3)}" for v in values
+                )
+            summary_rows.append(row)
 
-    columns = ["model", "n_seeds"] + [
+    columns = ["model", "mode", "configuration", "n_seeds"] + [
         f"{col}_{stat}" for col in metric_cols for stat in ("mean", "std", "values")
     ]
     return pd.DataFrame(summary_rows, columns=columns)
 
 
 def add_baseline_deltas(agg_df: pd.DataFrame, metric_cols: list[str]) -> pd.DataFrame:
-    """Add per-model delta columns: config mean minus the baseline mean."""
+    """Add delta columns per model and mode: config mean minus the same mode's baseline mean."""
     baseline = agg_df[agg_df["config"].isin(BASELINE_CONFIGS)]
     if baseline.empty:
         logger.warning("No baseline config found — delta columns will be NaN")
 
+    keys = ["model", "mode"]
     for col in metric_cols:
-        ref = baseline.set_index("model")[f"{col}_mean"] if not baseline.empty else None
-        base_means = agg_df["model"].map(ref) if ref is not None else float("nan")
+        if baseline.empty:
+            agg_df[f"{col}_delta"] = float("nan")
+            continue
+        # a mode with several hparam runs in the baseline is represented by its best
+        ref = baseline.groupby(keys)[f"{col}_mean"].max()
+        base_means = pd.Series(
+            pd.MultiIndex.from_frame(agg_df[keys]).map(ref), index=agg_df.index
+        )
         agg_df[f"{col}_delta"] = (agg_df[f"{col}_mean"] - base_means).round(3)
     return agg_df
 
@@ -208,7 +239,7 @@ if __name__ == "__main__":
             continue
 
         metric_cols = [main for main, _ in METRICS]
-        ordered = CONFIG_META_COLUMNS + ["model", "n_seeds"] + [
+        ordered = CONFIG_META_COLUMNS + ["model", "mode", "configuration", "n_seeds"] + [
             f"{col}_{stat}" for col in metric_cols
             for stat in ("mean", "std", "values", "delta")
         ]
@@ -216,7 +247,8 @@ if __name__ == "__main__":
         agg_df = add_baseline_deltas(agg_df, metric_cols)
         agg_df = agg_df[[c for c in ordered if c in agg_df.columns]]
         agg_df = agg_df.sort_values(
-            ["config", "predict_f1_macro_mean"], ascending=[True, False]
+            ["config", "predict_f1_macro_mean", "model", "mode"],
+            ascending=[True, False, True, True],
         ).reset_index(drop=True)
         agg_path = os.path.join(task_path, AGGREGATE_FILE)
         agg_df.to_csv(agg_path, index=False)

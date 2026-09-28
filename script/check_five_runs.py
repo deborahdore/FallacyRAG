@@ -2,7 +2,7 @@
 """Verify completeness of the FallacyRAG 5-runs (multi-seed) detection grid.
 Checks that every config has all 15 model folders, each with its 5 seed runs carrying the
 completion marker (``predict_results.json`` for encoders, ``predict_results_metrics.json`` for
-LLMs). Missing or unexpected items are reported one per line and the exit code is non-zero.
+LLMs). LLM seeds are checked per prompting mode (``mode-<mode>_*`` run folders). Missing or unexpected items are reported one per line and the exit code is non-zero.
 Usage: ``python check_five_runs.py [BASE_DIR]``."""
 
 import sys
@@ -39,6 +39,10 @@ SEED_DIRS = [f"seed_{s}" for s in SEEDS]
 ENCODER_MARKER = "predict_results.json"
 LLM_MARKER = "predict_results_metrics.json"
 
+LLM_MODES = ["zero_shot", "few_shot", "fine_tune"]
+# Datasets where only some LLM modes were run
+MODES_BY_DATASET = {"LIARArg-relation-classification": ["fine_tune"]}
+
 
 def has_marker(seed_dir: Path, marker: str) -> bool:
     """True if the marker file exists anywhere inside the seed run folder."""
@@ -46,6 +50,7 @@ def has_marker(seed_dir: Path, marker: str) -> bool:
 
 
 def check(base: Path):
+    modes = MODES_BY_DATASET.get(base.name, LLM_MODES)
     problems = []
     stats = {"configs": 0, "runs_expected": 0, "runs_ok": 0}
 
@@ -75,16 +80,29 @@ def check(base: Path):
                 problems.append(f"[EXTRA SEED]    {config.name}/{m}/{s}")
 
             for s in SEED_DIRS:
-                stats["runs_expected"] += 1
                 sdir = mdir / s
+                if not is_llm:
+                    stats["runs_expected"] += 1
+                    if not sdir.is_dir():
+                        problems.append(f"[MISSING SEED]  {config.name}/{m}/{s}")
+                    elif not has_marker(sdir, marker):
+                        problems.append(f"[NO MARKER]     {config.name}/{m}/{s}  (need {marker})")
+                    else:
+                        stats["runs_ok"] += 1
+                    continue
+
+                stats["runs_expected"] += len(modes)
                 if not sdir.is_dir():
-                    problems.append(f"[MISSING SEED]  {config.name}/{m}/{s}")
-                elif not has_marker(sdir, marker):
-                    problems.append(
-                        f"[NO MARKER]     {config.name}/{m}/{s}  (need {marker})"
-                    )
-                else:
-                    stats["runs_ok"] += 1
+                    problems.append(f"[MISSING SEED]  {config.name}/{m}/{s}  ({len(modes)} modes)")
+                    continue
+                for mode in modes:
+                    runs = [p for p in sdir.iterdir() if p.is_dir() and p.name.startswith(f"mode-{mode}_")]
+                    if not runs:
+                        problems.append(f"[MISSING MODE]  {config.name}/{m}/{s}/{mode}")
+                    elif not any(has_marker(r, marker) for r in runs):
+                        problems.append(f"[NO MARKER]     {config.name}/{m}/{s}/{mode}  (need {marker})")
+                    else:
+                        stats["runs_ok"] += 1
 
     print(f"Scanned {stats['configs']} config folders under {base}")
     print(f"Seed runs expected: {stats['runs_expected']} | "

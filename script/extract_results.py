@@ -2,7 +2,8 @@
 Reads every ``output/one-run/<dataset-task>/<config>/<model>/<run>/predict_results.json`` and
 writes ``output/one-run/<dataset-task>/<config>/results.csv``, with the RAG axes parsed from the
 config folder name (temporal, retriever, search, rerank, query, summarizer) alongside model,
-configuration, predict_f1_macro and predict_accuracy."""
+mode, configuration, predict_f1_macro and predict_accuracy. The best run is kept per model and
+mode, so zero_shot, few_shot and fine_tune each get their own row."""
 
 import json
 import logging
@@ -24,8 +25,10 @@ AGGREGATE_FILE = "all_results.csv"
 
 COLUMNS = [
     "dataset", "temporal", "retriever", "search", "rerank", "query", "summarizer",
-    "model", "configuration", "predict_f1_macro", "predict_accuracy"
+    "model", "mode", "configuration", "predict_f1_macro", "predict_accuracy"
 ]
+
+MODE_RE = re.compile(r"^mode-(?P<mode>zero_shot|few_shot|fine_tune)")
 
 CONFIG_RE = re.compile(
     r"-?temporal=(?P<temporal>true|false)"
@@ -71,6 +74,12 @@ def parse_config_folder(folder_name: str) -> dict:
     }
 
 
+def run_mode(run_name: str) -> str:
+    """Prompting mode of a run: zero_shot/few_shot/fine_tune; encoder sweeps are all fine_tune."""
+    m = MODE_RE.match(run_name)
+    return m.group("mode") if m else "fine_tune"
+
+
 def collect_rows(config_path: str, config_meta: dict) -> list[dict]:
     """Walk model/run subdirectories and collect one row per valid run."""
     rows = []
@@ -100,6 +109,7 @@ def collect_rows(config_path: str, config_meta: dict) -> list[dict]:
             rows.append({
                 **config_meta,
                 "model": model_name,
+                "mode": run_mode(run_name),
                 "configuration": run_name,
                 "dataset": config_path,
                 "predict_f1_macro": metrics.get("f1_macro" if alt else "predict_f1_macro"),
@@ -136,9 +146,11 @@ if __name__ == "__main__":
                 continue
 
             df = pd.DataFrame(rows, columns=COLUMNS)
-            best_metric = "predict_accuracy" if "detection" in output_dir else "predict_f1_macro"
+            # best run per model AND mode by macro-F1, so prompting modes stay separate
+            best_metric = "predict_f1_macro"
             df = (
-                df.loc[df.groupby("model")[best_metric].idxmax()]
+                df.loc[df.groupby(["model", "mode"])[best_metric].idxmax()]
+                .sort_values(["model", "mode"])
                 .reset_index(drop=True)
             )
 
@@ -152,8 +164,10 @@ if __name__ == "__main__":
             logger.warning("No results to aggregate — %s not written.", AGGREGATE_FILE)
         else:
             agg_df = pd.concat(aggregated, ignore_index=True)[COLUMNS]
-            agg_metric = "predict_accuracy" if "detection" in output_dir else "predict_f1_macro"
-            agg_df = agg_df.sort_values(agg_metric, ascending=False).reset_index(drop=True)
+            agg_metric = "predict_f1_macro"
+            agg_df = agg_df.sort_values(
+                [agg_metric, "model", "mode"], ascending=[False, True, True]
+            ).reset_index(drop=True)
             agg_path = os.path.join(output_dir, AGGREGATE_FILE)
             agg_df.to_csv(agg_path, index=False)
             logger.info("Wrote %d aggregated rows → %s", len(agg_df), agg_path)

@@ -148,7 +148,7 @@ def check(base: Path):
 
 
 if __name__ == "__main__":
-    dataset = "propaganda"
+    dataset = "elecdeb60to20"
     task = "detection"
     default = root / "output" / "one-run" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default

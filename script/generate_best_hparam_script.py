@@ -1,6 +1,6 @@
 """Emit sbatch scripts re-running each model's best hyperparameter configuration, once per seed.
 Reads an ``output/one-run/<data>-<task>/<dataset>`` folder and picks the best run per model by
-predict_accuracy (detection) or predict_f1_macro (otherwise), then clones the matching template:
+predict_f1_macro, then clones the matching template:
 encoders from ``03-fallacy_no_rag.sh``, LLMs from ``03-fallacy_no_rag_llm.sh``.
 Usage: ``python script/generate_best_hparam_script.py <output_folder> [options]``."""
 
@@ -158,7 +158,8 @@ def build_encoder_script(output_folder: str, template_path: str, seeds: list[int
     data, task = parse_data_task(output_folder)
 
     model_map = parse_template_models(template_path)
-    metric = "predict_accuracy" if task == "detection" else "predict_f1_macro"
+    # always select the best run by macro-F1, including detection
+    metric = "predict_f1_macro"
     best_configs = find_best_encoder_configs(output_folder, metric)
 
     entries = []
@@ -260,9 +261,9 @@ echo "Best-hyperparameter multi-seed sweep complete. Failed runs (if any) logged
     return header + "\n" + body, len(entries)
 
 
-def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[str, str | None, str | None, float]]:
+def find_best_llm_configs(output_folder: str, metric: str) -> dict[tuple[str, str], tuple[str, str | None, str | None, float]]:
     """For each model dir with 'mode-...' run folders, find the best (mode, lr, epoch, score)
-    across fine_tune's bs/lr/ep sweep AND the zero_shot/few_shot single runs."""
+    separately for each mode: fine_tune (best of the lr/ep sweep), zero_shot and few_shot."""
     alt_key = ALT_METRIC_KEY[metric]
     best = {}
     for model_name in sorted(os.listdir(output_folder)):
@@ -270,7 +271,7 @@ def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[st
         if not os.path.isdir(model_path):
             continue
 
-        best_score, best_conf = None, None
+        best_score, best_conf = {}, {}  # keyed by mode
 
         for run_name in sorted(os.listdir(model_path)):
             run_path = os.path.join(model_path, run_name)
@@ -300,12 +301,13 @@ def find_best_llm_configs(output_folder: str, metric: str) -> dict[str, tuple[st
             score = metrics.get(alt_key)
             if score is None:
                 continue
-            if best_score is None or score > best_score:
-                best_score = score
-                best_conf = (mode, lr, epoch)
+            if mode not in best_score or score > best_score[mode]:
+                best_score[mode] = score
+                best_conf[mode] = (mode, lr, epoch)
 
-        if best_conf is not None:
-            best[model_name] = (*best_conf, best_score)
+        for mode in ("fine_tune", "zero_shot", "few_shot"):
+            if mode in best_conf:
+                best[(model_name, mode)] = (*best_conf[mode], best_score[mode])
 
     return best
 
@@ -323,11 +325,12 @@ def build_llm_script(output_folder: str, template_path: str, seeds: list[int]) -
     batch = extract_scalar(template_content, "BATCH")
     default_batch = extract_scalar(template_content, "DEFAULT_BATCH")
 
-    metric = "predict_accuracy" if task == "detection" else "predict_f1_macro"
+    # always select the best run by macro-F1, including detection
+    metric = "predict_f1_macro"
     best_configs = find_best_llm_configs(output_folder, metric)
 
     entries = []
-    for model_name, (mode, lr, epoch, score) in best_configs.items():
+    for (model_name, _), (mode, lr, epoch, score) in best_configs.items():
         if model_name not in model_map:
             logger.warning("%s has no matching entry in %s's MODELS array — skipping.", model_name, template_path)
             continue
@@ -364,7 +367,7 @@ DEFAULT_BATCH={default_batch}
 
 SEEDS=({seeds_str})
 
-# Best config per model (fine_tune sweep + zero_shot + few_shot), by {metric} from {output_folder}.
+# Best config per model and mode (fine_tune sweep, zero_shot, few_shot), by {metric} from {output_folder}.
 # Format: "<model_path>|<mode>|<lr>|<epoch>"  (lr/epoch empty for zero_shot/few_shot)
 BEST_CONFIGS=(
 {configs_str}
@@ -593,7 +596,7 @@ def build_relation_llm_script(output_folder: str, template_path: str, seeds: lis
     best_configs = find_best_llm_configs(output_folder, metric)
 
     entries = []
-    for model_name, (mode, lr, epoch, score) in best_configs.items():
+    for (model_name, _), (mode, lr, epoch, score) in best_configs.items():
         if model_name not in model_map:
             logger.warning("%s has no matching entry in %s's MODELS array — skipping.", model_name, template_path)
             continue
@@ -633,7 +636,7 @@ DEFAULT_BATCH={default_batch}
 
 SEEDS=({seeds_str})
 
-# Best config per model (fine_tune sweep + zero_shot + few_shot), by {metric} from {output_folder}.
+# Best config per model and mode (fine_tune sweep, zero_shot, few_shot), by {metric} from {output_folder}.
 # Format: "<model_path>|<mode>|<lr>|<epoch>"  (lr/epoch empty for zero_shot/few_shot)
 BEST_CONFIGS=(
 {configs_str}
