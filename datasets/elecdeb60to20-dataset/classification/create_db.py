@@ -109,6 +109,8 @@ DATASET_MODES = {
     "relations": "Same construction as 'sentence' (split, balance, re-split); the only "
                  "difference is the retrieval query = component text + relations_text of "
                  "its related components (looked up from relations.csv by text overlap).",
+    "sentence-enriched": "Same as 'sentence' without retrieval, but the related (supporting/attacking) "
+                         "components from relations.csv and their labels are appended to the sentence.",
 }
 
 COMPONENT_SEP = "|||"
@@ -726,6 +728,33 @@ def build_relations_mode(persist_directory_path: str,
     )
 
 
+def build_sentence_enriched_mode(dataset_dir: str, path: str) -> None:
+    """Run the 'sentence-enriched' pipeline: no retrieval, related components are added to the sentence."""
+    splits = _build_balanced_splits(dataset_dir)
+    index, components = _load_relations_index(dataset_dir)
+
+    for name, split_df in splits.items():
+        rows = []
+        for _, row in tqdm(split_df.iterrows(), total=len(split_df), desc=f"Enriching {name} with relations"):
+            row = row.copy()
+            _, relations_text, relations_label = _match_relations(row["sentence"], index, components)
+            texts = _parse_relations_text(relations_text)
+            labels = _parse_relations_label(relations_label)
+            # Append each related component with its relation label to the model input
+            if texts:
+                related = "; ".join(f'"{t}" ({labels[i] if i < len(labels) else "Support"})'
+                                    for i, t in enumerate(texts))
+                row["sentence"] = normalize_text(f"{row['sentence']} Related: {related}.")
+                row["text"] = f"{row['speech_turn']} [SEP] {row['sentence']}"
+            row["relations_text"] = relations_text
+            row["relations_label"] = relations_label
+            row["has_relations"] = bool(texts)
+            rows.append(row)
+        splits[name] = pd.DataFrame(rows).reset_index(drop=True)
+
+    _run_pipeline(splits, None, retriever=None, path=path, record_query=False)
+
+
 def _print_dataset_statistics(train_df: pd.DataFrame, test_df: pd.DataFrame,
                               dev_df: pd.DataFrame) -> None:
     """Print size and label-distribution statistics for each dataset split."""
@@ -844,6 +873,8 @@ if __name__ == "__main__":
         assert args.retriever is not None, "--temporal-rag requires a --retriever."
     if args.mode == "relations" and args.retriever is None:
         parser.error("--mode relations requires a --retriever.")
+    if args.mode == "sentence-enriched" and args.retriever is not None:
+        parser.error("--mode sentence-enriched does not use a --retriever.")
 
     path = str(Path(args.dataset_dir) / "classification" / f"temporal={str(args.temporal_rag)}")
     if args.retriever:
@@ -854,6 +885,8 @@ if __name__ == "__main__":
         path += "-retriever=false"
     if args.mode == "relations":
         path += f"-query={args.query_mode}"
+    if args.mode == "sentence-enriched":
+        path += "-mode=sentence-enriched"
     if args.summarization_model:
         path += f"-summarizer={args.summarization_model.replace('/', '-')}"
     else:
@@ -882,6 +915,8 @@ if __name__ == "__main__":
             dataset_dir=args.dataset_dir,
             path=path,
         )
+    elif args.mode == "sentence-enriched":
+        build_sentence_enriched_mode(dataset_dir=args.dataset_dir, path=path)
     else:
         build_relations_mode(
             persist_directory_path=args.persist_directory,
