@@ -28,69 +28,42 @@ def identify_dataset(train_file: Optional[str]) -> str:
 
 CLASSIFICATION_PROMPTS = {
     "elecdeb60to20": (
-        "You are an expert in argumentation theory and fallacy detection. "
-        "Your task is to identify which fallacy type a given sentence from a "
-        "political debate contains. A fallacy is a deceptive argumentative move that "
-        "appears valid but violates principles of correct reasoning. "
-        "Consider only these six fallacy types:\n"
-        "- Ad Hominem: an excessive attack on the opponent's position or character "
-        "(e.g. name-calling and labelling, tu quoque / \"you did it first\", or bias) "
-        "instead of addressing their argument.\n"
-        "- Appeal to Authority: citing an authority or a group's agreement without providing "
-        "relevant evidence, including appeals to non-experts or to mere popular acceptance.\n"
-        "- Appeal to Emotion: loading the argument with emotional language (appeal to pity, "
-        "appeal to fear, loaded language, or flag waving) to exploit the audience's feelings.\n"
-        "- False Cause: mistaking a correlation between two events for a causal relationship.\n"
-        "- Slippery Slope: claiming that an act will lead to an unlikely, exaggerated outcome "
-        "while omitting the intermediate steps.\n"
-        "- Slogan: a brief and striking phrase used to provoke excitement, often reinforced "
-        "by repetition.\n"
-        "Every sentence contains exactly one of these six fallacy types — there is always "
-        "a fallacy present, so \"None\" is never a valid answer. "
-        "Answer with exactly one fallacy type, using exactly one of those six names, and "
-        "nothing else."
+        "You classify fallacies in political debate sentences. Types:\n"
+        "- Ad Hominem: attacks the opponent's character or position instead of the argument "
+        "(name-calling, tu quoque, bias).\n"
+        "- Appeal to Authority: cites an authority or popular agreement without relevant evidence.\n"
+        "- Appeal to Emotion: emotional language (pity, fear, loaded words, flag waving) "
+        "instead of reasons.\n"
+        "- False Cause: treats a correlation as causation.\n"
+        "- Slippery Slope: claims an act leads to an exaggerated outcome, skipping the steps between.\n"
+        "- Slogan: brief, striking phrase meant to provoke excitement.\n"
+        "Each sentence contains exactly one type."
     ),
     "unknown": (
-        "You are an expert in argumentation theory and political discourse analysis. "
-        "Your task is to identify which fallacy types, if any, a given sentence from a "
-        "political debate contains. A fallacy is a deceptive argumentative move that "
-        "appears valid but violates principles of correct reasoning. "
-        "Consider only these six fallacy types:\n"
-        "- Ad Hominem: attacking the opponent personally instead of their argument.\n"
-        "- Appeal to Authority: relying on an authority figure or consensus without sufficient evidence.\n"
-        "- Appeal to Emotion: using emotionally charged language to manipulate rather than reason.\n"
-        "- False Cause: assuming a causal link between events merely because they co-occur.\n"
-        "- Slippery Slope: claiming a small first step inevitably leads to extreme consequences.\n"
-        "- Slogan: a short, striking phrase meant to provoke agreement rather than argue.\n"
-        "Every sentence contains exactly one of these six fallacy types — there is always "
-        "a fallacy present, so \"None\" is never a valid answer. "
-        "Answer with exactly one fallacy type, using exactly one of those six names, and "
-        "nothing else."
+        "You classify fallacies in political debate sentences. Types:\n"
+        "- Ad Hominem: attacks the opponent instead of the argument.\n"
+        "- Appeal to Authority: relies on authority or consensus without evidence.\n"
+        "- Appeal to Emotion: manipulates with emotional language.\n"
+        "- False Cause: assumes causation from co-occurrence.\n"
+        "- Slippery Slope: a first step supposedly leads to extreme consequences.\n"
+        "- Slogan: short, striking phrase instead of an argument.\n"
+        "Each sentence contains exactly one type."
     ),
 }
 
 DETECTION_PROMPTS = {
     "elecdeb60to20": (
-        "You are an expert in argumentation theory and fallacy detection. "
-        "Your task is to determine whether a given sentence from a political debate contains a fallacy. "
-        "A fallacy is a deceptive argumentative move that appears valid but violates principles of correct reasoning. "
-        'Answer with exactly one word: "Yes" if the sentence contains a fallacy, '
-        'or "No" if it does not.'
+        "You detect fallacies in political debate sentences. A fallacy is an argument that "
+        "seems valid but violates correct reasoning."
     ),
     "propaganda": (
-        "You are an expert in propaganda detection and persuasion analysis. "
-        "Your task is to determine whether a given sentence from a news article contains a propaganda technique. "
-        "A propaganda technique is a persuasive device (such as loaded language, name calling, "
-        "exaggeration, appeal to fear, or flag waving) used to influence an audience beyond sound reasoning. "
-        'Answer with exactly one word: "Yes" if the sentence contains a propaganda technique, '
-        'or "No" if it does not.'
+        "You detect propaganda in news article sentences. A propaganda technique is a persuasive "
+        "device (e.g. loaded language, name calling, exaggeration, appeal to fear, flag waving) "
+        "that sways the audience beyond sound reasoning."
     ),
     "unknown": (
-        "You are an expert in argumentation theory and political discourse analysis. "
-        "Your task is to determine whether a given sentence from a political debate contains a fallacy. "
-        "A fallacy is a deceptive argumentative move that appears valid but violates principles of correct reasoning. "
-        'Answer with exactly one word: "Yes" if the sentence contains a fallacy, '
-        'or "No" if it does not.'
+        "You detect fallacies in political debate sentences. A fallacy is an argument that "
+        "seems valid but violates correct reasoning."
     ),
 }
 

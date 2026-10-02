@@ -32,7 +32,7 @@ LLMS = [
     "Mistral-7B-Instruct-v0.3"
 ]
 
-BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline"]
+BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline", "temporal=false-retriever=false-mode=sentence-enriched-summarizer=false"]
 
 BEST_FOLDER_ELECDEB60TO20_DETECTION = "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
@@ -89,6 +89,16 @@ def expected_models(folder_name: str, base: Path):
     return []
 
 
+def expected_configs(base: Path):
+    # Expected configs are the RAG folders of the matching dataset (e.g. elecdeb60to20-detection)
+    data, task = base.name.split("-", 1)
+    ds = root / "datasets" / f"{data}-dataset" / task
+    if not ds.is_dir():
+        print(f"WARNING: dataset folder not found, missing configs cannot be checked: {ds}")
+        return []
+    return sorted(p.name for p in ds.iterdir() if p.is_dir()) or ["baseline"]
+
+
 def check(base: Path):
     problems = []
     stats = {"configs": 0, "combos_expected": 0, "combos_ok": 0}
@@ -96,6 +106,10 @@ def check(base: Path):
     if not base.is_dir():
         print(f"ERROR: base directory not found: {base}")
         return 1
+
+    for c in expected_configs(base):
+        if not (base / c).is_dir():
+            problems.append(f"[MISSING CONFIG] {c}")
 
     for config in sorted(p for p in base.iterdir() if p.is_dir()):
         stats["configs"] += 1
@@ -148,7 +162,7 @@ def check(base: Path):
 
 
 if __name__ == "__main__":
-    dataset = "elecdeb60to20"
+    dataset = "propaganda"
     task = "detection"
     default = root / "output" / "one-run" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default

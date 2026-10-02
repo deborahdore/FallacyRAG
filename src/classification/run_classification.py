@@ -443,6 +443,10 @@ def main():
     config.problem_type = "multi_label_classification" if is_multi_label else "single_label_classification"
     logger.info(f"Setting problem type to {config.problem_type}")
 
+    if "deberta" in config.model_type:
+        config.torch_dtype = torch.float32
+        logger.info("Forcing torch_dtype=float32 in config for DeBERTa model")
+
     tokenizer = AutoTokenizer.from_pretrained(
         model_args.tokenizer_name or model_args.model_name_or_path,
         cache_dir=model_args.cache_dir,

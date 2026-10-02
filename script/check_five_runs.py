@@ -40,6 +40,15 @@ ENCODER_MARKER = "predict_results.json"
 LLM_MARKER = "predict_results_metrics.json"
 
 LLM_MODES = ["zero_shot", "few_shot", "fine_tune"]
+BASELINE = "temporal=false-retriever=false-summarizer=false"
+# Config folders expected in each five-runs dataset: baseline + best RAG config
+EXPECTED_CONFIGS = {
+    "elecdeb60to20-detection": [BASELINE, "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "elecdeb60to20-classification": [BASELINE, "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "propaganda-detection": [BASELINE, "temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "LIARArg-relation-classification": ["baseline"],
+}
+
 # Datasets where only some LLM modes were run
 MODES_BY_DATASET = {"LIARArg-relation-classification": ["fine_tune"]}
 
@@ -57,6 +66,12 @@ def check(base: Path):
     if not base.is_dir():
         print(f"ERROR: base directory not found: {base}")
         return 1
+
+    if base.name not in EXPECTED_CONFIGS:
+        print(f"WARNING: no expected configs for {base.name}, missing configs cannot be checked")
+    for c in EXPECTED_CONFIGS.get(base.name, []):
+        if not (base / c).is_dir():
+            problems.append(f"[MISSING CONFIG] {c}")
 
     for config in sorted(p for p in base.iterdir() if p.is_dir()):
         stats["configs"] += 1

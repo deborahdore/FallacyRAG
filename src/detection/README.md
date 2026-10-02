@@ -222,16 +222,15 @@ automatically from the dataset** (ElecDeb60to20 vs. propaganda) based on the tra
 needed to switch datasets. Each example is formatted as a structured chat prompt:
 
 ```
-[System]    You are an expert in argumentation theory…
+[System]    You detect fallacies in political debate sentences. A fallacy is…
 [User]      Sentence: "<sentence>"
 
-            Debate turn context:
+            Surrounding text:
             <speech_turn>
 
             [Retrieved context: <context>]   (when --use_rag)
 
-            Does this sentence contain a fallacy?
-            Answer with exactly one word: "Yes" or "No".
+            Does the sentence contain a fallacy? Answer "Yes" or "No".
 [Assistant] Yes | No
 ```
 
@@ -253,7 +252,7 @@ This keeps the prompt natural and the evaluation consistent with the encoder bas
 |-----------------|--------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Zero-shot**   | `--mode zero_shot` | No examples in the prompt. The model relies entirely on its pre-trained knowledge.                                                                              |
 | **Few-shot**    | `--mode few_shot`  | `--num_shots` balanced examples (per class) are prepended as prior conversation turns. Examples are sampled from the training split.                            |
-| **Fine-tuning** | `--mode fine_tune` | LoRA / QLoRA supervised fine-tuning via TRL `SFTTrainer`, followed by evaluation / prediction on the fine-tuned adapter. Only supported with `--backend local`. |
+| **Fine-tuning** | `--mode fine_tune` | LoRA / QLoRA supervised fine-tuning (HF `Trainer`, loss on the answer tokens only), followed by evaluation / prediction on the fine-tuned adapter. Only supported with `--backend local`. |
 
 ### Backends
 
@@ -288,7 +287,13 @@ Same columns and defaults as the encoder script. Additional argument:
 | `--backend`              | `local`     | Inference backend: `local` or `openai`.                                                                        |
 | `--num_shots`            | `1`         | Examples **per class** for few-shot prompting (total prompt examples = `2 × num_shots`).                       |
 | `--few_shot_seed`        | `42`        | Random seed for selecting few-shot examples from the training split.                                           |
+| `--few_shot_pool_size` | `10` | Few-shot demonstrations are drawn at random among the N shortest training examples of each class (sentence + speech turn + context). |
 | `--max_new_tokens`       | `4`         | Maximum new tokens to generate per example (the answer is a single "Yes"/"No" word).                           |
+| `--reasoning_max_new_tokens` | `512` | Generation cap for models with a reasoning channel (gpt-oss); only the final-channel text is parsed. |
+| `--max_prompt_tokens` | model window | Cap on the templated prompt. Default: the model's context window (`max_position_embeddings`) minus the generation cap. Speech turns and contexts are clipped (budgets halved) only if a prompt exceeds it; the prompt is never truncated, and a RAG context is kept at ≥ 64 tokens. |
+| `--speech_turn_max_tokens` | `None` | Optional budget for the target speech turn (window centred on the sentence). |
+| `--context_max_tokens` | `None` | Optional budget for the target retrieved context (head kept, cut marked with `[...]`). |
+| `--shot_max_tokens` | `None` | Optional budget for the speech turn and the context of each few-shot demonstration. |
 | `--temperature`          | `0.0`       | Sampling temperature. `0` = greedy decoding.                                                                   |
 | `--inference_batch_size` | `8`         | Batch size for local inference (not used for `openai` backend).                                                |
 | `--load_in_4bit`         | `False`     | Load model in 4-bit NF4 (QLoRA). Requires `bitsandbytes`.                                                      |
