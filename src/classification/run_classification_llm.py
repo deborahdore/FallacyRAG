@@ -2,7 +2,8 @@
 Each example becomes an instruction-following chat prompt, carrying the pre-built "context"
 column when ``--use_rag``, and the free-text response is parsed back into canonical labels by
 fuzzy alias matching. Single- vs multi-label and the system prompt are both derived from the
-dataset. Backends: local HuggingFace generate() or the OpenAI chat API."""
+dataset. Backends: local HuggingFace generate() or the OpenAI chat API.
+The templated prompt never exceeds MAX_PROMPT_TOKENS (2048)."""
 
 from __future__ import annotations
 
@@ -290,9 +291,10 @@ class LLMExperimentArguments:
     )
     max_prompt_tokens: Optional[int] = field(
         default=None,
-        metadata={"help": "Cap on the templated prompt. Default: the model's context window minus "
-                          "the generation cap. Speech turns and retrieved contexts are clipped "
-                          "only if the prompt exceeds it; the prompt itself is never truncated."},
+        metadata={"help": "Cap on the templated prompt, never above 2048 and never above the model's "
+                          "context window minus the generation cap (default: that bound). Speech turns "
+                          "and retrieved contexts are clipped only if the prompt exceeds it; the "
+                          "prompt itself is never truncated."},
     )
     speech_turn_max_tokens: Optional[int] = field(
         default=None,
@@ -359,6 +361,7 @@ class LLMExperimentArguments:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
 
 
+MAX_PROMPT_TOKENS = 2048  # hard ceiling on the templated prompt, to fit in memory
 MIN_CLIP_TOKENS = 64  # floor for clipping, so a RAG context is shortened but never dropped
 
 
@@ -490,7 +493,7 @@ def build_messages(
 ) -> list[dict]:
     """Chat messages for one example, with optional few-shot demonstrations as prior turns.
     Speech turns and contexts are clipped, and budgets halved until the prompt fits max_prompt_tokens."""
-    cap = llm_args.max_prompt_tokens or 8192  # 8192 only when no model window was resolved
+    cap = min(llm_args.max_prompt_tokens or MAX_PROMPT_TOKENS, MAX_PROMPT_TOKENS)
     turn_n = llm_args.speech_turn_max_tokens or cap
     ctx_n = llm_args.context_max_tokens or cap
     shot_n = llm_args.shot_max_tokens or cap
@@ -1028,8 +1031,8 @@ def main():
     logger.setLevel(logging.INFO)
     datasets.utils.logging.set_verbosity(logging.INFO)
 
-    # default prompt cap: the model's context window minus room for the generated answer
-    if llm_args.max_prompt_tokens is None and llm_args.backend == "local":
+    llm_args.max_prompt_tokens = min(llm_args.max_prompt_tokens or MAX_PROMPT_TOKENS, MAX_PROMPT_TOKENS)
+    if llm_args.backend == "local":
         from transformers import AutoConfig
         cfg = AutoConfig.from_pretrained(
             model_args.model_name_or_path, cache_dir=model_args.cache_dir, token=model_args.token,
@@ -1038,7 +1041,8 @@ def main():
         window = (getattr(cfg, "max_position_embeddings", None)
                   or getattr(getattr(cfg, "text_config", None), "max_position_embeddings", None))
         if window:
-            llm_args.max_prompt_tokens = window - max(llm_args.max_new_tokens, llm_args.reasoning_max_new_tokens)
+            room = window - max(llm_args.max_new_tokens, llm_args.reasoning_max_new_tokens)
+            llm_args.max_prompt_tokens = min(llm_args.max_prompt_tokens, room)
         logger.info(f"Model context window: {window} | prompt cap: {llm_args.max_prompt_tokens}")
 
     logger.info(
