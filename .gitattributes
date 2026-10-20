@@ -5,3 +5,13 @@ datasets/propaganda-dataset/relation-classification/predictions.csv filter=lfs d
 datasets/propaganda-dataset/detection/temporal=false-retriever=baai-bge-large-en-v1.5-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false/train.csv filter=lfs diff=lfs merge=lfs -text
 datasets/propaganda-dataset/detection/temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false/train.csv filter=lfs diff=lfs merge=lfs -text
 datasets/**/*.csv filter=lfs diff=lfs merge=lfs -text
+# don't count notebooks toward the stats
+*.ipynb linguist-detectable=false
+
+# treat these as docs or generated, so they're excluded
+docs/** linguist-documentation
+results/** linguist-generated
+static/js/** linguist-vendored
+
+# force the language for an ambiguous extension
+*.m linguist-language=MATLAB
