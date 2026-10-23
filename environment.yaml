@@ -11,39 +11,22 @@ dependencies:
   - scikit-learn
   - pip:
       - torch
-      - torchvision
       - transformers
+      - "accelerate>=1.1.0"
+      - bitsandbytes
+      - datasets
+      - sentence-transformers
       - rootutils
-      - playwright
       - tqdm
+      - requests
       - beautifulsoup4
+      - lxml
+      - playwright
       - pytesseract
       - pdf2image
-      - requests
-      - requests-oauthlib
-      - langchain
-      - langchain-text-splitters
-      - langchain-community
-      - bs4
-      - "langchain[huggingface]"
-      - "langchain[openai]"
-      - "langchain-openai"
-      - langchain-google-vertexai
-      - langchain-huggingface
-      - langchain-ollama
-      - langchain-chroma
-      - langchain-community
-      - jq
-      - langchain_core
-      - lxml
-      - langchain-mistralai
-      - langchain-cohere
-      - tiktoken
-      - datasets
-      - evaluate
-      - "accelerate>=1.1.0"
-      - sentence-transformers
       - easyocr
-      - tiktoken
-      - bitsandbytes
-      - xformers
+      - langchain-core
+      - langchain-community
+      - langchain-text-splitters
+      - langchain-huggingface
+      - langchain-chroma
