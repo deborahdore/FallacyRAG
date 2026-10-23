@@ -8,11 +8,11 @@
     "predict_f1_Slipperyslope": 0.4,
     "predict_f1_Slogans": 0.3333333333333333,
     "predict_f1_macro": 0.5981879478105894,
-    "predict_loss": 1.0096005201339722,
+    "predict_loss": 1.0112311840057373,
     "predict_precision": 0.616675293305728,
     "predict_recall": 0.6013231793543251,
-    "predict_runtime": 1.1668,
+    "predict_runtime": 0.9377,
     "predict_samples": 164,
-    "predict_samples_per_second": 140.552,
-    "predict_steps_per_second": 17.998
+    "predict_samples_per_second": 174.891,
+    "predict_steps_per_second": 22.395
 }

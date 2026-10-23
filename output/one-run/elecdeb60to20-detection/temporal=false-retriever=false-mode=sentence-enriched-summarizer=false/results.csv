@@ -1,4 +1,0 @@
-dataset,temporal,retriever,search,rerank,query,summarizer,model,mode,configuration,predict_f1_macro,predict_accuracy
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-mode=sentence-enriched-summarizer=false,False,false-mode=sentence-enriched,none,none,none,none,ModernBERT-base,fine_tune,bs8_lr5e-5_ep5,0.728753487670613,0.7308868501529052
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-mode=sentence-enriched-summarizer=false,False,false-mode=sentence-enriched,none,none,none,none,RooseBERT-cont-cased,fine_tune,bs16_lr5e-5_ep3,0.7495863783763342,0.7522935779816514
-/Users/ddore/Documents/FallacyRAG/output/one-run/elecdeb60to20-detection/temporal=false-retriever=false-mode=sentence-enriched-summarizer=false,False,false-mode=sentence-enriched,none,none,none,none,RooseBERT-scr-cased,fine_tune,bs8_lr2e-5_ep3,0.7518214936247722,0.7553516819571865
