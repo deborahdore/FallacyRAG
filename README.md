@@ -1,7 +1,6 @@
+<div align="center">
 # Retrieving Relations, Detecting Fallacies: A RAG Approach to Political Debate Analysis
-
-<div>
- [![arXiv](https://img.shields.io/badge/arXiv-2508.03250-b31b1b.svg)]([https://arxiv.org/abs/2508.03250](https://arxiv.org/abs/2608.27471))
+[![arXiv](https://img.shields.io/badge/arXiv-2508.03250-b31b1b.svg)]([https://arxiv.org/abs/2508.03250](https://arxiv.org/abs/2608.27471))
 </div>
 
 <!-- TOC -->
