@@ -261,7 +261,8 @@ echo "Best-hyperparameter multi-seed sweep complete. Failed runs (if any) logged
     return header + "\n" + body, len(entries)
 
 
-def find_best_llm_configs(output_folder: str, metric: str) -> dict[tuple[str, str], tuple[str, str | None, str | None, float]]:
+def find_best_llm_configs(output_folder: str, metric: str) -> dict[
+    tuple[str, str], tuple[str, str | None, str | None, float]]:
     """For each model dir with 'mode-...' run folders, find the best (mode, lr, epoch, score)
     separately for each mode: fine_tune (best of the lr/ep sweep), zero_shot and few_shot."""
     alt_key = ALT_METRIC_KEY[metric]

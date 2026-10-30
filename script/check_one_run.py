@@ -32,7 +32,8 @@ LLMS = [
     "Mistral-7B-Instruct-v0.3"
 ]
 
-BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline", "temporal=false-retriever=false-mode=sentence-enriched-summarizer=false"]
+BASIC_FOLDER = ["temporal=false-retriever=false-summarizer=false", "baseline",
+                "temporal=false-retriever=false-mode=sentence-enriched-summarizer=false"]
 
 BEST_FOLDER_ELECDEB60TO20_DETECTION = "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
 BEST_FOLDER_ELECDEB60TO20_CLASSIFICATION = "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"
@@ -162,8 +163,8 @@ def check(base: Path):
 
 
 if __name__ == "__main__":
-    dataset = "propaganda"
-    task = "detection"
+    dataset = "elecdeb60to20"
+    task = "classification"
     default = root / "output" / "one-run" / (dataset + "-" + task)
     base = Path(sys.argv[1]).expanduser() if len(sys.argv) > 1 else default
     sys.exit(check(base))

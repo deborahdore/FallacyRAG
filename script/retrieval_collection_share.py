@@ -89,7 +89,8 @@ for task, folder in BEST_FOLDERS.items():
             while pos < len(ctx):
                 cands = by_prefix.get(ctx[pos:pos + KEY_LEN], []) + short_texts
                 # Keep candidates that match here and end at a passage boundary
-                ok = [t for t in cands if ctx.startswith(t, pos) and (pos + len(t) == len(ctx) or ctx[pos + len(t)] == " ")]
+                ok = [t for t in cands if
+                      ctx.startswith(t, pos) and (pos + len(t) == len(ctx) or ctx[pos + len(t)] == " ")]
                 if not ok:
                     n_unmatched_rows += 1
                     break

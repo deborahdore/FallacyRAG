@@ -2,8 +2,7 @@
 Each example becomes an instruction-following chat prompt, carrying the pre-built "context"
 column when ``--use_rag``, and the free-text response is parsed back into canonical labels by
 fuzzy alias matching. Single- vs multi-label and the system prompt are both derived from the
-dataset. Backends: local HuggingFace generate() or the OpenAI chat API.
-The templated prompt never exceeds MAX_PROMPT_TOKENS (2048)."""
+dataset. Backends: local HuggingFace generate() or the OpenAI chat API."""
 
 from __future__ import annotations
 
@@ -274,42 +273,10 @@ class LLMExperimentArguments:
         default=42,
         metadata={"help": "Random seed for selecting few-shot examples."},
     )
-    few_shot_pool_size: int = field(
-        default=10,
-        metadata={"help": "Few-shot demonstrations are drawn at random among the N shortest training "
-                          "examples of each class (sentence + speech turn + context), to save context."},
-    )
     max_new_tokens: int = field(
         default=32,
         metadata={"help": "Maximum number of new tokens to generate per example "
                           "(needs to fit a single fallacy type name)."},
-    )
-    reasoning_max_new_tokens: int = field(
-        default=512,
-        metadata={"help": "Generation cap for models with a reasoning channel (gpt-oss), which "
-                          "must finish reasoning before writing the answer."},
-    )
-    max_prompt_tokens: Optional[int] = field(
-        default=None,
-        metadata={"help": "Cap on the templated prompt, never above 2048 and never above the model's "
-                          "context window minus the generation cap (default: that bound). Speech turns "
-                          "and retrieved contexts are clipped only if the prompt exceeds it; the "
-                          "prompt itself is never truncated."},
-    )
-    speech_turn_max_tokens: Optional[int] = field(
-        default=None,
-        metadata={"help": "Optional token budget for the speech turn of the target example "
-                          "(default: no limit beyond --max_prompt_tokens)."},
-    )
-    context_max_tokens: Optional[int] = field(
-        default=None,
-        metadata={"help": "Optional token budget for the retrieved context of the target example "
-                          "(default: no limit beyond --max_prompt_tokens)."},
-    )
-    shot_max_tokens: Optional[int] = field(
-        default=None,
-        metadata={"help": "Optional token budget for the speech turn and the context of each "
-                          "few-shot demonstration (default: no limit beyond --max_prompt_tokens)."},
     )
     temperature: float = field(
         default=0.0,
@@ -359,36 +326,6 @@ class LLMExperimentArguments:
             raise ValueError(f"--backend must be one of {valid_backends}, got '{self.backend}'.")
         if self.load_in_4bit and self.load_in_8bit:
             raise ValueError("Cannot set both --load_in_4bit and --load_in_8bit.")
-
-
-MAX_PROMPT_TOKENS = 2048  # hard ceiling on the templated prompt, to fit in memory
-MIN_CLIP_TOKENS = 64  # floor for clipping, so a RAG context is shortened but never dropped
-
-
-def render_chat(tokenizer, messages: list[dict], add_generation_prompt: bool = True) -> str:
-    """Apply the chat template with thinking off (Qwen) and low reasoning effort (gpt-oss).
-    Templates that do not use these variables ignore them."""
-    return tokenizer.apply_chat_template(
-        messages, tokenize=False, add_generation_prompt=add_generation_prompt,
-        enable_thinking=False, reasoning_effort="low",
-    )
-
-
-def clip_text(text: Optional[str], max_tokens: int, tokenizer, anchor: Optional[str] = None):
-    """Keep at most max_tokens tokens of text, centred on anchor when it occurs in text
-    (otherwise the head is kept). Cuts are marked with "[...]"."""
-    if not text or tokenizer is None:
-        return text
-    enc = tokenizer(text, add_special_tokens=False, return_offsets_mapping=True)
-    offsets = enc["offset_mapping"]
-    if len(offsets) <= max_tokens:
-        return text
-    pos = text.find(anchor) if anchor else -1
-    first = sum(1 for s, _ in offsets if s < pos) if pos > 0 else 0
-    start = max(0, min(first - max_tokens // 2, len(offsets) - max_tokens))
-    end = start + max_tokens
-    clipped = text[offsets[start][0]:offsets[end - 1][1]]
-    return ("[...] " if start else "") + clipped + (" [...]" if end < len(offsets) else "")
 
 
 _GOLD_SPLIT_RE = re.compile(r"[,;|/]+")
@@ -460,63 +397,65 @@ def build_user_message(
         context: Optional[str] = None,
 ) -> str:
     """Build the user-turn text for a single example."""
-    parts = [f'Sentence: "{sentence}"']
-    if speech_turn:
-        parts.append(f"Surrounding text:\n{speech_turn}")
-    if context:
-        parts.append(f"Retrieved context:\n{context}")
+    parts = [
+        f'Sentence: "{sentence}"',
+        f"Debate turn context:\n{speech_turn}",
+    ]
     if IS_MULTI_LABEL:
         parts.append(
-            "Which fallacy types does the sentence contain? Answer with all that apply, "
-            f"comma-separated, from: {_LABEL_MENU}; or \"{NONE_LABEL}\" if none."
+            "Which fallacy type(s) does this sentence contain? "
+            f"Answer with every type that applies, drawn only from: {_LABEL_MENU}, "
+            "separated by commas. "
+            f"If the sentence contains no fallacy, answer exactly \"{NONE_LABEL}\". "
+            "Do not invent new types."
         )
     elif SINGLE_LABEL_NONE:
         none_readable = LABEL_TO_LLM.get(SINGLE_LABEL_NONE, "No Fallacy")
         parts.append(
-            f"Which fallacy type does the sentence contain? Answer with one of: {_LABEL_MENU}; "
-            f"or \"{none_readable}\" if none."
+            "Which fallacy type does this sentence contain, if any? "
+            f"Answer with exactly one option drawn only from: {_LABEL_MENU}. "
+            f"If the sentence contains no fallacy, answer exactly \"{none_readable}\". "
+            "Do not list more than one option."
         )
     else:
         parts.append(
-            f"Which fallacy type does the sentence contain? Answer with one of: {_LABEL_MENU}."
+            "Which single fallacy type does this sentence contain? "
+            f"Answer with exactly one type drawn only from: {_LABEL_MENU}. "
+            "Every sentence contains exactly one of these; do not answer \"None\" and "
+            "do not list more than one type."
         )
+    if context:
+        parts.append(f"Retrieved context:\n{context}")
     return "\n\n".join(parts)
 
 
-def build_messages(
+def build_zero_shot_messages(
         sentence: str,
         speech_turn: str,
-        context: Optional[str],
-        examples: Optional[list[dict]],
-        tokenizer,
-        llm_args: "LLMExperimentArguments",
+        context: Optional[str] = None,
 ) -> list[dict]:
-    """Chat messages for one example, with optional few-shot demonstrations as prior turns.
-    Speech turns and contexts are clipped, and budgets halved until the prompt fits max_prompt_tokens."""
-    cap = min(llm_args.max_prompt_tokens or MAX_PROMPT_TOKENS, MAX_PROMPT_TOKENS)
-    turn_n = llm_args.speech_turn_max_tokens or cap
-    ctx_n = llm_args.context_max_tokens or cap
-    shot_n = llm_args.shot_max_tokens or cap
-    while True:
-        messages = [{"role": "system", "content": SYSTEM_PROMPT}]
-        for ex in examples or []:
-            messages.append({"role": "user", "content": build_user_message(
-                ex["sentence"],
-                clip_text(ex["speech_turn"], shot_n, tokenizer, ex["sentence"]),
-                clip_text(ex.get("context"), shot_n, tokenizer),
-            )})
-            messages.append({"role": "assistant", "content": ex["llm_response"]})
+    """Chat messages list for zero-shot inference."""
+    return [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_user_message(sentence, speech_turn, context)},
+    ]
+
+
+def build_few_shot_messages(
+        sentence: str,
+        speech_turn: str,
+        examples: list[dict],
+        context: Optional[str] = None,
+) -> list[dict]:
+    """Chat messages list with few-shot examples interleaved as turns."""
+    messages = [{"role": "system", "content": SYSTEM_PROMPT}]
+    for ex in examples:
         messages.append({"role": "user", "content": build_user_message(
-            sentence,
-            clip_text(speech_turn, turn_n, tokenizer, sentence),
-            clip_text(context, ctx_n, tokenizer),
+            ex["sentence"], ex["speech_turn"], ex.get("context")
         )})
-        if tokenizer is None or max(turn_n, ctx_n, shot_n) <= MIN_CLIP_TOKENS:
-            return messages
-        n_tokens = len(tokenizer(render_chat(tokenizer, messages), add_special_tokens=False)["input_ids"])
-        if n_tokens <= cap:
-            return messages
-        turn_n, ctx_n, shot_n = (max(MIN_CLIP_TOKENS, n // 2) for n in (turn_n, ctx_n, shot_n))
+        messages.append({"role": "assistant", "content": ex["llm_response"]})
+    messages.append({"role": "user", "content": build_user_message(sentence, speech_turn, context)})
+    return messages
 
 
 def format_for_sft(
@@ -526,30 +465,20 @@ def format_for_sft(
         speech_turn_col: str,
         context_col: Optional[str],
         use_rag: bool,
-        llm_args: "LLMExperimentArguments",
 ) -> dict:
-    """Tokenize one training example; the loss is computed on the answer tokens only."""
+    """Format one training example as a complete chat string for SFTTrainer ({"text": ...})."""
     sentence = example[text_col] or ""
-    speech_turn = (example[speech_turn_col] if speech_turn_col in example else "") or ""
+    speech_turn = example[speech_turn_col] or ""
     context = example[context_col] if (use_rag and context_col and context_col in example) else None
     llm_target = labels_to_llm_target(parse_gold_labels(example.get("label")))
 
-    messages = build_messages(sentence, speech_turn, context, None, tokenizer, llm_args)
-    prompt = render_chat(tokenizer, messages)
-    # answer + end-of-turn exactly as the template writes it, probed without a system prompt
-    # (Mistral attaches the system prompt to the last user turn, so the full chat is no prefix match)
-    probe = [{"role": "user", "content": "Q"}]
-    head = render_chat(tokenizer, probe)
-    full = render_chat(tokenizer, probe + [{"role": "assistant", "content": "ANSWER"}], False)
-    completion = (full[len(head):].replace("ANSWER", llm_target) if full.startswith(head)
-                  else llm_target + tokenizer.eos_token)
-    prompt_ids = tokenizer(prompt, add_special_tokens=False)["input_ids"]
-    completion_ids = tokenizer(completion, add_special_tokens=False)["input_ids"]
-    return {
-        "input_ids": prompt_ids + completion_ids,
-        "attention_mask": [1] * (len(prompt_ids) + len(completion_ids)),
-        "labels": [-100] * len(prompt_ids) + completion_ids,
-    }
+    messages = [
+        {"role": "system", "content": SYSTEM_PROMPT},
+        {"role": "user", "content": build_user_message(sentence, speech_turn, context)},
+        {"role": "assistant", "content": llm_target},
+    ]
+    text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=False)
+    return {"text": text}
 
 
 def sample_few_shot_examples(
@@ -560,23 +489,21 @@ def sample_few_shot_examples(
         context_col: Optional[str],
         use_rag: bool,
         seed: int = 42,
-        pool_size: int = 10,
 ) -> list[dict]:
-    """Per fallacy label, draw ``n_per_class`` examples at random among its ``pool_size`` shortest
-    ones (fields that enter the prompt); an example is never used twice. Returns a shuffled list."""
+    """Sample up to ``n_per_class`` examples per fallacy label and return a flat shuffled list.
+    De-duplicates examples chosen for several classes."""
     rng = random.Random(seed)
-    fields = [text_col, speech_turn_col] + ([context_col] if use_rag and context_col else [])
     examples = []
     seen = set()
     for label in ALL_LABELS:
-        subset = sorted(
-            ((i, ex) for i, ex in enumerate(dataset)
-             if i not in seen and label in parse_gold_labels(ex.get("label"))),
-            key=lambda item: sum(len(item[1].get(c) or "") for c in fields),
-        )
-        pool = subset[:max(pool_size, n_per_class)]
-        chosen = rng.sample(pool, min(n_per_class, len(pool)))
+        subset = [
+            (i, ex) for i, ex in enumerate(dataset)
+            if label in parse_gold_labels(ex.get("label"))
+        ]
+        chosen = rng.sample(subset, min(n_per_class, len(subset)))
         for idx, ex in chosen:
+            if idx in seen:
+                continue
             seen.add(idx)
             gold = parse_gold_labels(ex.get("label"))
             record = {
@@ -676,28 +603,23 @@ def _generate_batched(
         max_new_tokens,
         temperature,
         torch_module,
-        reasoning_max_new_tokens: int = 512,
+        max_length: int = 2048,
 ) -> list[str]:
     """Length-sorted, left-padded batched generation: prompts are sorted short to long so each batch
     wastes little compute on padding, then results are re-ordered back to the input order."""
-    # the chat template already holds the BOS token, so none is added here and nothing is truncated
-    encodings = [tokenizer(render_chat(tokenizer, msgs), add_special_tokens=False)
-                 for msgs in messages_list]
-    order = sorted(range(len(encodings)), key=lambda i: len(encodings[i]["input_ids"]))
-    if order:
-        logger.info(f"Longest prompt: {len(encodings[order[-1]]['input_ids'])} tokens")
+    encodings = []
+    for msgs in messages_list:
+        text = tokenizer.apply_chat_template(
+            msgs, tokenize=False, add_generation_prompt=True
+        )
+        encodings.append(tokenizer(text, truncation=True, max_length=max_length))
 
-    # gpt-oss reasons on an analysis channel before answering on the final channel
-    has_reasoning = "<|channel|>" in str(tokenizer.chat_template or "")
-    # stop at the end of the assistant turn, which can differ from the tokenizer eos (Qwen base: <|im_end|>)
-    vocab = tokenizer.get_vocab()
-    gen_eos = model.generation_config.eos_token_id
-    stop_ids = {tokenizer.eos_token_id, *(gen_eos if isinstance(gen_eos, list) else [gen_eos]),
-                *(vocab[tok] for tok in ("<|im_end|>", "<|eot_id|>") if tok in vocab)} - {None}
+    order = sorted(range(len(encodings)), key=lambda i: len(encodings[i]["input_ids"]))
+
     gen_kwargs = dict(
-        max_new_tokens=reasoning_max_new_tokens if has_reasoning else max_new_tokens,
+        max_new_tokens=max_new_tokens,
         pad_token_id=tokenizer.pad_token_id,
-        eos_token_id=sorted(stop_ids),
+        eos_token_id=tokenizer.eos_token_id,
     )
     if temperature > 0:
         gen_kwargs.update(do_sample=True, temperature=temperature)
@@ -720,13 +642,8 @@ def _generate_batched(
 
         prompt_len = inputs["input_ids"].shape[1]
         for k, out in enumerate(output_ids):
-            decoded = tokenizer.decode(out[prompt_len:], skip_special_tokens=False)
-            if "<|channel|>" in decoded:  # keep only the gpt-oss final channel, empty if never reached
-                final = "<|channel|>final<|message|>"
-                decoded = decoded.split(final)[1] if final in decoded else ""
-            for tok in tokenizer.all_special_tokens:
-                decoded = decoded.replace(tok, "")
-            responses[idxs[k]] = re.sub(r"<\|[^|>]*\|>", "", decoded).strip()
+            decoded = tokenizer.decode(out[prompt_len:], skip_special_tokens=True)
+            responses[idxs[k]] = decoded
 
     return responses
 
@@ -786,7 +703,6 @@ class LocalLLMInference:
         self.max_new_tokens = llm_args.max_new_tokens
         self.temperature = llm_args.temperature
         self.batch_size = llm_args.inference_batch_size
-        self.reasoning_max_new_tokens = llm_args.reasoning_max_new_tokens
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
         """Run length-sorted batched inference over chat-message lists."""
@@ -800,7 +716,6 @@ class LocalLLMInference:
             max_new_tokens=self.max_new_tokens,
             temperature=self.temperature,
             torch_module=torch,
-            reasoning_max_new_tokens=self.reasoning_max_new_tokens,
         )
 
 
@@ -851,14 +766,17 @@ def run_inference(
     speech_col = data_args.speech_turn_column_name
     ctx_col = data_args.context_column_name
 
-    tokenizer = getattr(inference_engine, "tokenizer", None)
-    examples = few_shot_examples if llm_args.mode == "few_shot" else None
     messages_list = []
     for ex in dataset:
         sentence = ex[text_col] or ""
         speech_turn = ex[speech_col] or ""
         context = ex[ctx_col] if (data_args.use_rag and ctx_col and ctx_col in ex) else None
-        messages_list.append(build_messages(sentence, speech_turn, context, examples, tokenizer, llm_args))
+
+        if llm_args.mode == "few_shot" and few_shot_examples:
+            msgs = build_few_shot_messages(sentence, speech_turn, few_shot_examples, context)
+        else:
+            msgs = build_zero_shot_messages(sentence, speech_turn, context)
+        messages_list.append(msgs)
 
     logger.info(f"Running inference on {len(messages_list)} {split_name} examples …")
     raw_responses = inference_engine.predict_batch(messages_list)
@@ -880,12 +798,11 @@ def run_fine_tuning(
         train_dataset,
         eval_dataset,
 ) -> tuple:
-    """Fine-tune with LoRA/QLoRA and an answer-only loss; return (model, tokenizer) ready for inference."""
-    import dataclasses
-
+    """Fine-tune with LoRA/QLoRA via TRL SFTTrainer; return (model, tokenizer) ready for inference."""
     import torch
-    from peft import LoraConfig, TaskType, get_peft_model, prepare_model_for_kbit_training
-    from transformers import AutoModelForCausalLM, AutoTokenizer, DataCollatorForSeq2Seq, Trainer
+    from peft import LoraConfig, TaskType
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from trl import SFTConfig, SFTTrainer
 
     logger.info("=== Fine-tuning phase ===")
 
@@ -926,12 +843,9 @@ def run_fine_tuning(
         task_type=TaskType.CAUSAL_LM,
         bias="none",
     )
-    if "quantization_config" in load_kwargs:
-        model = prepare_model_for_kbit_training(model)
-    model = get_peft_model(model, lora_config)
 
     def _fmt(ex):
-        """Tokenize one example for SFT."""
+        """Format one example as an SFT chat string."""
         return format_for_sft(
             ex,
             tokenizer=tokenizer,
@@ -939,22 +853,39 @@ def run_fine_tuning(
             speech_turn_col=data_args.speech_turn_column_name,
             context_col=data_args.context_column_name,
             use_rag=data_args.use_rag,
-            llm_args=llm_args,
         )
 
-    train_sft = train_dataset.map(_fmt, remove_columns=train_dataset.column_names,
-                                  desc="Tokenizing train for SFT")
-    eval_sft = (eval_dataset.map(_fmt, remove_columns=eval_dataset.column_names,
-                                 desc="Tokenizing eval for SFT") if eval_dataset else None)
-    if eval_sft is None:
-        training_args = dataclasses.replace(training_args, eval_strategy="no", load_best_model_at_end=False)
+    train_sft = train_dataset.map(_fmt, desc="Formatting train for SFT")
+    eval_sft = eval_dataset.map(_fmt, desc="Formatting eval for SFT") if eval_dataset else None
 
-    trainer = Trainer(
+    sft_config = SFTConfig(
+        output_dir=training_args.output_dir,
+        num_train_epochs=training_args.num_train_epochs,
+        per_device_train_batch_size=training_args.per_device_train_batch_size,
+        per_device_eval_batch_size=training_args.per_device_eval_batch_size,
+        gradient_accumulation_steps=training_args.gradient_accumulation_steps,
+        learning_rate=training_args.learning_rate,
+        lr_scheduler_type=training_args.lr_scheduler_type,
+        warmup_ratio=training_args.warmup_ratio,
+        logging_steps=training_args.logging_steps,
+        save_strategy=training_args.save_strategy,
+        eval_strategy=training_args.eval_strategy if eval_sft else "no",
+        load_best_model_at_end=training_args.load_best_model_at_end if eval_sft else False,
+        fp16=training_args.fp16,
+        bf16=training_args.bf16,
+        seed=training_args.seed,
+        report_to=training_args.report_to,
+        dataset_text_field="text",
+        packing=False,
+    )
+
+    trainer = SFTTrainer(
         model=model,
-        args=training_args,
+        args=sft_config,
         train_dataset=train_sft,
         eval_dataset=eval_sft,
-        data_collator=DataCollatorForSeq2Seq(tokenizer, padding=True, label_pad_token_id=-100),
+        peft_config=lora_config,
+        processing_class=tokenizer,
     )
 
     logger.info("Starting SFT training …")
@@ -1031,20 +962,6 @@ def main():
     logger.setLevel(logging.INFO)
     datasets.utils.logging.set_verbosity(logging.INFO)
 
-    llm_args.max_prompt_tokens = min(llm_args.max_prompt_tokens or MAX_PROMPT_TOKENS, MAX_PROMPT_TOKENS)
-    if llm_args.backend == "local":
-        from transformers import AutoConfig
-        cfg = AutoConfig.from_pretrained(
-            model_args.model_name_or_path, cache_dir=model_args.cache_dir, token=model_args.token,
-            trust_remote_code=model_args.trust_remote_code,
-        )
-        window = (getattr(cfg, "max_position_embeddings", None)
-                  or getattr(getattr(cfg, "text_config", None), "max_position_embeddings", None))
-        if window:
-            room = window - max(llm_args.max_new_tokens, llm_args.reasoning_max_new_tokens)
-            llm_args.max_prompt_tokens = min(llm_args.max_prompt_tokens, room)
-        logger.info(f"Model context window: {window} | prompt cap: {llm_args.max_prompt_tokens}")
-
     logger.info(
         f"Mode: {llm_args.mode} | Backend: {llm_args.backend} | "
         f"Model: {model_args.model_name_or_path} | RAG: {data_args.use_rag}"
@@ -1102,7 +1019,6 @@ def main():
             context_col=data_args.context_column_name,
             use_rag=data_args.use_rag,
             seed=llm_args.few_shot_seed,
-            pool_size=llm_args.few_shot_pool_size,
         )
         logger.info(
             f"Few-shot pool: {len(few_shot_examples)} examples "
@@ -1204,7 +1120,6 @@ class _FineTunedLocalEngine:
         self.max_new_tokens = llm_args.max_new_tokens
         self.temperature = llm_args.temperature
         self.batch_size = llm_args.inference_batch_size
-        self.reasoning_max_new_tokens = llm_args.reasoning_max_new_tokens
         self._torch = torch
 
     def predict_batch(self, messages_list: list[list[dict]]) -> list[str]:
@@ -1217,7 +1132,6 @@ class _FineTunedLocalEngine:
             max_new_tokens=self.max_new_tokens,
             temperature=self.temperature,
             torch_module=self._torch,
-            reasoning_max_new_tokens=self.reasoning_max_new_tokens,
         )
 
 

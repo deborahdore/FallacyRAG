@@ -43,9 +43,12 @@ LLM_MODES = ["zero_shot", "few_shot", "fine_tune"]
 BASELINE = "temporal=false-retriever=false-summarizer=false"
 # Config folders expected in each five-runs dataset: baseline + best RAG config
 EXPECTED_CONFIGS = {
-    "elecdeb60to20-detection": [BASELINE, "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
-    "elecdeb60to20-classification": [BASELINE, "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
-    "propaganda-detection": [BASELINE, "temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "elecdeb60to20-detection": [BASELINE,
+                                "temporal=true-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "elecdeb60to20-classification": [BASELINE,
+                                     "temporal=false-retriever=ddore14-sentence-roosebert-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
+    "propaganda-detection": [BASELINE,
+                             "temporal=false-retriever=sentence-transformers-all-mpnet-base-v2-search=hybrid-rerank=cross-encoder-ms-marco-minilm-l-6-v2-query=relations_labeled-summarizer=false"],
     "LIARArg-relation-classification": ["baseline"],
 }
 
