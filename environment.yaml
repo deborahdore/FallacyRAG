@@ -30,3 +30,4 @@ dependencies:
       - langchain-text-splitters
       - langchain-huggingface
       - langchain-chroma
+      - peft
