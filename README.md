@@ -124,15 +124,15 @@ category, so the vector store carries seven).
   reference instances of each fallacy type. Exemplar texts that overlap an ElecDeb60to20 instance are removed, so
   retrieval cannot leak gold labels into the evaluation.
 
-| Collection      |   Size | # Documents | # Paragraphs |
-|-----------------|-------:|------------:|-------------:|
-| Bills           |  14 GB |     178,383 |    6,668,178 |
-| Geography       | 516 MB |     125,891 |      125,891 |
-| People          | 297 MB |      72,950 |       72,950 |
-| History         |  89 MB |      16,121 |       16,121 |
-| Exemplars       |   5 MB |       1,273 |        1,284 |
-| Definitions     | 1.3 MB |          65 |           65 |
-| **Total**       | **15 GB** | **394,683** | **6,884,489** |
+| Collection  |      Size | # Documents |  # Paragraphs |
+|-------------|----------:|------------:|--------------:|
+| Bills       |     14 GB |     178,383 |     6,668,178 |
+| Geography   |    516 MB |     125,891 |       125,891 |
+| People      |    297 MB |      72,950 |        72,950 |
+| History     |     89 MB |      16,121 |        16,121 |
+| Exemplars   |      5 MB |       1,273 |         1,284 |
+| Definitions |    1.3 MB |          65 |            65 |
+| **Total**   | **15 GB** | **394,683** | **6,884,489** |
 
 Sections are built independently by [`src/create_knowledge_base.py`](src/create_knowledge_base.py) into
 `knowledge_base/<section>/`, then indexed into a per-embedder Chroma store by
@@ -232,15 +232,15 @@ conda activate rags
 
 A few things are needed on top of the environment file:
 
-| Requirement                               | Why                                                                                    |
-|-------------------------------------------|----------------------------------------------------------------------------------------|
-| `git lfs`                                 | The dataset CSVs are LFS objects — `git lfs pull` after cloning.                       |
-| `python -m spacy download en_core_web_sm` | Sentence splitting inside `create_db.py`.                                              |
-| `python -m spacy download en_core_web_trf` | Named-entity recognition over the debates in `notebooks/topic_analysis.ipynb`.        |
-| `poppler`, `tesseract`                    | OCR of PDF sources (OpenAlex papers, UDHR) while building the knowledge base.          |
-| `HF_TOKEN`                                | Gated Hub models (Llama, Mistral). Or pass `--token`.                                  |
-| `OPENAI_API_KEY`                          | Only for the LLM scripts run with `--backend openai`.                                  |
-| `CONTACT_EMAIL`                           | Sent in the OpenAlex User-Agent when collecting fallacy papers for the knowledge base. |
+| Requirement                                | Why                                                                                    |
+|--------------------------------------------|----------------------------------------------------------------------------------------|
+| `git lfs`                                  | The dataset CSVs are LFS objects — `git lfs pull` after cloning.                       |
+| `python -m spacy download en_core_web_sm`  | Sentence splitting inside `create_db.py`.                                              |
+| `python -m spacy download en_core_web_trf` | Named-entity recognition over the debates in `notebooks/topic_analysis.ipynb`.         |
+| `poppler`, `tesseract`                     | OCR of PDF sources (OpenAlex papers, UDHR) while building the knowledge base.          |
+| `HF_TOKEN`                                 | Gated Hub models (Llama, Mistral). Or pass `--token`.                                  |
+| `OPENAI_API_KEY`                           | Only for the LLM scripts run with `--backend openai`.                                  |
+| `CONTACT_EMAIL`                            | Sent in the OpenAlex User-Agent when collecting fallacy papers for the knowledge base. |
 
 The [`.project-root`](.project-root) marker file is what `rootutils` uses to resolve paths — **do not delete it**, and
 run every script from the repository root so relative paths like `datasets/…` resolve correctly.
@@ -296,10 +296,10 @@ take a `DATASETS=()` array listing which configuration folders to sweep.
 
 ### Experiment Grid
 
-| Track    | Models                                                                                                                      | Grid                                                                                 |
-|----------|-----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Encoders | DeBERTa-v3, Longformer, ModernBERT, RoBERTa, LegalBERT, NeoBERT, and the four RooseBERT variants (cont/scr × cased/uncased) — **10** | batch ∈ {8, 16} × lr ∈ {2e-5, 3e-5, 5e-5} × epochs ∈ {3, 5}, warmup ratio 0.06 — 12 cells per model |
-| LLMs     | Llama-3.1-8B-Instruct, Qwen3.5-9B-Base, gpt-oss-20b, Mistral-7B-Instruct-v0.3 — **4**                                               | zero-shot, few-shot (one example per class), and LoRA fine-tuning (r=16, α=32, dropout 0.05) at lr ∈ {1e-4, 3e-4, 5e-4} × epochs ∈ {1, 2, 3}, effective batch 8 |
+| Track    | Models                                                                                                                               | Grid                                                                                                                                                            |
+|----------|--------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Encoders | DeBERTa-v3, Longformer, ModernBERT, RoBERTa, LegalBERT, NeoBERT, and the four RooseBERT variants (cont/scr × cased/uncased) — **10** | batch ∈ {8, 16} × lr ∈ {2e-5, 3e-5, 5e-5} × epochs ∈ {3, 5}, warmup ratio 0.06 — 12 cells per model                                                             |
+| LLMs     | Llama-3.1-8B-Instruct, Qwen3.5-9B-Base, gpt-oss-20b, Mistral-7B-Instruct-v0.3 — **4**                                                | zero-shot, few-shot (one example per class), and LoRA fine-tuning (r=16, α=32, dropout 0.05) at lr ∈ {1e-4, 3e-4, 5e-4} × epochs ∈ {1, 2, 3}, effective batch 8 |
 
 Runs are named after their cell (`bs16_lr3e-5_ep5`, `mode-few_shot`, `mode-fine_tune_bs8_lr3e-4_ep2`), which is how the
 aggregation scripts recover the hyperparameters.
@@ -316,13 +316,13 @@ The winning configurations are `Sentence-RooseBERT` + hybrid search + cross-enco
 
 ## 📊 Results & Analysis
 
-| Script                                                               | Purpose                                                                                                                     |
-|----------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| [`script/check_one_run.py`](script/check_one_run.py)                 | Verifies the single-seed grid is complete; reports gaps and exits non-zero.                                                 |
-| [`script/check_five_runs.py`](script/check_five_runs.py)             | Same check for the multi-seed grid (all models × 5 seeds).                                                                  |
-| [`script/extract_results.py`](script/extract_results.py)             | Aggregates `output/one-run/` into a `results.csv` per config plus a combined `all_results.csv`.                             |
-| [`script/extract_results_5runs.py`](script/extract_results_5runs.py) | Aggregates `output/five-runs/` into `results_mean_std.csv` (mean, std, seed count) plus `all_results_mean_std.csv`.         |
-| [`script/ablation.py`](script/ablation.py)                           | Leave-one-out ablation of the RAG components, anchored on the strongest no-retrieval model per task with hyperparameters frozen at the anchor cell, so deltas stay selection-free. Single seed (14). |
+| Script                                                               | Purpose                                                                                                                                                                                                                                     |
+|----------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`script/check_one_run.py`](script/check_one_run.py)                 | Verifies the single-seed grid is complete; reports gaps and exits non-zero.                                                                                                                                                                 |
+| [`script/check_five_runs.py`](script/check_five_runs.py)             | Same check for the multi-seed grid (all models × 5 seeds).                                                                                                                                                                                  |
+| [`script/extract_results.py`](script/extract_results.py)             | Aggregates `output/one-run/` into a `results.csv` per config plus a combined `all_results.csv`.                                                                                                                                             |
+| [`script/extract_results_5runs.py`](script/extract_results_5runs.py) | Aggregates `output/five-runs/` into `results_mean_std.csv` (mean, std, seed count) plus `all_results_mean_std.csv`.                                                                                                                         |
+| [`script/ablation.py`](script/ablation.py)                           | Leave-one-out ablation of the RAG components, anchored on the strongest no-retrieval model per task with hyperparameters frozen at the anchor cell, so deltas stay selection-free. Single seed (14).                                        |
 | [`script/ttest_best_models.py`](script/ttest_best_models.py)         | Paired significance tests between the baseline and each config's best model over the five paired per-seed macro-F1 values: two-sided t-test, Shapiro-Wilk, Wilcoxon, an exact sign-flip permutation test, and both Cohen's d and Hedges' g. |
 
 A run is considered complete when it carries its **completion marker**: `predict_results.json` for encoders,
