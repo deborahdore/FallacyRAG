@@ -1,9 +1,9 @@
 {
-  "accuracy": 0.7464589235127479,
-  "precision": 0.37322946175637395,
-  "recall": 0.5,
-  "f1_macro": 0.42741281427412814,
-  "f1_propaganda": 0.0,
-  "f1_non-propaganda": 0.8548256285482563,
+  "accuracy": 0.8198772426817753,
+  "precision": 0.77097878621509,
+  "recall": 0.7216412425485602,
+  "f1_macro": 0.7396956226374674,
+  "f1_propaganda": 0.5952254641909814,
+  "f1_non-propaganda": 0.8841657810839533,
   "predict_samples": 4236
 }

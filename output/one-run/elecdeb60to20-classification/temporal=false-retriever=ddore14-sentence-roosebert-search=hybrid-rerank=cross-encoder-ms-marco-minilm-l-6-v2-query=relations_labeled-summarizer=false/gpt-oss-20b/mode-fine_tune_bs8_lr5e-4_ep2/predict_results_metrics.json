@@ -1,0 +1,19 @@
+{
+  "subset_accuracy": 0.3803680981595092,
+  "hamming_loss": 0.1574642126789366,
+  "f1_micro": 0.4460431654676259,
+  "f1_macro": 0.15659431143302113,
+  "f1_weighted": 0.3940285914558624,
+  "f1_samples": 0.3803680981595092,
+  "precision_micro": 0.5391304347826087,
+  "precision_macro": 0.1973281199087651,
+  "recall_micro": 0.3803680981595092,
+  "recall_macro": 0.14110444777611195,
+  "f1_AdHominem": 0.12903225806451613,
+  "f1_AppealtoAuthority": 0.20512820512820512,
+  "f1_AppealtoEmotion": 0.6054054054054054,
+  "f1_FalseCause": 0.0,
+  "f1_Slipperyslope": 0.0,
+  "f1_Slogans": 0.0,
+  "predict_samples": 163
+}
