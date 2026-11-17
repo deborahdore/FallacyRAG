@@ -1,4 +1,4 @@
-name: rags
+name: transformers
 channels:
   - conda-forge
   - defaults
@@ -6,28 +6,47 @@ dependencies:
   - python=3.11
   - numpy
   - pandas
-  - seaborn
-  - matplotlib
+  - scipy
   - scikit-learn
+  - matplotlib
+  - seaborn
   - pip:
+      # modelling and fine-tuning
       - torch
+      - xformers  # required by NeoBERT
       - transformers
       - "accelerate>=1.1.0"
       - bitsandbytes
       - datasets
+      - peft
+      - trl
       - sentence-transformers
-      - rootutils
-      - tqdm
-      - requests
-      - beautifulsoup4
-      - lxml
-      - playwright
-      - pytesseract
-      - pdf2image
-      - easyocr
+      - openai
+      # retrieval and knowledge base
       - langchain-core
       - langchain-community
       - langchain-text-splitters
       - langchain-huggingface
       - langchain-chroma
-      - peft
+      - chromadb
+      - bm25s
+      - rank-bm25
+      - nltk
+      - spacy
+      - "en_core_web_sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl"
+      # scraping and OCR
+      - requests
+      - beautifulsoup4
+      - playwright
+      - scholarly
+      - pytesseract
+      - pdf2image
+      - easyocr
+      # utilities
+      - rootutils
+      - tqdm
+      - wandb
+      # notebooks only
+      - faiss-cpu
+      - wordcloud
+      - tweet-preprocessor
