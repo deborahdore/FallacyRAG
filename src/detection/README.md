@@ -316,7 +316,7 @@ Standard HuggingFace `TrainingArguments` are used. The most relevant:
 | `--per_device_train_batch_size` | `8`     | Batch size per device for training.                                      |
 | `--gradient_accumulation_steps` | `1`     | Gradient accumulation steps.                                             |
 | `--learning_rate`               | `5e-5`  | Initial learning rate.                                                   |
-| `--warmup_ratio`                | `0.0`   | Fraction of steps for linear warmup.                                     |
+| `--warmup_steps`                | `0`     | Warmup steps; a float < 1 is a fraction of total steps.                  |
 | `--bf16`                        | `False` | BF16 mixed precision (recommended for Ampere+ GPUs).                     |
 | `--fp16`                        | `False` | FP16 mixed precision.                                                    |
 | `--eval_strategy`               | `no`    | When to evaluate: `no`, `steps`, `epoch`.                                |
