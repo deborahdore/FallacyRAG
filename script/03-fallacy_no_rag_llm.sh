@@ -28,7 +28,8 @@ export TOKENIZERS_PARALLELISM=false
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 
 export MASTER_ADDR=localhost
-export MASTER_PORT=6000
+# unique port per job so concurrent runs on one node don't clash
+export MASTER_PORT=$((10000 + SLURM_JOB_ID % 50000))
 
 wandb disabled
 

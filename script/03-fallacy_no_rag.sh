@@ -100,7 +100,7 @@ for model in "${MODELS[@]}"; do
             --do_eval True \
             --do_predict True \
             --trust_remote_code True \
-            --warmup_ratio 0.06 \
+            --warmup_steps 0.06 \
             --gradient_accumulation_steps $GRAD_ACC
         then
           echo "FAILED: $model $CONF_ID" >> "$FAILED_LOG"

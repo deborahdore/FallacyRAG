@@ -101,7 +101,7 @@ for dataset in "${DATASETS[@]}"; do
               --do_eval True \
               --do_predict True \
               --trust_remote_code True \
-              --warmup_ratio 0.06 \
+              --warmup_steps 0.06 \
               --use_rag True \
               --context_column_name "rag_context" \
               --gradient_accumulation_steps $GRAD_ACC
